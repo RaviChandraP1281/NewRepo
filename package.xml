@@ -3,6 +3,7 @@
     <version>39.0</version>
     <types>
         <members>Training1__c.CheckingMerge__c</members>
+        <members>dataloader3935__c.Test__c</members>
         <members>dataloader3935__c.ezcommitdeltatestrun1__c</members>
         <name>CustomField</name>
     </types>
