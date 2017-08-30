@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT.CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>Account.Company_ID__c</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <currency>GBP</currency>
+    <filter>
+        <criteriaItems>
+            <column>ACCOUNT.NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>WK 1,WK 2,WK 3,WK 4,WK 5,WK 6,WK 7,WK 8,WK 9,WK 10,WK 11,WK 12,WK 13,WK 14,WK 15,WK 16,WK 17,WK 18,WK 19,WK 20,WK 21,WK 22,WK 23,WK 24,WK 25,WK 26,WK 27,WK 28,WK 29,WK 30,WK 31,WK 32,WK 33,WK 34,WK 35,WK 36,WK 37,WK 38,WK 39,WK 40,WK 41,WK 42,WK 43,WK 44,WK 45,WK 46,WK 47,WK 48,WK 49,WK 50</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Wilkins Kennedy WK1-50 Accounts</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContactList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>ACCOUNT.NAME</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QuickAction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Add a case note to this case</description>
+    <height>350</height>
+    <label>Case Note</label>
+    <optionsCreateFeedItem>false</optionsCreateFeedItem>
+    <page>CaseConsoleAddComment</page>
+    <type>VisualforcePage</type>
+    <width>-100</width>
+</QuickAction>

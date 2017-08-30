@@ -1,0 +1,116 @@
+<messaging:emailTemplate subject="Product Notification Re: {!relatedTo.Case_Investigation__r.Subject__c}" recipientType="Contact" relatedToType="Case">
+<messaging:HtmlEmailBody >
+<html>
+    <head>
+        
+    </head>
+    <body class="setupTab" onload="init()" style=" background-color:#CCCCCC; bEditID:b1st1; bLabel:body;">
+        <center>
+            <table cellpadding="0" width="500" cellspacing="0" id="topTable" height="450">
+                <tbody>
+                    <tr valign="top">
+                        <td style=" background-color:#CCCCCC; bEditID:r1st1; bLabel:header; vertical-align:top; height:25; text-align:left;">
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td style=" background-color:#FFFFFF; bEditID:r2st1; bLabel:accent1; height:1;">
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td styleinsert="1" height="300" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;">
+                            <table border="0" cellpadding="5" width="600" cellspacing="5" height="400">
+                                <tbody>
+                                    <tr valign="top" height="50">
+                                        <td teditid="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aeditid="c1r1" locked="0">
+                                            <apex:image url="{!$Label.Email_Header_URL}"/>   
+                                        </td>
+                                    </tr>
+                                    <tr valign="top" height="300" width="500">
+                                        <td teditid="c1r2" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:Times New Roman;" aeditid="c1r2" locked="0" width="20%">
+                                            <font size="3" style="background-color: rgb(255, 255, 255); padding-left:20px; padding-right:100px;">
+                                                Dear&nbsp;<b>{!IF(ISBLANK(relatedTo.Contact.Name), 'Valued Customer', relatedTo.Contact.Name)}</b>,
+                                            </font>
+                                            <div style="font-size: 12pt; background-color: rgb(255, 255, 255);" align="left">
+                                                <br/>
+                                            </div>                                  
+                                            <div style="background-color: rgb(255, 255, 255); padding-left:20px; padding-right:100px;" align="left">
+                                               <font size="3">
+                                               Thank you for requesting updates on <b>{!relatedTo.Case_Investigation__r.Subject__c}</b>. We’ve identified additional steps for you to try. We’re continuing to work on solving for this unexpected behavior and our next update is currently scheduled for <b>{!relatedTo.Case_Investigation__r.Next_Update__c}</b>.
+                                               </font>
+                                                <span style="font-size: 12pt;">
+                                                    <br/>
+                                                </span>
+                                            </div>
+                                            <div style="background-color: rgb(255, 255, 255);" align="left">
+                                                <br/>
+                                            </div>
+                                            <div style="background-color: rgb(255, 255, 255); padding-left:20px; padding-right:100px;" align="left">
+                                                <font size="3">
+                                                In order for you to make sure you can complete your work; we would advise you to follow these steps:
+                                                </font>
+                                                <span style="font-size: 12pt;">
+                                                    <br/>
+                                                </span>
+                                            </div>
+                                            <div style="background-color: rgb(255, 255, 255);" align="left">
+                                                <br/>
+                                            </div>                                           
+                                            <div style="background-color: rgb(255, 255, 255); padding-left:20px; padding-right:100px;" align="left">
+                                                <font size="3">
+                                                <b>{!relatedTo.Case_Investigation__r.Confirmed_Workaround__c}</b>
+                                                </font>
+                                                <span style="font-size: 12pt;">
+                                                    <br/>
+                                                </span>
+                                            </div>
+                                            <div style="background-color: rgb(255, 255, 255);" align="left">
+                                                <br/>
+                                            </div>
+                                            <div style="background-color: rgb(255, 255, 255);" align="left">
+                                                <br/>
+                                            </div>
+                                            <div style="background-color: rgb(255, 255, 255); padding-left:20px; padding-right:100px;" align="left">
+                                                <font size="3">
+                                                This is in reference to support contact Case Number <b>{!relatedTo.CaseNumber}</b>
+                                                </font>
+                                            </div>
+                                            <div style="background-color: rgb(255, 255, 255);" align="left">
+                                                <br/>
+                                            </div>
+                                            <div style="background-color: rgb(255, 255, 255); padding-left:20px; padding-right:100px;" align="left">
+                                                <div align="left">
+                                                    <font size="3">
+                                                    --------------------------------------------------------------------------------------
+                                                    </font>
+                                                </div>
+                                            </div>                                  
+                                        </td>
+                                    </tr>
+                                    <tr valign="top" height="50">
+                                        <td teditid="c1r3" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:Times New Roman;" aeditid="c1r3" locked="0">
+                                            <apex:image url="{!$Label.Email_Footer_URL}"/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td style=" background-color:#FFFFFF; bEditID:r4st1; bLabel:accent2; height:1;">
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td style=" background-color:#FFFFFF; bEditID:r5st1; bLabel:footer; vertical-align:top; height:0; text-align:left;">
+                        </td>
+                    </tr>
+                    <tr valign="top">
+                        <td style=" background-color:#FFFFFF; bEditID:r6st1; bLabel:accent3; height:1;">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </center>
+    </body>
+</html>
+</messaging:HtmlEmailBody>
+</messaging:emailTemplate>

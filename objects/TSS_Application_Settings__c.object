@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Country_AUS_Is_Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Determines whether or not the TSS Engine will execute rules for Australia.  AUS rules will only be run if this field is checked (TRUE).  Note that the entire engine can still be deactivated using the &quot;TSS Engine Is Active&quot; flag.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Determines whether or not the TSS Engine will execute rules for Australia.  AUS rules will only be run if this field is checked (TRUE).  Note that the entire engine can still be deactivated using the &quot;TSS Engine Is Active&quot; flag.</inlineHelpText>
+        <label>Country AUS Is Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Country_CAN_Is_Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Determines whether or not the TSS Engine will execute rules for Canada.  CAN rules will only be run if this field is checked (TRUE).  Note that the entire engine can still be deactivated using the &quot;TSS Engine Is Active&quot; flag.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Determines whether or not the TSS Engine will execute rules for Canada.  CAN rules will only be run if this field is checked (TRUE).  Note that the entire engine can still be deactivated using the &quot;TSS Engine Is Active&quot; flag.</inlineHelpText>
+        <label>Country CAN Is Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Country_UK_Is_Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Determines whether or not the TSS Engine will execute rules for the United Kingdom.  UK rules will only be run if this field is checked (TRUE).  Note that the entire engine can still be deactivated using the &quot;TSS Engine Is Active&quot; flag.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Determines whether or not the TSS Engine will execute rules for the United Kingdom.  UK rules will only be run if this field is checked (TRUE).  Note that the entire engine can still be deactivated using the &quot;TSS Engine Is Active&quot; flag.</inlineHelpText>
+        <label>Country UK Is Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>TSS_Engine_Is_Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Determines whether or not the TSS Engine is &quot;Active&quot;.  Automatic territory segmentation will only be attempted if this field is checked (TRUE).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Determines whether or not the TSS Engine is &quot;Active&quot;.  Automatic territory segmentation will only be attempted if this field is checked (TRUE).</inlineHelpText>
+        <label>TSS Engine Is Active</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+</CustomObject>

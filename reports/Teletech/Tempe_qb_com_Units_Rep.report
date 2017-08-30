@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>AMOUNT</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>STAGE_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Closed Won</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ROLLUP_DESCRIPTION</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>QBO Chat OB</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Product_Family_of_Interest__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>QB Enterprise Solutions (QBES),QB Mac,QB Pro/Premier,QuickBooks Online (QBO)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Lead_Originator__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Alan Alday,Aluna Mims,Ashley Gonzales,Brianna Reha,Danielle Murray,Dylan Arbuthnot,Evelyne Van Eldik,Joshua Frost,Sierah Delgado,Stacey Watts,Thanayi Robinson,Vicky Dorsey,Victoria Thacker,William Ruley Jr,Chirstopher Perpignani,Jessica Moberly,Clubb Chris,Kevin Baumgartner,Mallory Cantrell,Aaron Preciado,Dustin Bostick,Brandon Burkhead,Maria Jackson,Darline Moody,Tubin Chen,Malonda McCoy,Christopher Ferguson,Dynecca Henderson,Anthony Adams,Omovidolor Nisonger,Jose Enriquez,Rene Castillo,Roman Cisneros,Michael Imbrie,Caitlin Monroe,Robert Moreno,Martin Jimenez,caitlyn schepps,Andrew Collins,Cortney Brown,David Jimenez,Garrett Johnston,Jennifer Demarco,Jennifer Sisneros,Justin Hayes,Katrina Fortune,Michaela Madison,Zavala Shannel</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Month</dateGranularity>
+        <field>CLOSE_DATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Opportunity.Lead_Originator__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Tempe - qb.com - Units/Rep</name>
+    <params>
+        <name>open</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunity</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CLOSE_DATE</dateColumn>
+        <endDate>2015-01-18</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2015-01-01</startDate>
+    </timeFrameFilter>
+</Report>

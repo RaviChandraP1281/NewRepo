@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Customer Billing History</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Customer Billing History</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account POID --></label>
+        <name>Account_POID__c</name>
+    </fields>
+    <fields>
+        <label><!-- BDOM --></label>
+        <name>BDOM__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Profile Name --></label>
+        <name>BILLING_PROFILE_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billinfo POID --></label>
+        <name>Billinfo_POID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>CAN__c</name>
+        <relationshipLabel><!-- Customer Bill History --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- CHARGE_TYPE --></label>
+        <name>CHARGE_TYPE__c</name>
+    </fields>
+    <fields>
+        <label><!-- CUSTOMER_ACCOUNT_NO --></label>
+        <name>CUSTOMER_ACCOUNT_NO__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pacific Date --></label>
+        <name>EVENT_DATE_PACIFIC__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date --></label>
+        <name>EVENT_DATE__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>EVENT__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bill Number --></label>
+        <name>EventID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Event POID Type --></label>
+        <name>Event_POID_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Event POID --></label>
+        <name>Event_POID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Item POID --></label>
+        <name>Item_POID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Line Item --></label>
+        <name>Item__c</name>
+    </fields>
+    <fields>
+        <label><!-- Line --></label>
+        <name>Line__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order --></label>
+        <name>Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Method --></label>
+        <name>PAYMENT_METHOD__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAY_TYPE --></label>
+        <name>PAY_TYPE__c</name>
+    </fields>
+    <fields>
+        <label><!-- PSON Number --></label>
+        <name>PSON_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>Total__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

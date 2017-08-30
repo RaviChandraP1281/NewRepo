@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>User.Case$OwnerId$Owner</field>
+    </columns>
+    <columns>
+        <field>User.Case$OwnerId$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>User.Case$OwnerId$Status</field>
+    </columns>
+    <columns>
+        <field>User.Case$OwnerId$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>User$LastModifiedDate</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>User*User$Role__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>online</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$OwnerId$Status</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$OwnerId$Owner</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Erica Gadson,Jeffrey Woods,Griselle Galvan,William Barnett,Robbie Gilbert,Stephanie Hailstock,Indya Morris,Judy Johnson,Matthew Hinson,Angela Hargrove,Laquisha Young,Teresa McQuade,Yasmine McKinney</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Team Contrarian Open Cases</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Users_and_Case_Owner__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>User$CreatedDate</dateColumn>
+        <endDate>2018-07-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2016-01-01</startDate>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>CLOSED_DATE</field>
+    </columns>
+    <columns>
+        <field>OWNER</field>
+    </columns>
+    <columns>
+        <field>Contact.Company_ID__c</field>
+    </columns>
+    <columns>
+        <field>CASE_NUMBER</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Case.SB_Area__c</field>
+    </columns>
+    <columns>
+        <field>Case.SB_SubArea__c</field>
+    </columns>
+    <columns>
+        <field>Case.Product__c</field>
+    </columns>
+    <columns>
+        <field>CONTACT.EMAIL</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <columns>
+        <field>Case.Resolution_Code__c</field>
+    </columns>
+    <columns>
+        <field>ORIGIN</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>1 or 2 or 3 or 4 or 5 or 6</booleanFilter>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Crislyn Matarong,Noime Olid,Lhira Mae Bubuli,Janine Tura,Jose Odin Bolambao,Ronald Jr Ross,Faith Joy Maglangit,Alex Jr. Arinaza,Chanti Cadelina,Maria Sombal,Joey Alarde,Johanne Mari Ballares,Mel Monsour Abellana,Jake John Joseph Busaco,Franz Dominic Bernal,Virnalyn Catipay,Kristhyn Paragoso,Anna Katrina Perandos,Shyril Servila,Anna Catherine Ugsimar,Jenielan Nadera,Vickhozette Flores,Amy Guy,Markley Divino,Aime Ann De la Victoria,Glicerio Pitogo,Cherry Mae Villasante,Cathy Caay,Jean Rose Hazil Bulao</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Jean Rose Barata,Jachielyn June Belangel,Arnette Maica Pitogo,Cristine Joy Dinglasa,Fatima Villaluna,Jearold Apiag,Vergell Jhon Bonghanoy,Geraldine Mae Salces,Margie Endres,Christian Cavan,Sofia Estera,Nurren Seno,Girly Jade Cuaresma,Jasmin Espegadera,Kurt Dexter Hoyohoy,Georilyn Juarez,Edgar Alan Po,John Julian Guiritan,Jasper Jon Buena,JessaLord Militante,April Cabarron,Anne Sayson,Rosell Negrosa,Tara Rebekka Vicente,Ma April Caparoso,Mary Rose Garde,Louis Christian Gendive,Marjorie Suaybaguio,Shekinah Sarupan,Kicker John Pitao</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Hardy Tagalog,Eileen Lapiz,Abigail Otero,Ron Adryon Valencia,John Michael Beltran,Zhard Lloyd Halasan,Lynette May Pamunag,Charlyn Cabalang,Gladys Manosur,Elver Hazil Maniwang,Arnel Talipan,Raihanah Ali,Almera Jean Bacongan,Roxanne Olerio,Jasmin Mabanag,Ebtisam Laila Taug,Donna Mae Datollo,Leonard Osorio,Ina Marie Abad,Razel Chiu,Cinderella Mercado,Leira Mae Pino,Suzanne Stephanie Tenazas,Sheruvinne Eloisa Custodio,King Alfred Aregadas,Maria Elpedia Catalan,Briann Tabat,Jake Olmilla,Gerlie Gio,Saul Khe</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Carina Bartolaba,Vanessa Charesse Llevares,Anthony Marvin Dagatan,Gerard Faelnar,Ma. Celedona Canseco,Winfel Faith Tabalba,Janice Singson,Kim Derryn Sasutil,Edbert Kent Badiang,Johaira Umpar,Lili Mae Abella,Jed Bryan Saynes,Jocelyn Azarraga,Kizzy Arboladura,Carmel Buyan,Mary Grace Maglalang,Roelein Tan,Danica Rose Sarmiento,Ruth Monsales,Sheila Joy Rondina,Mark Ferdinand Vestil,John Anthony Bucao,Harvey Coto,Jessielyn Cantano,Michelle Dakay,Katrina Jayne Cezar,Rejomar Largo,Emmanuel Ruiz,Norly Ibones,Ma Fatima Christy Lontajo</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Gailord Clint Alberto,Mark Kiven Calvo,Farrahwiza Hadjimuddin,Hiyas Galolo,Mia Grace Cotiangco,Jhon Kheven Singco,Charlene Rica Fajardo,Ezra Jr Lao,Alberto Aranas,Love Joy Montealto,Harjay Alota,Karen Mae Militante,Sajara Jane Floron,Jairo Capitoc,Rose Olive Camins,John Andrew Auguis,April Irish Padilla,Ofelia Borbon,Jedannah Marie Rivera,May-Ann Ybanez,Rojean Gumilao,Airra Jane Delos Reyes,Khairunissa Joy Santillan,Arvin Pang-an,Joel Alfonso,Dazel Marie Fernandez,Gene Macario Arana,Mary Angeli Benlot,Edilyn Fe Alvarez,Ryan Magallon,Duane Salvame,Decie Joy Avenido,Hennie Riconalla,Salde Mariel Sagayno,Ann Toni Bern Rodis,Norine Mendez,Diofel Duero</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Ma. Lyra Angtud,Maria Kristi Atillo,Claudibel Ian Balais,Dondon Caballes,Cherrie Joy Chavez,Vincent Crist Lipayo,Ruvi Gee Mandreza,Jema Munez,Janine Pelit,Mary Donnell Pescadero,Melanie Quimada,Mooremae Sobremonte,Charlyn Tajada,John Archie Tul-id,Al-Khalid Usama,Brandon Villaflor,Janice Villaver,Jan Richard Sijera,Duane Salvame</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <name>Online Cebu Ticket Report</name>
+    <params>
+        <name>units</name>
+        <value>d</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATEONLY</dateColumn>
+        <endDate>2017-12-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2017-08-01</startDate>
+    </timeFrameFilter>
+</Report>

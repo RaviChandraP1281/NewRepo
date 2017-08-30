@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Web Call Setting key</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Web Call Setting keys</value>
+    </caseValues>
+    <fields>
+        <label><!-- Key Location --></label>
+        <name>Key_Location__c</name>
+        <picklistValues>
+            <masterLabel>Content</masterLabel>
+            <translation><!-- Content --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Formula</masterLabel>
+            <translation><!-- Formula --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Header</masterLabel>
+            <translation><!-- Header --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Method</masterLabel>
+            <translation><!-- Method --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Misc</masterLabel>
+            <translation><!-- Misc --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OAUTH</masterLabel>
+            <translation><!-- OAUTH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Timeout</masterLabel>
+            <translation><!-- Timeout --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Url</masterLabel>
+            <translation><!-- Url --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Setting Link --></label>
+        <name>Setting_Link__c</name>
+        <relationshipLabel><!-- Setting Links --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- TempId --></label>
+        <name>TempId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Value --></label>
+        <name>Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Web Call Setting --></label>
+        <name>Web_Call_Setting__c</name>
+        <relationshipLabel><!-- Web Call Setting keys --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

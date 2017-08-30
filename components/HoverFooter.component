@@ -1,0 +1,20 @@
+<!-- Main component to populate the hover links -->
+<apex:component >
+    <apex:attribute name="pageId" required="true" type="String" description="Id of the page"/>
+    
+    <apex:attribute name="relatedListId" required="true" type="String" description="related list Id"/>
+    <apex:attribute name="permission" required="true" type="String" description="permission to view related list"/>
+    
+
+    <apex:variable var="p" value=""/>
+    <apex:outputPanel rendered="true">
+        <script type="text/javascript">
+            try {
+                if ({!permission})
+                sfdcPage.registerRelatedList('{!pageId}' + ':' + '{!relatedListId}' , '', '', false, '', '',false,false,true, '');
+            } catch (e) {
+                console.log(e);
+            }
+        </script>
+</apex:outputPanel> 
+</apex:component>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_5257499</developerName>
+        <masterLabel>Created By</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>CUST_CREATED_NAME</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>PDIUser PDIUser</sourceValue>
+            </sourceValues>
+            <value>PDI User Address</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>CUST_ID</field>
+    </columns>
+    <columns>
+        <field>Address__c.Account_Name__c</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Address__c.Addr2__c</field>
+    </columns>
+    <columns>
+        <field>Address__c.City__c</field>
+    </columns>
+    <columns>
+        <field>Address__c.Country__c</field>
+    </columns>
+    <columns>
+        <field>Address__c.State__c</field>
+    </columns>
+    <columns>
+        <field>Address__c.Postal_Code__c</field>
+    </columns>
+    <columns>
+        <field>Address__c.Latitude__c</field>
+    </columns>
+    <columns>
+        <field>Address__c.Longitude__c</field>
+    </columns>
+    <columns>
+        <field>Address__c.Bill_To_Address__c</field>
+    </columns>
+    <columns>
+        <field>Address__c.Ship_To_Address__c</field>
+    </columns>
+    <description>Address details report grouped by owner divided into address created by PDI user and other users</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_5257499</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Address Summary</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Address__c@Address__c.Account__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2014-01-06</startDate>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <fullName>Check_Amount_greater_than_zero</fullName>
+        <active>true</active>
+        <errorConditionFormula>CheckAmount__c  &lt;= 0</errorConditionFormula>
+        <errorMessage>The Check Amount Should be greater than 0 Value.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Check_Delivered_Date_Mandatory</fullName>
+        <active>true</active>
+        <description>Delivered Status indicates a check has cleared, Check Cleared Date is not Blank.</description>
+        <errorConditionFormula>AND
+( 
+    ISBLANK(Check_Cleared_Date__c), 
+    TEXT(Check_Status__c) = &apos;Delivered&apos;
+)</errorConditionFormula>
+        <errorDisplayField>Check_Cleared_Date__c</errorDisplayField>
+        <errorMessage>If check status is delivered, then check cleared date can not be blank.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Check_Returned_Date_Mandatory</fullName>
+        <active>true</active>
+        <description>Returned Status indicates check returned by USPS, Check Returned Date is not Blank.</description>
+        <errorConditionFormula>AND
+( 
+    ISBLANK(Check_Returned_Date__c), 
+    TEXT(Check_Status__c) = &apos;Returned&apos;
+)</errorConditionFormula>
+        <errorDisplayField>Check_Returned_Date__c</errorDisplayField>
+        <errorMessage>If check status is returned, then check returned date can not be blank.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Check_Voided_Date_Mandatory</fullName>
+        <active>true</active>
+        <description>Voided Status indicates check is voided  by Accounting, Check Voided Date is not Blank.</description>
+        <errorConditionFormula>AND
+( 
+    ISBLANK(Check_Voided_Date__c), 
+    TEXT(Check_Status__c) = &apos;Voided&apos;
+)</errorConditionFormula>
+        <errorDisplayField>Check_Voided_Date__c</errorDisplayField>
+        <errorMessage>If check status is voided, then check voided date can not be blank.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Check_W9_Status_cant_be_Not_Required</fullName>
+        <active>true</active>
+        <description>when check concession amount is greater than 600 AND Refund is False,then the Check W9 Status can not be NOT REQUIRED</description>
+        <errorConditionFormula>AND( CheckAmount__c &gt;600, Check_is_for_refund__c  = false, ISPICKVAL( Check_W9_Status__c ,&apos;W-9 Not Required&apos;) )</errorConditionFormula>
+        <errorDisplayField>Check_W9_Status__c</errorDisplayField>
+        <errorMessage>As the Check Amount is greater than $600 and The request is not a Product Refund,Check W-9 Status cannot be &apos;NOT REQUIRED&apos;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Lock_Amount</fullName>
+        <active>false</active>
+        <description>Lock_Amount after approval flow is launched</description>
+        <errorConditionFormula>AND(NOT(ISNEW()),ISCHANGED( CheckAmount__c ), IF( Launched_CC_Approval_flow__c == true, true, false) )</errorConditionFormula>
+        <errorDisplayField>CheckAmount__c</errorDisplayField>
+        <errorMessage>Amount cannot be changed now . Please initiate new check concession and proceed further</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RestrictCCAssignmentToUnrelatedBUQueus</fullName>
+        <active>false</active>
+        <description>Not working</description>
+        <errorConditionFormula>NOT(CONTAINS(UPPER(Owner:Queue.QueueName),UPPER(BU__c)))</errorConditionFormula>
+        <errorDisplayField>OwnerId</errorDisplayField>
+        <errorMessage>Concession request cannot be assigned to unrelated BU Queues.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Submit_For_Check_Concession_Approval</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Submit For Check Concession Approval</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/apex.js&quot;)}
+{!REQUIRESCRIPT(&quot;/support/console/28.0/integration.js&quot;)}
+
+var user = sforce.connection.getUserInfo();
+var userId = user.userId ;
+var userBU = sforce.apex.execute(&quot;getBU_Utility&quot;,&quot;getBU&quot;, {UserId:userId});
+if(userBU == &apos;N&apos;){
+alert(&apos;User is not authorized to launch check concession process . Please contact system admin&apos;);
+}
+else{
+var concession=&apos;{!Concession_Request__c.Id}&apos;;
+alert(concession);
+var Submitapproval= sforce.apex.execute(&quot;getBU_Utility&quot;,&quot;submitApproval&quot;, {ConcessionId:concession}); 
+
+var url=&apos;/&apos;+concession+&apos;?isdtp=mn&apos;;
+alert(url);
+document.location.reload(true);
+	
+
+}</url>
+    </webLinks>
+</CustomObject>

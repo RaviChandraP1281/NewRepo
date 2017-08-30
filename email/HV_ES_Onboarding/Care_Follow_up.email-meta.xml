@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>After Care Follow-up</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Upload_Blank_Editable</letterhead>
+    <name>Care Follow-up</name>
+    <style>freeForm</style>
+    <subject>Intuit: QuickBooks Training Check In</subject>
+    <textOnly>Hi {!Contact.FirstName},
+
+
+
+Just wanted to check-in and see how things were going after your YYY training session with ZZZ. He/She mentioned you went over XXX.
+
+
+
+Is there anything else we can help you with at this time? Please let me know
+
+
+
+{!User.FirstName} {!User.LastName} | Enterprise Account Manager
+
+Work Phone: {!User.Phone} ext {!User.Extension} | {!User.Email}
+
+Intuit | simplify the business of life</textOnly>
+    <type>html</type>
+</EmailTemplate>

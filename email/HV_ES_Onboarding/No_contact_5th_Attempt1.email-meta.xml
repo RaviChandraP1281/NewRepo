@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>5th Contact Attempt approx. 3 days after 4th Contact Attempt</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Empty_Letterhead</letterhead>
+    <name>No contact 5th Attempt</name>
+    <style>freeForm</style>
+    <subject>Not trying to be an annoyance</subject>
+    <textOnly>Account #{!Contact.CAN__c}
+
+
+
+Dear {!Contact.FirstName},
+
+I apologize if all of my attempts to reach you have become an annoyance, it is however crucial that I stress the importance and urgency of this process.
+
+I hope that you, a coworker, or a consultant that’s assisting you, is able to find time to reach out to me this week so that I can ensure that you are well taken care of. It is my primary goal to ensure your successful installation and implementation of your new QuickBooks Enterprise software.
+
+Thanks for your time and response,
+
+
+Chadwick Farrell ~ Account Manager
+Intuit ~ Simplify the business of life
+Work Phone: 800-498-7401 ext 1447
+
+This transmittal is intended only for the use of the individual or entity to which it is addressed and may contain information that is privileged, confidential and exempt from disclosure under applicable law. If the reader of this transmittal is not the intended recipient or the employee or agent responsible for delivering the transmittal to the intended recipient, you are hereby notified that any dissemination, distribution or copying of this communication is strictly prohibited.</textOnly>
+    <type>html</type>
+</EmailTemplate>

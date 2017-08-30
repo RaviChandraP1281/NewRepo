@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>SOA VOC Survey</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>SOA VOC Survey</value>
+    </caseValues>
+    <fields>
+        <label><!-- Dynamic Where Clause --></label>
+        <name>Dynamic_Where_Clause__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email Addresses --></label>
+        <name>Email_Addresses__c</name>
+    </fields>
+    <fields>
+        <label><!-- Group Name --></label>
+        <name>Group_Name__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

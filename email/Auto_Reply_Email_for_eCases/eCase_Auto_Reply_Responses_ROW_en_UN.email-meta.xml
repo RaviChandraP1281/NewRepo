@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>eCase Auto-Reply Responses -ROW (en_UN)</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Email_Letterhead</letterhead>
+    <name>eCase Auto-Reply Responses - ROW (en_UN)</name>
+    <style>freeForm</style>
+    <subject>eCase Auto-Reply Response</subject>
+    <textOnly>Thank you for submitting your question.  One of our support experts will reply within 1 business day.
+
+Your case details are as follows:
+
+Case Number:  {!Case.CaseNumber}
+
+Question: {!Case.Question}
+
+
+For additional support options, please visit our website at:
+
+https://help.quickbooks.intuit.com/en/contact</textOnly>
+    <type>html</type>
+</EmailTemplate>

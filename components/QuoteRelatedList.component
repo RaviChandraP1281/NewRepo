@@ -1,0 +1,70 @@
+<apex:component controller="RelatedQuotesViewerCont">
+<apex:includeScript value="/support/console/35.0/integration.js"/>
+<script type="text/javascript">
+var url = null;
+var sfdcQuoteId = null;
+var siebelQuoteId = null;
+var openSubtab = function openSubtab(result) {
+    //Now that we have the primary tab ID, we can open a new subtab in it
+    var primaryTabId = result.id;
+    sforce.console.openSubtab(primaryTabId ,url, true,siebelQuoteId, null);
+};
+
+
+var openQuoteDetailPage = function( quoteId,siebelRowId ) {
+    url = '/apex/QuoteDetailOverride?id=' + quoteId + '&sfdc.override=1';
+    sfdcQuoteId = quoteId;
+    siebelQuoteId = siebelRowId;
+    if (sforce.console.isInConsole()) {
+        sforce.console.getEnclosingPrimaryTabId(openSubtab);
+    } else {
+        window.open(url, '_self');
+    }
+};
+</script>
+    <apex:form id="form">
+        <apex:pageBlock id="pb">
+            <apex:outputlabel style="display:block; font-size: 1.2em; font-family: Arial,Helvetica,sans-serif; font-weight: bold;"> Quotes </apex:outputlabel><br/>
+            <apex:pageBlockTable value="{!QuotRelList}" var="q" id="quoteTable" rows="{!count}" >          
+                <apex:column headerValue="Status" rendered="{!showrellist==True}">
+                    <apex:outputText value="{!IF(q.Siebel_Status_Code__c != "",q.Siebel_Status_Code__c,"--")}"/>
+                </apex:column>
+                <apex:column headerValue="Quote No." style="font-weight: normal; white-space: normal;" rendered="{!showrellist==True}">
+                 <!--  <apex:outputLink value="/apex/QuoteDetailOverride?id={!q.id}&sfdc.override=1" target="_top">{!q.Siebel_Quote_Number__c}</apex:outputLink>  -->
+                 <!-- BTBS-2083:09/22/2014 rhota commented the previous line and added the next line to address Firefox issue 'srcUp is not defined' -->
+                 <a href="" style="cursor:pointer;" onClick="openQuoteDetailPage('{!q.id}','{!q.Siebel_ROW_ID__c}');" >{!q.Siebel_Quote_Number__c}</a>       
+                </apex:column>
+                <!--  BTBS-2723 DMD 3/3/2015 Added Name column -->
+                <apex:column headerValue="Name" rendered="{!showrellist==True}">
+                    <apex:outputText value="{!IF(q.Name != "",q.Name,"--")}"/>
+                </apex:column>
+                <apex:column headerValue="Type" rendered="{!showrellist==True}">
+                    <apex:outputText value="{!IF(q.Siebel_Quote_Type__c != "",q.Siebel_Quote_Type__c,"--")}"/>
+                </apex:column>
+                <apex:column headerValue="Total" rendered="{!showrellist==True}">
+                     <apex:outputField value="{!q.Siebel_Total_Amount__c}"/>
+                </apex:column>
+                <apex:column headerValue="Contact" rendered="{!showrellist==True}">
+                    <apex:outputLink value="/{!q.ContactId}" target="_top">{!q.contact.name}</apex:outputLink>
+                </apex:column>
+                <apex:column headerValue="Agent" rendered="{!showrellist==True}">
+                    <apex:outputText value="{!IF(q.Siebel_Created_By__c != "",q.Siebel_Created_By__c,"--")}"/>
+                </apex:column>
+                <apex:column headerValue="Expire Date" rendered="{!showrellist==True}">
+                    <apex:outputField value="{!q.Expires__c}"/>
+                </apex:column>
+                <apex:column headerValue="Last Updated ↓" rendered="{!showrellist==True}">         
+                    <apex:outputField value="{!q.LastModifiedDate}"/>    
+                </apex:column>
+                <apex:column headerValue="Order No." rendered="{!showrellist==True}">
+                    <apex:outputField value="{!q.Siebel_Order_Number__c}"/>    
+                </apex:column>
+             </apex:pageBlockTable>
+             <apex:outputlabel value=" No records to display" rendered="{!showrellist==False}"/><br/>
+             <!-- BTBE-510: Added new Show More and Goto List links for displaying Quote in chunks-->
+             <apex:commandlink id="cmdlnk" value="Show {!showcount} more » | " action="{!showmore}" reRender="form, cmdlnk" rendered="{!showmoreflag}" style="font-family: Arial,Helvetica,sans-serif;"/>
+             <apex:outputLink value="/apex/RelatedQuotesListPage?acctId={!HTMLENCODE(accId)}" rendered="{!showGoToList}" style="font-family: Arial,Helvetica,sans-serif;" >Go to list »</apex:outputLink>
+
+        </apex:pageBlock>
+    </apex:form>
+</apex:component>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>DML Exception</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>DML Exceptions</value>
+    </caseValues>
+    <fields>
+        <help><!-- DML Field Names --></help>
+        <label><!-- DML Field Names --></label>
+        <name>DML_Field_Names__c</name>
+    </fields>
+    <fields>
+        <help><!-- Record ID --></help>
+        <label><!-- DML ID --></label>
+        <name>DML_ID__c</name>
+    </fields>
+    <fields>
+        <help><!-- DML Index --></help>
+        <label><!-- DML Index --></label>
+        <name>DML_Index__c</name>
+    </fields>
+    <fields>
+        <help><!-- DML Message reported by the exception --></help>
+        <label><!-- DML Message --></label>
+        <name>DML_Message__c</name>
+    </fields>
+    <fields>
+        <help><!-- DML Status Type --></help>
+        <label><!-- DML Type --></label>
+        <name>DML_Type__c</name>
+    </fields>
+    <fields>
+        <help><!-- System Exception that originated the DML Exception --></help>
+        <label><!-- System Exception --></label>
+        <name>System_Exception__c</name>
+        <relationshipLabel><!-- DML Exceptions --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

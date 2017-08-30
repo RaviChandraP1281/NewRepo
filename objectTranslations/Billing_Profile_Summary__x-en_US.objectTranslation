@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Billing Profile Summary</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Billing Profile Summary</value>
+    </caseValues>
+    <fields>
+        <label><!-- ACCOUNT_POID --></label>
+        <name>ACCOUNT_POID__c</name>
+    </fields>
+    <fields>
+        <label><!-- BALANCE_AMOUNT --></label>
+        <name>BALANCE_AMOUNT__c</name>
+    </fields>
+    <fields>
+        <label><!-- BDOM --></label>
+        <name>BDOM__c</name>
+    </fields>
+    <fields>
+        <label><!-- BILLINFO_POID --></label>
+        <name>BILLINFO_POID__c</name>
+    </fields>
+    <fields>
+        <label><!-- BILLING_PROFILE_ID --></label>
+        <name>BILLING_PROFILE_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- BP_CONTACT_NAME --></label>
+        <name>BP_CONTACT_NAME__c</name>
+    </fields>
+    <fields>
+        <label><!-- CC_ACCOUNT_NUMBER --></label>
+        <name>CC_ACCOUNT_NUMBER__c</name>
+    </fields>
+    <fields>
+        <label><!-- CC_EXP_YEAR --></label>
+        <name>CC_EXP_YEAR__c</name>
+    </fields>
+    <fields>
+        <label><!-- CUSTOMER_ACCOUNT_NO --></label>
+        <name>CUSTOMER_ACCOUNT_NO__c</name>
+    </fields>
+    <fields>
+        <label><!-- DISPUTED_AMOUNT --></label>
+        <name>DISPUTED_AMOUNT__c</name>
+    </fields>
+    <fields>
+        <label><!-- DUE_AMOUNT --></label>
+        <name>DUE_AMOUNT__c</name>
+    </fields>
+    <fields>
+        <label><!-- NEXT_BILL_DATE --></label>
+        <name>NEXT_BILL_DATE__c</name>
+    </fields>
+    <fields>
+        <label><!-- PAYMENT_METHOD --></label>
+        <name>PAYMENT_METHOD__c</name>
+    </fields>
+    <fields>
+        <label><!-- PENDING_PAY_ADJ_AMOUNT --></label>
+        <name>PENDING_PAY_ADJ_AMOUNT__c</name>
+    </fields>
+    <fields>
+        <label><!-- TOTAL_AMOUNT --></label>
+        <name>TOTAL_AMOUNT__c</name>
+    </fields>
+    <fields>
+        <label><!-- UNBILLED_USAGE_AMOUNT --></label>
+        <name>UNBILLED_USAGE_AMOUNT__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

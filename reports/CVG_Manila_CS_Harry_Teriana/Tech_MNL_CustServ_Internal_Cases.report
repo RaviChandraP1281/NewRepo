@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CASE_NUMBER</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <columns>
+        <field>AGE</field>
+    </columns>
+    <columns>
+        <field>CREATED</field>
+    </columns>
+    <columns>
+        <field>ORIGIN</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATE_BY</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATEONLY</field>
+    </columns>
+    <columns>
+        <field>Case.Resolution_Code__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>1 AND (2 OR 3 OR 4)</booleanFilter>
+        <criteriaItems>
+            <column>ORIGIN</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Internal</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Abigael Francisco,Amelyn Talastas,Angelo Valdez,Audrey Winona Avenida,Beberlyn Motol,Camille Dula,Carlos Tapia,Concordia Cortez,Corazon Abrera,Deding Depilaga,Edison Iglesia,Elenita Fernandez,Elvie Regala,Emmanuel Alfonso Ciencia,Evangeline Vicente,Fritz Roland Catolico,Geraldine Ambac,Glenda Pedro,Grace Nieves,Grace Ann Polborido</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Hannah Manalo,Hansel Natividad,Helon Ferrer,James Jaolo Din,Jeremiah Pansuelo,Jhan Bryan Cruz,Jhon Dayate,Jhowina Calosing,John Santos,John Dalton Decena,John Paul Malagar,Jonnalyn Fumar,Joselito Alibaya,Joules Jamil Monderin,Juan Carlo Clemente,Juanito De Mesa,Kevin Ortiz,Leo Vanne Garcia,Lloyd Gaba,Ma Erlinda De Leon</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Ma Pheanutt Guerrero,Mara Ophelia Bacalla,Marvin Casiano,Marwill Oblepias,Ma Victoria Valdez,Michael Angelo Remo,Monica Cano,Peejay Limpin,Precious Jennielyn Lopez,Raquel Nido,Renelyn Irish Pactol,Reydolfo Camagon,Rina Josefa Balanay,Rodel Montejo,Rodjie Delos Reyes,Romina Palamos,Rommel Dones,Samantha Nicole Castelo,Sandro Palisoc,Wenifreda Junio</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Tech.MNL CustServ Internal Cases</name>
+    <params>
+        <name>units</name>
+        <value>d</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>CREATED_DATE</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>LAST_UPDATEONLY</dateColumn>
+        <interval>INTERVAL_TODAY</interval>
+    </timeFrameFilter>
+</Report>

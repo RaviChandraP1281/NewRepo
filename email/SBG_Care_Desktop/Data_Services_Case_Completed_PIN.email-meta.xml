@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>To be used to deliver PIN/Company File Password information</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Desktop_Data_Services</letterhead>
+    <name>Data Services - Case Completed PIN</name>
+    <style>freeForm</style>
+    <subject>Data Services Case Completed - PIN</subject>
+    <type>html</type>
+</EmailTemplate>

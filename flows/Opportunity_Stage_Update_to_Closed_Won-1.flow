@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Update Opportunity to Closed Won, when related Asset status is active/subscribed.</description>
+    <interviewLabel>Opportunity Stage Update to Closed Won {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Opportunity Stage Update to Closed Won</label>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Get Opportunity related to Asset Id provided by Process builder.</description>
+        <name>Get_Opportunity_related_to_Asset_Id</name>
+        <label>Get Opportunity related to Asset Id</label>
+        <locationX>239</locationX>
+        <locationY>87</locationY>
+        <assignNullValuesIfNoRecordsFound>true</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Update_Opportunity_to_Closed_Won</targetReference>
+        </connector>
+        <filters>
+            <field>Asset__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>assetId</elementReference>
+            </value>
+        </filters>
+        <object>Opportunity</object>
+        <outputAssignments>
+            <assignToReference>opportunityId</assignToReference>
+            <field>Id</field>
+        </outputAssignments>
+        <sortField>CreatedDate</sortField>
+        <sortOrder>Desc</sortOrder>
+    </recordLookups>
+    <recordUpdates>
+        <name>Update_Opportunity_to_Closed_Won</name>
+        <label>Update Opportunity to Closed Won</label>
+        <locationX>241</locationX>
+        <locationY>436</locationY>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>opportunityId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>CloseDate</field>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Siebel_Order_id__c</field>
+            <value>
+                <elementReference>assetId</elementReference>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Source__c</field>
+            <value>
+                <stringValue>QBO Asset</stringValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>StageName</field>
+            <value>
+                <stringValue>Closed Won</stringValue>
+            </value>
+        </inputAssignments>
+        <object>Opportunity</object>
+    </recordUpdates>
+    <startElementReference>Get_Opportunity_related_to_Asset_Id</startElementReference>
+    <variables>
+        <name>assetId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>opportunityId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

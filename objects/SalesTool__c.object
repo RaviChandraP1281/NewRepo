@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Is_Product_Required__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Check if At lease one product is needed to access the Sales tool for the given Product Family of interest.</description>
+        <externalId>false</externalId>
+        <label>Is Product Required</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+</CustomObject>

@@ -1,0 +1,861 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Account Management</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Account Management</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Accounts Management --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Attribute --></label>
+        <name>Attribute__c</name>
+        <picklistValues>
+            <masterLabel># CanTax Clients</masterLabel>
+            <translation><!-- # CanTax Clients --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel># Cloud Ready Clients</masterLabel>
+            <translation><!-- # Cloud Ready Clients --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel># DT Max Clients</masterLabel>
+            <translation><!-- # DT Max Clients --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel># Firm Partners</masterLabel>
+            <translation><!-- # Firm Partners --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel># Freshbooks Clients</masterLabel>
+            <translation><!-- # Freshbooks Clients --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel># MYOB Clients</masterLabel>
+            <translation><!-- # MYOB Clients --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel># Manual Clients</masterLabel>
+            <translation><!-- # Manual Clients --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel># Other Accounting Solution Clients</masterLabel>
+            <translation><!-- # Other Accounting Solution Clients --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel># Other Tax Solution Clients</masterLabel>
+            <translation><!-- # Other Tax Solution Clients --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel># ProFile Clients</masterLabel>
+            <translation><!-- # ProFile Clients --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel># QBO Clients</masterLabel>
+            <translation><!-- # QBO Clients --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel># Reckon Clients</masterLabel>
+            <translation><!-- # Reckon Clients --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel># Sage Clients</masterLabel>
+            <translation><!-- # Sage Clients --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel># Self-Employed Clients</masterLabel>
+            <translation><!-- # Self-Employed Clients --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel># TaxCycle Clients</masterLabel>
+            <translation><!-- # TaxCycle Clients --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel># TaxPrep Clients</masterLabel>
+            <translation><!-- # TaxPrep Clients --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel># TurboTax Clients</masterLabel>
+            <translation><!-- # TurboTax Clients --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel># Ufile Clients</masterLabel>
+            <translation><!-- # Ufile Clients --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel># VisualTax Clients</masterLabel>
+            <translation><!-- # VisualTax Clients --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel># Xero Clients</masterLabel>
+            <translation><!-- # Xero Clients --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel># of AE Licenses</masterLabel>
+            <translation><!-- # of AE Licenses --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel># of ES Clients</masterLabel>
+            <translation><!-- # of ES Clients --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel># of Locations</masterLabel>
+            <translation><!-- # of Locations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel># of Premier Clients</masterLabel>
+            <translation><!-- # of Premier Clients --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel># of Pro Clients</masterLabel>
+            <translation><!-- # of Pro Clients --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AUS - Bookkeeping Community</masterLabel>
+            <translation><!-- AUS - Bookkeeping Community --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AUS - MYOB Clients</masterLabel>
+            <translation><!-- AUS - MYOB Clients --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AUS - Practice Management</masterLabel>
+            <translation><!-- AUS - Practice Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AUS - QBO Clients</masterLabel>
+            <translation><!-- AUS - QBO Clients --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AUS - Reckon Clients</masterLabel>
+            <translation><!-- AUS - Reckon Clients --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AUS - Sage Clients</masterLabel>
+            <translation><!-- AUS - Sage Clients --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AUS - Tax Products</masterLabel>
+            <translation><!-- AUS - Tax Products --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AUS - Xero Clients</masterLabel>
+            <translation><!-- AUS - Xero Clients --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AUS- Cloud Clients</masterLabel>
+            <translation><!-- AUS- Cloud Clients --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AUS- Cloud Driver</masterLabel>
+            <translation><!-- AUS- Cloud Driver --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AUS- Desktop Clients</masterLabel>
+            <translation><!-- AUS- Desktop Clients --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AUS- Engagement Level</masterLabel>
+            <translation><!-- AUS- Engagement Level --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AUS- Manual Clients</masterLabel>
+            <translation><!-- AUS- Manual Clients --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AUS- QBO Familiarity</masterLabel>
+            <translation><!-- AUS- QBO Familiarity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AUS- Years of Operations</masterLabel>
+            <translation><!-- AUS- Years of Operations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Business Desire</masterLabel>
+            <translation><!-- Business Desire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DUNS ID</masterLabel>
+            <translation><!-- DUNS ID --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Global DUNS ID</masterLabel>
+            <translation><!-- Global DUNS ID --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Nickname</masterLabel>
+            <translation><!-- Nickname --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Products - Accounting</masterLabel>
+            <translation><!-- Products - Accounting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Products - Audit</masterLabel>
+            <translation><!-- Products - Audit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Products - Document Management</masterLabel>
+            <translation><!-- Products - Document Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Products - Electronic Signature</masterLabel>
+            <translation><!-- Products - Electronic Signature --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Products - Portal</masterLabel>
+            <translation><!-- Products - Portal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Products - Practice Management</masterLabel>
+            <translation><!-- Products - Practice Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Products - Research</masterLabel>
+            <translation><!-- Products - Research --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Products - Time and Billing</masterLabel>
+            <translation><!-- Products - Time and Billing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Products -Tax</masterLabel>
+            <translation><!-- Products -Tax --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Score</masterLabel>
+            <translation><!-- Score --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Segment</masterLabel>
+            <translation><!-- Segment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Services - Accounting</masterLabel>
+            <translation><!-- Services - Accounting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Services - Audit</masterLabel>
+            <translation><!-- Services - Audit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Services - Business Consulting</masterLabel>
+            <translation><!-- Services - Business Consulting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Services - Financial Advisor</masterLabel>
+            <translation><!-- Services - Financial Advisor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Services - Legal (Law Firm)</masterLabel>
+            <translation><!-- Services - Legal (Law Firm) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Services - Payroll</masterLabel>
+            <translation><!-- Services - Payroll --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Services - QB Consulting</masterLabel>
+            <translation><!-- Services - QB Consulting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Services - Tax Only</masterLabel>
+            <translation><!-- Services - Tax Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Services - Tax Planning</masterLabel>
+            <translation><!-- Services - Tax Planning --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Services - Tax Prep</masterLabel>
+            <translation><!-- Services - Tax Prep --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technology</masterLabel>
+            <translation><!-- Technology --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Year Business Started</masterLabel>
+            <translation><!-- Year Business Started --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Group --></label>
+        <name>Group__c</name>
+        <picklistValues>
+            <masterLabel>AUS BDM/IAM</masterLabel>
+            <translation><!-- AUS BDM/IAM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAN BDM/IAM</masterLabel>
+            <translation><!-- CAN BDM/IAM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FR BDM/IAM</masterLabel>
+            <translation><!-- FR BDM/IAM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PTG</masterLabel>
+            <translation><!-- PTG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBG</masterLabel>
+            <translation><!-- SBG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UK BDM/IAM</masterLabel>
+            <translation><!-- UK BDM/IAM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>US BDM/IAM</masterLabel>
+            <translation><!-- US BDM/IAM --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Other Value --></label>
+        <name>Other_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Value --></label>
+        <name>Value__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1-3</masterLabel>
+            <translation><!-- 1-3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10</masterLabel>
+            <translation><!-- 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10-20</masterLabel>
+            <translation><!-- 10-20 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>100-150 </masterLabel>
+            <translation><!-- 100-150  --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>100-250</masterLabel>
+            <translation><!-- 100-250 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>150-225</masterLabel>
+            <translation><!-- 150-225 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>20</masterLabel>
+            <translation><!-- 20 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>20-50</masterLabel>
+            <translation><!-- 20-50 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>225-300</masterLabel>
+            <translation><!-- 225-300 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>250-500</masterLabel>
+            <translation><!-- 250-500 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3-5</masterLabel>
+            <translation><!-- 3-5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>30</masterLabel>
+            <translation><!-- 30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>300-500</masterLabel>
+            <translation><!-- 300-500 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>40</masterLabel>
+            <translation><!-- 40 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5-10</masterLabel>
+            <translation><!-- 5-10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>50</masterLabel>
+            <translation><!-- 50 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>50-75</masterLabel>
+            <translation><!-- 50-75 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>60</masterLabel>
+            <translation><!-- 60 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>70</masterLabel>
+            <translation><!-- 70 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>75-100</masterLabel>
+            <translation><!-- 75-100 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>80</masterLabel>
+            <translation><!-- 80 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>90</masterLabel>
+            <translation><!-- 90 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>&lt; 10</masterLabel>
+            <translation><!-- &lt; 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>&lt;1</masterLabel>
+            <translation><!-- &lt;1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>&gt; 100</masterLabel>
+            <translation><!-- &gt; 100 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>&gt;150</masterLabel>
+            <translation><!-- &gt;150 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>&gt;500</masterLabel>
+            <translation><!-- &gt;500 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>A</masterLabel>
+            <translation><!-- A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ATX</masterLabel>
+            <translation><!-- ATX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Accountant</masterLabel>
+            <translation><!-- Accountant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>AccountantsOffice</masterLabel>
+            <translation><!-- AccountantsOffice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Adopter</masterLabel>
+            <translation><!-- Adopter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Adverse</masterLabel>
+            <translation><!-- Adverse --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>B</masterLabel>
+            <translation><!-- B --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BigTime</masterLabel>
+            <translation><!-- BigTime --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bookkeeper</masterLabel>
+            <translation><!-- Bookkeeper --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>C</masterLabel>
+            <translation><!-- C --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CCH</masterLabel>
+            <translation><!-- CCH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CCH Axcess</masterLabel>
+            <translation><!-- CCH Axcess --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CCH Engagement</masterLabel>
+            <translation><!-- CCH Engagement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CCH Practice Mgmt</masterLabel>
+            <translation><!-- CCH Practice Mgmt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CCH iFirm</masterLabel>
+            <translation><!-- CCH iFirm --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CPA Secure</masterLabel>
+            <translation><!-- CPA Secure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CS</masterLabel>
+            <translation><!-- CS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Caseware</masterLabel>
+            <translation><!-- Caseware --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Change Academy</masterLabel>
+            <translation><!-- Change Academy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CheckBook Solution</masterLabel>
+            <translation><!-- CheckBook Solution --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Client</masterLabel>
+            <translation><!-- Client --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cloud Innovator</masterLabel>
+            <translation><!-- Cloud Innovator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cold</masterLabel>
+            <translation><!-- Cold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Create Solutions</masterLabel>
+            <translation><!-- Create Solutions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Crosslink</masterLabel>
+            <translation><!-- Crosslink --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Currently Looking</masterLabel>
+            <translation><!-- Currently Looking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Won&apos;t Say</masterLabel>
+            <translation><!-- Customer Won&apos;t Say --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cyber Pay Online</masterLabel>
+            <translation><!-- Cyber Pay Online --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DMS</masterLabel>
+            <translation><!-- DMS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DocuSign</masterLabel>
+            <translation><!-- DocuSign --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Drake</masterLabel>
+            <translation><!-- Drake --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DropBox</masterLabel>
+            <translation><!-- DropBox --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Early Adopter</masterLabel>
+            <translation><!-- Early Adopter --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EasyAcct</masterLabel>
+            <translation><!-- EasyAcct --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enthusiast</masterLabel>
+            <translation><!-- Enthusiast --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Extremely Familiar</masterLabel>
+            <translation><!-- Extremely Familiar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Familiar</masterLabel>
+            <translation><!-- Familiar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>File Cabinet</masterLabel>
+            <translation><!-- File Cabinet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>File Share</masterLabel>
+            <translation><!-- File Share --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Go System/RIA - TRA</masterLabel>
+            <translation><!-- Go System/RIA - TRA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gov Reports</masterLabel>
+            <translation><!-- Gov Reports --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Grow</masterLabel>
+            <translation><!-- Grow --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HighTail</masterLabel>
+            <translation><!-- HighTail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hot</masterLabel>
+            <translation><!-- Hot --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inactive</masterLabel>
+            <translation><!-- Inactive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intuit Tax Online</masterLabel>
+            <translation><!-- Intuit Tax Online --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Investigating</masterLabel>
+            <translation><!-- Investigating --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Karbon</masterLabel>
+            <translation><!-- Karbon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lacerte</masterLabel>
+            <translation><!-- Lacerte --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lodge It</masterLabel>
+            <translation><!-- Lodge It --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MYOB</masterLabel>
+            <translation><!-- MYOB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MYOB AE (Accountant Enterprise)</masterLabel>
+            <translation><!-- MYOB AE (Accountant Enterprise) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MYOB AO (Accountant Office)</masterLabel>
+            <translation><!-- MYOB AO (Accountant Office) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maintain</masterLabel>
+            <translation><!-- Maintain --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Microsoft Dynamics GP</masterLabel>
+            <translation><!-- Microsoft Dynamics GP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Network</masterLabel>
+            <translation><!-- Network --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None (Death, Retired, Quit)</masterLabel>
+            <translation><!-- None (Death, Retired, Quit) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not at all Familiar</masterLabel>
+            <translation><!-- Not at all Familiar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Office Tools</masterLabel>
+            <translation><!-- Office Tools --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Vendor Not Listed</masterLabel>
+            <translation><!-- Other Vendor Not Listed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PortalSecure</masterLabel>
+            <translation><!-- PortalSecure --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ProFX - CCH</masterLabel>
+            <translation><!-- ProFX - CCH --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ProSeries</masterLabel>
+            <translation><!-- ProSeries --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ProSeries Basic</masterLabel>
+            <translation><!-- ProSeries Basic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ProSystems</masterLabel>
+            <translation><!-- ProSystems --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QB &amp; EasyAcct</masterLabel>
+            <translation><!-- QB &amp; EasyAcct --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QBO</masterLabel>
+            <translation><!-- QBO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QBOA</masterLabel>
+            <translation><!-- QBOA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QUICKBOOKS</masterLabel>
+            <translation><!-- QUICKBOOKS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reckon</masterLabel>
+            <translation><!-- Reckon --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reckon (XPA)</masterLabel>
+            <translation><!-- Reckon (XPA) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reckon APS</masterLabel>
+            <translation><!-- Reckon APS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reckon Elite</masterLabel>
+            <translation><!-- Reckon Elite --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retire</masterLabel>
+            <translation><!-- Retire --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Right Signature</masterLabel>
+            <translation><!-- Right Signature --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sage</masterLabel>
+            <translation><!-- Sage --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sage Handi Soft</masterLabel>
+            <translation><!-- Sage Handi Soft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sage Handi Tax (Handi Ledger)</masterLabel>
+            <translation><!-- Sage Handi Tax (Handi Ledger) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sell</masterLabel>
+            <translation><!-- Sell --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ShareFile</masterLabel>
+            <translation><!-- ShareFile --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SmartVault</masterLabel>
+            <translation><!-- SmartVault --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SmartVault - Right Signature</masterLabel>
+            <translation><!-- SmartVault - Right Signature --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Somewhat Familiar</masterLabel>
+            <translation><!-- Somewhat Familiar --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Surefile</masterLabel>
+            <translation><!-- Surefile --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>THIRD PARTY</masterLabel>
+            <translation><!-- THIRD PARTY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tax Wise</masterLabel>
+            <translation><!-- Tax Wise --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tax Works - HRB</masterLabel>
+            <translation><!-- Tax Works - HRB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Tentative</masterLabel>
+            <translation><!-- Tentative --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Thompson Reuters Software Assistant</masterLabel>
+            <translation><!-- Thompson Reuters Software Assistant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Thomson Reuters AdvanceFlow</masterLabel>
+            <translation><!-- Thomson Reuters AdvanceFlow --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Thomson Reuters Web Builder CS</masterLabel>
+            <translation><!-- Thomson Reuters Web Builder CS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Time Matrix</masterLabel>
+            <translation><!-- Time Matrix --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Traditionalist</masterLabel>
+            <translation><!-- Traditionalist --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ultra Tax - TRA</masterLabel>
+            <translation><!-- Ultra Tax - TRA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UltraTax</masterLabel>
+            <translation><!-- UltraTax --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Warm</masterLabel>
+            <translation><!-- Warm --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>XPM (Xero Practice Manager)</masterLabel>
+            <translation><!-- XPM (Xero Practice Manager) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Xero</masterLabel>
+            <translation><!-- Xero --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Xero Tax</masterLabel>
+            <translation><!-- Xero Tax --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>eFile Cabinet</masterLabel>
+            <translation><!-- eFile Cabinet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>taxsites.com</masterLabel>
+            <translation><!-- taxsites.com --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

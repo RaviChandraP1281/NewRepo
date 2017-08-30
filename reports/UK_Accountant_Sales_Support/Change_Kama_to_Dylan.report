@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT_ID</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <currency>GBP</currency>
+    <filter>
+        <booleanFilter>(1 OR 2) AND 3</booleanFilter>
+        <criteriaItems>
+            <column>ACCOUNT_ID</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>001i000000qHGfr,001i000000qHlJd,001i000000qHmt1,001i000000qHOGb,001i000000qHXEY,001i000000qIES8,001i000000qJmb0,001i000000qKUyy,001i000000qN5s2,001i000000qN5yb,001i000000qN6B8,001i000000qN6i8,001i000000qN6LL,001i000000qN6mt,001i000000qN6o5,001i000000r1a2w,001i000000tGSI3,001i000000zet8k,001i00000101kcm,001i0000016KiHH,001i0000019Gjmz,001i000001AtjAg,001i000001aVJ3l,001i000001aVN21,001i000001Bh0PO,001i000001c2gPQ,001i000001c5EDb,001i000001CSled,001i000001cwtL4,001i000001dsIqR,001i000001e4cSI,001i000001e4cTL,001i000001e4d2L,001i000001e4elW,001i000001e4O5N,001i000001e4O8X,001i000001e4OJy,001i000001e4Owq,001i000001e4tG9,001i000001e4uUl,001i000001e5wH1,001i000001e67an,001i000001e6Qqa,001i000001e7aY9,001i000001e7aZg,001i000001f9Dt2,001i000001f9oKH,001i000001f9PqK,001i000001f9wfH,001i000001fAbzk,001i000001fAndQ,001i000001fAZx7,001i000001fCk6l,001i000001fCm7w,001i000001fDITN,001i000001hFuKD,001i000001i00Ze,001i000001i157m</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ACCOUNT_ID</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>001i000001ikKLW,001i000001IQbaY,001i000001ISOjn,001i000001IZmJX,001i000001jjSNw,001i000001kg3e3,001i000001lVfpd,001i000001lXial,001i000001lXiSD,001i000001LZGs5,001i000001RXere,001i000001Trc9r,001i000001Trcny,001i000001TrKxP,001i000001Ts43Y,001i000001Ts4dl,001i000001Ts4Rz,001i000001Ts5Er,001i000001Ts5O3,001i000001TtwCf,001i000001USIMW,001i000001UU50z,001i000001UU5HC,001i000001UUGAI,001i000001UVas8,001i000001UW0U8,001i000001UW0W4,001i000001Vg9eO</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>USERS.NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Kama Szekalska</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Change Kama to Dylan</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

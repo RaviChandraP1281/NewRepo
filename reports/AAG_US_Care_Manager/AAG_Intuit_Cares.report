@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_CASE_OWNER_NAME</field>
+    </columns>
+    <currency>USD</currency>
+    <description>Survey Grouped by Cares Score</description>
+    <filter>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>,William Alejandro,Leah Hartman,Carlos Camacho,Omar Carbajal,Joell Jones,Veronica Lopez,John Macko,David Nagoda,Harold Peterson,Joseph Petroshus,Connie Pierce,Max Presnell,Inez Pulido,Benjamin Tilman,Anthony Calabrese,Cheryl Livingston,Christopher Hook,Daniel Keating,Gregory Froehlich,Jason Cummins,John Umstott,Lesli Morse,Michael Colosimo,Nickie Norris-Durik,Robert Hamburger,Robert Parrott,Amy Kalm,Julio Luque,Timothy Bentley,Annie Ackors-Bruce,Phillip Madeira,Amy Meadows,Michael Melendez,Stephen Morrow,Dominique Wells,Stephen Cone,Christopher George,Kevin Kuchinski,Richard Redmond,Amber Risteen,Joseph Audino,Joe Audino,Kristine Bollerud,Wesley Booth,Dawn Bratthauer-Heaps,Leon Brown,Charo Cruz-Colon,Le’Darien Diaz,Alison Elliott,Malcolm Hooe,Peri Plant,David Virag,Wayne Daley,Holly Salgado,Joanna Costello,Daniel Delong,Paul Gomes,John Hodson,Denise Koehler,Sally Wilson,Aaron Smiley,Dan Mucklow,Matthew Syme,James Purvinis,Sergio Sanchez,James Foxall,Kimberly Montoya,Robert Shannon</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>VOC_Survey_Response__c.Question_Response5__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>AAG Intuit Cares</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$VOC_Survey_Response__c@VOC_Survey_Response__c.CaseId__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_YESTERDAY</interval>
+    </timeFrameFilter>
+</Report>

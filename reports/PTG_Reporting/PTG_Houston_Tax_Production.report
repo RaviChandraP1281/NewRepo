@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Case$CaseOwnerFullName__c</field>
+    </columns>
+    <columns>
+        <field>Case$ClosedDate</field>
+    </columns>
+    <columns>
+        <field>Case$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>Case.Case_NPS__r$Name</field>
+    </columns>
+    <columns>
+        <field>Case.Case_NPS__r$Question_Response1__c</field>
+    </columns>
+    <columns>
+        <field>Case.Case_NPS__r$Question_Response3__c</field>
+    </columns>
+    <columns>
+        <field>Case.Case_NPS__r$Question_Response5__c</field>
+    </columns>
+    <columns>
+        <field>Case.Case_NPS__r$Question_Response7__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Case$Owner</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Aws Abbas,Ashlie Adams,Chemeka Adams,Regine Adams,Ricardo Aguilar,Vonna Aguillard,Alecia Alexander,Alexandria Allen,Gabrielle Allen,Yahesha Allen,Paul Anderson,Halimah Aquil,Danyell Arroyo,Joshua Babineaux,Ashley Bias,Charita Bishop,Chanette  Blaylock,Troy  Bookman,Larhonda Bradley,Lis Broaden,Roquita Brown,John Brown,Demai Brown,John  Brown,Jordan Brown,Charlotte Brown,Alisha Brumfield,Kuriea Bruno,Tamika Burton,Natasia Camp,Angela Carter,Yvette Carter,Christian Catalan,Gloria Celestine,Christian Chapman,Saul  Chevelon,Jisela Chun,Jeannette Coleman,Sandra Collins,L&apos;nEldrid Cooper,Robert Craft,Sheila Crane,Tyra Cutkelvin,Kimberly Davis,Jasmine Davis,Josh Dawson,David Daye,Marlayna Delco,Kim Delong,Kristen Dunn,Lori Dunn,Keisha Dupre,Andrea Edwards,Beverly Ennis,Deno Farquharson,Rita Faulk,Athena Fernandes,Moenique Fields,James Forge Jr.,Billy France,Micheal Fuller II,Marvell Gales,Karen Galloway,David Gibson,Reda Greene</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>PTG Houston Tax Production</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Cases_and_VOC_Scores__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Case$ClosedDate</dateColumn>
+        <endDate>2016-01-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2016-01-01</startDate>
+    </timeFrameFilter>
+</Report>

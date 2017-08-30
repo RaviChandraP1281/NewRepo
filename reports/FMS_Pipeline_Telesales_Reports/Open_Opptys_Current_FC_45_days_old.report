@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_91968304</developerName>
+        <masterLabel>?? FRESH POTENTIAL??</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Opportunity.Current_Solution__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Competitor</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Franchise</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Great Plains</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Inactive QBES</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>No Current Solution</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Other</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Premier</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Pro</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QB Accountant</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QB for Mac</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QB Mobile</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QBO</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QB Point-of-Sale (POS)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sage/PeachTree</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Student - No Current Solution</sourceValue>
+            </sourceValues>
+            <value>*** YES ***</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>QBES</sourceValue>
+            </sourceValues>
+            <value>no</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>DT Max</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Service Bureau</sourceValue>
+            </sourceValues>
+            <value>** YES **</value>
+        </values>
+        <values>
+            <value>* YES *</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>BucketField_91968304</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Current_Solution__c</field>
+    </columns>
+    <columns>
+        <field>STAGE_NAME</field>
+    </columns>
+    <columns>
+        <field>AGE</field>
+    </columns>
+    <columns>
+        <field>LAST_ACTIVITY</field>
+    </columns>
+    <columns>
+        <field>CLOSE_DATE</field>
+    </columns>
+    <columns>
+        <field>OPPORTUNITY_NAME</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT_NAME</field>
+    </columns>
+    <columns>
+        <field>AMOUNT</field>
+    </columns>
+    <columns>
+        <field>EXP_AMOUNT</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>OWNER_DIVISION</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>KV</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>AGE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>lessThan</operator>
+            <value>45</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FULL_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Open Opptys Current FC (&lt;45 days old)</name>
+    <params>
+        <name>open</name>
+        <value>open</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunity</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>BucketField_91968304</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

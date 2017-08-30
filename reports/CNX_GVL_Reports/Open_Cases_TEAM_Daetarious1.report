@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>User.Case$OwnerId$Owner</field>
+    </columns>
+    <columns>
+        <field>User.Case$OwnerId$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>User$Division</field>
+    </columns>
+    <columns>
+        <field>User.Case$OwnerId$Status</field>
+    </columns>
+    <columns>
+        <field>User.Case$OwnerId$Days_Case_Open__c</field>
+    </columns>
+    <columns>
+        <field>User.Case$OwnerId$CreatedDate</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>User*User$Role__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>online</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$OwnerId$Status</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User$Division</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>SBG QBO Tier 1-CNX-GVL,SBG QBO Tier 2-CNX-GVL,SBG QBO Support Staff-CNX-GVL</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$OwnerId$Owner</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>jenny.hughes,peggy taylor,marquita cureton,lashondra smith,roshanda talley,tequila nixon,jennifer bauman,laquita miller,adrienne rhome,tasha chapple,alicia sullivan,latosha mckelvy,misty quackenbush,england curry,quanisha young</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Open Cases TEAM Daetarious</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Users_and_Case_Owner__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>User.Case$OwnerId$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

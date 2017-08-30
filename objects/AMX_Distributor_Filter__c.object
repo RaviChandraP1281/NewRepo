@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <webLinks>
+        <fullName>Add_Update_Filter</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Add/Update Filter</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>if({!AMX_Distributor__c.Use_Advanced_Filter__c = true}){
+  alert(&quot;Please un-check the Use Advanced Filter checkbox on the Distributor record to Add/Update Filters.&quot;);
+}
+else{
+  window.open(&quot;/apex/AMX_DistributorFilter?DistributorId={!AMX_Distributor__c.Id}&quot;, &quot;_self&quot;); 
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Add_Update_Filter_Clone</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Add/Update Filter Clone</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/UserAssignment?id={!AMX_Distributor__c.Id}&amp;DisName={!AMX_Distributor__c.Name}&amp;objectName={!AMX_Team__c.Object_Name__c}</url>
+    </webLinks>
+</CustomObject>

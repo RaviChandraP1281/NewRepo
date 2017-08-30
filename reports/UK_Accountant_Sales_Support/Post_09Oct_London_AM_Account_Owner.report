@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>FK_CNTC_FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>1 AND 2 AND 3 AND (4 OR 5 OR 6)</booleanFilter>
+        <criteriaItems>
+            <column>CUST_CREATED_DATE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>10/9/2014 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Country__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>United Kingdom</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Customer_Type__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Partner</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CNTC_ID</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>startsWith</operator>
+            <value>003i000000rQaPG,003i000000rQd90,003i000000rZKPk,003i000000rZqAy,003i000000radAk,003i000000rawc5,003i000000rbyoG,003i000000rcfNr,003i000000re2VU,003i000000re3OC,003i000000reDtW,003i000000reQmX,003i000000renCH,003i000000renLN,003i000000rgTkS,003i000000rhHTA,003i000000rhHj5,003i000000rhJER,003i000000rhJWs,003i000000rhJWz,003i000000trrR7,003i000000ttdwN,003i000000v6392,003i000000yYPkL,003i00000157Qnt,003i000001Alpux,003i000001BUMY8,003i000001HRnfE,003i000001IGBFy,003i000001IuFKf,003i000001Iv7SO,003i000001Iv7TP,003i000001Iw7uc,003i000001IwzmV,003i000001Ix3Q9,003i000001JmiOz,003i000001JmiUx,003i000001LXnDw,003i000001MQQLO,003i000000rQJQM,003i000000rhK0E,003i000000tslrZ,003i000001KnC0o,003i000000sYCDL,003i000000v8M9Z,003i00000156eUJ,003i000001HRiPa</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CNTC_EMAIL</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>dev.bains@booktek.co.uk,leoh714@aol.com,catherine.bishop@chatsworthcls.com,thierry@bookkeepingandtax.co.uk,jps@southworthandco.com,ily@maisanda.com,info@nfsgb.com,gill@limebookkeeping.co.uk,info@scaccounting.co.uk,a.dallalonga@kelmer.com,sydney@sydneyparker.co.uk,michael.west@aims.co.uk,cks@southworthandco.com,a2z_global@yahoo.com,alia@handcaccounting.co.uk,derek@taylor-mew.co.uk,rajeev@lotuswise.co.uk,sedart_12@msn.com,payroll435@aims.co.uk,km.london.uk@gmail.com,shafiq@nharrisco.co.uk,enquiries@emeraldesolutions.co.uk,roslyn@mytaxuk.com,dilwar.hussain@bts-online.co.uk,fahreen@fairmanlaw.co.uk,paul.davis@sgllp.co.uk,shreya@abcapartners.com,adnan@uha.ltd.uk,suzanne.daly@turnbull-associates.com,carole@scaccounting.co.uk,emmamitchell@taxassist.co.uk,finnhiltononeill@taxassist.co.uk,imran.asif@bts-online.co.uk,gshayle@hotmail.co.uk,manhor@srlv.co.uk,darius@lifelineit.net,services@a2z-uk.com,clare@limebookkeeping.co.uk</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CNTC_EMAIL</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>services@a2z-uk.com,phillip@landon-seamer.co.uk,asimpson.acca@gmail.com,bmatoga@yahoo.com,tan@handcaccounting.co.uk,damian@sakurabusiness.co.uk,pnh@bcams.co.uk</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>USERS.NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Post 09Oct/London/AM- Account Owner</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountCustomEntity$Account_Relationship__c@Account_Relationship__c.Partner_Account_Contact__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>CUST_CREATED_DATE</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>DUE_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

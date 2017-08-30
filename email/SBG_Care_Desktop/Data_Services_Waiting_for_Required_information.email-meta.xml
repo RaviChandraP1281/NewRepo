@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Used for missing information required to complete a request</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Desktop_Data_Services</letterhead>
+    <name>Data Services - Waiting for Required information</name>
+    <style>freeForm</style>
+    <subject>Data Services - Waiting for Required information</subject>
+    <type>html</type>
+</EmailTemplate>

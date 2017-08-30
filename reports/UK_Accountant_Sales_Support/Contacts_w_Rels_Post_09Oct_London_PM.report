@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>USERS.NAME</field>
+    </columns>
+    <columns>
+        <field>FK_CNTC_FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>1 AND 2 AND 3 AND (4 OR 5)</booleanFilter>
+        <criteriaItems>
+            <column>CUST_CREATED_DATE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>10/9/2014 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Country__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>United Kingdom</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Customer_Type__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Partner</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CNTC_ID</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>startsWith</operator>
+            <value>003i000000rOnpC,003i000000rPSSW,003i000000rPmiD,003i000000rQNQ0,003i000000rQOIM,003i000000rQYnj,003i000000rack4,003i000000rcRp2,003i000000rd9Hr,003i000000rdwdR,003i000000re3Ho,003i000000renGI,003i000000rgTeU,003i000000rhIU0,003i000000rhIX3,003i000000rhJij,003i000000tteEh,003i000000tu7GJ,003i000000tvPbP,003i000000wKazQ,003i000000yXJaG,003i000000yZEql,003i000000ztYAk,003i0000013wHw5,003i000001Hnq0T,003i000001IGAk9,003i000001Idtd4,003i000001KmKZK,003i000001KmKeg,003i000001KmKiP,003i000001KmKuw,003i000001LVorD,003i000001LXAhi,003i000001LXArJ,003i000001Loek7,003i000001Loh9B,003i000001IhC4o</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CNTC_EMAIL</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>ian@hfmtax.co.uk,info@charliecarne.com,abhishek@nvaccounting.co.uk,mmp1942@gmail.com,dani@hfmtax.co.uk,sola@xariscompanybooks.co.uk,myoganathan@menzies.co.uk,tdunn@menzies.co.uk,info@marginsaccounting.co.uk,ssango@ssaccounting-services.com,client@mpfiscal.co.uk,dpu@jcp.uk.com,aquilinaw@aol.com,sharon@sbaccountancy.com,vijay@aksharco.com,anthony_perera@msn.com,admin@coppersunaccountants.com,alastair@awaccs.co.uk,rose@xariscompanybooks.co.uk,arjayassociates.uk@outlook.com,uzo@evaristcliffeandco.com,jahan.aslam@fusionaccountants.co.uk1,raza@ss-accountants.co.uk,barbara.may@turnbull-associates.com,sthantrey@pragerfenton.co.uk,hirji.patel@jcp.uk.com,g.wallace@barnesroffe.com,d.brockway@barnesroffe.com,a.kynaston-smith@barnesroffe.com,s.zeffie@barnesroffe.com,g.edwards@barnesroffe.com,lisa@prestigevirtualpa.com,kstock@fitzandlaw.com,kcroucher@fitzandlaw.com,mranson@fitzandlaw.com</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>ACCOUNT.NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Contacts w/ Rels Post 09Oct/London/PM</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountCustomEntity$Account_Relationship__c@Account_Relationship__c.Partner_Account_Contact__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>CUST_CREATED_DATE</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>DUE_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

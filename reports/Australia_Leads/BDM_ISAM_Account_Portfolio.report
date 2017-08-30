@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_24226058</developerName>
+        <masterLabel>BDM_ISAM Owner</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>USERS.NAME</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Adrian Campbell</sourceValue>
+            </sourceValues>
+            <value>Adrian Campbell</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Arian Motavalli</sourceValue>
+            </sourceValues>
+            <value>Arian Motavalli</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Benjamin Sullivan</sourceValue>
+            </sourceValues>
+            <value>Benjamin Sullivan</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Dale Pearson</sourceValue>
+            </sourceValues>
+            <value>Dale Pearson</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Geoff Craig</sourceValue>
+            </sourceValues>
+            <value>Geoff Craig</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Glenn McNeill</sourceValue>
+            </sourceValues>
+            <value>Glenn McNeill</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Hayden Wall</sourceValue>
+            </sourceValues>
+            <value>Hayden Wall</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Leanne Kent</sourceValue>
+            </sourceValues>
+            <value>Leanne Kent</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Lili Huang</sourceValue>
+            </sourceValues>
+            <value>Lili Huang</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Matthew Pisarski</sourceValue>
+            </sourceValues>
+            <value>Matthew Pisarski</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Michelle O&apos;Shanassy</sourceValue>
+            </sourceValues>
+            <value>Michelle O&apos;Shanassy</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Owen Howells</sourceValue>
+            </sourceValues>
+            <value>Owen Howells</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Ryan McCarthy</sourceValue>
+            </sourceValues>
+            <value>Ryan McCarthy</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Sanjay Anand</sourceValue>
+            </sourceValues>
+            <value>Sanjay Anand</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Shaun Haque</sourceValue>
+            </sourceValues>
+            <value>Shaun Haque</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Trent Mclaren</sourceValue>
+            </sourceValues>
+            <value>Trent Mclaren</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <currency>AUD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Account.Country__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Australia</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Status__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Active</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Customer_Type__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Partner</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>PARENT.NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Account_Stage__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_24226058</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>BDM_ISAM Account Portfolio</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

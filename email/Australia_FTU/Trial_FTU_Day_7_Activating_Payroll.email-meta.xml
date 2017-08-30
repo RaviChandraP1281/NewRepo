@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Trial FTU - Day 7 (Activating Payroll)</name>
+    <style>none</style>
+    <subject>Making the business of payroll easier for you.</subject>
+    <textOnly>Intuit
+
+
+Making the business of payroll easier for you.
+View Online
+
+Making the business of payroll easier for you
+Free Payroll for up to 10 employees1
+
+Experience payroll now with greater flexibility, automated
+process and enhanced productivity.
+ACTIVATE PAYROLL NOW
+
+1. Download the Payroll Getting Started Guide to get up to speed on how to use all the key features.
+
+DOWNLOAD NOW
+
+2. Paying your team
+
+Pay day just got a lot easier. Attend online training to learn how you can pay yourself and/or your team easily and accurately in minutes.
+
+REGISTER HERE
+
+3. Great tips for managing annual leave payroll
+
+Check out this article for some great tips for managing annual leave payroll with Quickbooks Online and Keypay.
+
+FIND OUT MORE
+
+Want to learn more?
+
+
+Check out our FREE training.
+
+Attend online training to learn how you can pay yourself and your team easily and accurately in minutes.
+
+REGISTER NOW
+
+
+1. Free payroll services for up to 10 employees are offered by a third party application integrated with QuickBooks Online valid for active subscriptions only. Starting at the 11th employee, only pay $4 (inc GST) per active employee (an active employee is one who has been paid at least once in the calendar month). Advanced Payroll Features are available for an additional cost. Please refer to Payroll Subscription section in the App for pricing and feature details. Once the offer expires, the payroll services may be subject to the third party application provider’s then current pricing. All Prices exclude GST and are subject to review, with 90 days notice provided of any changes.
+
+
+
+intuit.com.au
+
+This email was sent:
+User ID: {!Contact.Email}
+
+IMPORTANT: Intuit respects the personal nature of e-mail communication. Every effort is made to offer only information that may be of value to you or your business. If you do not wish to receive marketing e-mail from Intuit in the future, please click here.
+
+View our privacy policy and additional information. Please view QuickBooks End User License Agreement for details of terms, conditions, features, support, pricing and service options which are subject to change without notice. To contact us by post: Intuit Australia Pty Limited, Registered in Australia ABN28 163 072 704, Level 34, 1 O’Connell Street, Sydney, NSW 2000.
+
+© 2016 Intuit Australia, Level 34, 1 O’Connell Street, Sydney, NSW 2000.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</textOnly>
+    <type>custom</type>
+</EmailTemplate>

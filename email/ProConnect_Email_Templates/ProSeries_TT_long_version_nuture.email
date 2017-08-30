@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Intuit - ProSeries Tax</title>
+<style>
+ body, td, p {font:12px Verdana, Geneva, sans-serif #555;}
+ img, td img {border:0px !important; padding:0px !important; margin:0px !important;}
+ td, tr, table {padding:0 !important; margin:0 !important; border:0 !important;}
+ 
+</style>
+</head>
+
+<body>
+
+<table width="660" border="0" align="center" cellpadding="0" cellspacing="0" style="margin:0 auto !important;">
+  <tr>  
+  
+<!--- ============ header link and image ============ --->
+  
+    <td width="660"><a href="http://accountants.intuit.com/tax/proseries/"><img src="http://lbu.co/clients/intuit/email/images/template/header-proseries.png" width="660" height="51" alt="Intuit - Lacerte Tax" border="0" /></a></td> 
+    
+<!--- ============ end header link and image ============ --->    
+    
+  </tr>
+  <tr>
+    <td><span style="font:4px Verdana, Geneva, sans-serif; color:#222;">&nbsp;</span></td>
+  </tr>
+  <tr>
+    <td valign="top"><p style="font:12px Verdana, Geneva, sans-serif; color:#222;">Dear {!Contact.Name},</p>
+      <p style="font:12px Verdana, Geneva, sans-serif; color:#222; margin-bottom:4px;">Thanks for your interest in ProSeries&reg; Tax software! Congratulations, you&rsquo;ve already taken the first step in becoming compliant with the IRS by looking into using a professional tax software, but did you know that you have to register as a small business and an eFile preparer? No need to worry – I&rsquo;m here to personally help you if you have any questions about the process. This is standard protocol and easy to do; it takes the IRS about 30-45 days to process the requests.  That&rsquo;s why I&rsquo;d like to speak with you as soon as possible, so I can walk you through the 3 steps needed to become a  professional tax preparer.</p>
+      <p style="font:12px Verdana, Geneva, sans-serif; color:#222; margin-bottom:4px;">I also wanted to make you aware that ProSeries is built on the same platform as TurboTax. This means that you upgrade your tax software, all your client data will flow over smoothly and quickly, helping you to be up and running in no time.</p>
+    <p style="font:12px Verdana, Geneva, sans-serif; color:#222; margin-bottom:4px;">Call me  directly at {!User.Phone} or let me know the best day and time you can be reached, and I&rsquo;ll  help  get you compliant and up-and-running in no time.</p></td>
+  </tr>
+  <tr>
+    <td valign="top"><p style="font:12px Verdana, Geneva, sans-serif; color:#222;">Regards,<br />
+      {!User.Name}<br />
+ProSeries Tax Consultant<br />
+{!User.Phone}<br />
+<a href="mailto:{!User.Email}">{!User.Email}</a></p></td>
+  </tr>
+<tr>
+    <td valign="top">
+    <div style="width:660px;  padding-top:10px;"><!--- ============ Intuit Accountants image ============ ---><a href="http://accountants.intuit.com/"><img src="http://lbu.co/clients/intuit/email/images/template/logo-intuit_accountants.gif" width="171" height="25" alt="Intuit Accountants" border="0" /></a></div>
+<div style="width:660px;">
+  
+  <p style="font:9px Verdana, Geneva, sans-serif; color:#888;">IMPORTANT: Intuit respects the personal nature of email  communication. Every effort is made to offer only information that may be of  value to you or your business. If you do not wish to receive marketing email  from Intuit in the future, please <a href="https://privacy.intuit.com/cpi/do/email?p_sourceid" style="color:#4e9e19;">click here</a>.</p>
+  <p style="font:9px Verdana, Geneva, sans-serif; color:#888;">If you have any questions or comments, please DO NOT REPLY to this email. Contact Customer Service at 800.765.7777 for assistance. If you receive an email message that appears to come from  Intuit but that you suspect is a phishing email, please forward it immediately  to <a href="mailto:spoof@intuit.com" style="color:#4e9e19;">spoof@intuit.com</a>.  Please visit <a href="http://e.intuitproline.intuit.com/pub/cc?_ri_=X0Gzc2X%3DUQpglLjHJlTQSpQySQG7CQ9arQ9XSugQGQfQf7XVXtpKX%3DUUYYWD&amp;_ei_=Gf6beX6990G11X%3DOLgKPXnjLLgILjnxpglmplQJhuV8f8Xb9%3DTUSRCVX1LLKX%3DPVjppKX%3DABRAATBD" style="color:#4e9e19;">http://security.intuit.com</a> for additional security information.</p>
+  <p style="font:9px Verdana, Geneva, sans-serif; color:#888;">&reg; 2012-2013 Intuit Inc. All rights reserved. Intuit, the Intuit logo are trademarks or registered trademarks and/or registered service marks of Intuit Inc. in the United States and other countries. All other marks are the property of their respective owners, should be treated as such, and may be registered in various jurisdictions.</p>
+  <p style="font:9px Verdana, Geneva, sans-serif; color:#888;">Intuit Inc., Customer Communications, 2800 E. Commerce Center Place, Tucson, AZ 85706</p>
+</div>
+    </td>
+  </tr>
+</table>
+<p style="font:12px Verdana, Geneva, sans-serif; color:#222;">&nbsp;</p>
+</body>
+</html>

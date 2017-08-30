@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>To be used for QBO to QBDT conversion cases US only</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Desktop_Data_Services</letterhead>
+    <name>Data Services - QBO to QBDT Case Completed</name>
+    <style>freeForm</style>
+    <subject>Data Services Case Completed</subject>
+    <type>html</type>
+</EmailTemplate>

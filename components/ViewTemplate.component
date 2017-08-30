@@ -1,0 +1,194 @@
+<apex:component controller="DisplayTemplate" access="global" >
+    <style>
+        th {
+            
+        }
+        th:first-child {
+            border-left-style: solid;
+            border-top-left-radius: 5px; 
+            border-bottom-left-radius: 5px;
+        }
+        th:last-child {
+            border-right-style: solid;
+            border-bottom-right-radius: 5px; 
+            border-top-right-radius: 5px; 
+        }
+        
+        body, td, th {
+            font-family: Verdana, Arial, Helvetica, sans-serif !important; font-size: 12px !important;
+        }
+		.grey {
+            color: #505050;
+        }
+        .greysmall {
+            color: #505050;
+            font-size:xx-small
+        }
+        .greybold {
+            color: #505050;
+            font-weight: bold;
+        }
+        .skyblue {
+            color: #94b5e0; font-weight: bold;
+        }
+        .type-string, .type-textarea { text-align:left; }
+        .type-double, .type-currency { text-align:right; }
+        .prod-name { font-weight: bold;  }
+        .promo-label { 
+        	font-weight: bold; display: inline-block; float: left; clear: left; padding-right: 5px; padding-top: 5px;
+        }
+        .promo-name { 
+        	display: inline-block; float: left; padding-top: 5px;
+        }
+        .attrib-name { 
+        	padding-left: 20px; padding-top: 5px; font-size: .9em; color: rgb(80, 80, 80);
+        }
+        .item-table { width: 100% }
+        
+
+    </style>
+    <!-- Inline styling is due to the fact that email clients strip all class names from elements within the body tags -->
+    <apex:attribute name="Quote"  description="Id of the quote" type="Id" assignTo="{!quoteId}" />
+    <apex:attribute name="ContactName"  description="Name of the contact" type="String" />
+    <html>
+        <body style="font-family: Verdana, Arial, Helvetica, sans-serif !important; font-size: 12px !important;">
+            <table style="layout:fixed; min-width:800px; min-height:1100px; height:auto; width:800px; border-collapse:collapse; margin-top:0px; margin-bottom:0px;">
+                <apex:repeat value="{!TemplateInfo}" var="order" >
+                    <apex:outputPanel layout="none" rendered="{!order == 'Header'}" >
+                        <tr>  
+                            <td align="center" style="min-width:800px; width:auto; height:50px;" >
+                                <apex:image value="{!HTMLENCODE(HeaderImageUrl)}" rendered="{!template.Header_Type__c == 'Image' && NOT(ISNULL(HeaderImageUrl))}" />
+                                <apex:outputText style="vertical-align:middle" value="{!template.Header__c}" rendered="{!template.Header_Type__c == 'Text'}" escape="false"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel layout="none" rendered="{!order == 'Welcome Message'}" >
+                        <tr>  
+                            <td style="" ><apex:outputText value="{!template.Welcome_Message__c}" escape="false"/></td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel layout="none" rendered="{!order == 'Quote Info'}" >
+                        <tr>
+                            <td style="min-width:800px; width:auto; white-space:nowrap;" align="right">
+                                <apex:outputText style="font-weight:bold; text-decoration:underline;" value="Prepared for:" />&nbsp;&nbsp;
+                                <apex:outputField value="{!accountRecord.Name}" />&nbsp;&nbsp;<apex:image url="{!spacerURL}" width="8" height="8" rendered="{!IF(contactRecord == null, false, true)}"/>&nbsp;&nbsp;
+                                <apex:outputField value="{!contactRecord.Name}" />&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="min-width:800px; width:auto; white-space:nowrap;" align="right">
+                                <apex:outputText style="font-weight:bold; text-decoration:underline;" value="Prepared by:" />&nbsp;&nbsp;
+                                <apex:outputText value="{!$User.FirstName} {!$User.LastName}" />&nbsp;&nbsp;<apex:image url="{!spacerURL}" width="8" height="8"/>&nbsp;&nbsp;
+                                <apex:outputText value="{!$User.Email}" />&nbsp;&nbsp;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <hr noshade="noshade" class="skyblue" style="color: #94b5e0; font-weight: bold;"/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="min-width:800px; width:auto; white-space:nowrap;" align="right">
+                                <apex:repeat value="{!quoteInfoSection.selectedFields}" var="quoteField" >
+                                    <apex:outputText style="font-weight:bold; text-decoration:underline; {!IF(quoteInfoSection.mapLabel[quoteField] == 'Expires', 'color: red', 'color: black')};" value="{!quoteInfoSection.mapLabel[quoteField]}:" />&nbsp;&nbsp;
+                                    <apex:outputText value="{!quoteRecord[quoteField]}" style="{!IF(quoteInfoSection.mapLabel[quoteField] == 'Expires', 'color: red', 'color: black')};"/>&nbsp;&nbsp;<apex:image url="{!spacerURL}" width="8" height="8" rendered="{!NOT(IF(quoteInfoSection.selectedFields[quoteInfoSection.selectedFields.size - 1] == quoteField, true, false))}"/>&nbsp;&nbsp;
+                                </apex:repeat>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <hr noshade="noshade" class="skyblue" style="color: #94b5e0; font-weight: bold;"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel layout="none" rendered="{!showLineItemSection && order == 'Quote Line Items'}" >
+                        <tr>
+                            <td style="min-width:800px; width: 800px;">
+                                <table style="border-collapse:collapse; width: 100%;" cellpadding="5" >
+                                    <tr>
+                                            <apex:repeat value="{!quoteLineItemSection.selectedFields}" var="quoteItemField" >
+                                                <th style="border: solid 0px; border-style: solid none; background-color: #e6e5d3; {!IF($ObjectType.QuoteLineItem.Fields[quoteItemField].type == 'currency' || $ObjectType.QuoteLineItem.Fields[quoteItemField].type == 'double', 'text-align: right;', 'text-algin: left')}" ><apex:outputText value="{!quoteLineItemSection.mapLabel[quoteItemField]}" rendered="{!IF(quoteLineItemSection.mapLabel[quoteItemField] != 'Discount' || IF(quoteLineItemSection.mapLabel[quoteItemField] == 'Discount' && showDiscounts, true, false), true, false)}"/></th>
+                                            </apex:repeat>
+                                    </tr>
+                                        <apex:repeat value="{!QuoteLineItems}" var="quoteItemRecord" >
+                                            <tr>
+                                                <apex:repeat value="{!quoteLineItemSection.selectedFields}" var="quoteItemField" >
+                                                    <td style="border-bottom:1px solid gray; {!IF($ObjectType.QuoteLineItem.Fields[quoteItemField].type == 'currency' || $ObjectType.QuoteLineItem.Fields[quoteItemField].type == 'double', 'text-align: right;', 'text-algin: left')}" ><apex:outputText value="{!quoteItemRecord[quoteItemField]}" escape="false" rendered="{!IF(quoteLineItemSection.mapLabel[quoteItemField] != 'Discount' || IF(quoteLineItemSection.mapLabel[quoteItemField] == 'Discount' && showDiscounts && quoteItemRecord[quoteItemField] != 0, true, false), true, false)}"/></td>
+                                                </apex:repeat>
+                                            </tr>
+                                        </apex:repeat>
+                                </table>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel layout="none" rendered="{!showQuoteTotalSection && order == 'Quote Total' }" >
+                        <tr>
+                            <td style="right:0px; min-width:800px; width:auto; white-space:nowrap;" >
+                                <table align="right" style="">
+                                    <apex:repeat value="{!quoteTotalSection.selectedFields}" var="quoteTotalField" >
+                                        <tr style="{!IF(quoteTotalSection.mapLabel[quoteTotalField] != 'Total Discount' || IF(quoteTotalSection.mapLabel[quoteTotalField] == 'Total Discount' && showDiscounts, true, false), '', 'display: none;')};">
+                                            <td style="font-weight:bold; padding-right:70px;background-color:#e6e5d3;border-radius:5px;padding:10px;" ><apex:outputText value="{!quoteTotalSection.mapLabel[quoteTotalField]}" /></td>
+                                            <td style="text-align:right;" ><apex:outputField value="{!quoteRecord[quoteTotalField]}" /></td>
+                                        </tr>
+                                    </apex:repeat>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <hr noshade="noshade" class="skyblue" style="color: #94b5e0; font-weight: bold;"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel layout="none" rendered="{!showAddress && order == 'Address' && (billingAddress != null || shippingAddress != null)}" >
+                        <tr>
+                            <td>
+                                <table align="left" style="" >
+                                    <tr>
+                                        <td ><b><apex:outputText value="Billing Address" rendered="{!IF(billingAddress != null, true, false)}"/></b></td>
+                                        <td style="padding-left:25px;"><b><apex:outputText value="Shipping Address" rendered="{!IF(shippingAddress != null, true, false)}"/></b></td>
+                                    </tr>
+                                    <tr>
+                                        <td style="padding-right:10px;">
+                                            <apex:outputField value="{!billingAddress.Name}" rendered="{!IF(billingAddress != null, true, false)}"/><br />
+                                            <apex:outputField value="{!billingAddress.Addr2__c}" rendered="{!IF(billingAddress != null && billingAddress.Addr2__c != null, true, false)}"/><apex:outputText value="<br />" rendered="{!IF(billingAddress != null && billingAddress.Addr2__c != null, true, false)}" escape="false" />
+                                            <apex:outputField value="{!billingAddress.City__c}" rendered="{!IF(billingAddress != null, true, false)}"/><apex:outputText value=", " rendered="{!IF(billingAddress.City__c != null, true, false)}" /><apex:outputField value="{!billingAddress.State__c}" rendered="{!IF(billingAddress != null, true, false)}"/>&nbsp;<apex:outputField value="{!billingAddress.Postal_Code__c}" rendered="{!IF(billingAddress != null, true, false)}"/>
+                                        </td>
+                                        <td style="padding-right:10px; padding-left:25px;">
+                                        	<apex:outputField value="{!shippingAddress.Name}" rendered="{!IF(shippingAddress != null, true, false)}"/><br />
+                                            <apex:outputField value="{!shippingAddress.Addr2__c}" rendered="{!IF(shippingAddress != null && shippingAddress.Addr2__c != null, true, false)}"/><apex:outputText value="<br />" rendered="{!IF(shippingAddress != null && shippingAddress.Addr2__c != null, true, false)}" escape="false" />
+                                            <apex:outputField value="{!shippingAddress.City__c}" rendered="{!IF(shippingAddress != null, true, false)}"/><apex:outputText value=", " rendered="{!IF(shippingAddress.City__c != null, true, false)}" /><apex:outputField value="{!shippingAddress.State__c}" rendered="{!IF(shippingAddress != null, true, false)}"/>&nbsp;<apex:outputField value="{!shippingAddress.Postal_Code__c}" rendered="{!IF(shippingAddress != null, true, false)}"/>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <hr noshade="noshade" class="skyblue" style="color: #94b5e0; font-weight: bold;"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel layout="none" rendered="{!AND(order == 'Summary Message', template.Summary_Message__c != null)}" >
+                        <tr>  
+                            <td style=""><apex:outputField value="{!template.Summary_Message__c}" /></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <hr noshade="noshade" class="skyblue" style="color: #94b5e0; font-weight: bold;"/>
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                    <apex:outputPanel layout="none" rendered="{!order == 'Footer'}" >
+                        <tr>  
+                            <td align="center" style="min-width:800px; width:auto; height:50px;" >
+                                <apex:image value="{!HTMLENCODE(FooterImageUrl)}" rendered="{!template.Footer_Type__c == 'Image' && NOT(ISNULL(FooterImageUrl))}" />
+                                <apex:outputField style="vertical-align:middle" value="{!template.Footer__c}" rendered="{!template.Footer_Type__c == 'Text'}" />
+                            </td>
+                        </tr>
+                    </apex:outputPanel>
+                </apex:repeat>
+            </table>
+        </body>
+    </html> 
+</apex:component>

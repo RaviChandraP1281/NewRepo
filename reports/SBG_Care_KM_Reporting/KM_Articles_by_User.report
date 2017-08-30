@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>User.Case$CreatedById$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>User.Case$CreatedById.CaseArticles$ArticleNumber</field>
+    </columns>
+    <columns>
+        <field>User.Case$CreatedById.CaseArticles$ArticleType</field>
+    </columns>
+    <columns>
+        <field>User.Case$CreatedById.CaseArticles$Title</field>
+    </columns>
+    <columns>
+        <field>User.Case$CreatedById.CaseArticles$Language</field>
+    </columns>
+    <currency>USD</currency>
+    <description>KM articles by user and case.  For cases created for the current quarter</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>User$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>KM Articles by User</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>User_Case_KM__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>User.Case$CreatedById$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

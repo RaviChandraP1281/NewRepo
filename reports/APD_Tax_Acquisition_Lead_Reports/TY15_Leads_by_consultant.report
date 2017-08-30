@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_39927456</developerName>
+        <masterLabel>Lead Type</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>Lead.Legacy_Treatment_Name__c</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Professional Web</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Schedule a call</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sign up for a webinar</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Try it Free</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY14 ProSeries Evals</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>ProSeries Eval - Default</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY15 ProSeries Pre-Order Eval</sourceValue>
+            </sourceValues>
+            <value>ProSeries Eval</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Web Lacerte Evals</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY14 Lacerte Eval</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Lacerte Eval - Default</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY15 Lacerte Pre-Order Eval</sourceValue>
+            </sourceValues>
+            <value>Lacerte Eval</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Lacerte Webinar</sourceValue>
+            </sourceValues>
+            <value>Lacerte Webinar</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>ProSeries Webinar</sourceValue>
+            </sourceValues>
+            <value>ProSeries Webinar</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>ACA Webinar</sourceValue>
+            </sourceValues>
+            <value>ACA Webinar</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>RT Web Lead</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>RT Marketing KIT</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>RT Marketing Kits</sourceValue>
+            </sourceValues>
+            <value>RT Web Lead</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Turbo Tax Pro</sourceValue>
+            </sourceValues>
+            <value>Turbo Tax Pro</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>Lead.Legacy_Treatment_Name__c</field>
+    </columns>
+    <columns>
+        <field>RATING</field>
+    </columns>
+    <columns>
+        <field>COMPANY</field>
+    </columns>
+    <columns>
+        <field>PHONE</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <columns>
+        <field>STREET</field>
+    </columns>
+    <columns>
+        <field>CITY</field>
+    </columns>
+    <columns>
+        <field>STATE</field>
+    </columns>
+    <columns>
+        <field>ZIP</field>
+    </columns>
+    <currency>USD</currency>
+    <description>TY15 Leads by Consultant</description>
+    <filter>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>John Trammell,Jonathan Lovitt,Kimberly Gallahan,Michael Chavez,Corey Spear,Cynthia Thomas,Daniel Brommer,Gerald Henry,Marc Freidberg,Sharbel Abi-Habib,Jason Tritle,Maria Harris,Michael Gentile,Robert Randall,Roland Carrion,Tiffany Randall,Victor Nolasco,Tysinn Ghia,Amber Burton,Denita Connalley,Kashif Rasul</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>STATUS</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>OWNER</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_39927456</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>TY15 Leads by Consultant</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LeadList</reportType>
+    <scope>org</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2015-03-01</startDate>
+    </timeFrameFilter>
+</Report>

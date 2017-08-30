@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Customer_Type__c</field>
+    </columns>
+    <columns>
+        <field>Account.Account_Owner_History__r$Type__c</field>
+    </columns>
+    <columns>
+        <field>Account.Account_Owner_History__r$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>Account.Account_Owner_History__r$LastModifiedDate</field>
+    </columns>
+    <columns>
+        <field>Account.Account_Owner_History__r$Id</field>
+    </columns>
+    <columns>
+        <field>Account.Account_Owner_History__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account$Company_ID__c</field>
+    </columns>
+    <columns>
+        <field>Account$Id</field>
+    </columns>
+    <columns>
+        <field>Account$Owner</field>
+    </columns>
+    <columns>
+        <field>Account.Account_Owner_History__r$Owner</field>
+    </columns>
+    <columns>
+        <field>Account.Account_Owner_History__r$Owner__c</field>
+    </columns>
+    <columns>
+        <field>Account.Account_Owner_History__r$Start_Date__c</field>
+    </columns>
+    <columns>
+        <field>Account.Account_Owner_History__r$End_Date__c</field>
+    </columns>
+    <currency>USD</currency>
+    <description>Look for old AOH records for current US AAG</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.Account_Owner_History__r$Type__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Co Owner,Co-Owner</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Owner</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Amanda Kuiken,Chad Simpson,David Bergstein,Eric Randall,James Rothe,Jeffrey Johnson,Jessica Lee,Jim Clement,John Brakey,Kim Austin,Marty French,Michael Cervantes,Michael Colosimo,Natasha Gorman,Randy Cassen,Rhizel Gooding,Serena Lambesis,Sherri Voirin,Teresa Albor,Thomas Wineteer,Todd Robinson,Rachel Norvelle,Madeline Reeves</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Account_Owner_History__r$CreatedDate</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>lessThan</operator>
+            <value>2/5/2016 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Parent</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>AOH Check</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Account_Owner_History_Report__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

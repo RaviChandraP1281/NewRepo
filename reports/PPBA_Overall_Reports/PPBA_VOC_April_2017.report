@@ -1,0 +1,355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_85484880</developerName>
+        <masterLabel>EcoSystem</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>FK_$Case.Product__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Accountant</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Accountant NFR</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Accountant One Year Unlimited Support</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Accountant Version Protection</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Enterprise Solutions</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Enterprise Solutions Accountant</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Enterprise Solutions Accountant Version Protection</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Enterprise Solutions Software Fee</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Payroll Annual</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Payroll Monthly</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Point of Sale</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Point of Sale Free Download</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks ProAdvisor CD Version Protection</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks ProAdvisor Membership Annual</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks ProAdvisor Membership Monthly</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks ProAdvisor One Year Add On Support</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks for Mac</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit Quickbooks</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Plus</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QuickBooks Accountant 2013 1-user $399.95</sourceValue>
+            </sourceValues>
+            <value>Desktop</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>QBOA Online Account Creation</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QBOA Account Creation QA</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QBOA</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QBO Plus</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QBO Payroll</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QBO Plus for ProAdvisors $0</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QuickBooks Online Plus</sourceValue>
+            </sourceValues>
+            <value>Online</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_44032391</developerName>
+        <masterLabel>tNPS</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>VOC_Survey_Response__c.Question_Response1__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>9</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>10</sourceValue>
+            </sourceValues>
+            <value>Promoters</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>0</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>1</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>2</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>3</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>4</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>5</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>6</sourceValue>
+            </sourceValues>
+            <value>Detractors</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>7</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>8</sourceValue>
+            </sourceValues>
+            <value>Neutral</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>VerticalColumn</chartType>
+        <enableHoverLabels>true</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>BucketField_44032391</groupingColumn>
+        <location>CHART_TOP</location>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>true</showValues>
+        <size>Small</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <title>Record Count</title>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>FK_$Case.Product__c</field>
+    </columns>
+    <columns>
+        <field>FK_CREATED</field>
+    </columns>
+    <columns>
+        <field>FK_CASE_OWNER_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_LAST_UPDATE_BY</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_CASE_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>FK_CASE_CLOSED_DATE</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response6__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response7__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response3__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response4__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response1__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response2__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response5__c</field>
+    </columns>
+    <columns>
+        <field>FK_CASE_ORIGIN</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>(((((((((((((((((((1) OR 2) OR 3) OR 4) OR 5) OR 6) OR 7) OR 8) OR 9) OR 10) OR 11) OR 12) OR 13) OR 14) OR 15) OR 16) OR 17)) OR 18)</booleanFilter>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Rommel James Aguel,Rose Anne De Manuel,Markwin Allison,Renan Cruz,Desserie Ann Santos,Jeffrey Bayogos,Mark Joseph Badayos,Ronie Torres,Jomar Escalante,Ellen Grace Mandin,Mario Allan Navato,Calvin Quicho,Lea Sara Razon,Joan Roldan,Mark Gene Sampol,Mary Rose Victoria,Noel Dy Jr</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>John Viray,Kate Catherine Mendoza,Grace Mary Abengoza,Orlando Jr Dela Pena,Stephanie Joy Abuda,Mary Jane Sierra,Graciela Chuaquico,Karissa Jane Gaboy,Kurt Russel Arroyo,Crisanto Torrejos,Jomer Jadulco,Mark Anthony Winston Lim,Flordeliza Colico,June Vic Lomosad,Jessa Lyn Villa,Rosemarie Mendoza</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Florence Dizon,Lambert Wilson Uy,Joshua Morato,Nerwin Pablo,Froilan Adelmo Penaflor,Kennith Jackson Edwards,Kitjan Marie Montilla,Joren Aguilar,Jasmin Mahilum,Maricel Tosco,Kerstin Garay,Marcil Patungan,Monico Vargas,Demosthenes Apostol,Ryan Magallanes,Lavinia Galvez</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Tina Galang,Princess Jhielyn Albano,Angelo Ballon,Francis Kevin Garin,Noel Hermogenes,Erica Joy Bollozos,Ma Luz Puyat,Ferdinand Mendoza,Leilanie Rullan,Jimmelin Joy Casipit,Robbie Liza Excelsa Ilagan,Ma Rowena Sanchez,Justin Jessica Flores,Jeremy Junnel Borres,Joshua Emmanuel Bernabe,Gayda Ghee Gabrieles,Dustine Austin De La Cruz</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Mariane Angelie Azucena,John Michael Tomas,Ethan Lorenz Amatong,Patrick Consulta,Clint Andrew Apdian,Antonio Birol,Abegail Parado,Desiree Dela Torre</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Brent John Ceralde,Luigi Carlisle Fulitado,Juniebar Gamboa,Jexie Libaton,Apole Limjoco,Niel Tristan Monal Lumbo,Jaymart Baluyut,Rhezadel Avanzado,James Ashley Lopez,Alexis Constantino,Justine Ignacio,Hanz Lester Labordo,Mary Glor Mangubat,Kunimori Medrano,Eduardo Perena,Orly Tomayao</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Daryl Francisco,Renz Alvin Laurente,Jobert Fulgencio,Lea Grace Jontado,Mark Sevilla,Marilou Lopez,Lorena Icban,Roxette Marges,Feliciana Reyes,Bermalie De Vera</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Tristan Bulaag,Emmanuel Ronald Meneses,Mark Joseph Pradas,Zylly Hymn De Ocampo,Andrew Roco,Enrico Pural,Ryan Gamboa,Marvin Ledsey,Marlon Evangelista,Orlando Acta,Jaylan Navarra,Francis Aragoncillo,Alexander Armas,Nico Dominguez,Maria Carla Gerero,Glen Paul Ibay,Macario Ii Pagaran,Maximo Trinidad Jr,Sieg Gabriel Villarias,Maikus Schuyler Soria,Charina Villanueva,Junnalyn Bucol,Gregorio Joseph</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Nanette Paringit,Michelle Salagan,Alexandra Nikka Lorraine Cadelina,Rhodora Quinal,Kenneth Eugenio,Arlene Brila,Ivan Claire Barcebal,Joanah Cammille Ong,Edward Vincent Lee,Maria Zenith Manuel,Jojo Cruz,Paolo San Luis,Michelle Delos Santos,Jenylin Zausa,Arvin Bautista</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Frank Salvador Poblete,Joshua Adsuara,Carla Crisanta Catiban,John Ponce Cruz,Jefferson Diadid,Jennifer Bermundo,Marcelino Fontanilla,Mariel Naces,Alfred Edison Manzon,Novelyn Plan,Gina Villanueva,Sydfrey Evaristo,Mary Ann Miralo,Reynaldo Cangke,Mark Milo Figuracion,Mary Abegail Villaflor,Jose Renulfo Ladlad</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Christopher Piamonte,Jessica Fabella,Nerlyn Peralta,Arjay Fernandez,Jay Tosposo,Annabella Libunao,Limwel Mengoria,Kharel Joy Polido,Joanne Purugganan,Jose Rodrigo Carbonell</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Jezreel Avellanoza,Russel Ross Jonie De Jesus,Edward Yagi,Ian John Alemania,Melvin Bautista,Ben Jasmine Dela Cerna,Nicolai Marie Sausa,Maria April Verdadero,Myreen Pitallano,Mayan Villamarzo,Elilyn Farrah Belle Barredo,Reginald Kim Gomez,Kimberly Lexlie Garcia,Paola Marie Climaco,Trizia Mae Alejo,Abdul Rahman Unte,Joven Lester Diaz</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Arnee Dasig,Jean Mehj Garcia,Ivan Patrick Pospos,John Michael Tribol,Chastyn Alaine Fausto,Dandy Dela Cruz,John Abarte,Novelyn Galecio,Mark Anthony Reyes,Alfred Rainer Guillermo,Alejandro Pahati,Jon Jon Ferrer,Gaspar Maningo,Pilarica Natherine Ramirez,Ryan Dolph Galicha,Nelen Basto,Aaron Jonathan Cobacha,Charisse Biaoco,Myra Jean Sartiga,April Sarong</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Jomer Sabino,Sonny Andrew Castro,Maria Angela Stephanie Hefti,Ernest Theodore Alitagtag,Claire Zolina,Jerald Bautista,Michael Andrew Mangundayao,Nestor Tanyag,Karla Jane Guillermo,Jessa Grace Labasa,Rubelyn Parungao,Felix Dalendeg,William Cordero,Rafael Calangian Enriquez,Vanessa Kristine Obispo,Charity Salas</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Ernest Theodore Alitagtag,Claire Zolina,Jerald Bautista,Michael Andrew Mangundayao,Nestor Tanyag,Karla Jane Guillermo,Jessa Grace Labasa,Aileen Rose Olila,Rubelyn Parungao,Felix Dalendeg,William Cordero,Rafael Calangian Enriquez,Vanessa Kristine Obispo,Charity Salas,Jan Nik Xan Rojas,Jessa Lyn  Villa,Dustine Austin De la Cruz,Tina Galang,Loida Medina,Melody Jerah Bonifacio</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Jordan Alfonso,Robween Chan,Gene Arvey Dimanalata,Bernadette Giray,John Archie Pielago,Christian Paul Villamil,Ma. Angely Abe,Marcus Miguel Navarro,Adrian Paolo Babia,Judy Lyn Feliciano,Daniel Parel,Christopher Matthew Llorente,Wilfredo Lazaro,Mildred Michaela Mendoza,Ronald Cabungcag,Rodel Bade,Jaymon Ogad,Louie Dela Cruz,Michael Custodio,Eduardo Gabriel Pineda,Francisco Jr Estrella,Alex Amparo,Joy Marie Griego,Benedicto Ablao,Kathrina Mae Batoon,Rey Michael Marte,Angela Balanza,Mark Jezrel Derro</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Mary Grace Navarro,Justine Marcelo Oliveros,Jaramie Gallibot,Lesther Joy Dalloran,Morgan Santos,Maria Cassandra Manansala,Patrick Ramos,Marcial Jr Ong,Carlos John Concepcion,Rhea Marie Zoilo,Mark Gil Villarosa,Emanuelle De Guzman,Cielo Caraig,Bernadette Garcia,Johndel Gil,Reishalene Malanum,Cheyenne Tambongco,Reziel Llanes,John Emmanuel Daloglog,Ruther Richard Sanchez,Deo Miro Villalon,Geonard Gamat,Dominic Pollo,Denmark Diaz,Abraham Roi Binas,Mario Pajanil,Melvin Memoracion,John Patrick Buling,Jonahlyn Lirazan,Lea Supas,Cloid Lorenze Rosete</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Darwin Advento,Robelyn Soleta,Reylita Manatad,Jamillah Ibrahim,Phoebe Jimenea,Reymil Almazar,Grytyl Kaye Vismonte,John Jonard Badua,Redentor Jr Lugtu,Yves Siva,Antonio Loyola,Kerlin Villanueva,Christine Joy Lencioco,Ralph Daimier Lim,Reah Mendano,John Axel Dona,Maria Carla Tolentino,Harold Sales,Reziel Ranada,Joseph Moico,Diana Camille Piano,Domingo Manalang Jr,John Fernando,Mark Joseph Pradas,SILVESTRE MARGIE MAE,Lloyd Irvin Lopez,Antonio Claret Bamboo Gallardo,Raymark Gulapa,Aljhun Morillo,Carlo Ocana,Nesa Rivera</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_44032391</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>PPBA VOC - April 2017</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$VOC_Survey_Response__c@VOC_Survey_Response__c.CaseId__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>FK_CASE_CREATED_DATEONLY</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

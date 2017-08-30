@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_85484880</developerName>
+        <masterLabel>EcoSystem</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>FK_$Case.Product__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Accountant</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Accountant NFR</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Accountant One Year Unlimited Support</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Accountant Version Protection</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Enterprise Solutions</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Enterprise Solutions Accountant</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Enterprise Solutions Accountant Version Protection</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Enterprise Solutions Software Fee</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Payroll Annual</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Payroll Monthly</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Point of Sale</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Point of Sale Free Download</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks ProAdvisor CD Version Protection</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks ProAdvisor Membership Annual</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks ProAdvisor Membership Monthly</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks ProAdvisor One Year Add On Support</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks for Mac</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit Quickbooks</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Plus</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QuickBooks Accountant 2013 1-user $399.95</sourceValue>
+            </sourceValues>
+            <value>Desktop</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>QBOA Online Account Creation</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QBOA Account Creation QA</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QBOA</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QBO Plus</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QBO Payroll</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QBO Plus for ProAdvisors $0</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QuickBooks Online Plus</sourceValue>
+            </sourceValues>
+            <value>Online</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_44032391</developerName>
+        <masterLabel>tNPS</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>VOC_Survey_Response__c.Question_Response1__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>9</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>10</sourceValue>
+            </sourceValues>
+            <value>Promoters</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>0</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>1</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>2</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>3</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>4</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>5</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>6</sourceValue>
+            </sourceValues>
+            <value>Detractors</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>7</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>8</sourceValue>
+            </sourceValues>
+            <value>Neutral</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>Donut</chartType>
+        <enableHoverLabels>true</enableHoverLabels>
+        <expandOthers>false</expandOthers>
+        <groupingColumn>BucketField_44032391</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_TOP</location>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Small</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <title>Record Count</title>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>CUST_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>FK_CASE_CLOSED_DATE</field>
+    </columns>
+    <columns>
+        <field>FK_CASE_OWNER_NAME</field>
+    </columns>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response1__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response3__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response6__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response5__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response2__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response4__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>(1 OR 2 OR 3 OR 4 OR 5 OR 6 OR 7 OR 8 OR 9 OR 10 OR 11 OR 12 OR 13 OR 14)</booleanFilter>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Aleksey Shevchuk</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>James Mitchell</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Michelle Roulund</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Silas Cruse</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Brandon ODell</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Marcia Green</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Leslie Ebner</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Jessica Stanley</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Jason Trexler</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Anja Reinberg</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Jessica Potter</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Kimberly Crosby</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Russie van Mourik</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Brent McCardell</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_44032391</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Looney Toons NPS</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$VOC_Survey_Response__c@VOC_Survey_Response__c.CaseId__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>VOC_Survey_Response__c.Question_Response6__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>FK_CASE_CLOSED_DATE</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

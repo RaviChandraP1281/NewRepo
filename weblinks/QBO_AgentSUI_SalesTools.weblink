@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPageWebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <availability>online</availability>
+    <description>accessing Sales tool for creating company record.</description>
+    <displayType>link</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>QBO Agent SUI - Sales Tools</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>/**
+* ─────────────────────────────────────────────────────────────────────────────────────────────────┐
+* Opens Salestool for QBO Online Opportunities
+* ──────────────────────────────────────────────────────────────────────────────────────────────────
+* @author
+* @modifiedBy Jaya Alaparthi &lt;jaya_alaparthi@intuit.com&gt;
+* @maintainedBy Vivek M. Chawla &lt;Vivek_Chawla@Intuit.com&gt;
+* @version
+* @created YYYY-MM-DD
+* @modified 2015-08-20
+* ──────────────────────────────────────────────────────────────────────────────────────────────────
+* @changes
+* v1.0 Jaya_alaparthi@intuit.com
+* 2015-08-20 Sales tool should be opened only if the Opportunity QBO PFOI.
+*
+* vX.X Vivek_Chawla@Intuit.com
+* YYYY-MM-DD Each change to this file should be documented by incrementing the version number,
+* and adding a new entry to this @changes list. Note that there is a single blank
+* line between each @changes entry.
+* ─────────────────────────────────────────────────────────────────────────────────────────────────┘
+*/
+//─────────────────────────────────────────────────────────────────────────────────────────────────┐
+// legacy system link
+//─────────────────────────────────────────────────────────────────────────────────────────────────┘
+var companyCreate = &apos;https://e2e.support.qbo.intuit.com/agent/select_locale.cfm?origin=sf&apos;;
+//─────────────────────────────────────────────────────────────────────────────────────────────────┐
+// Destination link changes as per the source Org
+//─────────────────────────────────────────────────────────────────────────────────────────────────┘
+var orgId = &quot;{!$Organization.Id}&quot;;
+if (orgId == &apos;00Di0000000Xs0j&apos;){
+companyCreate = &apos;https://support.qbo.intuit.com/agent/login.cfm?origin=sf&apos;;
+}
+{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/33.0/apex.js&quot;)}
+var currentURL = window.location.search;
+var opportunityId = &quot;&quot;;
+var fName = &quot;&quot;;
+var lName = &quot;&quot;;
+var email = &quot;&quot;;
+var phone = &quot;&quot;;
+var company = &quot;&quot;;
+var opptyId = &quot;&quot;;
+var errorDisp = &quot;Sales tool is accessible Only if the following data is provided: \n&quot;;
+
+//─────────────────────────────────────────────────────────────────────────────────────────────────┐
+// Retrive SalesTool custom settings
+//─────────────────────────────────────────────────────────────────────────────────────────────────┘
+var queryStr = &quot;SELECT Name,Is_Product_Required__c FROM SalesTool__c&quot;;
+var recordResult = sforce.connection.query(queryStr);
+var salesToolCS = recordResult.getArray(&apos;records&apos;);
+//─────────────────────────────────────────────────────────────────────────────────────────────────┐
+// Look for Opportunity Id in the current URL
+//─────────────────────────────────────────────────────────────────────────────────────────────────┘
+if (currentURL.indexOf(&quot;id=&quot;) &gt; 0) {
+var recId = currentURL.substring(currentURL.indexOf(&quot;id=&quot;)+3 , 19);
+if(recId.substring(0,3) == &quot;006&quot;) {
+opportunityId = recId ;
+}
+//─────────────────────────────────────────────────────────────────────────────────────────────┐
+//if we get Opportunity Id, query &amp; get company &amp; primary contact field value
+// and concatenate with the legacy system link
+//─────────────────────────────────────────────────────────────────────────────────────────────┘
+if (opportunityId != &quot;&quot;) {
+var query = &quot;SELECT Id,Name,Primary_Contact__c,Primary_Contact__r.FirstName,Opportunity_Number__c,Primary_Contact__r.LastName,Primary_Contact_Email__c,Primary_Contact_Phone__c,Account.Name,Product_Family_of_Interest__c,PLI_Count__c FROM Opportunity WHERE Id = \&apos;&quot;+opportunityId+&quot;\&apos;AND Account.CAN__c = null&quot;;
+var records = sforce.connection.query(query);
+//─────────────────────────────────────────────────────────────────────────────────────────┐
+// Record That does not have a CAN and Product Family of Interest is QBO.
+//─────────────────────────────────────────────────────────────────────────────────────────┘
+var oppyDetail = records.getArray(&apos;records&apos;);
+//─────────────────────────────────────────────────────────────────────────────────────────┐
+// query should retrieve an Opportunity record.
+//─────────────────────────────────────────────────────────────────────────────────────────┘
+if (oppyDetail.length &gt;0){
+//─────────────────────────────────────────────────────────────────────────────────────┐
+// validate retrieved Opportunity for salesToolCS
+//─────────────────────────────────────────────────────────────────────────────────────┘
+var pfoiFlag = false;
+for (var i =0; i&lt;salesToolCS.length; i++) {	
+	if (oppyDetail[0].Product_Family_of_Interest__c == salesToolCS[i].Name) {
+		pfoiFlag = true;
+		break;
+	} else {
+		pfoiFlag = false;
+	}
+}
+if(!pfoiFlag){
+	errorDisp += &quot;\u2022 Product family of interest should be either \&apos;QuickBooks Online (QBO)\&apos; or \&apos;QuickBooks Online Acct (QBOA)\&apos; \n&quot;;
+}
+//─────────────────────────────────────────────────────────────────────────────────────┐
+// validate retrieved Opportunity for products.
+//─────────────────────────────────────────────────────────────────────────────────────┘
+if (oppyDetail[0].PLI_Count__c == null || oppyDetail[0].PLI_Count__c &lt;= 0) {
+errorDisp += &quot;\u2022 At least one product should be added to the Opportunity. \n&quot;;
+}
+//─────────────────────────────────────────────────────────────────────────────────────┐
+// Proceed further only if validation is through.
+//─────────────────────────────────────────────────────────────────────────────────────┘
+if (errorDisp.search(&quot;\u2022&quot;) &lt;= 0) {
+//─────────────────────────────────────────────────────────────────────────────────┐
+// get the companyId and OpportunityId from the retrieve Opportunity Record.
+//─────────────────────────────────────────────────────────────────────────────────┘
+company = encodeURIComponent(oppyDetail[0].Account.Name);
+opptyId = oppyDetail[0].Opportunity_Number__c;
+//─────────────────────────────────────────────────────────────────────────────────┐
+// get primary contact details.
+//─────────────────────────────────────────────────────────────────────────────────┘
+if (!!oppyDetail[0].Primary_Contact__c) {
+lName = oppyDetail[0].Primary_Contact__r.LastName;
+if (!!oppyDetail[0].Primary_Contact__r.FirstName) {
+fName = oppyDetail[0].Primary_Contact__r.FirstName;
+}
+if (!!oppyDetail[0].Primary_Contact_Email__c) {
+email = encodeURIComponent(oppyDetail[0].Primary_Contact_Email__c);
+}
+if (!!oppyDetail[0].Primary_Contact_Phone__c) {
+phone = oppyDetail[0].Primary_Contact_Phone__c;
+}
+}
+//─────────────────────────────────────────────────────────────────────────────────┐
+// URL with legacy system url, concatenating with company &amp; primary contact information
+//─────────────────────────────────────────────────────────────────────────────────┘
+url = companyCreate+&quot;&amp;fn=&quot;+fName+&quot;&amp;ln=&quot;+lName+&quot;&amp;cn=&quot;+company+&quot;&amp;ce=&quot;+email+&quot;&amp;ph=&quot;+phone
++&quot;&amp;sf_opportunityid=&quot;+opptyId;
+//─────────────────────────────────────────────────────────────────────────────────┐
+// opens in new window.
+//─────────────────────────────────────────────────────────────────────────────────┘
+window.open(url,&quot;Create Company&quot;,&quot;width=200&quot;,&quot;height=200&quot;);
+}
+}
+else{
+errorDisp = &quot;\u2022 Salestool access is not allowed for Desktop accounts&quot;;
+}
+if(errorDisp.search(&quot;\u2022&quot;) &gt; 0){
+alert(errorDisp);
+}
+}
+}</url>
+</CustomPageWebLink>

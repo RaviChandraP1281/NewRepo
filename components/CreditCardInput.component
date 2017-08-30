@@ -1,0 +1,350 @@
+<apex:component >
+<!-- Required attributes (to be defined by controller):
+     sdtUrl : the URL of the tokenization service.  Required.
+     sdtHeader : any headers we need to send to the tokenization service.  Required.
+     $Api.Session_ID : the session Id to pass to the service.  Automatically handled.
+ -->
+    <!-- apex:includeScript value="{!$Resource.jquery191}" /-->
+    <!-- apex:includeScript value="{!$Resource.jQueryUi}" /-->
+    
+    <apex:includeScript value="{!URLFOR($Resource.jquery_ui_1_10_4, 'jquery-ui-1.10.4.custom/js/jquery-1.10.2.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.jquery_ui_1_10_4, 'jquery-ui-1.10.4.custom/js/jquery-ui-1.10.4.custom.min.js')}" />
+    
+    <!--  not found: apex:stylesheet value="{!URLFOR($Resource.jQueryUi, 'jquery-ui-1.9.1.custom/css/cupertino/jquery-ui-1.9.1.custom.min.css')}" /--> 
+    <apex:stylesheet value="{!URLFOR($Resource.jquery_ui_1_10_4, 'jquery-ui-1.10.4.custom/css/flick/jquery-ui-1.10.4.custom.min.css')}" />
+    
+    <apex:includeScript value="/support/console/22.0/integration.js"/>
+    
+    <script src="../../soap/ajax/28.0/connection.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        popupjQuery$ = jQuery.noConflict();
+        var isCCsysError = true;
+
+        popupjQuery$(document).ready(function(){
+            // $("[id*='cvvNumber']").val('');
+        });
+        
+        // Enable the button once 15 or 16 digits entered.
+        function searchFieldKeyUp( CCNumber ) {
+            //console.log( "searchFieldKeyUp: " + CCNumber );
+            var creditCardStyleClass = "{!JSENCODE(styleClass)}";
+            var methodToInvoke = popupjQuery$("input[id*='onChangeMethod']" ).val();
+            // $("span[id='{!$component.crd_searchStatus}.start']" ).hide();
+            if ( typeof methodToInvoke != 'undefined' && methodToInvoke != '' ) {
+                //if ( typeof console != 'undefined' ) {
+                //    console.log( 'searchFieldKeyUp invoking method ' + methodToInvoke );
+                //}
+                window[methodToInvoke](CCNumber);
+            } else {
+                // alert( "onChangeMethod is undefined" );
+                if ( typeof console != 'undefined' ) {
+                    console.log( 'onChangeMethod is undefined' );
+                }
+            }
+        }
+        
+        function preInvokeGetToken(CCNumber) {
+            // pass through to calling method
+            var resume = false;
+            var creditCardStyleClass = "{!JSENCODE(styleClass)}";
+            var methodToInvoke = popupjQuery$("input[id*='onChangeMethod']" ).val();
+            // $("span[id='{!$component.crd_searchStatus}.start']" ).hide();
+            if ( typeof methodToInvoke != 'undefined' && methodToInvoke != '' ) {
+                if ( typeof console != 'undefined' ) {
+                    console.log( 'preInvokeGetToken invoking method ' + methodToInvoke );
+                }
+                resume = window[methodToInvoke](CCNumber);
+            } else {
+                // alert( "onChangeMethod is undefined" );
+                if ( typeof console != 'undefined' ) {
+                    console.log( 'onChangeMethod is undefined' );
+                }
+            }
+            resume = true;
+            return resume;
+        }
+        
+        function creditCardEntryMatchesToken( ccNumber ) {
+            var ccTokenMasked = popupjQuery$("[id*='CCTokenMasked']").val();
+            if ( ccTokenMasked != null && ccTokenMasked.length >= 15 && ccTokenMasked === ccNumber ) {
+                // Existing tokenized value unchanged.  Leave button enabled.
+                // console.log( "creditCardEntryMatchesToken: masked token matches entry:" + ccTokenMasked + ", card"  );
+                return true;
+            } else {
+                // console.log( "creditCardEntryMatchesToken: masked token does not match:" + ccTokenMasked + ", card" );
+                return false;
+            }
+        }
+        
+        function invokeHandlerWithArg( methodToInvoke, argument ) {
+            // var methodToInvoke = $("input[id*='onSuccessMethod']" ).val();
+            // $("span[id='{!$component.crd_searchStatus}.start']" ).hide();
+            if ( typeof methodToInvoke != 'undefined' && methodToInvoke != '' ) {
+                console.log( 'invoking method ' + methodToInvoke );
+                window[methodToInvoke](argument);
+            } else {
+                // alert( "methodToInvoke is undefined" );
+                console.log( 'methodToInvoke is undefined' );
+            }
+        }
+        
+        
+        function tokenizeCreditCard(CCNumber) {
+            if ( CCNumber == null || CCNumber.length < 15 ) {
+                return;
+            }
+            
+            // Check to see if the credit card matches the already masked card number.
+            // if it matches, simply re-call the success() method.
+            if ( creditCardEntryMatchesToken( CCNumber )) {
+                var ccToken = popupjQuery$("[id*='CCToken']").val();
+                var methodToInvoke = popupjQuery$("input[id*='onSuccessMethod']" ).val();
+                invokeHandlerWithArg( methodToInvoke, ccToken );
+                return;
+            }
+            
+            // Strip out spaces from input value
+            var fixedCard = CCNumber.replace( /\s+/g, "" );
+            //console.log( "noSpaces: '" + fixedCard + "'" );
+            var creditCardStyleClass = "{!JSENCODE(styleClass)}";
+            //if ( fixedCard.length != CCNumber.length ) {
+                // update UI with new digits to display
+                //console.log( 'Updating creditCardNumberInput: ' + fixedCard );
+                //$('input.' + creditCardStyleClass).val( fixedCard );
+            //}
+            CCNumber = fixedCard;
+            
+            var token = "";
+            var isDebug = false;
+            var parsedJSON = "";
+            //setTimeout(function(){showStatus()},5);
+            showStatus_crd();
+            isCCsysError = false;
+            // blank out CCToken and MaskedToken values
+            popupjQuery$("[id*='CCToken']").val('');
+            popupjQuery$("[id*='CCTokenMasked']").val('');
+            // alert( "preInvokeGetToken( '" + CCNumber + "' )" );
+            //if (typeof console != 'undefined' ) {
+            //    console.log( "preInvokeGetToken ('" + CCNumber + "')");
+            //}
+            try 
+            {
+                var soapMsg = '{ "cc":"' + CCNumber + '"}'; //json request message
+                sforce.connection.sessionId = "{!$Api.Session_ID}";
+                // solo credentials: 
+                // sdtUrl="https://tokenization-sys-qydc.platform.intuit.com/v2/creditCard"
+                // sdtUrl="https://tokenization.platform.intuit.com/v2/sdsa"
+                // sdtHeader="Intuit_APIKey intuit_apikey=akyresn6k6GjUa6rALYAy1XzxxxUSFyhjYdDegpy"
+                // sdtHeader B2B ="Intuit_APIKey intuit_apikey=akyresfeRGaTNrZqkpmQbglm9DmlUxGlCAGXnMYX";
+                // combined credentials:
+                // sdtUrl="https://tokenization-sys-qydc.platform.intuit.com/v2/sdsa?intuit_apikey=akyresn6k6GjUa6rALYAy1XzxxxUSFyhjYdDegpy"
+                sforce.connection.remoteFunction({
+                    url : "https://tokenization.platform.intuit.com/v2/creditCard",
+                    requestHeaders: 
+                    { 
+                        "Content-Type": "Application/json",
+                        "Authorization": "Intuit_APIKey intuit_apikey=akyresfeRGaTNrZqkpmQbglm9DmlUxGlCAGXnMYX"
+                    },
+                    mimeType: "text/plain",
+                    requestData: soapMsg,
+                    method: "POST",
+                    async: false,
+                    onSuccess: function(response)
+                    {   
+                        // response = '{    "code": "402",    "type": "LOGIC",    "message": "Forbidden"}';
+                        // response = '{"cc":"4222222222222","ccToken":""}';
+                        // alert('response: '+response);
+                        isCCsysError = false; // got message from service, so it not a system Error.
+                        
+                        parsedJSON = JSON.parse(response);
+                        var cc = parsedJSON.cc;
+                        var CCToken = parsedJSON.ccToken;
+                        // alert('cc:'+cc+' CCToken:'+CCToken);
+
+                        if (typeof console != 'undefined') {
+                          console.log('CCToken = '+CCToken);
+                        }
+                        if (typeof CCToken != 'undefined' && CCToken!= '') {
+                            // var CCType = GetCCType(CCToken);
+                            popupjQuery$("[id*='CCToken']").val(CCToken);
+                            // $('.CCType').val(CCType);
+                            // Format CC Number 
+                            var lastDigits = CCToken.substring(CCToken.length - 4,CCToken.length);
+                            var ccFormat = "**** **** **** "+lastDigits;
+                            popupjQuery$('.'+creditCardStyleClass).val(ccFormat);
+                            popupjQuery$("[id*='CCTokenMasked']").val(ccFormat);
+                            errorMsg = '';
+                        } else {
+                            // Caught error 
+                            // var errCode = $(response).find('sc\\:Error').text();
+                            errorMsg = GetErrMsg(response);
+                        }
+                       // hideStatus_crd();
+                        popupjQuery$("#errDiv").html(errorMsg);
+                        // setTimeout(function(){hideStatus()},1000);
+                        var methodToInvoke = popupjQuery$("input[id*='onSuccessMethod']" ).val();
+                        invokeHandlerWithArg( methodToInvoke, CCToken );
+                        hideStatus_crd();
+                        return;
+                    },
+                    onFailure: function(response)
+                    {   
+                        isCCsysError = true; // Caught a system Error.
+                        errorMsg = GetErrMsg(response) ; //'Error response: \n\n' + response;
+                        //$("[id*='CCTokenMasked']").val("");
+                        //$("[id*='CCToken']").val("");
+                        var methodToInvoke = popupjQuery$("input[id*='onFailureMethod']" ).val();
+                        invokeHandlerWithArg( methodToInvoke, errorMsg );
+                        
+                        //alert("fail");
+                        //setTimeout(function(){hideStatus()},1000);
+                        //alert('onFailure Error response: \n\n' + response);
+                        popupjQuery$("#errDiv").html(errorMsg);
+                        hideStatus_crd();
+                        return;
+                    }
+                });
+            } catch(exception) {  
+               // Caught a system Error.
+               alert("Caught error: \n" + exception + " - " + exception.message + "\n\n Please contact the adminstrator."); 
+               hideStatus_crd();
+               isCCsysError = true;
+            }
+        }
+        
+        
+        function GetErrMsg(msg){ // US12311
+            // alert('GetErrMsg: '+ msg);
+            var errMessage = "There was an error tokenizing the credit card. ";
+            console.log( "getErrMsg('" + msg + "')");
+            try {
+                if (msg == null || msg == ''){
+                    return "There was an error tokenizing the credit card. ";
+                    // if response is blank, return error message.
+                } else if ( msg.toLowerCase().contains( "<title>" ) && msg.toLowerCase().contains( "</title>" )) {
+                    // not a JSON response -- HTML document returned.  Grab the title of the doc.
+                    var idxStart = msg.toLowerCase().indexOf( "<title>" );
+                    var idxEnd   = msg.toLowerCase().indexOf( "</title>" );
+                    errMessage = msg.substring( idxStart, idxEnd );
+                } else if ( msg.contains( "failed to respond" ) || msg.contains( "ERROR 400" )) {
+                     // server is down -- HTTP 400 error
+                     errMessage = "Tokenization server is down. ";
+                } else {
+                    
+                    var parsedJSON = JSON.parse(msg);
+                    var errCode = parsedJSON.code;
+                    errMessage = parsedJSON.message;
+                    
+                    if (errCode != null && errCode != '') {
+                        if (errCode > 399 && errCode < 500) {
+                            console.log('Error Code = '+errCode + 'Error Message = '+errMessage);
+                            errorMsg = " * An unexpected error occurred. Please contact your administrator for assistance";
+                        } else {
+                            errorMsg = ' * Credit Card number is not valid';
+                        }
+                    } else { //if errCode is blank
+                        errorMsg = "There was an error tokenizing the credit card. ";
+                    }
+                }
+            } catch ( ex ) {
+                if ( typeof ex == 'undefined' ) {
+                    errMessage = "Error parsing response from server. ";
+                } else {
+                    console.log( "getErrMsg caught exception: '" + ex.getMessage() + "', '" + ex.toString() + "'" );
+                    errMessage = "Error parsing response from server. ";
+                }
+            }
+            console.log( "getErrMsg returning '" + errorMsg + "'");
+            return errorMsg;
+        }
+        
+        function showStatus_crd(){
+          // searchStatus.start
+          // debugger;
+          // alert('showStatus > > '+$("span[id*='searchStatus.start']" ));
+          popupjQuery$("span[id='{!$component.crd_searchStatus}.start']" ).show();
+        }
+        function hideStatus_crd(){
+          // searchStatus.start
+          popupjQuery$("span[id='{!$component.crd_searchStatus}.start']" ).hide();
+        }
+</script>
+    
+    <apex:attribute type="String" 
+        name="creditCardNumber"
+        description="Credit card number"
+        required="true"/>
+    <apex:attribute type="String" 
+        name="creditCardToken"
+        description="Tokenized credit card number"
+        required="true"/>
+    <apex:attribute type="String" 
+        name="creditCardTokenMasked"
+        description="Masked tokenized credit card number"
+        required="true"/>
+    <apex:attribute type="String" 
+        name="sdtUrl"
+        description="URL of the tokenization service"
+        required="true"/>
+    <apex:attribute type="String" 
+        name="sdtHeader" 
+        description="Header string to send to the tokenization service (optional)" 
+        required="false"/>
+    <apex:attribute type="String" 
+        name="onSuccessMethod"
+        description="JavaScript method to invoke when the token is returned"
+        required="false"/>
+    <apex:attribute type="String" 
+        name="onFailureMethod" 
+        description="JavaScript method to invoke when the number is not valid or token is not returned"
+        required="false" />
+    <apex:attribute type="String" 
+        name="onChangeMethod" 
+        description="Method to invoke when value is entered (optional pass-through)." 
+        required="false" />
+    <apex:attribute type="String" 
+        name="styleClass"
+        description="The style class to apply to the credit card input box (optional)"
+        required="false" 
+        default="creditCardInput" />
+    <apex:attribute type="String" 
+        name="creditCardErrorDiv" 
+        description="HTML Id of the credit card number error div (optional)" 
+        required="false"
+        default="creditCardInvalidMessage"
+        />
+    <apex:attribute type="String" 
+        name="placeholderText" 
+        description="Placeholder text to appear on the input control" 
+        required="false"
+        default="Enter credit card number"
+    />
+    <apex:actionstatus id="crd_searchStatus">
+        <apex:facet name="start">
+            <div class="waitingSearchDiv" id="el_loading" style="background-color: #fbfbfb;
+                 height: 100%;opacity:0.65;width:100%;z-index:9000;">
+                <div class="waitingHolder" style="top: 74.2px; width: 91px;">
+                    <img class="waitingImage" src="/img/loading.gif" title="Please Wait..." />
+                    <span class="waitingDescription">Please Wait...</span>
+                </div>
+            </div>
+        </apex:facet>
+    </apex:actionstatus>
+    <apex:inputText id="creditCardNumberInput" value="{!creditCardNumber}" 
+          maxlength="32"
+          size="50" 
+          styleClass="{!styleClass}" 
+          onChange="preInvokeGetToken(this.value);return false;" 
+          onKeyUp="searchFieldKeyUp(this.value); return false;"
+          html-placeholder="{!placeholderText}" />
+    <div id="{!creditCardErrorDiv}" class="errorMsg" style="display:none;" >This space intentionally left blank</div>
+
+    <apex:inputHidden value="{!creditCardToken}" id="CCToken" />
+    <apex:inputHidden value="{!creditCardTokenMasked}" id="CCTokenMasked" />
+    <apex:inputHidden value="{!onSuccessMethod}" id="onSuccessMethod" />
+    <apex:inputHidden value="{!onFailureMethod}" id="onFailureMethod" />
+    <apex:inputHidden value="{!onChangeMethod}"  id="onChangeMethod" />
+    <script type="text/javascript">
+      var isCCsysError = true;
+    </script>
+</apex:component>

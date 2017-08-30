@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Test of template with header / footer.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Empty_Letterhead</letterhead>
+    <name>AAG QBOA Signup</name>
+    <style>formalLetter</style>
+    <subject>QuickBooks® Online Accountant - Special Offer!</subject>
+    <textOnly>Dear {!IF(ISBLANK(Lead.Name), IF(ISBLANK(Contact.Name), &apos;Valued Customer&apos;, Contact.Name), Lead.Name)},
+
+Thank you for taking the time to speak with me today. I&apos;m happy I was able to introduce you to Intuit QuickBooks Online Accountant. I’d like to share some more information about it with you and help you get started in the cloud.
+QuickBooks® Online Accountant will forever transform the way you collaborate with your clients. Its unique, accountant-only tools let you work how and where you want, and are your key to unlocking powerful business insights—and it&apos;s FREE.1 Plus, you’ll be able to:
+
+Save Time—Gain efficiency with batch reclassifications and write-offs, easier reconciliation and troubleshooting tools.
+
+Find &amp; Fix Errors Faster—Easily see and correct client errors, as soon as they happen.
+
+Build Your Client Relationships—Enhance collaboration2 and build trust with one-click access to your clients&apos; files.
+
+Here&apos;s how to get started!
+
+Visit the QuickBooks Online Accountant sign-up page by clicking here, or by copying and pasting the following link:
+
+https://quickbooks.intuit.com/start/qba_signup?scid=Prod_Acctg_QB_O4A_Cloud_SignUp={!IF(NOT(ISBLANK(Lead.Id)), Lead.Id, IF(NOT(ISBLANK(Opportunity.Id)), Opportunity.Id, &apos;UNKNOWN&apos;))}
+Fill out the fields to create your account
+
+Click “Sign Up” and you’re ready to get started!
+
+
+We hope you enjoy all the benefits of the cloud! If you have any additional questions, please feel free to contact me.
+Sincerely,
+
+
+Click here for FAQs and System Requirements.
+
+1 The first 180 days of subscription to QuickBooks Online Accountant starting from the date of enrollment is free. After 180 days, you will automatically maintain full access to QuickBooks Online Accountant if you have an active ProAdvisor membership or if you have at least one current QuickBooks Online client on your QuickBooks Online Accountant client list. If you do not meet the above requirements, you will lose accountant-specific features including access to the Accountant Center as well as the QuickBooks Online company included in the product. Offer is valid for accounting professionals. Terms, conditions, features, pricing, service and support are subject to change without notice.
+
+2 Minimum browser requirement: Internet Explorer 8, Firefox 12, Safari 5, Chrome.
+IMPORTANT: Intuit respects the personal nature of email communication. Every effort is made to offer only information that may be of value to you or your business. If you do not wish to receive marketing email from Intuit in the future, please click here.</textOnly>
+    <type>html</type>
+</EmailTemplate>

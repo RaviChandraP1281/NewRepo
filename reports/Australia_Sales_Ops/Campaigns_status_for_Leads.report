@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Campaign$Name</field>
+    </columns>
+    <columns>
+        <field>Campaign.LeadCampaignMembers$Name</field>
+    </columns>
+    <columns>
+        <field>Campaign.LeadCampaignMembers$Company</field>
+    </columns>
+    <columns>
+        <field>Campaign.LeadCampaignMembers.Activities$Account</field>
+    </columns>
+    <columns>
+        <field>Campaign.LeadCampaignMembers.Activities$Status</field>
+    </columns>
+    <columns>
+        <field>Campaign.LeadCampaignMembers$Status</field>
+    </columns>
+    <columns>
+        <field>Campaign.LeadCampaignMembers$CampaignMemberStatus</field>
+    </columns>
+    <columns>
+        <field>Campaign.LeadCampaignMembers.Activities$Subject</field>
+    </columns>
+    <currency>AUD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Campaign.LeadCampaignMembers.Activities$Subject</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>QB Connect - Follow Up</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign.LeadCampaignMembers$CampaignMemberStatus</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Not Contacted</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Campaign$Name</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>QuickBooks Connect 2017 - Sydney (SMB),QuickBooks Connect 2017 - Sydney (Advisor)</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Campaign.LeadCampaignMembers*Lead$Lead_Owner_Read_Only__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Campaigns status for Leads</name>
+    <params>
+        <name>scopeid</name>
+        <value></value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Campaigns_w_Leads_w_or_w_out_Activities__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Campaign$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>User.Case$OwnerId$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>User.Case$OwnerId.Case_NPS__r$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>User$Name</field>
+    </columns>
+    <columns>
+        <field>User.Case$OwnerId$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>User.Case$OwnerId.Case_NPS__r$Question_Response1__c</field>
+    </columns>
+    <columns>
+        <field>User.Case$OwnerId.Case_NPS__r$Question_Response2__c</field>
+    </columns>
+    <columns>
+        <field>User.Case$OwnerId.Case_NPS__r$Question_Response3__c</field>
+    </columns>
+    <columns>
+        <field>User.Case$OwnerId.Case_NPS__r$Question_Response4__c</field>
+    </columns>
+    <columns>
+        <field>User.Case$OwnerId.Case_NPS__r$Question_Response5__c</field>
+    </columns>
+    <columns>
+        <field>User.Case$OwnerId.Case_NPS__r$Question_Response6__c</field>
+    </columns>
+    <columns>
+        <field>User.Case$OwnerId.Case_NPS__r$Question_Response9__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>1 OR 2 OR 3 OR 4 OR 5 OR 6 OR 7 OR 8 OR 9 OR 10</booleanFilter>
+        <criteriaItems>
+            <column>User.Case$OwnerId$CaseOwnerFullName__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Rhea Mae Remolador,Maria Sombal,Kristhyn Paragoso,Mel Monsour Abellana,Franz Dominic Bernal,Voltaire Ian Estocapio,Kenneth John Torsiende,Johanne Mari Ballares,Mohammad Ashlan Buenaobra,Norine Mendez,Jake John Joseph Busaco,Jay Aven Benitez,Joey Alarde,Edmar Cavales,Arcel AdorII,Salde Mariel Sagayno,Diofel Duero,Anthony Marvin Dagatan,John Andrew Auguis,Rechah Lael Shalom Lacson,Martin Baquiano,Liza Ann Teves,Froilan Abestano</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$OwnerId$CaseOwnerFullName__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Jasper Jon Buena,Andrea Cafranca,Mark Kiven Calvo,Razel Chiu,Jerely Comedia,Dean Condevillamar,Ghia Sabay,Sammuel Tomada,Ron Adryon Valencia,Mary Rose Garde,Sarah Jeane Pasumala,Marjorie Suaybaguio,Briann Tabat,Edbert Kent Badiang,Ma April Caparoso,Jaynalyn Duhaylungsod,Ma Fatima Christy Lontajo</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$OwnerId$CaseOwnerFullName__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Kicker John Pitao,Ivy Quidlat,Raihanie Dianal,Anne Sayson,Sweet Dianne Delgado,Raihanah Ali,Sofia Estera,Ezra Monte,Marc John Cuyag,Arnel Talipan,Honnie Rose Alvarico,Malco Amorganda,Leira Mae Pino,Aljandria Villarino,Elver Hazil Maniwang,Cinderella Mercado,Suzanne Stephanie Tenazas,Carina Bartolaba,Danica Rose Sarmiento,Maria Elpedia Catalan,Blessy Fern Paundog,Gailord Clint Alberto,Rhenzal Mark Uy,Crislyn Matarong,Jocelyn Azarraga</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$OwnerId$CaseOwnerFullName__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Alexandra Nichole Acar,Ma. Albonn Vedi Cagalawan,Rafael Vincent Cordova,Janno Rey Laore,Catherine Taneo,Nursharif Isnani,Saheeda Salilama,Kizzy Arboladura,Jason Bael,John Michael Beltran,Jehu Bullicer,Carmel Buyan,Christian Cavan,Charm Daplin,Jasmin Espegadera,Zhard Lloyd Halasan,Kurt Dexter Hoyohoy,Eileen Lapiz,Mary Grace Maglalang,JessaLord Militante,Ves Anne Nacorda,Rosell Negrosa,Glener Perales,Sheila Joy Rondina,Shekinah Sarupan,Nurren Seno,Tara Rebekka Vicente</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$OwnerId$CaseOwnerFullName__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>King Alfred Aregadas,Cedrick Baconguis,Charlyn Cabalang,James Kyle Camay,Sheruvinne Eloisa Custodio,Elvi Esclamado,Jake Olmilla,Mary Cathrene Orbiso,Rachelle Ann Tubalado,Siegfried Daryl Cataluna,Gerlie Gio,Sunny Boy Canete,Shiela Cuadra,Jonrel Luzon,Jasmin Mabanag,Ronilo Macalaguing,Gladys Manosur,Jesmie Paglinawan,Ma. Christibelle Raquino,Donna Marie Datolio,Lynette May Pamunag</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$OwnerId$CaseOwnerFullName__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Duane Salvame,Jose Odin Bolambao,Hennie Riconalla,Dani Joey Llamasares,Noime Olid,Decie Joy Avenido,Ronald Jr Ross,Jenalis Ababa,Lhira Mae Bubuli,Harjay Alota,Alex Jr. Arinaza,Chanti Cadelina,Jessie Lubas,Faith Joy Maglangit,Janine Tura</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$OwnerId$CaseOwnerFullName__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Karen Mae Militante,Alberto Aranas,Sajara Jane Floron,Emmanuel Ruiz,John Anthony Bucao,Ezra Jr Lao,Jhon Kheven Singco,Maria Ellen Matugas,Saul Khe,Jairo Capitoc,Charlene Rica Fajardo,Eumar Legarde,Love Joy Montealto,Hannah Loren Cuyos</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$OwnerId$CaseOwnerFullName__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Charles Kevin Alburo,Vince Jovel Barrientos,April Gillana,Paolo Marc Nicolas Laspinas,Bernadette Llamera,Jurich Martin,Jason Olvido,Sharlene Pepino,Queenie Perez,Caroline Erfe,Jelaine Arenas,Dan Bryan Icot,Mark Ferdinand Vestil,Ruth Monsales,Ma. Celedona Canseco,Hardy Tagalog,Wendel John Camit,Winfel Faith Tabalba,Janice Singson,Lili Mae Abella,John Julian Guiritan,Ebtisam Laila Taug,Farrahwiza Hadjimuddin,Vanessa Charesse Llevares,Ina Marie Abad,Louis Christian Gendive,Rose Olive Camins,Roelein Tan,Edgar Allan Po,Justine Mae Taclap,Vicarl Jan Abarro,Ana May Villanueva,Rima Airah Tubalado,Georilyn Juarez,Katherine Cabahug</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$OwnerId$CaseOwnerFullName__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Jessielyn Cantano,April Cabarron,Mia Grace Cotiangco,Girly Jade Cuaresma,Catherine Joy Dimaano,Nina Fatima Jalando-on,Abigail Otero,Andrew Leo Castrodes,Almarie Nericua,Jhunjie Dinah Duhinog,Johaira Umpar,Norly Ibones,Harvey Coto,Joy Angeline Juntila,Roxanne Olerio,Peter Johanne Arong,Almera Jean Bacongan,Jeffrey Macutay,Jed Bryan Saynes,Joshua Virgel Botavara,Anthony Ashly Gigtenta,Josh Raymund Romano,Mark Roska,Jerelyn Ruizo,Thea Kaye Soco,Michael John Tagupa,Carmel Ann Bello,Katrina Jayne Cezar,Michelle Dakay,Rhodora Donaire,Hiyas Galolo,Rejomar Largo,Christopher Lopez,Leonard Osorio</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$OwnerId$CaseOwnerFullName__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Ma. Lyra Angtud,Maria Kristi Atillo,Claudibel Ian Balais,Dondon Caballes,Cherrie Joy Chavez,Vincent Crist Lipayo,Ruvi Gee Mandreza,Jema Munez,Janine Pelit,Mary Donnell Pescadero,Melanie Quimada,Mooremae Sobremonte,Charlyn Tajada,John Archie Tul-id,Al-Khalid Usama,Brandon Villaflor,Janice Villaver,Jan Richard Sijera</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>QBO CEBU VOC</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Users_Cases__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>User.Case$OwnerId.Case_NPS__r$CreatedDate</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>User.Case$OwnerId.Case_NPS__r$CreatedDate</dateColumn>
+        <endDate>2018-02-04</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2017-06-07</startDate>
+    </timeFrameFilter>
+</Report>

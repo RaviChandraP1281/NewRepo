@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>IOP - Additional documents required</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Desktop_Data_Services</letterhead>
+    <name>IOP - Additional documents required</name>
+    <style>freeForm</style>
+    <subject>Master Administrator Claim</subject>
+    <textOnly>{!Case.Contact},
+Regarding Company: {!Case.Account}
+
+My name is {!Case.CaseOwnerFullName__c}; I am a Intuit Online Payroll Account Manager. Thank you for your patience as we reviewed the documentation regarding the Master Administrator transfer. In order to move forward we require the following documents:
+
+ 
+
+Include the following information on the email / fax cover sheet:
+
+Case# {!Case.CaseNumber}
+Company ID: {!Account.Company_ID__c}
+Company Name: {!Case.Account}
+
+
+
+
+Fax # is (888) 655-3373
+
+Email: QBOE_Efax@intuit.com
+
+ 
+
+We will contact you within 7-10 business days once we receive this information.
+
+ 
+
+Sincerely,
+
+The Intuit Online Payroll Support Team</textOnly>
+    <type>html</type>
+</EmailTemplate>

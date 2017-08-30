@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>General No Contact Email</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Upload_Blank_Editable</letterhead>
+    <name>No Contact</name>
+    <style>freeForm</style>
+    <subject>Congratulations! and Welcome to QuickBooks Enterprise</subject>
+    <textOnly>Account #{!Contact.CAN__c}
+
+
+
+
+Dear {!Contact.FirstName},
+
+I attempted to reach you a few times by phone and email. I do not want to bother you, as such I want to give you all of my contact information in case you ever wanted to reach out to me.
+
+If you know of any co-workers that might benefit from working with me please forward my information to them.
+
+I would greatly appreciate a moment to discuss with you and/or the other primary QuickBooks user(s), the benefits of the Onboarding Program. I look forward to speaking with you or your co-worker.
+
+We at Intuit value your business and are continuously working to improve the experience we provide to our valued customers and are excited to offer you this new benefit.
+
+I look forward to working with you.
+
+{!User.FirstName} {!User.LastName} | Enterprise Account Manager
+Work Phone: {!User.Phone} ext {!User.Extension} | {!User.Email}
+
+Intuit | simplify the business of life
+
+this transmittal is intended only for the use of the individual or entity to which it is addressed and may contain information that is privileged, confidential and exempt from disclosure under applicable law. If the reader of this transmittal is not the intended recipient or the employee or agent responsible for delivering the transmittal to the intended recipient, you are hereby notified that any dissemination, distribution or copying of this communication is strictly prohibited.</textOnly>
+    <type>html</type>
+</EmailTemplate>

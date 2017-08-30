@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Welcome email for Trial FTU</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Trial FTU - Welcome Email</name>
+    <style>none</style>
+    <subject>5 simple steps to get you started.</subject>
+    <textOnly>Intuit
+
+
+5 simple steps to get you started.
+View online
+
+SIGN IN
+
+Welcome to QuickBooks Online
+
+Here is your login information for easy reference:
+User ID: {!Contact.Email}
+
+NAVIGATING QUICKBOOKS ONLINE
+
+Next, here&apos;s 5 simple steps to get you started
+
+1. Your company settings
+
+See exactly how to set up QuickBooks Online so it&apos;s tailored to your business and the way you work.
+
+LEARN HOW
+
+2. Linking your bank accounts
+
+QuickBooks Online securely imports transactions from your bank accounts and credit cards, saving you time and reducing data entry. It can automatically classify transactions too!
+
+LEARN MORE
+
+3. Personalising your invoices
+
+Make your invoices and other sales forms as unique as your business. Add your logo, change fonts, colours and layouts.
+
+LEARN HOW
+
+4. Creating an invoice
+
+Learn how to create and send invoices easily.
+
+WATCH DEMO
+
+5. Recording an expense
+
+See how you track your business expenses in QuickBooks Online.
+
+WATCH DEMO
+
+Take your business with you everywhere
+
+
+Download the QuickBooks Online App so you can manage your business on the go.
+
+Need some help?
+
+It&apos;s now even easier to get QuickBooks Online support when you need it with our new FAQs page full of helpful information, videos, support community and more.
+
+SEE ALL OUR HELP AND SUPPORT
+
+Or want to go it alone?
+
+Download the QuickBooks Online Getting Started Guide to see step by step instructions on how to use all the key features.
+
+DOWNLOAD NOW
+
+Want to learn more?
+
+
+Check out our FREE training.
+
+Learn about all the key features of QuickBooks Online in just 45-minutes from the comfort of your home or office by attending our free Introduction to QuickBooks Online webinars.
+
+REGISTER NOW
+
+
+
+
+Intuit Australia
+Level 34, 1 O&apos;Connell Street
+Sydney NSW 2000
+intuit.com.au
+
+This email was sent from an auto-notification system that can&apos;t accept incoming email. Please DO NOT REPLY to this message.
+
+You have received this business communication as part of our efforts to fulfill your request or service your account. You may receive this and other business communications from us even if you have opted out of marketing messages.
+
+Terms, conditions, pricing, features, and service options are subject to change. View our complete Terms of Service.
+
+If you receive an email message that appears to come from Intuit but that you suspect is a phishing email, please forward it immediately to spoof@intuit.com. Please visit http://security.intuit.com/ for additional security information.
+
+Intuit respects your privacy. To learn more, read our Privacy Statement. © 2016 Intuit Limited registered in Australia, Citigroup Centre, Sydney, NSW, 2000</textOnly>
+    <type>custom</type>
+</EmailTemplate>

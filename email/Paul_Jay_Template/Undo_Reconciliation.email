@@ -1,0 +1,37 @@
+Hi {!Contact.FirstName},
+
+Thanks for your query today regarding how to Undo a Reconciliation. With regard to undoing the reconciliation you have two options.
+ 
+1. An Accountant User can Undo Reconciliations through the Accountant Portal.
+2. You can manually undo the reconciliation to do this you will need to undo each transaction through the Bank Register > Chart of Accounts.
+
+For your accountant/bookkeeper they can do this through the Accountant portal QBOA by selecting > undo next to the reconciliation. (They would need to be invited into your QBO file as a Accountant user) Gear Icon top right > manage users > add Accountant.
+
+To UNDO a Reconciliation From QBOA Accountant portal.
+
+> Select Client File
+> company gear icon top right
+> reconciliation
+> UNDO > next to the reconciliation (right hand side).
+
+For you, to undo a reconciliation in your file you would need to go to the account history and undo each transaction. QuickBooks Online doesn’t have an Undo Last Reconciliation feature (Only available as a Accountant user). To un-reconcile a reconciliation you’ll need to un-reconcile each transaction via the register.
+
+To undo a reconciliation:
+
+Select Transactions on the left menu then Chart of Accounts.
+
+Click on the account then click Go to Register.
+
+Find the transactions that need to be un-reconciled, one at a time.
+
+To highlight click on the transaction.
+
+Click on the R on the top line of the transaction, which is towards the right side of the transactions. Clicking in this field will allow you to change the status of the transaction to the desired status from blank = unreconciled to C = Cleared.
+
+Click on Save.
+
+A message will appear: This transaction has already been reconciled. You should only remove the R if you’re correcting a mistake. Are you sure you want to remove the R? click Yes.
+
+Continue this process for each transaction on the reconciliation report or statement you want to un-reconcile.Then once this has been done, I would re do the reconciliation to match the existing Bank Statement so the balances are correct.
+
+Thanks again and please let me know should you have any further questions or concerns,

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CREATED</field>
+    </columns>
+    <columns>
+        <field>ID</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>field_key</field>
+    </columns>
+    <columns>
+        <field>OLDVAL</field>
+    </columns>
+    <columns>
+        <field>NEWVAL</field>
+    </columns>
+    <columns>
+        <field>CONTACT_OWNER</field>
+    </columns>
+    <columns>
+        <field>Contact.AccountCAN__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Account_Name__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>1 OR 2 OR  3</booleanFilter>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Audrey Sagario,Zefren John Y Suan,Samson Joseph Alvez,Roger John Aromin,Schenely Brazalote,Dean Harold Campos,Kurt Melon Caterial,Immanuelle Joan Cayao,Jennifer Amaro,Wilson James Villaruel,Angelica Canada,Mary Crista Jhamie Alfante,Hainz Manasseh Magsayo,Kevin Rara,Trisha Marie Rupinta,Marc Jon Lee,Don Johnson Santos</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Oriel Cain,llyn John Cenal,Michelle Degamo,Jason Albert King,Charles Anglo Magno,Cherrelyn Ranile,Gabriel Francis Reyes,Mary Anne Salig,Rose Eden Sarraga,Jan Ryan Severino,Mark Anthony Sieras,Benedict Solayao,Christine Tarongoy</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Kimberly Anne Alingasa,Filomena Amancio,Jayzel Baran,Leah Budlayan,Nielvin Eborde,Joanna Mae Endab,Jojie Lepon,Roan Glenn Macabecha,Aisha Rica Monte,Mary Ann Perocho,Rizza Puzon,Mark Sinambong,Rosell Lyn Verar,Jasper Villahermosa,Lord Cirus Ybanez,Efrenilyn Young</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Email Change Report PP Cebu</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContactAuditHistory@Contact.Customer__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>CREATED_DATE</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_YESTERDAY</interval>
+    </timeFrameFilter>
+</Report>

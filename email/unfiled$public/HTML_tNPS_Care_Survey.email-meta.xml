@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>HTML version of tNPS survey for Salesforce Agnents.  Sent when a case is closed</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>HTML tNPS Care Survey</name>
+    <style>none</style>
+    <subject>{!Case.OwnerFullName}, your Opinion Matters to EBS! Please take a moment to respond to a 5 question survey about your experience with Salesforce</subject>
+    <textOnly>Dear {!Case.OwnerFullName},
+
+Your opinion counts! As a sales or care agent using Salesforce, the Enterprise Business Solutions (EBS) team wants your feedback on using Salesforce. This survey should take less than 90 seconds to complete.
+
+Case Number: {!Case.CaseNumber} which was closed on {!Case.ClosedDate}
+
+Case Contact: {!Case.Contact}
+Case Account: {!Case.Account}
+Case Type: {!Case.Type}
+Case Product: {!Case.Product__c}
+
+Case Subject: {!Case.Subject}
+
+Case Description: {!Case.Description}
+
+
+As much as possible, we would like for you to think about this specific transaction when answering these survey questions. Please complete the survey by clicking on following link:
+
+http://www.clicktools.com/survey?iv=2zvwx7z61mc0q&amp;q1={!Case.Id}
+
+Thank you for providing feedback about your experience. This will provide valuable feedback in helping us understand how you believe we are doing.
+
+Thanks in advance,
+Sales &amp; Care Team</textOnly>
+    <type>custom</type>
+</EmailTemplate>

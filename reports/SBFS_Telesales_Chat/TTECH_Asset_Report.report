@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Opportunity$Siebel_Account_id__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity$Siebel_Order_id__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity$Product_Family_of_Interest__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.OpportunityLineItems$Product_Line_Status__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity$CreatedBy</field>
+    </columns>
+    <columns>
+        <field>Opportunity.OpportunityLineItems$Id</field>
+    </columns>
+    <columns>
+        <field>Opportunity.OpportunityLineItems$Line_Item_Id__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Opportunity$CreatedBy</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>perpignani,finley,argo,derek molina,carroll,caitlin monroe,annalise sanchez,adrianna flores,alexander miller,bryonia gilbert</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>TTECH Asset Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunities_and_Products__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Opportunity$Siebel_Order_id__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Opportunity$CloseDate</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

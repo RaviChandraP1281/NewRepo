@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCT_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>Asset.Siebel_Billing_Account_CAN__c</field>
+    </columns>
+    <columns>
+        <field>Asset.Siebel_Configuration__c</field>
+    </columns>
+    <columns>
+        <field>CASE_NUMBER</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>PRODUCT.NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Tax Online Tax Year 2015 Sign Up</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ACCT_CREATED_DATE</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>5/1/2015 12:00 AM</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>ITO New Accounts with Cases</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AssetCase</reportType>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Asset.Siebel_Created_Date__c</dateColumn>
+        <endDate>2016-02-18</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2015-05-01</startDate>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>KnowledgeArticle$Title</field>
+    </columns>
+    <columns>
+        <field>KnowledgeArticle$CreatedBy</field>
+    </columns>
+    <columns>
+        <field>KnowledgeArticle$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>KnowledgeArticle$LastModifiedDate</field>
+    </columns>
+    <columns>
+        <field>KnowledgeArticle$LastModifiedBy</field>
+    </columns>
+    <currency>USD</currency>
+    <description>Shows all KM articles, with last modified by Name &amp; Date</description>
+    <format>Tabular</format>
+    <name>KM Article Modify</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>SK__Knowledge_Articles__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>KnowledgeArticle$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,21 @@
+<apex:component access="global" id="requiredblock">
+    <style>
+.requiredInput .requiredBlock {
+    background-color: #CC0000;
+    bottom: 1px;
+    left: -4px;
+    position: absolute;
+    top: 1px;
+    width: 3px;
+}
+
+.requiredInput {
+    height: 100%;
+    position: relative;
+}   
+    </style>
+    <div class="requiredInput">
+        <div class="requiredBlock"></div>
+        <apex:componentBody id="container" />
+    </div>
+</apex:component>

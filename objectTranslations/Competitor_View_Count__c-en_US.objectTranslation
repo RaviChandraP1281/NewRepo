@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Competitor View Count</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Competitor View Counts</value>
+    </caseValues>
+    <fields>
+        <label><!-- Competitor --></label>
+        <name>Competitor__c</name>
+        <relationshipLabel><!-- Competitor View Count --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Lead --></label>
+        <name>Lead__c</name>
+        <relationshipLabel><!-- Competitor View Count --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- Competitor View Count --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Product Family of Interest --></label>
+        <name>Product_Family_of_Interest__c</name>
+    </fields>
+    <fields>
+        <label><!-- View Count --></label>
+        <name>View_Count__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Studio Lab</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Studio Labs</value>
+    </caseValues>
+    <fields>
+        <label><!-- Equipment --></label>
+        <name>Equipment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lab Address --></label>
+        <name>Lab_Address__c</name>
+    </fields>
+    <fields>
+        <help><!-- Every new Record Created Will have a name corresponding to it in this Picklist --></help>
+        <label><!-- Labs --></label>
+        <name>Labs_Values__c</name>
+        <picklistValues>
+            <masterLabel>Co-Creation 1</masterLabel>
+            <translation><!-- Co-Creation 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Co-Creation 2</masterLabel>
+            <translation><!-- Co-Creation 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Co-Creation 3</masterLabel>
+            <translation><!-- Co-Creation 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Den</masterLabel>
+            <translation><!-- Den --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dining Room</masterLabel>
+            <translation><!-- Dining Room --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lab 1</masterLabel>
+            <translation><!-- Lab 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lab 2</masterLabel>
+            <translation><!-- Lab 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lab 3</masterLabel>
+            <translation><!-- Lab 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lab 4</masterLabel>
+            <translation><!-- Lab 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lab 5</masterLabel>
+            <translation><!-- Lab 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lab 6</masterLabel>
+            <translation><!-- Lab 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Living Room</masterLabel>
+            <translation><!-- Living Room --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Maker Space</masterLabel>
+            <translation><!-- Maker Space --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OffSite</masterLabel>
+            <translation><!-- OffSite --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Office</masterLabel>
+            <translation><!-- Office --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Remote</masterLabel>
+            <translation><!-- Remote --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SDG Lab2</masterLabel>
+            <translation><!-- SDG Lab2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SDG Lab3</masterLabel>
+            <translation><!-- SDG Lab3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SDG Lab4</masterLabel>
+            <translation><!-- SDG Lab4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SDG Lab5</masterLabel>
+            <translation><!-- SDG Lab5 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Location Address --></label>
+        <name>Location_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location --></label>
+        <name>Location__c</name>
+        <picklistValues>
+            <masterLabel>Mountain View</masterLabel>
+            <translation><!-- Mountain View --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non Lab Study (Offsite)</masterLabel>
+            <translation><!-- Non Lab Study (Offsite) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Non Lab Study (Remote)</masterLabel>
+            <translation><!-- Non Lab Study (Remote) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Plano</masterLabel>
+            <translation><!-- Plano --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>San Diego</masterLabel>
+            <translation><!-- San Diego --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Type of Study --></label>
+        <name>Type_of_Study__c</name>
+        <picklistValues>
+            <masterLabel>Card Sorting</masterLabel>
+            <translation><!-- Card Sorting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Co-Design Session</masterLabel>
+            <translation><!-- Co-Design Session --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Concept Testing</masterLabel>
+            <translation><!-- Concept Testing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Diary Study</masterLabel>
+            <translation><!-- Diary Study --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Eye Tracking</masterLabel>
+            <translation><!-- Eye Tracking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Follow Me Home</masterLabel>
+            <translation><!-- Follow Me Home --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mobile Testing</masterLabel>
+            <translation><!-- Mobile Testing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rapid Prototyping</masterLabel>
+            <translation><!-- Rapid Prototyping --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UsabilityTesting</masterLabel>
+            <translation><!-- UsabilityTesting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User Interviews</masterLabel>
+            <translation><!-- User Interviews --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

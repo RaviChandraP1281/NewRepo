@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>CLOSED:SUM / RowCount</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA1</developerName>
+        <isActive>false</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Survey Compliance</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_99980154</developerName>
+        <masterLabel>Mini Teams</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>OWNER</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Vanessa Charess Nebria</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Elaine Gasal</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Mari Fiel Villahermosa</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Nina Fe Marie Dayangco</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Ma. Daphne Nepumuceno</sourceValue>
+            </sourceValues>
+            <value>Mini Team TL</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>James Patrick Abamonga</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Bryan Oteda</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Darlene Aguedo</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Brylle Adrian Aragones</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Valerie Anne Cual</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Rona Marapo</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Kimberly Jane Bedio</sourceValue>
+            </sourceValues>
+            <value>Mini Team SME Bernie</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Rose Rowin De Guzman</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Marilla Quimpo</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Jestoni Mark Maceda</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Ed Joseph Labajo</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Laica Grace Vinas</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Ram Cortez</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Mariel Sabornido</sourceValue>
+            </sourceValues>
+            <value>Mini Team SME Janice</value>
+        </values>
+    </buckets>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>james patrick abamonga,jacquiline acosta,christian areja,mila banchua,cabanero brabe,dannah castellano,codera mario jr.,rey rafael rex coles,armilyn cordova,enoc arvin chester,jasmine jayari,michelle kho,donna labe,mary venz lim,gerald pableo,renyl christian patindol,juvelyn rara,loise marion rota,reth ernest sabay,mesa fatima,josephine may solon,lemuel villahermosa,wendelyn ybanez,mark anthony yap</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>OPEN</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>OWNER</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Andromeda FMS Open Cases</name>
+    <params>
+        <name>units</name>
+        <value>d</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATEONLY</dateColumn>
+        <endDate>2017-02-28</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2017-02-28</startDate>
+    </timeFrameFilter>
+</Report>

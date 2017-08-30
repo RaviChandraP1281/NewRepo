@@ -1,0 +1,76 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<div align="center"><font face="Verdana,Helvetica,Sans-Serif" size="2"><b><img src="https://intuitb2b--c.na15.content.force.com/servlet/servlet.ImageServer?id=015i000000B3Q0i&amp;oid=00Di0000000Xs0j" border="0" align="left" alt="">Account #{!Contact.CAN__c}</b><br></font></div><font face="Verdana,Helvetica,Sans-Serif" size="2"><br><br></font><font face="Verdana,Helvetica,Sans-Serif" size="3"><br><br><br><font size="2">Hi {!Contact.FirstName},<br><br>It has been a pleasure assisting you and your team throughout the new QuickBooks Enterprise Onboarding Program.&nbsp; I wanted to leave you with some resources that you might need moving forward.&nbsp; If there is anything else you need, please let me know.<br><br><font size="3"><u><b>Resources</b></u></font></font></font><font face="Verdana,Helvetica,Sans-Serif" size="3"><font size="2"><b><br></b></font></font><ul><li><font face="Verdana,Helvetica,Sans-Serif" size="3"><font size="2"><b>QuickBooks Enterprise:</b></font></font></li><ul><li><font face="Verdana,Helvetica,Sans-Serif" size="3"><font size="2">General Support: (866) 340-7237</font></font></li><li><font face="Verdana,Helvetica,Sans-Serif" size="3"><font size="2">Customer Resource Center: http://enterprisesuite.intuit.com/customer-resource-center/</font></font></li><li><font face="Verdana,Helvetica,Sans-Serif" size="3"><font size="2">Support Articles: http://support.quickbooks.intuit.com/support/articles/inf23986</font></font></li><li><font face="Verdana,Helvetica,Sans-Serif" size="3"><font size="2">Intuit Community Forums: http://community.intuit.com/quickbooks-desktop</font></font></li><li><font face="Verdana,Helvetica,Sans-Serif" size="3"><font size="2">Advanced Reporting Learning Center: http://qbar.intuitlabs.com/learning.html</font></font></li></ul><li><font face="Verdana,Helvetica,Sans-Serif" size="3"><font size="2"><b>Intuit Data Protect:</b></font></font></li><ul><li><font face="Verdana,Helvetica,Sans-Serif" size="3"><font size="2">General Support: (800) 538-2000</font></font></li><li><font face="Verdana,Helvetica,Sans-Serif" size="3"><font size="2">Setup and Activation: https://support.quickbooks.intuit.com/support/articles/how21295</font></font></li><li><font face="Verdana,Helvetica,Sans-Serif" size="3"><font size="2">FAQ: http://support.quickbooks.intuit.com/support/articles/inf12891</font></font></li></ul><li><font face="Verdana,Helvetica,Sans-Serif" size="3"><font size="2"><b>Payroll (Gold and Platinum): </b></font></font></li><ul><li><font face="Verdana,Helvetica,Sans-Serif" size="3"><font size="2">General Support: (866) 223-5562</font></font></li><li><font face="Verdana,Helvetica,Sans-Serif" size="3"><font size="2">Support Tools / Articles: http://payroll.intuit.com/support/contact/</font></font></li></ul><li><font face="Verdana,Helvetica,Sans-Serif" size="3"><font size="2"><b>QuickBooks Payments:</b></font></font></li><ul><li><font face="Verdana,Helvetica,Sans-Serif" size="3"><font size="2">Sales: (800) 601-4083</font></font></li><li><font face="Verdana,Helvetica,Sans-Serif" size="3"><font size="2">Support: (800) 558-9558</font></font></li></ul><li><b><font face="Verdana,Helvetica,Sans-Serif" size="3"><font size="2">QuickBooks Point of Sale:</font></font></b></li><ul><li><font face="Verdana,Helvetica,Sans-Serif" size="3"><font size="2">Sales: (866) 379-6636</font></font></li><li><font face="Verdana,Helvetica,Sans-Serif" size="3"><font size="2">Support: (800) 348-0254<br></font></font></li></ul><li><font face="Verdana,Helvetica,Sans-Serif" size="3"><font size="2"><b>3rd Party Providers:</b></font></font></li><ul><li><font face="Verdana,Helvetica,Sans-Serif" size="3"><font size="2">Real World Training is endorsed by Intuit and may have additional costs: https://quickbookstraining.com/</font></font></li><li><font face="Verdana,Helvetica,Sans-Serif" size="3"><font size="2">Local Experts: http://enterprisesuite.intuit.com/customer-resouce-center/local-help/</font></font></li><li><font face="Verdana,Helvetica,Sans-Serif" size="3"><font size="2">YouTube Channels:</font></font></li><ul><li><font face="Verdana,Helvetica,Sans-Serif" size="3"><font size="2">https://www.youtube.com/user/quickbooks</font></font></li><li><font face="Verdana,Helvetica,Sans-Serif" size="3"><font size="2">https://www.youtube.com/user/intuitacademy</font></font></li></ul></ul></ul><font face="Verdana,Helvetica,Sans-Serif" size="3"><font size="2">Respectfully, </font></font><font face="Verdana,Helvetica,Sans-Serif" size="3"><font size="2"><br><br></font></font><font face="Verdana,Helvetica,Sans-Serif" size="3"><font size="2"></font></font><b><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif;
+  mso-fareast-font-family:Calibri;color:#365EBF">{!User.FirstName}&nbsp;{!User.LastName}
+  |</span></b><b><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif;
+  mso-fareast-font-family:Calibri;color:#548DD4"> </span></b><b><span style="font-size:9.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:
+  Calibri">Enterprise Account Manager</span></b><b><span style="font-size:8.0pt;
+  font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:Calibri;color:#262626"><br>Work Phone:</span></b><b><span style="font-size:8.0pt;font-family:&quot;Arial&quot;,sans-serif;
+  mso-fareast-font-family:Calibri;color:#505050">&nbsp;</span></b><span style="font-size:8.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:
+  Calibri;color:#365EBF">{!User.Phone}</span><span style="font-size:8.0pt;mso-ascii-font-family:Calibri;mso-fareast-font-family:
+  Calibri;mso-hansi-font-family:Calibri"> </span><b><span style="font-size:8.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:
+  Calibri;color:#365EBF">|&nbsp;{!User.Email}<br></span></b><b><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:
+  Calibri;color:#365EBF"></span></b><br><b><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:
+  Calibri;color:#365EBF"></span></b><table class="MsoTableGrid" style="border-collapse: collapse; border: medium none;" border="0" cellpadding="0" cellspacing="0" height="156" width="908"><tbody><tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes;mso-yfti-lastrow:yes"><td style="width:467.5pt;padding:0in 5.4pt 0in 5.4pt" valign="top" width="623"><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal"><b><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif;mso-fareast-font-family:
+  Calibri;color:#365EBF">
+  Intuit |&nbsp;</span></b><b><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif;
+  mso-fareast-font-family:Calibri;color:#262626">simplify the business of life</span></b><span style="font-size:9.0pt;font-family:&quot;Arial&quot;,sans-serif;color:#333333"><br>
+  <br>
+  </span><span style="font-size:7.5pt;font-family:&quot;Arial&quot;,sans-serif;
+  color:#333333">this transmittal is intended only for the use of the
+  individual or entity to which it is addressed and may contain information
+  that is privileged, confidential and exempt from disclosure under applicable
+  law. If the reader of this transmittal is not the intended recipient or the
+  employee or agent responsible for delivering the transmittal to the intended
+  recipient, you are hereby notified that any dissemination, distribution or
+  copying of this communication is strictly prohibited.</span></p>
+  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal">&nbsp;</p>
+  </td>
+ </tr>
+</tbody></table>
+
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:View>Normal</w:View>
+  <w:Zoom>0</w:Zoom>
+  <w:TrackMoves/>
+  <w:TrackFormatting/>
+  <w:PunctuationKerning/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>X-NONE</w:LidThemeAsian>
+  <w:LidThemeComplexScript>X-NONE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:EnableOpenTypeKerning/>
+   <w:DontFlipMirrorIndents/>
+   <w:OverrideTableStyleHps/>
+  </w:Compatibility>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><font color="#365ebf" face="Arial, sans-serif"><span style="font-size: 13.3333px;"><font face="Verdana,Helvetica,Sans-Serif" size="2"><font face="Verdana,Helvetica,Sans-Serif" size="2"><font color="#365ebf" face="Arial, sans-serif"><span style="font-size: 13.3333px;"><font color="#000000" face="Verdana,Helvetica,Sans-Serif" size="2"><br></font></span></font></font></font></span></font><font color="#333333" face="Arial,Sans-Serif" size="3"><span style="FONT-FAMILY: 'arial' ,; FONT-SIZE: 9pt"><font size="1"></font></span></font><b><span style="font-size: 10pt; font-family: Arial, sans-serif; color: rgb(38, 38, 38);"></span></b>]]></td>
+</tr>
+</table>

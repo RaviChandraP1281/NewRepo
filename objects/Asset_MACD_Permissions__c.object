@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Cancel__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Cancel Permission</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Cancel Permission</inlineHelpText>
+        <label>Cancel</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Clone_Quote_With_New_Opp__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Clone Quote With New Opp</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Migrate__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Migrate Permission</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Migrate Permission</inlineHelpText>
+        <label>Migrate</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Modify__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Modify Permission</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Modify Permission</inlineHelpText>
+        <label>Modify</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Resume__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Setting to control Resume action permissions.</description>
+        <externalId>false</externalId>
+        <label>Resume</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Suspend__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Suspend Permission</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Suspend Permission</inlineHelpText>
+        <label>Suspend</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Version_Protection__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Version Protection</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Version Protection</inlineHelpText>
+        <label>Version Protection</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+</CustomObject>

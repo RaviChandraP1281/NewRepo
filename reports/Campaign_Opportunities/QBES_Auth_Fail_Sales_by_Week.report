@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_39811295</developerName>
+        <masterLabel>Campaign Name</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Opportunity.Legacy_Campaign_Name__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Auth Fail</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Authfail</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>auth fails</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Authfails</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QBES Auth Fail</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QBES AuthFail</sourceValue>
+            </sourceValues>
+            <value>AuthFail</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Inactive FSP</sourceValue>
+            </sourceValues>
+            <value>Inactive FSP</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>WinBack</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>WIN Back</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QBES Winback</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QBES Win Back</sourceValue>
+            </sourceValues>
+            <value>WinBack</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>pipeline</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Standard Payroll</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>refer</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>reinstall cd</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>payroll modify</sourceValue>
+            </sourceValues>
+            <value>Pipeline</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Direct</sourceValue>
+            </sourceValues>
+            <value>Direct</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Inbound</sourceValue>
+            </sourceValues>
+            <value>Inbound</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>QBO Trialer</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QBO Trailer</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QBO Trialer II</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QBO Trailer II</sourceValue>
+            </sourceValues>
+            <value>QBO Trialer</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>fms saves</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>fms save</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>fspsave</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>fspsaves</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>FSP Save</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>FSP Saves</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>qbessave</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>qbessaves</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QBES Save</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QBES Saves</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QuickBooks Enterprise Solutions</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>qbesv save</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>qbesv saves</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>sa</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Save</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>saves</sourceValue>
+            </sourceValues>
+            <value>Saves</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <aggregate>Sum</aggregate>
+            <axisBinding>y</axisBinding>
+            <column>AMOUNT</column>
+        </chartSummaries>
+        <chartType>VerticalColumn</chartType>
+        <enableHoverLabels>true</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>CLOSE_DATE</groupingColumn>
+        <location>CHART_TOP</location>
+        <showAxisLabels>false</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>true</showValues>
+        <size>Huge</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>OPPORTUNITY_NAME</field>
+    </columns>
+    <columns>
+        <field>Opportunity.CAN__c</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>LEAD_SOURCE</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Product_Family_of_Interest__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>AMOUNT</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT_NAME</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>STAGE_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Closed Won</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Legacy_Campaign_Name__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>QBES Auth Fail</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Week</dateGranularity>
+        <field>CLOSE_DATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <name>QBES Auth Fail Sales by Week</name>
+    <params>
+        <name>open</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunity</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CLOSE_DATE</dateColumn>
+        <interval>INTERVAL_CURPREV1</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>OPPORTUNITY_OWNER</field>
+    </columns>
+    <columns>
+        <field>START_DATE_TIME</field>
+    </columns>
+    <columns>
+        <field>OPPORTUNITY_NAME</field>
+    </columns>
+    <columns>
+        <field>OPPORTUNITY_LAST_ACTIVITY</field>
+    </columns>
+    <columns>
+        <field>TASK_TYPE</field>
+    </columns>
+    <columns>
+        <field>LEAD_SOURCE</field>
+    </columns>
+    <columns>
+        <field>STAGE_NAME</field>
+    </columns>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>DESCRIPTION</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <currency>USD</currency>
+    <description>Activities with Oppty&apos;s with Start Date in Next 120 Days - Excluding Subject is Email and Type is Inbound Call</description>
+    <filter>
+        <booleanFilter>((1 AND (2 OR 3)) AND 4) AND 5</booleanFilter>
+        <criteriaItems>
+            <column>SUBJECT</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notContain</operator>
+            <value>Email</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OPPORTUNITY_OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Alfred Galvarro,Janet Luna,Cody Walden,Chase Nielsen,Jesse Tyler,Gabriel Alper,Shawn Hassinger,David Gomez,Jeffery Robertson,Lauri Logan,Kyle Scott,Javier Garcia,Benjamin Manning,Michael Mendoza,Robert Moreno,Joe Posey,David Scott,David Shin,Nicholas Menchaca</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OPPORTUNITY_OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Alan Rockowitz,Jeff LoTurco,Ebony Meadows,Gail Tucker,David Burden,Randall Hrna,Shaughn Landauer,Tom O&apos;Neil,Scott Williams,Matthew Prober,Christian Cruz</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>TASK_TYPE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Inbound Call</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>STAGE_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Closed Won,Closed Lost</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>AAG Sales Activity on Oppty 120 Days EM</name>
+    <params>
+        <name>closed</name>
+        <value>open</value>
+    </params>
+    <params>
+        <name>type</name>
+        <value>te</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityActivity</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>OPPORTUNITY_OWNER</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>START_DATE_TIME</dateColumn>
+        <interval>INTERVAL_NEXT120</interval>
+    </timeFrameFilter>
+</Report>

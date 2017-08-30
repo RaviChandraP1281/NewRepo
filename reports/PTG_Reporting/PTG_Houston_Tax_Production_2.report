@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Case$CaseOwnerFullName__c</field>
+    </columns>
+    <columns>
+        <field>Case$ClosedDate</field>
+    </columns>
+    <columns>
+        <field>Case$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>Case.Case_NPS__r$Name</field>
+    </columns>
+    <columns>
+        <field>Case.Case_NPS__r$Question_Response1__c</field>
+    </columns>
+    <columns>
+        <field>Case.Case_NPS__r$Question_Response3__c</field>
+    </columns>
+    <columns>
+        <field>Case.Case_NPS__r$Question_Response5__c</field>
+    </columns>
+    <columns>
+        <field>Case.Case_NPS__r$Question_Response7__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Case$Owner</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Sherita Gullatte,Derek Hall,Monica Hanson,Larysheia Harris,Annette Harris,Michael Harris,Dominique Hart,Ernest Hatchett Vick,Shunna Haynes,Mary Henderson,Monique Henry,Francis Hermfilio,Odilcia Hinds,Angel Holmes,Monica Horton,Quinese Hoyer,Telishia Hurd,Rosio Ibarra Monarrez,Minnie Jackson,Andrea Johnson,Robert Johnson,Patricia Jones,Chastity Jones,Lisa Jones,Catherine Jones,Chelsea Jordan,Julian Juarez,Brian Kanneh,Gena Kizer,Tata Kromah,Julie Lalande,Nenya Leassear,Ange&apos;le Lee,Franklin LeSaine,Regina Lewis,Netifnet Lowe,Juna Macedon,Michael Madison,Papiphany Manuel,Shenica Marshall,Wanda Martin,Natalie Martinez,Taryn Mathis,Eric Mayshack,Monitika McCray,Octavia McDonald,Ben Menendez,Carlissa Minor,Stephanie Molinare,Karrie Momie,Severo Montoya,Cynthia Moore,Tarsha Moore,Courtney Moore,Doreen Morais,Brian Moten,Aliya Muhammad,Monroe Murphy III,Richard  Ndichu,Terrance Newmon,Brian Nguyen,Monica Nichols</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>PTG Houston Tax Production 2</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Cases_and_VOC_Scores__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Case$ClosedDate</dateColumn>
+        <endDate>2016-01-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2016-01-01</startDate>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>PRODUCT_NAME</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>CLOSE_DATE</field>
+    </columns>
+    <columns>
+        <field>WON</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Days_to_Closed_Won__c</field>
+    </columns>
+    <description>Opty Conversion and Days to Close</description>
+    <filter>
+        <criteriaItems>
+            <column>RECORDTYPE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>012i0000000akMu</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>PRODUCT_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>,Intuit QuickBooks Enterprise Accountant Solutions Full Service Plan 10 user,Intuit QuickBooks Enterprise Accountant Solutions Full Service Plan 30 user,Intuit QuickBooks Enterprise Accountant Solutions Full Service Plan 5 user,Intuit QuickBooks Enterprise Solutions Full Service Plan 10 user,Intuit QuickBooks Enterprise Solutions Full Service Plan 30 user,Intuit QuickBooks Enterprise Solutions Full Service Plan 5 user,Intuit QuickBooks Enterprise Solutions Accountant Subscription V13,Intuit QuickBooks Enterprise Solutions Subscription,Intuit QuickBooks Enterprise Solutions Full Service Plan 1 user,Intuit QuickBooks Enterprise Solutions Full Service Plan 2 user,Intuit QuickBooks Enterprise Solutions Full Service Plan 3 user,Intuit QuickBooks Enterprise Solutions Full Service Plan 4 user</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Opty Conversion and Days to Close</name>
+    <params>
+        <name>open</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityProduct</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <endDate>2013-06-01</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2013-01-01</startDate>
+    </timeFrameFilter>
+</Report>

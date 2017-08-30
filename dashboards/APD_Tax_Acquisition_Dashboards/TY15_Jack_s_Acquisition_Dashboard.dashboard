@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dashboard xmlns="http://soap.sforce.com/2006/04/metadata">
+    <backgroundEndColor>#FFFFFF</backgroundEndColor>
+    <backgroundFadeDirection>Diagonal</backgroundFadeDirection>
+    <backgroundStartColor>#FFFFFF</backgroundStartColor>
+    <dashboardFilters>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>John Trammell,Jonathan Lovitt,Kimberly Gallahan,Michael Chavez</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Justin Evans,Kelsey Alford,Brian Curran,Corey Spear,Cynthia Thomas,Daniel Brommer,Gerald Henry,Marc Freidberg,Sharbel Abi-Habib</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Jason Tritle,Maria Harris,Tiffany Randall,Robert Randall,Roland Carrion,Victor Nolasco</values>
+        </dashboardFilterOptions>
+        <name>Lead Team Association</name>
+    </dashboardFilters>
+    <dashboardFilters>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Brian Curran</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Corey Spear</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Cynthia Thomas</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Daniel Brommer</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Gerald Henry</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Jason Tritle</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>John Trammell</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Jonathan Lovitt</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Justin Evans</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Kelsey Alford</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Kimberly Gallahan</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Marc Freidberg</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Maria Harris</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Michael Chavez</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Robert Randall</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Roland Carrion</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Sharbel Abi-Habib</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Tiffany Randall</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Victor Nolasco</values>
+        </dashboardFilterOptions>
+        <name>Lead Agent Level</name>
+    </dashboardFilters>
+    <dashboardFilters>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>John trammell,Jonathan Lovitt,Kimberly Gallahan,Michael Chavez</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Corey Spear,Cynthia Thomas,Daniel Brommer,Gerald Henry,Marc Freidberg,Sharbel Abi-Habib,Kelsey Alford,Brian Curran,Justin Evans</values>
+        </dashboardFilterOptions>
+        <dashboardFilterOptions>
+            <operator>equals</operator>
+            <values>Jason Tritle,Maria Harris,Robert Randall,Roland Carrion,Tiffany Randall,Victor Nolasco</values>
+        </dashboardFilterOptions>
+        <name>Opportunity Team Association</name>
+    </dashboardFilters>
+    <dashboardType>SpecifiedUser</dashboardType>
+    <isGridLayout>false</isGridLayout>
+    <leftSection>
+        <columnSize>Wide</columnSize>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Table</componentType>
+            <dashboardFilterColumns>
+                <column>Lead.Lead_Owner_Read_Only__c</column>
+            </dashboardFilterColumns>
+            <dashboardFilterColumns>
+                <column>Lead.Lead_Owner_Read_Only__c</column>
+            </dashboardFilterColumns>
+            <dashboardFilterColumns>
+                <column>Lead.Lead_Originator__c</column>
+            </dashboardFilterColumns>
+            <dashboardTableColumn>
+                <column>OWNER</column>
+            </dashboardTableColumn>
+            <dashboardTableColumn>
+                <calculatePercent>false</calculatePercent>
+                <column>RowCount</column>
+                <showTotal>true</showTotal>
+                <sortBy>RowValueDescending</sortBy>
+            </dashboardTableColumn>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <footer>Leads with Salesforce considers Unread by Owner</footer>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>APD_Tax_Acquisition_Lead_Reports/Dash_Team_Unread_Leads</report>
+            <showPicturesOnTables>true</showPicturesOnTables>
+            <title>Team Unread Leads</title>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Table</componentType>
+            <dashboardFilterColumns>
+                <column>Lead.Lead_Owner_Read_Only__c</column>
+            </dashboardFilterColumns>
+            <dashboardFilterColumns>
+                <column>Lead.Lead_Owner_Read_Only__c</column>
+            </dashboardFilterColumns>
+            <dashboardFilterColumns>
+                <column>Lead.Lead_Originator__c</column>
+            </dashboardFilterColumns>
+            <dashboardTableColumn>
+                <column>OWNER</column>
+            </dashboardTableColumn>
+            <dashboardTableColumn>
+                <aggregateType>Sum</aggregateType>
+                <calculatePercent>false</calculatePercent>
+                <column>Lead.Record_Count__c</column>
+                <showTotal>true</showTotal>
+                <sortBy>RowValueDescending</sortBy>
+            </dashboardTableColumn>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <footer>Leads Created from Trade Show lists</footer>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>APD_Tax_Acquisition_Lead_Reports/Dash_Team_Trade_Show_Leads</report>
+            <showPicturesOnTables>true</showPicturesOnTables>
+            <title>Team Trade Show Leads</title>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Table</componentType>
+            <dashboardFilterColumns>
+                <column>FULL_NAME</column>
+            </dashboardFilterColumns>
+            <dashboardTableColumn>
+                <column>FULL_NAME</column>
+            </dashboardTableColumn>
+            <dashboardTableColumn>
+                <calculatePercent>false</calculatePercent>
+                <column>RowCount</column>
+                <showTotal>true</showTotal>
+            </dashboardTableColumn>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <footer>Amount already closed</footer>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>APD_Tax_Acquisition_Consultant_Reports/Dash_Team_sold_MTG</report>
+            <showPicturesOnTables>true</showPicturesOnTables>
+            <title>Closed this Month (#)</title>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Table</componentType>
+            <dashboardFilterColumns>
+                <column>Lead.Lead_Owner_Read_Only__c</column>
+            </dashboardFilterColumns>
+            <dashboardFilterColumns>
+                <column>Lead.Lead_Owner_Read_Only__c</column>
+            </dashboardFilterColumns>
+            <dashboardFilterColumns>
+                <column>Lead.Lead_Originator__c</column>
+            </dashboardFilterColumns>
+            <dashboardTableColumn>
+                <column>OWNER</column>
+            </dashboardTableColumn>
+            <dashboardTableColumn>
+                <calculatePercent>false</calculatePercent>
+                <column>RowCount</column>
+                <showTotal>true</showTotal>
+                <sortBy>RowValueDescending</sortBy>
+            </dashboardTableColumn>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>APD_Tax_Acquisition_Lead_Reports/Dash_Team_view_Aged_Leads</report>
+            <showPicturesOnTables>true</showPicturesOnTables>
+            <title>Leads Aged over 90 Days</title>
+        </components>
+    </leftSection>
+    <middleSection>
+        <columnSize>Wide</columnSize>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Table</componentType>
+            <dashboardFilterColumns>
+                <column>Lead.Lead_Owner_Read_Only__c</column>
+            </dashboardFilterColumns>
+            <dashboardFilterColumns>
+                <column>Lead.Lead_Owner_Read_Only__c</column>
+            </dashboardFilterColumns>
+            <dashboardFilterColumns>
+                <column>Lead.Lead_Originator__c</column>
+            </dashboardFilterColumns>
+            <dashboardTableColumn>
+                <column>OWNER</column>
+            </dashboardTableColumn>
+            <dashboardTableColumn>
+                <calculatePercent>false</calculatePercent>
+                <column>RowCount</column>
+                <showTotal>true</showTotal>
+                <sortBy>RowValueDescending</sortBy>
+            </dashboardTableColumn>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <footer>Leads created by Web forms and Evals</footer>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>APD_Tax_Acquisition_Lead_Reports/Dash_Team_Web_Leads</report>
+            <showPicturesOnTables>true</showPicturesOnTables>
+            <title>Team Web Created Leads</title>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Table</componentType>
+            <dashboardFilterColumns>
+                <column>Lead.Lead_Owner_Read_Only__c</column>
+            </dashboardFilterColumns>
+            <dashboardFilterColumns>
+                <column>Lead.Lead_Owner_Read_Only__c</column>
+            </dashboardFilterColumns>
+            <dashboardFilterColumns>
+                <column>Lead.Lead_Originator__c</column>
+            </dashboardFilterColumns>
+            <dashboardTableColumn>
+                <column>OWNER</column>
+            </dashboardTableColumn>
+            <dashboardTableColumn>
+                <aggregateType>Sum</aggregateType>
+                <calculatePercent>false</calculatePercent>
+                <column>Lead.Record_Count__c</column>
+                <showTotal>true</showTotal>
+                <sortBy>RowValueDescending</sortBy>
+            </dashboardTableColumn>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <footer>Leads created by Agents</footer>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>APD_Tax_Acquisition_Lead_Reports/Dash_Agent_created_Leads</report>
+            <showPicturesOnTables>true</showPicturesOnTables>
+            <title>Team Self Created Leads</title>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Table</componentType>
+            <dashboardFilterColumns>
+                <column>FULL_NAME</column>
+            </dashboardFilterColumns>
+            <dashboardTableColumn>
+                <column>FULL_NAME</column>
+            </dashboardTableColumn>
+            <dashboardTableColumn>
+                <calculatePercent>false</calculatePercent>
+                <column>RowCount</column>
+                <showTotal>true</showTotal>
+            </dashboardTableColumn>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <footer>Amount not closed yet - but should by Month End</footer>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>APD_Tax_Acquisition_Consultant_Reports/Dash_Team_set_to_Close_MTD</report>
+            <showPicturesOnTables>true</showPicturesOnTables>
+            <title>Set to Close This Month (#)</title>
+        </components>
+    </middleSection>
+    <rightSection>
+        <columnSize>Wide</columnSize>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Table</componentType>
+            <dashboardFilterColumns>
+                <column>Lead.Lead_Owner_Read_Only__c</column>
+            </dashboardFilterColumns>
+            <dashboardFilterColumns>
+                <column>Lead.Lead_Owner_Read_Only__c</column>
+            </dashboardFilterColumns>
+            <dashboardFilterColumns>
+                <column>Lead.Lead_Originator__c</column>
+            </dashboardFilterColumns>
+            <dashboardTableColumn>
+                <column>OWNER</column>
+            </dashboardTableColumn>
+            <dashboardTableColumn>
+                <aggregateType>Sum</aggregateType>
+                <calculatePercent>false</calculatePercent>
+                <column>Lead.Record_Count__c</column>
+                <showTotal>true</showTotal>
+                <sortBy>RowValueDescending</sortBy>
+            </dashboardTableColumn>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <footer>Leads created from Marketing Efforts</footer>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>APD_Tax_Acquisition_Lead_Reports/Dash_Team_Campaign_Leads</report>
+            <showPicturesOnTables>true</showPicturesOnTables>
+            <title>Team Campaign Leads</title>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Table</componentType>
+            <dashboardFilterColumns>
+                <column>Lead.Lead_Owner_Read_Only__c</column>
+            </dashboardFilterColumns>
+            <dashboardFilterColumns>
+                <column>Lead.Lead_Owner_Read_Only__c</column>
+            </dashboardFilterColumns>
+            <dashboardFilterColumns>
+                <column>OPP_OWNER</column>
+            </dashboardFilterColumns>
+            <dashboardTableColumn>
+                <column>LEAD_OWNER</column>
+            </dashboardTableColumn>
+            <dashboardTableColumn>
+                <calculatePercent>false</calculatePercent>
+                <column>RowCount</column>
+                <showTotal>true</showTotal>
+                <sortBy>RowValueDescending</sortBy>
+            </dashboardTableColumn>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>APD_Tax_Acquisition_Lead_Reports/Dash_Team_Converted_Today</report>
+            <showPicturesOnTables>true</showPicturesOnTables>
+            <title>Leads Converted Today</title>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Table</componentType>
+            <dashboardFilterColumns>
+                <column>Lead.Lead_Owner_Read_Only__c</column>
+            </dashboardFilterColumns>
+            <dashboardFilterColumns>
+                <column>Lead.Lead_Owner_Read_Only__c</column>
+            </dashboardFilterColumns>
+            <dashboardFilterColumns>
+                <column>OPP_OWNER</column>
+            </dashboardFilterColumns>
+            <dashboardTableColumn>
+                <column>LEAD_OWNER</column>
+            </dashboardTableColumn>
+            <dashboardTableColumn>
+                <calculatePercent>false</calculatePercent>
+                <column>RowCount</column>
+                <showTotal>true</showTotal>
+                <sortBy>RowValueDescending</sortBy>
+            </dashboardTableColumn>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>APD_Tax_Acquisition_Lead_Reports/Dash_Team_Converted_MTD</report>
+            <showPicturesOnTables>true</showPicturesOnTables>
+            <title>Leads Converted This Month</title>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Table</componentType>
+            <dashboardFilterColumns>
+                <column>FULL_NAME</column>
+            </dashboardFilterColumns>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <footer>Dollar Amount sold today by agent</footer>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>APD_Tax_Acquisition_Consultant_Reports/Dash_Team_Amount_Sold_Today</report>
+            <showPicturesOnTables>true</showPicturesOnTables>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Accounts Sold Today ($)</title>
+        </components>
+    </rightSection>
+    <runningUser>50002005055@intuit.com.b2b</runningUser>
+    <textColor>#000000</textColor>
+    <title>TY15 Jack&apos;s Acquisition Dashboard</title>
+    <titleColor>#000000</titleColor>
+    <titleSize>12</titleSize>
+</Dashboard>

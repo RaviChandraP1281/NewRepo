@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>ProConnect_Emails</letterhead>
+    <name>Lacerte DPO REP</name>
+    <style>freeForm</style>
+    <subject>Intuit Lacerte Deferred Payment Option</subject>
+    <textOnly>Dear {!Contact.FirstName} {!Contact.LastName},
+
+You are receiving this communication because you recently applied for our Deferred Tax Program.  In order to be eligible for the Deferred Payment Option there are certain qualification criteria. Unfortunately, you do not qualify.  If a customer has a REP account status of Delinquent and/or more than 3 REP delinquencies in a 24-month span that will preclude eligibility we can no longer offer the Deferred Payment Option for that reason.
+
+
+
+Log in to My Account to select the payment option that works best for you. Alternatively, contact us at: Lacerte 800-765-7777 if you would like to add additional products to your license
+
+
+
+Thank you for choosing Lacerte Tax.  We value you as a customer.
+
+
+
+
+
+Sincerely,
+
+The Lacerte Team
+
+Intuit ProConnect Group</textOnly>
+    <type>html</type>
+</EmailTemplate>

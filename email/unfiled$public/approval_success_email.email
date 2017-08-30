@@ -1,0 +1,4 @@
+Hello,
+Your Concession Check Request {!Concession_Request__c.Name} has been approved . Please follow the below link to learn more.
+
+{!ApprovalRequest.Internal_URL}

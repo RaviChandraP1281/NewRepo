@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>SBG_Care_OL_US_FR_Provo_Mgr_Escalation</sharedTo>
+        <sharedToType>Group</sharedToType>
+    </folderShares>
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>SBG_Care_OL_US_Frontier_Support</sharedTo>
+        <sharedToType>Group</sharedToType>
+    </folderShares>
+    <name>Okin&apos;s Team Reports</name>
+</ReportFolder>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_86641605</developerName>
+        <masterLabel>Account Manager</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>USERS.NAME</sourceColumnName>
+        <useOther>false</useOther>
+    </buckets>
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_108589</developerName>
+        <masterLabel>Renewal Product</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Renewals__c.Renewal_Product__c</sourceColumnName>
+        <useOther>false</useOther>
+    </buckets>
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_98618013</developerName>
+        <masterLabel>Value Rank</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Renewals__c.Value_Rank__c</sourceColumnName>
+        <useOther>false</useOther>
+    </buckets>
+    <columns>
+        <field>Account.CAN__c</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>BucketField_86641605</field>
+    </columns>
+    <columns>
+        <field>Account.Status__c</field>
+    </columns>
+    <columns>
+        <field>BucketField_108589</field>
+    </columns>
+    <columns>
+        <field>Account.Renewed__c</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_NAME</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>CUST_LAST_UPDATE_NAME</field>
+    </columns>
+    <columns>
+        <field>CUST_LAST_UPDATE</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Renewals__c.Value_Rank__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>04 - Deferred Payment,05 - Diamond Passport,06 - Fixed Term Contract</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_98618013</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>PTG Renewal Preferences</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountCustomEntity$Renewals__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <sortColumn>BucketField_86641605</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

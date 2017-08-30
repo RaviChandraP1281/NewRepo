@@ -1,0 +1,3111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Lead Opp Management</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Lead Opp Management</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account Maintenance Type --></label>
+        <name>Account_Maintenance_Type__c</name>
+        <picklistValues>
+            <masterLabel>Acquisition Call</masterLabel>
+            <translation><!-- Acquisition Call --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES Duplicate Account</masterLabel>
+            <translation><!-- ES Duplicate Account --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES Price/Offering Questions (No Cancel intent)</masterLabel>
+            <translation><!-- ES Price/Offering Questions (No Cancel intent) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES Renew Suspended Asset</masterLabel>
+            <translation><!-- ES Renew Suspended Asset --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES Seat Upgrade/Downgrade</masterLabel>
+            <translation><!-- ES Seat Upgrade/Downgrade --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES Upgrade/Downgrade Subscription Level</masterLabel>
+            <translation><!-- ES Upgrade/Downgrade Subscription Level --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Agent Code --></label>
+        <name>Agent_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Alternative Contact Number --></label>
+        <name>Alternative_Contact_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assigned to Inside Sales --></label>
+        <name>Assigned_to_Inside_Sales__c</name>
+        <picklistValues>
+            <masterLabel>CNX</masterLabel>
+            <translation><!-- CNX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intuit</masterLabel>
+            <translation><!-- Intuit --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Attribute --></label>
+        <name>Attribute__c</name>
+        <picklistValues>
+            <masterLabel>Source</masterLabel>
+            <translation><!-- Source --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Bad Input/Acct Maint-Originating Dept --></label>
+        <name>Bad_Input_Acct_Maint_Originating_Dept__c</name>
+        <picklistValues>
+            <masterLabel>Business Applications</masterLabel>
+            <translation><!-- Business Applications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CTRS/Order Management</masterLabel>
+            <translation><!-- CTRS/Order Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIFY Payroll Customer Care/Support</masterLabel>
+            <translation><!-- DIFY Payroll Customer Care/Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIY Payroll Customer Care/Support</masterLabel>
+            <translation><!-- DIY Payroll Customer Care/Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Dial/Cold Transfer/Unknown</masterLabel>
+            <translation><!-- Direct Dial/Cold Transfer/Unknown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES Customer Care/Support</masterLabel>
+            <translation><!-- ES Customer Care/Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LDR</masterLabel>
+            <translation><!-- LDR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS Customer Care/Support</masterLabel>
+            <translation><!-- PCS Customer Care/Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QBDT Customer Care/Support</masterLabel>
+            <translation><!-- QBDT Customer Care/Support --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Bad Input Type --></label>
+        <name>Bad_Input_Type__c</name>
+        <picklistValues>
+            <masterLabel>Agent Consultation Request (Billing, Tech, etc.)</masterLabel>
+            <translation><!-- Agent Consultation Request (Billing, Tech, etc.) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Call Reason not Supported by HV Saves</masterLabel>
+            <translation><!-- Call Reason not Supported by HV Saves --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Update Payment Info Only</masterLabel>
+            <translation><!-- Update Payment Info Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wrong Dept Reached-Call Dropped</masterLabel>
+            <translation><!-- Wrong Dept Reached-Call Dropped --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Call Outcome --></label>
+        <name>Call_Outcome__c</name>
+        <picklistValues>
+            <masterLabel>Cancelled Account</masterLabel>
+            <translation><!-- Cancelled Account --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Handled by another Agent/Dept</masterLabel>
+            <translation><!-- Handled by another Agent/Dept --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Additional Follow Up</masterLabel>
+            <translation><!-- Pending Additional Follow Up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saved Account</masterLabel>
+            <translation><!-- Saved Account --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Call Result --></label>
+        <name>Call_Result__c</name>
+        <picklistValues>
+            <masterLabel>ALL-Canceled Account</masterLabel>
+            <translation><!-- ALL-Canceled Account --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ALL-Pending Follow-Up</masterLabel>
+            <translation><!-- ALL-Pending Follow-Up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ALL-Saved Account</masterLabel>
+            <translation><!-- ALL-Saved Account --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EMS-Moved to DIY</masterLabel>
+            <translation><!-- EMS-Moved to DIY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EMS-Moved to FSP</masterLabel>
+            <translation><!-- EMS-Moved to FSP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES/PLUS-Moved Sub to Outright DT</masterLabel>
+            <translation><!-- ES/PLUS-Moved Sub to Outright DT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES/PLUS-Moved Sub to QBO</masterLabel>
+            <translation><!-- ES/PLUS-Moved Sub to QBO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QBO-Saved Account and Transferred to Care</masterLabel>
+            <translation><!-- QBO-Saved Account and Transferred to Care --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Call Type --></label>
+        <name>Call_Type__c</name>
+        <picklistValues>
+            <masterLabel>DIFY Payroll Cancel/Save</masterLabel>
+            <translation><!-- DIFY Payroll Cancel/Save --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIY Payroll Cancel/Save</masterLabel>
+            <translation><!-- DIY Payroll Cancel/Save --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hosting Cancel/Save</masterLabel>
+            <translation><!-- Hosting Cancel/Save --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IFSM Cancel/Save</masterLabel>
+            <translation><!-- IFSM Cancel/Save --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payments Cancel/Save</masterLabel>
+            <translation><!-- Payments Cancel/Save --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QB Pro/Premier/Plus Cancel/Save</masterLabel>
+            <translation><!-- QB Pro/Premier/Plus Cancel/Save --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Campaign Notification Channel --></label>
+        <name>Campaign_Notification_Channel__c</name>
+        <picklistValues>
+            <masterLabel>Email</masterLabel>
+            <translation><!-- Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IPD-In Product Messaging</masterLabel>
+            <translation><!-- IPD-In Product Messaging --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Social Media Messaging</masterLabel>
+            <translation><!-- Social Media Messaging --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Cancel Reason --></label>
+        <name>Cancel_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Change in Business</masterLabel>
+            <translation><!-- Change in Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed/Sold/Retired</masterLabel>
+            <translation><!-- Closed/Sold/Retired --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Doesn&apos;t want SAS</masterLabel>
+            <translation><!-- Doesn&apos;t want SAS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EMS-No employees</masterLabel>
+            <translation><!-- EMS-No employees --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Move to new software/provider</masterLabel>
+            <translation><!-- Move to new software/provider --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Moved to diff INTU Prod</masterLabel>
+            <translation><!-- Moved to diff INTU Prod --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Auth/Reoccurring bill</masterLabel>
+            <translation><!-- No Auth/Reoccurring bill --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS-Duplicate Account</masterLabel>
+            <translation><!-- PCS-Duplicate Account --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Poor Service/Support</masterLabel>
+            <translation><!-- Poor Service/Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Price</masterLabel>
+            <translation><!-- Price --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product</masterLabel>
+            <translation><!-- Product --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wont Specify</masterLabel>
+            <translation><!-- Wont Specify --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Closed Lost Reason --></label>
+        <name>Closed_Lost_Reason__c</name>
+        <picklistValues>
+            <masterLabel>Customer decided to not move forward</masterLabel>
+            <translation><!-- Customer decided to not move forward --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer declined funding</masterLabel>
+            <translation><!-- Customer declined funding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer doesn&apos;t qualify</masterLabel>
+            <translation><!-- Customer doesn&apos;t qualify --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer looking for technical help/not financing</masterLabel>
+            <translation><!-- Customer looking for technical help/not financing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer looking/wanted more info</masterLabel>
+            <translation><!-- Customer looking/wanted more info --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lender Declined</masterLabel>
+            <translation><!-- Lender Declined --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lost contact with customer after initial contact</masterLabel>
+            <translation><!-- Lost contact with customer after initial contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missing documentation to move forward</masterLabel>
+            <translation><!-- Missing documentation to move forward --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewal-customer obtained previous financing</masterLabel>
+            <translation><!-- Renewal-customer obtained previous financing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unresponsive-No response from customer</masterLabel>
+            <translation><!-- Unresponsive-No response from customer --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Company Profile Business Type --></label>
+        <name>Company_Profile_Business_Type__c</name>
+        <picklistValues>
+            <masterLabel>Accomodation</masterLabel>
+            <translation><!-- Accomodation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Accounting Services</masterLabel>
+            <translation><!-- Accounting Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Adminstrative Services</masterLabel>
+            <translation><!-- Adminstrative Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Agriculture, Farminh, Fishing and Forestry</masterLabel>
+            <translation><!-- Agriculture, Farminh, Fishing and Forestry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Amusement, Gambling and Recreation</masterLabel>
+            <translation><!-- Amusement, Gambling and Recreation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Animal Services</masterLabel>
+            <translation><!-- Animal Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Architectural, Engineering, Design and Related Services</masterLabel>
+            <translation><!-- Architectural, Engineering, Design and Related Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Care Givers</masterLabel>
+            <translation><!-- Care Givers --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Charity, Nonprofits and Similar Groups</masterLabel>
+            <translation><!-- Charity, Nonprofits and Similar Groups --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Church</masterLabel>
+            <translation><!-- Church --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Computer Systems Design and Related Services</masterLabel>
+            <translation><!-- Computer Systems Design and Related Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Construction</masterLabel>
+            <translation><!-- Construction --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Consultiing, Professional and Technical Services</masterLabel>
+            <translation><!-- Consultiing, Professional and Technical Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Educational Services</masterLabel>
+            <translation><!-- Educational Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Finance and Insurance</masterLabel>
+            <translation><!-- Finance and Insurance --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General Service-Based Business</masterLabel>
+            <translation><!-- General Service-Based Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hair Salons, Barbers and Spas</masterLabel>
+            <translation><!-- Hair Salons, Barbers and Spas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Healthcare Services</masterLabel>
+            <translation><!-- Healthcare Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IT &amp; Tellecommunications</masterLabel>
+            <translation><!-- IT &amp; Tellecommunications --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Land and Property including Management</masterLabel>
+            <translation><!-- Land and Property including Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Landscaping and Gardening Services</masterLabel>
+            <translation><!-- Landscaping and Gardening Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Legal Services</masterLabel>
+            <translation><!-- Legal Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manufacturing and Mining</masterLabel>
+            <translation><!-- Manufacturing and Mining --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Performing Arts, Spectator Sports and Related Industries</masterLabel>
+            <translation><!-- Performing Arts, Spectator Sports and Related Industries --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Repair and Maintenance Services</masterLabel>
+            <translation><!-- Repair and Maintenance Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retail Shops, Mail Order and Online</masterLabel>
+            <translation><!-- Retail Shops, Mail Order and Online --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Transportation and Warehousing</masterLabel>
+            <translation><!-- Transportation and Warehousing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Vehicle Sales, Maintenance and Repairs</masterLabel>
+            <translation><!-- Vehicle Sales, Maintenance and Repairs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wholesale Trade and Distributors</masterLabel>
+            <translation><!-- Wholesale Trade and Distributors --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Company Profile In House Accountant --></label>
+        <name>Company_Profile_In_House_Accountant__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Considering Alternative Solution --></label>
+        <name>Considering_Alternative_Solution__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Core Cancellation Reason or Concern --></label>
+        <name>Core_Cancellation_Reason_or_Concern__c</name>
+        <picklistValues>
+            <masterLabel>Closed Business</masterLabel>
+            <translation><!-- Closed Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed/Sold/Changed Business</masterLabel>
+            <translation><!-- Closed/Sold/Changed Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Migration Issues</masterLabel>
+            <translation><!-- Data Migration Issues --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Disco-refused to upgrade</masterLabel>
+            <translation><!-- Disco-refused to upgrade --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Does not want reoccurring billing or auto renewal</masterLabel>
+            <translation><!-- Does not want reoccurring billing or auto renewal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EMS-No Employees (Business Still Open)</masterLabel>
+            <translation><!-- EMS-No Employees (Business Still Open) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EMS-Per Employee/Direct Deposit Fees</masterLabel>
+            <translation><!-- EMS-Per Employee/Direct Deposit Fees --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EMS-Purchased Retail Bundle-Never Used Payroll</masterLabel>
+            <translation><!-- EMS-Purchased Retail Bundle-Never Used Payroll --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES/Plus-Does not want SaaS</masterLabel>
+            <translation><!-- ES/Plus-Does not want SaaS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES/Plus/EMS-Moved to Accountant (Not using QB)</masterLabel>
+            <translation><!-- ES/Plus/EMS-Moved to Accountant (Not using QB) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES/Plus/EMS-Moved to Accountant (Using QB)</masterLabel>
+            <translation><!-- ES/Plus/EMS-Moved to Accountant (Using QB) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Expensive vs Competitor</masterLabel>
+            <translation><!-- Expensive vs Competitor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incompatible with Third Part Apps</masterLabel>
+            <translation><!-- Incompatible with Third Part Apps --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incorrect Product/Did not mean to Purchase</masterLabel>
+            <translation><!-- Incorrect Product/Did not mean to Purchase --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missing Features</masterLabel>
+            <translation><!-- Missing Features --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Network Outages/Downtime</masterLabel>
+            <translation><!-- Network Outages/Downtime --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS-EMV Hardware not Available/Supported</masterLabel>
+            <translation><!-- PCS-EMV Hardware not Available/Supported --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS-Equipment Cost (Non-POS)</masterLabel>
+            <translation><!-- PCS-Equipment Cost (Non-POS) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS-Funding Times</masterLabel>
+            <translation><!-- PCS-Funding Times --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS-Monthly Service Min Fees</masterLabel>
+            <translation><!-- PCS-Monthly Service Min Fees --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS-POS Hardware/Software Cost</masterLabel>
+            <translation><!-- PCS-POS Hardware/Software Cost --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS-Processing Rates</masterLabel>
+            <translation><!-- PCS-Processing Rates --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS-Risk (Funds on Hold)</masterLabel>
+            <translation><!-- PCS-Risk (Funds on Hold) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCSRisk (AMV Limits)</masterLabel>
+            <translation><!-- PCSRisk (AMV Limits) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Price</masterLabel>
+            <translation><!-- Price --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Price Increase</masterLabel>
+            <translation><!-- Price Increase --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prior Discount/Promo Expired</masterLabel>
+            <translation><!-- Prior Discount/Promo Expired --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product Bugs/Defects</masterLabel>
+            <translation><!-- Product Bugs/Defects --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product/Offering</masterLabel>
+            <translation><!-- Product/Offering --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Retired</masterLabel>
+            <translation><!-- Retired --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Seasonal Business</masterLabel>
+            <translation><!-- Seasonal Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Sold Business</masterLabel>
+            <translation><!-- Sold Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Too Difficult to Use</masterLabel>
+            <translation><!-- Too Difficult to Use --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Too Expensive</masterLabel>
+            <translation><!-- Too Expensive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unwilling to Discuss</masterLabel>
+            <translation><!-- Unwilling to Discuss --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Date Funded --></label>
+        <name>Date_Funded__c</name>
+    </fields>
+    <fields>
+        <label><!-- ES Subs Migration Test Cell --></label>
+        <name>ES_Subs_Migration_Test_Cell__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Experience Level with Payroll/Tax Filing --></label>
+        <name>Experience_Level_with_Payroll_Tax_Filing__c</name>
+        <picklistValues>
+            <masterLabel>Collect hours w/Accountant completing and filing taxes</masterLabel>
+            <translation><!-- Collect hours w/Accountant completing and filing taxes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Collect hours w/Payroll Service completing</masterLabel>
+            <translation><!-- Collect hours w/Payroll Service completing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Didn&apos;t Ask Question</masterLabel>
+            <translation><!-- Didn&apos;t Ask Question --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Do it all and HATE IT</masterLabel>
+            <translation><!-- Do it all and HATE IT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Do it all and LOVE IT</masterLabel>
+            <translation><!-- Do it all and LOVE IT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New to Payroll</masterLabel>
+            <translation><!-- New to Payroll --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Run Payroll w/Accountant Filing Taxes</masterLabel>
+            <translation><!-- Run Payroll w/Accountant Filing Taxes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Would Not Answer</masterLabel>
+            <translation><!-- Would Not Answer --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Expressed Cancel Intent --></label>
+        <name>Expressed_Cancel_Intent__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Funded --></label>
+        <name>Funded__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- GUID --></label>
+        <name>GUID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Group --></label>
+        <name>Group__c</name>
+        <picklistValues>
+            <masterLabel>India Renewals</masterLabel>
+            <translation><!-- India Renewals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCG</masterLabel>
+            <translation><!-- PCG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QBF</masterLabel>
+            <translation><!-- QBF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QBO Qual</masterLabel>
+            <translation><!-- QBO Qual --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SBG</masterLabel>
+            <translation><!-- SBG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saves</masterLabel>
+            <translation><!-- Saves --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- How Did you Find our Phone Number --></label>
+        <name>How_Did_you_Find_our_Phone_Number__c</name>
+        <picklistValues>
+            <masterLabel>Direct Marketing all</masterLabel>
+            <translation><!-- Direct Marketing all --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email marketing all</masterLabel>
+            <translation><!-- Email marketing all --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Google Search for ADP</masterLabel>
+            <translation><!-- Google Search for ADP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Google Search for Intuit</masterLabel>
+            <translation><!-- Google Search for Intuit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Google Search for Payments Software</masterLabel>
+            <translation><!-- Google Search for Payments Software --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Google Search for Payroll Software</masterLabel>
+            <translation><!-- Google Search for Payroll Software --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Google Search for QuickBooks</masterLabel>
+            <translation><!-- Google Search for QuickBooks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In the Product</masterLabel>
+            <translation><!-- In the Product --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intuit Website-Community Pages</masterLabel>
+            <translation><!-- Intuit Website-Community Pages --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intuit Website-Product Pages</masterLabel>
+            <translation><!-- Intuit Website-Product Pages --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intuit Website-Support Pages</masterLabel>
+            <translation><!-- Intuit Website-Support Pages --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saved number on a note</masterLabel>
+            <translation><!-- Saved number on a note --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saved number on my phone</masterLabel>
+            <translation><!-- Saved number on my phone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Setup Agent</masterLabel>
+            <translation><!-- Setup Agent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Support Agent</masterLabel>
+            <translation><!-- Support Agent --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- How are you paid by customers? --></label>
+        <name>How_are_you_paid_by_customers__c</name>
+        <picklistValues>
+            <masterLabel>Cash &amp; Check</masterLabel>
+            <translation><!-- Cash &amp; Check --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cash, Check &amp; Cards</masterLabel>
+            <translation><!-- Cash, Check &amp; Cards --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Didn&apos;t Ask Question</masterLabel>
+            <translation><!-- Didn&apos;t Ask Question --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Donations/Pledges</masterLabel>
+            <translation><!-- Donations/Pledges --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mail Invoices</masterLabel>
+            <translation><!-- Mail Invoices --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Website/Ecommerce</masterLabel>
+            <translation><!-- Website/Ecommerce --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Would Not Answer</masterLabel>
+            <translation><!-- Would Not Answer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>e-Invoice</masterLabel>
+            <translation><!-- e-Invoice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>e-Invoice &amp; Card</masterLabel>
+            <translation><!-- e-Invoice &amp; Card --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- How do you back up your books --></label>
+        <name>How_do_you_back_up_your_books__c</name>
+        <picklistValues>
+            <masterLabel>Didn&apos;t Ask Question</masterLabel>
+            <translation><!-- Didn&apos;t Ask Question --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I Don&apos;t</masterLabel>
+            <translation><!-- I Don&apos;t --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Online Backup Service</masterLabel>
+            <translation><!-- Online Backup Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Portable Hard Drive</masterLabel>
+            <translation><!-- Portable Hard Drive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Save to Computer</masterLabel>
+            <translation><!-- Save to Computer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Would Not Answer</masterLabel>
+            <translation><!-- Would Not Answer --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- How do you create invoices and receipts --></label>
+        <name>How_do_you_create_invoices_and_receipts__c</name>
+        <picklistValues>
+            <masterLabel>3rd Party Software</masterLabel>
+            <translation><!-- 3rd Party Software --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Didn&apos;t Ask Question</masterLabel>
+            <translation><!-- Didn&apos;t Ask Question --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Don&apos;t Invoice</masterLabel>
+            <translation><!-- Don&apos;t Invoice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Field-Manually Write Them</masterLabel>
+            <translation><!-- Field-Manually Write Them --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Field-Type Them Up</masterLabel>
+            <translation><!-- Field-Type Them Up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Office-Type Them Up</masterLabel>
+            <translation><!-- Office-Type Them Up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Would Not Answer</masterLabel>
+            <translation><!-- Would Not Answer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Write Down then Type Up</masterLabel>
+            <translation><!-- Write Down then Type Up --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- How do you keep track of receipts --></label>
+        <name>How_do_you_keep_track_of_receipts__c</name>
+        <picklistValues>
+            <masterLabel>3rd Party Software</masterLabel>
+            <translation><!-- 3rd Party Software --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bank Statement to Accountant</masterLabel>
+            <translation><!-- Bank Statement to Accountant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Didn&apos;t Ask Question</masterLabel>
+            <translation><!-- Didn&apos;t Ask Question --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Don&apos;t Track</masterLabel>
+            <translation><!-- Don&apos;t Track --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Filing Cabinet</masterLabel>
+            <translation><!-- Filing Cabinet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manual Entry</masterLabel>
+            <translation><!-- Manual Entry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Expenses</masterLabel>
+            <translation><!-- No Expenses --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scan Them</masterLabel>
+            <translation><!-- Scan Them --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shoebox</masterLabel>
+            <translation><!-- Shoebox --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Would Not Answer</masterLabel>
+            <translation><!-- Would Not Answer --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Do you manage Job Costing? --></label>
+        <name>How_do_you_manage_Job_Costing__c</name>
+        <picklistValues>
+            <masterLabel>Didn&apos;t Ask Question</masterLabel>
+            <translation><!-- Didn&apos;t Ask Question --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Would Not Answer</masterLabel>
+            <translation><!-- Would Not Answer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- How is Invoicing done --></label>
+        <name>How_is_Invoicing_done__c</name>
+        <picklistValues>
+            <masterLabel>Invoicing Other +Text Box</masterLabel>
+            <translation><!-- Invoicing Other +Text Box --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Invoicing-Handwritten</masterLabel>
+            <translation><!-- Invoicing-Handwritten --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Invoicing-MS Word/Excel</masterLabel>
+            <translation><!-- Invoicing-MS Word/Excel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Invoicing-Tally</masterLabel>
+            <translation><!-- Invoicing-Tally --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- How many empl/contractors do you pay? --></label>
+        <name>How_many_empl_contractors_do_you_pay__c</name>
+        <picklistValues>
+            <masterLabel>0-3 Employees /0 Contractors</masterLabel>
+            <translation><!-- 0-3 Employees /0 Contractors --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>0-3 Employees w/Contractors</masterLabel>
+            <translation><!-- 0-3 Employees w/Contractors --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>20+ Employees w/Contractors</masterLabel>
+            <translation><!-- 20+ Employees w/Contractors --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>20+ Employees/0 Contractors</masterLabel>
+            <translation><!-- 20+ Employees/0 Contractors --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4-20 Employees/0 Contractors</masterLabel>
+            <translation><!-- 4-20 Employees/0 Contractors --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4/20 Employees w/Contractors</masterLabel>
+            <translation><!-- 4/20 Employees w/Contractors --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>All Contractors</masterLabel>
+            <translation><!-- All Contractors --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Didn&apos;t Ask Question</masterLabel>
+            <translation><!-- Didn&apos;t Ask Question --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>None</masterLabel>
+            <translation><!-- None --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Would Not Answer</masterLabel>
+            <translation><!-- Would Not Answer --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- How many locations do you need to access --></label>
+        <name>How_many_locations_do_you_need_to_access__c</name>
+        <picklistValues>
+            <masterLabel>1 Loc 1 Person</masterLabel>
+            <translation><!-- 1 Loc 1 Person --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1 Loc 2 People</masterLabel>
+            <translation><!-- 1 Loc 2 People --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1 Loc 3 People</masterLabel>
+            <translation><!-- 1 Loc 3 People --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1 Loc 4+ People</masterLabel>
+            <translation><!-- 1 Loc 4+ People --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2+ Loc 1 Person</masterLabel>
+            <translation><!-- 2+ Loc 1 Person --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2+ Loc 2 People</masterLabel>
+            <translation><!-- 2+ Loc 2 People --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2+ Loc 3 People</masterLabel>
+            <translation><!-- 2+ Loc 3 People --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2+ Loc 4+ People</masterLabel>
+            <translation><!-- 2+ Loc 4+ People --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Didn&apos;t Ask Question</masterLabel>
+            <translation><!-- Didn&apos;t Ask Question --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Would Not Answer</masterLabel>
+            <translation><!-- Would Not Answer --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Initial Product Offering --></label>
+        <name>Initial_Product_Offering__c</name>
+        <picklistValues>
+            <masterLabel>DIY Payroll</masterLabel>
+            <translation><!-- DIY Payroll --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enterprise Solutions (QBES)</masterLabel>
+            <translation><!-- Enterprise Solutions (QBES) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Full Service Payroll</masterLabel>
+            <translation><!-- Full Service Payroll --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payments (PCS)</masterLabel>
+            <translation><!-- Payments (PCS) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QB Pro/Premier/Plus</masterLabel>
+            <translation><!-- QB Pro/Premier/Plus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QuickBooks Online (QBO)</masterLabel>
+            <translation><!-- QuickBooks Online (QBO) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Last Login Date --></label>
+        <name>Last_Login_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Application Status (QBF) --></label>
+        <name>Lead_Application_Status_QBF__c</name>
+        <picklistValues>
+            <masterLabel>INTERVIEW STARTED</masterLabel>
+            <translation><!-- INTERVIEW STARTED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INTERVIEW_PAGE_1_VIEWED</masterLabel>
+            <translation><!-- INTERVIEW_PAGE_1_VIEWED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INTERVIEW_PAGE_2_VIEWED</masterLabel>
+            <translation><!-- INTERVIEW_PAGE_2_VIEWED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INTERVIEW_PAGE_3_VIEWED</masterLabel>
+            <translation><!-- INTERVIEW_PAGE_3_VIEWED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INTERVIEW_PAGE_4_VIEWED</masterLabel>
+            <translation><!-- INTERVIEW_PAGE_4_VIEWED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MATCH COMPLETED</masterLabel>
+            <translation><!-- MATCH COMPLETED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OFFERS_SHOWN</masterLabel>
+            <translation><!-- OFFERS_SHOWN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OFFER_SELECTED</masterLabel>
+            <translation><!-- OFFER_SELECTED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OFFER_VIEWED</masterLabel>
+            <translation><!-- OFFER_VIEWED --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Lead --></label>
+        <name>Lead__c</name>
+        <relationshipLabel><!-- Lead Opp Management --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Lender Application Appoved --></label>
+        <name>Lender_Application_Appoved__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Lender Application Completed --></label>
+        <name>Lender_Application_Completed__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Lender Application Started --></label>
+        <name>Lender_Application_Started__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Lender --></label>
+        <name>Lender__c</name>
+        <picklistValues>
+            <masterLabel>Bluevine</masterLabel>
+            <translation><!-- Bluevine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Celtic Bank</masterLabel>
+            <translation><!-- Celtic Bank --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Capital</masterLabel>
+            <translation><!-- Direct Capital --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fundbox</masterLabel>
+            <translation><!-- Fundbox --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Funding Circle</masterLabel>
+            <translation><!-- Funding Circle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lancelot</masterLabel>
+            <translation><!-- Lancelot --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lending Club</masterLabel>
+            <translation><!-- Lending Club --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Loan Builder</masterLabel>
+            <translation><!-- Loan Builder --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Multiple Lenders</masterLabel>
+            <translation><!-- Multiple Lenders --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OnDeck</masterLabel>
+            <translation><!-- OnDeck --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Swift Capital</masterLabel>
+            <translation><!-- Swift Capital --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Marketing Campaign/Test --></label>
+        <name>Marketing_Campaign_Test__c</name>
+        <picklistValues>
+            <masterLabel>POSMS Monthly Minimum Test</masterLabel>
+            <translation><!-- POSMS Monthly Minimum Test --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QBO Saves Test Wave 3</masterLabel>
+            <translation><!-- QBO Saves Test Wave 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QBOMS Price Increase v2</masterLabel>
+            <translation><!-- QBOMS Price Increase v2 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Monthly spend to have payroll managed? --></label>
+        <name>Monthly_spend_to_have_payroll_managed__c</name>
+        <picklistValues>
+            <masterLabel>$0</masterLabel>
+            <translation><!-- $0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$1300+</masterLabel>
+            <translation><!-- $1300+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>$400-$1300</masterLabel>
+            <translation><!-- $400-$1300 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Didn&apos;t Ask Question</masterLabel>
+            <translation><!-- Didn&apos;t Ask Question --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Less than $400</masterLabel>
+            <translation><!-- Less than $400 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Would Not Answer</masterLabel>
+            <translation><!-- Would Not Answer --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- New Plan --></label>
+        <name>New_Plan__c</name>
+        <picklistValues>
+            <masterLabel>EMS-Basic Payroll</masterLabel>
+            <translation><!-- EMS-Basic Payroll --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EMS-Enhanced Payroll</masterLabel>
+            <translation><!-- EMS-Enhanced Payroll --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EMS-Full Service Payroll</masterLabel>
+            <translation><!-- EMS-Full Service Payroll --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES-Gold</masterLabel>
+            <translation><!-- ES-Gold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES-Platinum</masterLabel>
+            <translation><!-- ES-Platinum --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES-Silver</masterLabel>
+            <translation><!-- ES-Silver --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES/PLUS-QBO</masterLabel>
+            <translation><!-- ES/PLUS-QBO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS-ES Pricing</masterLabel>
+            <translation><!-- PCS-ES Pricing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS-IC+</masterLabel>
+            <translation><!-- PCS-IC+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS-PAID</masterLabel>
+            <translation><!-- PCS-PAID --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS-PAYG</masterLabel>
+            <translation><!-- PCS-PAYG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS-ProAdvisor Pricing</masterLabel>
+            <translation><!-- PCS-ProAdvisor Pricing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS-SPP (2 tier)</masterLabel>
+            <translation><!-- PCS-SPP (2 tier) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QB Premier</masterLabel>
+            <translation><!-- QB Premier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QB Pro</masterLabel>
+            <translation><!-- QB Pro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QBO</masterLabel>
+            <translation><!-- QBO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ZZ-IPN (no longer offered)</masterLabel>
+            <translation><!-- ZZ-IPN (no longer offered) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Onboarding Agent --></label>
+        <name>Onboarding_Agent__c</name>
+        <relationshipLabel><!-- Lead Opp Management --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- Lead Opp Management --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Other Value --></label>
+        <name>Other_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Other Value --></label>
+        <name>Other_Value_del__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone Number Dialed --></label>
+        <name>Phone_Number_Dialed__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pmts-How much time do you spend reconcil --></label>
+        <name>Pmts_How_much_time_do_you_spend_reconcil__c</name>
+        <picklistValues>
+            <masterLabel>0-Downloads into QB</masterLabel>
+            <translation><!-- 0-Downloads into QB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>0-I use QuickBooks realtime</masterLabel>
+            <translation><!-- 0-I use QuickBooks realtime --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>0-Idon&apos;t but should</masterLabel>
+            <translation><!-- 0-Idon&apos;t but should --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>0-Pay my Accountant to do it</masterLabel>
+            <translation><!-- 0-Pay my Accountant to do it --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2-3 Hours a Month</masterLabel>
+            <translation><!-- 2-3 Hours a Month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2-3 Hours per week</masterLabel>
+            <translation><!-- 2-3 Hours per week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 Hours Weekly</masterLabel>
+            <translation><!-- 5 Hours Weekly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5-10 Hours a Month</masterLabel>
+            <translation><!-- 5-10 Hours a Month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Didn&apos;t Ask Question</masterLabel>
+            <translation><!-- Didn&apos;t Ask Question --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Would Not Answer</masterLabel>
+            <translation><!-- Would Not Answer --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Pmts-What is your monthly charge volume --></label>
+        <name>Pmts_What_is_your_monthly_charge_volume__c</name>
+        <picklistValues>
+            <masterLabel>&lt;$2500 Swiped=Free Plan</masterLabel>
+            <translation><!-- &lt;$2500 Swiped=Free Plan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>&lt;$7500 Keyed=Free Plan</masterLabel>
+            <translation><!-- &lt;$7500 Keyed=Free Plan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>&gt;$2500 Swiped=Paid Plan</masterLabel>
+            <translation><!-- &gt;$2500 Swiped=Paid Plan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>&gt;$7500 Keyed=Paid Plan</masterLabel>
+            <translation><!-- &gt;$7500 Keyed=Paid Plan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Didn&apos;t Ask Question</masterLabel>
+            <translation><!-- Didn&apos;t Ask Question --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Would Not Answer</masterLabel>
+            <translation><!-- Would Not Answer --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Poor Customer Experience Reported --></label>
+        <name>Poor_Customer_Experience_Reported__c</name>
+        <picklistValues>
+            <masterLabel>Opposed to Offshore Support</masterLabel>
+            <translation><!-- Opposed to Offshore Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Poor Customer Care Experience</masterLabel>
+            <translation><!-- Poor Customer Care Experience --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Poor HV Saves Experience</masterLabel>
+            <translation><!-- Poor HV Saves Experience --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Poor PCS Risk/Underwriting Experience</masterLabel>
+            <translation><!-- Poor PCS Risk/Underwriting Experience --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Poor Sales Experience</masterLabel>
+            <translation><!-- Poor Sales Experience --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Upset with Hours of Operations</masterLabel>
+            <translation><!-- Upset with Hours of Operations --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Prior Year Pymt Activation Code --></label>
+        <name>Prior_Year_Pymt_Activation_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prior Year Pymt Amount Paid --></label>
+        <name>Prior_Year_Pymt_Amount_Paid__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prior Year Pymt Mode --></label>
+        <name>Prior_Year_Pymt_Mode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prior Year Pymt Order Date --></label>
+        <name>Prior_Year_Pymt_Order_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prior Year Pymt Order ID --></label>
+        <name>Prior_Year_Pymt_Order_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prior Year Pymt SKU --></label>
+        <name>Prior_Year_Pymt_SKU__c</name>
+    </fields>
+    <fields>
+        <label><!-- Prior Year Pymt Status --></label>
+        <name>Prior_Year_Pymt_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Offering --></label>
+        <name>Product_Offering__c</name>
+        <picklistValues>
+            <masterLabel>Add-On</masterLabel>
+            <translation><!-- Add-On --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIY Payroll</masterLabel>
+            <translation><!-- DIY Payroll --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enterprise</masterLabel>
+            <translation><!-- Enterprise --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HV Payments</masterLabel>
+            <translation><!-- HV Payments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HV Payroll</masterLabel>
+            <translation><!-- HV Payroll --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QB Plus</masterLabel>
+            <translation><!-- QB Plus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QBO</masterLabel>
+            <translation><!-- QBO --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product Reccomendation --></label>
+        <name>Product_Reccomendation__c</name>
+        <picklistValues>
+            <masterLabel>3rd Party Apps</masterLabel>
+            <translation><!-- 3rd Party Apps --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Accountant</masterLabel>
+            <translation><!-- Accountant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Excel</masterLabel>
+            <translation><!-- Excel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lead Pass (ES/POS)</masterLabel>
+            <translation><!-- Lead Pass (ES/POS) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Software</masterLabel>
+            <translation><!-- Other Software --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payments Only</masterLabel>
+            <translation><!-- Payments Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payroll Only</masterLabel>
+            <translation><!-- Payroll Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payroll+WC/Posters</masterLabel>
+            <translation><!-- Payroll+WC/Posters --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QBDT</masterLabel>
+            <translation><!-- QBDT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QBDT+Payments</masterLabel>
+            <translation><!-- QBDT+Payments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QBDT+Payrol+Payments</masterLabel>
+            <translation><!-- QBDT+Payrol+Payments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QBDT+Payroll</masterLabel>
+            <translation><!-- QBDT+Payroll --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QBO</masterLabel>
+            <translation><!-- QBO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QBO+Payments</masterLabel>
+            <translation><!-- QBO+Payments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QBO+Payroll</masterLabel>
+            <translation><!-- QBO+Payroll --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QBO+Payroll+Payments</masterLabel>
+            <translation><!-- QBO+Payroll+Payments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Supplies</masterLabel>
+            <translation><!-- Supplies --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Questions/Concerns Price/Rate/Fees --></label>
+        <name>Questions_Concerns_Price_Rate_Fees__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Reason for Contact --></label>
+        <name>Reason_for_Contact__c</name>
+        <picklistValues>
+            <masterLabel>Customer Confused</masterLabel>
+            <translation><!-- Customer Confused --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Help with offers/matches</masterLabel>
+            <translation><!-- Help with offers/matches --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Help with technical issues</masterLabel>
+            <translation><!-- Help with technical issues --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Just looking</masterLabel>
+            <translation><!-- Just looking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Legitimacy</masterLabel>
+            <translation><!-- Legitimacy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other-Please note in activities</masterLabel>
+            <translation><!-- Other-Please note in activities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Questions related to loan features</masterLabel>
+            <translation><!-- Questions related to loan features --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Questions related to loan options</masterLabel>
+            <translation><!-- Questions related to loan options --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Questions related to payments/terms</masterLabel>
+            <translation><!-- Questions related to payments/terms --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Questions related to rates</masterLabel>
+            <translation><!-- Questions related to rates --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Remove from list</masterLabel>
+            <translation><!-- Remove from list --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reviewing options</masterLabel>
+            <translation><!-- Reviewing options --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scheduled Appointment or Timetrade</masterLabel>
+            <translation><!-- Scheduled Appointment or Timetrade --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wrong contact/company info</masterLabel>
+            <translation><!-- Wrong contact/company info --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Reason for Non Renewal --></label>
+        <name>Reason_for_Non_Renewal__c</name>
+        <picklistValues>
+            <masterLabel>Business Closed</masterLabel>
+            <translation><!-- Business Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Contact Details</masterLabel>
+            <translation><!-- No Contact Details --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Response (RNR)</masterLabel>
+            <translation><!-- No Response (RNR) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Response Post Follow-Up</masterLabel>
+            <translation><!-- No Response Post Follow-Up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PAP-Didn&apos;t find clients for QBO</masterLabel>
+            <translation><!-- PAP-Didn&apos;t find clients for QBO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Partial Renewal</masterLabel>
+            <translation><!-- Partial Renewal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pricing Issue</masterLabel>
+            <translation><!-- Pricing Issue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product Fit Issue</masterLabel>
+            <translation><!-- Product Fit Issue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prospect/Pipeline</masterLabel>
+            <translation><!-- Prospect/Pipeline --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QBO is not user-friendly</masterLabel>
+            <translation><!-- QBO is not user-friendly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SMB-Accountant not comfortable with QBO</masterLabel>
+            <translation><!-- SMB-Accountant not comfortable with QBO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Support/Training Issues</masterLabel>
+            <translation><!-- Support/Training Issues --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Using Other Accounting Software</masterLabel>
+            <translation><!-- Using Other Accounting Software --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Retention Lever Discussed --></label>
+        <name>Retention_Lever_Discussed__c</name>
+        <picklistValues>
+            <masterLabel>All-Standard Promo</masterLabel>
+            <translation><!-- All-Standard Promo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>All-Value Conversation</masterLabel>
+            <translation><!-- All-Value Conversation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EMS-Downgraded Subscription</masterLabel>
+            <translation><!-- EMS-Downgraded Subscription --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES-Downgraded Subscription</masterLabel>
+            <translation><!-- ES-Downgraded Subscription --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES-Moved from FSP to Subscription</masterLabel>
+            <translation><!-- ES-Moved from FSP to Subscription --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES-Upgraded Subscription</masterLabel>
+            <translation><!-- ES-Upgraded Subscription --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES-Used WinBack 10% Discount</masterLabel>
+            <translation><!-- ES-Used WinBack 10% Discount --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES/PLUS-Added Users</masterLabel>
+            <translation><!-- ES/PLUS-Added Users --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES/PLUS-Changed to Monthly Billing</masterLabel>
+            <translation><!-- ES/PLUS-Changed to Monthly Billing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES/PLUS-Reduced Users</masterLabel>
+            <translation><!-- ES/PLUS-Reduced Users --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS-Free QB Plus w/Payments Test</masterLabel>
+            <translation><!-- PCS-Free QB Plus w/Payments Test --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS-Match IC +Pricing Offer</masterLabel>
+            <translation><!-- PCS-Match IC +Pricing Offer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS-Moved to PAID Plan</masterLabel>
+            <translation><!-- PCS-Moved to PAID Plan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS-Moved to PAYG Plan</masterLabel>
+            <translation><!-- PCS-Moved to PAYG Plan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS-Moved to SPP 2-tier billing</masterLabel>
+            <translation><!-- PCS-Moved to SPP 2-tier billing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS-Proactive IC+Offer</masterLabel>
+            <translation><!-- PCS-Proactive IC+Offer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS-Rate Review/Reduction</masterLabel>
+            <translation><!-- PCS-Rate Review/Reduction --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS-Waive Monthly Fees</masterLabel>
+            <translation><!-- PCS-Waive Monthly Fees --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PLUS-Canceled Plus-Sold Pro/Prem Outright</masterLabel>
+            <translation><!-- PLUS-Canceled Plus-Sold Pro/Prem Outright --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PLUS-Cancelld Plus-Sold QBO</masterLabel>
+            <translation><!-- PLUS-Cancelld Plus-Sold QBO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QBO-Canceled QBO-Sold ES</masterLabel>
+            <translation><!-- QBO-Canceled QBO-Sold ES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QBO-Canceled QBO-Sold Pro/Prem</masterLabel>
+            <translation><!-- QBO-Canceled QBO-Sold Pro/Prem --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QBO-Promo (Source Code Change)</masterLabel>
+            <translation><!-- QBO-Promo (Source Code Change) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QBO-Pushed Billing</masterLabel>
+            <translation><!-- QBO-Pushed Billing --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sales Channel --></label>
+        <name>Sales_Channel__c</name>
+        <picklistValues>
+            <masterLabel>KDK</masterLabel>
+            <translation><!-- KDK --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PAP</masterLabel>
+            <translation><!-- PAP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SMB</masterLabel>
+            <translation><!-- SMB --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sales Status --></label>
+        <name>Sales_Status__c</name>
+        <picklistValues>
+            <masterLabel>Closed Lost</masterLabel>
+            <translation><!-- Closed Lost --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed Won-Funded</masterLabel>
+            <translation><!-- Closed Won-Funded --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed by Admin</masterLabel>
+            <translation><!-- Closed by Admin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed-Questions Answered</masterLabel>
+            <translation><!-- Closed-Questions Answered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Educate-Reviewed Options with customer</masterLabel>
+            <translation><!-- Educate-Reviewed Options with customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New-No contact attempted</masterLabel>
+            <translation><!-- New-No contact attempted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending-Customer Reviewing Options</masterLabel>
+            <translation><!-- Pending-Customer Reviewing Options --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending-Lender Application Completed</masterLabel>
+            <translation><!-- Pending-Lender Application Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending-Lender process/underwriting</masterLabel>
+            <translation><!-- Pending-Lender process/underwriting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending-Need docs from customer</masterLabel>
+            <translation><!-- Pending-Need docs from customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending-QBF Application Completed</masterLabel>
+            <translation><!-- Pending-QBF Application Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending-Referred customer to lender</masterLabel>
+            <translation><!-- Pending-Referred customer to lender --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected-Bad data</masterLabel>
+            <translation><!-- Rejected-Bad data --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Working-Contact initiated by QBF</masterLabel>
+            <translation><!-- Working-Contact initiated by QBF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Working-Made contact with customer</masterLabel>
+            <translation><!-- Working-Made contact with customer --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Software used to track financial transac --></label>
+        <name>Software_used_to_track_financial_transac__c</name>
+        <picklistValues>
+            <masterLabel>Software-Busy</masterLabel>
+            <translation><!-- Software-Busy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Software-Excel</masterLabel>
+            <translation><!-- Software-Excel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Software-FreshBooks</masterLabel>
+            <translation><!-- Software-FreshBooks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Software-Others + Text Box</masterLabel>
+            <translation><!-- Software-Others + Text Box --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Software-Pen and Paper-no software</masterLabel>
+            <translation><!-- Software-Pen and Paper-no software --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Software-Reach Accountant</masterLabel>
+            <translation><!-- Software-Reach Accountant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Software-Tally</masterLabel>
+            <translation><!-- Software-Tally --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Source --></label>
+        <name>Source__c</name>
+        <picklistValues>
+            <masterLabel>All</masterLabel>
+            <translation><!-- All --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Care</masterLabel>
+            <translation><!-- Care --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chat</masterLabel>
+            <translation><!-- Chat --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email marketing all</masterLabel>
+            <translation><!-- Email marketing all --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inbound Call</masterLabel>
+            <translation><!-- Inbound Call --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intuit Direct Lending</masterLabel>
+            <translation><!-- Intuit Direct Lending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Market Place-Outbound</masterLabel>
+            <translation><!-- Market Place-Outbound --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing-Direct Mail</masterLabel>
+            <translation><!-- Marketing-Direct Mail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing-Email</masterLabel>
+            <translation><!-- Marketing-Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reassigned Lead</masterLabel>
+            <translation><!-- Reassigned Lead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Referral</masterLabel>
+            <translation><!-- Referral --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Subscription Expiration Date --></label>
+        <name>Subscription_Renewal_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Switching to an alternative provider --></label>
+        <name>Switching_to_an_alternative_provider__c</name>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Still evaluating other alternatives</masterLabel>
+            <translation><!-- Still evaluating other alternatives --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Won&apos;t specify</masterLabel>
+            <translation><!-- Won&apos;t specify --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Time spent weekly managing payroll --></label>
+        <name>Time_spent_weekly_managing_payroll__c</name>
+        <picklistValues>
+            <masterLabel>0 Hours</masterLabel>
+            <translation><!-- 0 Hours --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1-3 Hours</masterLabel>
+            <translation><!-- 1-3 Hours --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4-10 Hours</masterLabel>
+            <translation><!-- 4-10 Hours --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Didn&apos;t Ask Question</masterLabel>
+            <translation><!-- Didn&apos;t Ask Question --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Would Not Answer</masterLabel>
+            <translation><!-- Would Not Answer --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Usage Information --></label>
+        <name>Usage_Information__c</name>
+        <picklistValues>
+            <masterLabel>Paid Active-30 day</masterLabel>
+            <translation><!-- Paid Active-30 day --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Paid Active-60 day</masterLabel>
+            <translation><!-- Paid Active-60 day --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Paid Active-90 day</masterLabel>
+            <translation><!-- Paid Active-90 day --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Value --></label>
+        <name>Value__c</name>
+        <picklistValues>
+            <masterLabel>$0, but plan to be paid</masterLabel>
+            <translation><!-- $0, but plan to be paid --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>0-Downloads into QB</masterLabel>
+            <translation><!-- 0-Downloads into QB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>0-I don&apos;t but should</masterLabel>
+            <translation><!-- 0-I don&apos;t but should --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>0-I use QuickBooks realtime</masterLabel>
+            <translation><!-- 0-I use QuickBooks realtime --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>0-Pay my Accountant to do it</masterLabel>
+            <translation><!-- 0-Pay my Accountant to do it --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1 Loc 1 Person</masterLabel>
+            <translation><!-- 1 Loc 1 Person --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1 Loc 2 People</masterLabel>
+            <translation><!-- 1 Loc 2 People --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1 Loc 3 People</masterLabel>
+            <translation><!-- 1 Loc 3 People --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>1 Loc 4+ People</masterLabel>
+            <translation><!-- 1 Loc 4+ People --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10</masterLabel>
+            <translation><!-- 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2+ Loc 1 Person</masterLabel>
+            <translation><!-- 2+ Loc 1 Person --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2+ Loc 2 People</masterLabel>
+            <translation><!-- 2+ Loc 2 People --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2+ Loc 3 People</masterLabel>
+            <translation><!-- 2+ Loc 3 People --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2+ Loc 4+ People</masterLabel>
+            <translation><!-- 2+ Loc 4+ People --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2-3 Hours a Month</masterLabel>
+            <translation><!-- 2-3 Hours a Month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2-3 Hours per week</masterLabel>
+            <translation><!-- 2-3 Hours per week --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>20</masterLabel>
+            <translation><!-- 20 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>30</masterLabel>
+            <translation><!-- 30 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3rd Party Apps</masterLabel>
+            <translation><!-- 3rd Party Apps --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3rd Party Software</masterLabel>
+            <translation><!-- 3rd Party Software --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 Hours Weekly</masterLabel>
+            <translation><!-- 5 Hours Weekly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5-10 Hours a Month</masterLabel>
+            <translation><!-- 5-10 Hours a Month --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>&lt;$2500 Swiped=Free Plan</masterLabel>
+            <translation><!-- &lt;$2500 Swiped=Free Plan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>&lt;$7500 Keyed=Free Plan</masterLabel>
+            <translation><!-- &lt;$7500 Keyed=Free Plan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>&gt;$2500 Swiped=Paid Plan</masterLabel>
+            <translation><!-- &gt;$2500 Swiped=Paid Plan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>&gt;$7500 Keyed=Paid Plan</masterLabel>
+            <translation><!-- &gt;$7500 Keyed=Paid Plan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ALL-Canceled Account</masterLabel>
+            <translation><!-- ALL-Canceled Account --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ALL-Pending Follow-Up</masterLabel>
+            <translation><!-- ALL-Pending Follow-Up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ALL-Saved Account</masterLabel>
+            <translation><!-- ALL-Saved Account --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Accountant</masterLabel>
+            <translation><!-- Accountant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Add-On</masterLabel>
+            <translation><!-- Add-On --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>All</masterLabel>
+            <translation><!-- All --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>All-Standard Promo</masterLabel>
+            <translation><!-- All-Standard Promo --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>All-Value Conversation</masterLabel>
+            <translation><!-- All-Value Conversation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bank Statement to Accountant</masterLabel>
+            <translation><!-- Bank Statement to Accountant --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bluevine</masterLabel>
+            <translation><!-- Bluevine --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cancel</masterLabel>
+            <translation><!-- Cancel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Care</masterLabel>
+            <translation><!-- Care --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Celtic Bank</masterLabel>
+            <translation><!-- Celtic Bank --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Change in Business</masterLabel>
+            <translation><!-- Change in Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chat</masterLabel>
+            <translation><!-- Chat --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed Lost</masterLabel>
+            <translation><!-- Closed Lost --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed Won-Funded</masterLabel>
+            <translation><!-- Closed Won-Funded --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed by Admin</masterLabel>
+            <translation><!-- Closed by Admin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed-Questions Answered</masterLabel>
+            <translation><!-- Closed-Questions Answered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed/Sold/Retired</masterLabel>
+            <translation><!-- Closed/Sold/Retired --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Confused</masterLabel>
+            <translation><!-- Customer Confused --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer decided to not move forward</masterLabel>
+            <translation><!-- Customer decided to not move forward --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer declined funding</masterLabel>
+            <translation><!-- Customer declined funding --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer doesn&apos;t qualify</masterLabel>
+            <translation><!-- Customer doesn&apos;t qualify --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer looking for technical help/not financing</masterLabel>
+            <translation><!-- Customer looking for technical help/not financing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer looking/wanted more info</masterLabel>
+            <translation><!-- Customer looking/wanted more info --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIY Payroll</masterLabel>
+            <translation><!-- DIY Payroll --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Didn&apos;t Ask Question</masterLabel>
+            <translation><!-- Didn&apos;t Ask Question --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Capital</masterLabel>
+            <translation><!-- Direct Capital --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Marketing all</masterLabel>
+            <translation><!-- Direct Marketing all --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Doesn&apos;t want SAS</masterLabel>
+            <translation><!-- Doesn&apos;t want SAS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Don&apos;t Invoice</masterLabel>
+            <translation><!-- Don&apos;t Invoice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Don&apos;t Track</masterLabel>
+            <translation><!-- Don&apos;t Track --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EMS-Basic Payroll</masterLabel>
+            <translation><!-- EMS-Basic Payroll --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EMS-Downgraded Subscription</masterLabel>
+            <translation><!-- EMS-Downgraded Subscription --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EMS-Enhanced Payroll</masterLabel>
+            <translation><!-- EMS-Enhanced Payroll --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EMS-Full Service Payroll</masterLabel>
+            <translation><!-- EMS-Full Service Payroll --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EMS-Moved to DIY</masterLabel>
+            <translation><!-- EMS-Moved to DIY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EMS-Moved to FSP</masterLabel>
+            <translation><!-- EMS-Moved to FSP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EMS-No employees</masterLabel>
+            <translation><!-- EMS-No employees --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES-Downgraded Subscription</masterLabel>
+            <translation><!-- ES-Downgraded Subscription --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES-Gold</masterLabel>
+            <translation><!-- ES-Gold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES-Moved from FSP to Subscription</masterLabel>
+            <translation><!-- ES-Moved from FSP to Subscription --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES-Platinum</masterLabel>
+            <translation><!-- ES-Platinum --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES-Silver</masterLabel>
+            <translation><!-- ES-Silver --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES-Upgraded Subscription</masterLabel>
+            <translation><!-- ES-Upgraded Subscription --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES-Used WinBack 10% Discount</masterLabel>
+            <translation><!-- ES-Used WinBack 10% Discount --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES/PLUS-Added Users</masterLabel>
+            <translation><!-- ES/PLUS-Added Users --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES/PLUS-Changed to Monthly Billing</masterLabel>
+            <translation><!-- ES/PLUS-Changed to Monthly Billing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES/PLUS-Moved Sub to Outright DT</masterLabel>
+            <translation><!-- ES/PLUS-Moved Sub to Outright DT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES/PLUS-Moved Sub to QBO</masterLabel>
+            <translation><!-- ES/PLUS-Moved Sub to QBO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES/PLUS-QBO</masterLabel>
+            <translation><!-- ES/PLUS-QBO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ES/PLUS-Reduced Users</masterLabel>
+            <translation><!-- ES/PLUS-Reduced Users --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Educate-Reviewed Options with customer</masterLabel>
+            <translation><!-- Educate-Reviewed Options with customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email marketing all</masterLabel>
+            <translation><!-- Email marketing all --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Enterprise</masterLabel>
+            <translation><!-- Enterprise --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Excel</masterLabel>
+            <translation><!-- Excel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Field-Manually Write Them</masterLabel>
+            <translation><!-- Field-Manually Write Them --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Field-Type Them Up</masterLabel>
+            <translation><!-- Field-Type Them Up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Filing Cabinet</masterLabel>
+            <translation><!-- Filing Cabinet --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Fundbox</masterLabel>
+            <translation><!-- Fundbox --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Funding Circle</masterLabel>
+            <translation><!-- Funding Circle --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Google Search for ADP</masterLabel>
+            <translation><!-- Google Search for ADP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Google Search for Intuit</masterLabel>
+            <translation><!-- Google Search for Intuit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Google Search for Payments Software</masterLabel>
+            <translation><!-- Google Search for Payments Software --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Google Search for Payroll Software</masterLabel>
+            <translation><!-- Google Search for Payroll Software --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Google Search for QuickBooks</masterLabel>
+            <translation><!-- Google Search for QuickBooks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HV Payments</masterLabel>
+            <translation><!-- HV Payments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HV Payroll</masterLabel>
+            <translation><!-- HV Payroll --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Help with offers/matches</masterLabel>
+            <translation><!-- Help with offers/matches --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Help with technical issues</masterLabel>
+            <translation><!-- Help with technical issues --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>High Invoice/Low Cash/Card</masterLabel>
+            <translation><!-- High Invoice/Low Cash/Card --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>I Don&apos;t</masterLabel>
+            <translation><!-- I Don&apos;t --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INTERVIEW STARTED</masterLabel>
+            <translation><!-- INTERVIEW STARTED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INTERVIEW_PAGE_1_VIEWED</masterLabel>
+            <translation><!-- INTERVIEW_PAGE_1_VIEWED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INTERVIEW_PAGE_2_VIEWED</masterLabel>
+            <translation><!-- INTERVIEW_PAGE_2_VIEWED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INTERVIEW_PAGE_3_VIEWED</masterLabel>
+            <translation><!-- INTERVIEW_PAGE_3_VIEWED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>INTERVIEW_PAGE_4_VIEWED</masterLabel>
+            <translation><!-- INTERVIEW_PAGE_4_VIEWED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Product Discovery Message</masterLabel>
+            <translation><!-- In Product Discovery Message --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In the Product</masterLabel>
+            <translation><!-- In the Product --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Inbound Call</masterLabel>
+            <translation><!-- Inbound Call --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intuit Direct Lending</masterLabel>
+            <translation><!-- Intuit Direct Lending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intuit Website-Community Pages</masterLabel>
+            <translation><!-- Intuit Website-Community Pages --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intuit Website-Product Pages</masterLabel>
+            <translation><!-- Intuit Website-Product Pages --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intuit Website-Support Pages</masterLabel>
+            <translation><!-- Intuit Website-Support Pages --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Just looking</masterLabel>
+            <translation><!-- Just looking --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lancelot</masterLabel>
+            <translation><!-- Lancelot --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lead Pass (ES/POS)</masterLabel>
+            <translation><!-- Lead Pass (ES/POS) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Legitimacy</masterLabel>
+            <translation><!-- Legitimacy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lender Declined</masterLabel>
+            <translation><!-- Lender Declined --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lending Club</masterLabel>
+            <translation><!-- Lending Club --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Loan Builder</masterLabel>
+            <translation><!-- Loan Builder --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lost contact with customer after initial contact</masterLabel>
+            <translation><!-- Lost contact with customer after initial contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lower Price</masterLabel>
+            <translation><!-- Lower Price --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>MATCH COMPLETED</masterLabel>
+            <translation><!-- MATCH COMPLETED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Manual Entry</masterLabel>
+            <translation><!-- Manual Entry --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Market Place-Outbound</masterLabel>
+            <translation><!-- Market Place-Outbound --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing-Direct Mail</masterLabel>
+            <translation><!-- Marketing-Direct Mail --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Marketing-Email</masterLabel>
+            <translation><!-- Marketing-Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Missing documentation to move forward</masterLabel>
+            <translation><!-- Missing documentation to move forward --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Move to new software/provider</masterLabel>
+            <translation><!-- Move to new software/provider --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Moved to diff INTU Prod</masterLabel>
+            <translation><!-- Moved to diff INTU Prod --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Multiple Lenders</masterLabel>
+            <translation><!-- Multiple Lenders --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New-No contact attempted</masterLabel>
+            <translation><!-- New-No contact attempted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Auth/Reoccurring bill</masterLabel>
+            <translation><!-- No Auth/Reoccurring bill --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Expenses</masterLabel>
+            <translation><!-- No Expenses --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OFFERS_SHOWN</masterLabel>
+            <translation><!-- OFFERS_SHOWN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OFFER_SELECTED</masterLabel>
+            <translation><!-- OFFER_SELECTED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OFFER_VIEWED</masterLabel>
+            <translation><!-- OFFER_VIEWED --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Office-Type Them Up</masterLabel>
+            <translation><!-- Office-Type Them Up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OnDeck</masterLabel>
+            <translation><!-- OnDeck --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Online Backup Service</masterLabel>
+            <translation><!-- Online Backup Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Software</masterLabel>
+            <translation><!-- Other Software --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other-Please note in activities</masterLabel>
+            <translation><!-- Other-Please note in activities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS-Duplicate Account</masterLabel>
+            <translation><!-- PCS-Duplicate Account --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS-ES Pricing</masterLabel>
+            <translation><!-- PCS-ES Pricing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS-Free QB Plus w/Payments Test</masterLabel>
+            <translation><!-- PCS-Free QB Plus w/Payments Test --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS-IC+</masterLabel>
+            <translation><!-- PCS-IC+ --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS-Match IC +Pricing Offer</masterLabel>
+            <translation><!-- PCS-Match IC +Pricing Offer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS-Moved to PAID Plan</masterLabel>
+            <translation><!-- PCS-Moved to PAID Plan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS-Moved to PAYG Plan</masterLabel>
+            <translation><!-- PCS-Moved to PAYG Plan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS-Moved to SPP 2-tier billing</masterLabel>
+            <translation><!-- PCS-Moved to SPP 2-tier billing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS-PAID</masterLabel>
+            <translation><!-- PCS-PAID --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS-PAYG</masterLabel>
+            <translation><!-- PCS-PAYG --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS-ProAdvisor Pricing</masterLabel>
+            <translation><!-- PCS-ProAdvisor Pricing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS-Proactive IC+Offer</masterLabel>
+            <translation><!-- PCS-Proactive IC+Offer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS-Rate Review/Reduction</masterLabel>
+            <translation><!-- PCS-Rate Review/Reduction --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS-SPP (2 tier)</masterLabel>
+            <translation><!-- PCS-SPP (2 tier) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PCS-Waive Monthly Fees</masterLabel>
+            <translation><!-- PCS-Waive Monthly Fees --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PLUS-Canceled Plus-Sold Pro/Prem Outright</masterLabel>
+            <translation><!-- PLUS-Canceled Plus-Sold Pro/Prem Outright --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PLUS-Canceled Plus-Sold QBO</masterLabel>
+            <translation><!-- PLUS-Canceled Plus-Sold QBO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payments</masterLabel>
+            <translation><!-- Payments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payments Only</masterLabel>
+            <translation><!-- Payments Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payroll</masterLabel>
+            <translation><!-- Payroll --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payroll Only</masterLabel>
+            <translation><!-- Payroll Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payroll+WC/Posters</masterLabel>
+            <translation><!-- Payroll+WC/Posters --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending-Customer Reviewing Options</masterLabel>
+            <translation><!-- Pending-Customer Reviewing Options --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending-Lender Application Completed</masterLabel>
+            <translation><!-- Pending-Lender Application Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending-Lender process/underwriting</masterLabel>
+            <translation><!-- Pending-Lender process/underwriting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending-Need docs from customer</masterLabel>
+            <translation><!-- Pending-Need docs from customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending-QBF Application Completed</masterLabel>
+            <translation><!-- Pending-QBF Application Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending-Referred customer to lender</masterLabel>
+            <translation><!-- Pending-Referred customer to lender --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Plat with Hosting</masterLabel>
+            <translation><!-- Plat with Hosting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Poor Service/Support</masterLabel>
+            <translation><!-- Poor Service/Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Portable Hard Drive</masterLabel>
+            <translation><!-- Portable Hard Drive --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Price</masterLabel>
+            <translation><!-- Price --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ProAdvisor</masterLabel>
+            <translation><!-- ProAdvisor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product</masterLabel>
+            <translation><!-- Product --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QB Plus</masterLabel>
+            <translation><!-- QB Plus --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QB Premier</masterLabel>
+            <translation><!-- QB Premier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QB Pro</masterLabel>
+            <translation><!-- QB Pro --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QBDT</masterLabel>
+            <translation><!-- QBDT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QBDT+Payments</masterLabel>
+            <translation><!-- QBDT+Payments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QBDT+Payroll</masterLabel>
+            <translation><!-- QBDT+Payroll --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QBDT+Payroll+Payments</masterLabel>
+            <translation><!-- QBDT+Payroll+Payments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QBO</masterLabel>
+            <translation><!-- QBO --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QBO+Payments</masterLabel>
+            <translation><!-- QBO+Payments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QBO+Payroll</masterLabel>
+            <translation><!-- QBO+Payroll --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QBO+Payroll+Payments</masterLabel>
+            <translation><!-- QBO+Payroll+Payments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QBO-Canceled QBO-Sold ES</masterLabel>
+            <translation><!-- QBO-Canceled QBO-Sold ES --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QBO-Canceled QBO-Sold Pro/Prem</masterLabel>
+            <translation><!-- QBO-Canceled QBO-Sold Pro/Prem --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QBO-Promo (Source Code Change)</masterLabel>
+            <translation><!-- QBO-Promo (Source Code Change) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QBO-Pushed Billing</masterLabel>
+            <translation><!-- QBO-Pushed Billing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QBO-Saved Account and Transferred to Care</masterLabel>
+            <translation><!-- QBO-Saved Account and Transferred to Care --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Questions related to loan features</masterLabel>
+            <translation><!-- Questions related to loan features --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Questions related to loan options</masterLabel>
+            <translation><!-- Questions related to loan options --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Questions related to payments/terms</masterLabel>
+            <translation><!-- Questions related to payments/terms --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Questions related to rates</masterLabel>
+            <translation><!-- Questions related to rates --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QuickBooks</masterLabel>
+            <translation><!-- QuickBooks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reassigned Lead</masterLabel>
+            <translation><!-- Reassigned Lead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Referral</masterLabel>
+            <translation><!-- Referral --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected-Bad data</masterLabel>
+            <translation><!-- Rejected-Bad data --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Remove from list</masterLabel>
+            <translation><!-- Remove from list --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Renewal-customer obtained previous financing</masterLabel>
+            <translation><!-- Renewal-customer obtained previous financing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reviewing options</masterLabel>
+            <translation><!-- Reviewing options --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Save to Computer</masterLabel>
+            <translation><!-- Save to Computer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saved number on a note</masterLabel>
+            <translation><!-- Saved number on a note --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Saved number on my phone</masterLabel>
+            <translation><!-- Saved number on my phone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scan Them</masterLabel>
+            <translation><!-- Scan Them --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scheduled Appointment or Timetrade</masterLabel>
+            <translation><!-- Scheduled Appointment or Timetrade --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service/Support</masterLabel>
+            <translation><!-- Service/Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Setup Agent</masterLabel>
+            <translation><!-- Setup Agent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Shoebox</masterLabel>
+            <translation><!-- Shoebox --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Still evaluating other alternatives</masterLabel>
+            <translation><!-- Still evaluating other alternatives --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Supplies</masterLabel>
+            <translation><!-- Supplies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Support Agent</masterLabel>
+            <translation><!-- Support Agent --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Support/Customer Service</masterLabel>
+            <translation><!-- Support/Customer Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Swift Capital</masterLabel>
+            <translation><!-- Swift Capital --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unresponsive-No response from customer</masterLabel>
+            <translation><!-- Unresponsive-No response from customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Won&apos;t specify</masterLabel>
+            <translation><!-- Won&apos;t specify --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Working-Contact initiated by QBF</masterLabel>
+            <translation><!-- Working-Contact initiated by QBF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Working-Made contact with customer</masterLabel>
+            <translation><!-- Working-Made contact with customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Would Not Answer</masterLabel>
+            <translation><!-- Would Not Answer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Write Down then Type Up</masterLabel>
+            <translation><!-- Write Down then Type Up --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wrong contact/company info</masterLabel>
+            <translation><!-- Wrong contact/company info --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ZZ-IPN (no longer offered)</masterLabel>
+            <translation><!-- ZZ-IPN (no longer offered) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- What Prompted the Call --></label>
+        <name>What_Prompted_the_Call__c</name>
+        <picklistValues>
+            <masterLabel>Cancel</masterLabel>
+            <translation><!-- Cancel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email marketing all</masterLabel>
+            <translation><!-- Email marketing all --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Product Discovery Message</masterLabel>
+            <translation><!-- In Product Discovery Message --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lower Price</masterLabel>
+            <translation><!-- Lower Price --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Service/Support</masterLabel>
+            <translation><!-- Service/Support --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Why not Full Service  Payroll --></label>
+        <name>Why_not_Full_Service_Payroll__c</name>
+        <picklistValues>
+            <masterLabel>Accountant does Payroll</masterLabel>
+            <translation><!-- Accountant does Payroll --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Already Has Full Service Payroll</masterLabel>
+            <translation><!-- Already Has Full Service Payroll --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Didn&apos;t Ask</masterLabel>
+            <translation><!-- Didn&apos;t Ask --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No Employees</masterLabel>
+            <translation><!-- No Employees --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Outsourced Payroll</masterLabel>
+            <translation><!-- Outsourced Payroll --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Won&apos;t Pay More than DIY</masterLabel>
+            <translation><!-- Won&apos;t Pay More than DIY --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Would Not Answer</masterLabel>
+            <translation><!-- Would Not Answer --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Why not Payments --></label>
+        <name>Why_not_Payments__c</name>
+        <picklistValues>
+            <masterLabel>Better Rates w/ Competitor</masterLabel>
+            <translation><!-- Better Rates w/ Competitor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Bundled Value w/ Competitor</masterLabel>
+            <translation><!-- Bundled Value w/ Competitor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Cash Only</masterLabel>
+            <translation><!-- Cash Only --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Didn&apos;t Ask</masterLabel>
+            <translation><!-- Didn&apos;t Ask --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Has our Payments</masterLabel>
+            <translation><!-- Has our Payments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected in Application Process</masterLabel>
+            <translation><!-- Rejected in Application Process --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unacceptable Business Type</masterLabel>
+            <translation><!-- Unacceptable Business Type --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Would Not Answer</masterLabel>
+            <translation><!-- Would Not Answer --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Wrong Department-Product Driver --></label>
+        <name>Wrong_Department_Product_Driver__c</name>
+        <picklistValues>
+            <masterLabel>Dropped Call</masterLabel>
+            <translation><!-- Dropped Call --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payments</masterLabel>
+            <translation><!-- Payments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payroll</masterLabel>
+            <translation><!-- Payroll --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QuickBooks</masterLabel>
+            <translation><!-- QuickBooks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Support/Customer Service</masterLabel>
+            <translation><!-- Support/Customer Service --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Zone --></label>
+        <name>Zone__c</name>
+        <picklistValues>
+            <masterLabel>North-East</masterLabel>
+            <translation><!-- North-East --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South</masterLabel>
+            <translation><!-- South --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South-2</masterLabel>
+            <translation><!-- South-2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>West</masterLabel>
+            <translation><!-- West --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

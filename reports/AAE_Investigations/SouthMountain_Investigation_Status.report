@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_25056927</developerName>
+        <masterLabel>Validity</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Case_Investigation__c.Sub_Status__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Entered in Jira</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Resolved</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>KB Created</sourceValue>
+            </sourceValues>
+            <value>Valid</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Duplicate</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Will Not Fix</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Waiting for More Information</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Aging Closed</sourceValue>
+            </sourceValues>
+            <value>Invalid</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Unassigned</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Researching</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Follow Up Needed</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Company Data Fix</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Company Specific Fix</sourceValue>
+            </sourceValues>
+            <value>In Progress</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Case_Investigation__c.Subject__c</field>
+    </columns>
+    <columns>
+        <field>Case_Investigation__c.Status__c</field>
+    </columns>
+    <columns>
+        <field>Case_Investigation__c.Sub_Status__c</field>
+    </columns>
+    <columns>
+        <field>Case_Investigation__c.of_Cases__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Case_Investigation__c.Created_Site__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>USAAZRM</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Month</dateGranularity>
+        <field>CUST_CREATED_DATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Case_Investigation__c.Product_Category__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_25056927</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>SouthMountain Investigation Status</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Case_Investigation__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

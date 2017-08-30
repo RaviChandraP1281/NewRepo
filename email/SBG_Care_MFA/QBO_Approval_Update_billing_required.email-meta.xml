@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>QBO - Approval - Update billing required</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Desktop_Data_Services</letterhead>
+    <name>QBO - Approval - Update billing required</name>
+    <style>freeForm</style>
+    <subject>Master Administrator Claim</subject>
+    <textOnly>{!Case.Contact},
+Regarding Company: {!Case.Account}
+
+This email is to inform you that your request to change the Master Administrator of your QuickBooks Online account has been approved. Depending on your situation, you may have received information about your login and a password reset.  
+ 
+To avoid service interruptions, please make sure that you update your billing Information.  You can sign in to QuickBooks Online (https://qbo.intuit.com) using your user ID and password to make changes to your account and update billing.  If you do not update the billing information within 48 hours, we will need to lock the account. 
+ 
+Thank you for your patience during this process.  Feel free to contact our QuickBooks Online Customer Care Team at 800.488.7330 if you have any questions or concerns.
+ 
+Sincerely,
+The QuickBooks Online Support Team</textOnly>
+    <type>html</type>
+</EmailTemplate>

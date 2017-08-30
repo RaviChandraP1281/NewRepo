@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Lacerte - Drake</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Lacerte - Drake</name>
+    <style>none</style>
+    <subject>Learn why you get what you pay for</subject>
+    <textOnly>Dear {!Contact.Name},
+
+Are you 100% satisfied with your current tax software provider?
+
+Here are the top 3 Issues from Drake customers (based on AICPA 2013 Tax Software Survey*) –
+
+    Accuracy concerns...unsure of where errors occur?
+    Hard to Use... quirky calculations?
+    Lack of features/comprehensiveness... outdated systems?
+
+How Intuit Lacerte can help you solve these issues:
+
+    More than 21,000 error diagnostics, including a specific e-File review, to help uncover mistakes or omissions, resulting in maximum refunds and fewer rejected returns. We’ve had new customers tell us after they switched to Lacerte that, thanks to Lacerte’s diagnostics, they’ve realized that they were preparing some returns incorrectly with their previous software.  
+    Know how calculations are derived with our Jump-To-Input feature. It allows you to you to go from a line on the form to the corresponding input fields in the detail screens, so there’s no black box. For example, with Jump-To-Input you can see and go to all 11+ sources of income that make up line 7 and easily navigate to them.  
+    27 time-saving features such as Missing Client Data Utility, Schedule D Import Wizard and our Exclusive QuickBooks Integration help you speed through complex returns.
+        Missing Client Data allows you to flag input fields that are missing information and then quickly send an email to clients requesting the required information. When you receive information back from your client, you can jump directly to the input fields from within the Missing Data tool.
+        The Schedule D Import Wizard saves time with fast transfer of client brokerage statement information directly into Lacerte. You can use whatever format you have, and simply map your columns/rows from Excel to where you want the numbers to go in Lacerte.
+        On QuickBooks Integration: &quot;We are enjoying the time-saving benefits of having Lacerte and QuickBooks software connect...it’s a huge advantage during tax season because we focus on more of the analytical work instead of spending time on basic data entry...&quot; - Andrea J Sanchez, West Boylston, Massachusetts
+
+If you’ve had difficulty in using your current software, whether it’s unreliable, has quirky calculations, or you’re simply curious how much time you would save, I’d like to discuss how Lacerte can help.
+
+Call me at {!User.Phone} or let me know the best day and time you can be reached.
+
+Regards,
+{!User.Name}
+Lacerte Tax Consultant
+{!User.Phone}
+{!User.Email}
+
+&quot;My previous software was not user friendly and hard to train my employees on it...
+[With Lacerte] I’ve been able to do my returns in half the time of other software. Lacerte is user friendly and easy to get around in.&quot;
+- Sheila Smith
+Madison, Wisconsin
+
+*http://www.aicpa.org/Publications/TaxAdviser/2013/August/PublishingImages/bonner_exh-4.png
+Intuit Accountants
+
+IMPORTANT: Intuit respects the personal nature of email communication. Every effort is made to offer only information that may be of value to you or your business. If you do not wish to receive marketing email from Intuit in the future, please click here.
+
+If you have any questions or comments, please DO NOT REPLY to this email. Contact Customer Service at 800.765.7777 for assistance. If you receive an email message that appears to come from Intuit but that you suspect is a phishing email, please forward it immediately to spoof@intuit.com. Please visit http://security.intuit.com for additional security information.
+
+® 2012-2013 Intuit Inc. All rights reserved. Intuit, the Intuit logo are trademarks or registered trademarks and/or registered service marks of Intuit Inc. in the United States and other countries. All other marks are the property of their respective owners, should be treated as such, and may be registered in various jurisdictions.
+
+Intuit Inc., Customer Communications, 2800 E. Commerce Center Place, Tucson, AZ 85706</textOnly>
+    <type>custom</type>
+</EmailTemplate>

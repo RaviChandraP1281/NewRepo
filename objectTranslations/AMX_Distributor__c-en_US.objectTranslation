@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Distributor</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Distributors</value>
+    </caseValues>
+    <fields>
+        <label><!-- Assignment Team --></label>
+        <name>AMX_Team__c</name>
+        <relationshipLabel><!-- Distributors --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Advanced Filter --></label>
+        <name>Advanced_Filter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Algorithm --></label>
+        <name>Algorithm__c</name>
+        <picklistValues>
+            <masterLabel>Round Robin</masterLabel>
+            <translation><!-- Round Robin --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Round Robin (Weighted)</masterLabel>
+            <translation><!-- Round Robin (Weighted) --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Assignment Queue ID --></label>
+        <name>Assignment_Queue_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Compiled Filter --></label>
+        <name>Compiled_Filter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Distribution Queue ID --></label>
+        <name>Distribution_Queue_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Distribution Queue User --></label>
+        <name>Distribution_Queue_User__c</name>
+        <relationshipLabel><!-- Distributors --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- The order of execution of this Distributor within the team in relation to other distributors in the team. --></help>
+        <label><!-- Execution Order --></label>
+        <name>Execution_Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- Filter Logic --></label>
+        <name>Filter_Logic__c</name>
+    </fields>
+    <fields>
+        <help><!-- Determines whether this AMX Distributor is active or not. --></help>
+        <label><!-- Active --></label>
+        <name>Is_Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order By (Direction 1) --></label>
+        <name>Order_By_Direction_1__c</name>
+        <picklistValues>
+            <masterLabel>ASC</masterLabel>
+            <translation><!-- ASC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DESC</masterLabel>
+            <translation><!-- DESC --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Order By (Direction 2) --></label>
+        <name>Order_By_Direction_2__c</name>
+        <picklistValues>
+            <masterLabel>ASC</masterLabel>
+            <translation><!-- ASC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DESC</masterLabel>
+            <translation><!-- DESC --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Order By (Direction 3) --></label>
+        <name>Order_By_Direction_3__c</name>
+        <picklistValues>
+            <masterLabel>ASC</masterLabel>
+            <translation><!-- ASC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DESC</masterLabel>
+            <translation><!-- DESC --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Order By (Field 1) --></label>
+        <name>Order_By_Field_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order By (Field 2) --></label>
+        <name>Order_By_Field_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order By (Field 3) --></label>
+        <name>Order_By_Field_3__c</name>
+    </fields>
+    <fields>
+        <help><!-- Distributor-specific limit on the number of records that will be returned by the SOQL query created for this Distributor.  This value should never be more than 4000. --></help>
+        <label><!-- Query Record Limit --></label>
+        <name>Query_Record_Limit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subteam Member Count --></label>
+        <name>Subteam_Member_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Use Advanced Filter --></label>
+        <name>Use_Advanced_Filter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Use Distribution Queue User --></label>
+        <name>Use_Distribution_Queue_User__c</name>
+    </fields>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account.Company_ID__c</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT_ID</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <currency>GBP</currency>
+    <filter>
+        <booleanFilter>(1 OR 2) AND 3</booleanFilter>
+        <criteriaItems>
+            <column>Account.Company_ID__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>385586601,403778216,405596941,406438891,406440021,406445451,406555731,406858776,407248791,407249471,407249616,408062436,408062806,408916761,408916786,409361206,409814896,409815681,409816591,409817786,1283724580,1287398260,1364690655,1366529215,1372332540,1384221080,1388018145,1388646020,1388728625,1388869350,1389753725,1390553415,1392300790,1392419955,1392432620,1393411190,1394435665,1395169655,1397324480,1398505570,1398553245,1398748415,1398855630,1399895335,1401078190,1401746205,1401785090,1402844995,1403018175,1403214780,1406050575,1406055550,1407551385,1407785835,1408034465,1411418255,1412117460,1412540240,1412719235,1412720680,1412729810,1413079965,1413371205,1413371260,1413804935,1413804960,1413963405,1414221900,1414438080,1414545585,1414775485,1414785950,1414794905,1415218260,1415984980,1416181385,1416280090,1416280825,1416281205,1417760885,1417973225,1418414885,1419181155,1419407750,1419730085</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Company_ID__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>1419733530,1419737680,1419737860,1419738680,1419738685,1419739770,1419739915,1419742915,1419745520,1419745565,1419747610,1419748290,1419750290,1419750330,1419750415,1419751215,1420202490,1420203330,1420995005,1421079460,1421974015,1422089025,1423241190,1424150970,1424671530,1425319800,1428556475</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>USERS.NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>online user</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>USERS.NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>08Oct- Signups for Accs in Online User</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>ACCOUNT.NAME</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

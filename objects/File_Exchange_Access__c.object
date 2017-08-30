@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Allow_Delete__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field is used to restrict/provide access to delete file(s) in File Exchange.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check the box to allow deleting file(s) in File Exchange.</inlineHelpText>
+        <label>Allow_Delete</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Allow_Download__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field is used to restrict/provide access to download file(s) from File Exchange.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check the box to allow downloading file(s) from File Exchange.</inlineHelpText>
+        <label>Allow Download</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Allow_Upload__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This field is used to restrict/provide access to upload file(s) to File Exchange.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Check the box to allow uploading file(s) to File Exchange.</inlineHelpText>
+        <label>Allow Upload</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+</CustomObject>

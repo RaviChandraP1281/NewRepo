@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Escape Excel Educate test 2</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Educate Test 2 Escape Excel</name>
+    <style>none</style>
+    <subject>Help your clients escape Excel and thrive!</subject>
+    <textOnly>*|MC:SUBJECT|*
+
+Create new value-add services using our speical 4.99 offer
+
+View this email in your browser
+
+Escaping Excel® is now seriously easy
+
+As an accounting professional, you know just how constraining spreadsheets can be for running a small business. Fortunately you now have an easy to use solution to offer your clients, QuickBooks Online.
+
+Complete with invoices, expenses, bank feeds, payroll and inventory, your small business clients can now ‘escape the cell’ and accurately see how their business is going anytime, anywhere. And as an accounting professional, you can get QuickBooks Online Plus for just $4.99 per month1 for as long as your client uses the software.
+
+So help your spreadsheet clients take their business to the next level by upgrading them to QuickBooks Online. Simply click on New QBO Company in QuickBooks Online Accountant or call the ProAdvisor team on 1800 618 521 to get started today.
+
+Thanks!
+
+QuickBooks Online ProAdvisor Team
+
+1 Offer is valid for accounting and bookkeeping professionals only. Promotional price of $4.99 a month is available until 30 June 2015 and will be guaranteed on QuickBooks Online Plus. This special pricing offer will be terminated upon cancellation. Offer is non transferable, valid only for the individual or company that registers QuickBooks and cannot be combined with any other QuickBooks Online offers.
+
+Terms, conditions, features, support, pricing and service options are subject to change without notice.
+
+You&apos;re receiving this email because you have provided Intuit your details or have been referred by a colleague.
+
+unsubscribe from this list
+
+Intuit Australia
+Level 13, 2 Park Street
+SYDNEY  NSW  2000</textOnly>
+    <type>custom</type>
+</EmailTemplate>

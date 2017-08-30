@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>For Customer escalations</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>QBOE Escalation Resolved Response</name>
+    <style>none</style>
+    <subject>QBOE Support has resolved your case {!Case.CaseNumber}</subject>
+    <type>text</type>
+</EmailTemplate>

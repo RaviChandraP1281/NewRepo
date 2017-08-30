@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CASE_NUMBER</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <columns>
+        <field>ORIGIN</field>
+    </columns>
+    <columns>
+        <field>Case.Trigger_Survey__c</field>
+    </columns>
+    <columns>
+        <field>Case.Survey_Exemption_Reason__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>( 1 AND 2) AND 3</booleanFilter>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Adam Edwards,Adam Luing,Adam Norris,Adam Tayler,Alexandra Nielson,Amber Groves,Anna Quintanilla,AnnaLisa Bingham,Austin Gren,Brandon Ralphs,Cesar Mendez,Chase Barnes,Chelsea Unga,Chris Flavel,Christopher Thurman,Christy King,Clarissa Castelan,Cody Vick,Colton Case,Daniel Anaya,Daniel Hicks,Diana Quintana,Erin Henderson,Felix Greger,Gabby Gomez,Genesis Garcia,Haley Bates,Heidi Sessions,James McClinton,Jason Kern,Jeanmarie Vigoren,Jeremy Smith,Jessica Keisel,Julian Pinney,Justin Lehman,Kaili Landon,Lillian Wilkinson,Mackay Merrill,Maricella Shaver,Melissa Womack,Michael Christiansen,Michael Harris,Mikhail Rodriquez,Nathan Asay,Piper Bradford,Rebekah Johnston,Reina Rubalcava,Riley Gardiner,Ryan Andersen,Sarah Walker,Susan Logan,Taylor Hathaway,Thomas Kearns,Trevor Aragon,Zachary Skenandore,Brandon Andreski</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case.Trigger_Survey__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>0</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case.Survey_Exemption_Reason__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Survey Not Triggered - Email Address not found on Contact</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Month</dateGranularity>
+        <field>CLOSED_DATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CREATED</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Provo - Cases Missing Emails MoM</name>
+    <params>
+        <name>units</name>
+        <value>d</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATEONLY</dateColumn>
+        <endDate>2017-05-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2016-01-01</startDate>
+    </timeFrameFilter>
+</Report>

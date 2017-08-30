@@ -1,0 +1,4670 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Translations xmlns="http://soap.sforce.com/2006/04/metadata">
+    <reportTypes>
+        <description><!-- AAGPCG Accounts with Contacts --></description>
+        <label><!-- AAGPCG Accounts with Contacts --></label>
+        <name>AAGPCG_Accounts_with_Contacts</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- AAG TeleSales Oppty and Oppty Team Reports --></description>
+        <label><!-- AAG TeleSales Oppty and Oppty Team Reports --></label>
+        <name>AAG_TeleSales_Oppty_and_Oppty_Team_Reports</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunity Team --></label>
+            <name>Opportunity Team</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accnt address, contact and oppty --></description>
+        <label><!-- Accnt address, contact and oppty --></label>
+        <name>Accnt_address_contact_and_oppty</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Quotes --></label>
+            <name>Quotes</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Account Mgmt test --></description>
+        <label><!-- Account Mgmt test --></label>
+        <name>Account</name>
+        <sections>
+            <label><!-- Account Management --></label>
+            <name>Account Management</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Account_Address_Backup --></description>
+        <label><!-- Account_Address_Backup --></label>
+        <name>Account_Address_Backup</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Addresses --></label>
+            <name>Addresses</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Account - Client --></description>
+        <label><!-- Account - Client --></label>
+        <name>Account_Client</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Clients --></label>
+            <name>Clients</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Account Invited Client Billing Codes --></description>
+        <label><!-- Account Invited Client Billing Codes --></label>
+        <name>Account_Invited_Client_Billing_Code_List</name>
+        <sections>
+            <label><!-- QBO Billing Codes --></label>
+            <name>QBO Billing Codes</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Account Management with Accounts --></description>
+        <label><!-- Account Management with Accounts --></label>
+        <name>Account_Management_with_Accounts</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Accounts Management --></label>
+            <name>Accounts Management</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts With Account Owner Histories --></description>
+        <label><!-- Accounts With Account Owner Histories --></label>
+        <name>Account_Owner_History_Report</name>
+        <sections>
+            <columns>
+                <label><!-- AOH Owner --></label>
+                <name>AOH Owner</name>
+            </columns>
+            <columns>
+                <label><!-- Owner__c/Account Owner --></label>
+                <name>Owner__c/Account Owner</name>
+            </columns>
+            <label><!-- Account Owner History --></label>
+            <name>Account Owner History</name>
+        </sections>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Account Relationship search --></description>
+        <label><!-- Account Relationship search --></label>
+        <name>Account_Relationship_search</name>
+        <sections>
+            <label><!-- Accounting Firm --></label>
+            <name>Accounting Firm</name>
+        </sections>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Addresses --></label>
+            <name>Addresses</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Account/Relationships/Assets --></description>
+        <label><!-- Account/Relationships/Assets --></label>
+        <name>Account_Relationships_Assets</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Account Test --></description>
+        <label><!-- Account Test --></label>
+        <name>Account_Test</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Account With Assets &amp; Quotes --></description>
+        <label><!-- Account With Assets &amp; Quotes --></label>
+        <name>Account_With_Assets_Quotes</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Quotes --></label>
+            <name>Quotes</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Account fields and events --></description>
+        <label><!-- Account fields and events --></label>
+        <name>Account_fields_and_events</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Account with Custom Address --></description>
+        <label><!-- Account with Custom Address --></label>
+        <name>Account_with_Custom_Address</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Addresses --></label>
+            <name>Addresses</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Account with Owner ID --></description>
+        <label><!-- Account with Owner ID --></label>
+        <name>Account_with_Owner_ID</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with Renewals and Opportunities --></description>
+        <label><!-- Accounts with Renewals and Opportunities --></label>
+        <name>Account_with_Renewals_and_Opportunities</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Renewals --></label>
+            <name>Renewals</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Account with opportunities and contacts --></description>
+        <label><!-- Account with opportunities and contacts --></label>
+        <name>Account_with_opportunities_and_contacts</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accountant - Client --></description>
+        <label><!-- Accountant - Client --></label>
+        <name>Accountant_Client</name>
+        <sections>
+            <label><!-- Account Management --></label>
+            <name>Account Management</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accountant Client Relationship --></description>
+        <label><!-- Accountant Client Relationship --></label>
+        <name>Accountant_Client_Relationship</name>
+        <sections>
+            <label><!-- Clients --></label>
+            <name>Clients</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Dishon Accounts --></description>
+        <label><!-- Dishon Accounts --></label>
+        <name>Accounts</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts With or Without Account Owner Histories --></description>
+        <label><!-- Accounts With or Without Account Owner Histories --></label>
+        <name>Accounts_AOH_Report</name>
+        <sections>
+            <columns>
+                <label><!-- From Owner --></label>
+                <name>From Owner</name>
+            </columns>
+            <columns>
+                <label><!-- To Owner --></label>
+                <name>To Owner</name>
+            </columns>
+            <label><!-- Account Owner History --></label>
+            <name>Account Owner History</name>
+        </sections>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts &amp; Accounts --></description>
+        <label><!-- Accounts &amp; Accounts --></label>
+        <name>Accounts_Accounts</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts/Cases/Investigations --></description>
+        <label><!-- Accounts/Cases/Investigations --></label>
+        <name>Accounts_Cases_Investigations</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Cases --></label>
+            <name>Cases</name>
+        </sections>
+        <sections>
+            <label><!-- Investigations --></label>
+            <name>Investigations</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts / Cases / VOC --></description>
+        <label><!-- Accounts / Cases / VOC --></label>
+        <name>Accounts_Cases_VOC</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Cases --></label>
+            <name>Cases</name>
+        </sections>
+        <sections>
+            <label><!-- VOC Survey Response --></label>
+            <name>VOC Survey Response</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts / Cases / VOC / Asset / Product --></description>
+        <label><!-- Accounts / Cases / VOC / Asset / Product --></label>
+        <name>Accounts_Cases_VOC_Asset_Product</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts / Contacts / Assets --></description>
+        <label><!-- Accounts / Contacts / Assets --></label>
+        <name>Accounts_Contacts_Assets</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts and Contacts and Custom Address --></description>
+        <label><!-- Accounts and Contacts and Custom Address --></label>
+        <name>Accounts_Contacts_Custom_Address</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Addresses --></label>
+            <name>Addresses</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts Opportunities and Assets --></description>
+        <label><!-- Accounts Opportunities and Assets --></label>
+        <name>Accounts_Opportunities_and_Assets</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts&amp;Opportunities with Assets --></description>
+        <label><!-- Accounts&amp;Opportunities with Assets --></label>
+        <name>Accounts_Opportunities_with_Assets</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts + Related Accounts + Related Accs Assets --></description>
+        <label><!-- Accounts + Related Accounts + Related Accs Assets --></label>
+        <name>Accounts_Related_Accounts_Related_Accs_Assets</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts and Account Teams --></description>
+        <label><!-- Accounts and Account Teams --></label>
+        <name>Accounts_and_Account_Teams</name>
+        <sections>
+            <label><!-- Account Team --></label>
+            <name>Account Team</name>
+        </sections>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts and Assets --></description>
+        <label><!-- Accounts and Assets --></label>
+        <name>Accounts_and_Assets</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts and Contacts with Assets --></description>
+        <label><!-- Accounts and Contacts with Assets --></label>
+        <name>Accounts_and_Contacts_with_Assets</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts and Total Subscribed Clients --></description>
+        <label><!-- Accounts and Total Subscribed Clients --></label>
+        <name>Accounts_and_Total_Subscribed_Clients</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts and relationships --></description>
+        <label><!-- Accounts and relationships --></label>
+        <name>Accounts_and_relationships</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts w/Activities --></description>
+        <label><!-- Accounts w/Activities --></label>
+        <name>Accounts_w_Activities</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts w/Activitiestest --></description>
+        <label><!-- Accounts w/Activitiestest --></label>
+        <name>Accounts_w_Activitiestest</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts w/ Oppties &amp; Contacts --></description>
+        <label><!-- Accounts w/ Oppties &amp; Contacts --></label>
+        <name>Accounts_w_Oppties_Contacts</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Contact Roles --></label>
+            <name>Contact Roles</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities (Primary Contact) --></label>
+            <name>Opportunities (Primary Contact)</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts w/Optys for QBO --></description>
+        <label><!-- Accounts w/Optys for QBO --></label>
+        <name>Accounts_w_Optys_for_QBO</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts w/QBO asset --></description>
+        <label><!-- Accounts w/QBO asset --></label>
+        <name>Accounts_w_QBO_asset</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts w/ Related Accounts &amp; Assets --></description>
+        <label><!-- Accounts w/ Related Accounts &amp; Assets --></label>
+        <name>Accounts_w_Related_Accounts_Assets</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts w/ Related Accounts w/ Assets --></description>
+        <label><!-- Accounts w/ Related Accounts w/ Assets --></label>
+        <name>Accounts_w_Related_Accounts_w_Assets</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts w/Relationships --></description>
+        <label><!-- Accounts w/Relationships --></label>
+        <name>Accounts_w_Relationships</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+        <sections>
+            <label><!-- Partners --></label>
+            <name>Partners</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts w/ address --></description>
+        <label><!-- Accounts w/ address --></label>
+        <name>Accounts_w_address</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Addresses --></label>
+            <name>Addresses</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts w contacts w campaigns --></description>
+        <label><!-- Accounts w contacts w campaigns --></label>
+        <name>Accounts_w_contacts_w_campaigns</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Campaign History --></label>
+            <name>Campaign History</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts w opty with or w/o activity --></description>
+        <label><!-- Accounts w opty with or w/o activity --></label>
+        <name>Accounts_w_opty_with_or_w_o_activity_w_or_w_o_asse</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts w or w/o Account Team --></description>
+        <label><!-- Accounts w or w/o Account Team --></label>
+        <name>Accounts_w_or_w_o_Account_Team</name>
+        <sections>
+            <label><!-- Account Team --></label>
+            <name>Account Team</name>
+        </sections>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts w or w/o Oppty &amp; w or w/o Act on oppty --></description>
+        <label><!-- Accounts w or w/o Oppty &amp; w or w/o Act on oppty --></label>
+        <name>Accounts_w_or_w_o_Oppty_w_or_w_o_Act_on_oppty</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Activities on Opportunities --></label>
+            <name>Activities on Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts w or w/o activities --></description>
+        <label><!-- Accounts w or w/o activities --></label>
+        <name>Accounts_w_or_w_o_activities</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts w or w/o contacts --></description>
+        <label><!-- Accounts w or w/o contacts --></label>
+        <name>Accounts_w_or_w_o_contacts</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts w/ or w/out Activities --></description>
+        <label><!-- Accounts w/ or w/out Activities --></label>
+        <name>Accounts_w_or_w_out_Activities</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts w/ or w/out Address w/ Training &amp; Member --></description>
+        <label><!-- Accounts w/ or w/out Address w/ Training &amp; Member --></label>
+        <name>Accounts_w_or_w_out_Address_w_Training_Member</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Addresses --></label>
+            <name>Addresses</name>
+        </sections>
+        <sections>
+            <label><!-- Training and Memberships --></label>
+            <name>Training and Memberships</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts w/ or w/out Assets --></description>
+        <label><!-- Accounts w/ or w/out Assets --></label>
+        <name>Accounts_w_or_w_out_Assets</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts w/ or w/out Opportunities --></description>
+        <label><!-- Accounts w/ or w/out Opportunities --></label>
+        <name>Accounts_w_or_w_out_Opportunities</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts w orw/o opportunities --></description>
+        <label><!-- Accounts w orw/o opportunities --></label>
+        <name>Accounts_w_orw_o_opportunities</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with Account Owner History --></description>
+        <label><!-- Accounts with Account Owner History --></label>
+        <name>Accounts_with_Account_Owner_History</name>
+        <sections>
+            <label><!-- Account Owner History --></label>
+            <name>Account Owner History</name>
+        </sections>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with Account data --></description>
+        <label><!-- Accounts with Account data --></label>
+        <name>Accounts_with_Account_data</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Accounts (Account) --></label>
+            <name>Accounts (Account)</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with Account relationships and assets --></description>
+        <label><!-- Accounts with Account relationships and assets --></label>
+        <name>Accounts_with_Account_relationships_and_assets</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Relationships --></label>
+            <name>Relationships</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with Accounts Management Info --></description>
+        <label><!-- Accounts with Accounts Management Info --></label>
+        <name>Accounts_with_Accounts_Management_Info</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Accounts Management --></label>
+            <name>Accounts Management</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with Address and Contact data --></description>
+        <label><!-- Accounts with Address and Contact data --></label>
+        <name>Accounts_with_Address_and_Contact_data</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Addresses --></label>
+            <name>Addresses</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with Agreements --></description>
+        <label><!-- Accounts with Agreements --></label>
+        <name>Accounts_with_Agreements</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Agreements --></label>
+            <name>Agreements</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with Assets 2 --></description>
+        <label><!-- Accounts with Assets 2 --></label>
+        <name>Accounts_with_Assets_2</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with Assets &amp; Contacts --></description>
+        <label><!-- Accounts with Assets &amp; Contacts --></label>
+        <name>Accounts_with_Assets_Contacts</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with Assets &amp; Contacts (New) --></description>
+        <label><!-- Accounts with Assets &amp; Contacts (New) --></label>
+        <name>Accounts_with_Assets_Contacts_New</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with Assets Custom --></description>
+        <label><!-- Accounts with Assets Custom --></label>
+        <name>Accounts_with_Assets_Custom</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with Assets and Opportunities --></description>
+        <label><!-- Accounts with Assets and Opportunities --></label>
+        <name>Accounts_with_Assets_and_Opportunities</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with Assets and Opportunities SM --></description>
+        <label><!-- Accounts with Assets and Opportunities SM --></label>
+        <name>Accounts_with_Assets_and_Opportunities_SM</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with Contact, Asset, and Oppty --></description>
+        <label><!-- Accounts with Contact, Asset, and Oppty --></label>
+        <name>Accounts_with_Contact_Asset_and_Oppty</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with Contacts --></description>
+        <label><!-- Accounts with Contacts --></label>
+        <name>Accounts_with_Contacts</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with Contacts_Endress --></description>
+        <label><!-- Accounts with Contacts_Endress --></label>
+        <name>Accounts_with_Contacts_Endress</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with Contacts and Custom Address --></description>
+        <label><!-- Accounts with Contacts and Custom Address --></label>
+        <name>Accounts_with_Contacts_and_Custom_Address</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Addresses --></label>
+            <name>Addresses</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with Entitlements with Contacts --></description>
+        <label><!-- Accounts with Entitlements with Contacts --></label>
+        <name>Accounts_with_Entitlements_with_Contacts</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+        <sections>
+            <label><!-- Entitlements --></label>
+            <name>Entitlements</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with Notes --></description>
+        <label><!-- Accounts with Notes --></label>
+        <name>Accounts_with_Notes</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Content Documents --></label>
+            <name>Content Documents</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with Opportunities --></description>
+        <label><!-- Accounts with Opportunities --></label>
+        <name>Accounts_with_Opportunities</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts Opportunities Activities for pipeline --></description>
+        <label><!-- Accounts Opportunities Activities for pipeline --></label>
+        <name>Accounts_with_Opportunities_for_pipeline</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with Opportunities with 3rd Party Apps --></description>
+        <label><!-- Accounts with Opportunities with 3rd Party Apps --></label>
+        <name>Accounts_with_Opportunities_with_3rd_Party_Apps</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with Opportunities with Distributor Logs --></description>
+        <label><!-- Accounts with Opportunities with Distributor Logs --></label>
+        <name>Accounts_with_Opportunities_with_Distributor_Logs</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Distribution Logs --></label>
+            <name>Distribution Logs</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with Opportunities with Orders --></description>
+        <label><!-- Accounts with Opportunities with Orders --></label>
+        <name>Accounts_with_Opportunities_with_Orders</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Orders --></label>
+            <name>Orders</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with Opps, Assets and Activities --></description>
+        <label><!-- Accounts with Opps, Assets and Activities --></label>
+        <name>Accounts_with_Opps_Assets_and_Activities</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with Oppty and Contact --></description>
+        <label><!-- Accounts with Oppty and Contact --></label>
+        <name>Accounts_with_Oppty_and_Contact</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with Product Related Info --></description>
+        <label><!-- Accounts with Product Related Info --></label>
+        <name>Accounts_with_Product_Related_Info</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with Products --></description>
+        <label><!-- Accounts with Products --></label>
+        <name>Accounts_with_Products</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with QBO Optys --></description>
+        <label><!-- Accounts with QBO Optys --></label>
+        <name>Accounts_with_QBO_Optys</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with Relationships --></description>
+        <label><!-- Accounts with Relationships --></label>
+        <name>Accounts_with_Relationships</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Relationships --></label>
+            <name>Relationships</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with Renewal Last Modified --></description>
+        <label><!-- Accounts with Renewal Last Modified --></label>
+        <name>Accounts_with_Renewal_Last_Modified</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Renewals --></label>
+            <name>Renewals</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with Renewal Preference --></description>
+        <label><!-- Accounts with Renewal Preference --></label>
+        <name>Accounts_with_Renewal_Preference</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunity --></label>
+            <name>Opportunity</name>
+        </sections>
+        <sections>
+            <label><!-- Renewals --></label>
+            <name>Renewals</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with Users --></description>
+        <label><!-- Accounts with Users --></label>
+        <name>Accounts_with_Users</name>
+        <sections>
+            <label><!-- Account Owner History --></label>
+            <name>Account Owner History</name>
+        </sections>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with address &amp; order info --></description>
+        <label><!-- Accounts with address &amp; order info --></label>
+        <name>Accounts_with_address_order_info</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Addresses --></label>
+            <name>Addresses</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with asset &amp; contact information --></description>
+        <label><!-- Accounts with asset &amp; contact information --></label>
+        <name>Accounts_with_asset_contact_information</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with assets &amp; orders --></description>
+        <label><!-- Accounts with assets &amp; orders --></label>
+        <name>Accounts_with_assets_orders</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Quotes --></label>
+            <name>Quotes</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with cases --></description>
+        <label><!-- Accounts with cases --></label>
+        <name>Accounts_with_cases</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+        <sections>
+            <label><!-- Cases --></label>
+            <name>Cases</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with contact and address info --></description>
+        <label><!-- Accounts with contact and address info --></label>
+        <name>Accounts_with_contact_and_address_info</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Addresses --></label>
+            <name>Addresses</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with oppties &amp; quotes --></description>
+        <label><!-- Accounts with oppties &amp; quotes --></label>
+        <name>Accounts_with_oppties_quotes</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Quotes --></label>
+            <name>Quotes</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with or w/o opportunities --></description>
+        <label><!-- Accounts with or w/o opportunities --></label>
+        <name>Accounts_with_or_w_o_opportunities</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with or without Custom Address --></description>
+        <label><!-- Accounts with or without Custom Address --></label>
+        <name>Accounts_with_or_without_Custom_Address</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Addresses --></label>
+            <name>Addresses</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with or without Custom Address3 --></description>
+        <label><!-- Accounts with or without Custom Address3 --></label>
+        <name>Accounts_with_or_without_Custom_Address3</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Addresses --></label>
+            <name>Addresses</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with or without Training &amp; Memberships --></description>
+        <label><!-- Accounts with or without Training &amp; Memberships --></label>
+        <name>Accounts_with_or_without_Training_Membership</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Training and Memberships --></label>
+            <name>Training and Memberships</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with orders by state --></description>
+        <label><!-- Accounts with orders by state --></label>
+        <name>Accounts_with_orders_by_state</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with/without Custom Address --></description>
+        <label><!-- Accounts with/without Custom Address --></label>
+        <name>Accounts_withwithout_Custom_Address</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Addresses --></label>
+            <name>Addresses</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accs with Opps and/or Distributor logs --></description>
+        <label><!-- Accs with Opps and/or Distributor logs --></label>
+        <name>Accs_with_Opps_and_or_Distributor_logs</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Distribution Logs --></label>
+            <name>Distribution Logs</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Activities --></description>
+        <label><!-- Activities --></label>
+        <name>Activities</name>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Activities with Accounts and Contacts --></description>
+        <label><!-- Activities with Accounts and Contacts --></label>
+        <name>Activities_with_Accounts_and_Contacts</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Activities with User Details --></description>
+        <label><!-- Activities with User Details --></label>
+        <name>Activities_with_User_Details</name>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Activity Drill Down --></description>
+        <label><!-- Activity Drill Down --></label>
+        <name>Activity_Drill_Down</name>
+        <sections>
+            <label><!-- Activities (Created By) --></label>
+            <name>Activities (Created By)</name>
+        </sections>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Activity Drill Down2 --></description>
+        <label><!-- Activity Drill Down2 --></label>
+        <name>Activity_Drill_Down2</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Activity fields --></description>
+        <label><!-- Activity fields --></label>
+        <name>Activity_fields</name>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Address with accounts &amp; orders --></description>
+        <label><!-- Address with accounts &amp; orders --></label>
+        <name>Address_with_accounts_orders</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Addresses --></label>
+            <name>Addresses</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Quotes --></label>
+            <name>Quotes</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Addresses with Accounts, Oppty, Asset Data --></description>
+        <label><!-- Addresses with Accounts, Oppty, Asset Data --></label>
+        <name>Addresses_with_Accounts_Oppty_Asset_Data</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Addresses --></label>
+            <name>Addresses</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Addresses with Accounts and Contacts --></description>
+        <label><!-- Addresses with Accounts and Contacts --></label>
+        <name>Addresses_with_Accounts_and_Contacts</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Addresses --></label>
+            <name>Addresses</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Agreement Test --></description>
+        <label><!-- Agreement Test --></label>
+        <name>Agreement_with_Account_Data</name>
+        <sections>
+            <label><!-- Agreements --></label>
+            <name>Agreements</name>
+        </sections>
+        <sections>
+            <label><!-- Signed Agreement --></label>
+            <name>Signed Agreement</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Amount of users --></description>
+        <label><!-- Amount of users --></label>
+        <name>Amount_of_users</name>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Asset Test --></description>
+        <label><!-- Asset Test --></label>
+        <name>Asset_Test</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Assets --></description>
+        <label><!-- Assets --></label>
+        <name>Assets</name>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Assets with Opportunities and Products --></description>
+        <label><!-- Assets with Opportunities and Products --></label>
+        <name>AssetsOpptysProducts</name>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Assets Opptys and Products --></description>
+        <label><!-- Assets Opptys and Products --></label>
+        <name>Assets_Opptys_and_Products</name>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Assets and Optys --></description>
+        <label><!-- Assets and Optys --></label>
+        <name>Assets_and_Optys</name>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Assets and Product Lines --></description>
+        <label><!-- Assets and Product Lines --></label>
+        <name>Assets_and_Product_Lines</name>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Assets w/ Opportunities --></description>
+        <label><!-- Assets w/ Opportunities --></label>
+        <name>Assets_w_Opportunities</name>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Associations --></description>
+        <label><!-- Associations --></label>
+        <name>Associations</name>
+        <sections>
+            <label><!-- Training and Memberships --></label>
+            <name>Training and Memberships</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Audit History with Accounts --></description>
+        <label><!-- Audit History with Accounts --></label>
+        <name>Audit_History</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Audit History --></label>
+            <name>Audit History</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Australia_Shell_List --></description>
+        <label><!-- Australia_Shell_List --></label>
+        <name>Australia_Shell_List</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Billing Profiles --></description>
+        <label><!-- Billing Profiles --></label>
+        <name>Billing_Profiles</name>
+        <sections>
+            <label><!-- Billing Profiles --></label>
+            <name>Billing Profiles</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Campaign Activities --></description>
+        <label><!-- Campaign Activities --></label>
+        <name>Campaign_Activities</name>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Campaign w/ Campaign Owner --></description>
+        <label><!-- Campaign w/ Campaign Owner --></label>
+        <name>Campaign_w_Campaign_Owner</name>
+        <sections>
+            <label><!-- Campaigns (Campaign Owner) --></label>
+            <name>Campaigns (Campaign Owner)</name>
+        </sections>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Campaigns w/ Contacts w/ Activities --></description>
+        <label><!-- Campaigns w/ Contacts w/ Activities --></label>
+        <name>Campaigns_w_Contacts_w_Activities</name>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+        <sections>
+            <label><!-- Campaigns --></label>
+            <name>Campaigns</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Campaigns w/ Leads w/ or w/out Activities --></description>
+        <label><!-- Campaigns w/ Leads w/ or w/out Activities --></label>
+        <name>Campaigns_w_Leads_w_or_w_out_Activities</name>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+        <sections>
+            <label><!-- Campaigns --></label>
+            <name>Campaigns</name>
+        </sections>
+        <sections>
+            <label><!-- Leads --></label>
+            <name>Leads</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Cases and KM --></description>
+        <label><!-- Cases and KM --></label>
+        <name>Cases_and_KM</name>
+        <sections>
+            <label><!-- Articles --></label>
+            <name>Articles</name>
+        </sections>
+        <sections>
+            <label><!-- Cases --></label>
+            <name>Cases</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Cases and VOC Scores --></description>
+        <label><!-- Cases and VOC Scores --></label>
+        <name>Cases_and_VOC_Scores</name>
+        <sections>
+            <label><!-- Cases --></label>
+            <name>Cases</name>
+        </sections>
+        <sections>
+            <label><!-- VOC Survey Response --></label>
+            <name>VOC Survey Response</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Cases and Investigations --></description>
+        <label><!-- Cases and Investigations --></label>
+        <name>Cases_and_investigations</name>
+        <sections>
+            <label><!-- Cases --></label>
+            <name>Cases</name>
+        </sections>
+        <sections>
+            <label><!-- Investigations --></label>
+            <name>Investigations</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Cases with Attachments --></description>
+        <label><!-- Cases with Attachments --></label>
+        <name>Cases_with_Attachments</name>
+        <sections>
+            <label><!-- Cases --></label>
+            <name>Cases</name>
+        </sections>
+        <sections>
+            <label><!-- Content Documents --></label>
+            <name>Content Documents</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Cases with Case Comments --></description>
+        <label><!-- Cases with Case Comments --></label>
+        <name>Cases_with_Case_Comments</name>
+        <sections>
+            <label><!-- Case Comments --></label>
+            <name>Case Comments</name>
+        </sections>
+        <sections>
+            <label><!-- Cases --></label>
+            <name>Cases</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Cases with Surveys --></description>
+        <label><!-- Cases with Surveys --></label>
+        <name>Cases_with_Surveys</name>
+        <sections>
+            <label><!-- Cases --></label>
+            <name>Cases</name>
+        </sections>
+        <sections>
+            <label><!-- VOC Survey Response --></label>
+            <name>VOC Survey Response</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Cases with User Info --></description>
+        <label><!-- Cases with User Info --></label>
+        <name>Cases_with_User_Info</name>
+        <sections>
+            <label><!-- Cases --></label>
+            <name>Cases</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Cases without Articles --></description>
+        <label><!-- Cases without Articles --></label>
+        <name>Cases_without_Articles</name>
+        <sections>
+            <label><!-- Articles --></label>
+            <name>Articles</name>
+        </sections>
+        <sections>
+            <label><!-- Cases --></label>
+            <name>Cases</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Celle Contacts with Cases --></description>
+        <label><!-- Celle Contacts with Cases --></label>
+        <name>Celle_Contacts_with_Cases</name>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Chat lead Payroll Attach Research --></description>
+        <label><!-- Chat lead Payroll Attach Research --></label>
+        <name>Chat_lead_Payroll_Attach_Research</name>
+        <sections>
+            <label><!-- CallidusLogs --></label>
+            <name>CallidusLogs</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Chatter Groups with Group Feed --></description>
+        <label><!-- Chatter Groups with Group Feed --></label>
+        <name>Chatter_Groups_with_Group_Feed</name>
+        <sections>
+            <label><!-- Chatter Group Feed --></label>
+            <name>Chatter Group Feed</name>
+        </sections>
+        <sections>
+            <label><!-- Chatter Groups --></label>
+            <name>Chatter Groups</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Chatter Groups with Group Feed and Comments --></description>
+        <label><!-- Chatter Groups with Group Feed and Comments --></label>
+        <name>Chatter_Groups_with_Group_Feed_and_Comments</name>
+        <sections>
+            <label><!-- Chatter Group Feed --></label>
+            <name>Chatter Group Feed</name>
+        </sections>
+        <sections>
+            <label><!-- Chatter Groups --></label>
+            <name>Chatter Groups</name>
+        </sections>
+        <sections>
+            <label><!-- Comments --></label>
+            <name>Comments</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Chatter Groups with Group Members --></description>
+        <label><!-- Chatter Groups with Group Members --></label>
+        <name>Chatter_Groups_with_Group_Members</name>
+        <sections>
+            <label><!-- Chatter Group Members --></label>
+            <name>Chatter Group Members</name>
+        </sections>
+        <sections>
+            <label><!-- Chatter Groups --></label>
+            <name>Chatter Groups</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Comp Report Test --></description>
+        <label><!-- Comp Report Test --></label>
+        <name>Comp_Report_Test</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Comp report --></description>
+        <label><!-- Comp report --></label>
+        <name>Comp_report</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Compensation at Participant Level --></description>
+        <label><!-- Compensation at Participant Level --></label>
+        <name>Compensation_at_Participant_Level</name>
+        <sections>
+            <label><!-- Studies --></label>
+            <name>Studies</name>
+        </sections>
+        <sections>
+            <label><!-- Study Participants --></label>
+            <name>Study Participants</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Connect Now --></description>
+        <label><!-- Connect Now --></label>
+        <name>Connect_Now</name>
+        <sections>
+            <label><!-- Participants --></label>
+            <name>Participants</name>
+        </sections>
+        <sections>
+            <label><!-- Participants Check In/Out History --></label>
+            <name>Participants Check In/Out History</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Connect Weekly Studies --></description>
+        <label><!-- Connect Weekly Studies --></label>
+        <name>Connect_Weekly_Studies</name>
+        <sections>
+            <label><!-- Employee Study Time --></label>
+            <name>Employee Study Time</name>
+        </sections>
+        <sections>
+            <label><!-- Studies --></label>
+            <name>Studies</name>
+        </sections>
+        <sections>
+            <label><!-- Study Participants --></label>
+            <name>Study Participants</name>
+        </sections>
+        <sections>
+            <label><!-- Study Time --></label>
+            <name>Study Time</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Contact Client List --></description>
+        <label><!-- Contact Client List --></label>
+        <name>Contact_Client_List</name>
+        <sections>
+            <label><!-- Clients --></label>
+            <name>Clients</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Contact to Acct Report --></description>
+        <label><!-- Contact to Acct Report --></label>
+        <name>Contact_to_Acct_Report</name>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Contacts --></description>
+        <label><!-- Contacts --></label>
+        <name>Contacts</name>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Contacts / Cases / VOC --></description>
+        <label><!-- Contacts / Cases / VOC --></label>
+        <name>Contacts_Cases_VOC</name>
+        <sections>
+            <label><!-- Cases --></label>
+            <name>Cases</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+        <sections>
+            <label><!-- VOC Survey Response --></label>
+            <name>VOC Survey Response</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Contacts With Accounts --></description>
+        <label><!-- Contacts With Accounts --></label>
+        <name>Contacts_With_Accounts</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Contacts and account info --></description>
+        <label><!-- Contacts and account info --></label>
+        <name>Contacts_and_account_info</name>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Contacts with Campaigns History --></description>
+        <label><!-- Contacts with Campaigns History --></label>
+        <name>Contacts_with_Campaigns</name>
+        <sections>
+            <label><!-- Campaign History --></label>
+            <name>Campaign History</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Contacts with Clients --></description>
+        <label><!-- Contacts with Clients --></label>
+        <name>Contacts_with_Clients</name>
+        <sections>
+            <label><!-- Clients --></label>
+            <name>Clients</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Contacts with Last Modified Time --></description>
+        <label><!-- Contacts with Last Modified Time --></label>
+        <name>Contacts_with_Last_Modified_Time</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Contacts with Opportunities --></description>
+        <label><!-- Contacts with Opportunities --></label>
+        <name>Contacts_with_Opportunities</name>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Contacts with Oppty --></description>
+        <label><!-- Contacts with Oppty --></label>
+        <name>Contacts_with_Oppty</name>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Custom Address w Account and Contact --></description>
+        <label><!-- Custom Address w Account and Contact --></label>
+        <name>Custom_Address_w_Account_and_Contact</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Addresses --></label>
+            <name>Addresses</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- DTM reporting --></description>
+        <label><!-- DTM reporting --></label>
+        <name>DTM_reporting</name>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Dashboard Report --></description>
+        <label><!-- Dashboard Report --></label>
+        <name>Dashboard_Report</name>
+        <sections>
+            <label><!-- Dashboards --></label>
+            <name>Dashboards</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Delete Me Please --></description>
+        <label><!-- Delete Me Please --></label>
+        <name>Delete_Me_Please</name>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Delete me too (MM) --></description>
+        <label><!-- Delete me too (MM) --></label>
+        <name>Delete_me_too_MM</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunity (Historical) --></label>
+            <name>Opportunity (Historical)</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Delete this report (MM) --></description>
+        <label><!-- Delete this report (MM) --></label>
+        <name>Delete_this_report_MM</name>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Disti log &amp; Opportunities &amp; Assets &amp; Products --></description>
+        <label><!-- Disti log &amp; Opportunities &amp; Assets &amp; Products --></label>
+        <name>DistiLog_Opportunities_Assets_Products</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Distributor Logs --></description>
+        <label><!-- Distributor Logs --></label>
+        <name>Distributor_Logs</name>
+        <sections>
+            <label><!-- Distribution Logs --></label>
+            <name>Distribution Logs</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Error Time Frame --></description>
+        <label><!-- Error Time Frame --></label>
+        <name>Error_Time_Frame</name>
+        <sections>
+            <label><!-- Asset Feed --></label>
+            <name>Asset Feed</name>
+        </sections>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Files for Chatter Attachment --></description>
+        <label><!-- Files for Chatter Attachment --></label>
+        <name>Files_for_Chatter_Attachment</name>
+        <sections>
+            <label><!-- Files --></label>
+            <name>Files</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Firm Relationships and Address --></description>
+        <label><!-- Firm Relationships and Address --></label>
+        <name>Firm_Relationships_and_Address</name>
+        <sections>
+            <label><!-- Accounting Firm --></label>
+            <name>Accounting Firm</name>
+        </sections>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Addresses --></label>
+            <name>Addresses</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Fowler Attempt III Assets-Oppt --></description>
+        <label><!-- Fowler Attempt III Assets-Oppt --></label>
+        <name>Fowler_Attempt_III_Assets_Oppt</name>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Fowler Attempting to Create QBO Oppty Report --></description>
+        <label><!-- Fowler Attempting to Create QBO Oppty Report --></label>
+        <name>Fowler_Attempting_to_Create_QBO_Oppty_Report</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Fowler Attempting to Create QBO Oppty Report2 --></description>
+        <label><!-- Fowler Attempting to Create QBO Oppty Report2 --></label>
+        <name>Fowler_Attempting_to_Create_QBO_Oppty_Report2</name>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Fowler&apos;s Oppty Report with Oppty Team --></description>
+        <label><!-- Fowler&apos;s Oppty Report with Oppty Team --></label>
+        <name>Fowler_s_Oppty_Report_with_Oppty_Team</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunity Team --></label>
+            <name>Opportunity Team</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Gen2-Gen3 Migrations --></description>
+        <label><!-- Gen2-Gen3 Migrations --></label>
+        <name>Gen2_Gen3_Migrations</name>
+        <sections>
+            <label><!-- Gen2-3Migration --></label>
+            <name>Gen2-3Migration</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- GeneralKavreport --></description>
+        <label><!-- GeneralKavreport --></label>
+        <name>GeneralKavreport</name>
+        <sections>
+            <label><!-- General --></label>
+            <name>General</name>
+        </sections>
+        <sections>
+            <label><!-- General Versions --></label>
+            <name>General Versions</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- JM Accts with Assets and maybe Opptys and Products --></description>
+        <label><!-- JM Accts with Assets and maybe Opptys and Products --></label>
+        <name>JM_Accts_with_Assets_and_maybe_Opptys_and_Products</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- JM Assets with Products and Opptys --></description>
+        <label><!-- JM Assets with Products and Opptys --></label>
+        <name>JM_Assets_with_Products_and_Opptys</name>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- JM Opportunities with Assets and Products --></description>
+        <label><!-- JM Opportunities with Assets and Products --></label>
+        <name>JM_Opportunities_with_Assets_and_Products</name>
+        <sections>
+            <label><!-- Assets (Current Product) --></label>
+            <name>Assets (Current Product)</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities Fields --></label>
+            <name>Opportunities Fields</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- JM Opptys with Products and Assets --></description>
+        <label><!-- JM Opptys with Products and Assets --></label>
+        <name>JM_Opptys_with_Products</name>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- JPC AAC --></description>
+        <label><!-- JPC AAC --></label>
+        <name>JPC_AAC</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Addresses --></label>
+            <name>Addresses</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- JPC Addresses Accounts and Contact --></description>
+        <label><!-- JPC Addresses Accounts and Contact --></label>
+        <name>JPC_Addresses_Accounts_and_Contact</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Addresses --></label>
+            <name>Addresses</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- KM Article Usage for PCG --></description>
+        <label><!-- KM Article Usage for PCG --></label>
+        <name>KM_Article_Usage_for_PCG</name>
+        <sections>
+            <label><!-- Knowledge Articles --></label>
+            <name>Knowledge Articles</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- KM Articles with Views --></description>
+        <label><!-- KM Articles with Views --></label>
+        <name>KM_Articles_with_Views</name>
+        <sections>
+            <label><!-- Article View Statistics --></label>
+            <name>Article View Statistics</name>
+        </sections>
+        <sections>
+            <label><!-- Knowledge Articles --></label>
+            <name>Knowledge Articles</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- KM Keyword Search for PCG --></description>
+        <label><!-- KM Keyword Search for PCG --></label>
+        <name>KM_Keyword_Search_for_PCG</name>
+        <sections>
+            <label><!-- Knowledge Keyword Search --></label>
+            <name>Knowledge Keyword Search</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- KM Versions and Languages --></description>
+        <label><!-- KM Versions and Languages --></label>
+        <name>KM_Versions_and_Languages</name>
+        <sections>
+            <label><!-- Article View Statistics --></label>
+            <name>Article View Statistics</name>
+        </sections>
+        <sections>
+            <label><!-- Knowledge Article Versions --></label>
+            <name>Knowledge Article Versions</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Lead Opp Management --></description>
+        <label><!-- Lead Opp Management --></label>
+        <name>Lead_Opp_Management</name>
+        <sections>
+            <label><!-- Lead Opp Management --></label>
+            <name>Lead Opp Management</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Leads &amp; Tasks --></description>
+        <label><!-- Leads &amp; Tasks --></label>
+        <name>Leads_Tasks</name>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+        <sections>
+            <label><!-- Leads --></label>
+            <name>Leads</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Leads and Accts --></description>
+        <label><!-- Leads and Accts --></label>
+        <name>Leads_and_Accts</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Orders --></label>
+            <name>Orders</name>
+        </sections>
+        <sections>
+            <label><!-- Quotes --></label>
+            <name>Quotes</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Leads with Activities --></description>
+        <label><!-- Leads with Activities --></label>
+        <name>Leads_with_Activities</name>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+        <sections>
+            <label><!-- Leads --></label>
+            <name>Leads</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Leads with Campaigns --></description>
+        <label><!-- Leads with Campaigns --></label>
+        <name>Leads_with_Campaigns</name>
+        <sections>
+            <label><!-- Campaign History --></label>
+            <name>Campaign History</name>
+        </sections>
+        <sections>
+            <label><!-- Campaign Members --></label>
+            <name>Campaign Members</name>
+        </sections>
+        <sections>
+            <label><!-- Leads --></label>
+            <name>Leads</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Leads with LO Mgt --></description>
+        <label><!-- Leads with LO Mgt --></label>
+        <name>Leads_with_LO_Mgt</name>
+        <sections>
+            <label><!-- Lead Opp Management --></label>
+            <name>Lead Opp Management</name>
+        </sections>
+        <sections>
+            <label><!-- Leads --></label>
+            <name>Leads</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Leads with Manager --></description>
+        <label><!-- Leads with Manager --></label>
+        <name>Leads_with_Manager</name>
+        <sections>
+            <label><!-- Leads (Lead Owner) --></label>
+            <name>Leads (Lead Owner)</name>
+        </sections>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Leads with Owner with or without Activities --></description>
+        <label><!-- Leads with Owner with or without Activities --></label>
+        <name>Leads_with_Owner_with_or_without_Activities</name>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+        <sections>
+            <label><!-- Leads --></label>
+            <name>Leads</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Leads with user and lead history --></description>
+        <label><!-- Leads with user and lead history --></label>
+        <name>Leads_with_user_and_lead_history</name>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+        <sections>
+            <label><!-- Leads (Last Modified By) --></label>
+            <name>Leads (Last Modified By)</name>
+        </sections>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Leads with &amp; without activities report --></description>
+        <label><!-- Leads with &amp; without activities report --></label>
+        <name>Leads_with_without_activities_report</name>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+        <sections>
+            <label><!-- Leads --></label>
+            <name>Leads</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Leads wtih Product --></description>
+        <label><!-- Leads wtih Product --></label>
+        <name>Leads_wtih_Product</name>
+        <sections>
+            <label><!-- Leads --></label>
+            <name>Leads</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Lifetime Sales Cycle by Product --></description>
+        <label><!-- Lifetime Sales Cycle by Product --></label>
+        <name>Lifetime_Sales_Cycle_by_Product</name>
+        <sections>
+            <label><!-- Leads --></label>
+            <name>Leads</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- My Accounts w/Address --></description>
+        <label><!-- My Accounts w/Address --></label>
+        <name>My_Accounts_w_Address</name>
+        <sections>
+            <label><!-- Account Team --></label>
+            <name>Account Team</name>
+        </sections>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Addresses --></label>
+            <name>Addresses</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- New Account Search --></description>
+        <label><!-- New Account Search --></label>
+        <name>New_Account_Search</name>
+        <sections>
+            <label><!-- Clients --></label>
+            <name>Clients</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- No Bueno --></description>
+        <label><!-- No Bueno --></label>
+        <name>No_Bueno</name>
+        <sections>
+            <label><!-- Add Recipients --></label>
+            <name>Add Recipients</name>
+        </sections>
+        <sections>
+            <label><!-- Leads --></label>
+            <name>Leads</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opportunities &amp; Accounts &amp;Assets --></description>
+        <label><!-- Opportunities &amp; Accounts &amp;Assets --></label>
+        <name>Opportunities_Accounts_Assets</name>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opportunities/Activity/Quotes --></description>
+        <label><!-- Opportunities/Activity/Quotes --></label>
+        <name>Opportunities_Activity_Quotes</name>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Quotes --></label>
+            <name>Quotes</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opportunities &amp; Assets &amp; Products --></description>
+        <label><!-- Opportunities &amp; Assets &amp; Products --></label>
+        <name>Opportunities_Assets_Products</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opportunities and Opportunity Teams --></description>
+        <label><!-- Opportunities and Opportunity Teams --></label>
+        <name>Opportunities_and_Opportunity_Teams</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunity Team --></label>
+            <name>Opportunity Team</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opportunities and Opportunity Teams Sys Admin --></description>
+        <label><!-- Opportunities and Opportunity Teams Sys Admin --></label>
+        <name>Opportunities_and_Opportunity_Teams_Sys_Admin</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunity Team --></label>
+            <name>Opportunity Team</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opportunities and Product Data --></description>
+        <label><!-- Opportunities and Product Data --></label>
+        <name>Opportunities_and_Product_Data</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opportunities and Products --></description>
+        <label><!-- Opportunities and Products --></label>
+        <name>Opportunities_and_Products</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opportunities w or w/o activities --></description>
+        <label><!-- Opportunities w or w/o activities --></label>
+        <name>Opportunities_w_or_w_o_activities</name>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opportunities with Asset info --></description>
+        <label><!-- Opportunities with Asset info --></label>
+        <name>Opportunities_with_Asset_info</name>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Staging Object (Converted Asset) --></label>
+            <name>Staging Object (Converted Asset)</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Products with Opportunities &amp; Assets --></description>
+        <label><!-- Products with Opportunities &amp; Assets --></label>
+        <name>Opportunities_with_Assets</name>
+        <sections>
+            <label><!-- Assets(Original Product) --></label>
+            <name>Assets(Original Product)</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opportunities with Assets/Accounts --></description>
+        <label><!-- Opportunities with Assets/Accounts --></label>
+        <name>Opportunities_with_Assets_Accounts</name>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opportunities with Distribution Log --></description>
+        <label><!-- Opportunities with Distribution Log --></label>
+        <name>Opportunities_with_Distribution_Log</name>
+        <sections>
+            <label><!-- Distribution Logs --></label>
+            <name>Distribution Logs</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opportunities with Historical Trending --></description>
+        <label><!-- Opportunities with Historical Trending --></label>
+        <name>Opportunities_with_Historical_Trending</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunity (Historical) --></label>
+            <name>Opportunity (Historical)</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opportunities with Products &amp; Assets --></description>
+        <label><!-- Opportunities with Products &amp; Assets --></label>
+        <name>Opportunities_with_Products_Assets</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opportunities with Quote and Asset Information --></description>
+        <label><!-- Opportunities with Quote and Asset Information --></label>
+        <name>Opportunities_with_Quote_and_Asset_Information</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunity Team --></label>
+            <name>Opportunity Team</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opportunities with Stage history --></description>
+        <label><!-- Opportunities with Stage history --></label>
+        <name>Opportunities_with_Stage_history</name>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunity Owner Information --></label>
+            <name>Opportunity Owner Information</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opportunities with activities --></description>
+        <label><!-- Opportunities with activities --></label>
+        <name>Opportunities_with_activities</name>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opportunities with online orders --></description>
+        <label><!-- Opportunities with online orders --></label>
+        <name>Opportunities_with_online_orders</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Order Products --></label>
+            <name>Order Products</name>
+        </sections>
+        <sections>
+            <label><!-- Orders --></label>
+            <name>Orders</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opportunities with or without Assets --></description>
+        <label><!-- Opportunities with or without Assets --></label>
+        <name>Opportunities_with_or_without_Assets</name>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opportunities with &amp; without activities --></description>
+        <label><!-- Opportunities with &amp; without activities --></label>
+        <name>Opportunities_with_without_activities</name>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opportunity Lead Originator Data --></description>
+        <label><!-- Opportunity Lead Originator Data --></label>
+        <name>Opportunity_Lead_Originator_Data</name>
+        <sections>
+            <label><!-- Opportunities (Last Modified By) --></label>
+            <name>Opportunities (Last Modified By)</name>
+        </sections>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opportunity Product Detail Report for Fowler --></description>
+        <label><!-- Opportunity Product Detail Report for Fowler --></label>
+        <name>Opportunity_Product_Detail_Report_for_Fowler</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opportunity Team Member Report --></description>
+        <label><!-- Opportunity Team Member Report --></label>
+        <name>Opportunity_Team_Member_Report</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunity Team --></label>
+            <name>Opportunity Team</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opportunity Team Members --></description>
+        <label><!-- Opportunity Team Members --></label>
+        <name>Opportunity_Team_Members</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunity Team --></label>
+            <name>Opportunity Team</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opportunity deep dive --></description>
+        <label><!-- Opportunity deep dive --></label>
+        <name>Opportunity_deep_dive</name>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opportunity with Multiple Products &amp; Contact --></description>
+        <label><!-- Opportunity with Multiple Products &amp; Contact --></label>
+        <name>Opportunity_with_Multiple_Products_Contact</name>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Oppty Asset User --></description>
+        <label><!-- Oppty Asset User --></label>
+        <name>Oppty_Asset_User</name>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Oppty Created Role --></description>
+        <label><!-- Oppty Created Role --></label>
+        <name>Oppty_Created_Role</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Oppty Test --></description>
+        <label><!-- Oppty Test --></label>
+        <name>Oppty_Test</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Oppty, account, product1 --></description>
+        <label><!-- Oppty, account, product1 --></label>
+        <name>Oppty_account_product1</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Oppty and Contact Role --></description>
+        <label><!-- Oppty and Contact Role --></label>
+        <name>Oppty_and_Contact_Role</name>
+        <sections>
+            <label><!-- Contact Roles --></label>
+            <name>Contact Roles</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Oppty with Address --></description>
+        <label><!-- Oppty with Address --></label>
+        <name>Oppty_with_Address</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Address --></label>
+            <name>Address</name>
+        </sections>
+        <sections>
+            <label><!-- Billing Profiles --></label>
+            <name>Billing Profiles</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Oppty with Contact Role, Account and Contact --></description>
+        <label><!-- Oppty with Contact Role, Account and Contact --></label>
+        <name>Oppty_with_Contact_Role_Account_and_Contact</name>
+        <sections>
+            <label><!-- Contact Roles --></label>
+            <name>Contact Roles</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities (Primary Contact) --></label>
+            <name>Opportunities (Primary Contact)</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opptys Assets --></description>
+        <label><!-- Opptys Assets --></label>
+        <name>Opptys_Assets</name>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opptys with 3rd party products --></description>
+        <label><!-- Opptys with 3rd party products --></label>
+        <name>Opptys_with_3rd_party_products</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opptys with Activities --></description>
+        <label><!-- Opptys with Activities --></label>
+        <name>Opptys_with_Activities</name>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accts with Assets and maybe Opptys and Products --></description>
+        <label><!-- Accts with Assets and maybe Opptys and Products --></label>
+        <name>Opptys_with_Assets</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Opptys with Contact Role and Account --></description>
+        <label><!-- Opptys with Contact Role and Account --></label>
+        <name>Opptys_with_Contact_Role_and_Account</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Contact Roles --></label>
+            <name>Contact Roles</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Ops using email templates Test --></description>
+        <label><!-- Ops using email templates Test --></label>
+        <name>Ops_using_email_templates_Test</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Ops with products --></description>
+        <label><!-- Ops with products --></label>
+        <name>Ops_with_products</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Optys --></description>
+        <label><!-- Optys --></label>
+        <name>Optys</name>
+        <sections>
+            <label><!-- Contact Roles --></label>
+            <name>Contact Roles</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Optys w/ contact roles and activity history --></description>
+        <label><!-- Optys w/ contact roles and activity history --></label>
+        <name>Optys_w_contact_roles_and_activity_history</name>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+        <sections>
+            <label><!-- Contact Roles --></label>
+            <name>Contact Roles</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Order History --></description>
+        <label><!-- Order History --></label>
+        <name>Order_History</name>
+        <sections>
+            <label><!-- Orders (Created By) --></label>
+            <name>Orders (Created By)</name>
+        </sections>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Orders --></description>
+        <label><!-- Orders --></label>
+        <name>Orders</name>
+        <sections>
+            <label><!-- Orders --></label>
+            <name>Orders</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Orders from Leads --></description>
+        <label><!-- Orders from Leads --></label>
+        <name>Orders_from_Leads</name>
+        <sections>
+            <label><!-- Order Products --></label>
+            <name>Order Products</name>
+        </sections>
+        <sections>
+            <label><!-- Orders --></label>
+            <name>Orders</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Orders from Leads2 --></description>
+        <label><!-- Orders from Leads2 --></label>
+        <name>Orders_from_Leads2</name>
+        <sections>
+            <label><!-- User Provisioning Logs --></label>
+            <name>User Provisioning Logs</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Orders from Leads3 --></description>
+        <label><!-- Orders from Leads3 --></label>
+        <name>Orders_from_Leads3</name>
+        <sections>
+            <label><!-- Account Management --></label>
+            <name>Account Management</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Orders with Order Detail --></description>
+        <label><!-- Orders with Order Detail --></label>
+        <name>Orders_with_Order_Detail</name>
+        <sections>
+            <label><!-- Order Products --></label>
+            <name>Order Products</name>
+        </sections>
+        <sections>
+            <label><!-- Orders --></label>
+            <name>Orders</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Orders with Order Product Information --></description>
+        <label><!-- Orders with Order Product Information --></label>
+        <name>Orders_with_Order_Product_Information</name>
+        <sections>
+            <label><!-- Order Products --></label>
+            <name>Order Products</name>
+        </sections>
+        <sections>
+            <label><!-- Orders --></label>
+            <name>Orders</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Accounts with Opptys and Quotes --></description>
+        <label><!-- Accounts with Opptys and Quotes --></label>
+        <name>PTG_Test</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Orders --></label>
+            <name>Orders</name>
+        </sections>
+        <sections>
+            <label><!-- Quotes --></label>
+            <name>Quotes</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Parent and Child Accounts and Training Memberships --></description>
+        <label><!-- Parent and Child Accounts and Training Memberships --></label>
+        <name>Parent_and_Child_Accounts_and_Training_Memberships</name>
+        <sections>
+            <columns>
+                <label><!-- Child Account Description --></label>
+                <name>Child Account Description</name>
+            </columns>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Training and Membership --></label>
+            <name>Training and Membership</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Participant NDA --></description>
+        <label><!-- Participant NDA --></label>
+        <name>Participant_NDA</name>
+        <sections>
+            <label><!-- Participants --></label>
+            <name>Participants</name>
+        </sections>
+        <sections>
+            <label><!-- Study Participants --></label>
+            <name>Study Participants</name>
+        </sections>
+        <sections>
+            <label><!-- Study Time --></label>
+            <name>Study Time</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Participant NPS by Recruiter,verbatims --></description>
+        <label><!-- Participant NPS by Recruiter,verbatims --></label>
+        <name>Participant_NPS_by_Recruiter_verbatims</name>
+        <sections>
+            <label><!-- Participant Surveys Feedback --></label>
+            <name>Participant Surveys Feedback</name>
+        </sections>
+        <sections>
+            <label><!-- Studies --></label>
+            <name>Studies</name>
+        </sections>
+        <sections>
+            <label><!-- Study Participants --></label>
+            <name>Study Participants</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Product Sales Cycle from Opptys --></description>
+        <label><!-- Product Sales Cycle from Opptys --></label>
+        <name>Product_Sales_Cycle_from_Opptys</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Product and Contact Report --></description>
+        <label><!-- Product and Contact Report --></label>
+        <name>Product_and_Contact_Report</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Products Accounts Contacts --></description>
+        <label><!-- Products Accounts Contacts --></label>
+        <name>Products_Accounts_Contacts</name>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Products Search --></description>
+        <label><!-- Products Search --></label>
+        <name>Products_Search</name>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Contact Roles --></label>
+            <name>Contact Roles</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Products with opps (MM) --></description>
+        <label><!-- Products with opps (MM) --></label>
+        <name>Products_with_opps_MM</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Products with or without assets --></description>
+        <label><!-- Products with or without assets --></label>
+        <name>Products_with_or_without_assets</name>
+        <sections>
+            <label><!-- Assets (Current Product) --></label>
+            <name>Assets (Current Product)</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- QBOA-QBO Relationships --></description>
+        <label><!-- QBOA-QBO Relationships --></label>
+        <name>QBOA_QBO_Relationships</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+        <sections>
+            <label><!-- Clients --></label>
+            <name>Clients</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- QBOA-QBO Relationships via Contact Email --></description>
+        <label><!-- QBOA-QBO Relationships via Contact Email --></label>
+        <name>QBOA_QBO_Relationships_via_Contact_Email</name>
+        <sections>
+            <label><!-- Account Relationships --></label>
+            <name>Account Relationships</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- QBO SFDC (UGT) Reports for AAG Sales --></description>
+        <label><!-- QBO SFDC (UGT) Reports for AAG Sales --></label>
+        <name>QBO_SFDC_UGT_Reports_for_AAG_Sales</name>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Research --></description>
+        <label><!-- Research --></label>
+        <name>Quotes_w_leads</name>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+        <sections>
+            <label><!-- Quotes --></label>
+            <name>Quotes</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Related Accounts with Opptys --></description>
+        <label><!-- Related Accounts with Opptys --></label>
+        <name>Related_Accounts_with_Opptys</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Renewal Accounts with Renewal Activities --></description>
+        <label><!-- Renewal Accounts with Renewal Activities --></label>
+        <name>Renewal_Accounts_with_Renewal_Activities</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Reports &amp; Report Types with Usage --></description>
+        <label><!-- Reports &amp; Report Types with Usage --></label>
+        <name>Reports_Report_Types_with_Usage</name>
+        <sections>
+            <label><!-- Dashboard Components --></label>
+            <name>Dashboard Components</name>
+        </sections>
+        <sections>
+            <label><!-- Reports --></label>
+            <name>Reports</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Role Group Membership --></description>
+        <label><!-- Role Group Membership --></label>
+        <name>Role_Group_Membership</name>
+        <sections>
+            <label><!-- Group Members --></label>
+            <name>Group Members</name>
+        </sections>
+        <sections>
+            <label><!-- Groups (Last Modified By) --></label>
+            <name>Groups (Last Modified By)</name>
+        </sections>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Ron&apos;s Comp Report 8.5 --></description>
+        <label><!-- Ron&apos;s Comp Report 8.5 --></label>
+        <name>Ron_s_Comp_Report_8_5</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Ron&apos;s Op &amp; product --></description>
+        <label><!-- Ron&apos;s Op &amp; product --></label>
+        <name>Ron_s_Op_product</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- SFDC Contacts with Accounts and Address --></description>
+        <label><!-- SFDC Contacts with Accounts and Address --></label>
+        <name>SFDC_Contacts_with_Accounts_and_Address</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Addresses --></label>
+            <name>Addresses</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- SFDC Test with Opports and products with Assets --></description>
+        <label><!-- SFDC Test with Opports and products with Assets --></label>
+        <name>SFDC_Test_with_Opports_and_products_with_Assets</name>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunity Team --></label>
+            <name>Opportunity Team</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Sample Custom Addresses with Accounts &amp; Contacts --></description>
+        <label><!-- Sample Custom Addresses with Accounts &amp; Contacts --></label>
+        <name>Sample_Custom_Addresses_with_Accounts_Contacts</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Addresses --></label>
+            <name>Addresses</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Service Contracts with Contract Line Items --></description>
+        <label><!-- Service Contracts with Contract Line Items --></label>
+        <name>Service_Contracts_with_Contract_Line_Items</name>
+        <sections>
+            <label><!-- Contract Line Items --></label>
+            <name>Contract Line Items</name>
+        </sections>
+        <sections>
+            <label><!-- Service Contracts --></label>
+            <name>Service Contracts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Service Contracts with Entitlements --></description>
+        <label><!-- Service Contracts with Entitlements --></label>
+        <name>Service_Contracts_with_Entitlements</name>
+        <sections>
+            <label><!-- Entitlements --></label>
+            <name>Entitlements</name>
+        </sections>
+        <sections>
+            <label><!-- Service Contracts --></label>
+            <name>Service Contracts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Studies with Study Labs and Study Time --></description>
+        <label><!-- Studies with Study Labs and Study Time --></label>
+        <name>Studies_with_Study_Labs</name>
+        <sections>
+            <label><!-- Studies --></label>
+            <name>Studies</name>
+        </sections>
+        <sections>
+            <label><!-- Study Labs --></label>
+            <name>Study Labs</name>
+        </sections>
+        <sections>
+            <label><!-- Study Time --></label>
+            <name>Study Time</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Telesales VOC Surveys --></description>
+        <label><!-- Telesales VOC Surveys --></label>
+        <name>Telesales_VOC_Surveys</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- VOC Survey Response --></label>
+            <name>VOC Survey Response</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Template Report --></description>
+        <label><!-- Template Report --></label>
+        <name>Template_Report</name>
+        <sections>
+            <label><!-- Templates --></label>
+            <name>Templates</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Testing Account --></description>
+        <label><!-- Testing Account --></label>
+        <name>Testing_Account</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Tucson Accounts - JPC --></description>
+        <label><!-- Tucson Accounts - JPC --></label>
+        <name>Tucson_Accounts_JPC</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Upgrade Lookup Report Type --></description>
+        <label><!-- Upgrade Lookup Report Type --></label>
+        <name>Upgrade_Lookup_Report_Type</name>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- User / Case / KM --></description>
+        <label><!-- User / Case / KM --></label>
+        <name>User_Case_KM</name>
+        <sections>
+            <label><!-- Article View Statistics --></label>
+            <name>Article View Statistics</name>
+        </sections>
+        <sections>
+            <label><!-- Articles --></label>
+            <name>Articles</name>
+        </sections>
+        <sections>
+            <label><!-- Cases (Created By) --></label>
+            <name>Cases (Created By)</name>
+        </sections>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- User Data and Leads --></description>
+        <label><!-- User Data and Leads --></label>
+        <name>User_Data_and_Leads</name>
+        <sections>
+            <label><!-- Leads --></label>
+            <name>Leads</name>
+        </sections>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- User Hierarchy Report --></description>
+        <label><!-- User Hierarchy Report --></label>
+        <name>User_Hierarchy_Report</name>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Users / Accounts / Cases / VOC --></description>
+        <label><!-- Users / Accounts / Cases / VOC --></label>
+        <name>Users_Accounts_Cases</name>
+        <sections>
+            <label><!-- Accounts (Created By) --></label>
+            <name>Accounts (Created By)</name>
+        </sections>
+        <sections>
+            <label><!-- Cases --></label>
+            <name>Cases</name>
+        </sections>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+        <sections>
+            <label><!-- VOC Survey Response --></label>
+            <name>VOC Survey Response</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Users / Cases / VOC --></description>
+        <label><!-- Users / Cases / VOC --></label>
+        <name>Users_Cases</name>
+        <sections>
+            <label><!-- Cases (Case Owner) --></label>
+            <name>Cases (Case Owner)</name>
+        </sections>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+        <sections>
+            <label><!-- VOC Survey Response --></label>
+            <name>VOC Survey Response</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Users / Cases / Activities --></description>
+        <label><!-- Users / Cases / Activities --></label>
+        <name>Users_Cases_Activities</name>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+        <sections>
+            <label><!-- Cases (Created By) --></label>
+            <name>Cases (Created By)</name>
+        </sections>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Users/Cases/Investigation --></description>
+        <label><!-- Users/Cases/Investigation --></label>
+        <name>Users_Cases_Investigation</name>
+        <sections>
+            <label><!-- Cases (Created By) --></label>
+            <name>Cases (Created By)</name>
+        </sections>
+        <sections>
+            <label><!-- Investigations --></label>
+            <name>Investigations</name>
+        </sections>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Users / Contacts / Cases --></description>
+        <label><!-- Users / Contacts / Cases --></label>
+        <name>Users_Contacts_Cases</name>
+        <sections>
+            <label><!-- Cases --></label>
+            <name>Cases</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts (Created By) --></label>
+            <name>Contacts (Created By)</name>
+        </sections>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Users / Contacts / Cases / VOC --></description>
+        <label><!-- Users / Contacts / Cases / VOC --></label>
+        <name>Users_Contacts_Cases_VOC</name>
+        <sections>
+            <label><!-- Cases --></label>
+            <name>Cases</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts (Created By) --></label>
+            <name>Contacts (Created By)</name>
+        </sections>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+        <sections>
+            <label><!-- VOC Survey Response --></label>
+            <name>VOC Survey Response</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Users and Activities --></description>
+        <label><!-- Users and Activities --></label>
+        <name>Users_and_Activities</name>
+        <sections>
+            <label><!-- Activities (Created By) --></label>
+            <name>Activities (Created By)</name>
+        </sections>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Users and Case Last Modified By --></description>
+        <label><!-- Users and Case Last Modified By --></label>
+        <name>Users_and_Case_Last_Modified_By</name>
+        <sections>
+            <label><!-- Cases (Last Modified By) --></label>
+            <name>Cases (Last Modified By)</name>
+        </sections>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Users and Case Owner --></description>
+        <label><!-- Users and Case Owner --></label>
+        <name>Users_and_Case_Owner</name>
+        <sections>
+            <label><!-- Cases (Case Owner) --></label>
+            <name>Cases (Case Owner)</name>
+        </sections>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Users and Cases --></description>
+        <label><!-- Users and Cases --></label>
+        <name>Users_and_Cases</name>
+        <sections>
+            <label><!-- Cases --></label>
+            <name>Cases</name>
+        </sections>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Users and Cases 1 --></description>
+        <label><!-- Users and Cases 1 --></label>
+        <name>Users_and_Cases_1</name>
+        <sections>
+            <label><!-- Cases (Created By) --></label>
+            <name>Cases (Created By)</name>
+        </sections>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Users and Investigations --></description>
+        <label><!-- Users and Investigations --></label>
+        <name>Users_and_Investigations</name>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Users and VOC Scores --></description>
+        <label><!-- Users and VOC Scores --></label>
+        <name>Users_and_VOC_Scores</name>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+        <sections>
+            <label><!-- VOC Survey Response (Owner) --></label>
+            <name>VOC Survey Response (Owner)</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Users with Accounts --></description>
+        <label><!-- Users with Accounts --></label>
+        <name>Users_with_Accounts</name>
+        <sections>
+            <label><!-- Accounts (Account Owner) --></label>
+            <name>Accounts (Account Owner)</name>
+        </sections>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Users with Activities --></description>
+        <label><!-- Users with Activities --></label>
+        <name>Users_with_Activities</name>
+        <sections>
+            <label><!-- Activities (Assigned To) --></label>
+            <name>Activities (Assigned To)</name>
+        </sections>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Users with CallCenter settings --></description>
+        <label><!-- Users with CallCenter settings --></label>
+        <name>Users_with_CallCenter_settings</name>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Users with Cases --></description>
+        <label><!-- Users with Cases --></label>
+        <name>Users_with_Cases</name>
+        <sections>
+            <label><!-- Cases (Case Owner) --></label>
+            <name>Cases (Case Owner)</name>
+        </sections>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Users with Followers --></description>
+        <label><!-- Users with Followers --></label>
+        <name>Users_with_Followers</name>
+        <sections>
+            <label><!-- Followers --></label>
+            <name>Followers</name>
+        </sections>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Users with Manager --></description>
+        <label><!-- Users with Manager --></label>
+        <name>Users_with_Manager</name>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Users with Manager Info --></description>
+        <label><!-- Users with Manager Info --></label>
+        <name>Users_with_Manager_Info</name>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+        <sections>
+            <label><!-- Users (Manager) --></label>
+            <name>Users (Manager)</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Users with Permission Sets --></description>
+        <label><!-- Users with Permission Sets --></label>
+        <name>Users_with_Permission_Sets</name>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Users with User Feed --></description>
+        <label><!-- Users with User Feed --></label>
+        <name>Users_with_User_Feed</name>
+        <sections>
+            <label><!-- User Feed --></label>
+            <name>User Feed</name>
+        </sections>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Users with User Feed and Comments --></description>
+        <label><!-- Users with User Feed and Comments --></label>
+        <name>Users_with_User_Feed_and_Comments</name>
+        <sections>
+            <label><!-- Comments --></label>
+            <name>Comments</name>
+        </sections>
+        <sections>
+            <label><!-- User Feed --></label>
+            <name>User Feed</name>
+        </sections>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Users with leads --></description>
+        <label><!-- Users with leads --></label>
+        <name>Users_with_leads</name>
+        <sections>
+            <label><!-- Leads (Lead Owner) --></label>
+            <name>Leads (Lead Owner)</name>
+        </sections>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Users with opportunities --></description>
+        <label><!-- Users with opportunities --></label>
+        <name>Users_with_opportunities</name>
+        <sections>
+            <label><!-- Opportunities (Opportunity Owner) --></label>
+            <name>Opportunities (Opportunity Owner)</name>
+        </sections>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Users with or without SKUIDPageHistory --></description>
+        <label><!-- Users with or without SKUIDPageHistory --></label>
+        <name>Users_with_or_without_SKUIDPageHistory</name>
+        <sections>
+            <label><!-- SkuidPageHistory --></label>
+            <name>SkuidPageHistory</name>
+        </sections>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Parent and Child Accounts --></description>
+        <label><!-- Parent and Child Accounts --></label>
+        <name>VMC_Account_Parent_Test</name>
+        <sections>
+            <columns>
+                <label><!-- Child Account Description --></label>
+                <name>Child Account Description</name>
+            </columns>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- VMC Joined Report Test - Trainings --></description>
+        <label><!-- VMC Joined Report Test - Trainings --></label>
+        <name>VMC_Joined_Report_Test_Trainings</name>
+        <sections>
+            <label><!-- Training and Memberships --></label>
+            <name>Training and Memberships</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- VOC Account &amp; Opportunities --></description>
+        <label><!-- VOC Account &amp; Opportunities --></label>
+        <name>VOC_Account_Opportunities</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Sales VOC Responses --></label>
+            <name>Sales VOC Responses</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- VOC on Accounts --></description>
+        <label><!-- VOC on Accounts --></label>
+        <name>VOC_on_Accounts</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- VOC Survey Response --></label>
+            <name>VOC Survey Response</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Will this work --></description>
+        <label><!-- Will this work --></label>
+        <name>Will_this_work</name>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- 5 for 25 tasks --></description>
+        <label><!-- 5 for 25 tasks --></label>
+        <name>X5_for_25_tasks</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- account without address --></description>
+        <label><!-- account without address --></label>
+        <name>account_without_address</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Addresses --></label>
+            <name>Addresses</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- accounts and addresses 2 --></description>
+        <label><!-- accounts and addresses 2 --></label>
+        <name>accounts_and_addresses</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Addresses --></label>
+            <name>Addresses</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- accounts w/Sales VOC --></description>
+        <label><!-- accounts w/Sales VOC --></label>
+        <name>accounts_w_Sales_VOC</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- VOC Survey Response --></label>
+            <name>VOC Survey Response</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- Abbs accounts w/contacts/tasks/products --></description>
+        <label><!-- Abbs accounts w/contacts/tasks/products --></label>
+        <name>accounts_w_contacts_tasks_products</name>
+        <sections>
+            <label><!-- ACTIVITIES --></label>
+            <name>ACTIVITIES</name>
+        </sections>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- accounts with contacts with oppty --></description>
+        <label><!-- accounts with contacts with oppty --></label>
+        <name>accounts_with_contacts_with_oppty</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities (Primary Contact) --></label>
+            <name>Opportunities (Primary Contact)</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- activity &amp; campaign --></description>
+        <label><!-- activity &amp; campaign --></label>
+        <name>activity_campaign</name>
+        <sections>
+            <label><!-- Activities (Created By) --></label>
+            <name>Activities (Created By)</name>
+        </sections>
+        <sections>
+            <label><!-- Users --></label>
+            <name>Users</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- activity test --></description>
+        <label><!-- activity test --></label>
+        <name>activity_test</name>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+        <sections>
+            <label><!-- Campaign History --></label>
+            <name>Campaign History</name>
+        </sections>
+        <sections>
+            <label><!-- Contacts --></label>
+            <name>Contacts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- non-working report --></description>
+        <label><!-- non-working report --></label>
+        <name>non_working_report</name>
+        <sections>
+            <label><!-- Lead Opp Management --></label>
+            <name>Lead Opp Management</name>
+        </sections>
+        <sections>
+            <label><!-- Leads --></label>
+            <name>Leads</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- opp with products --></description>
+        <label><!-- opp with products --></label>
+        <name>opp_with_products</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- opportunity with tnps data --></description>
+        <label><!-- opportunity with tnps data --></label>
+        <name>opportunity_with_tnps_data</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- tNPS Survey Response --></label>
+            <name>tNPS Survey Response</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- asset, opty, product --></description>
+        <label><!-- asset, opty, product --></label>
+        <name>opps_product_asset</name>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- prod asset opps --></description>
+        <label><!-- prod asset opps --></label>
+        <name>prod_asset_opps</name>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- sample --></description>
+        <label><!-- sample --></label>
+        <name>sample</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- test campaign --></description>
+        <label><!-- test campaign --></label>
+        <name>test</name>
+        <sections>
+            <label><!-- Activities --></label>
+            <name>Activities</name>
+        </sections>
+        <sections>
+            <label><!-- Campaigns --></label>
+            <name>Campaigns</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- address test --></description>
+        <label><!-- address test --></label>
+        <name>test1</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Addresses --></label>
+            <name>Addresses</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- testAditya --></description>
+        <label><!-- testAditya --></label>
+        <name>testAditya</name>
+        <sections>
+            <label><!-- Accounts --></label>
+            <name>Accounts</name>
+        </sections>
+        <sections>
+            <label><!-- Assets --></label>
+            <name>Assets</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- test oppty --></description>
+        <label><!-- test oppty --></label>
+        <name>test_oppty</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Opportunity (Historical) --></label>
+            <name>Opportunity (Historical)</name>
+        </sections>
+    </reportTypes>
+    <reportTypes>
+        <description><!-- test1234 --></description>
+        <label><!-- test1234 --></label>
+        <name>testtest</name>
+        <sections>
+            <label><!-- Opportunities --></label>
+            <name>Opportunities</name>
+        </sections>
+        <sections>
+            <label><!-- Products --></label>
+            <name>Products</name>
+        </sections>
+    </reportTypes>
+</Translations>

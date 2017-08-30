@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts__r.Assets$Product_Name__c</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts__r.Assets$Name</field>
+    </columns>
+    <columns>
+        <field>Account$Territory__c</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts__r$FirstName</field>
+    </columns>
+    <columns>
+        <field>Account.Contacts__r$Phone</field>
+    </columns>
+    <currency>CAD</currency>
+    <filter>
+        <booleanFilter>1 and (2 or 3)</booleanFilter>
+        <criteriaItems>
+            <column>Account.Contacts__r.Assets$Product_Name__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>QBOA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Territory__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Quebec &amp; Maritimes</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Contacts__r$Phone</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>startsWith</operator>
+            <value>514,438,450,418,819,(514,(438,(450,(418,(819</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Quebec Accounts with QBOA</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Accounts_with_Assets_Contacts__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

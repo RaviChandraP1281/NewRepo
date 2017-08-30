@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <acrossGroupingContext>STATUS</acrossGroupingContext>
+        <calculatedFormula>RowCount/PARENTGROUPVAL(RowCount, BucketField_39927456, COLUMN_GRAND_SUMMARY)</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA2</developerName>
+        <downGroupingContext>BucketField_39927456</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Status Rate</masterLabel>
+        <scale>2</scale>
+    </aggregates>
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_39927456</developerName>
+        <masterLabel>Lead Type</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>Lead.Legacy_Treatment_Name__c</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Professional Web</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Schedule a call</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sign up for a webinar</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Try it Free</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY14 ProSeries Evals</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>ProSeries Eval - Default</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY15 ProSeries Pre-Order Eval</sourceValue>
+            </sourceValues>
+            <value>ProSeries Eval</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Web Lacerte Evals</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY14 Lacerte Eval</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Lacerte Eval - Default</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY15 Lacerte Pre-Order Eval</sourceValue>
+            </sourceValues>
+            <value>Lacerte Eval</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Lacerte Webinar</sourceValue>
+            </sourceValues>
+            <value>Lacerte Webinar</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>ProSeries Webinar</sourceValue>
+            </sourceValues>
+            <value>ProSeries Webinar</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>ACA Webinar</sourceValue>
+            </sourceValues>
+            <value>ACA Webinar</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>RT Web Lead</sourceValue>
+            </sourceValues>
+            <value>RT Web Lead</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>OWNER</field>
+    </columns>
+    <columns>
+        <field>RATING</field>
+    </columns>
+    <columns>
+        <field>COMPANY</field>
+    </columns>
+    <columns>
+        <field>PHONE</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <columns>
+        <field>STREET</field>
+    </columns>
+    <columns>
+        <field>CITY</field>
+    </columns>
+    <columns>
+        <field>STATE</field>
+    </columns>
+    <columns>
+        <field>ZIP</field>
+    </columns>
+    <currency>USD</currency>
+    <description>NATP leads come in to Siebel like eval leads. We are making the assumption that the majority of leads created on 6/11 - 6/12 are NATP.</description>
+    <filter>
+        <criteriaItems>
+            <column>Lead.Legacy_Treatment_Name__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Lacerte Eval - Default,ProSeries Eval - Default</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Lead_Originator__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Danielle Harris,Rita Elliot,Jermaine Feathers</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Thomas Pickens</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>STATUS</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_39927456</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Lead.Legacy_Treatment_Name__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>NATP Leads?</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LeadList</reportType>
+    <scope>org</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2015-06-26</startDate>
+    </timeFrameFilter>
+</Report>

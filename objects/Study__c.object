@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <webLinks>
+        <fullName>Send_Email</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Send Email</masterLabel>
+        <openType>noSidebar</openType>
+        <protected>false</protected>
+        <url>/apex/skuid__ui?page=ConfirmationandRemailderEmails&amp;study=&quot;{!Study__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Send_Kickoff</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Send Kickoff</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>/*SRS-239*/
+{!REQUIRESCRIPT(&quot;/soap/ajax/37.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/35.0/apex.js&quot;)} 
+function formatDate(input) {
+var datePart = input.match(/\d+/g);
+var day = datePart[2]
+var month = datePart[1]
+var year = datePart[0];
+return month + &apos;/&apos; + day + &apos;/&apos; + year;
+}
+
+var newLine = escape(&apos;\n&apos;); 
+/*
+* SRS- 698
+* Description - Enhance secondary contact functionality 
+* Start
+*/
+var studyDetail = sforce.connection.query(&quot;SELECT Name,Email__c,Secondary_Contact_Email__c,First_Name__c,Study_Number_of_Participants__c,Start_Date_of_Study__c,End_Date_of_Study__c,Goals_Learning__c,Participant_Attributes__c, Recruiter__r.Name,Notes__c from Study__c where id =&apos;{!Study__c.Id}&apos; LIMIT 1&quot;); 
+var studyRecord = studyDetail.getArray(&quot;records&quot;); 
+var study = studyRecord[0]; 
+var email = study.Email__c; 
+var secondEmail = study.Secondary_Contact_Email__c;
+//END
+if(study.Email__c !== null &amp;&amp; study.Email__c !== &apos;&apos;){ 
+var startDate =&apos;N/A&apos;; 
+if(study.Start_Date_of_Study__c !== null &amp;&amp; study.Start_Date_of_Study__c !== &apos;&apos;){ 
+startDate = formatDate(study.Start_Date_of_Study__c); 
+} 
+var endDate=&apos;N/A&apos;; 
+if(study.End_Date_of_Study__c !== null &amp;&amp; study.End_Date_of_Study__c !== &apos;&apos;){ 
+endDate = formatDate(study.End_Date_of_Study__c); 
+} 
+var noOfParticipant=&apos;N/A&apos;; 
+if(study.Study_Number_of_Participants__c !== null &amp;&amp; study.Study_Number_of_Participants__c !== &apos;&apos;){ 
+noOfParticipant = study.Study_Number_of_Participants__c; 
+noOfParticipant = noOfParticipant.replace(&apos;.0&apos;,&apos;&apos;);
+} 
+var goals =&apos;N/A&apos;; 
+if(study.Goals_Learning__c !== null &amp;&amp; study.Goals_Learning__c !== &apos;&apos;){ 
+goals = study.Goals_Learning__c; 
+} 
+var participantAttribute =&apos;N/A&apos;; 
+if(study.Participant_Attributes__c !== null &amp;&amp; study.Participant_Attributes__c !== &apos;&apos;){ 
+participantAttribute = study.Participant_Attributes__c; 
+} 
+var notes =&apos;N/A&apos;; 
+if(study.Notes__c !== null &amp;&amp; study.Notes__c !== &apos;&apos;){ 
+notes = study.Notes__c; 
+} 
+var subject = &apos;Recap: Kick Off - &apos;+study.Name; 
+var emailBody = &apos;Hi &apos;+ study.First_Name__c+&apos;, &apos;+newLine+newLine 
++&apos;Below is the summary from our &apos;+study.Name+&apos; &apos;+&apos;Kick-off Meeting. If you have anything to add, please feel free to get back with me.&apos;+newLine+newLine 
++&apos;Study Details:&apos;+newLine	
++&apos;•&apos;+&apos; &apos;+&apos;For full study details, please go to studio.intuit.com and click on My Studies.&apos;+newLine 
++&apos;•&apos;+&apos; &apos;+&apos;Session Dates: &apos;+startDate+&apos; to &apos;+endDate+newLine 
++&apos;•&apos;+&apos; &apos;+noOfParticipant +&apos; participants requested&apos;+newLine+newLine 
++&apos;Profile:&apos;+newLine 
++participantAttribute+newLine+newLine 
++&apos;Goals:&apos;+newLine 
++goals+newLine+newLine 
++&apos;Additional Notes:&apos;+newLine+newLine	
++&apos;Action Items and Next Steps:&apos;+newLine+newLine	
++&apos;Thank you,&apos;+newLine 
++study.Recruiter__r.Name+newLine+newLine;
+/*
+* SRS- 698
+* Description - Enhance secondary contact functionality 
+* Start
+*/
+if(secondEmail != null)	
+	window.location.href = &apos;mailto:&apos; + email + &apos;&amp;cc=&apos;+secondEmail+&apos;?subject=&apos; + subject + &apos;&amp;body=&apos; + emailBody; 
+else
+	window.location.href = &apos;mailto:&apos; + email +&apos;?subject=&apos; + subject + &apos;&amp;body=&apos; + emailBody; 
+//END
+}else{ 
+alert(&apos;No Email address found !&apos;); 
+}
+/*SRS-239*/</url>
+    </webLinks>
+    <webLinks>
+        <fullName>View_Schedule</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>View Schedule</masterLabel>
+        <openType>noSidebar</openType>
+        <protected>false</protected>
+        <url>/apex/skuid__ui?page=ScheduleViewPage&amp;study=&quot;{!Study__c.Id}</url>
+    </webLinks>
+</CustomObject>

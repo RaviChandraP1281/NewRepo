@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>To be used to send article links to customers</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Desktop_Data_Services</letterhead>
+    <name>QB Desktop - Article Links</name>
+    <style>freeForm</style>
+    <subject>Intuit QuickBooks Desktop Support - Link/s to Articles</subject>
+    <type>html</type>
+</EmailTemplate>

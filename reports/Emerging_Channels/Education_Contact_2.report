@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account.CAN__c</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Contact.AccountCAN__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>116026048,576396160,62334589,352176059,364906859,518704167,235574979,526078846,76792790,41875901,36965321,411769041,933842993,688511641,772085696,721813853,808553796,692479189,888829642,994071349,993846044,546341451,594492822,112735280,545441,621785,904643628,7738568274,967087243,969537330,875678501,251163215,7702339610,149705263,521943633,988659816,718729685,586585000,511870554,237323577,926702410,264170743,467657211,407830780,75105430,494708929,7701084745,357521583,462252451,693197948,502319632,212259760,381546416,219720553,122044139,538594256,36688667,160648857,519423273,644066466,371490602,464943740,701764144,217738362,801660343,181234843,7701323880,7768434022,688522637,878247658,565813672,451141699,394860894,73999877,322914521,534948107,749454294,994496886,65886201,824409824,507229606,275296151,881236622,529186619,453367344</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Education Contact 2</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContactList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

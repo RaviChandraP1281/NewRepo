@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Profile</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Profiles</value>
+    </caseValues>
+    <fields>
+        <label><!-- Auth Id --></label>
+        <name>Auth_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- FirstName --></label>
+        <name>FirstName__c</name>
+    </fields>
+    <fields>
+        <label><!-- HomePhone --></label>
+        <name>HomePhone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Home Phone Unformatted --></label>
+        <name>Home_Phone_Unformatted__c</name>
+    </fields>
+    <fields>
+        <label><!-- LastName --></label>
+        <name>LastName__c</name>
+    </fields>
+    <fields>
+        <label><!-- MobilePhone --></label>
+        <name>MobilePhone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Mobile Phone Unformatted --></label>
+        <name>Mobile_Phone_Unformatted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Phone --></label>
+        <name>Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- UserName --></label>
+        <name>UserName__c</name>
+    </fields>
+    <fields>
+        <label><!-- WorkPhone --></label>
+        <name>WorkPhone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Work Phone Unformatted --></label>
+        <name>Work_Phone_Unformatted__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

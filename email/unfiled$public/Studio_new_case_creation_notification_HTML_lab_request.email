@@ -1,0 +1,23 @@
+<Html>
+<body >
+<font face="Helvetica" >
+ Hi {!Case.OwnerFirstName}, <br/><br/>
+
+{!Case.Study_First_Name__c}  {!Case.Study_Last_Name__c} has submitted a study request. <br/><br/>
+
+<ul>
+<li>Customer Type: {!Case.Study_Customer_Segment__c} </li>
+<li>Start date: {!Case.Study_Start_Date__c} </li>
+<li>Type of study: {!Case.Study_Types__c}  </li>
+<li>Location of study: {!Case.Study_Location_of_Study__c}  </li>
+
+</ul>
+
+To assign this study <a href= {!Case.Link}>click here</a>.<br/><br/>
+
+Thank you.
+</font>
+</body>
+
+
+</Html>

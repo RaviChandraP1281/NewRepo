@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_81465779</developerName>
+        <masterLabel>Mini Team</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>OWNER</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Joria Ariola</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Kimberly Jane Bedio</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Romy Gerone Sutton</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Earlnov Pelias</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Charles Raymund Canedo</sourceValue>
+            </sourceValues>
+            <value>SME Charles</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Geralyn Oberes</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Honey Lynn Guiltiano</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Denver Mabala</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Nanjie Macalinga</sourceValue>
+            </sourceValues>
+            <value>SME Charity</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Glorymae Dio</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Joelive Asis</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Crissia Lapinig</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sophia Claire Paraguya</sourceValue>
+            </sourceValues>
+            <value>PM Arvin</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Jefferson Diaz</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Rose Rowin De Guzman</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Margie Evano</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Crystal Joy Subito</sourceValue>
+            </sourceValues>
+            <value>PM Eugene</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Mike Anthony Almedora</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Orebe David Parado</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Mary Joy Sanico</sourceValue>
+            </sourceValues>
+            <value>PM Celine</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>John Mark Anthony Quitangon</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Jonalyn Rodrigo</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Dhanie Corregidor</sourceValue>
+            </sourceValues>
+            <value>PM Dawn</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Maria Elisa Beth Abuda</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Maria Creste Velasco</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Charina Pauline Grace Germo</sourceValue>
+            </sourceValues>
+            <value>PM Aldrin</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#333333</backgroundColor1>
+        <backgroundColor2>#666666</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>HorizontalBarGrouped</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>BucketField_81465779</groupingColumn>
+        <legendPosition>Bottom</legendPosition>
+        <location>CHART_TOP</location>
+        <secondaryGroupingColumn>STATUS</secondaryGroupingColumn>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>true</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#FFFF66</textColor>
+        <textSize>12</textSize>
+        <title>♥ -•- Poison Ivy (Mini Team Cases) -•- ♥</title>
+        <titleColor>#FFFF66</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>CREATED_DATEONLY</field>
+    </columns>
+    <columns>
+        <field>OWNER</field>
+    </columns>
+    <columns>
+        <field>CASE_NUMBER</field>
+    </columns>
+    <columns>
+        <field>ORIGIN</field>
+    </columns>
+    <columns>
+        <field>AGE</field>
+    </columns>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>DESCRIPTION</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Charles Raymund Canedo,Gladys Cepe,Maria Elisa Beth Abuda,Mike Anthony Almedora,Joria Ariola,Joelive Asis,Kimberly Jane Bedio,Dhanie Corregidor,Rose Rowin De Guzman,Jefferson Diaz,Glorymae Dio,Margie Evano,Charina Pauline Grace Germo,Honey Lynn Guiltiano,Crissia Lapinig,Denver Mabala,Nanjie Macalinga,Geralyn Oberes,Orebe David Parado,Sophia Claire Paraguya,Earlnov Pelias,John Mark Anthony Quitangon,Jonalyn Rodrigo,Mary Joy Sanico,Crystal Joy Subito,Romy Gerone Sutton,Maria Creste Velasco</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>STATUS</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_81465779</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>TEAM POISON IVY - CASES</name>
+    <params>
+        <name>units</name>
+        <value>d</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>OWNER</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATEONLY</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

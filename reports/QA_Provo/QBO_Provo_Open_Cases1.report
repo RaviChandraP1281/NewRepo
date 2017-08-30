@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>User.Case$CreatedById$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>User.Case$CreatedById$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>User.Case$CreatedById$Origin</field>
+    </columns>
+    <columns>
+        <field>User.Case$CreatedById$Contact</field>
+    </columns>
+    <columns>
+        <field>User.Case$CreatedById$Product__c</field>
+    </columns>
+    <columns>
+        <field>User.Case$CreatedById$Subject</field>
+    </columns>
+    <columns>
+        <field>User$Division</field>
+    </columns>
+    <currency>USD</currency>
+    <description>reports all open cases at the Provo Frontier Site.</description>
+    <filter>
+        <criteriaItems>
+            <column>User$Division</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>SBCG Online Care-FTR-PVU</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$CreatedById$Status</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Closed</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Intuit Open Cases Frontier Provo</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Users_and_Cases_1__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>User.Case$CreatedById$CreatedDate</dateColumn>
+        <endDate>2015-10-30</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2015-07-01</startDate>
+    </timeFrameFilter>
+</Report>

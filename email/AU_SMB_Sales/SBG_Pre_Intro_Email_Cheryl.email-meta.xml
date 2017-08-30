@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>SBG Pre Intro Email (Cheryl)</name>
+    <style>none</style>
+    <subject>I&apos;m {!Contact.OwnerFirstName}. How can I help you get started with QuickBooks Online?</subject>
+    <textOnly>Expand your QuickBooks Online experience with these great apps
+
+View this email in your browser
+
+Businesses that help &apos;build up&apos; your business: Imagine that QuickBooks Online has a socket and our App Partners have plugs that connect straight to QuickBooks Online. With the ability for our software to talk behind the scenes, we can help manage your jobs, invoice your clients, and even track your pesky dockets/receipts so that you never miss a job expense again! At the end of a long day you won&apos;t have to sit down and type up your day&apos;s work...you can relax or spend time on your business, not your accounts.
+What is an App Partner? QuickBooks Online works with dozens of other software companies that provide services ranging from inventory, to receipt tracking, job management and so much more. Our App Partners are stand alone businesses with amazing products, but together we form a powerful network of systems that help power your business workflow! Meaning that you only have to enter data once, and all of your systems are synced!  To find out more about Apps and how they work for other tradies: click here.
+
+Located in Brisbane? We are hosting a tradie seminar with Service M8: Details here
+
+ServiceM8:
+Manage any field service business. Keep track of jobs and the work process from quote, scheduling, emails &amp; texts to job completion and invoicing.
+
+Receipt-Bank:
+Converts those annoying bits of paper - receipts and invoices - into online records!
+
+Find Out More
+
+Why connect apps to QuickBooks Online? Simply because by combining QuickBooks Online with Apps developed for your industry, you’ll be able to work more efficiently and get more done. QuickBooks Online and the Apps work together to help make running your business easier.
+
+If you would prefer to chat with a team member, please call us on 1800 917 771 and we will gladly help you get connected.
+
+Thanks!
+QuickBooks Online Team</textOnly>
+    <type>custom</type>
+</EmailTemplate>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>General__ka$ArticleNumber</field>
+    </columns>
+    <columns>
+        <field>General__ka.General__kav$Title</field>
+    </columns>
+    <columns>
+        <field>General__ka.General__kav$Child_Article_Region__c</field>
+    </columns>
+    <columns>
+        <field>General__ka.General__kav$PublishStatus</field>
+    </columns>
+    <columns>
+        <field>General__ka$MasterLanguage</field>
+    </columns>
+    <currency>USD</currency>
+    <description>We should not have the child article region tag on any of these articles.  That tag is only for translations, not for master articles.</description>
+    <filter>
+        <criteriaItems>
+            <column>General__ka.General__kav$IsMasterLanguage</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>General__ka.General__kav$PublishStatus</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>2</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Child Article Region Tag on Master</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>GeneralKavreport__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>General__ka.General__kav$Child_Article_Region__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>General__ka$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

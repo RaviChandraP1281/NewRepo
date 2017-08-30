@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Participants__c.Last_Name__c</field>
+    </columns>
+    <columns>
+        <field>Participants__c.Customer_Segment__c</field>
+    </columns>
+    <columns>
+        <field>Participants__c.Email__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Participants__c.Customer_Segment__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>includes</operator>
+            <value>Accountant</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Accountants Only</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Participants__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <endDate>2017-06-26</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2016-09-01</startDate>
+    </timeFrameFilter>
+</Report>

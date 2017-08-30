@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_94056787</developerName>
+        <masterLabel>TNPS</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>VOC_Survey_Response__c.Question_Response1__c</sourceColumnName>
+        <useOther>false</useOther>
+    </buckets>
+    <columns>
+        <field>FK_CASE_CREATED_DATEONLY</field>
+    </columns>
+    <columns>
+        <field>FK_CASE_CLOSED_DATEONLY</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_CREATED</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response6__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response9__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response3__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response4__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response1__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response2__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response5__c</field>
+    </columns>
+    <columns>
+        <field>FK_LAST_UPDATE_BY</field>
+    </columns>
+    <currency>USD</currency>
+    <description>For Jasper</description>
+    <filter>
+        <booleanFilter>(((1) OR 2) OR 3) OR 4</booleanFilter>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Abigail Bautista,Abraham David Bastro,Marian Ebron,Aljhoe Figuron,Bonifacio Jr Alcantara,Emarly Villapana,Alma Corazon Recalde,Jayson Cerezo,Diane Suzane Toraldo,Marjorie Amular,Angelo Cesa,Angelo Guevarra,Sandy Sario,Ma Elena Morante,Joshua Biag,Jessica Bongon,Edison Vinson,Judy Lyn Feliciano,Joselito Reyes,Apolo Tan</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Archiephil Lloyd Pableo,Ark Melton Tan,Emmanuel Basco,Benjamin Jr Aguirang,Carl Neth Charles Jabagat,Glacylyn Lizano,Carlo Divo Rogero,Carlo Jerome Juarez,Carlo Magno,Carmela Bilaro,Jaime Jr Bisa,Charrie Ann Mae Gabani,Jefferson Jacinto,Dennis Djinky Jr Avila,Elionile Desamparado,Donato Jr De Vera,stephen alcantara,Sharmaine Chen Ong,Emerald Docejo,Errol Mark Tudio</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Reginald Josef Intoy,Francis Alvin Florendo,Francis Delgado,Franz Marie Macoy,Gerald Paminiano,Jake Aligada,Jazzie Lee Carmie Muldong,Virginia Rol,Melissa Paracueles,Ron-Ron Manliclic,Teodoro III Paulin,Marlon Toscano,Johnnel Ferraer,Michael Vincent Andres,Jonah Espiritu,Katrina Salud Geslani,Kevin Paolo Quiogue,Kia Mae Magnifico,Vincent Calaminos,Patricia Louise Valeriano</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Louie Dela Cruz,mark allen zara,Mark Jezrel Derro,Mike Jemester Accad,Roel Layoso,Sheiryll Dumo,Renee Aristorenas,Roberto jr Imperial,Jerome Saramosing,Jose Julieto Jr Liboon,Paul Daryl Santos,Glen Johnson Opelac,Lovelyn Baquero,Venel Sison,Lorenze Gallano,Angelo Cesa,Osmar Cuna,Ceasar Ian Majait,Rosemarie Kaye Mata,Ruben Janer</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>NH VOC Report 39,40,41</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$VOC_Survey_Response__c@VOC_Survey_Response__c.CaseId__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>CUST_CREATED_DATE</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>FK_CASE_CREATED_DATEONLY</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

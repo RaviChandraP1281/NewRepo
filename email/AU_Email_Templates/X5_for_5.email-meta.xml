@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>5 for 5 - Introduction</name>
+    <style>none</style>
+    <subject>Our special offer for your firm</subject>
+    <textOnly>Intuit
+
+Your special offer
+
+A special offer just for you
+
+Hi {!Contact.FirstName},
+
+Thanks for taking the time to speak with me today.
+
+To recap on our conversation, QuickBooks Australia is currently running a limited time promotion specifically designed to help accountants and bookkeepers move to the cloud. This offer includes 10 Quickbooks Online Plus subscriptions for only $1 each for the life of the subscription.
+
+Due to the unique status of your firm, I&apos;m able to offer you 5 QuickBooks Online Plus subscriptions for $1 each per month. In addition, once you assign these 5 files to your small business clients, you&apos;ll be able to access another 5 files, also at $1 each. All you need to do is assign all 10 files within 6 months.
+
+To discuss this offer further or to proceed with the promotion, please call me directly on {!User.Phone} and we&apos;ll get started.
+
+Kind regards
+
+{!User.FirstName} {!User.LastName}</textOnly>
+    <type>custom</type>
+</EmailTemplate>

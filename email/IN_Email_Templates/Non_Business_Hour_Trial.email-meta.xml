@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to be sent every morning to Non Business Hour Trials</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Email to be sent every morning to Non Business Hour Trials</name>
+    <style>none</style>
+    <subject>Welcome to Quickbooks!</subject>
+    <textOnly>Intuit QuickBooks
+
+Welcome to Intuit QuickBooks!
+
+Dear {!Opportunity.Primary_Contact__c},
+Thank you for registering with QuickBooks, the world&apos;s #1 online accounting software for small businesses.
+I will be your account manager during your 30-day free trial. If you ever get stuck with QuickBooks, reply to this email or give us a call at {!User.MobilePhone}. We will resolve your queries, and also setup a product demo to walk you through the key features.
+
+With QuickBooks, you can:
+
+Create beautiful invoices and get paid faster
+
+Track who owes you money and send reminders
+
+Connect your bank online and track cash flows
+
+For complete list of QuickBook features
+
+Click Here
+
+We hope that you will enjoy using QuickBooks. Have an awesome day!
+{!User.Name}
+Quickbooks Consultant
+{!User.Email}
+{!User.MobilePhone}
+
+The terms and conditions of pricing for purchase and renewal of QuickBooks subscriptions may change without prior notice.
+© Intuit India Software Solutions Pvt. Ltd.</textOnly>
+    <type>custom</type>
+</EmailTemplate>

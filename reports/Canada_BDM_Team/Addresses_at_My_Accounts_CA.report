@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Company_ID__c</field>
+    </columns>
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account$Parent</field>
+    </columns>
+    <columns>
+        <field>Account.Addresses__r$Primary__c</field>
+    </columns>
+    <columns>
+        <field>Account.Addresses__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Addresses__r$City__c</field>
+    </columns>
+    <columns>
+        <field>Account.Addresses__r$State__c</field>
+    </columns>
+    <columns>
+        <field>Account.Addresses__r$Postal_Code__c</field>
+    </columns>
+    <columns>
+        <field>Account.Addresses__r$Country__c</field>
+    </columns>
+    <currency>USD</currency>
+    <format>Tabular</format>
+    <name>Addresses at My Accounts - CA</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Account_with_Custom_Address__c</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

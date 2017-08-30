@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_82749862</developerName>
+        <masterLabel>Team</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>OWNER</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Jason Tritle</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Amber Burton</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Maria Harris</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Michael Gentile</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Robert Randall</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Roland Carrion</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Tiffany Randall</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Victor Nolasco</sourceValue>
+            </sourceValues>
+            <value>PBR</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Michael Chavez</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Jonathan Lovitt</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>John Trammell</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Kimberly Gallahan</sourceValue>
+            </sourceValues>
+            <value>Lacerte</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Brian Curran</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Justin Evans</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Marc Freidberg</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Daniel Brommer</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Gerald Henry</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Corey Spear</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sharbel Abi-Habib</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Cynthia Thomas</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Tysinn Ghia</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Kashif Rasul</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Denita Connalley</sourceValue>
+            </sourceValues>
+            <value>ProSeries</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>LEAD_ID</field>
+    </columns>
+    <columns>
+        <field>Lead.Offer_Code__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Legacy_Campaign_Code__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Legacy_Treatment_Code__c</field>
+    </columns>
+    <columns>
+        <field>LEAD_SOURCE</field>
+    </columns>
+    <columns>
+        <field>COMPANY</field>
+    </columns>
+    <columns>
+        <field>PHONE</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>(1 AND 2) OR (1 AND 3) OR (1 AND 4)</booleanFilter>
+        <criteriaItems>
+            <column>OWNER_ROLE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>New Offerings</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Offer_Code__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>PS</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Legacy_Treatment_Code__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>PS</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Legacy_Campaign_Code__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>PS</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>STATUS</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_82749862</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>OWNER</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>PS Refund Transfer 4 Leads</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LeadList</reportType>
+    <scope>org</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2015-04-16</startDate>
+    </timeFrameFilter>
+</Report>

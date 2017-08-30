@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Lacerte - Nurture1</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Lacerte - Nurture1</name>
+    <style>none</style>
+    <subject>Tax Technology and the Digital Future</subject>
+    <textOnly>Dear {!Contact.Name},
+
+Hello! Hope all is well. I thought you&apos;d be interested in these articles about the impact of technology on the tax and accounting industry. You may find some insights that are relevant to your business. At minimum, these are trends to keep in mind as you think about the evolution of your practice.
+
+ Going Paperless Checklist: Part 1
+Most CPAs who go paperless later report they are glad they did. There are many ways to reduce the amount of paper your company consumes and stores, and the good news is this is not an &quot;all or nothing&quot; deal; if desired, you can implement measures gradually until you reach your goals. The checklist below, while certainly not a complete guide, provides tools, solutions and measures that can help kick-start your move toward a paperless environment...  
+  
+ Our Digital Future
+What does our Digital Future contain? Let&apos;s first throw out some big topics, and then do a deep dive on one or two. The following technologies will directly affect accounting in the near future: Big Data, Cloud Computing, On Demand Services, Virtualization, Consumerization, Gamification... 
+
+Lacerte® certainly has the tools to help take your practice digital. If you have any questions as you continue to learn about the product, don&apos;t hesitate to contact me.
+ 
+{!User.Name}
+Lacerte Tax Consultant
+{!User.Phone}
+{!User.Email}
+ 
+  
+IMPORTANT: Intuit respects the personal nature of email communication. Every effort is made to offer only information that may be of value to you or your business. If you do not wish to receive marketing email from Intuit in the future, please click here.
+
+If you have any questions or comments, please DO NOT REPLY to this email. Contact Customer Service at 800.765.7777 for assistance. If you receive an email message that appears to come from Intuit but that you suspect is a phishing email, please forward it immediately to spoof@intuit.com. Please visit http://security.intuit.com for additional security information.
+
+® 2012-2013 Intuit Inc. All rights reserved. Intuit, the Intuit logo are trademarks or registered trademarks and/or registered service marks of Intuit Inc. in the United States and other countries. All other marks are the property of their respective owners, should be treated as such, and may be registered in various jurisdictions.</textOnly>
+    <type>custom</type>
+</EmailTemplate>

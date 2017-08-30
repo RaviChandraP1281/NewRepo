@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>Opportunity.CAN__c</field>
+    </columns>
+    <columns>
+        <field>OPPORTUNITY_NAME</field>
+    </columns>
+    <columns>
+        <field>CALLTYPE</field>
+    </columns>
+    <columns>
+        <field>TASK_TYPE</field>
+    </columns>
+    <columns>
+        <field>Activity.Sub_Type__c</field>
+    </columns>
+    <currency>USD</currency>
+    <description>Non-unique attempts on Opportunities</description>
+    <filter>
+        <criteriaItems>
+            <column>Opportunity.Legacy_Treatment_Name__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>TY17 TAM,TY17 TAC,TY17 SAM,TY17 Field,SA -,TY17 PBR</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED_BY</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Jeff Becker,John Russo,Travis Wood,Nick Sabatino,Antoine McCoy,Kent Conway,Aaron Stroud,Caleb Goodman,Daniel Easterly,Meg Webster,Roy Tidwell,Stephanie VanHoose,Tom Patterson,Matthew Casarez,Zachary Goetz,Maxx Fippinger,Nathanial Hummel,Danielle Kaafarani,Cory McLaughlin,Ian Paul,Roman Pennell,Giovanni Pena,Jordan Eldridge,Annemarie Sullivan,Pierre Souffrant,Armando Flores,Victor Briceno,Eric Ferraris,Jonna Sonnier,Michael Mongaras,Elizabeth Laupus,Ben Duff,Ben Mitchell,Michael Maahs,Rick Lewis,Veronica Jackson,Assim Kazi,Donald Andre,Daniel Brown,Jesse Logan,Kevin Hatch,Keith Van Order,Lacey Bonnes,Melissa Merchant,Mike Silva,Norman Miosi,Craig O&apos;Dell,Ronald Williams,Sara Hoover,Anthony Hunt,Miguel Velez,Renata Smith,Van Ly,Rebecca Kurtz,Mac Badejo,Nana Sackey,Katiana Manous,Nikita Lyons,Todd Lanford,Travisa Durham,Sandra Marshall,Elizabeth Alozie</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>DUE_DATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CREATED_BY</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Cumulative Activity History for Blitz</name>
+    <params>
+        <name>closed</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>type</name>
+        <value>te</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityActivity</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>DUE_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2017-04-20</startDate>
+    </timeFrameFilter>
+</Report>

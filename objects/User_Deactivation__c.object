@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <fields>
+        <fullName>Days_Inactive__c</fullName>
+        <description>Number of days a User can be inactive before being deactivated</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Number of days a User can be inactive before being deactivated</inlineHelpText>
+        <label>Days Inactive</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+</CustomObject>

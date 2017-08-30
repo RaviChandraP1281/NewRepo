@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Batch Result</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Batch Results</value>
+    </caseValues>
+    <fields>
+        <label><!-- Error --></label>
+        <name>Error__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Mark Lock --></label>
+        <name>Is_Mark_Lock__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Update Success --></label>
+        <name>Is_Update_Success__c</name>
+    </fields>
+    <fields>
+        <label><!-- Object Id --></label>
+        <name>Object_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Update Mark Lock TimeStamp --></label>
+        <name>Update_Mark_Lock_TimeStamp__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

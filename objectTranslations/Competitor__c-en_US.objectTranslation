@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Competitor</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Competitors</value>
+    </caseValues>
+    <fields>
+        <help><!-- Name of the CEO --></help>
+        <label><!-- CEO --></label>
+        <name>CEO__c</name>
+    </fields>
+    <fields>
+        <label><!-- Competitive Product Family of Interest --></label>
+        <name>Comp_Product_Family_of_Interest__c</name>
+        <picklistValues>
+            <masterLabel>Assisted Payroll</masterLabel>
+            <translation><!-- Assisted Payroll --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Checks/Supplies</masterLabel>
+            <translation><!-- Checks/Supplies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIY Payroll</masterLabel>
+            <translation><!-- DIY Payroll --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hosting</masterLabel>
+            <translation><!-- Hosting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intuit Care Plans</masterLabel>
+            <translation><!-- Intuit Care Plans --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intuit Care Plans for QB Prior to 2011</masterLabel>
+            <translation><!-- Intuit Care Plans for QB Prior to 2011 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intuit Full Service Payroll (IFSP)</masterLabel>
+            <translation><!-- Intuit Full Service Payroll (IFSP) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intuit Online Payroll (IOP)</masterLabel>
+            <translation><!-- Intuit Online Payroll (IOP) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intuit Partner Platform</masterLabel>
+            <translation><!-- Intuit Partner Platform --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Merchant Account Services</masterLabel>
+            <translation><!-- Merchant Account Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pro Advisor</masterLabel>
+            <translation><!-- Pro Advisor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pro Tax Other</masterLabel>
+            <translation><!-- Pro Tax Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ProTax - Lacerte</masterLabel>
+            <translation><!-- ProTax - Lacerte --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ProTax - ProSeries</masterLabel>
+            <translation><!-- ProTax - ProSeries --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QB Accountants Edition</masterLabel>
+            <translation><!-- QB Accountants Edition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QB Connected Services</masterLabel>
+            <translation><!-- QB Connected Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QB Enterprise Solutions (QBES)</masterLabel>
+            <translation><!-- QB Enterprise Solutions (QBES) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QB Mac</masterLabel>
+            <translation><!-- QB Mac --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QB Point-of-Sale (POS)</masterLabel>
+            <translation><!-- QB Point-of-Sale (POS) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QB Pro/Premier</masterLabel>
+            <translation><!-- QB Pro/Premier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QuickBase</masterLabel>
+            <translation><!-- QuickBase --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QuickBooks Online (QBO)</masterLabel>
+            <translation><!-- QuickBooks Online (QBO) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SalesForce</masterLabel>
+            <translation><!-- SalesForce --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Competitor Logo --></label>
+        <name>Competitor_Logo__c</name>
+    </fields>
+    <fields>
+        <help><!-- The Competitors Key Weaknesses --></help>
+        <label><!-- Competitor Weaknesses --></label>
+        <name>Competitor_Weaknesses__c</name>
+    </fields>
+    <fields>
+        <help><!-- Number of Customers the Competitor has --></help>
+        <label><!-- # of Customers --></label>
+        <name>Customers__c</name>
+    </fields>
+    <fields>
+        <help><!-- Our Product or Service Advantages Over the Competitor --></help>
+        <label><!-- Our Advantages --></label>
+        <name>Our_Advantages__c</name>
+    </fields>
+    <fields>
+        <help><!-- Selling Tips against the Competitor --></help>
+        <label><!-- Selling Tips --></label>
+        <name>Selling_Tips__c</name>
+    </fields>
+    <fields>
+        <help><!-- Stock Ticker Symbol --></help>
+        <label><!-- Ticker Symbol --></label>
+        <name>Ticker_Symbol__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total View Count --></label>
+        <name>Total_View_Count__c</name>
+    </fields>
+    <fields>
+        <help><!-- The Year the Company was Founded --></help>
+        <label><!-- Year Founded --></label>
+        <name>Year_Founded__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_77803201</developerName>
+        <masterLabel>AU/ROW Split</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>OWNER</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Christian Dec Peler</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Richard Suarez</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Edan John Agnis</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>John Enrico Penaroya</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Paul Jay Segismar</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Marchan Valenn Mae</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Wendell Pastor</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Beonelyn Manilag</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Irene Grace Cabero</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Krezzia Rezyl Borgonia</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Cerchel Alviola</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Charmaine Mangco</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Rona Mae Jordan</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Shayne Talisay</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Ayrton Sumayod</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Rizma Albarote</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Harold Canono</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Mary Magdelene Dayag</sourceValue>
+            </sourceValues>
+            <value>AU</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Fermina Guingona</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Hazel Noel</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Lennel Fajardo</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Mark Emerson Braga</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Ma Justine Cabahug</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Francis Raymond Banan</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Vic Adrian Atuel</sourceValue>
+            </sourceValues>
+            <value>ROW</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>VerticalColumnGrouped</chartType>
+        <enableHoverLabels>true</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>BucketField_77803201</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_TOP</location>
+        <secondaryGroupingColumn>CREATED_DATEONLY</secondaryGroupingColumn>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>true</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>10</textSize>
+        <title>AU ROW raw ecase volume</title>
+        <titleColor>#000000</titleColor>
+        <titleSize>12</titleSize>
+    </chart>
+    <columns>
+        <field>OWNER</field>
+    </columns>
+    <columns>
+        <field>CASE_NUMBER</field>
+    </columns>
+    <columns>
+        <field>ORIGIN</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <columns>
+        <field>Case.AuthId__c</field>
+    </columns>
+    <columns>
+        <field>CONTACT.NAME</field>
+    </columns>
+    <columns>
+        <field>CONTACT.EMAIL</field>
+    </columns>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>Account.Country__c</field>
+    </columns>
+    <columns>
+        <field>DESCRIPTION</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>CLOSED_DATE</field>
+    </columns>
+    <columns>
+        <field>AGE</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Wendell Pastor,Marchan Valenn Mae,Lennel Fajardo,Hazel Noel,Fermina Guingona,John Enrico Penaroya,Christian Dec Peler,Beonelyn Manilag,Irene Grace Cabero,Krezzia Rezyl Borgonia,Ma Justine Cabahug,Shayne Talisay,Ayrton Sumayod,Rona Mae Jordan,Charmaine Mangco,Rizma Albarote,Toni Rose Robles,Noelle Ann Fabrigas,Marlita Cabaguing,Cielo Mae Tangian,Lydia Eliza Zabala,Maria Jessinda Rivera,Sheila Paran,Leah Grace Gumban,Joahna Pit Eyas,Yuki Galiste,Romelyn Manlang</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ORIGIN</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Chat</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_77803201</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CREATED_DATEONLY</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>.ecase raw for internal</name>
+    <params>
+        <name>units</name>
+        <value>d</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATEONLY</dateColumn>
+        <interval>INTERVAL_LASTWEEK</interval>
+    </timeFrameFilter>
+</Report>

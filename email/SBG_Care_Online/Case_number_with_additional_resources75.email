@@ -1,0 +1,44 @@
+Hello,
+
+Thanks so much for calling us. It was fantastic speaking with you and assisting you with this issue.
+
+Just a quick e-mail to let you know that I have created a case for your query.
+Your Case # {!Case.CaseNumber}
+
+If you need any further help with anything, please don't hesitate to contact Desktop Support:
+
+QuickBooks Desktop Pro/Premier Customer Service: 800-446-8848 
+QuickBooks Desktop Sales: 877-556-4407
+QuickBooks Desktop Payroll: 866-223-5562 
+
+We are just a call away, ready to help you.
+
+Additionally I wanted to provide these additional resources in lieu of you having to call. I hope they help and that you have a wonderful day!
+
+QUICKBOOKS DESKTOP 
+QuickBooks Desktop Support:  https://community.intuit.com/quickbooks-desktop 
+Getting Started:  https://community.intuit.com/browse/quickbooks-desktop-gettingstarted 
+Subscription & User Management:  https://community.intuit.com/browse/quickbooks-desktop-myaccount 
+Employees & Payroll: https://community.intuit.com/browse/quickbooks-desktop-payroll-selector-general 
+Company File Management:  https://community.intuit.com/browse/quickbooks-desktop-companyfile 
+Money In & Money Out:  https://community.intuit.com/browse/quickbooks-desktop-moneyin-moneyout 
+Manage Inventory:  https://community.intuit.com/browse/quickbooks-desktop-inventory 
+Banking & Bank Feeds:  https://community.intuit.com/browse/quickbooks-desktop-banking 
+Reports: https://community.intuit.com/browse/quickbooks-desktop-reports 
+Payroll Year End Center:  https://community.intuit.com/browse/quickbooks-desktop-payroll-selector-yearend 
+
+INTUIT PRODUCTS SUPPORT
+QuickBooks Training:  https://quickbookstraining.com  
+Customer Tutorials & Learning Hub:  http://quickbooks.intuit.com/tutorials/all-quickbooks-tutorials/     
+Intuit Support For All Products:  http://www.Intuit.com/support
+QuickBooks Support For All Products:  https://community.intuit.com/products/quickbooks-help-en-us
+Learn and Support:  https://help.quickbooks.intuit.com/en_US/contact
+QuickBooks Online Support:  https://community.intuit.com/quickbooks-online
+QuickBooks Desktop Support:  https://community.intuit.com/quickbooks-desktop 
+QuickBooks Accountant Support:  https://community.intuit.com/quickbooks-accountant-us-en 
+QuickBooks Self-Employed Support:  https://selfemployed.uservoice.com/knowledgebase  
+QuickBooks Payments (Merchant Services): http://support.intuit.com/payments/
+
+Sincerely,
+
+{!Case.Case_Owner_First_Name__c}

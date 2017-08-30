@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Order</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Orders</value>
+    </caseValues>
+    <fields>
+        <label><!-- BDOM --></label>
+        <name>BDOM__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Address --></label>
+        <name>BILLING_ADDRESS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Profile --></label>
+        <name>BILL_PROFILE_NAME__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Profile Id --></label>
+        <name>BILL_PROFILE_ROW_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Name --></label>
+        <name>BP_BANK_ACCOUNT_NAME__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Number --></label>
+        <name>BP_BANK_ACCOUNT_NUMBER__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Type --></label>
+        <name>BP_BANK_ACCOUNT_TYPE__c</name>
+    </fields>
+    <fields>
+        <label><!-- Routing Number --></label>
+        <name>BP_BANK_ROUTING_NUMBER__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expiration Date --></label>
+        <name>BP_EXPIRATION_DATE__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payment Method --></label>
+        <name>BP_PAYMENT_METHOD__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Account CAN --></label>
+        <name>Billing_Account_CAN__c</name>
+        <relationshipLabel><!-- Orders (Billing) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billing Profile Contact CACI --></label>
+        <name>Billing_Profile_Contact_CACI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Profile Contact First Name --></label>
+        <name>Billing_Profile_Contact_First_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Profile Contact Id --></label>
+        <name>Billing_Profile_Contact_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Profile Contact Last Name --></label>
+        <name>Billing_Profile_Contact_Last_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Profile Contact Name --></label>
+        <name>Billing_Profile_Contact_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Profile Contact Row Id --></label>
+        <name>Billing_Profile_Contact_Row_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Profile Last Updated --></label>
+        <name>Billing_Profile_Last_Updated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Profile Status --></label>
+        <name>Billing_Profile_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Profile Id --></label>
+        <name>Billing_Profile__c</name>
+        <relationshipLabel><!-- Orders --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Expiration Month --></label>
+        <name>CC_EXPIRATION_MONTH__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expiration Year --></label>
+        <name>CC_EXPIRATION_YEAR__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales Agent --></label>
+        <name>CREATED_BY__c</name>
+    </fields>
+    <fields>
+        <label><!-- Created Date --></label>
+        <name>CREATED__c</name>
+    </fields>
+    <fields>
+        <label><!-- Method --></label>
+        <name>CREDIT_CARD_TYPE__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Updated By --></label>
+        <name>LAST_UPDATED_BY__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Updated Date --></label>
+        <name>LAST_UPD__c</name>
+    </fields>
+    <fields>
+        <label><!-- License Number --></label>
+        <name>License_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Name on Credit Card --></label>
+        <name>NAME_ON_CREDIT_CARD__c</name>
+    </fields>
+    <fields>
+        <label><!-- Online Auth ID --></label>
+        <name>ORDER_CONTACT_AUTHID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>ORDER_CONTACT_EMAIL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact First Name --></label>
+        <name>ORDER_CONTACT_FIRST_NAME__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Last Name --></label>
+        <name>ORDER_CONTACT_LAST_NAME__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>ORDER_CONTACT_NAME__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Date --></label>
+        <name>ORDER_DATE__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Method --></label>
+        <name>ORDER_METHOD__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Number --></label>
+        <name>ORDER_NUMBER__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Status --></label>
+        <name>ORDER_STATUS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax Exempt --></label>
+        <name>ORDER_TAX_EXEMPT_FLAG__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Type --></label>
+        <name>ORDER_TYPE__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Account CAN --></label>
+        <name>ORD_BILL_ACCOUNT_CAN__c</name>
+    </fields>
+    <fields>
+        <label><!-- ORD_BILL_ACCOUNT_ID --></label>
+        <name>ORD_BILL_ACCOUNT_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Account --></label>
+        <name>ORD_BILL_ACCOUNT_NAME__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Account Realm Id --></label>
+        <name>ORD_BILL_ACCOUNT_REALM_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- ORD_PRI_ACCOUNT_ID --></label>
+        <name>ORD_PRI_ACCOUNT_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account --></label>
+        <name>ORD_PRI_ACCOUNT_NAME__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account Realm Id --></label>
+        <name>ORD_PRI_ACCOUNT_REALM_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- ORD_PRI_ACCOUNT_SFDCID --></label>
+        <name>ORD_PRI_ACCOUNT_SFDCID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Account CAN --></label>
+        <name>ORD_SERV_ACCOUNT_CAN__c</name>
+    </fields>
+    <fields>
+        <label><!-- ORD_SERV_ACCOUNT_ID --></label>
+        <name>ORD_SERV_ACCOUNT_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Account --></label>
+        <name>ORD_SERV_ACCOUNT_NAME__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Account Realm Id --></label>
+        <name>ORD_SERV_ACCOUNT_REALM_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shipping Account --></label>
+        <name>ORD_SHIPPING_ACCOUNT_NAME__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- Orders --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Order Contact CACI --></label>
+        <name>Order_Contact_CACI__c</name>
+    </fields>
+    <fields>
+        <label><!-- Account CAN --></label>
+        <name>Order_Primary_Account__c</name>
+        <relationshipLabel><!-- Orders --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Payment Term --></label>
+        <name>PAYMENT_TERM__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote Comment --></label>
+        <name>QUOTE_COMMENTS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote Name --></label>
+        <name>QUOTE_NAME__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote Number --></label>
+        <name>QUOTE_NUMBER__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity ID --></label>
+        <name>QUOTE_SFDC_OPTY_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote --></label>
+        <name>Quote__c</name>
+        <relationshipLabel><!-- Orders --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Return Reason --></label>
+        <name>RETURN_REASON__c</name>
+    </fields>
+    <fields>
+        <label><!-- ROW_ID --></label>
+        <name>ROW_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Account CAN --></label>
+        <name>Service_Account_CAN__c</name>
+        <relationshipLabel><!-- Orders (Shipping) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Shipping Account CAN --></label>
+        <name>Shipping_Account_CAN__c</name>
+        <relationshipLabel><!-- Orders --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Total --></label>
+        <name>TOTAL_AMOUNT__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subtotal --></label>
+        <name>TOTAL_EXT_CURRENT_CHARGE__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shipping --></label>
+        <name>TOTAL_EXT_NET_SHIPPING_CHARGE__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tax --></label>
+        <name>TOTAL_EXT_TAX_AMOUNT__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tokenized CC Number --></label>
+        <name>Tokenized_CC_Number__c</name>
+    </fields>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

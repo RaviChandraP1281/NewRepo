@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>WON:SUM/RowCount</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA1</developerName>
+        <isActive>false</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Oppty to Sale Conversion</masterLabel>
+        <scale>0</scale>
+    </aggregates>
+    <currency>USD</currency>
+    <description>Compare to Malove Report</description>
+    <filter>
+        <criteriaItems>
+            <column>STAGE_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Validate,Assess,Educate,Solution,Negotiate,Closed Won,Closed Lost</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED_ALIAS</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notContain</operator>
+            <value>Jalle,Camri,Jdulc,Jbudy,Bcolt,Hdenn,Tlind,Jlott,Amart,Dpenn,Mprob,Sroll,Dthor,JWill</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER_DIVISION</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>DS</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>STAGE_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>ROLLUP_DESCRIPTION</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>POS Oppts WoW</name>
+    <params>
+        <name>open</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunity</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

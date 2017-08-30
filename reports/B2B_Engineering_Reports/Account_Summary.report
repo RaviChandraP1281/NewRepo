@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_32995919</developerName>
+        <masterLabel>Created By</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>CREATED</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>PDIUser PDIUser</sourceValue>
+            </sourceValues>
+            <value>PDI User Account</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Data Migration</sourceValue>
+            </sourceValues>
+            <value>dmigr</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>PARENT.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.Customer_Type__c</field>
+    </columns>
+    <columns>
+        <field>Account.RelatedAddress__c</field>
+    </columns>
+    <columns>
+        <field>Account.Customer_Sub_Type__c</field>
+    </columns>
+    <columns>
+        <field>Account.Tax_Exempt__c</field>
+    </columns>
+    <columns>
+        <field>DUE_DATE</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATE</field>
+    </columns>
+    <currency>USD</currency>
+    <description>Account details report grouped by accounts owned by PDI user and other users</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_32995919</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Account Summary</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <endDate>2014-06-09</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2014-01-06</startDate>
+    </timeFrameFilter>
+</Report>

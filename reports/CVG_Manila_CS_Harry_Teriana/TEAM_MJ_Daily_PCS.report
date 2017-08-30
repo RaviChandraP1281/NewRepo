@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_40841772</developerName>
+        <masterLabel>Product Compliance</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>Case.Product__c</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Intuit Data Protect A La Carte Annual Subscription</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit Quickbooks</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks 90 Day Expert Support Plan</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Accountant</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Enterprise Solutions</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Enterprise Solutions Accountant</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Enterprise Solutions Full Service Plan</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks for Mac</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks NFR</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Plus</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Plus Annual Subscription</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Plus Monthly Subscription</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Point of Sale</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks ProAdvisor Membership Monthly</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks ProAdvisor Membership Annual</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Support Plan Annual - QB 2010 and Prior</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QuickBooks Online Essentials</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QuickBooks Online Plus</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QuickBooks Online Simple Start</sourceValue>
+            </sourceValues>
+            <value>With Product</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>HorizontalBarStacked</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>CREATED</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_TOP</location>
+        <secondaryGroupingColumn>BucketField_40841772</secondaryGroupingColumn>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>Case.Product__c</field>
+    </columns>
+    <columns>
+        <field>CASE_NUMBER</field>
+    </columns>
+    <columns>
+        <field>AGE</field>
+    </columns>
+    <columns>
+        <field>ORIGIN</field>
+    </columns>
+    <columns>
+        <field>OWNER</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATE_BY</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATEONLY</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Jedralf Lence Dolosa,Erickson Fulgado,Armin Emerson Galit,Maria Nelia Angela Jumao-as,Jelyn Mae Malones,Ricardo Pacio,Jeannine Padar,Lorraine Lu Remontal,John Paul Ronquillo,Cloid Lorenze Rosete,Ivy Lourdes Serrano,Raymond Valera,Rhea Marie Zoilo,Gerico Chavez,Wilven Saturre,Zaldino Arenas</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CREATED</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_40841772</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>TEAM Shyne Daily Product</name>
+    <params>
+        <name>units</name>
+        <value>d</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>AGE</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATEONLY</dateColumn>
+        <interval>INTERVAL_TODAY</interval>
+    </timeFrameFilter>
+</Report>

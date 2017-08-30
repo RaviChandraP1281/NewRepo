@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Comparing QBES to Pro and Premier</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Compare QBES Pro and Premier</name>
+    <style>none</style>
+    <subject>Comparing QBES to Pro and Premier</subject>
+    <textOnly>Untitled Document
+
+
+
+Dear {!Contact.FirstName}:
+
+Thank you  for your interest in Intuit QuickBooks Enterprise Solutions.  We are dedicated to providing leading edge,  easy to use business management solutions.
+
+QuickBooks  Enterprise Solutions 11.0 delivers the advanced functionality to meet complex  business needs, at a cost per user comparable to or even lower than QuickBooks Pro or Premier.
+
+You can have  a maximum of 3 users with QuickBooks Pro and 5 users with QuickBooks Premier.  Additional user licenses of QuickBooks Premier are available for $359.95 each.  The cost for a Premier 5 User license is $1,620.00. With QuickBooks Enterprise  Solutions, you start with 5 users.
+
+See how QuickBooks Enterprise Solutions cost of  ownership compares to your current QuickBooks software:
+
+
+Annual  Support, the QuickBooks Training DVD, and all the web-based services listed  above are included FREE as part of your first year Full Service Plan membership1.  In subsequent years, your 5 user Full Service Plan costs just $850 – which  includes your upgrade to the latest software version, plus all of the extras  listed above.
+
+When you add  up the Year 1 costs, along with typical services growing businesses like yours  need, Enterprise Solutions actually costs less per license compared to Pro 3 User or Premier  3 User.
+
+Thank you  again for your interest in QuickBooks Enterprise Solutions.  If you have any additional questions, please  don’t hesitate to contact me.
+
+Thank you,
+
+
+
+(1) The Full Service Plan is good    for 12 months from QuickBooks Enterprise Solutions purchase date or Full    Service Plan renewal date. You have the option to add web-based services for    free as an active FSP member.  Service begins as of the date    activated and continues through to the expiration date of your FSP    plan.  QuickBooks support is available 24 hours a day, seven days a    week; the Enterprise Solutions team (including our U.S.-based team of product    experts) is available weekdays from 4 A.M. - 7 P.M. Pacific time. Support    hours exclude occasional downtime due to system and server maintenance,    company events, observed U.S. holidays and events beyond our control. Intuit    reserves the right to limit each telephone contact to one hour and to one    incident. Active Full Service Plan members receive new version upgrades when    and if released within 12 months of QuickBooks Enterprise Solutions purchase    date or Full Service Plan renewal date. Terms, conditions, pricing, service    offerings, and availability of the Full Service Plan are subject to change at    any time without notice. U.S. only. See terms and conditions at www.qbes.com/terms
+
+This message was sent to inform you of a critical matter. Please    note that if you have chosen not to receive marketing messages from Intuit,    that choice applies only to promotional materials. You will continue to    receive critical notifications that are legally required or could affect your    service or software.
+
+Intuit Inc., Customer Communications, 2800 E. Commerce Center Place, Tucson,    AZ 85706
+
+Note: Terms, conditions, pricing, special offers, features, and service    options subject to change without notice
+
+Intuit respects the personal    nature of email and this email is in response to your request for additional    information.</textOnly>
+    <type>custom</type>
+</EmailTemplate>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>TechLocalization_Server@intuit.com</contactEmail>
+    <label>TranslationConnector</label>
+    <oauthConfig>
+        <callbackUrl>https://login.salesforce.com/services/oauth2/authorize
+https://login.salesforce.com/services/oauth2/token
+https://login.salesforce.com/services/oauth2/revoke</callbackUrl>
+        <consumerKey>3MVG9A2kN3Bn17huzSQSDmiKQmMagFD.Zi7zj.FwD_WlthVidztI9I.K4hXWa48bVgjyhlJfbuumx.XMv0VM2</consumerKey>
+        <scopes>Api</scopes>
+    </oauthConfig>
+</ConnectedApp>

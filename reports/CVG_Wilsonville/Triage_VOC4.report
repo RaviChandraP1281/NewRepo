@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_CASE_CLOSED_DATEONLY</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response1__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response2__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response3__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response4__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response5__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response6__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response7__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>1 or 2 or 3 or 4 or 5 or 6 or 7 or 8 or 9</booleanFilter>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Dallas Bowlin</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>ositadinma Egbukichi</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Weston Jeffords</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Matthew DIckenson</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Nhia Yang</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Tiffany Thrift</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Michael Toalston</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Kira Neldner</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Jason Deever</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FK_CREATED</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Triage VOC</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$VOC_Survey_Response__c@VOC_Survey_Response__c.CaseId__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>FK_NAME</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>FK_CASE_CREATED_DATEONLY</dateColumn>
+        <endDate>2016-03-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2016-03-01</startDate>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>oAuth2 Scopes</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>oAuth2 Scopes</value>
+    </caseValues>
+    <fields>
+        <label><!-- List Of Scopes --></label>
+        <name>List_Of_Scopes__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

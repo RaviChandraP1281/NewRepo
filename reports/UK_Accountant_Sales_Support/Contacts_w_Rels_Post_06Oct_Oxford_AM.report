@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>USERS.NAME</field>
+    </columns>
+    <columns>
+        <field>FK_CNTC_FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>1 AND 2 AND 3 AND (4 OR 5)</booleanFilter>
+        <criteriaItems>
+            <column>CUST_CREATED_DATE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>9/25/2014 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Country__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>United Kingdom</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Customer_Type__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Partner</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CNTC_ID</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>startsWith</operator>
+            <value>00003i000000rQLzi,003i000000rZ3CO,003i000000rZ4Qf,003i000000rZNsA,003i000000rZWIW,003i000000rb8Yd,003i000000rbgXX,003i000000rdzc3,003i000000re7N1,003i000000rekaD,003i000000rhI9e,003i000000rhIGQ,003i000000rhK6P,003i0000011dPQl,003i0000013Nzix,003i000001IuDac,003i000001Jjfsz,003i000001KekO1,003i000001L39II,003i000001LWm3p,003i000001LWm5l,003i000001LopiO</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CNTC_EMAIL</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>roger.price@aims.co.uk,bookkeeping@guineaservices.co.uk,niven@greenhalfandassociates.com,david@xlconsulting-asia.com,anna@balanceduk.co.uk,sanjay@moxieuklimited.co.uk,keith.lawrence@lawrenceyoung.co.uk,richardf@hhtsolutions.com,adiggle@erpaccountancy.co.uk,mail@limelight-accountancy.co.uk,tony@beaconsaccountancy.com,markb@crash-2000.com,anil@durrants.uk.com,peter@peterdell.co.uk,sean@mhiaccountants.co.uk,michele@crash-2000.com,jeremy.eastwood@aims.co.uk,joe.david@dsaccountancy.co.uk,jenna@regalenviron.co.uk,linda.lawrence@lawrenceyoung.co.uk,kevin.jarvis@lawrenceyoung.co.uk,mike@bookkeepers.org.uk</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>ACCOUNT.NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Contacts w/ Rels Post  06Oct/Oxford/AM</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountCustomEntity$Account_Relationship__c@Account_Relationship__c.Partner_Account_Contact__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>CUST_CREATED_DATE</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>DUE_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

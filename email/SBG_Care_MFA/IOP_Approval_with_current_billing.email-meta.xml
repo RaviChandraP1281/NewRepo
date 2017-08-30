@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>IOP - Approval with current billing</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Desktop_Data_Services</letterhead>
+    <name>IOP - Approval with current billing</name>
+    <style>freeForm</style>
+    <subject>Master Administrator Claim</subject>
+    <textOnly>{!Case.Contact},
+Regarding Company: {!Case.Account}
+
+Thank you for submitting documents regarding {!Case.Account} for the Master Administrator change.
+
+We are happy to inform you that your request to change the Master Administrator of your Intuit Online Payroll account has been approved.  You can sign in to Intuit Online Payroll (https://iop.intuit.com) using the Master Administrator&apos;s user ID and password to verify these changes and see if any other changes are required.
+ 
+If you have any further questions regarding this change, please contact support at (866) 729-2925.
+ 
+Sincerely,
+The Intuit Online Payroll Support Team</textOnly>
+    <type>html</type>
+</EmailTemplate>

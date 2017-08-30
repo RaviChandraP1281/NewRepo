@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Study Time</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Study Time</value>
+    </caseValues>
+    <fields>
+        <label><!-- End Time Only --></label>
+        <name>End_Time_Only__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Time --></label>
+        <name>End_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Request Type --></label>
+        <name>Request_Type__c</name>
+        <picklistValues>
+            <masterLabel>Office Hours</masterLabel>
+            <translation><!-- Office Hours --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Space Request</masterLabel>
+            <translation><!-- Space Request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Study Request</masterLabel>
+            <translation><!-- Study Request --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Time --></label>
+        <name>Start_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start time Only --></label>
+        <name>Start_time_Only__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Declined</masterLabel>
+            <translation><!-- Declined --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progerss</masterLabel>
+            <translation><!-- In Progerss --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Studio Lab --></label>
+        <name>StudioLab__c</name>
+        <relationshipLabel><!-- Study Time --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- StudyDateOnly --></label>
+        <name>StudyDateOnly__c</name>
+    </fields>
+    <fields>
+        <label><!-- Calendar Event Name --></label>
+        <name>Study_Lab__c</name>
+        <relationshipLabel><!-- Study Time --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Study Participant --></label>
+        <name>Study_Participant__c</name>
+        <relationshipLabel><!-- Study Time --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Test Sample Text --></label>
+        <name>Test_Sample_Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- TimeZone --></label>
+        <name>TimeZone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Calendar Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Participant Level</masterLabel>
+            <translation><!-- Participant Level --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Study Level</masterLabel>
+            <translation><!-- Study Level --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

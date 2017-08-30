@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <fullName>FirstName_dont_allow_special_characters</fullName>
+        <active>false</active>
+        <description>To let the User add special characters in Lead first name and disallow user entering only single special character.</description>
+        <errorConditionFormula>AND (NOT(REGEX(FirstName, &quot;^[A-Za-zÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ]+[A-Za-zÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ,\\-&apos; .]*+$&quot;)), NOT(CONTAINS( UPPER($User.Username), &quot;ONLINE&quot;)))</errorConditionFormula>
+        <errorMessage>First Name input you entered
+1) Characters other than letters and special characters {,-_&apos; .} OR
+2) Entered numbers OR
+3) Entered only single special character OR
+4) Did not enter any character.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>LEAD_First_Name_Required</fullName>
+        <active>true</active>
+        <description>A First Name is required on Leads</description>
+        <errorConditionFormula>ISBLANK( FirstName )</errorConditionFormula>
+        <errorDisplayField>FirstName</errorDisplayField>
+        <errorMessage>You must provide a First Name for the lead</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>LastName_dont_allow_special_characters</fullName>
+        <active>false</active>
+        <description>To let the User add special characters in Lead last name and disallow user entering only single special character</description>
+        <errorConditionFormula>AND (NOT(REGEX(LastName, &quot;^[A-Za-zÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ]+[A-Za-zÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ,\\-&apos; .]*+$&quot;)), NOT(CONTAINS( UPPER($User.Username), &quot;ONLINE&quot;)))</errorConditionFormula>
+        <errorMessage>Last Name input you entered
+1) Characters other than letters and special characters {,-_&apos; .} OR
+2) Entered numbers OR
+3) Entered only single special character OR
+4) Did not enter any character.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Lead_Status_Qualified</fullName>
+        <active>true</active>
+        <description>Prevent non-PCG profiles from selecting the Qualified picklist value</description>
+        <errorConditionFormula>AND(
+ISPICKVAL(Status, &apos;Qualified&apos;),
+OR(
+$Profile.Name = &apos;Sales Consultant&apos;,
+$Profile.Name = &apos;Global Sales&apos;,
+$Profile.Name = &apos;Global Account Management&apos;,
+$Profile.Name = &apos;US Account Management&apos;,
+$Profile.Name = &apos;India Global&apos;
+))</errorConditionFormula>
+        <errorMessage>Your sales group does not use Qualified for Lead Status. Please select another value.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Partner_Type_Required</fullName>
+        <active>false</active>
+        <description>Customer Sub-Type is a required field when the Customer Type is Partner.</description>
+        <errorConditionFormula>AND (ISPICKVAL(Customer_Type__c, &quot;Partner&quot;), ISBLANK(TEXT(Customer_Sub_Type__c)))</errorConditionFormula>
+        <errorMessage>Customer Sub-Type is a required field when Customer Type is a Partner.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Phone_and_Email_blank</fullName>
+        <active>true</active>
+        <description>Phone and Email cannot be blank.</description>
+        <errorConditionFormula>ISBLANK(Phone) &amp;&amp; ISBLANK(Email)</errorConditionFormula>
+        <errorMessage>Both Phone and Email cannot be blank. At least one is required.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Prevent_APD_Sales_Lead_Transfer</fullName>
+        <active>false</active>
+        <description>Prevents APD Sales Agents from transferring ownership of leads.</description>
+        <errorConditionFormula>NOT(ISNEW())
+&amp;&amp;
+AND ((  $UserRole.Name==&apos;APD Sales Rep&apos; ||
+$UserRole.Name==&apos;Standard User&apos; ), ISCHANGED(OwnerId))</errorConditionFormula>
+        <errorMessage>&quot;You are not allowed to change the ownership. Please contact your Manager to request transfer of ownership.&quot;</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Product_Family_of_Interest_Required</fullName>
+        <active>true</active>
+        <description>Product Family of Interest is required field for Standard Intuit Leads.</description>
+        <errorConditionFormula>IF( $RecordType.DeveloperName = &apos;Standard_Lead&apos;, ISPICKVAL(Product_Family_of_Interest__c, &apos;&apos;), false)</errorConditionFormula>
+        <errorDisplayField>Product_Family_of_Interest__c</errorDisplayField>
+        <errorMessage>Product Family of Interest is required.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>QBES_Lead_Source_Required</fullName>
+        <active>false</active>
+        <description>Lead Source is required field for QBES implementation</description>
+        <errorConditionFormula>IF( $RecordType.DeveloperName = &apos;QBES_Leads&apos;, ISPICKVAL(LeadSource, &apos;&apos;), false)</errorConditionFormula>
+        <errorDisplayField>LeadSource</errorDisplayField>
+        <errorMessage>Lead Source is required.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Reject_Reason_is_Required</fullName>
+        <active>true</active>
+        <description>Lead Reject Reason is required when Lead Status = &apos;Rejected&apos;.</description>
+        <errorConditionFormula>IF(ISPICKVAL(Status, &quot;Rejected&quot;), ISPICKVAL(Retire_Reason__c, &apos;&apos;), false)</errorConditionFormula>
+        <errorDisplayField>Retire_Reason__c</errorDisplayField>
+        <errorMessage>Retire/Reject Reason is required when the Lead Status is &apos;Rejected&apos;.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Treatment_Code_Required_for_PCG_Referral</fullName>
+        <active>true</active>
+        <description>If Lead Source is Referral and PFOI is ProTax, Treatment Code is required.</description>
+        <errorConditionFormula>AND (
+     ISPICKVAL(LeadSource, &apos;Referral&apos;),
+OR (
+     ISPICKVAL(Product_Family_of_Interest__c, &apos;ProTax - EasyACCT&apos;),
+     ISPICKVAL(Product_Family_of_Interest__c, &apos;ProTax - ITO&apos;),
+     ISPICKVAL(Product_Family_of_Interest__c, &apos;ProTax - Lacerte&apos;),     
+     ISPICKVAL(Product_Family_of_Interest__c, &apos;ProTax - ProFile&apos;),     
+     ISPICKVAL(Product_Family_of_Interest__c, &apos;ProTax - ProSeries&apos;),     
+     ISPICKVAL(Product_Family_of_Interest__c, &apos;Pro Tax Other&apos;)),
+     ISBLANK(Legacy_Treatment_Code__c)
+)</errorConditionFormula>
+        <errorMessage>Treatment Code is required when Lead Source is Referral and PFOI is a &quot;ProTax&quot; Product.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>AltavistaNews</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>true</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>true</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Altavista News</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>true</showsLocation>
+        <showsStatus>true</showsStatus>
+        <url>http://news.altavista.com/search?nc=0&amp;q={!Lead_Company}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Change_Status</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Change Status</masterLabel>
+        <openType>sidebar</openType>
+        <page>LeadMassStatusUpdate</page>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+    </webLinks>
+    <webLinks>
+        <fullName>Convert</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Convert</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>//BTBE-121 Added JS code for Convert button to open Convert Lead page in subtab when in console.
+		{!REQUIRESCRIPT(&quot;/support/console/30.0/integration.js&quot;)}
+		{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/apex.js&quot;)}
+     
+           var openSubtab = function openSubtab(result) {
+           //Now that we have the primary tab ID, we can open a new subtab in it
+           var primaryTabId = result.id;
+           sforce.console.openSubtab(primaryTabId ,url, true, null, null);
+           };
+
+           try {
+                var url = &apos;/apex/LeadConversion?id={!Lead.Id}&apos;;
+                if (sforce.console.isInConsole()) {
+                     sforce.console.getEnclosingPrimaryTabId(openSubtab);
+                } else {
+                     window.location.href = url;
+                }
+           }
+           catch(e) {
+           alert(&apos;An error occurred.\n&apos; + e.message);
+           }</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleMaps</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google Maps</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://maps.google.com/maps?f=q&amp;hl=en&amp;q={!Lead_Street}+{!Lead_City}+{!Lead_State}&amp;om=1</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleNews</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google News</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://www.google.com/news?&amp;q={!Lead_Company}&amp;btnG=Search+News</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleSearch</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google Search</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://www.google.com/search?q={!Lead_Company}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>HooversProfile</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>true</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>true</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Hoovers Profile</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>true</showsLocation>
+        <showsStatus>true</showsStatus>
+        <url>http://search.hoovers.com/cgi-bin/hol_search?which=company&amp;query_string={!Lead_Company}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Lead_Link</fullName>
+        <availability>online</availability>
+        <description>Salesforce to Siebel link</description>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Lead Link</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://siebel.intuit.com/crmsso/start.swe?SWECmd=GotoView&amp;SWEView=My+Leads+View&amp;SWERF=1&amp;SWEHo=siebel.intuit.com&amp;SWEBU=1&amp;SWEApplet0=Lead+List+Applet&amp;SWERowId0={!Lead.Siebel_Lead_ID__c}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Mass_Email_Leads</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Mass Email Leads</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/ui/massmail/MassMailStageManager?setupid=MassMailFilter&amp;mm_type=Lead&amp;wizardRetUrl=%2F00Q%2Fo</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Lead</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>New</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>window.location.href = &apos;00Q/e?retURL=/00Q/o&amp;00Nf0000000aoAZ=APAC&amp;00Nf0000000aoAt=India&apos;;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_QBO_Order</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>New QBO Order</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/28.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/xdomain/xdomain.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/support/console/28.0/integration.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/28.0/apex.js&quot;)}
+{!REQUIRESCRIPT(&quot;//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js&quot;)} 
+
+try{    
+
+$(&apos;.customMessage&apos;).remove();
+var LeadId=&apos;{!Lead.Id}&apos;;
+var leadCountry = &apos;{!Lead.Country__c}&apos;;
+ /**
+ * ──────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+ * Start BTBS-5518 : validation on the ‘New QBO Order’ of Lead page to not allow user to proceed further if the   
+ *  Product Family of Interest is not equal to QuickBooks Online (QBO)
+ * Developer: Prerna Purwar
+ * ──────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+ **/
+var productFamily=&apos;{!Lead.Product_Family_of_Interest__c}&apos;;
+
+if(productFamily==&apos;QuickBooks Online (QBO)&apos;){
+//End BTBS-5518 
+var url = &apos;/apex/OnlineSalesCatalogSkuid?LeadId=&apos; + LeadId + &apos;&amp;country=&apos; + leadCountry;
+
+if(typeof(srcUp) == &apos;function&apos;) //Checks that it is in console
+{ 
+var openSubtab = function(result){ 
+sforce.console.openSubtab(result.id,url + &apos;&amp;inConsole=true&apos;, true, &apos;New QBO Order&apos;, null); 
+}; 
+sforce.console.getEnclosingPrimaryTabId(openSubtab); 
+
+} 
+else{ 
+window.open(url + &apos;&amp;inConsole=false&apos;,  &quot;_self&quot;);
+}
+//Start BTBS-5518 
+}
+else{
+alert (&apos;QBO order could not be placed for product family: .&apos;+productFamily);
+}
+//End BTBS-5518 
+}
+catch(e){
+  alert (&apos;Your request could not be completed, Please try again later.&apos;);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>PCG_New_Lead</fullName>
+        <availability>online</availability>
+        <description>Utilizes new skuid layout</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>PCG New Lead</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/skuid__ui?page=PCG_LeadQual&amp;id={!Lead.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Place_Online_Order</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>New QBO Order</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/24.0/apex.js&quot;)}
+{!REQUIRESCRIPT(&quot;/xdomain/xdomain.js&quot;)}
+{!REQUIRESCRIPT(&quot;/support/console/28.0/integration.js&quot;)}
+{!REQUIRESCRIPT(&apos;/js/functions.js&apos;)}
+{!REQUIRESCRIPT(&apos;/resource/jQueryForPopup/jQuery/jquery-1.8.2.min.js&apos;)}
+{!REQUIRESCRIPT(&apos;/resource/jQueryForPopup/jQuery/ui/jquery-ui-1.9.1.custom.min.js&apos;)}
+
+requireCssFile(&apos;/resource/jQueryForPopup/jQuery/ui/css/ui-lightness/jquery-ui-1.9.1.custom.min.css&apos;);
+
+function requireCssFile(filename) {
+    var fileref = document.createElement(&apos;link&apos;);
+    fileref.setAttribute(&apos;rel&apos;, &apos;stylesheet&apos;);
+    fileref.setAttribute(&apos;type&apos;, &apos;text/css&apos;);
+    fileref.setAttribute(&apos;href&apos;, filename);
+    document.getElementsByTagName(&apos;head&apos;)[0].appendChild(fileref);
+}
+
+var onlineSubsModalDialog;
+try {	
+	var j$ = jQuery.noConflict();
+	var leadId = &apos;{!Lead.Id}&apos;;
+	var leadCountry = &apos;{!Lead.Country__c}&apos;;
+    var productFamily = &apos;{!Lead.Product_Family_of_Interest__c}&apos;;
+    var payrollEligibleCountries = new Set(&apos;{!$Label.OnlineSales_LeadPayrollCountries}&apos;.split(&quot;,&quot;));
+	var isPayrollAvailable = &apos;{!$Label.OnlineSales_ActiveLeadPayroll}&apos;.toLowerCase() == &apos;true&apos;;
+	if (productFamily == &apos;QuickBooks Online (QBO)&apos;) {
+		if(!payrollEligibleCountries.has(leadCountry)){
+			var url = &apos;/apex/OnlineSalesCatalogSkuid?LeadId=&apos; + leadId + &apos;&amp;country=&apos; + leadCountry;
+			var tabString = &apos;New QBO Order&apos;;
+				if (typeof(srcUp) == &apos;function&apos;){ //Checks that it is in console
+					var openSubtab = function(result) {
+						sforce.console.openSubtab(result.id, url + &apos;&amp;inConsole=true&apos;, true, tabString, null);
+					};
+					sforce.console.getEnclosingPrimaryTabId(openSubtab);
+			}else{
+				parent.window.location = url;
+			}
+		}else{
+
+				onlineSubsModalDialog = j$(&apos;&lt;div id=&quot;subPopup&quot; style=&quot;width: 350px;height: 190px;&quot;&gt;&lt;div&gt;&lt;div style=&quot;font-size:24px;&quot;&gt;Place Online Order&lt;/div&gt;&lt;/div&gt;&lt;br/&gt;&lt;div&gt;&lt;div style=&quot;padding-left:30px;&quot;&gt;&lt;b&gt;What would you like to order?&lt;/b&gt;&lt;/div&gt;&lt;div style=&quot;padding-left: 40px;&quot;&gt;&lt;div style=&quot;padding-top: 10px;padding-bottom: 5px;&quot;&gt;&lt;input type=&quot;radio&quot; name=&quot;user_selection&quot; value=&quot;qbo+p&quot; checked=&quot;checked&quot;&gt;QBO only or QBO + Payroll bundle&lt;/div&gt;&lt;div&gt;&lt;input type=&quot;radio&quot; name=&quot;user_selection&quot; value=&quot;qbop&quot;&gt;Attach payroll to existing QBO&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div style=&quot;float:right;padding-top:15px&quot;&gt;&lt;input type=&quot;button&quot; style=&quot;cursor: pointer;background-color: white;border: 1px solid lightgray;width: 75px;height: 33px;color: rgb(0, 119, 197); border-radius: 3px;&quot; onclick=&quot;jQuery.noConflict()(\&apos;#subPopup\&apos;).dialog(\&apos;destroy\&apos;).remove();&quot; value=&quot;Cancel&quot;/&gt;&amp;nbsp;&lt;input id=&quot;nextClick&quot; type=&quot;button&quot; style=&quot;cursor: pointer;background-color: rgb(0, 119, 197);border: rgb(0, 119, 197);width: 75px;height: 33px;color: white; border-radius: 3px;&quot;  value=&quot;Next&quot;/&gt;&lt;/div&gt;&lt;/div&gt;&apos;)
+				.dialog({
+					autoOpen: true,
+					resizable: false,
+					height: 240,
+					width: 380,
+					escapeClose: true,
+					modal: true,
+					draggable: true,
+
+						open: function(event, ui) {
+										j$(&quot;.ui-dialog-titlebar.ui-widget-header.ui-corner-all.ui-helper-clearfix&quot;).remove();
+										j$(&quot;#subPopup html&quot;).css(&apos;margin-top&apos;, &apos;-20px&apos;);
+										j$(&quot;#subPopup html&quot;).css(&apos;height&apos;, &apos;170px&apos;);
+										j$(&quot;#subPopup&quot;).prepend(&quot;&lt;div style=&apos;cursor:pointer;color:#393a3d;float:right;font-size:16px;font-weight:bold;&apos;onClick=jQuery.noConflict()(&apos;#subPopup&apos;).dialog(&apos;destroy&apos;).remove()&gt;X&lt;/div&gt;&quot;);
+										j$(&apos;#subPopup&apos;).css(&apos;overflow&apos;, &apos;hidden&apos;); 
+										j$(&apos;#subPopup&apos;).css(&apos;background&apos;, &apos;white&apos;);
+
+							}
+			});
+		}
+	}else{
+		alert(&apos;Online order could not be placed for product family: &apos; + productFamily);
+	}
+	j$(&quot;#subPopup&quot;).css(&apos;height&apos;, &apos;170px&apos;);
+	j$(&quot;#nextClick&quot;).click(function(){
+			var selectedValues = jQuery.noConflict()(&apos;input[name=&quot;user_selection&quot;]:checked&apos;).val();
+			var leadId = &apos;{!Lead.Id}&apos;;
+			var leadCountry = &apos;{!Lead.Country__c}&apos;;
+			var url=&apos;&apos;;
+			var tabString = &apos;&apos;;
+			if(selectedValues===&apos;qbo+p&apos;){
+				url = &apos;/apex/OnlineSalesCatalogSkuid?LeadId=&apos; + leadId + &apos;&amp;country=&apos; + leadCountry;
+				tabString = &apos;New QBO Order&apos;;
+			}else if(selectedValues===&apos;qbop&apos;){
+				var url = &apos;/apex/OnlineSalesIncludeAddOn?lead=&apos; + leadId + &apos;&amp;from=lead&apos;;
+				tabString = &apos;New Payroll AddOn&apos;
+			}
+			if (typeof(srcUp) == &apos;function&apos;){ //Checks that it is in console
+				var openSubtab = function(result) {
+					sforce.console.openSubtab(result.id, url + &apos;&amp;inConsole=true&apos;, true, tabString, null);
+				};
+				sforce.console.getEnclosingPrimaryTabId(openSubtab);
+			
+			} else {
+				parent.window.location = url;
+			}
+			jQuery.noConflict()(&apos;#subPopup&apos;).dialog(&apos;destroy&apos;).remove();
+        });
+	j$(&apos;#subPopup&apos;).parent().css(&apos;display&apos;,&apos;none&apos;);
+	//Check is need to check permission set
+	//If isPayrollForAllUsers is true then no need to SOQL
+	var isPayrollForAllUsers = &apos;{!$Label.OnlineSales_IsPayrollForAllUsers}&apos; == &apos;true&apos;
+	var isAccessPayrollAddon = false;
+	if(!isPayrollForAllUsers){
+		isAccessPayrollAddon = sforce.apex.execute(&quot;OnlineSalesLeadDetailButtonAction&quot;, &quot;placeOnlineOrderPermissionSetCheck&quot;,{userId : &apos;{!$User.Id}&apos;}); 
+		console.log(isAccessPayrollAddon);
+	}
+	if(isPayrollAvailable &amp;&amp; (isPayrollForAllUsers || isAccessPayrollAddon[0] == &quot;true&quot;)){
+		j$(&apos;#subPopup&apos;).parent().css(&apos;display&apos;,&apos;block&apos;);
+	}else{
+		j$(&quot;#nextClick&quot;).click();
+	}
+} catch (e) {
+	console.log(&apos;exception @@@@ &apos;, e);
+    alert(&apos;Your request could not be completed, Please try again later.&apos;);
+    location.reload();
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Reassign</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Re-assign</masterLabel>
+        <openType>sidebar</openType>
+        <page>LeadReassign</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>SendGmail</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Send Gmail</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://mail.google.com/mail?view=cm&amp;tf=0&amp;to={!Lead_Email}&lt;{!Lead_LastName}, {!Lead_FirstName}&gt;&amp;tf=1</url>
+    </webLinks>
+    <webLinks>
+        <fullName>YahooMaps</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>true</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>true</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Yahoo Maps</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>true</showsLocation>
+        <showsStatus>true</showsStatus>
+        <url>http://maps.yahoo.com/py/maps.py?cn={!Lead_Country}&amp;csz={!Lead_City}+{!Lead_State}+{!Lead_PostalCode}+&amp;addr={!Lead_Address}</url>
+    </webLinks>
+</CustomObject>

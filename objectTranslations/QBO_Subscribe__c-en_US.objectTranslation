@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>QBO Subscribe</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>QBO Subscribe</value>
+    </caseValues>
+    <fields>
+        <label><!-- ActiveStatus --></label>
+        <name>ActiveStatus__c</name>
+    </fields>
+    <fields>
+        <label><!-- Countries --></label>
+        <name>Countries__c</name>
+    </fields>
+    <fields>
+        <label><!-- DateDecisionField --></label>
+        <name>DateDecisionField__c</name>
+    </fields>
+    <fields>
+        <label><!-- FieldsToBeQueried --></label>
+        <name>FieldsToBeQueried__c</name>
+    </fields>
+    <fields>
+        <label><!-- GracePeriodUnit --></label>
+        <name>GracePeriodUnit__c</name>
+    </fields>
+    <fields>
+        <label><!-- GracePeriod --></label>
+        <name>GracePeriod__c</name>
+    </fields>
+    <fields>
+        <label><!-- ProductFamilies --></label>
+        <name>ProductFamilies__c</name>
+    </fields>
+    <fields>
+        <label><!-- ServiceCall --></label>
+        <name>ServiceCall__c</name>
+    </fields>
+    <fields>
+        <label><!-- SkipDateLogic --></label>
+        <name>SkipDateLogic__c</name>
+    </fields>
+    <fields>
+        <help><!-- Optin/ Re-Scribe --></help>
+        <label><!-- SubscribeType --></label>
+        <name>SubscribeType__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_19936934</developerName>
+        <masterLabel>TNPS Results</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>VOC_Survey_Response__c.Question_Response1__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>0</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>1</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>2</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>3</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>4</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>5</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>6</sourceValue>
+            </sourceValues>
+            <value>Demoter</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>7</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>8</sourceValue>
+            </sourceValues>
+            <value>Neutral</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>9</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>10</sourceValue>
+            </sourceValues>
+            <value>Promoter</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>FK_CASE_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>FK_CREATED</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_CASE_ORIGIN</field>
+    </columns>
+    <columns>
+        <field>FK_$Case.Product__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response1__c</field>
+    </columns>
+    <columns>
+        <field>BucketField_19936934</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response6__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response3__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response5__c</field>
+    </columns>
+    <currency>USD</currency>
+    <description>Reports all Lines of business survey results based on team rosters.</description>
+    <filter>
+        <booleanFilter>((((((((((((((1 or 2) OR 3) OR 4) OR 5) OR 6) OR 7) OR 8) OR 9) OR 10) OR 11) OR 12) OR 13) OR 14) OR 15) OR 16</booleanFilter>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>QBO John Orton,Alex Hansen,Brian Pendleton,Douglas Mytton,Gentry Jensen,Jacob Ward,Lisa Mytton,Shane Davis,Shantel Paxton,Thomas Brock</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>QBO Leeann Wheeler,Austin Stephensen,Ben Hale,Dallen Thomas,Daniel Lubben,Elizabeth Mendes,Israel Castillo,Joshua Thompson,Kathryn Mcclellan,Keesa Cosner,Michael Jenkins,Yazmin Munson,Zach Faux</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>QBO Morgan Satteson,Allana Stott,Alexandra Nielson,Benjamin Myers,Cody Ahn,Emily Lane,Gregory Davidson,Jessica Johnson,Marilyn Hall,Riley Gardiner,Rulan Snow,Tammy Smith,Tyler Griffin,Zachary Madrid</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>QBO Todd Smith,Adam Kimball,Allyson Baker,Boston Bijou,Christy King,Daniel Young,Darren Meikle,Joshua Baert,Karl Peterson,Michael Bennett,Spencer Shorts</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>QBOA Jeremy Smith,Adam Norris,Alexis Salazar,Andrew Johnson,Carolin DeArmon,Ceaser Mendez,James McClinton,Jeff Johnson,Jonathin Mendez,Kristi Haller,Matthew Davis,Randall Carroll,Renee Maxfield,Ryan Andersen,Sarah Allison,Slade McClure</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>QBOA Reina Rubalcava,Adam Luing,Amy Barton,AnnaLisa Bingham,Brittany Baird,Casey Marshall,Colton Case,Jamie Fox,Josh Linton,Kaili Landon,Mary Schneider,Melissa Womack,Monet Boredaux,Nicholas Austin,Piper Bradford,Rachel Dewey</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>QBOA Sarah Periera-Volpe,Angel Peterson,Benteen Brandow,Caitlinn Mower,Christopher Flavel,Clair Correa,Daniel Mortensen,David Hubbard,Ethan Lowe,Maria Gomez,Justin Lehman,Kody Sunday,Layne Southam,Mari Shaver,Michael Christiansen,Sarah Walker,Thomas Felt,William Erickson,Vicktoria Kern</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>QBOA Coach 4</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>QBO CA Felix Greger,Stephanie Beausheur,Rex Kyle Anderson,Daniel Adams,John Keele,Danielle Gubler,Matthew Conley,Brian Johnson,Jeffrey Fortner,Regina Eastman,Eric Meade,Kyle Cabrera,Chelsea Romney,Dwayne Vest,Taylor Whitesides,Eric Nielsen</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>QBO CA Jessica Kessel,Christynn Fikstad,Cornelius Minor,Leslie Fisi,Brennon Rasmussen,Jennifer Mabey,Kristine Hesse,Chasstity Bateman,Sheena Starley,Ryen Dick,Benjamin Clement,Dallas Sorenson,Ronald Edmonds,Victor Flores,Austin Winkelman,Preston Potter</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>QBO CA Ryan Gardner,Evan Angel,Annalisa O mealy,Paula Turner,Janet Pitcher,Camberlee Carson,Debora Smith,Misty Ure,Valerie McCorristin,Jackson Dozier,Nyles Durfey</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>QBO CA Coach 4</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>DIFY Alec Osborn,Alan Clark,Amanda Jensen,Aron Hoffman,Carol Bryant,Earl Leavitt,Eric Gutierrez,Gary Van Havermaet,Heather Robinson,Joseph Morgan,Julie Vance,Kiersten Clayton,Nathanael Moss,Phillips Redden,Shanna Banner,Teresa Kennedy,Tiffany Beutler</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>DIFY Andrew Hamilton,Amber Turner,Ariella Wright,Carlos Mcknight,Erin Allred,Florencia Ramos,Jordan Kenison,Kalie Hoffman,Kenzie Curtis,Kimberly Olsen,Ruchi Bedi,Savannah Chatwin,Scarlett Bowler,Skyler Crandall,Tyler Sherrow,Whitney Davies</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>DIFY Augustus Faust,Alyson Hill,David Johnson,Dennis Blake,Fredrick Amusu,Jeffery Nielsen,Jorge Mejia,Joseph Kemper,Julie James,Kristin Rawle,Lee Heckel,Lizette Merritt,Lynne Bradford,Michael Saint Laurent,Rudy Brailsford,Summer Upton,Tyler Garlock</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>DIFY Casey,Alex Castillo,Alexia Edwards,Anita Allphin,Ashley Park,Chase Adams,Christopher Stewart,Emily Whiting,Jalessa Roper,Jim Shaver,Joseph Tarwater,Josue Esparza,Josue Ferla,Mark Hudak,Michael Beach,Michael Decker,Richard Mackelprang,Robert Bowman,Shannon Fournier,Sirinda Reid,Wilson Johnson</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Nathan&apos;s Survey Report all LOB</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$VOC_Survey_Response__c@VOC_Survey_Response__c.CaseId__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>FK_CREATED</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CUST_LAST_UPDATE</dateColumn>
+        <endDate>2016-04-30</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2016-04-01</startDate>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_53072295</developerName>
+        <masterLabel>Team Created By</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>OWNER</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Michael Chavez</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Kimberly Gallahan</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>John Trammell</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Jonathan Lovitt</sourceValue>
+            </sourceValues>
+            <value>Lacerte</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Tysinn Ghia</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Denita Connalley</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Cynthia Thomas</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Marc Freidberg</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sharbel Abi-Habib</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Daniel Brommer</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Gerald Henry</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Kashif Rasul</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Corey Spear</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Brian Curran</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Justin Evans</sourceValue>
+            </sourceValues>
+            <value>ProSeries</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>VerticalColumnStacked</chartType>
+        <enableHoverLabels>true</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>CREATED_DATE</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_TOP</location>
+        <secondaryGroupingColumn>BucketField_53072295</secondaryGroupingColumn>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>OWNER</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>TITLE</field>
+    </columns>
+    <columns>
+        <field>COMPANY</field>
+    </columns>
+    <columns>
+        <field>LEAD_SOURCE</field>
+    </columns>
+    <columns>
+        <field>RATING</field>
+    </columns>
+    <columns>
+        <field>STREET</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Jason Tritle,Robert Randall,Tiffany Randall,Victor Nolasco,ZaLithia Harris,Roland Carrion,Maria Harris,Z. Maria Harris,Amber Burton,Michael Gentile</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Legacy_Treatment_Name__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER_ROLE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>New Offerings</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>BucketField_53072295</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Other</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_53072295</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Week</dateGranularity>
+        <field>CREATED_DATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>TY15 DT IB and Ambient</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LeadList</reportType>
+    <scope>org</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2015-04-16</startDate>
+    </timeFrameFilter>
+</Report>

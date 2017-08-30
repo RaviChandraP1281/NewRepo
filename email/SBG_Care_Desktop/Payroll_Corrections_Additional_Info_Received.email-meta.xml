@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Payroll Corrections - Additional Info Received</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Desktop_Data_Services</letterhead>
+    <name>Payroll Corrections - Additional Info Received</name>
+    <style>freeForm</style>
+    <subject>Payroll Corrections - Additional Info Received</subject>
+    <textOnly>Hello {!Contact.Name},
+
+I have received the corrections document you uploaded. I will now begin working on your account.
+
+Typically requests take less than a day to complete. If I exceed this expectation, I will let you know where I am at by the end of each business day until I am done.
+
+Feel free to contact me if you have any further information to provide and I will get back with you as soon as I can.
+
+Warmest Regards,
+{!Case.Case_Owner_First_Name__c}
+Intuit Payroll Corrections Team Member
+
+This is an automated email. Please do not reply directly as you will not receive a response.</textOnly>
+    <type>html</type>
+</EmailTemplate>

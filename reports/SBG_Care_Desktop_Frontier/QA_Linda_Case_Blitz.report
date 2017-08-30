@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>OWNER</field>
+    </columns>
+    <columns>
+        <field>CASE_NUMBER</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATEONLY</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Grace Robertson,Joseph San Filippo,Alicia Turner,Sandro Almeida,Kristen Bradeen,Talesha Dennis,Kutana Grant,Dempsey Hadley,Billy Jackson,Michelle Key,Anastasia Lewallen,Melinda McDonald,Terese McFaddin,Autumn Melby,Michael Minshall,Rosemary Ortiz,Bonnie Rodriguez,Kezsandra Solis,Christopher Stern,Patricia Banks,David Barlow,Ryan Byers,Sherman Canty,Tyler DuRapau,Wilmarie Estrada,Carla Eudell,Russel Farnham,Alexander Grisham,Daniel Kidd,Mykala Montanez,Enely Nader,Elineth Perez,William Schillinger,Joshua Speigel,Marcus Alridge,Abdelmisseeh Awad,Jacquila Brown,Brian Campbell,Dara Lanier,Shaun Cheshire,Rebecca Ciceron,Salyna Dvorovy,Francis Snarcavage,David Fain,Tito Feliciano,Andrea Gathers,Louis Gil,Joseph Lacorte,Christian Lauber,Duane Lockney,Robert Mauricio,Tracy McKiver,Derek Mecking,Cara Neymeiyer,Yonique Norris,Chad Rollins,Andrew Tully,Sakounna Vilaysane</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>QA - Linda Case Blitz</name>
+    <params>
+        <name>units</name>
+        <value>d</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>OWNER</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATEONLY</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

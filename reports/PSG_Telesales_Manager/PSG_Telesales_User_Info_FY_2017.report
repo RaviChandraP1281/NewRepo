@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>User$Name</field>
+    </columns>
+    <columns>
+        <field>User$Manager</field>
+    </columns>
+    <columns>
+        <field>User*User$User_Profile__c</field>
+    </columns>
+    <columns>
+        <field>User*User$Role__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>1 or 2</booleanFilter>
+        <criteriaItems>
+            <column>User$Name</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Abelardo Alderete,Aleq Rojas,Alicia Armijo,Anan Rubi,Andrea Kaber,April Khan,Aquila Brown,Ashlynn Williams,Brandon Meade,Brian Goldsmith,Brittni Fischer,Chad Petri,Chase Nielsen,Cheron Kearney,Cheryl Chester,Chris Murphy,Christopher Arthur,Christopher Whitley,Cody Walden,Connor Sullivan,Corey O’Neal,Costanza Perry,Dain Robbins,Damian De La Pena,Davon Smith,Daylene Riley,Derin Harrison,Dianne Bryant,Dyan Petke,Elisha James,Elizabeth Carter,Lizz Kennon,Ellenor McCauley,Eugene Chang,Gabriel Alper,Garrett Hill,Georgette Agnew,Gladys Lambert,Hope Kilbride,Jake Fitzgerald,Jacqueline Reandeau,Janet Luna,Jarret Mitchell,Jeffrey Adams,Jesse Tyler,Jorge Velazques,Joey Johns,Justin Kettle,Kara Knudson,Karen Smith,Kelsea McKemy,Kristie Peters,Latasha Johnson,Lauri Logan,Marcia Vines,Marcus Boone,Maria Torres,Mark Johansen,Mark Lupro,Mary McCormick,Matt Harding,Matthew Wells,Mia Grisby,Michael Maffeo,Michael Menard,Michelle Odell</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User$Name</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Monica Hargrove,Nikki Ennis,Patricia Foote,Patrick Estrada,Paul Risteen,Peter SuperNaugh,Ramon Arellano,Robert Dayton,Rocio Cruz,Ross Kimball,Rshana Undersoood,Saida Hersi,Sandra Johnson,Sean Wellington,Sharelle Hunter,Shirley Donahue,Steven Mikelson,Sylvia Greene,Tamila Knight,Victoria Maxwell,Vladimir Williams,William Thomas,Yvonne Guzman</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>PSG Telesales User Info FY 2017</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Users_with_Manager_Info__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>User$Manager</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>User$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

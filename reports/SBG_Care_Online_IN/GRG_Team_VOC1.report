@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Case$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>Case.Case_NPS__r$Name</field>
+    </columns>
+    <columns>
+        <field>Case.Case_NPS__r$Question_Response1__c</field>
+    </columns>
+    <columns>
+        <field>Case.Case_NPS__r$Question_Response2__c</field>
+    </columns>
+    <columns>
+        <field>Case.Case_NPS__r$Question_Response3__c</field>
+    </columns>
+    <columns>
+        <field>Case.Case_NPS__r$Question_Response4__c</field>
+    </columns>
+    <columns>
+        <field>Case.Case_NPS__r$Question_Response5__c</field>
+    </columns>
+    <columns>
+        <field>Case.Case_NPS__r$Question_Response6__c</field>
+    </columns>
+    <columns>
+        <field>Case.Case_NPS__r$Question_Response9__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>((1 AND (2 OR 3 OR 4 OR 5 OR 6 OR 7 OR 8 OR 9))) AND 10</booleanFilter>
+        <criteriaItems>
+            <column>Case.Case_NPS__r$Name</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case$Owner</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Ankush Dhawan</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case$Owner</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Ashish Saini</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case$Owner</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Vibhor Vishnoi</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case$Owner</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Vishwajeet Thenwar</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case$Owner</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Chandan Kumar Ghosh</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case$Owner</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Achyuth</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case$Owner</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Arun Poojari</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case$Owner</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Swathi MR</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case.Case_NPS__r$Name</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Case$Owner</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>GRG Team VOC</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Cases_and_VOC_Scores__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Case$CaseNumber</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Case.Case_NPS__r$CreatedDate</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

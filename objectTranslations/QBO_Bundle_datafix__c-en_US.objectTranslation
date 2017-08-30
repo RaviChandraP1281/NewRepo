@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>QBO_Bundle_datafix</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>QBO_Bundle_datafix</value>
+    </caseValues>
+    <fields>
+        <label><!-- Company_id --></label>
+        <name>Company_id__c</name>
+    </fields>
+    <fields>
+        <label><!-- OpptyId --></label>
+        <name>OpptyId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Parent_Asset_Id --></label>
+        <name>Parent_Asset_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- toprocess --></label>
+        <name>toprocess__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

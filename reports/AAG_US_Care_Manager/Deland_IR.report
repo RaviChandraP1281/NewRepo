@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_44032391</developerName>
+        <masterLabel>Agent</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>FK_CASE_OWNER_NAME</sourceColumnName>
+        <useOther>false</useOther>
+    </buckets>
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_85484880</developerName>
+        <masterLabel>EcoSystem</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>FK_$Case.Product__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Accountant</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Accountant NFR</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Accountant One Year Unlimited Support</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Accountant Version Protection</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Enterprise Solutions</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Enterprise Solutions Accountant</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Enterprise Solutions Accountant Version Protection</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Enterprise Solutions Software Fee</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Payroll Annual</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Payroll Monthly</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Point of Sale</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Point of Sale Free Download</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks ProAdvisor CD Version Protection</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks ProAdvisor Membership Annual</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks ProAdvisor Membership Monthly</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks ProAdvisor One Year Add On Support</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks for Mac</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit Quickbooks</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Intuit QuickBooks Plus</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QuickBooks Accountant 2013 1-user $399.95</sourceValue>
+            </sourceValues>
+            <value>Desktop</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>QBOA Online Account Creation</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QBOA Account Creation QA</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QBOA</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QBO Plus</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QBO Payroll</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QBO Plus for ProAdvisors $0</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QuickBooks Online Plus</sourceValue>
+            </sourceValues>
+            <value>Online</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response1__c</field>
+    </columns>
+    <columns>
+        <field>BucketField_85484880</field>
+    </columns>
+    <columns>
+        <field>FK_CASE_OWNER_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_CASE_SUBJECT</field>
+    </columns>
+    <columns>
+        <field>FK_CASE_DESCRIPTION</field>
+    </columns>
+    <columns>
+        <field>FK_CNTC_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_$Case.Case_Contact_Email__c</field>
+    </columns>
+    <currency>USD</currency>
+    <description>Online IR No or I don&apos;t know</description>
+    <filter>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>,Stephen Brown,Gabriel Caro,Shyla Clark-McDaniel,Robert Collum,Jacqueline Coppin-Melson,Robin Cross,Sabrina Daniels,Mary Flores,Amy Gillett-Paltrow,Vosha Gordon,Jennifer Hamilton,Heather Henkes,Kylea Johnson,Denise Llewellyn,Tatiana Morales,Jesus Osorio,Kaitlyn Pickens,Tosha Pittman,Darin Reno,Kaisha Ribot,Richard Rojas,Endry Santos,Hayley Bruy,Brandon Cintron,William Clay,Kenneth   Farrington,Carley Fockler,Joinique George,Shannon Hempel,Susan Heller,Nichole Hill,Lindsey Laughton,Elizabeth Martin,Angel Peterson,Edisson Salinas,Matthew Shea,Michael Taylor,Jacarra Tillmon,Joshua Vizcaino,James Contreras,Charles Diaz,Ashley Doherty,Emily Dyer,Gabrielle Harpe,Jarrett McGraw,Karla Miles,Melissa Muro,Saad Omar,Jarrica Oquin,Brandon Robles,Nicholas Rodriquez,Frank   Royko-Adkins,Danielle Weldon</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>VOC_Survey_Response__c.Question_Response3__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>No,I don&apos;t know</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>BucketField_85484880</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Online</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>VOC_Survey_Response__c.Question_Response3__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Deland IR</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$VOC_Survey_Response__c@VOC_Survey_Response__c.CaseId__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

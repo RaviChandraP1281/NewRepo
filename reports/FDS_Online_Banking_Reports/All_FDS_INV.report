@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Case_Investigation__c.Area_Product_Category__c</field>
+    </columns>
+    <columns>
+        <field>Case_Investigation__c.of_Cases__c</field>
+    </columns>
+    <columns>
+        <field>Case_Investigation__c.Status__c</field>
+    </columns>
+    <columns>
+        <field>Case_Investigation__c.Sub_Area_Product_Category__c</field>
+    </columns>
+    <columns>
+        <field>Case_Investigation__c.Days_Investigation_Open__c</field>
+    </columns>
+    <currency>USD</currency>
+    <description>Investigations created</description>
+    <filter>
+        <criteriaItems>
+            <column>Case_Investigation__c.Impacted_Products__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>includes</operator>
+            <value>QuickBooks Online Bank Feeds</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Case_Investigation__c.Impacted_Regions__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>All FDS INV</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Case_Investigation__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email to be sent after Demo completion</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>OB_Success_Thanks Note</name>
+    <style>none</style>
+    <subject>Glad you took the Demo</subject>
+    <textOnly>Intuit QuickBooks
+
+Glad you took the demo.
+
+Dear {!Opportunity.Primary_Contact__c},
+Thank you for taking the time for a QuickBooks product demo. We hope that you found the session useful and that it provided you with a good overview of the product.
+
+Here’s what we covered during the demo:
+
+How to setup your company in QuickBooks
+
+How to setup taxes
+
+How to create an invoice
+
+You may want to bookmark our QuickBooks video tutorial on YouTube for future reference. If you get stuck with QuickBooks, reply to this email or give us a call at {!User.MobilePhone}. We are here to help.
+Ready to purchase QuickBooks? Just sign into your account and convert your free trial into a paid subscription.
+Have an awesome day!
+{!User.Name}
+Quickbooks Consultant
+{!User.Email}
+{!User.MobilePhone}
+
+The terms and conditions of pricing for purchase and renewal of QuickBooks subscriptions may change
+without prior notice.
+Intuit respects your privacy. To learn more, read our Privacy Statement.
+© Intuit India Software Solutions Pvt. Ltd.</textOnly>
+    <type>custom</type>
+</EmailTemplate>

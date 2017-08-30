@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Apex Error Msg Email List</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Apex Error Msg Email List</value>
+    </caseValues>
+    <fields>
+        <label><!-- Email List --></label>
+        <name>Email_List__c</name>
+    </fields>
+    <fields>
+        <label><!-- replytoEmail --></label>
+        <name>replytoEmail__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

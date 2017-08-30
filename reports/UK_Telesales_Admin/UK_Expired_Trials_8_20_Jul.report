@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>PHONE1</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>1 AND (2 or 3 or 4)</booleanFilter>
+        <criteriaItems>
+            <column>Contact.Primary__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Contact.Company_ID__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>1405355630,1405355965,1405361035,1405368830,1405377025,1405413200,1405421725,1405442610,1405446420,1405446910,1405447370,1405447530,1405447565,1405447795,1405561205,1405561570,1405561860,1405564225,1405564365,1405565165,1405566640,1405566960,1405567550,1405571430,1405575290,1405580055,1405581880,1405586935,1405588960,1405590235,1405608335,1405611800,1405616215,1405623740,1405632890,1405671035,1405694635,1405704425,1405757975,1405785925,1405804710,1405855055,1405855875,1405855975,1405856720,1405856740,1405857300,1405857320,1405857330,1405857695,1406019035,1406023400,1406027640,1406028140,1406029875,1406032210,1406033265,1406038435,1406040295,1406041895,1406044750,1406048480,1406048575,1406049050,1406050220,1406050285,1406052925,1406062295,1406065315,1406068445</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Company_ID__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>1406076750,1406087980,1406091710,1406095045,1406100960,1406107100,1406128260,1406132700,1406142210,1406143530,1406170065,1406182175,1406184295,1406213400,1406218845,1406227745,1406229690,1406245640,1406312845,1406313060,1406313215,1406313240,1406313385,1406313505,1406313555,1406313575,1406313785,1406313850,1406313860,1406313900,1406314425,1406452300,1406462305,1406464480,1406469330,1406477595,1406490115,1406493315,1406495100,1406501060,1406506565,1406506620,1406526525,1406553420,1406602595,1406607455,1406642760,1406652850,1406753280,1406753445,1406753465,1406753945,1406754145,1406754290,1406754370,1406754375,1406754380,1406754720,1406906810,1406911780,1406916250,1406923880,1406928030,1406928325,1406928540,1406930855,1406937025,1406939365,1406944155,1406944645,1406963605,1406973355,1406996520,1407038365,1407087615,1407104170</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Company_ID__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>1407148245,1407152460,1407186810,1407252015,1407278230,1407279055,1407289445,1407319675</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>UK Expired Trials 8 20 Jul</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContactList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

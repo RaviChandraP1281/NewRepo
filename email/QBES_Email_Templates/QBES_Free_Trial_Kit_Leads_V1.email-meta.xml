@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>QBES_Free_Trial_Kit_Leads</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>QBES Free Trial Kit Leads V1</name>
+    <style>none</style>
+    <subject>Intuit QuickBooks Enterprise Solutions - Free Trial Download</subject>
+    <textOnly>Thank You for Choosing QuickBooks Enterprise Solutions
+
+
+
+Dear {!Lead.FirstName} {!Lead.LastName}:
+
+Try QuickBooks Enterprise Solutions 13.0  for 30 days FREE!
+
+Download your FREE Intuit QuickBooks Enterprise Solutions trial software today at www.qbes.com/trialdownload. Sample data is provided so you can get started  immediately. See how easy it is to run your business more efficiently.
+
+See data the way you want with the most  customizable reporting tools in QuickBooks. Enterprise Solutions offers the most flexible  reporting capabilities in QuickBooks. Twice as many custom data fields as in  other QuickBooks products, plus the ability to combine reports from multiple  company files (1) gives you the advantage of clearer business insights.  For more complex reporting needs, you can create custom reports with  ODBC-compliant applications by connecting directly to the QuickBooks database  for maximum flexibility in report design.(2)
+
+Get a whole new level of control over user  access. Enterprise Solutions lets you safeguard  sensitive business data by giving employees access to the specific information  they need to do their jobs. Set individual user permissions for more than 115  different activities. 14 predefined user roles are included to help you set up  new users quickly.
+
+Adapt to the changing demands of your business.Support more users, locations and company files.  QuickBooks Enterprise Solutions scales up to 30 simultaneous users and enables  you to track hundreds of thousands of customers, vendors and inventory items (3)  — more than 6 times the capacity of any other QuickBooks product. Plus, enjoy  the added flexibility of working in two company files at the same time. (4) Highest  list limits let you add more Accounts, Classes, Customer and Vendor Types, To  Do’s, Customer Messages, and much more.
+
+Get the choice of managing inventory right  inside QuickBooks.Advanced Inventory gives you the option of  tracking more details about your inventory right in QuickBooks — so there’s no  need for separate software. (5) Track the value and quantity of inventory  across multiple locations, use FIFO costing, serial number or lot tracking —  and now scan barcodes and track bin locations all in QuickBooks. (6)
+
+Access Enterprise Solutions any way and anywhere  you want. Enterprise Solutions delivers a choice of access  options designed to maximize productivity wherever you do business. Unify  remote workers and satellite offices with a real-time link to your QuickBooks  data with Remote Desktop Services.(7) Or step up to the security and  convenience of a protected environment with our Hosting Service. (8) We  take care of installing, updating and automatically backing up your software (9),  so you don’t have to.
+
+Get the peace of mind of expert support, online  backup and data protection. Let our US-based product specialists help you  get the most out of Enterprise Solutions — and tailor its capabilities to meet  your needs. Unlimited support, complimentary upgrades, online backup, data  protection, and training materials are included with your Full Service Plan  membership.(10)
+
+Don&apos;t  wait to test drive the most flexible QuickBooks - download your free trial  now.  If you have any questions, feel free to give me a call Mon-Fri,  5:30 am-5:30 pm PST.
+
+Regards,
+
+(1) Requires  Microsoft Excel 2002, 2003, or 2007. Company files must all be on the same  version of QuickBooks Enterprise Solutions.
+(2) Applications  sold separately.
+(3) Enterprise  Solutions allows you to add up to one million names (e.g. customers, vendors,  employees) and up to one million items (e.g. inventory, non-inventory, and  service items). Some performance degradation is likely as your lists approach  these size thresholds.
+(4) Some  functionality may be limited when running two instances. See www.qbes.com/sysreq  for more information.
+(5) Additional  fees apply for the Advanced Inventory add-on subscription. Requires QuickBooks  Enterprise Solutions 13.0 with an active Full Service Plan and an Internet  connection.
+(6) Barcode  scanner sold separately
+(7) Additional  fees may apply. Requires certain hardware, Microsoft Server operating systems,  Microsoft Windows Server software licenses, and Remote Desktop Services Server  Client Access Licenses, sold separately. For multiple remote users, a Remote  Desktop Services Client Access License is required for each user.
+(8) Additional fees apply for the QuickBooks Enterprise Solutions Hosting Service subscription. Hosting Service is available for QuickBooks Enterprise Solutions only and is valid for number of users equal to or less than the number of QuickBooks Enterprise Solutions users assigned to customer&apos;s Intuit account. QuickBooks Enterprise Solutions sold separately; a valid QuickBooks Enterprise Solutions license code must be provided to Right Networks. Contact Right Networks to contract third party software. Billing and Support for Hosting Service provided by Right Networks. Terms, conditions, pricing, service and support options are subject to change without notice.
+(9) Right Networks retains each backup offsite for a  period of 90 days with an active paid subscription.
+(10) 10.	The Full Service Plan (FSP) is good for 12 months from QuickBooks Enterprise Solutions purchase date or Full Service Plan renewal date. You have the option to add QuickBooks Mobile and Intuit Data Protect for free as an active FSP member. Service begins as of the date activated and continues through to the expiration date of your FSP plan. Online Backup Service requires Internet access and an active Full Service Plan. Entire PC is limited to 100GB total storage, which includes all 45 days which you have stored. In some cases data damage may be too extensive and the data file may be non-recoverable. QuickBooks support is available 24 hours a day, seven days a week; the Enterprise Solutions team (including our U.S.-based team of product experts) is available weekdays from 4:00 a.m. - 7:00 p.m. Pacific Standard time. Support hours exclude occasional downtime due to system and server maintenance, company events, observed U.S. holidays and events beyond our control. Intuit reserves the right to limit each telephone contact to one hour and to one incident. Active Full Service Plan members receive new version upgrades when and if released within 12 months of QuickBooks Enterprise Solutions purchase date or Full Service Plan renewal date. Online access to training is included with each Full Service Plan annual membership. Terms, conditions, pricing, features, service and support options are subject to change without notice. See terms and conditions at qbes.com/terms.
+
+Note: Terms, conditions,  pricing, special offers, features, and service options subject to change  without notice.
+
+© 2012 Intuit Inc. All rights reserved.  Intuit and QuickBooks, among others, are registered trademarks of Intuit Inc.  in the United States and other countries. Other parties&apos; trademarks or service  marks are the property of their respective owners and should be treated as  such.
+
+This message was sent to inform you of a critical matter. Please    note that if you have chosen not to receive marketing messages from Intuit,    that choice applies only to promotional materials. You will continue to    receive critical notifications that are legally required or could affect your    service or software.
+
+Intuit Inc., Customer Communications, 2800 E. Commerce Center Place, Tucson,    AZ 85706
+
+Intuit respects the personal    nature of email and this email is in response to your request for additional    information.</textOnly>
+    <type>custom</type>
+</EmailTemplate>

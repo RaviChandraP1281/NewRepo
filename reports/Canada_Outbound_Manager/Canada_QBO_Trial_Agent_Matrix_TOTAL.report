@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Asset$Name</field>
+    </columns>
+    <columns>
+        <field>Asset.Assets__r$Name</field>
+    </columns>
+    <currency>CAD</currency>
+    <filter>
+        <booleanFilter>((1 and 4) AND 3 AND 2) AND 5</booleanFilter>
+        <criteriaItems>
+            <column>Asset$Online_Offer_Code__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>CAP-T9N</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Asset.Assets__r$Opportunity_Owner_Read_Only__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>abdulala faruqi,abhishek paul,ammar khan,atef ahsan,james kim,kashif ghawas,rick kahn,taha ali,tehnoon zuhair,Laura Maassen-Van Sieleghem</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Asset.Assets__r$CreatedBy</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>online user</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Asset.Assets__r$LeadSource</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Web,Trial Sign-up</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Asset.Assets__r$Won_Lost_Reason__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Student</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>Asset.Assets__r$StageName</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Asset.Assets__r$Opportunity_Owner_Read_Only__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>6 Month Trial Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AssetsOpptysProducts__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Asset$CreatedDate</dateColumn>
+        <endDate>2016-11-04</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2016-05-04</startDate>
+    </timeFrameFilter>
+</Report>

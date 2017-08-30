@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>SMB Renewal - Single Company</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>SMB Renewals 1 company</name>
+    <style>none</style>
+    <subject>Renew your QuickBooks Subscription and become GST-compliant Automatically</subject>
+    <textOnly>Hi {!Opportunity.Primary_Contact__c},
+
+Greetings from QuickBooks, World&apos;s #1 online accounting software.
+
+New Financial Year is here. Convert your free trial into paid subscription today and continue to enjoy the benefits of QuickBooks.
+
+Your 12-month subscription of QuickBooks is now available at a special price of ₹ 2999 for the first year. That is an awesome 40% off on the standard price of ₹ 4999.
+
+Hurry! We dont want you to miss this. This limited period offer expires on 23rd April 2017.
+
+Need help? Let me know what would be a good time to speak with you and help you unlock the power of QuickBooks.
+
+Have an awesome day!
+{!User.Name}
+QuickBooks Consultant
+{!User.MobilePhone} {!User.Email}
+www.QuickBooks.in
+
+The terms and conditions of pricing for purchase and renewal of QuickBooks subscriptions may change without prior notice.
+Intuit respects your privacy. To learn more, read our Privacy Statement.
+© Intuit India Software Solutions Pvt. Ltd.</textOnly>
+    <type>custom</type>
+</EmailTemplate>

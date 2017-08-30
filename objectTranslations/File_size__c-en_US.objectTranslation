@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>File size</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>File size</value>
+    </caseValues>
+    <fields>
+        <help><!-- Please specify the file size in Megabytes --></help>
+        <label><!-- File_size --></label>
+        <name>File_size__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please specify the size in Megabytes --></help>
+        <label><!-- Route for chunking when size exceeds --></label>
+        <name>route_for_chunking__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

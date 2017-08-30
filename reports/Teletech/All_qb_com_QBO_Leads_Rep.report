@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>AMOUNT</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Andrew Collins,Cortney Brown,Zavala Shannel,Jennifer Demarco,Garrett Johnston,David Jimenez,Justin Hayes,Jennifer Sisneros,Katrina Fortune,Michaela Madison,Ashley Gonzales,Brianna Reha,Danielle Murray,Dylan Arbuthnot,Evelyne Van Eldik,Joshua Frost,Robinson,Vicky Dorsey,William Ruley Jr,Jessica Moberly,Aaron Preciado,Dustin Bostick,Brandon Burkhead,Maria Jackson,Darline Moody,Tubin Chen,Christopher Ferguson,Anthony Adams,Omovidolor Nisonger,Michael Imbrie,caitlyn schepps,Diwa,Donnah Dizon,Marilyn Arucan,Ma. Jannine Batac,Rae Randall De Guzman,Jofer Dela Cruz,Mia Dela Cruz,Joneth Diwa,Montalban,Jan Ray Najera,Heidi Pangilinan,Pelayo,Jayson Reyes,Maria Jenica Santos,Gailynn Sarmiento,Siccion,Zapanta,Kristine Balboa,Fragata,Fairy Lyn Cortes,Cristobal,Galang,Ace Garcia,Maria Joanna Joson,Nunag,Josanne Samantha Santos,Mibeth Enriquez,Joan Villabroza,Magno,Orson Ocampo,Bacani,Timpug,Sicat,Jerome Pallasigui</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>LEAD_OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notContain</operator>
+            <value>Brittany Benjamin,nagun,Francis Martin</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Product_Family_of_Interest__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>QuickBooks Online (QBO)</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Month</dateGranularity>
+        <field>CREATED_DATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CREATED</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>All - qb.com - QBO Leads/Rep</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityLead</reportType>
+    <scope>org</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <endDate>2015-01-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2015-01-01</startDate>
+    </timeFrameFilter>
+</Report>

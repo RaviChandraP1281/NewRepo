@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>CUST_OWNER_NAME</field>
+    </columns>
+    <columns>
+        <field>Case_Investigation__c.Status__c</field>
+    </columns>
+    <columns>
+        <field>Case_Investigation__c.Communication_Status__c</field>
+    </columns>
+    <columns>
+        <field>Case_Investigation__c.of_Cases__c</field>
+    </columns>
+    <columns>
+        <field>Case_Investigation__c.Jira_Notes__c</field>
+    </columns>
+    <columns>
+        <field>Case_Investigation__c.Last_Email_Text__c</field>
+    </columns>
+    <columns>
+        <field>Case_Investigation__c.Impacted_Products__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>1 AND 2 AND 3</booleanFilter>
+        <criteriaItems>
+            <column>Case_Investigation__c.Communication_Status__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Open (Low Priority),Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case_Investigation__c.Containment_KB__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case_Investigation__c.Impacted_Products__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>includes</operator>
+            <value>QuickBooks Desktop Enterprise,QuickBooks Desktop Pro Premier,QuickBooks Desktop Mac</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Case_Investigation__c.Next_Update__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>SBG ACE Supportability QBDT Open Comms</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntityAuditHistory$Case_Investigation__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

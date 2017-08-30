@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>50% Blast Ends 3rd August</name>
+    <style>none</style>
+    <subject>50% off QuickBooks ENDS Thursday 3rd August! Sign Up or Call Thomas on 02 8404 9930</subject>
+    <type>text</type>
+</EmailTemplate>

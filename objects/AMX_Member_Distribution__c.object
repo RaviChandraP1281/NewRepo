@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <fullName>Weighted_Round_Robin_Validation</fullName>
+        <active>true</active>
+        <description>Validation for weighted round robin algorithm. 
+Member distributor weighting cannot be 0 or blank, if related distributor algorithm is &quot;Round Robin (Weighted)&quot;</description>
+        <errorConditionFormula>AND(
+      ISPICKVAL(AMX_Distributor__r.Algorithm__c, &apos;Round Robin (Weighted)&apos;) ,
+     OR ( Weighting__c = 0,
+          ISNULL(Weighting__c)
+        )
+     )</errorConditionFormula>
+        <errorDisplayField>Weighting__c</errorDisplayField>
+        <errorMessage>Weighting cannot be 0 or blank, if related Distributor algorithm is &quot;Round Robin (Weighted)&quot;.</errorMessage>
+    </validationRules>
+</CustomObject>

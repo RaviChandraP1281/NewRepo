@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <fullName>ContactEmailLength</fullName>
+        <active>false</active>
+        <description>This rule checks that the contact&apos;s email not exceed 255 characters</description>
+        <errorConditionFormula>LEN(Email)&gt;255</errorConditionFormula>
+        <errorMessage>The Contact&apos;s Email should not be greater than 255 characters.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ContactEmailSplChars</fullName>
+        <active>false</active>
+        <description>Disallows use of special characters in Contact&apos;s Email</description>
+        <errorConditionFormula>AND(NOT(ISBLANK(Email)), 
+NOT(REGEX(Email,&quot;[a-zA-Z0-9-_.@]+&quot;)))</errorConditionFormula>
+        <errorMessage>The Contact&apos;s Email address cannot contain special characters other than ._-</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ContactFirstNameAllowedSplChar</fullName>
+        <active>true</active>
+        <description>To let the User add special characters in Contact first name and disallow user entering only single special character</description>
+        <errorConditionFormula>AND((NOT(REGEX(FirstName, &quot;^[A-Za-zÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ]+[A-Za-z&apos;ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ,\\-&apos; .]*+$&quot;))),( $Profile.Name &lt;&gt; &apos;API Only&apos; ),(ISBLANK(Account.Company_ID__c)))</errorConditionFormula>
+        <errorMessage>Error: In  FIRSTNAME input you entered
+ 1) characters other than alphabetical and special characters {-,&apos; .} OR
+ 2) entered only single special character OR
+ 3) did not enter any character OR
+ 4) First Letter is other than alphabetical character</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ContactFirstNameLengthRule</fullName>
+        <active>true</active>
+        <description>Contact First name should be more than 1 character and less than 50 characters.</description>
+        <errorConditionFormula>(ISBLANK(FirstName))</errorConditionFormula>
+        <errorDisplayField>FirstName</errorDisplayField>
+        <errorMessage>Contact first name cannot be blank</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ContactLastNameAllowedSplChar</fullName>
+        <active>true</active>
+        <description>To let the User add special characters in Contact Last name and not enter only special Character in first digit</description>
+        <errorConditionFormula>AND((NOT(REGEX(LastName, &quot;^[A-Za-zÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ]+[A-Za-z&apos;ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ×ØÙÚÛÜÝÞßàáâãäåæçèéêëìíîïðñòóôõö÷øùúûüýþÿ,\\-&apos; .]*+$&quot;))),( $Profile.Name &lt;&gt; &apos;API Only&apos; ),(ISBLANK(Account.Company_ID__c)))</errorConditionFormula>
+        <errorMessage>Error: In LASTNAME input you entered 
+1) characters other than alphabetical or special characters {-,&apos; .} OR
+2) entered only single special character OR 
+3) did not enter any character OR 
+4) First Letter is other than alphabetical character</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ContactLastNameLengthRule</fullName>
+        <active>true</active>
+        <description>Contact Last name should be more than 1 character and less than 60 characters.
+This validation rule is applicable for profiles other than &apos;API Only&apos;</description>
+        <errorConditionFormula>AND(NOT(ISBLANK(LastName)), (LEN(LastName) &gt; 60),( $Profile.Name   &lt;&gt; &apos;API Only&apos; ),(ISBLANK(Company_ID__c)))</errorConditionFormula>
+        <errorMessage>Contact last name should be &gt;1 and &lt;60 characters</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ContactPhoneOrEmailRequired</fullName>
+        <active>true</active>
+        <description>This rule checks that the contact&apos;s email or phone number is entered before saving a record</description>
+        <errorConditionFormula>AND(ISBLANK(Email), ISBLANK(Phone), ISBLANK(HomePhone), ISBLANK(MobilePhone))</errorConditionFormula>
+        <errorMessage>Kindly provide Email or Phone/Mobile/Home Phone number before saving a contact.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ContactPrimaryUncheckRule</fullName>
+        <active>false</active>
+        <description>This rule will prohibit the user from setting the value of the primary flag to N</description>
+        <errorConditionFormula>AND(ISCHANGED(Primary__c), Primary__c = false)</errorConditionFormula>
+        <errorDisplayField>Primary__c</errorDisplayField>
+        <errorMessage>Setting primary of contact to False isnt allowed here. Please mark another contact as primary.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ContactSingleSpecialCharacterFirstName</fullName>
+        <active>true</active>
+        <description>This rule will not allow the creation of a contact with a single special character as name of the contact.The First name must contain at least one alpha character.</description>
+        <errorConditionFormula>AND((LEN( FirstName )= 1), (NOT(REGEX(FirstName , &quot;[A-Za-z]&quot;))),( $Profile.Name   &lt;&gt; &apos;API Only&apos; ),(ISBLANK(Account.Company_ID__c)))</errorConditionFormula>
+        <errorMessage>Contact First Name cannot be a single special character.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ContactSingleSpecialCharacterLastName</fullName>
+        <active>true</active>
+        <description>This rule will not allow the creation of a contact with a single special character as name of the contact.The Last name must contain at least one alpha character.</description>
+        <errorConditionFormula>AND((LEN(LastName)= 1), (NOT(REGEX(LastName, &quot;[A-Za-z]&quot;))),( $Profile.Name   &lt;&gt; &apos;API Only&apos; ),(ISBLANK( Account.Company_ID__c )))</errorConditionFormula>
+        <errorMessage>Contact Last Name cannot be a single special character.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ContactSingleSpecialCharacterRule</fullName>
+        <active>false</active>
+        <description>This rule will not allow the creation of a contact with a single special character as name of the contact</description>
+        <errorConditionFormula>AND((LEN(LastName)= 1), (NOT(REGEX(LastName, &quot;[A-Za-z]&quot;))))</errorConditionFormula>
+        <errorMessage>Contact Last Name cannot be a single special character</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ContactSingleSpecialCharacterRule2</fullName>
+        <active>false</active>
+        <description>This rule will not allow the creation of a contact with a single special character as name of the contact</description>
+        <errorConditionFormula>AND((LEN(LastName)&gt; 1),(NOT(REGEX(LEFT(LastName, 1), &quot;[A-Z][a-z]&quot;))))</errorConditionFormula>
+        <errorMessage>Contact Name cannot begin with a special character</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>LockEmailandUsername</fullName>
+        <active>false</active>
+        <description>Lock Email and Username if authid exists</description>
+        <errorConditionFormula>AND(NOT(ISBLANK(PRIORVALUE( Auth_Id__c) )), OR(ISCHANGED( Email ),ISCHANGED( username__c )),AND(NOT(CONTAINS( UPPER($User.Username), &quot;PDIUSER&quot;)),NOT(CONTAINS( UPPER($User.Username), &quot;DMIGR&quot;))))</errorConditionFormula>
+        <errorMessage>Email or Username cannot be modified as this contact was already provisioned .</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RestrictFNLNUpdateAtTheSameTime</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(NOT(ISNEW()),NOT(ISBLANK(PRIORVALUE( CACI__c))),NOT(CONTAINS( UPPER($User.Username), &quot;PDIUSER&quot;)),NOT(CONTAINS( UPPER($User.Username), &quot;DMIGR&quot;)),NOT(CONTAINS( UPPER($Profile.Name ), &quot;API&quot;)),NOT(CONTAINS( UPPER($Profile.Name ), &quot;SYSTEM ADMINISTRATOR&quot;)), SkipFNLNValidation__c = false ,ISCHANGED(FirstName) ,ISCHANGED(LastName),NOT(CONTAINS(UPPER($UserRole.Name), &quot;TIER3&quot;)))</errorConditionFormula>
+        <errorMessage>First name and Last name cannot be updated at same time .</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>RestrictFNorLNbyRole</fullName>
+        <active>false</active>
+        <description>AND(NOT(ISNEW()),NOT(ISBLANK(PRIORVALUE( CACI__c))),NOT(CONTAINS( UPPER($User.Username), &quot;PDIUSER&quot;)),NOT(CONTAINS( UPPER($User.Username), &quot;DMIGR&quot;)),NOT(CONTAINS( UPPER($Profile.Name ), &quot;API&quot;)), SkipFNLNValidation__c = false ,OR(ISCHANGED(FirstName) ,ISCHA</description>
+        <errorConditionFormula>AND(NOT(ISNEW()),NOT(ISBLANK(PRIORVALUE( CACI__c))),NOT(CONTAINS( UPPER($User.Username), &quot;PDIUSER&quot;)),NOT(CONTAINS( UPPER($User.Username), &quot;DMIGR&quot;)),NOT(CONTAINS( UPPER($Profile.Name ), &quot;API&quot;)),NOT(CONTAINS( UPPER($Profile.Name ), &quot;SYSTEM ADMINISTRATOR&quot;)), SkipFNLNValidation__c = false,OR(ISCHANGED(FirstName) ,ISCHANGED(LastName)),NOT(CONTAINS(UPPER($UserRole.Name), &quot;TIER3&quot;)))</errorConditionFormula>
+        <errorMessage>Only Tier3 agents can update First name or Last name .</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>UpdateFirstNameAndLastName</fullName>
+        <active>false</active>
+        <errorConditionFormula>AND(ISCHANGED(FirstName),ISCHANGED(LastName), AND(NOT(CONTAINS( UPPER($User.Username), &quot;PDIUSER&quot;)),NOT(CONTAINS( UPPER($User.Username), &quot;DMIGR&quot;))))</errorConditionFormula>
+        <errorMessage>Firstname and Lastname cannot be modified at the same time.Try saving one after the other</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Create_Identity</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Create Identity</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/flow/SearchIdentity?Id={!Contact.Id}&apos;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Delete_Contact</fullName>
+        <availability>online</availability>
+        <description>Provides a way to allow for the deletion of a contact throughout all back-end systems. The process initiated by this button will contact Siebel to verify that the contact can be deleted, and then initiate deletion with a call to MDM. If both of these actions are successful, the contact will then be &quot;soft deleted&quot; in Salesforce.</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Delete Contact</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/SafeDeleteContact?id={!Contact.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleMaps</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Google Maps</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://maps.google.com/maps?f=q&amp;hl=en&amp;q={!Contact_MailingStreet}+{!Contact_MailingCity}+{!Contact_MailingState}&amp;om=1</url>
+    </webLinks>
+    <webLinks>
+        <fullName>GoogleSearch</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Google Search</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>http://www.google.com/search?q={!Contact.FirstName} {!Contact.LastName}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Contact</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>New Contact</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>if (typeof(srcUp) == &apos;function&apos;) {  
+    srcUp(&quot;{!URLFOR($Action.Contact.NewContact, null,
+[retURL=Account.Id,accid=Account.Id,con10=&apos; &apos;,con11=&apos; &apos;], true)}&amp;00Ni000000CfAWa={!IF(Account.Primary_Contacts_Count__c &lt; 1,1,0)}&quot;);
+} else {   
+    window.open(&quot;{!URLFOR($Action.Contact.NewContact, null,
+[retURL=Account.Id,accid=Account.Id,con10=&apos; &apos;,con11=&apos; &apos;], true)}&amp;00Ni000000CfAWa={!IF(Account.Primary_Contacts_Count__c &lt; 1,1,0)}&quot;, &quot;_top&quot;);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Search_Create_Identity</fullName>
+        <availability>online</availability>
+        <description>Opens IAM search/created identity popup</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Search/Create Identity</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>{!REQUIRESCRIPT(&apos;/soap/ajax/29.0/connection.js&apos;)}
+{!REQUIRESCRIPT(&apos;/resource/jquery191&apos;)}
+{!REQUIRESCRIPT(&apos;/resource/jquery_ui_js&apos;)}
+
+requireCssFile(&apos;/resource/jquery_ui_css&apos;);
+ 
+function requireCssFile(filename) {
+    var fileref = document.createElement(&apos;link&apos;);
+    fileref.setAttribute(&apos;rel&apos;, &apos;stylesheet&apos;);
+    fileref.setAttribute(&apos;type&apos;, &apos;text/css&apos;);
+    fileref.setAttribute(&apos;href&apos;, filename);
+    document.getElementsByTagName(&apos;head&apos;)[0].appendChild(fileref);
+}
+
+var j$ = jQuery.noConflict();
+var iframe_url = &apos;{!URLFOR(&quot;/apex/SearchIAMIdentity&quot;)}&apos;;
+var j$modalDialog = j$(&apos;&lt;div&gt;&lt;/div&gt;&apos;)
+       .html(&apos;&lt;iframe id=&quot;iframeContentId&quot; src=&quot;&apos; + iframe_url + &apos;&quot; frameborder=&quot;0&quot; height=&quot;100%&quot; width=&quot;100%&quot; marginheight=&quot;0&quot; marginwidth=&quot;0&quot; scrolling=&quot;no&quot; /&gt;&apos;)
+       .dialog({
+            autoOpen: false,
+            title: &apos;Search/Create Identity&apos;,
+            resizable: false,
+            width: 800,
+            height: 500,
+            autoResize: true,
+            modal: true,
+            draggable: false
+});
+ 
+j$modalDialog.dialog(&apos;open&apos;);</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Search_Create_Identity_Detail</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Search / Create Identity</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&apos;/soap/ajax/29.0/connection.js&apos;)}
+{!REQUIRESCRIPT(&apos;/resource/jquery191&apos;)}
+{!REQUIRESCRIPT(&apos;/resource/jquery_ui_js&apos;)}
+{!REQUIRESCRIPT(&apos;/support/console/29.0/integration.js&apos;)}
+
+requireCssFile(&apos;/resource/jquery_ui_1_10_4/jquery-ui-1.10.4.custom/css/flick/jquery-ui-1.10.4.custom.css&apos;);
+
+function requireCssFile(filename) {
+var fileref = document.createElement(&apos;link&apos;);
+fileref.setAttribute(&apos;rel&apos;, &apos;stylesheet&apos;);
+fileref.setAttribute(&apos;type&apos;, &apos;text/css&apos;);
+fileref.setAttribute(&apos;href&apos;, filename);
+document.getElementsByTagName(&apos;head&apos;)[0].appendChild(fileref);
+}
+
+var contactId = &apos;{!Contact.Id}&apos;;
+var authId = &apos;{!Contact.Auth_Id__c}&apos; ;
+var userName = &apos;{!Contact.username__c}&apos;;
+var contactCAN = &apos;{!Contact.AccountCAN__c}&apos;;
+var contactCACI = &apos;{!Contact.CACI__c}&apos;;
+var contactCompanyId = &apos;{!Contact.Customer_Company_Id__c}&apos;;
+
+function getContactIdFromSubTab() {
+sforce.console.getFocusedSubtabObjectId(showObjectId);
+}
+var showObjectId = function showObjectId(result) {
+// Display the object ID
+contactId = result.id;
+};
+if(contactCompanyId !=&apos;&apos; || contactCACI !=&apos;&apos; ){ 
+if(&apos;{!Contact.Auth_Id__c}&apos; == &apos;&apos; || &apos;{!Contact.Auth_Id__c}&apos; == null || &apos;{!Contact.Auth_Id__c}&apos; == undefined) {
+var j$ = jQuery.noConflict();
+var iframe_url = &apos;{!URLFOR(&quot;/apex/SearchIAMIdentity&quot;)}&apos; + &apos;?Id=&apos; + contactId ;
+
+if(sforce.console.isInConsole()) {
+getContactIdFromSubTab();
+iframe_url = &apos;{!URLFOR(&quot;/apex/SearchIAMIdentity&quot;)}&apos; + &apos;&amp;Id=&apos; + contactId ;
+}
+
+var j$modalDialog = j$(&apos;&lt;div&gt;&lt;/div&gt;&apos;)
+.html(&apos;&lt;iframe id=&quot;iframeContentId&quot; src=&quot;&apos; + iframe_url + &apos;&quot; frameborder=&quot;0&quot; height=&quot;100%&quot; width=&quot;100%&quot; marginheight=&quot;0&quot; marginwidth=&quot;0&quot; /&gt;&apos;)
+.dialog({
+autoOpen: false,
+title: &apos;Search/Create Identity&apos;,
+resizable: false,
+width: 800,
+height: 500,
+autoResize: true,
+modal: true,
+draggable: true
+});
+
+j$modalDialog.dialog(&apos;open&apos;);
+
+j$modalDialog.bind(&apos;dialogclose&apos;, function(event) {
+window.location.reload(true);
+});
+} else {
+alert(&apos;Identity already exists. Auth Id:&apos;+ authId + &apos;. UserName: &apos;+ userName);
+}
+}
+else
+{
+alert(&apos;The identity for this online contact cannot be associated because the contact does not have a CACI. If this contact was just created, please wait a few moments for the CACI and try again.&apos;);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Search_Page</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Contact Search</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>srcUp(&apos;/apex/Universal_Search_Page?contactID={!Contact.Id}&apos;);</url>
+    </webLinks>
+    <webLinks>
+        <fullName>SendGmail</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Send Gmail</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>https://mail.google.com/mail?view=cm&amp;tf=0&amp;to={!Contact_Email}&lt;{!Contact_LastName}, {!Contact_FirstName}&gt;&amp;tf=1</url>
+    </webLinks>
+    <webLinks>
+        <fullName>View_360</fullName>
+        <availability>online</availability>
+        <description>URI of the contact 360 page</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Contact 360</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&apos;/soap/ajax/30.0/connection.js&apos;)}
+{!REQUIRESCRIPT(&quot;/xdomain/xdomain.js&quot;)}
+{!REQUIRESCRIPT(&quot;/support/console/28.0/integration.js&quot;)}
+{!REQUIRESCRIPT(&apos;/js/functions.js&apos;)}
+try{
+
+    var contactID = &quot;{!Contact.Id}&quot;; 
+
+    if(contactID){
+        var url = &apos;/apex/skuid__UI?page=Contact360&amp;id=&apos;+contactID;
+
+        if(typeof(srcUp) == &apos;function&apos;) //Checks that it is in console
+        { 
+            var openSubtab = function(result){ 
+            sforce.console.openSubtab(result.id,url + &apos;&amp;inConsole=true&apos;, true, &apos;Contact 360&apos;, null); 
+            }; 
+            sforce.console.getEnclosingPrimaryTabId(openSubtab); 
+        }
+        else{ 
+            window.open(url + &apos;&amp;inConsole=false&apos;,  &quot;_self&quot;);
+        }
+    } 
+}
+catch(e){
+  alert (&apos;Your request could not be completed, Please try again later.&apos;);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>YahooMaps</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>true</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>true</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Yahoo! Maps</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>true</showsLocation>
+        <showsStatus>true</showsStatus>
+        <url>http://maps.yahoo.com/py/maps.py?cn={!Contact_MailingCountry}&amp;csz={!Contact_MailingCity}+{!Contact_MailingState}+{!Contact_MailingPostalCode}+&amp;addr={!Contact_MailingAddress}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>YahooWeather</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Yahoo! Weather</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>http://weather.yahoo.com/search/weather2?p={!Contact_MailingPostalCode}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>test_sales_tool</fullName>
+        <availability>online</availability>
+        <description>testing</description>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>test sales tool</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>http://www.google.com</url>
+    </webLinks>
+</CustomObject>

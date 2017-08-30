@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Get started today with FREE data conversion</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Educate client base Conversion service</name>
+    <style>none</style>
+    <subject>Get started today with FREE data conversion</subject>
+    <textOnly>*|MC:SUBJECT|*
+
+Convert your clients&apos; data free and quickly
+
+View this email in your browser
+
+Ready, Select, Convert!
+
+Working more efficiently with your small business clients is closer than you might think. Cloud accounting enables you to work on your clients’ data when you want, where you want. It also means you and your client can access the same data at the same time, giving you the opportunity to provide pro-active advice on the spot.
+
+To help you to start benefiting from cloud accounting today, we can convert your clients’ data from a range of desktop solutions1 to QuickBooks Online for FREE2.
+
+MYOB AccountRight Enterprise or Premier V19 or earlier
+Reckon Accounts 2014 or earlier including Reckon Hosted
+Reckon QuickBooks 2009 or later
+Xero
+
+Getting started is easy
+
+Once you’re ready to get started, simply select the client you would like to upgrade and submit their data file to convert – and we’ll take care of the rest.
+
+Learn more about the conversion process
+
+So if working smarter with your small business clients is a goal for 2015, let us help you make the move faster by converting your clients’ data for free today.
+
+If you’d like to learn more about the conversion process, call our ProAdvisor team on 1800 618 521 who’ll be happy to help you out.
+
+Thanks!
+
+QuickBooks Online ProAdvisor Team
+
+1 Data files can be converted from the Australian versions of Reckon Accounts 2014 or earlier (including Reckon Hosted), Reckon QuickBooks 2009 or later, MYOB AccountRight Enterprise, Premier V19 and earlier (.myo file type) and Xero to QuickBooks Online Essentials &amp; QuickBooks Online Plus. 2 For a limited time, Intuit will cover the cost of conversion to transfer up to 24 months of data (one financial year of historical data, plus all data for the current financial year) to QuickBooks Online Essentials and QuickBooks Online Plus. You can request additional years of data for a small fee, payable to Odyssey.
+
+Terms, conditions, features, support, pricing and service options are subject to change without notice.
+
+You&apos;re receiving this email because you have provided Intuit your details or have been referred by a colleague.
+
+unsubscribe from this list
+
+Intuit Australia
+Level 13, 2 Park Street
+SYDNEY  NSW  2000</textOnly>
+    <type>custom</type>
+</EmailTemplate>

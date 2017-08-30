@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Profile Search</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Profile Search</value>
+    </caseValues>
+    <fields>
+        <label><!-- Email Template 1 --></label>
+        <name>Email_Template_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email Template 2 --></label>
+        <name>Email_Template_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email Template 3 --></label>
+        <name>Email_Template_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email Template 4 --></label>
+        <name>Email_Template_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email Template 5 --></label>
+        <name>Email_Template_5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email Template 6 --></label>
+        <name>Email_Template_6__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email Template 7 --></label>
+        <name>Email_Template_7__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email Template 8 --></label>
+        <name>Email_Template_8__c</name>
+    </fields>
+    <fields>
+        <label><!-- OptOutFromEmails --></label>
+        <name>OptOutFromEmails__c</name>
+    </fields>
+    <fields>
+        <label><!-- ParticipantPublicPageURL --></label>
+        <name>ParticipantPublicPageURL__c</name>
+    </fields>
+    <fields>
+        <label><!-- SOQL LIMIT --></label>
+        <name>SOQL_LIMIT__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

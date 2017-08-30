@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Distributor Filter</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Distributor Filters</value>
+    </caseValues>
+    <fields>
+        <label><!-- Distributor --></label>
+        <name>AMX_Distributor__c</name>
+        <relationshipLabel><!-- Distributor Filters --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Filter Argument --></label>
+        <name>Filter_Argument__c</name>
+    </fields>
+    <fields>
+        <label><!-- Filter Field Name --></label>
+        <name>Filter_Field_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Filter Field Type --></label>
+        <name>Filter_Field_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Filter Operator --></label>
+        <name>Filter_Operator__c</name>
+        <picklistValues>
+            <masterLabel>contains</masterLabel>
+            <translation><!-- contains --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ends with</masterLabel>
+            <translation><!-- ends with --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>equals</masterLabel>
+            <translation><!-- equals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>greater or equal</masterLabel>
+            <translation><!-- greater or equal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>greater than</masterLabel>
+            <translation><!-- greater than --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>less or equal</masterLabel>
+            <translation><!-- less or equal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>less than</masterLabel>
+            <translation><!-- less than --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>starts with</masterLabel>
+            <translation><!-- starts with --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Filter Sequence --></label>
+        <name>Filter_Sequence__c</name>
+    </fields>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

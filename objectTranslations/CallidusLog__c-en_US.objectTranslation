@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>CallidusLog</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>CallidusLogs</value>
+    </caseValues>
+    <fields>
+        <label><!-- Amount --></label>
+        <name>Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- ErrorDescription --></label>
+        <name>ErrorDescription__c</name>
+    </fields>
+    <fields>
+        <label><!-- ObjectId --></label>
+        <name>ObjectId__c</name>
+    </fields>
+    <fields>
+        <label><!-- ObjectType --></label>
+        <name>ObjectType__c</name>
+    </fields>
+    <fields>
+        <label><!-- PayeeId --></label>
+        <name>PayeeId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Error</masterLabel>
+            <translation><!-- Error --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Success</masterLabel>
+            <translation><!-- Success --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

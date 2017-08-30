@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Asset.Assets__r$Opportunity_Name__c</field>
+    </columns>
+    <columns>
+        <field>Asset.Assets__r$Id</field>
+    </columns>
+    <columns>
+        <field>Asset$Account</field>
+    </columns>
+    <columns>
+        <field>Asset$Channel__c</field>
+    </columns>
+    <columns>
+        <field>Asset.Assets__r$StageName</field>
+    </columns>
+    <columns>
+        <field>Asset.Assets__r$CloseDate</field>
+    </columns>
+    <columns>
+        <field>Asset$First_Charge_Date__c</field>
+    </columns>
+    <columns>
+        <field>Asset$Suspend_Date__c</field>
+    </columns>
+    <columns>
+        <field>Asset$Cancel_Date__c</field>
+    </columns>
+    <columns>
+        <field>Asset$ReSubscribe_Date__c</field>
+    </columns>
+    <currency>AUD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Asset.Assets__r$Owner</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Lauren Atkinson,Cheryl O Hanlon,Kevin Dass,Jack Melville,Robert Zobec,Christopher McColm,Max Meagher,Sean Woodward,Jacqui Wolland,Thomas Cheung,Rachel Han Tran</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Asset.Assets__r$StageName</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Closed Lost,Closed Won</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Asset.Assets__r$Opportunity_Owner_Read_Only__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Opps Not Moved to Closed Won</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AssetsOpptysProducts__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Asset$First_Charge_Date__c</dateColumn>
+        <interval>INTERVAL_LASTTHISMONTH</interval>
+    </timeFrameFilter>
+</Report>

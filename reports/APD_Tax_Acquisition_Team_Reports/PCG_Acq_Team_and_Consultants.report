@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_87401773</developerName>
+        <masterLabel>Team</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>FULL_NAME</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>John Trammell</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Jonathan Lovitt</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Michael Chavez</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Kimberly Gallahan</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Robert Randall</sourceValue>
+            </sourceValues>
+            <value>Lacerte</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Emily Grato</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Cynthia Thomas</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Gerald Henry</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Kelsey Alford</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Brian Curran</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Maria Harris</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Jason Tritle</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Marc Freidberg</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Corey Spear</sourceValue>
+            </sourceValues>
+            <value>ProSeries Team</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Victoria Maher</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Connor Eustice</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Jilly Folkes</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Otto Prado</sourceValue>
+            </sourceValues>
+            <value>BDT</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Roland Carrion</sourceValue>
+            </sourceValues>
+            <value>Field Sales (Lead Gen)</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>BucketField_87401773</field>
+    </columns>
+    <columns>
+        <field>FULL_NAME</field>
+    </columns>
+    <columns>
+        <field>PROFILE</field>
+    </columns>
+    <columns>
+        <field>ROLE</field>
+    </columns>
+    <columns>
+        <field>USERNAME</field>
+    </columns>
+    <columns>
+        <field>USER_ID</field>
+    </columns>
+    <columns>
+        <field>ACTIVE</field>
+    </columns>
+    <columns>
+        <field>LAST_LOGIN</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>ROLE</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>New Offerings Consultant</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>BucketField_87401773</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Other</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>PCG Acq Team and Consultants</name>
+    <params>
+        <name>active</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>User</reportType>
+    <showDetails>true</showDetails>
+    <sortColumn>BucketField_87401773</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>LAST_LOGIN</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Payroll Corrections - Correction Case Assigned</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Desktop_Data_Services</letterhead>
+    <name>Payroll Corrections - Correction Case Assigned</name>
+    <style>freeForm</style>
+    <subject>Payroll Corrections - Correction Case Assigned</subject>
+    <textOnly>Hello {!Contact.Name},
+
+My name is {!Case.OwnerFullName} and I’ve been assigned to work on your Payroll Corrections/Edits.
+
+Updates will be sent to the email we have on file: {!Contact.Email}
+
+If I need more information to complete your request in a timely manner, I will contact you by phone. Typically requests take less than a day to complete. If I exceed this expectation, I will let you know where I am at by the end of each business day until I am done.
+
+Should you find the need to contact us, please reply to this email as it will be our direct form of communication for this case and I will get back with you via phone or email.
+
+Warmest Regards,
+{!Case.Case_Owner_First_Name__c}
+Intuit Payroll Corrections Team Member
+
+This is an automated email. Please do not reply directly as you will not receive a response.</textOnly>
+    <type>html</type>
+</EmailTemplate>

@@ -1,0 +1,40 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<div align="right"><font size="2" face="Verdana,Helvetica,Sans-Serif"><b><img alt="" src="https://intuitb2b--c.na42.content.force.com/servlet/servlet.ImageServer?id=015i000000B3Q0i&amp;oid=00Di0000000Xs0j" align="left" border="0">Account #{!Contact.CAN__c}</b><br></font></div><font size="2" face="Verdana,Helvetica,Sans-Serif"><br><br></font><div align="left"><font size="2" face="Verdana,Helvetica,Sans-Serif"><br><br></font></div><font size="2" face="Verdana,Helvetica,Sans-Serif"><div><font size="2" face="Verdana,Helvetica,Sans-Serif"><br></font></div>Dear {!Contact.FirstName},</font><font size="2" face="Verdana,Helvetica,Sans-Serif"><br><br>It
+ was great speaking with you today. Here are the benefits that you’ll 
+have access to during the Enterprise Onboarding Process to ensure the 
+successful installation and implementation of your QuickBooks Enterprise
+ software.</font><br><blockquote><font size="2" face="Verdana,Helvetica,Sans-Serif"><b style="mso-bidi-font-weight:
+normal">Onboarding Account Manager:</b>
+ My name is </font><font size="2" face="Verdana,Helvetica,Sans-Serif"><span style="font-size: 13.3333px;">{!User.FirstName}&nbsp;</span><span style="font-size: 13.3333px;">{!User.LastName}</span><b><span style="font-size: 13.3333px;"> </span></b>and I will be your primary contact for 
+everything Intuit. Please reach out to me for all your business needs.<br><br><b style="mso-bidi-font-weight:
+normal">Direct Phone Number:</b> </font><font size="2" face="Verdana,Helvetica,Sans-Serif">the phone number connecting directly to me. <span style="mso-spacerun:yes"></span>I can be reached Monday through Friday, AM to PM PST at <span style="font-size: 10.6667px;">{!User.Phone} ext {!User.Extension}</span><font style="font-size: 12pt;"><span style="font-size: 8pt;"></span></font>.<br><br><b style="mso-bidi-font-weight:
+normal">Installation: </b></font><font size="2" face="Verdana,Helvetica,Sans-Serif">a team that can take you step-by-step through the installation
+     process. Please reach out to me if you have a day &amp; time in mind. My team typically needs a 24 hour notice and is available Mon - Fri between 7:00 AM
+     &amp; 3:00 PM PST)<br><br></font><font size="2" face="Verdana,Helvetica,Sans-Serif"><b>Data Migration</b>: It appears that you’re
+     coming from QuickBooks Online, if that is in fact the case, Intuit has a
+     team in place that will take as much of your data as possible from your
+     QBO Company File and convert it to an Enterprise friendly file for you.
+     For more details and to begin this process, please reach out to them at
+     800-926-3667. Once this process has been completed, an Installation Expert
+     on my team can also work with you on the best procedures to transfer any
+     additional data, if applicable.<br><br><b style="mso-bidi-font-weight:
+normal">Training:</b> </font><font size="2" face="Verdana,Helvetica,Sans-Serif">You have the option to
+     receive, at no additional charge, QuickBooks training
+     sessions that will be 1-on-1 with an Enterprise Expert. I can assist you
+     in customizing our training program to meet your needs. If you’d like a
+     list of the training options we offer, let me know and I’d be happy to
+     email it to you.</font><font size="2" face="Verdana,Helvetica,Sans-Serif"><span style="color: black;"></span></font><br><font size="2" face="Verdana,Helvetica,Sans-Serif"><span style="color: black;"></span></font></blockquote><font size="2" face="Verdana,Helvetica,Sans-Serif"><span style="color: black;"><font size="2" face="Verdana,Helvetica,Sans-Serif">We
+ at Intuit value your business and are continuously working to improve 
+the experience we provide to our valued customers and are excited to 
+offer you this new benefit.<br><br></font>I look forward to working with you<strong>.</strong></span></font><font color="#365ebf" face="Arial, sans-serif"><span style="font-size: 13.3333px;"><b><br><br>{!User.FirstName}&nbsp;</b></span></font><b><font color="#365ebf" face="Arial, sans-serif"><span style="font-size: 13.3333px;">{!User.LastName} </span><span style="font-size: 10pt;">|</span></font></b><b style="font-size: 12pt;"><span style="font-size: 10pt; font-family: Arial, sans-serif; color: rgb(84, 141, 212);">&nbsp;</span></b><b style="font-size: 12pt;"><span style="font-size: 9pt; font-family: Arial, sans-serif; color: rgb(38, 38, 38);">Enterprise Account Manager</span></b><b style="font-size: 12pt;"><span style="color: rgb(38, 38, 38); font-size: 8pt; font-family: Arial, sans-serif;"><br>Work Phone:</span><span style="font-size: 8pt; font-family: Arial, sans-serif;"><font color="#505050">&nbsp;</font></span></b><font color="#365ebf" face="Arial, sans-serif"><span style="font-size: 10.6667px;">{!User.Phone} ext {!User.Extension}</span></font><font style="font-size: 12pt;"><span style="font-size: 8pt;">&nbsp;&nbsp;</span></font><b style="color: rgb(54, 94, 191); font-family: Arial, sans-serif; font-size: 8pt;">|</b><font color="#3366FF"><span style="font-family: Arial,sans-serif; font-size: 8pt;">&nbsp;</span><font style="font-size: 12pt;"><span style="font-size: 10.6667px;"><u>{!User.Email}</u></span></font><span style="font-size: 10pt; font-family: Arial,sans-serif;"></span></font><span style="font-size: 10pt; font-family: Arial, sans-serif; color: rgb(54, 94, 191);"></span><b><span style="font-size: 10pt; font-family: Arial, sans-serif; color: rgb(54, 94, 191);"><font color="#3366FF"><br></font><br>Intuit |&nbsp;</span></b><b><span style="font-size: 10pt; font-family: Arial, sans-serif; color: rgb(38, 38, 38);">simplify the business of life</span></b><font color="#333333" size="3" face="Arial,Sans-Serif"><span style="FONT-FAMILY: 'arial' ,; FONT-SIZE: 9pt"><br><br><font size="1">this
+ transmittal is intended only for the use of the individual or entity to
+ which it is addressed and may contain information that is privileged, 
+confidential and exempt from disclosure under applicable law. If the 
+reader of this transmittal is not the intended recipient or the employee
+ or agent responsible for delivering the transmittal to the intended 
+recipient, you are hereby notified that any dissemination, distribution 
+or copying of this communication is strictly </font>prohibited.</span></font><b><span style="font-size: 10pt; font-family: Arial, sans-serif; color: rgb(38, 38, 38);"></span></b>]]></td>
+</tr>
+</table>

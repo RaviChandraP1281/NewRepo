@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account.Opportunities$IsWon</field>
+    </columns>
+    <columns>
+        <field>Account.Opportunities$LastActivityDate</field>
+    </columns>
+    <columns>
+        <field>Account.Opportunities.Activities$Subject</field>
+    </columns>
+    <columns>
+        <field>Account.Opportunities$CreatedDate</field>
+    </columns>
+    <currency>USD</currency>
+    <description>A report to see which opportunities have tasks</description>
+    <filter>
+        <criteriaItems>
+            <column>Account.Opportunities$Opportunity_Owner_Read_Only__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>David Burden,Christian Cruz,Randall Hrna,Shaughn Landauer,Jeff Loturco,Ebony Meadows,Tom O&apos;neil,Matthew Prober,Alan Rockowitz,Gail Tucker,Scott Williams,Lauri Logan,Benjamin Manning,Nicholas Menchaca,Michael Mendoza,Robert Moreno,Joe Posey,David Scott,Kyle Scott,David Gomez,Jeff Robertson,Shawn Hassinger,Cody Walden,Jesse Tyler,Janet Luna,Alvin Dag Ay,Gabriel Alper</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Opportunities$StageName</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Closed Won,Closed Lost</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Opportunities.Activities$IsTask</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Opportunities$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Opportunities$CreatedBy</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>IN/OB Open Oppties with Tasks</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Accounts_w_opty_with_or_w_o_activity_w_or_w_o_asse__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURFY</interval>
+    </timeFrameFilter>
+</Report>

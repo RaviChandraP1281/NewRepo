@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Default Preference Mappings</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Default Preference Mappings</value>
+    </caseValues>
+    <fields>
+        <label><!-- Country details lookup field --></label>
+        <name>Country_details_lookup_field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Country field --></label>
+        <name>Country_field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Currency field --></label>
+        <name>Currency_field__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enabled the country/territory deduction --></help>
+        <label><!-- Enable country/territory --></label>
+        <name>Enable_country_territory__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enabled the flag/language deduction --></help>
+        <label><!-- Enable flag/language --></label>
+        <name>Enable_flag_language__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enables the timezone call --></help>
+        <label><!-- Enable timezone --></label>
+        <name>Enable_timezone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Language field --></label>
+        <name>Language_field__c</name>
+    </fields>
+    <fields>
+        <label><!-- PostalCode field --></label>
+        <name>PostalCode_field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Region field --></label>
+        <name>Region_field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Territory field --></label>
+        <name>Territory_field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Timezone field --></label>
+        <name>Timezone_field__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

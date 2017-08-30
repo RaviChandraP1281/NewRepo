@@ -1,0 +1,16 @@
+*** NEW LEAD ASSIGNMENT NOTIFICATION ***  
+
+The following lead has been assigned to you.  
+Company Name: {!Lead.Company}
+
+Campaign Name: {!Lead.Legacy_Campaign_Name__c}
+Lead Source: {!Lead.LeadSource}
+Contact Name: {!Lead.Name}
+Email: {!Lead.Email}
+Phone Number: {!Lead.Phone}
+Timeframe: {!Lead.When_are_you_planning_to_switch_software__c}
+Business Type: {!Lead.Industry_Sub_Vertical__c}
+Treatment Name: {!Lead.Legacy_Treatment_Name__c}
+Product Family of Interest: {!Lead.Product_Family_of_Interest__c} 
+
+Click on the link to access the lead directly:  {!Lead.Link}

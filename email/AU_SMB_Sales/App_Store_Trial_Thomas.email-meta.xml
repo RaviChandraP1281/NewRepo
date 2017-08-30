@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>App Store Trial (Thomas)</name>
+    <style>none</style>
+    <subject>Thomas @ QuickBooks. Personalized help 5 days a week.</subject>
+    <type>text</type>
+</EmailTemplate>

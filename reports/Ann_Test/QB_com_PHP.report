@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>CREATED</field>
+    </columns>
+    <columns>
+        <field>FULL_NAME</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Product_Family_of_Interest__c</field>
+    </columns>
+    <columns>
+        <field>AMOUNT</field>
+    </columns>
+    <columns>
+        <field>STAGE_NAME</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT_NAME</field>
+    </columns>
+    <columns>
+        <field>OPPORTUNITY_NAME</field>
+    </columns>
+    <columns>
+        <field>AGE</field>
+    </columns>
+    <currency>USD</currency>
+    <description>Product sales time period</description>
+    <filter>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Diwa,Donnah Dizon,Rae Randall De Guzman,Jofer Dela Cruz,Mia Dela Cruz,Montalban,Jan Ray Najera,Heidi Pangilinan,Pelayo,Jayson Reyes,Maria Jenica Santos,Gailynn Sarmiento,Siccion,Kristine Balboa,Fragata,Fairy Lyn Cortes,Cristobal,Galang,Ace Garcia,Maria Joanna Joson,Nunag,Josanne Samantha Santos,Mibeth Enriquez,Joan Villabroza,Magno,Orson Ocampo,Bacani,Timpug,Sicat,Pallasigui,Chemarie,Madayag,Richard Rodrigo</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>QB.com PHP</name>
+    <params>
+        <name>open</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunity</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>CREATED_DATE</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <endDate>2015-06-25</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2015-06-22</startDate>
+    </timeFrameFilter>
+</Report>

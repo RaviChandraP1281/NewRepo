@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>System Exception</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>System Exceptions</value>
+    </caseValues>
+    <fields>
+        <help><!-- *Possible* apex class exception thrown from --></help>
+        <label><!-- Class Origination --></label>
+        <name>Class_Origination__c</name>
+    </fields>
+    <fields>
+        <help><!-- Line Number exception occurred --></help>
+        <label><!-- Line Number --></label>
+        <name>Line_Number__c</name>
+    </fields>
+    <fields>
+        <help><!-- Message passed by the Exception --></help>
+        <label><!-- Message --></label>
+        <name>Message__c</name>
+    </fields>
+    <fields>
+        <help><!-- Stack Trace passed by the Exception --></help>
+        <label><!-- Stack Trace --></label>
+        <name>Stack_Trace__c</name>
+    </fields>
+    <fields>
+        <help><!-- *Possible* apex trigger exception thrown from --></help>
+        <label><!-- Trigger Origination --></label>
+        <name>Trigger_Origination__c</name>
+    </fields>
+    <fields>
+        <help><!-- Exception Type --></help>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

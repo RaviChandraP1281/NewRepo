@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>EXP_PRODUCT_AMOUNT</field>
+    </columns>
+    <columns>
+        <field>ACTIVE</field>
+    </columns>
+    <columns>
+        <field>CUSTOMER_PRODUCT_ID</field>
+    </columns>
+    <columns>
+        <field>DESCRIPTION</field>
+    </columns>
+    <columns>
+        <field>UNIT_PRICE</field>
+    </columns>
+    <columns>
+        <field>QUANTITY</field>
+    </columns>
+    <columns>
+        <field>SERVICE_DATE</field>
+    </columns>
+    <columns>
+        <field>OPPORTUNITY_NAME</field>
+    </columns>
+    <columns>
+        <field>AMOUNT</field>
+    </columns>
+    <columns>
+        <field>CLOSE_DATE</field>
+    </columns>
+    <columns>
+        <field>STAGE_NAME</field>
+    </columns>
+    <currency>USD</currency>
+    <description>contains jenny&apos;s lead agents and products by selected date range</description>
+    <filter>
+        <criteriaItems>
+            <column>Opportunity.Lead_Originator__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Rexson Jordan Nulud,Mary Ann Mangiliman,Marjorie Gail Timpug,Denzel Alexis,Desiree Melton,Joshua Frost,Jennifer DeMarco,Zavala Shannel,Almar Canlas,Keaton Bustos,Jennilyn Pacla,Paul Fredette,Rhia Ann Mangune,Ronamae Canilao,Joneth Vianney Diwa,Cortney Brown,Justin Hayes,Aldrin Sotto,David Avner Francisco,Evelyne Van Eldik,Emmy Strange,Sicat Ronald,Galang Plinky Rose,Richard Dean Lulu,Kabigting,Maria Joanna Joson,Austin Harrison,Caitlyn Schepps,Eddie Fierro,Gailynn Sarmiento,Josanne Samantha Santos,Katrina Fortune,Mibeth Enriquez,Jerome Pallasigui,Joanna Liza Pelayo,Jofer Dela Cruz,Maria Jenica Santos,Fairy Lyn Cortes,Joan Villabroza,Mia Dela Cruz,Fatima Cristobal,Orson Ocampo,Rae Randall De Guzman,Mark Lyle Timpug,Leopoldo Magno,Criselle Nunag,Heidi Pangilinan,Jomalyn Bacani,Aljoner Siccion,Jayson Reyes,Kristine Balboa,Donnah Dizon</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>QuickBooks Online Payroll FullServiceBasic,Intuit QuickBooks Payroll Annual,QuickBooks Online Payroll Plus,IFSP Payroll,Intuit Assisted Payroll,IOP - Basic,IOP - Plus,IOP - Mac</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>STAGE_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Closed Won,Future Hold,Assess</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Opportunity.Lead_Originator__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Opportunity.Opportunity_Owner_Read_Only__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>QBO by Lead Originator Rafia</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ProductOpportunity</reportType>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CLOSE_DATE</dateColumn>
+        <interval>INTERVAL_LASTWEEK</interval>
+    </timeFrameFilter>
+</Report>

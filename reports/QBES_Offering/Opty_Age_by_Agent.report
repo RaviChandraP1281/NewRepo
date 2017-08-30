@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>number</bucketType>
+        <developerName>BucketField_63813712</developerName>
+        <masterLabel>Age Bucket</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>AGE</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <to>7</to>
+            </sourceValues>
+            <value>0 to 7</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>7</from>
+                <to>15</to>
+            </sourceValues>
+            <value>8 to 15</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>15</from>
+                <to>23</to>
+            </sourceValues>
+            <value>16 to 23</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>23</from>
+                <to>31</to>
+            </sourceValues>
+            <value>24 to 31</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>31</from>
+            </sourceValues>
+            <value>&gt;32</value>
+        </values>
+    </buckets>
+    <filter>
+        <criteriaItems>
+            <column>FULL_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Mills,Bates,Cranson,Kimball,Clark,Valenzuela,O&apos;Connor,Robbins,Rothe,Tilton,LaPointe,Knoche,Kazemi,Gray,Fasnacht,Adragna,Albor,Harms,Ruhland,Benko,miceli,kolb,page,cohen</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_63813712</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Week</dateGranularity>
+        <field>CREATED_DATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Opty Age by Lead Source</name>
+    <params>
+        <name>open</name>
+        <value>open</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunity</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2014-01-06</startDate>
+    </timeFrameFilter>
+</Report>

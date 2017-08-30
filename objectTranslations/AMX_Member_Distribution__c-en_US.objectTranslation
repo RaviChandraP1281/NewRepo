@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Member Distribution</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Member Distributions</value>
+    </caseValues>
+    <fields>
+        <label><!-- Distributor --></label>
+        <name>AMX_Distributor__c</name>
+        <relationshipLabel><!-- Member Distributions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Team Member --></label>
+        <name>AMX_Team_Member__c</name>
+        <relationshipLabel><!-- Member Distributions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Distribution Control Count --></label>
+        <name>Distribution_Control_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Distribution Failure Count --></label>
+        <name>Distribution_Failure_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Distribution Lifetime Count --></label>
+        <name>Distribution_Lifetime_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Distribution Sequence (Actual) --></label>
+        <name>Distribution_Sequence_Actual__c</name>
+    </fields>
+    <fields>
+        <label><!-- Distribution Sequence --></label>
+        <name>Distribution_Sequence__c</name>
+    </fields>
+    <fields>
+        <label><!-- Distribution Success Count --></label>
+        <name>Distribution_Success_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Distributor Name --></label>
+        <name>Distributor_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Assignment Date --></label>
+        <name>Last_Assignment_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Username --></label>
+        <name>Username__c</name>
+    </fields>
+    <fields>
+        <help><!-- This value determines the &quot;weight&quot; of the associated team member for the associated distributor. Value must be between 1 &amp; 9 inclusive. --></help>
+        <label><!-- Weighting --></label>
+        <name>Weighting__c</name>
+    </fields>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,22 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">Merci d’avoir posé votre question.&nbsp; Un membre de notre équipe de soutien y
+répondra en moins d’un jour ouvrable.&nbsp; <o:p></o:p></p>
+
+<p class="MsoNormal">Voici les détails portant sur votre dossier&nbsp;:<o:p></o:p></p>
+
+<p class="MsoNormal">Numéro de dossier: {!Case.CaseNumber}<o:p></o:p></p>
+
+<p class="MsoNormal">Question: {!Case.Question}<o:p></o:p></p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">Pour en savoir plus sur d’autres options de soutien,
+veuillez visiter notre site Web à l'adresse suivante&nbsp;:<o:p></o:p></p>
+
+<p class="MsoNormal"><a href="https://help.quickbooks.intuit.com/fr_CA/contact%20%20%20%20%20%0d">https://help.quickbooks.intuit.com/fr_CA/contact &nbsp; &nbsp;</a></p>]]></td>
+</tr>
+</table>

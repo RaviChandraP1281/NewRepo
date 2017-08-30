@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Country_details_lookup_field__c</fullName>
+        <externalId>false</externalId>
+        <label>Country details lookup field</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Country_field__c</fullName>
+        <externalId>false</externalId>
+        <label>Country field</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Currency_field__c</fullName>
+        <externalId>false</externalId>
+        <label>Currency field</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Enable_country_territory__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Enabled the country/territory deduction</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enabled the country/territory deduction</inlineHelpText>
+        <label>Enable country/territory</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Enable_flag_language__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Enabled the flag/language deduction</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enabled the flag/language deduction</inlineHelpText>
+        <label>Enable flag/language</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Enable_timezone__c</fullName>
+        <defaultValue>true</defaultValue>
+        <description>Enables the timezone call</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enables the timezone call</inlineHelpText>
+        <label>Enable timezone</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Language_field__c</fullName>
+        <externalId>false</externalId>
+        <label>Language field</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>PostalCode_field__c</fullName>
+        <externalId>false</externalId>
+        <label>PostalCode field</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Region_field__c</fullName>
+        <externalId>false</externalId>
+        <label>Region field</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Territory_field__c</fullName>
+        <externalId>false</externalId>
+        <label>Territory field</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Timezone_field__c</fullName>
+        <externalId>false</externalId>
+        <label>Timezone field</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+</CustomObject>

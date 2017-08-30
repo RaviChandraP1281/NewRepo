@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>User.Case$CreatedById$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>User.Case$CreatedById.CaseArticles$ArticleNumber</field>
+    </columns>
+    <columns>
+        <field>User$Name</field>
+    </columns>
+    <columns>
+        <field>User$Division</field>
+    </columns>
+    <columns>
+        <field>User*User$Role__c</field>
+    </columns>
+    <currency>USD</currency>
+    <description>Looking at KM use by case by day case was opened</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>User.Case$CreatedById$CaseNumber</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>KM User/Cases sorted by Case Number</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>User_Case_KM__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>User.Case$CreatedById$CreatedDate</dateColumn>
+        <endDate>2015-10-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2015-09-08</startDate>
+    </timeFrameFilter>
+</Report>

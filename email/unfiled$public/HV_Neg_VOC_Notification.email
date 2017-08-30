@@ -1,0 +1,11 @@
+Please follow up with your client ASAP in regards to the negative VOC they just submitted. Don't forget to add your task to Salesforce!
+
+{!Account.Name}
+CAN: {!Account.CAN__c}
+CoID: {!Account.Company_ID__c}
+{!Contact.FirstName} {!Contact.LastName}
+{!Contact.Phone}
+{!Contact.Email}
+
+Feedback:  {!VOC_Survey_Response__c.Question_Response2__c}
+{!VOC_Survey_Response__c.SurveyResponseURL__c}

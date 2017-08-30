@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Case$CaseOwnerFullName__c</field>
+    </columns>
+    <columns>
+        <field>Case$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>Case.Case_NPS__r$Name</field>
+    </columns>
+    <columns>
+        <field>Case$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>Case.Case_NPS__r$Question_Response1__c</field>
+    </columns>
+    <columns>
+        <field>Case.Case_NPS__r$Question_Response2__c</field>
+    </columns>
+    <columns>
+        <field>Case.Case_NPS__r$Question_Response3__c</field>
+    </columns>
+    <columns>
+        <field>Case.Case_NPS__r$Question_Response4__c</field>
+    </columns>
+    <columns>
+        <field>Case.Case_NPS__r$Question_Response6__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Case$CaseOwnerFullName__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Nicole Alvarez,Cristina Avitia,Brian Ezrre,Monica Garcia,Ira Getraer,Amber Goble,Gilberto Gonzalez,Roy Gurule,Aaron Jauch,Vanessa Moreno,Fred Nichols,Ariana Ocenasek,Rahjah Orme,Jose Ramirez,Sheila Rutledge,Irma Sarina Sanchez,Tammera Stockstill,Steve Teetor,Mandy Wilkinson</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Wave 1 CEL group VOC</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Cases_and_VOC_Scores__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Case$ClosedDate</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

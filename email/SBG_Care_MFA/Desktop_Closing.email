@@ -1,0 +1,41 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="arial">{!Case.Contact},</font></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="arial">Regarding Company: {!Case.Account}</font></div><div style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><font face="arial"><br></font></div><div><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 8pt;"><span style="font-size: 10pt;">Unfortunately the information provided in
+regards to the Master Administrator Primary Contact change has not proved ownership
+of this account. We still require additional documents that prove you have
+legal right to the QuickBooks Desktop account including subscription, products,
+and licenses. No changes will be made at this time. To continue your claim
+please send the following documents so that we may verify this: <o:p></o:p></span></p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 0.0001pt;"><span style="color: red; font-size: 10pt;">&nbsp;</span></p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 0.0001pt;"><span style="font-size:10.0pt;
+color:red">&nbsp;<o:p></o:p></span></p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 8pt;"><span style="font-size: 11pt;">Include the following information and
+REPLY to this email: <o:p></o:p></span></p><p style="margin: 0in 0in 8pt;"><span style="color: rgb(0, 0, 0); font-family: arial; font-size: 10pt;">Case#&nbsp;</span><font face="arial"><span style="font-size: 13.3333px; background-color: rgb(244, 246, 249);">{!Case.CaseNumber}</span></font></p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 8pt;"><span style="font-family: arial; font-size: 10pt;">Customer Account Number:&nbsp;</span><font face="arial"><span style="font-size: 13.3333px;">{!Account.CAN__c}</span></font></p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 8pt;"><span style="font-family: arial; font-size: 10pt;">Company Name:&nbsp;</span><font face="arial"><span style="font-size: 13.3333px;">{!Case.Account}</span></font><span style="font-family: arial; font-size: 10pt; color: red;">&nbsp;</span></p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 8pt;"><span style="font-size: 10pt;">We are closing your case for now. However,
+the claim will be reopened if you email the documentation requested in this
+email within the next 30 days.<o:p></o:p></span></p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 8pt;"><span style="font-size: 10pt;">&nbsp;<o:p></o:p></span></p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 8pt;"><span style="font-size: 10pt;">Sincerely, <o:p></o:p></span></p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 8pt;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p><p style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; margin: 0in 0in 8pt;"><span style="font-size:10.0pt;color:#333333">The QuickBooks Desktop Support Team<o:p></o:p></span></p></div>]]></td>
+</tr>
+</table>

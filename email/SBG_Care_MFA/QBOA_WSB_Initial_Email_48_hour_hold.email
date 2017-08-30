@@ -1,0 +1,115 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<div style="color: rgb(0, 0, 0); font-size: 12pt;"><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:10.0pt;font-family:&quot;Times New Roman&quot;,serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333">{!Case.Contact}</span>,<o:p></o:p></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:10.0pt;font-family:&quot;Times New Roman&quot;,serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333">Regarding {!Case.Account}</span>:<o:p></o:p></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:10.0pt;font-family:&quot;Times New Roman&quot;,serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333">&nbsp;<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:10.0pt;font-family:&quot;Times New Roman&quot;,serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333">We were contacted
+today with a request to transfer the Master Administrator role of a client
+under your QuickBooks Online Accountant account to another user. Since you are
+currently listed as the Master Administrator, the fastest way to complete this
+request is included in the steps below:<o:p></o:p></span></p><table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" style="border-collapse:collapse;border:none;mso-border-alt:solid #A3A3A3 .25pt;
+ mso-yfti-tbllook:1184;mso-padding-alt:0in 0in 0in 0in">
+ <tbody><tr>
+  <td width="699" valign="top" style="width:523.95pt;border:none;background:white;
+  padding:4.0pt 4.0pt 4.0pt 4.0pt">
+  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal"><b><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;, serif;">Remove a company from your
+  wholesale billing</span></b><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;, serif;"><o:p></o:p></span></p>
+  <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:27.0pt;margin-bottom:.0001pt;text-indent:-.25in;line-height:normal;
+  mso-list:l0 level1 lfo1;tab-stops:list .5in;vertical-align:middle"><!--[if !supportLists]--><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;, serif;">1.<span style="font-variant-numeric: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;, serif;">In Quickbooks Online Accountant, click
+  the&nbsp;<b>Gear menu</b>&nbsp;in the upper right of the screen.<o:p></o:p></span></p>
+  <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:27.0pt;margin-bottom:.0001pt;text-indent:-.25in;line-height:normal;
+  mso-list:l0 level1 lfo1;tab-stops:list .5in;vertical-align:middle"><!--[if !supportLists]--><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;, serif;">2.<span style="font-variant-numeric: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;, serif;">From the drop-down menu, under&nbsp;<i>Your
+  Company</i>, select&nbsp;<b>Your Account</b>.<o:p></o:p></span></p>
+  <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:27.0pt;margin-bottom:.0001pt;text-indent:-.25in;line-height:normal;
+  mso-list:l0 level1 lfo1;tab-stops:list .5in;vertical-align:middle"><!--[if !supportLists]--><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;, serif;">3.<span style="font-variant-numeric: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;, serif;">From within the&nbsp;<i>Your Accountant</i>&nbsp;window,
+  scroll down to the&nbsp;<i>Wholesale clients</i>&nbsp;section.<o:p></o:p></span></p>
+  <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:27.0pt;margin-bottom:.0001pt;text-indent:-.25in;line-height:normal;
+  mso-list:l0 level1 lfo1;tab-stops:list .5in;vertical-align:middle"><!--[if !supportLists]--><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;, serif;">4.<span style="font-variant-numeric: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;, serif;">Locate the company you wish to remove from
+  wholesale billing.<o:p></o:p></span></p>
+  <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:27.0pt;margin-bottom:.0001pt;text-indent:-.25in;line-height:normal;
+  mso-list:l0 level1 lfo1;tab-stops:list .5in;vertical-align:middle"><!--[if !supportLists]--><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;, serif;">5.<span style="font-variant-numeric: normal; font-stretch: normal; font-size: 7pt; line-height: normal; font-family: &quot;Times New Roman&quot;;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span></span><!--[endif]--><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;, serif;">From the&nbsp;<i>Actions</i>&nbsp;column
+  drop-down, select&nbsp;<b>Remove from Wholesale</b>.<o:p></o:p></span></p>
+  <p class="MsoNormal" style="margin-top:0in;margin-right:0in;margin-bottom:0in;
+  margin-left:27.0pt;margin-bottom:.0001pt;line-height:normal"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;, serif;">&nbsp;<o:p></o:p></span></p>
+  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal"><b><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;, serif;">NOTE:&nbsp;</span></b><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;, serif;">The company needs to be in Active status to
+  manage the subscription. If the Billing Profile has been suspended, you will
+  need to wait until the billing has been restored before you will see the
+  option to change.&nbsp;<o:p></o:p></span></p>
+  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;, serif;">&nbsp;<o:p></o:p></span></p>
+  <p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal"><b><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;, serif;">IMPORTANT:&nbsp;</span></b><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;, serif;">&nbsp;A company that has been removed from
+  wholesale billing will no longer be eligible for the wholesale pricing and
+  all previous discounts will be removed as well. Once removed, the company
+  file will be independent from the accountant and in Cancelled status. The
+  master administrator will need to re-enter their billing details in order to
+  re-subscribe to QuickBooks.<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;, serif;"><br></span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+  normal"><span style="font-size: 10pt; font-family: &quot;Times New Roman&quot;, serif;">"<a href="https://community.intuit.com/articles/1471408-how-do-i-remove-client-from-my-wholesale-billing">How do I remove client from my wholesale billing?</a>"</span></p></td></tr></tbody></table><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:10.0pt;font-family:&quot;Times New Roman&quot;,serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333"><br>Important: The Master
+Administrator role doesn't get transferred until the invitation is accepted by
+the new person.<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:10.0pt;font-family:&quot;Times New Roman&quot;,serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333">&nbsp;<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:10.0pt;font-family:&quot;Times New Roman&quot;,serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333">We always encourage
+you to come to a mutual agreement with your client , however if you are unable
+or unwilling to transfer MA rights the change may still occur if we are able to
+prove business ownership from the requesting party.<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:10.0pt;font-family:&quot;Times New Roman&quot;,serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333">&nbsp;<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:10.0pt;font-family:&quot;Times New Roman&quot;,serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333">&nbsp;<o:p></o:p></span></p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:10.0pt;font-family:&quot;Times New Roman&quot;,serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333">Sincerely,<o:p></o:p></span></p><p style="margin:0in;margin-bottom:.0001pt">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</p><p class="MsoNormal" style="margin-bottom:0in;margin-bottom:.0001pt;line-height:
+normal"><span style="font-size:10.0pt;font-family:&quot;Times New Roman&quot;,serif;
+mso-fareast-font-family:&quot;Times New Roman&quot;;color:#333333">The QuickBooks Online
+Support Team<o:p></o:p></span></p></div>]]></td>
+</tr>
+</table>

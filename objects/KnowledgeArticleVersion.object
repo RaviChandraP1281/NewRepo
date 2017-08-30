@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <listViews>
+        <fullName>Article_Translation_Brazil_with_Internal_KnowledgeArticleVersion</fullName>
+        <filterScope xsi:nil="true"/>
+        <label xsi:nil="true"/>
+    </listViews>
+    <listViews>
+        <fullName>Article_Translation_Canada_Quebec_with_I_KnowledgeArticleVersion</fullName>
+        <filterScope xsi:nil="true"/>
+        <label xsi:nil="true"/>
+    </listViews>
+    <listViews>
+        <fullName>Article_Translation_France_with_Internal_KnowledgeArticleVersion</fullName>
+        <filterScope xsi:nil="true"/>
+        <label xsi:nil="true"/>
+    </listViews>
+    <listViews>
+        <fullName>Article_Translation_KnowledgeArticleVersion</fullName>
+        <filterScope xsi:nil="true"/>
+        <label xsi:nil="true"/>
+    </listViews>
+    <listViews>
+        <fullName>Article_Translation_Spanish_KnowledgeArticleVersion</fullName>
+        <filterScope xsi:nil="true"/>
+        <label xsi:nil="true"/>
+    </listViews>
+    <listViews>
+        <fullName>Article_Translation_Spanish_w_Internal_KnowledgeArticleVersion</fullName>
+        <filterScope xsi:nil="true"/>
+        <label xsi:nil="true"/>
+    </listViews>
+    <listViews>
+        <fullName>Brazil_Translation_KnowledgeArticleVersion</fullName>
+        <filterScope xsi:nil="true"/>
+        <label xsi:nil="true"/>
+    </listViews>
+    <listViews>
+        <fullName>France_Translation_KnowledgeArticleVersion</fullName>
+        <filterScope xsi:nil="true"/>
+        <label xsi:nil="true"/>
+    </listViews>
+    <listViews>
+        <fullName>Quebec_Canada_Translation_KnowledgeArticleVersion</fullName>
+        <filterScope xsi:nil="true"/>
+        <label xsi:nil="true"/>
+    </listViews>
+</CustomObject>

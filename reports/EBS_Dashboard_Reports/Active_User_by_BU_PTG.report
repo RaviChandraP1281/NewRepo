@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_34293107</developerName>
+        <masterLabel>Business Unit</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>User.User_Profile__c</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>SB Admin</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QBES Sales</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Bus Admin</sourceValue>
+            </sourceValues>
+            <value>ES</value>
+        </values>
+        <values>
+            <value>APD</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>API Only</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Master Admin</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>PT1</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>SalesAndCareDeveloper</sourceValue>
+            </sourceValues>
+            <value>EBS</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Chatter Free User</sourceValue>
+            </sourceValues>
+            <value>Free</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>EB System Trainer</sourceValue>
+            </sourceValues>
+            <value>Training</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>EB Sales</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>EB Sales Agent</sourceValue>
+            </sourceValues>
+            <value>IFS</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>APD Administrator</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>APD Sales</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>PTG Sales</sourceValue>
+            </sourceValues>
+            <value>PTG</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>SBFS Sales</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Emerging Channels</sourceValue>
+            </sourceValues>
+            <value>SBFS</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>BDM Sales</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>India Global</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Global Bus Admin</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Global QBOA</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Global Sales</sourceValue>
+            </sourceValues>
+            <value>Global</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Sales Mgr</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sales Consultant</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Care AEL</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Care Mgr</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Customer Service</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Customer Support</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Service AandE</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Support AandE</sourceValue>
+            </sourceValues>
+            <value>AAG/PTG</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>PROFILE</field>
+    </columns>
+    <columns>
+        <field>USERNAME</field>
+    </columns>
+    <columns>
+        <field>ALIAS</field>
+    </columns>
+    <columns>
+        <field>ACTIVE</field>
+    </columns>
+    <columns>
+        <field>LAST_LOGIN</field>
+    </columns>
+    <currency>INR</currency>
+    <filter>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <column>User.User_Profile__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>startsWith</operator>
+            <value>APD</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.User_Profile__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>PTG Sales</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>User.User_Profile__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Active User by BU PTG</name>
+    <params>
+        <name>active</name>
+        <value>active</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>User</reportType>
+    <showDetails>false</showDetails>
+    <sortColumn>LAST_LOGIN</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>LAST_LOGIN</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

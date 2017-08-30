@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account.CAN__c</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Renewals__c.Renewal_Product__c</field>
+    </columns>
+    <columns>
+        <field>Renewals__c.Renewal_Preference__c</field>
+    </columns>
+    <columns>
+        <field>Renewals__c.Value_Rank__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Renewals__c.Value_Rank__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>01 - AR Wave 1,02 - AR Wave 2,03 - AR Wave 3,05 - Diamond Passport,06 - Fixed Term Contract</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>All AR Accounts</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountCustomEntity$Renewals__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Renewals__c.Value_Rank__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

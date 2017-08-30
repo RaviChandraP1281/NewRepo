@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_14649027</developerName>
+        <masterLabel>Interaction</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>SUBJECT</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Try Again</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>OB TRY AGAIN</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>again busy</sourceValue>
+            </sourceValues>
+            <value>Try Again</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>FOLLOW UP</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>OB FOLLOW UP</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>OB Followup</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TS FOLLOWUP</sourceValue>
+            </sourceValues>
+            <value>Follow up</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>OB 1:1 ONBOARDING SCHEDULED</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>OB REDEMO</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>OB SCHEDULED</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TS 1:1 ONBOARDING SCHEDULED</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TS-ONBOARDING SCHEDULE</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>scheduled</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>scheduled for tom 12pm</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>1:1 On Boarding Scheduled</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>1:1 Onbaording Scheduled.</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>1:1 Onboarding Scheduled</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>1:1 ob scheduled</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>1:1 onboarding reshceduled</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>1:1 onboarding shceduled</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>reschedule</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>reschedule for tom.</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Onboarding</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Onboarding Comments</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Onboarding Scheduled</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>onboarding  - 12.30pm</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>onboarding assigned</sourceValue>
+            </sourceValues>
+            <value>1:1 Onboarding Scheduled</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>TS PROSPECT</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>PROSPECT</sourceValue>
+            </sourceValues>
+            <value>Prospect</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>OB ONBOARDED REMOTE</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>OB DONE</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>OB REMOTE ONBOARDED</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>ONBOARDED REMOTE</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Onboarding completed</sourceValue>
+            </sourceValues>
+            <value>Onboarded Remote</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>OB AWAITING PAYMENT</sourceValue>
+            </sourceValues>
+            <value>Awaiting Payment</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>OB PAID</sourceValue>
+            </sourceValues>
+            <value>Paid</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>Opportunity.Company_ID__c</field>
+    </columns>
+    <columns>
+        <field>OPPORTUNITY_OWNER</field>
+    </columns>
+    <columns>
+        <field>ASSIGNED</field>
+    </columns>
+    <columns>
+        <field>OPPORTUNITY_LAST_ACTIVITY</field>
+    </columns>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <currency>INR</currency>
+    <description>gives number of interaction</description>
+    <filter>
+        <criteriaItems>
+            <column>ACCOUNT_OWNER_ROLE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>india telesales</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>BucketField_14649027</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Try Again,Follow up,Prospect,Awaiting Payment</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_14649027</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>ACCOUNT_OWNER_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>OPPORTUNITY_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Interaction Report</name>
+    <params>
+        <name>closed</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>type</name>
+        <value>te</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityActivity</reportType>
+    <roleHierarchyFilter>India_Onboarding_Consultant</roleHierarchyFilter>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>DUE_DATE</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Upload_Blank_Editable</letterhead>
+    <name>PCS Graudation Survey</name>
+    <style>freeForm</style>
+    <subject>QuickBooks would like to know about your onboarding experience!</subject>
+    <textOnly>Feedback Invitation
+
+
+
+
+
+Hi {!Contact.FirstName},
+
+We would like to know about your QuickBooks Payments Onboarding experience!
+
+Take Survey
+
+We invite you to share your overall experience so that we can keep improving our products and services. Please take a moment to complete a brief survey.
+
+We look forward to your feedback.
+
+Thanks for your help,
+QuickBooks Payments Onboarding Team</textOnly>
+    <type>html</type>
+</EmailTemplate>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Intuit</title>
+    
+<style type="text/css">
+	@media only screen and (max-width:620px){
+		.contentTable{
+			width:100% !important;
+		}
+
+}	@media only screen and (max-width:620px){
+		.mobile-left{
+			text-align:left !important;
+		}
+
+}	@media only screen and (max-width:620px){
+		.mobile-center{
+			text-align:center !important;
+		}
+
+}	@media only screen and (max-width:620px){
+		.mobile-td-stack,.mobile-table-stack,.mobile-table-stack>tbody,.mobile-table-stack>tbody>tr,.mobile-table-stack>tbody>tr>td{
+			width:100% !important;
+			display:block !important;
+			height:auto !important;
+			line-height:25px !important;
+		}
+
+}	@media only screen and (max-width:620px){
+		.extra-mb{
+			margin-bottom:20px !important;
+		}
+
+}	@media only screen and (max-width:620px){
+		img{
+			max-width:100% !important;
+			height:auto !important;
+		}
+
+}	@media only screen and (max-width:620px){
+		.footer-text{
+			padding:0 30px !important;
+		}
+
+}	@media only screen and (max-width:620px){
+		.footer-img{
+			text-align:center !important;
+		}
+
+}	@media only screen and (max-width:620px){
+		td.mobile-padded{
+			padding:0 20px;
+		}
+
+}	@media only screen and (max-width:620px){
+		img.mobile-mb{
+			margin-bottom:20px;
+		}
+
+}	@media only screen and (max-width:620px){
+		.hidden-xs{
+			display:none !important;
+		}
+
+}	@media only screen and (max-width:620px){
+		.logo{
+			margin:0 auto;
+		}
+
+}	@media only screen and (max-width:620px){
+		.resizeImg{
+			width:185px !important;
+			height:auto !important;
+		}
+
+}	@media only screen and (max-width:620px){
+		.extra-mb-img{
+			margin-bottom:10px !important;
+		}
+
+}	@media only screen and (max-width:620px){
+		.appleLinksBlue a{
+			color:#355dd6 !important;
+			text-decoration:none !important;
+		}
+
+}	@media only screen and (max-width:620px){
+		.appleLinksGrey a{
+			color:#888 !important;
+			text-decoration:none !important;
+		}
+
+}	@media only screen and (max-width:620px){
+		.appleLinksWhite a{
+			color:#fff !important;
+			text-decoration:none !important;
+		}
+
+}	@media only screen and (max-width:620px){
+		.table-cta td{
+			padding:20px 0;
+		}
+
+}</style></head>
+<body leftmargin="0" marginwidth="0" topmargin="0" marginheight="0" offset="0" style="width:100%;-webkit-text-size-adjust:none;padding:0 0 0 0;margin:0 0 0 0;background-color:#f1f1f1;-webkit-font-smoothing:antialiased;">
+    <center>
+        <!-- outer table -->
+        <table cellpadding="0" cellspacing="0" align="center" border="0" bgcolor="#f1f1f1" width="100%" height="100%" style="border:0;outline:0;">
+            <tr>
+                <td valign="top" align="center" style="border-collapse:collapse;">
+
+                    <!-- preheader -->
+                    <table cellpadding="0" cellspacing="0" align="center" border="0" bgcolor="#f1f1f1" width="620" class="contentTable">
+                        <tr>
+                            <td align="left" valign="bottom" style="border-collapse:collapse;font-family:Arial,'Helvetica',sans-serif;color:#626262;font-size:9px;line-height:14px;">
+                                <table width="100%" align="left" cellpadding="0" cellspacing="0" border="0" style="border:0;outline:0;">
+                                    <tr>
+                                        <td align="left" valign="middle" class="mobile-center" style="border-collapse:collapse;font-family:Arial,'Helvetica',sans-serif;color:#626262;font-size:9px;line-height:14px;"><br><br class="hidden-xs">&nbsp;</td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- eof preheader -->
+                    <!-- main table -->
+                    <table cellpadding="0" cellspacing="0" align="center" border="0" bgcolor="#FFFFFF" width="620" style="border:0;outline:0;" class="contentTable">
+                        <!-- branding -->
+                        <tr>
+                            <td align="left" valign="top" style="border-collapse:collapse;">
+                                <img src="https://gallery.mailchimp.com/5318407d757ced5027d890550/images/6978a5e2-bfcd-4b7d-abb2-490bdc2de40b.png" width="190" height="86" alt="Intuit QuickBooks Online Accountant" border="0" style="border:0;outline:0;display:block;">
+                            </td>
+                        </tr>
+                        <!-- eof branding -->
+                        <!-- hero -->
+                        <tr>
+                            <td align="left" valign="top" style="border-collapse:collapse;">
+                                <img src="https://gallery.mailchimp.com/5318407d757ced5027d890550/images/bf83bd62-b862-4d4b-b0ca-8f14df8c904e.jpg" width="620" height="423" alt="Coffs Harbour introduction to QuickBooks Online and networking event." border="0" style="border:0;outline:0;display:block;">
+                            </td>
+                        </tr>
+                        <!-- eof hero -->
+                        <!-- content -->
+                        <tr>
+                            <td valign="top" align="center" style="border-collapse:collapse;">
+                                <table width="100%" cellpadding="0" cellspacing="0" border="0" align="left" bgcolor="#ffffff" style="border:0;outline:0;">
+                                    <!-- intro -->
+                                    <tr>
+                                        <td align="left" valign="top" style="border-collapse:collapse;">
+                                            <table width="100%" cellpadding="40" cellspacing="0" border="0" style="border:0;outline:0;">
+                                                <tr>
+                                                    <td align="left" valign="top" style="border-collapse:collapse;font-family:Arial,'Helvetica',sans-serif;font-size:16px;font-weight:normal;line-height:25px;color:#505050;">
+                                                        Join us for an introductory event to learn how <b>QuickBooks Online</b> and <b> Quickbooks Online Accountant</b> can help you grow and run your practice more efficiently.<br><br>
+                                                        <!-- agenda -->
+                                                        <span style="color:#79c33a;font-size:24px;line-height:32px;">Agenda</span><br>
+                                                        &nbsp;
+                                                        <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border:0;outline:0;">
+                                                            <tr>
+                                                                <td width="30" align="left" valign="top" style="border-collapse:collapse;font-family:Arial,'Helvetica',sans-serif;font-size:16px;font-weight:normal;line-height:25px;color:#505050;">
+                                                                    <b>&bull;</b>
+                                                                </td>
+                                                                <td align="left" valign="top" style="border-collapse:collapse;font-family:Arial,'Helvetica',sans-serif;font-size:16px;font-weight:normal;line-height:25px;color:#505050;">
+                                                                    Benefits of partnering with the No. 1 global cloud accounting solution
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top" style="border-collapse:collapse;font-family:Arial,'Helvetica',sans-serif;font-size:16px;font-weight:normal;line-height:25px;color:#505050;">
+                                                                    <b>&bull;</b>
+                                                                </td>
+                                                                <td align="left" valign="top" style="border-collapse:collapse;font-family:Arial,'Helvetica',sans-serif;font-size:16px;font-weight:normal;line-height:25px;color:#505050;">
+                                                                    Latest feature demonstration including payments, inventory, attachments and the mobile app
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top" style="border-collapse:collapse;font-family:Arial,'Helvetica',sans-serif;font-size:16px;font-weight:normal;line-height:25px;color:#505050;">
+                                                                    <b>&bull;</b>
+                                                                </td>
+                                                                <td align="left" valign="top" style="border-collapse:collapse;font-family:Arial,'Helvetica',sans-serif;font-size:16px;font-weight:normal;line-height:25px;color:#505050;">
+                                                                    Hear what enhancements are in the pipeline
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top" style="border-collapse:collapse;font-family:Arial,'Helvetica',sans-serif;font-size:16px;font-weight:normal;line-height:25px;color:#505050;">
+                                                                    <b>&bull;</b>
+                                                                </td>
+                                                                <td align="left" valign="top" style="border-collapse:collapse;font-family:Arial,'Helvetica',sans-serif;font-size:16px;font-weight:normal;line-height:25px;color:#505050;">
+                                                                    See how to run payroll efficiently and accurately</td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top" style="border-collapse:collapse;font-family:Arial,'Helvetica',sans-serif;font-size:16px;font-weight:normal;line-height:25px;color:#505050;">
+                                                                    <b>&bull;</b>
+                                                                </td>
+                                                                <td align="left" valign="top" style="border-collapse:collapse;font-family:Arial,'Helvetica',sans-serif;font-size:16px;font-weight:normal;line-height:25px;color:#505050;">
+                                                                    Get an overview of the various apps you can connect to QuickBooks Online
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top" style="border-collapse:collapse;font-family:Arial,'Helvetica',sans-serif;font-size:16px;font-weight:normal;line-height:25px;color:#505050;">
+                                                                    <b>&bull;</b>
+                                                                </td>
+                                                                <td align="left" valign="top" style="border-collapse:collapse;font-family:Arial,'Helvetica',sans-serif;font-size:16px;font-weight:normal;line-height:25px;color:#505050;">
+                                                                    Hear how a local accounting firm has adopted QuickBooks Online
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top" style="border-collapse:collapse;font-family:Arial,'Helvetica',sans-serif;font-size:16px;font-weight:normal;line-height:25px;color:#505050;">
+                                                                    <b>&bull;</b>
+                                                                </td>
+                                                                <td align="left" valign="top" style="border-collapse:collapse;font-family:Arial,'Helvetica',sans-serif;font-size:16px;font-weight:normal;line-height:25px;color:#505050;">
+                                                                    Learn hints and tips from QuickBooks Online expert, Alee Cochrane
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td align="left" valign="top" style="border-collapse:collapse;font-family:Arial,'Helvetica',sans-serif;font-size:16px;font-weight:normal;line-height:25px;color:#505050;">
+                                                                    <b>&bull;</b>
+                                                                </td>
+                                                                <td align="left" valign="top" style="border-collapse:collapse;font-family:Arial,'Helvetica',sans-serif;font-size:16px;font-weight:normal;line-height:25px;color:#505050;">
+                                                                    Q &amp; A time plus general networking
+                                                                </td>
+                                                            </tr>
+                                                            </table>
+                                                        <br>
+                                                        Food and drinks will be provided.
+                                                        <!-- eof agenda -->
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <!-- eof intro -->
+                                    <!-- venue -->
+                                    <tr>
+                                        <td align="left" valign="top" style="border-collapse:collapse;">
+                                            <table width="100%" cellpadding="40" cellspacing="0" border="0" bgcolor="#fafafa" style="border:0;outline:0;background:#fafafa;">
+                                                <tr>
+                                                    <td align="left" valign="top" style="border-collapse:collapse;font-family:Arial,'Helvetica',sans-serif;font-size:16px;font-weight:normal;line-height:25px;color:#505050;">
+                                                        <table width="300" align="left" cellpadding="0" cellspacing="0" border="0" class="mobile-table-stack extra-mb" style="border:0;outline:0;">
+                                                            <tr>
+                                                                <td align="left" valign="top" style="border-collapse:collapse;font-family:Arial,'Helvetica',sans-serif;font-size:16px;font-weight:normal;line-height:25px;color:#505050;">
+                                                                    <span style="color:#79c33a;font-size:24px;line-height:32px;">Where and When</span><br>
+                                                                    &nbsp;
+                                                                    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border:0;outline:0;">
+                                                                        <tr>
+                                                                            <td align="left" valign="top" style="border-collapse:collapse;font-family:Arial,'Helvetica',sans-serif;font-size:16px;font-weight:normal;line-height:25px;color:#505050;">
+                                                                                <b>Venue:</b>
+                                                                            </td>
+                                                                            <td align="left" valign="top" style="border-collapse:collapse;font-family:Arial,'Helvetica',sans-serif;font-size:16px;font-weight:normal;line-height:25px;color:#505050;">
+                                                                                Opal Cove Resort<br>
+                                                                                Opal Boulevard,<br>
+                                                                                Coffs Harbour NSW 2450<br>&nbsp;
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td colspan="2" align="left" valign="top" style="border-collapse:collapse;font-family:Arial,'Helvetica',sans-serif;font-size:16px;font-weight:normal;line-height:25px;color:#505050;">
+                                                                                Plenty of parking is available.<br>&nbsp;
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" style="border-collapse:collapse;font-family:Arial,'Helvetica',sans-serif;font-size:16px;font-weight:normal;line-height:25px;color:#505050;">
+                                                                                <b>Date:</b>
+                                                                            </td>
+                                                                            <td align="left" valign="top" style="border-collapse:collapse;font-family:Arial,'Helvetica',sans-serif;font-size:16px;font-weight:normal;line-height:25px;color:#505050;">
+                                                                                Thursday, 28th January 2016<br>&nbsp;
+                                                                            </td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td align="left" valign="top" style="border-collapse:collapse;font-family:Arial,'Helvetica',sans-serif;font-size:16px;font-weight:normal;line-height:25px;color:#505050;">
+                                                                                <b>Time:</b>
+                                                                            </td>
+                                                                            <td align="left" valign="top" style="border-collapse:collapse;font-family:Arial,'Helvetica',sans-serif;font-size:16px;font-weight:normal;line-height:25px;color:#505050;">
+                                                                                5:00 - 7:30pm
+                                                                            </td>
+                                                                        </tr>
+                                                                    </table>
+                                                                    &nbsp;<br>
+                                                                    <a href="https://www.eventbrite.co.uk/e/coffs-harbour-introduction-to-quickbooks-online-and-networking-event-tickets-19921774564"><img src="https://gallery.mailchimp.com/5318407d757ced5027d890550/images/fbf3923b-d276-4468-86fc-cdca6240ff43.png" width="168" height="40" alt="Register here" border="0" style="border;0;outline:0;"></a>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                        <table width="190" height="254" align="right" cellpadding="0" cellspacing="0" border="0" class="mobile-table-stack" style="border:0;outline:0;">
+                                                            <tr>
+                                                                <td align="left" valign="middle" style="border-collapse:collapse;font-family:Arial,'Helvetica',sans-serif;font-size:16px;font-weight:normal;line-height:25px;color:#505050;">
+                                                                    <a href="https://goo.gl/maps/k6eeNPS7bs22"><img src="https://gallery.mailchimp.com/5318407d757ced5027d890550/images/141cf04c-0770-498c-95dc-ee31f8b04db5.png" width="190" height="190" alt="Opal Cove Resort" border="0" style="border:0;outline:0;"></a>
+                                                                </td>
+                                                            </tr>
+                                                        </table>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <!-- eof venue -->
+                                    <!-- sign off -->
+                                    <tr>
+                                        <td align="left" valign="top" style="border-collapse:collapse;">
+                                            <table width="100%" cellpadding="40" cellspacing="0" border="0" bgcolor="#79c33a" style="border:0;outline:0;background:#79c33a;">
+                                                <tr>
+                                                    <td align="left" valign="top" style="border-collapse:collapse;font-family:Arial,'Helvetica',sans-serif;font-size:18px;font-weight:normal;line-height:25px;color:#ffffff;">
+                                                        We look forward to meeting you on the day.<br><br>
+                                                        Intuit Australia
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    <!-- eof sign off -->
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                    <!-- eof main table -->
+                </td>
+            </tr>
+            <!-- footer -->
+            <tr>
+                <td align="center" valign="top" style="border-collapse:collapse;">
+                    <table bgcolor="#f1f1f1" align="center" cellpadding="0" cellspacing="0" border="0" width="620" class="contentTable">
+                        <tr>
+                            <td align="left" valign="top" style="border-collapse:collapse;" class="mobile-padded">
+                                <table width="100%" cellspacing="0" cellpadding="0" border="0" style="border:0;outline:0;">
+                                    <tr>
+                                        <td align="center" valign="top" style="border-collapse:collapse;font-family:Arial, 'Helvetica', sans-serif;font-size:12px;font-weight:normal;margin:0;padding:0;line-height:19px;color:#888888;text-align:center;">
+                                            &nbsp;<br>
+                                            <a href="https://www.facebook.com/QuickBooksAU"><img src="https://gallery.mailchimp.com/5318407d757ced5027d890550/images/41bab6dc-1ff5-453c-b904-f754acfebd06.png" width="28" height="27" alt="Facebook" border="0" style="border:0;outline:0;vertical-align:middle;"></a> &nbsp;<a href="https://twitter.com/QuickBooksAU"><img src="https://gallery.mailchimp.com/5318407d757ced5027d890550/images/bb445851-6564-4dc6-bfc3-62b9776f4a0a.png" width="28" height="27" alt="Twitter" border="0" style="border:0;outline:0;vertical-align:middle;"></a> &nbsp;<a href="https://www.linkedin.com/company/intuit"><img src="https://gallery.mailchimp.com/5318407d757ced5027d890550/images/00a1a7cc-3cc7-40c8-9885-c6432dfa6657.png" width="28" height="27" alt="LinkedIn" border="0" style="border:0;outline:0;vertical-align:middle;"></a><br><br>
+                                            <img src="https://gallery.mailchimp.com/5318407d757ced5027d890550/images/bb3cea21-ca80-404e-9ee4-a2878dfc2cac.png" width="89" height="32" border="0" alt="Intuit" style="outline:0;border:0;margin-bottom:3px;"><br>
+                                            Level 34, <span class="appleLinksGrey">1 O'Connell Street,<br>
+                                            Sydney, NSW 2000</span><br>
+                                            <a href="http://www.intuit.com.au/" style="color:#888888;text-decoration:none;">intuit.com.au</a><br>
+                                            <br>
+                                            You are receiving this email as you have logged your details and <br class="hidden-xs">
+                                            made contact with Intuit before.<br>
+                                            <br>
+                                            <a href="http://global.intuit.com/about/privacy.jsp" style="color:#888888;">Privacy Statement</a> | <a href="mailto:bianca_mitchell@intuit.com" style="color:#888888;">Unsubscribe</a><br>
+                                            &nbsp; 
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+            <!-- eof footer -->
+        </table>
+        <!-- eof outside table -->
+        <br>
+        &nbsp;
+    </center>
+    <!-- gmail app force desktop -->
+    <div style="display:none; white-space:nowrap; font:15px courier; color:#f1f1f1;">
+        - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    </div>
+    <!-- eof gmail app force desktop -->
+</body>
+</html>

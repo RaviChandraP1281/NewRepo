@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Intuit QuickBooks</title>
+<style type="text/css">
+body {
+	margin: 0px;
+}
+</style>
+</head>
+
+<body>
+<table width="700" align="center" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style=" border:1px solid #cccccc;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="226"><a href="http://www.quickbooks.in/" target="_blank"><img src="https://intuitb2b--c.na15.content.force.com/servlet/servlet.ImageServer?id=015i000000CW8Cc&oid=00Di0000000Xs0j&lastMod=1471483665000
+" alt="intuit QuickBooks" width="226" height="85" style="display:block;" border="0"/></a></td>
+            <td align="right" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="33">&nbsp;</td>
+              </tr>
+              <tr>
+                <td align="right"><a href="https://qbo.intuit.com/qbo37/login?locale=en_IN" target="_blank"><img src="https://intuitb2b--c.na15.content.force.com/servlet/servlet.ImageServer?id=015i000000CWEqY&oid=00Di0000000Xs0j&lastMod=1471483727000" alt="Log in" width="72" height="22" style="display:block;" border="0"/></a></td>
+              </tr>
+          </table></td>
+            <td width="15">&nbsp;</td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+</table></td>
+      </tr>
+      <tr>
+        <td height="166" align="center" bgcolor="#0096cb" style=" font-family:Arial, Helvetica, sans-serif; font-size:50px; color:#ffffff;"><strong>Let's connect!</strong></td>
+      </tr>
+      <tr>
+        <td height="30">&nbsp;</td>
+      </tr>
+      <tr>
+        <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="53">&nbsp;</td>
+            <td height="25" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#4f5252;">Dear {!Opportunity.Primary_Contact__c},</td>
+            <td width="53">&nbsp;</td>
+            </tr>
+          </table></td>
+      </tr>
+      <tr>
+        <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="53">&nbsp;</td>
+            <td height="100" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#4f5252; line-height:18px;">I'm {!User.FirstName}, your dedicated Quickbooks Consultant at Intuit. First of all, let me thank you
+              for your interest in QuickBooks &amp; signing up for a free trial. I attempted to contact you on
+              several occasions but were unable to do so. I request you to suggest when can we connect so
+              that we can show you the important features of QuickBooks, and help you understand how it
+              can work for your business.</td>
+            <td width="53">&nbsp;</td>
+            </tr>
+          </table></td>
+      </tr>
+      
+     
+      <tr>
+        <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="53">&nbsp;</td>
+            <td height="35" valign="middle" style="font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#4f5252; line-height:18px;">Feel free to call me on the number given below or drop me an email to discuss in detail.</td>
+            <td width="53">&nbsp;</td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td height="49">&nbsp;</td>
+      </tr>
+      <tr>
+        <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="53">&nbsp;</td>
+            <td style="font-family:Arial, Helvetica, sans-serif; font-size:13px; color:#4f5252; line-height:18px;"><span style=" font-size:14px;">Thanks &amp; Regards</span><br />
+             {!User.Name}<br />
+              Quickbooks Consultant<br />
+              {!User.MobilePhone}<br />
+              <a style="color:#4f5252; text-decoration:none;">{!User.Email}</a></td>
+            <td width="53">&nbsp;</td>
+          </tr>
+        </table></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="53">&nbsp;</td>
+            <td height="55" style="border-top:2px solid #0096cb;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td width="70" height="20" align="left" style=" font-family: Arial, Helvetica, sans-serif; font-size:12px; color:#4f5353;  ">Follow us</td>
+                <td width="120"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="21"><a href="https://www.facebook.com/IntuitQuickBooksIndia" target="_blank"><img src="https://intuitb2b--c.na15.content.force.com/servlet/servlet.ImageServer?id=015i000000CWEr7&oid=00Di0000000Xs0j&lastMod=1471483756000" alt="Facebook" width="21" height="21" style="display:block;" border="0"/></a></td>
+                    <td width="12">&nbsp;</td>
+                    <td width="21"><a href="https://www.linkedin.com/company/intuit-quickbooks-india?trk=company_name" target="_blank"><img src="https://intuitb2b--c.na15.content.force.com/servlet/servlet.ImageServer?id=015i000000CWErH&oid=00Di0000000Xs0j&lastMod=1471483817000" alt="Linkedin" width="21" height="21" style="display:block;" border="0" /></a></td>
+                    <td width="12">&nbsp;</td>
+                    <td width="21"><a href="https://twitter.com/QuickBooksIN" target="_blank"><img src="https://intuitb2b--c.na15.content.force.com/servlet/servlet.ImageServer?id=015i000000CWEst&oid=00Di0000000Xs0j&lastMod=1471483928000" alt="Twitter" width="21" height="21" style="display:block;" border="0"/></a></td>
+                    <td width="12">&nbsp;</td>
+                    <td width="21"><a href="https://www.youtube.com/user/QBOIndia" target="_blank"><img src="https://intuitb2b--c.na15.content.force.com/servlet/servlet.ImageServer?id=015i000000CWErv&oid=00Di0000000Xs0j&lastMod=1471483856000
+" alt="youtube" width="21" height="21" style="display:block;" border="0"/></a></td>
+                    </tr>
+                </table></td>
+                <td>&nbsp;</td>
+              
+                </tr>
+            </table></td>
+            <td width="53">&nbsp;</td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>

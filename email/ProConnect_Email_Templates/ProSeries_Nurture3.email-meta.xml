@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>ProSeries-Nurture3</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>ProSeries-Nurture3</name>
+    <style>none</style>
+    <subject>Best Kept ProSeries Secrets</subject>
+    <textOnly>Dear {!Contact.Name},
+
+Greetings! I thought you&apos;d appreciate these articles. The first is a veteran ProSeries® customer&apos;s take on the product&apos;s &quot;best kept secrets&quot;. The second article looks beyond tax software and discusses some of the other business applications that can enhance the productivity of tax and accounting professionals.
+
+ Best Kept Secrets About ProSeries
+When I was asked to write this article, I was a little intimidated … what are the &quot;best kept secrets&quot; in ProSeries? Do I even know them? Then, I realized, like any other program, there are features we learn about and remember, features we learn about and don&apos;t remember and features that we don&apos;t learn about at all...  
+  
+ Business Apps You&apos;ll Love
+Everyone is interested in finding a way to get more time back in his or her day. As accountants, especially, we must be diligent about our work processes. We earn goodwill with our clients by making any part of their work just a little bit easier... 
+
+I hope your evaluation of ProSeries is progressing nicely. Let me know if you have any questions or need any help.
+ 
+{!User.Name}
+ProSeries Tax Consultant
+{!User.Phone}
+{!User.Email}
+ 
+  
+IMPORTANT: Intuit respects the personal nature of email communication. Every effort is made to offer only information that may be of value to you or your business. If you do not wish to receive marketing email from Intuit in the future, please click here.
+
+If you have any questions or comments, please DO NOT REPLY to this email. Contact Customer Service at 800.765.7777 for assistance. If you receive an email message that appears to come from Intuit but that you suspect is a phishing email, please forward it immediately to spoof@intuit.com. Please visit http://security.intuit.com for additional security information.
+
+® 2012-2013 Intuit Inc. All rights reserved. Intuit, the Intuit logo are trademarks or registered trademarks and/or registered service marks of Intuit Inc. in the United States and other countries. All other marks are the property of their respective owners, should be treated as such, and may be registered in various jurisdictions.
+
+Intuit Inc., Customer Communications, 2800 E. Commerce Center Place, Tucson, AZ 85706</textOnly>
+    <type>custom</type>
+</EmailTemplate>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_94056787</developerName>
+        <masterLabel>TNPS</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>VOC_Survey_Response__c.Question_Response1__c</sourceColumnName>
+        <useOther>false</useOther>
+    </buckets>
+    <columns>
+        <field>FK_CASE_CLOSED_DATEONLY</field>
+    </columns>
+    <columns>
+        <field>FK_CASE_CREATED_DATEONLY</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_CREATED</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response6__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response9__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response3__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response4__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response1__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response2__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response5__c</field>
+    </columns>
+    <columns>
+        <field>FK_LAST_UPDATE_BY</field>
+    </columns>
+    <columns>
+        <field>FK_CASE_DESCRIPTION</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>(((((( 1) OR 2) OR 3) OR 4) OR 5) OR 6) OR 7</booleanFilter>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Fernando Basco,Aaron Paul Villalobos,Raciel Rivera,Roxette Jatulan,Roszien Gail Dionisio,Rodel Jr De Fiesta,Israel Lequiron,Charize Garcia,Marco Antonio Tano,Cyrille Mae Malonzo,Cherry-Ann Estabillo,Princess Morales,Michael Molina,Ma Nissan Dagudog,Kharen Asco,Jennifer Cruz,Ryan Gutierrez,Ace Lancelot Angeles,Raenard Joseph Reusi,Arianne Joy Mora</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Eliza Faye Cahilig,Danica De Borja,Floriz Donato,Genesis Jan Sanchez,Mark Anthony Serrona,Canice Ninelle Zapanta</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Michael Aduviso,Gerson Andalajao III,Reyquelle Barnido,Christopher Celestino,Ryan Coloquio,Evalyn Cruz,Ana Christine Disuanco,Lovely Ann Gatela,Bryan Laguimun,Lorelie Lauz,Harolyn Genesis Lim,Christopher Matthew Llorente,Christian Louie Lopez,Alfredo Jr Macuto,Gemma Malang,Stephanie Franchez Ocapan,Daniel Parel,Desiree Uriarte</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Severino Arguelles Jr II,Ickie Bermudez,Royco Al Bico,Jerame Anne Bustillos,Febbie Caparos,Jeannie Clemente,April Joy De Vera,Maria Estelita Deveza,Christian Fajardo,Gary Gatil,Kimverly Leonardo,Aileen Lopez,Christopher Mallari,Mary Grace Navarro,Arlene Jane Obedoza,Maricar Ortega,Karla Mae Polidario,Christian Sarmiento,Zyril Rome Solicito,Jayson Sumaling,Vittorios Yerkes Tolentino</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Elaine Abalos,Amado Abuel,Maria Anna Elena Alvarado,Wally Animas,Lorellie Cusap,Janella Rose Del Rosario,Jomer Dela Cruz,Sweet Ann Gomez,Limwell Gonzales,Argel Hortiz,Mark Jonel Lamosao,Nancy Manalang,Justine Marcelo Oliveros,Grisp John Pacheco,Camille Pagcaliwagan,Derick Paul Procopio,Aeron Purugganan,Allan Santos,Lea Supas,Alma Taburnal,Jenine Paula Tuason</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Viloria Ireneo,Erwin Caponpon,Jude Kevin Bonifacio,Norvie Dela Cruz,Ellaine Mae Lopez,Marianne Almero,Dennis Jay Lutu,Markfil Villabroza,Melissa Beltran,Bryan Doctor,Janice Cabab,May Anne Doblada,Paula Javier,Alma Mae Mahasol,Mayrayle Mangle,Marivic Villegas,Felix Boringot,Carlos John Concepcion,Ma Theresa Gallego</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Garry Zaldy Samaniego,Maria Lourdes Bugal,Emerson Cruz,Dino Nagot,Jeffrey Kasilag,Jhon Harold Tirol,Marianne Dones,Rogelio Sy,Jennifer Bermundo,Paula Marie Krishna Prado,Peter Daryl Isnit,Lesly Ann Cambangay,Marisse Ann Lagsit,Lorna Sih,Larissa Claridades,Mark Edgar Corsanes,Maria Cristina Mesina,Sheila Mae de Mesa,Ryescher Toribio,Ma Victoria Santos,Bryan Carlo Moises</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>NH VOC Report - Jasper (44-50)</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$VOC_Survey_Response__c@VOC_Survey_Response__c.CaseId__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>CUST_CREATED_DATE</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>FK_CASE_CREATED_DATEONLY</dateColumn>
+        <endDate>2015-11-30</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2015-11-01</startDate>
+    </timeFrameFilter>
+</Report>

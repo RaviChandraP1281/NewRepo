@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Editable HTML follow-up email for IOP4A. Merge fields work from Lead or Opportunity records.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Intuit_Online_Payroll</letterhead>
+    <name>AAG IOP4A 1 Month Free (PAP and Accountant)</name>
+    <style>formalLetter</style>
+    <subject>Special Offer for Accountants: Intuit Online Payroll</subject>
+    <textOnly>Special Offer for Accountants:
+Intuit Online Payroll
+Dear {!IF(ISBLANK(Lead.Name), IF(ISBLANK(Contact.Name), &apos;Valued Customer&apos;, Contact.Name), Lead.Name)},
+
+Thank you for taking the time to discuss your payroll needs with me. I’m happy to have been able to introduce you to Intuit Online Payroll for Accounting Professionals, and I hope that I provided you with valuable information.
+
+Intuit Online Payroll for Accounting Professionals is an excellent choice for helping you build your payroll practice. The service is easy to use, allowing you to create paychecks in minutes. The flat pricing includes direct deposit, unlimited payroll runs, support, and electronic tax payments and filings. In addition, Intuit Online Payroll for Accounting Professionals has easy download to QuickBooks and other accounting programs.  You can even run payroll on the go with our mobile app.
+
+As I mentioned in our conversation, we are pleased to make a special offer available to you. To sign up for Intuit Online Payroll  for Accounting Professionals and receive 1 month free for you or your first client*, please click here, or copy and paste the following link:
+
+https://iop.intuit.com/servlet/gateway?action=signupac&amp;SC=EA6A566C4989F5B888FF28A5F51FE5E89F86284C697ABE77&amp;OC=F97C704977CA6D885FB25BDFE2181AFEA5781B8FC09CEEF659FF05922FC9FB50CC8A416FFFFC565E&amp;showACSetupNavSide=true&amp;KAD={!IF(NOT(ISBLANK(Lead.Id)), Lead.Id, IF(NOT(ISBLANK(Opportunity.Id)), Opportunity.Id, &apos;UNKNOWN&apos;))}
+
+If you have any additional questions, please feel free to contact us.
+
+Regards,
+
+
+Intuit, Inc., Customer Communications 2800 E. Commerce Center Place, Tucson, AZ 85706.
+
+IMPORTANT NOTICE: Intuit respects the personal nature of email and this email is being sent at your verbal request. A previously stated opt out does not apply to this email.&amp;nbsp;If you would like to update your contact preferences, you may do so at this location.
+
+*Special 1 month free offer starts the date you run your first payroll either for yourself or your client. Offer is valid for new Intuit Online Payroll for Accounting Professionals customers only. Starting with the second month of service, you will automatically be charged at the then-current monthly subscription rate, until you cancel. The cost for one client (either for yourself or your client) is $35.00 per month. Each active employee or contractor is $2.00. If you file taxes in more than one state, each additional state is $9 per month. After you have obtained 2 active clients, you qualify for wholesale pricing where each of your clients will cost $19.99 per month. Each active employee or contractor will be $0.50 each per month under wholesale pricing. At 6 active clients, your volume discount will be $15.99 per month for each one of your clients. At 21 active clients, your volume discount will be $11.99 per month for each one of your clients. At 51 clients, your volume discount will be $9.99 per month for each one of your clients. Sales tax may be applied where applicable. You may cancel at any time by calling (866) 729-2925. Offer expires on 12/31/2014 and cannot be combined with any other Intuit Online Payroll offers. Terms, conditions, features, pricing, service and support are subject to change without notice.</textOnly>
+    <type>html</type>
+</EmailTemplate>

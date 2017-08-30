@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CASE_NUMBER</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <columns>
+        <field>Case.Sub_Status__c</field>
+    </columns>
+    <columns>
+        <field>Case.Product__c</field>
+    </columns>
+    <columns>
+        <field>Case.Asset__c</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Contact.AccountCAN__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Company_ID__c</field>
+    </columns>
+    <columns>
+        <field>CONTACT.NAME</field>
+    </columns>
+    <columns>
+        <field>ORIGIN</field>
+    </columns>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>DESCRIPTION</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>((1 OR 2 OR 3 OR 4 OR 5)) AND 6</booleanFilter>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Jessica McCowan,Jonathan Limer,Joseph Kimmell,Cash Barnes,Cassandra Sturn Amerson,Salvador Gavidia,Corey Walters,Gustavo Ruvalcaba,Maria Huerta Carmona,Ainsley Ezra,Kiera   Goodpaster,Chad Thompson,Kenneth Maben,Joshua Pannebaker,Tiffanie Starr,Jacob Asher,Christian Hall,Shelley Perkins</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Samantha Panton,Brandon Ives,Shawn Knoetzel,Brian Jowers,Justin Riffe,Phillip Sison,Cole Smith,Kandace Miranda-soto,Garth Jenkins,Alex Alenikov,Jacquena Bentz,Jess Buehler,Timothy Ray,Ryne Smith,Hemavathi Sundarachar,Timothy Jones,Colton Renaud,Cynthia Allman,Eric Banke</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Sean Cardenas,Coby Dunnington,Cayla Feeney,Kayla Green,Conner Jeffrey,Rebecca Kesterson,Lynn Land,Michael Lewis,Anna Lightfoot,Elizabeth Martin,Larry Misaras,Erin Quwenikov,Mark Reed,Tasha Reed,Jonathan Roberts,James Smith,Owen Tudor,Shannon Henry,Rebecca Nelson,Wesley Anthony,Shawn Brooks</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Ryan Buchholz,Douglass Burke,Paul Warren,Charlene Steiger,William Stafford,Daniel Rice,John Pacheco,Andrea Niemiec,Birgit Mingal,Jeff McKinley,Joshua Martin,Cheryl Maahs,Stephanie Hamilton,Christopher Jenda,Kristopher Hopkins,Shawn Keebler,Tim Fray,Lokelani Grimes,Travis Parton,Nichole Wells,Tyler Tompkins,Emily Olson</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Michele Chastain,Juanita Harris,Kevin Luna,Karissa Wheeler,Alexander Blackwell,Jacob Hemphill,Dezerin Farrell,Gina Soriano,Donna Spencer,Amber Pringle,Karissa Fretwell,Brandon,Moreno,Christian Hilser,Suzanne Ewry,Kaitlin Cassidy,Klarissa Harnar,Lora Valencia,Joel Smith,Bjourn Hunter,Emma Polanco,Deon Vaughn,Joeana Soriano,Steffanie Vanscyoc,Juan   Creighton,Shawn Resue,Rachael Hagerman,Samuel Morris</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>STATUS</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Escalated</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CREATED</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Wville QBO Case Doc Report</name>
+    <params>
+        <name>units</name>
+        <value>d</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseContactRole</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATEONLY</dateColumn>
+        <endDate>2016-02-24</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2015-08-30</startDate>
+    </timeFrameFilter>
+</Report>

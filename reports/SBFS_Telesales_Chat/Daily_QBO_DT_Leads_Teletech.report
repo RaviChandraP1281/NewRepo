@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <currency>USD</currency>
+    <description>for Simmons</description>
+    <filter>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>fierro,denzel,fredette,demarco,fortune,kobe,darryn,justin hayes,spillane,rico,cheyenne,donald holy,lavonia,daniel castro,Rexson,Mangiliman,Marjorie Gail Timpug,Denzel Alexis,Jennifer DeMarco,Zavala,Almar Canlas,Keaton Bustos,Jennilyn Pacla,Paul Fredette,Rhia Ann,Ronamae Canilao,Vianney Diwa,Cortney Brown,Justin Hayes,Aldrin Sotto,Evelyne Van Eldik,Emmy Strange,Sicat Ronald,Galang Plinky Rose,Richard Dean Lulu,Kabigting,Maria Joanna Joson,Gailynn Sarmiento,Josanne Samantha Santos,Mibeth Enriquez,Pallasigui,Joanna Liza Pelayo,Jofer Dela Cruz,Maria Jenica Santos,Fairy Lyn Cortes,Joan Villabroza,Mia Dela Cruz,Fatima Cristobal,Orson Ocampo,Rae Randall De Guzman,Mark Lyle Timpug,Leopoldo Magno,Nunag,Pangilinan,Jomalyn Bacani,Aljoner Siccion,Jayson Reyes,Kristine Balboa,Donnah Dizon,Leamor,Jenill,Del Rosario,Cyril</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>LEAD_OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notContain</operator>
+            <value>Brittany Benjamin,nagun,Francis Martin</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Product_Family_of_Interest__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>QB Pro/Premier,QuickBooks Online (QBO)</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>CREATED_DATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Lead.Product_Family_of_Interest__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Daily QBO/DT Leads - Teletech</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityLead</reportType>
+    <scope>org</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <endDate>2016-11-18</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2016-10-24</startDate>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>AGE</field>
+    </columns>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>CASE_NUMBER</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>((1 OR 2))</booleanFilter>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Amber Burnett,Amber Snodgrass,Amber Wren,Amy Gillett-Paltrow,Amy Sherman,Analise Valentin,Angel Peterson,Ashley Doherty,Brandon Cintron,Brandon Robles,Brandyn Offley,Brianna Johnson,Brooke Albin,Carley Fockler,Carlos Harris,Charles M Diaz,Crystal Skeel,Daniel Dickens,Danielle Weldon,David Manning,David Massarini,David Thomas,Denise Llewellyn,Desiree Conover,Devin Whitaker,Dillan Campos,Dustin Mueller,Edgar Soto,Edisson Salinas,Elizabeth Guzman,Elizabeth Martin,Emily Dyer,Endry Santos,Fernando Colon Pena,Francisca Gracian,Frank Royko-Adkins,Gabriel Legarreta,Gabrielle Harpe,Mikey Cruz,Hayley Bruy,Heather Henkes,Hunter Hilton,Jacqueline Samantha Coppin Melson,James Contreras,Jarrett McGraw,Jarrica Oquin,Jason Legg,Jennifer Hamilton,Jesus Osorio,Joanne Martell-Brubaker,Joirnique George,joseph reno,Josh Vizcaino,Joshua Belloir,Justin Doane,Kaisha Ribot,Kaitlin Pickens,Karina Fossett,Karla Miles,Kaylie Owens,Kenneth Farrington,Keoni Grabowski,Kevin Gomez,Kristen Bradeen</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Krystal Krauss,Kyle Hanson,Lily Berrios,Lindsey Laughton,Mary Flores,Mary Girardi,Matthew Shea,Melanie Rodriguez,Melissa Muro,Michael Taylor,Nichelle Pagan,Nicholas Rodriguez,Nichole Hill,Nicole Baker,Rachel Ehrbar,Rebecca Wilson,Ricky Tiben,Robert Andreski,Ryan Robinson,Saad Omar,Sabrina Daniels,Samantha Baumgardner,Scott Bernard,Shannon Hempel,Shannon Roche,Stephanie Hunter,Stephen Brown,Tatiana Morales,Taya DiPersia,Thomas Fisher,Tosha Pittman,Tracy Lesch,Tracy Parent,Tyler DuRapau,Tyler Kramer,Valarie Wiggins,Vosha Gordon,Wayne DeMonte,William Clay,Zachary Scott,Aaron Newman,Alyssa Hogue,Ann Vaniska,Bruce Davis,Eric Patterson,Gary Schweit,Juan Diaz,Kayli Grimm,Kym Dauphinais,Marcus Rhines,Peter Fowler,Richard Crescente,Rupert Hawks,Taylor Whitaker,Tyran Basil</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>STATUS</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CREATED</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Deland Cases Made</name>
+    <params>
+        <name>units</name>
+        <value>d</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATEONLY</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

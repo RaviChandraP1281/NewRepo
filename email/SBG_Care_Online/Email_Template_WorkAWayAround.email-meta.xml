@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Fix the Annoying issue where you have to apply a template and later clear it out, Just Apply This then apply your own.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Email Template WorkAWayAround</name>
+    <style>none</style>
+    <subject>.</subject>
+    <type>text</type>
+</EmailTemplate>

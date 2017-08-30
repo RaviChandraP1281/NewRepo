@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account$Rating</field>
+    </columns>
+    <columns>
+        <field>Account.Addresses__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Addresses__r$Addr2__c</field>
+    </columns>
+    <columns>
+        <field>Account.Addresses__r$City__c</field>
+    </columns>
+    <columns>
+        <field>Account.Addresses__r$State__c</field>
+    </columns>
+    <columns>
+        <field>Account.Addresses__r$Postal_Code__c</field>
+    </columns>
+    <currency>CAD</currency>
+    <description>Shows addresses for all firms and associations across Canada
+Top 100 = Top 30 Firm
+STAR = Association
+Top 100 + STAR = Association member and also a top 30</description>
+    <filter>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <column>Account$Name</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>(CAN National Firm)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Name</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>(CAN National Association)</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Nationals Canada Addresses</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Accounts_withwithout_Custom_Address__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

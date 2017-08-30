@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>1st Contact Attempt - not scheduled</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Empty_Letterhead</letterhead>
+    <name>No contact 1st Attempt</name>
+    <style>freeForm</style>
+    <subject>Congratulations and welcome to QuickBooks Enterprise Onboarding</subject>
+    <textOnly>Account #{!Contact.CAN__c}
+
+
+
+Dear {!Contact.FirstName},
+
+Congratulations on your recent purchase of QuickBooks Enterprise. My name is Chadwick Farrell and as your dedicated Onboarding Account Manager, I will be working with you throughout the Enterprise Onboarding Process. I attempted to reach you by phone but unfortunately missed you.
+
+I will call you again at [phone number] on [date] at [time] to schedule your installation. If there is a date and time that works better for you, please feel free to respond to this email or call me at 800-498-7401 ext 1447.
+
+I look forward to helping you successfully transition to QuickBooks Enterprise. If you have any questions, please don’t hesitate to reach out to me at any time.
+
+Thank you for your time and assistance.
+
+
+Chadwick Farrell ~ Account Manager
+Intuit ~ Simplify the business of life
+Work Phone: 800-498-7401 ext 1447
+
+This transmittal is intended only for the use of the individual or entity to which it is addressed and may contain information that is privileged, confidential and exempt from disclosure under applicable law. If the reader of this transmittal is not the intended recipient or the employee or agent responsible for delivering the transmittal to the intended recipient, you are hereby notified that any dissemination, distribution or copying of this communication is strictly prohibited.</textOnly>
+    <type>html</type>
+</EmailTemplate>

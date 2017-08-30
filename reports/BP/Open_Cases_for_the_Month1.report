@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>User.Case$OwnerId$Account</field>
+    </columns>
+    <columns>
+        <field>User.Case$OwnerId$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>User.Case$OwnerId$LastModifiedDate</field>
+    </columns>
+    <columns>
+        <field>User.Case$OwnerId$Days_Case_Open__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>User.Case$OwnerId$CaseOwnerFullName__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Catherine Dicen,Joseph Elmer Peredo,Joselle Cara Necio,Ana Kriezl Opena,Grace Punzal,Clarisse Joy Moral,Darrel Ensanado,Joven Mercado,Kimberly Joyce Magbanua,Aaron Balaysoche,Roxannie Almazan,Rhia Joy Fesalbon,Ann Margareth Sunga,Xandre Jay Dela Cruz,Herbet Dexter Costales,Sheilick Anne Munoz</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$OwnerId$Status</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Open</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>User$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Open Cases - Wolfsbane</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Users_with_Cases__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>User.Case$OwnerId$CreatedDate</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

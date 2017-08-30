@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ASSIGNED</field>
+    </columns>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>DESCRIPTION</field>
+    </columns>
+    <columns>
+        <field>WHAT_NAME</field>
+    </columns>
+    <columns>
+        <field>DUE_DATE</field>
+    </columns>
+    <columns>
+        <field>PRIORITY</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <columns>
+        <field>TASK</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT</field>
+    </columns>
+    <columns>
+        <field>CONTACT</field>
+    </columns>
+    <columns>
+        <field>LEAD</field>
+    </columns>
+    <columns>
+        <field>OPPORTUNITY</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>1 AND (2 OR 3 OR 4 OR 5 OR 6 OR 7 OR 8 OR 9 OR 10)</booleanFilter>
+        <criteriaItems>
+            <column>SUBJECT</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>billing adjustment</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ASSIGNED</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Galileo Trunio,Alberto Cunanan,Angelica Adriano,Bonicar Balili,Zipora Blaza,Shiela Marie Carreon,Danica Castro,Jordan Madic,Janessa Lyn Mañibo,Myra Samudio,JoaidaDeniece Turado,Janine Daluraya,Ivan Dale De Leon,John Bailon Dionela,John Ryan Fernandez,Danica Flores,Abigail Gatuz,Aileen Jamora,Irine Peligrin,John Dominic Salando,Teddy Victor Tangonan,Maricar Tolentino,Dolores Grace Macasojot,Edlyn Perez,Nick Anthony Gozano,Mark Giovanni Gregorio,Rosemarie Sarte,Wilfred Joseph Peralta,Benedict Mari Estrella,Kevin Joshua Marinas</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ASSIGNED</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Ana Antonette Aranas,Eden Eve Elorde,Maria Yvonne Gonzales,Rehka Alyssa Flores,Jenny Ada,Peter York,Juliet Torralba,Sandylou Teriote,Mildred Joy Barbosa,Judge Bryan Ramos,Mark Gindell Villegas,Sidney Lianro Viray,Cynthia Dela Cruz,Rodenver Po,Raven Anne Carlos,Katrina Cruz,Ferdison Mark Callueng,Amor Panes,Nikka Opeda,Jeramie Constantino,Maricriz Tuazon,Jennifer Lee,Jonas Losantas</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ASSIGNED</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Cherry Mae Magpantay,Ian Christopher Martinez,Mark Aldrin Montaril,King Rupert Munio,Lalca Rhoma Tolentino,Geron Abarquez,Omar Christian Bataller,Alberto Cunanan Jr,Marycar Delos Santos,June Trebor Ferrera,Janet Hipona,Jhunil Regala,Rita Bien,Francie Angelique Candelaria,Aeron Enaje,Ricardo Esteban,Stephanie Paller,Jacqueline Pioquinto,Susan Dela Cruz,Rizza Beth Librojo</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ASSIGNED</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Levy Corpuz,Arcelie Dumapi,Reycelyn Santos,Angelus Ablaza,Fhernand Angelo,Blessie Dacanay,Robert Kervin Dela Cruz,Melanie Flor,Christopher Guerrero,Lord Anthony Lapus,Joshua Erick Mendoza,Survive Mosende,Divina Nazar,John Francis Prades,Paul Richard Arnado,Marizette Atienza,Rosete Anne Cajucom,Aiza Decena,Arnel Deguito,Quacelin Chin Galang,Diane Rose Lutian,Roselle Mahinay,Amalytt Malhabour,Alfredo Marquez,Roselito Prila,Ric Immanuel Reyes,Leon Miguel Ruedas,Jessie Salundaguit,Ihron Soriano,Joybelle Marie Vicente,Verna Dell Corpuz,Galileo III Trunio,Tom Christian Villanueva,Leimar Kristoffer Villegas</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ASSIGNED</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Michelle Rojo,Gracell Jr Gloria,Aiko Jay Lerasan,Marciano Malicdem,Joeli Claire Mariano,Kenneth Yonzon,Precious Abrea,Mary Rose Cacho,Renz Luigi Dela Cruz,Paolo Echano,Crecielito Palo,Ester Joy Rivera,Edward Adrias,Muriel Corina Amaro,JennyGrace Balaquit,Jose Carlo Cesista,Joseph Benedict De la Cruz,Kelvyn Louis Dela Cruz,Dino Epres,Giovanni Franco,Zoilo III Fulong,Ethel Joy Gutierrez,Ferdinand Mañalac,Farrah Mandangan,Jo-Ann Marmol,Nhoel Angelo Narciso,Aldrin Real,Michelle Rilcopiro,Mayla San Jose,Raquel Serrano,VINCENT JASON TAMAYO,Julian Nicole Sta Ana,Vaughn Keefe Loo,Catherine Jose</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ASSIGNED</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Patrick Avila,Mery Angel Flohimon,John ERik Fidelson,Santos,Jovelyn Bernal,Roderico Abad,Amelia Canales,Albert Coronel,Christine Veloso,Carren Zamora,Beatriz Pauline Nardo,Christopher Fuensalida,Bienvenido Gerona,Judizeus Gumiran,Lalaine Gayatao,Jason Rey Oreta,Pamela Jemina Hipolito,May Reymundo,Cecil Pagatpat,Edgardo Jr. Erispe,Jericho Villagracia,Gellie Buenaventura,Ann Margaret Mina,Jefferson Ratilla,Nemia Fe Contado,Gil Jr. Oray,Rey Dela Cruz,Philippe Christian Manlupig,Erie Rey Villariaza</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ASSIGNED</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Von Jogie Alcantara,Kristine Marilyn Alompon,Ronald Alvarado,Ronnel Baruelo,Jade Ernie Boller,Ronald Joseph Cabanizas,Ceferino Garcia,Maria Victoria Giba,Danica Julwadi,Stevenson Ke,Steven Alfred Linao,Kent Lheocyl Mamon,Romar Natural,John Paul Ortega,Gino Maria Petrache,Trisha Fay Pantillano,Rachel Marie Reyes,Brendo Dacuno,Julieta Infante,Mark Anthony Bernas</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ASSIGNED</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Kristine Marilyn Alompon,Ronald Alvarado,Ronnel Baruelo,Mark Anthony Bernas,Ronald Joseph Cabanizas,Maria Victoria Giba,Danica Julwadi,Steven Alfred Linao,John Paul Ortega,Gino Maria Petrache,Trisha Fay Pantillano,Rachel Marie Reyes,Maribeth Verano,Ceferino Garcia,Brendo Dacuno,Julieta Infante,Stevenson Ke,Romar Natural,Von Jogie Alcantara</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ASSIGNED</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Allen Paul Salinas,Argie Arcega,Carolina Casinillo,Emmanuele Vargas,Ivory Talens,Jenica Monique Sese,Jennifer Baraquio,Justine Dale Diamante,Leoren Andrew Reyes,Liezel Marquita,Maharlik Capule,Marianne Zamudio,Mark John Bajande,Marlyn Ignacio,Mo Dean Riggs Co,Jose Patricia San Jose,Rene Rabino,Rowena Salas,Trixie Nocillado,Eileen Padilla,Maria Theresa Madura</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>EMS MNL Refunds Report</name>
+    <params>
+        <name>closed</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>type</name>
+        <value>te</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Activity</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>DUE_DATE</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>DUE_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2016-11-29</startDate>
+    </timeFrameFilter>
+</Report>

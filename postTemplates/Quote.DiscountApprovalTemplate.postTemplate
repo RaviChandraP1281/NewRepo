@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PostTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <default>false</default>
+    <fields>QuoteNumber</fields>
+    <fields>Siebel_Total_Amount__c</fields>
+    <fields>Siebel_Total_Discount_Amount__c</fields>
+    <fields>Description</fields>
+    <label>DiscountApprovalTemplate</label>
+</PostTemplate>

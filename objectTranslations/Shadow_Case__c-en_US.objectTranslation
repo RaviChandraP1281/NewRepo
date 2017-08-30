@@ -1,0 +1,906 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Archived Cases</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Shadow Cases</value>
+    </caseValues>
+    <fields>
+        <label><!-- AccountId --></label>
+        <name>AccountId__c</name>
+        <relationshipLabel><!-- Shadow Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Agent Diagnostic Tool --></label>
+        <name>Agent_Diagnostic_Tool__c</name>
+    </fields>
+    <fields>
+        <label><!-- AssetId --></label>
+        <name>AssetId__c</name>
+        <relationshipLabel><!-- Shadow Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Auth Id --></label>
+        <name>Auth_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- Customer&apos;s browser used when navigating the TurboTax Support site --></help>
+        <label><!-- Browser --></label>
+        <name>Browser__c</name>
+        <picklistValues>
+            <masterLabel>Android</masterLabel>
+            <translation><!-- Android --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Chrome</masterLabel>
+            <translation><!-- Chrome --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FireFox</masterLabel>
+            <translation><!-- FireFox --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internet Explorer 6</masterLabel>
+            <translation><!-- Internet Explorer 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internet Explorer 7</masterLabel>
+            <translation><!-- Internet Explorer 7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internet Explorer 8</masterLabel>
+            <translation><!-- Internet Explorer 8 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internet Explorer 9</masterLabel>
+            <translation><!-- Internet Explorer 9 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Opera</masterLabel>
+            <translation><!-- Opera --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Safari</masterLabel>
+            <translation><!-- Safari --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- BusinessHoursId --></label>
+        <name>BusinessHoursId__c</name>
+        <relationshipLabel><!-- Shadow Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- CaseCreatedById --></label>
+        <name>CaseCreatedById__c</name>
+        <relationshipLabel><!-- Shadow Cases (CaseCreatedById) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- CaseCreatedDate --></label>
+        <name>CaseCreatedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- CaseIdExternalId --></label>
+        <name>CaseIdExternalId__c</name>
+    </fields>
+    <fields>
+        <label><!-- CaseLastModifiedBy --></label>
+        <name>CaseLastModifiedBy__c</name>
+        <relationshipLabel><!-- Shadow Cases (CaseLastModifiedBy) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- CaseLastModifiedDate --></label>
+        <name>CaseLastModifiedDate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Channel is how the customer request was handled. --></help>
+        <label><!-- Case Channel --></label>
+        <name>Case_Channel__c</name>
+        <picklistValues>
+            <masterLabel>Chat</masterLabel>
+            <translation><!-- Chat --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Email</masterLabel>
+            <translation><!-- Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phone</masterLabel>
+            <translation><!-- Phone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phone - Call Back</masterLabel>
+            <translation><!-- Phone - Call Back --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Social</masterLabel>
+            <translation><!-- Social --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web</masterLabel>
+            <translation><!-- Web --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Case Create Day --></label>
+        <name>Case_Create_Day__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case Number --></label>
+        <name>Case_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case Origin --></label>
+        <name>Case_Origin__c</name>
+        <picklistValues>
+            <masterLabel>Email</masterLabel>
+            <translation><!-- Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IVR</masterLabel>
+            <translation><!-- IVR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phone</masterLabel>
+            <translation><!-- Phone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web</masterLabel>
+            <translation><!-- Web --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Case Status --></label>
+        <name>Case_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case is Assigned --></label>
+        <name>Case_is_Assigned__c</name>
+    </fields>
+    <fields>
+        <label><!-- Category --></label>
+        <name>Category__c</name>
+        <picklistValues>
+            <masterLabel>CAN-Accuracy &amp; Maximum Refund Guarantee</masterLabel>
+            <translation><!-- CAN-Accuracy &amp; Maximum Refund Guarantee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAN-Assessment Review and Explanation</masterLabel>
+            <translation><!-- CAN-Assessment Review and Explanation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAN-Business Question</masterLabel>
+            <translation><!-- CAN-Business Question --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAN-Capital Cost Allowance (CCA)</masterLabel>
+            <translation><!-- CAN-Capital Cost Allowance (CCA) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAN-Customer Service</masterLabel>
+            <translation><!-- CAN-Customer Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAN-Deductions &amp; Credits</masterLabel>
+            <translation><!-- CAN-Deductions &amp; Credits --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAN-Donations</masterLabel>
+            <translation><!-- CAN-Donations --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAN-Filing Status</masterLabel>
+            <translation><!-- CAN-Filing Status --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAN-Income</masterLabel>
+            <translation><!-- CAN-Income --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAN-Investment Income &amp; Credits</masterLabel>
+            <translation><!-- CAN-Investment Income &amp; Credits --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAN-Miscellaneous</masterLabel>
+            <translation><!-- CAN-Miscellaneous --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAN-Personal Information</masterLabel>
+            <translation><!-- CAN-Personal Information --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAN-Product Question</masterLabel>
+            <translation><!-- CAN-Product Question --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAN-Provincial Tax Questions (except QC)</masterLabel>
+            <translation><!-- CAN-Provincial Tax Questions (except QC) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAN-QC Tax Questions</masterLabel>
+            <translation><!-- CAN-QC Tax Questions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAN-RRSP/Pension</masterLabel>
+            <translation><!-- CAN-RRSP/Pension --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAN-Review &amp; NETFILE Error Messages</masterLabel>
+            <translation><!-- CAN-Review &amp; NETFILE Error Messages --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAN-Working on My Return</masterLabel>
+            <translation><!-- CAN-Working on My Return --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dropped Contact - Escalate to leadership</masterLabel>
+            <translation><!-- Dropped Contact - Escalate to leadership --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HMS - Reached but opted out</masterLabel>
+            <translation><!-- HMS - Reached but opted out --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HMS - Unable to reach</masterLabel>
+            <translation><!-- HMS - Unable to reach --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other Intuit Software</masterLabel>
+            <translation><!-- Other Intuit Software --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ProSeries/Lacerte</masterLabel>
+            <translation><!-- ProSeries/Lacerte --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Test Contact</masterLabel>
+            <translation><!-- Test Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TurboTax (wrong country)</masterLabel>
+            <translation><!-- TurboTax (wrong country) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>US-ACA</masterLabel>
+            <translation><!-- US-ACA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>US-Audit Support Center</masterLabel>
+            <translation><!-- US-Audit Support Center --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>US-Audit Support Guarantee</masterLabel>
+            <translation><!-- US-Audit Support Guarantee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>US-Business Questions</masterLabel>
+            <translation><!-- US-Business Questions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>US-Credits</masterLabel>
+            <translation><!-- US-Credits --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>US-Customer Service</masterLabel>
+            <translation><!-- US-Customer Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>US-Deductions</masterLabel>
+            <translation><!-- US-Deductions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>US-Filing</masterLabel>
+            <translation><!-- US-Filing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>US-Income/Investments</masterLabel>
+            <translation><!-- US-Income/Investments --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>US-Miscellaneous</masterLabel>
+            <translation><!-- US-Miscellaneous --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>US-Personal Information</masterLabel>
+            <translation><!-- US-Personal Information --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>US-Privacy</masterLabel>
+            <translation><!-- US-Privacy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>US-Product Functionality</masterLabel>
+            <translation><!-- US-Product Functionality --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>US-Retirement</masterLabel>
+            <translation><!-- US-Retirement --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>US-State Questions</masterLabel>
+            <translation><!-- US-State Questions --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>US-Tax Accuracy</masterLabel>
+            <translation><!-- US-Tax Accuracy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>US-Working on My Return</masterLabel>
+            <translation><!-- US-Working on My Return --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- ClosedDate --></label>
+        <name>ClosedDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Closed in last 24 hours? --></label>
+        <name>Closed_in_last_24_hours__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- ContactId --></label>
+        <name>ContactId__c</name>
+        <relationshipLabel><!-- Shadow Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- DI: Download &amp; Install
+DROP: Dropped Call
+GS: Getting Started
+PF: Print &amp; File
+PRIV: Privacy
+SB: Shop/Buy
+TA: Tax Advice
+WOMR: Working On My Return --></help>
+        <label><!-- Contact Driver --></label>
+        <name>Contact_Driver__c</name>
+        <picklistValues>
+            <masterLabel>DI</masterLabel>
+            <translation><!-- DI --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DROP</masterLabel>
+            <translation><!-- DROP --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GS</masterLabel>
+            <translation><!-- GS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PF</masterLabel>
+            <translation><!-- PF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PRIV</masterLabel>
+            <translation><!-- PRIV --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SB</masterLabel>
+            <translation><!-- SB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SELECT</masterLabel>
+            <translation><!-- SELECT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TA</masterLabel>
+            <translation><!-- TA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WOMR</masterLabel>
+            <translation><!-- WOMR --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Days Since Opened --></label>
+        <name>Days_Since_Opened__c</name>
+    </fields>
+    <fields>
+        <label><!-- Encoded Contact First Name --></label>
+        <name>Encoded_Contact_First_Name__c</name>
+    </fields>
+    <fields>
+        <help><!-- FAQs customer view on TTS --></help>
+        <label><!-- FAQs Viewed --></label>
+        <name>FAQsViewed__c</name>
+    </fields>
+    <fields>
+        <label><!-- FederationIdentifier --></label>
+        <name>FederationIdentifier__c</name>
+    </fields>
+    <fields>
+        <help><!-- ININ telephony workgroup queue name --></help>
+        <label><!-- Workgroup Name --></label>
+        <name>ININQueueName__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsEscalated --></label>
+        <name>IsEscalated__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsSelfServiceClosed --></label>
+        <name>IsSelfServiceClosed__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsVisibleInSelfService --></label>
+        <name>IsVisibleInSelfService__c</name>
+    </fields>
+    <fields>
+        <help><!-- id used for screen share - how will we record this? --></help>
+        <label><!-- Live Look Id --></label>
+        <name>LiveLookId__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes for Agent --></label>
+        <name>Notes_for_Agent__c</name>
+    </fields>
+    <fields>
+        <help><!-- Customer&apos;s Operating System used when navigating the TurboTax Support site --></help>
+        <label><!-- Operating System --></label>
+        <name>OperatingSystem__c</name>
+        <picklistValues>
+            <masterLabel>Google Chrome</masterLabel>
+            <translation><!-- Google Chrome --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Linux</masterLabel>
+            <translation><!-- Linux --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mac</masterLabel>
+            <translation><!-- Mac --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Unix</masterLabel>
+            <translation><!-- Unix --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Windows</masterLabel>
+            <translation><!-- Windows --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Origin --></label>
+        <name>Origin__c</name>
+        <picklistValues>
+            <masterLabel>Email</masterLabel>
+            <translation><!-- Email --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IVR</masterLabel>
+            <translation><!-- IVR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Phone</masterLabel>
+            <translation><!-- Phone --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Web</masterLabel>
+            <translation><!-- Web --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Customers system info used to navigation TTS --></help>
+        <label><!-- Other System Info --></label>
+        <name>OtherSystemInfo__c</name>
+    </fields>
+    <fields>
+        <label><!-- OwnerValue --></label>
+        <name>OwnerValue__c</name>
+    </fields>
+    <fields>
+        <label><!-- ParentCaseId --></label>
+        <name>ParentCaseId__c</name>
+    </fields>
+    <fields>
+        <help><!-- Estore priority code segmentation --></help>
+        <label><!-- Priority Code --></label>
+        <name>PriorityCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Priority --></label>
+        <name>Priority__c</name>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation><!-- High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low</masterLabel>
+            <translation><!-- Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium</masterLabel>
+            <translation><!-- Medium --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- ProductId --></label>
+        <name>ProductId__c</name>
+        <relationshipLabel><!-- Shadow Cases --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Product tab and subtab when customer indicated need for help --></help>
+        <label><!-- Product Location --></label>
+        <name>ProductLocation__c</name>
+    </fields>
+    <fields>
+        <help><!-- Product tags when customer indicated need for help --></help>
+        <label><!-- Product Tags --></label>
+        <name>ProductTags__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product --></label>
+        <name>Product_Pick__c</name>
+        <picklistValues>
+            <masterLabel>ImpôtRapide for Online: De luxe (CAN)</masterLabel>
+            <translation><!-- ImpôtRapide for Online: De luxe (CAN) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ImpôtRapide for Online: Gratuit (CAN)</masterLabel>
+            <translation><!-- ImpôtRapide for Online: Gratuit (CAN) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ImpôtRapide for Online: Particuliers et entreprises (CAN)</masterLabel>
+            <translation><!-- ImpôtRapide for Online: Particuliers et entreprises (CAN) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ImpôtRapide for Online: Premier (CAN)</masterLabel>
+            <translation><!-- ImpôtRapide for Online: Premier (CAN) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ImpôtRapide for Online: étudiant (CAN)</masterLabel>
+            <translation><!-- ImpôtRapide for Online: étudiant (CAN) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ImpôtRapide for Windows Desktop: De base (CAN)</masterLabel>
+            <translation><!-- ImpôtRapide for Windows Desktop: De base (CAN) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ImpôtRapide for Windows Desktop: De luxe (CAN)</masterLabel>
+            <translation><!-- ImpôtRapide for Windows Desktop: De luxe (CAN) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ImpôtRapide for Windows Desktop: ImpôtRapide 20 (CAN)</masterLabel>
+            <translation><!-- ImpôtRapide for Windows Desktop: ImpôtRapide 20 (CAN) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ImpôtRapide for Windows Desktop: Particuliers et entreprises (CAN)</masterLabel>
+            <translation><!-- ImpôtRapide for Windows Desktop: Particuliers et entreprises (CAN) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ImpôtRapide for Windows Desktop: Premier (CAN)</masterLabel>
+            <translation><!-- ImpôtRapide for Windows Desktop: Premier (CAN) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mobile Device:SnapTax</masterLabel>
+            <translation><!-- Mobile Device:SnapTax --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mobile Device:Unknown</masterLabel>
+            <translation><!-- Mobile Device:Unknown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mobile Device:iPad Deluxe</masterLabel>
+            <translation><!-- Mobile Device:iPad Deluxe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mobile Device:iPad Home &amp; Business</masterLabel>
+            <translation><!-- Mobile Device:iPad Home &amp; Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mobile Device:iPad Premier</masterLabel>
+            <translation><!-- Mobile Device:iPad Premier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Platform Unknown:Basic</masterLabel>
+            <translation><!-- Platform Unknown:Basic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Platform Unknown:Deluxe</masterLabel>
+            <translation><!-- Platform Unknown:Deluxe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Platform Unknown:Home and Business</masterLabel>
+            <translation><!-- Platform Unknown:Home and Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Platform Unknown:Premier</masterLabel>
+            <translation><!-- Platform Unknown:Premier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Platform Unknown:Unknown</masterLabel>
+            <translation><!-- Platform Unknown:Unknown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TurboTax for Mac Desktop:Basic</masterLabel>
+            <translation><!-- TurboTax for Mac Desktop:Basic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TurboTax for Mac Desktop:Deluxe</masterLabel>
+            <translation><!-- TurboTax for Mac Desktop:Deluxe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TurboTax for Mac Desktop:Home and Business</masterLabel>
+            <translation><!-- TurboTax for Mac Desktop:Home and Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TurboTax for Mac Desktop:Premier</masterLabel>
+            <translation><!-- TurboTax for Mac Desktop:Premier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TurboTax for Mac Desktop:Unknown</masterLabel>
+            <translation><!-- TurboTax for Mac Desktop:Unknown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TurboTax for Online: Standard(CAN)</masterLabel>
+            <translation><!-- TurboTax for Online: Standard(CAN) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TurboTax for Online: Student(CAN)</masterLabel>
+            <translation><!-- TurboTax for Online: Student(CAN) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TurboTax for Online:Basic</masterLabel>
+            <translation><!-- TurboTax for Online:Basic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TurboTax for Online:Deluxe</masterLabel>
+            <translation><!-- TurboTax for Online:Deluxe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TurboTax for Online:Easy Extension</masterLabel>
+            <translation><!-- TurboTax for Online:Easy Extension --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TurboTax for Online:Estimated Taxes</masterLabel>
+            <translation><!-- TurboTax for Online:Estimated Taxes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TurboTax for Online:Free</masterLabel>
+            <translation><!-- TurboTax for Online:Free --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TurboTax for Online:Free: NUE</masterLabel>
+            <translation><!-- TurboTax for Online:Free: NUE --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TurboTax for Online:Freedom</masterLabel>
+            <translation><!-- TurboTax for Online:Freedom --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TurboTax for Online:Home and Business</masterLabel>
+            <translation><!-- TurboTax for Online:Home and Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TurboTax for Online:Its Deductible</masterLabel>
+            <translation><!-- TurboTax for Online:Its Deductible --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TurboTax for Online:Military</masterLabel>
+            <translation><!-- TurboTax for Online:Military --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TurboTax for Online:Premier</masterLabel>
+            <translation><!-- TurboTax for Online:Premier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TurboTax for Online:TTOB</masterLabel>
+            <translation><!-- TurboTax for Online:TTOB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TurboTax for Online:Unknown</masterLabel>
+            <translation><!-- TurboTax for Online:Unknown --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TurboTax for Windows Desktop: Standard(CAN)</masterLabel>
+            <translation><!-- TurboTax for Windows Desktop: Standard(CAN) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TurboTax for Windows Desktop: TurboTax 20(CAN)</masterLabel>
+            <translation><!-- TurboTax for Windows Desktop: TurboTax 20(CAN) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TurboTax for Windows Desktop:Basic</masterLabel>
+            <translation><!-- TurboTax for Windows Desktop:Basic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TurboTax for Windows Desktop:Business</masterLabel>
+            <translation><!-- TurboTax for Windows Desktop:Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TurboTax for Windows Desktop:Deluxe</masterLabel>
+            <translation><!-- TurboTax for Windows Desktop:Deluxe --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TurboTax for Windows Desktop:Easy Start</masterLabel>
+            <translation><!-- TurboTax for Windows Desktop:Easy Start --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TurboTax for Windows Desktop:Home and Business</masterLabel>
+            <translation><!-- TurboTax for Windows Desktop:Home and Business --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TurboTax for Windows Desktop:Its Deductible</masterLabel>
+            <translation><!-- TurboTax for Windows Desktop:Its Deductible --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TurboTax for Windows Desktop:Premier</masterLabel>
+            <translation><!-- TurboTax for Windows Desktop:Premier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TurboTax for Windows Desktop:Unknown</masterLabel>
+            <translation><!-- TurboTax for Windows Desktop:Unknown --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Product Platform --></label>
+        <name>Product_Platform__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case Reason --></label>
+        <name>Reason__c</name>
+        <picklistValues>
+            <masterLabel>Complex functionality</masterLabel>
+            <translation><!-- Complex functionality --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Existing problem</masterLabel>
+            <translation><!-- Existing problem --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Instructions not clear</masterLabel>
+            <translation><!-- Instructions not clear --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New problem</masterLabel>
+            <translation><!-- New problem --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>User didn&apos;t attend training</masterLabel>
+            <translation><!-- User didn&apos;t attend training --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- RecordType --></label>
+        <name>RecordType__c</name>
+    </fields>
+    <fields>
+        <help><!-- From what property did this originate: TTO, TTD, SF --></help>
+        <label><!-- RequestOrigin --></label>
+        <name>RequestOrigin__c</name>
+        <picklistValues>
+            <masterLabel>SF</masterLabel>
+            <translation><!-- SF --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TTD</masterLabel>
+            <translation><!-- TTD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TTO</masterLabel>
+            <translation><!-- TTO --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Notes for Your Customer --></label>
+        <name>Resolution__c</name>
+    </fields>
+    <fields>
+        <help><!-- system for identifying customer issue category: SRS/Legacy --></help>
+        <label><!-- Routing System --></label>
+        <name>RoutingSystem__c</name>
+    </fields>
+    <fields>
+        <label><!-- Segment --></label>
+        <name>Segment__c</name>
+        <picklistValues>
+            <masterLabel>CAN-Product Support</masterLabel>
+            <translation><!-- CAN-Product Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAN-Tax Advice</masterLabel>
+            <translation><!-- CAN-Tax Advice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CAN-Tax Support</masterLabel>
+            <translation><!-- CAN-Tax Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dropped/Misdirected</masterLabel>
+            <translation><!-- Dropped/Misdirected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>US-Product Support</masterLabel>
+            <translation><!-- US-Product Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>US-Tax Advice</masterLabel>
+            <translation><!-- US-Tax Advice --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>US-Tax Support</masterLabel>
+            <translation><!-- US-Tax Support --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Ensure ONLY one survey is sent per case. If case is re-opened and closed; the system will not trigger survey email --></help>
+        <label><!-- Send Survey DateTime --></label>
+        <name>Send_Survey_DateTime__c</name>
+    </fields>
+    <fields>
+        <label><!-- Site --></label>
+        <name>Site__c</name>
+    </fields>
+    <fields>
+        <help><!-- TT Support site form this record was created in --></help>
+        <label><!-- Source Form --></label>
+        <name>SourceForm__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Response</masterLabel>
+            <translation><!-- Customer Response --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Escalated</masterLabel>
+            <translation><!-- Escalated --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>On Hold</masterLabel>
+            <translation><!-- On Hold --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Waiting Customer Response</masterLabel>
+            <translation><!-- Waiting Customer Response --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Subject --></label>
+        <name>Subject__c</name>
+    </fields>
+    <fields>
+        <help><!-- a/b test recipe on TTS --></help>
+        <label><!-- Test Recipe --></label>
+        <name>TestRecipe__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+        <picklistValues>
+            <masterLabel>Feature Request</masterLabel>
+            <translation><!-- Feature Request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Problem</masterLabel>
+            <translation><!-- Problem --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Question</masterLabel>
+            <translation><!-- Question --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Visitor Id --></label>
+        <name>Visitor_Id__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

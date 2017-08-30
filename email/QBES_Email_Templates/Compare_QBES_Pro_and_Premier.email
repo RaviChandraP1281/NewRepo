@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+<!--
+.style1 {font-size: small}
+body,td,th {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: small;
+}
+.style2 {font-size: x-small; }
+-->
+</style>
+</head>
+
+<body>
+<table border="0" cellspacing="0" cellpadding="0" width="602">
+  <tr> </tr>
+  <tr>
+    <td colspan="2"><p><a href="http://enterprisesuite.intuit.com/"><strong><img border="0" width="650" height="56" src="http://support.quickbooks.intuit.com/support/images/Templates/EnterpriseLogo.jpg" /></strong></a></p></td>
+  </tr>
+  <tr>
+    <td colspan="2"><p class="style1"></p></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2" valign="top"><p>Dear {!Contact.FirstName}: <br />
+            <br />
+      Thank you  for your interest in Intuit QuickBooks Enterprise Solutions.  We are dedicated to providing leading edge,  easy to use business management solutions.  </p>
+        <p>QuickBooks  Enterprise Solutions 11.0 delivers the advanced functionality to meet complex  business needs, at a cost per user comparable to or <em>even lower than</em>  QuickBooks Pro or Premier. </p>
+        <p>You can have  a maximum of 3 users with QuickBooks Pro and 5 users with QuickBooks Premier.  Additional user licenses of QuickBooks Premier are available for $359.95 each.  The cost for a Premier 5 User license is $1,620.00. With QuickBooks Enterprise  Solutions, you start with 5 users.</p>
+      <p>See how QuickBooks Enterprise Solutions cost of  ownership compares to your current QuickBooks software:</p>
+      <p><img src="https://intuitcorp.quickbase.com/up/ba7nuhu5w/g/rfe/eg/va/switcher-tco-chart.jpg" width="530" height="370" /> </p>
+      <p>Annual  Support, the QuickBooks Training DVD, and all the web-based services listed  above are included FREE as part of your first year Full Service Plan membership1.  In subsequent years, your 5 user Full Service Plan costs just $850 – which  includes your upgrade to the latest software version, plus all of the extras  listed above.</p>
+      <p>When you add  up the Year 1 costs, along with typical services growing businesses like yours  need, Enterprise Solutions actually costs less per license compared to Pro 3 User or Premier  3 User.  </p>
+      <p>Thank you  again for your interest in QuickBooks Enterprise Solutions.  If you have any additional questions, please  don’t hesitate to contact me.</p>
+      <p>Thank you,<br />
+       <br />
+        </p>
+      <p class="style1">&nbsp;</p>
+      <div align="center">
+          <hr size="2" width="100%" align="center" />
+        </div>
+      <p class="style2">(1) The Full Service Plan is good    for 12 months from QuickBooks Enterprise Solutions purchase date or Full    Service Plan renewal date. You have the option to add web-based services&nbsp;for    free as an active FSP member.&nbsp;&nbsp;Service begins as of the date    activated and continues through to the expiration date of your FSP    plan.&nbsp;&nbsp;QuickBooks support is available 24 hours a day, seven days a    week; the Enterprise Solutions team (including our U.S.-based team of product    experts) is available weekdays from 4 A.M. - 7 P.M. Pacific time. Support    hours exclude occasional downtime due to system and server maintenance,    company events, observed U.S. holidays and events beyond our control. Intuit    reserves the right to limit each telephone contact to one hour and to one    incident. Active Full Service Plan members receive new version upgrades when    and if released within 12 months of QuickBooks Enterprise Solutions purchase    date or Full Service Plan renewal date. Terms, conditions, pricing, service    offerings, and availability of the Full Service Plan are subject to change at    any time without notice. U.S. only. See terms and conditions at <a href="http://www.qbes.com/terms">www.qbes.com/terms</a><br />
+        </p>
+      <p class="style2">This message was sent to inform you of a critical matter. Please    note that if you have chosen not to receive marketing messages from Intuit,    that choice applies only to promotional materials. You will continue to    receive critical notifications that are legally required or could affect your    service or software. <br />
+            <br />
+        Intuit Inc., Customer Communications, 2800 E. Commerce Center Place, Tucson,    AZ 85706<br />
+        <br />
+        Note: Terms, conditions, pricing, special offers, features, and service    options subject to change without notice</p></td>
+  </tr>
+  <tr>
+    <td colspan="2" valign="top"></td>
+  </tr>
+  <tr>
+    <td colspan="2" valign="top"></td>
+  </tr>
+  <tr>
+    <td colspan="2" valign="top"></td>
+  </tr>
+  <tr>
+    <td colspan="2" valign="top"><p class="style2">Intuit respects the personal    nature of email and this email is in response to your request for additional    information.</p></td>
+  </tr>
+</table>
+</body>
+</html>

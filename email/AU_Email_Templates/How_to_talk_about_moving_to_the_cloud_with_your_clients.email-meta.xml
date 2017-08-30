@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Educate Test 3</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>How to talk about moving to the cloud with your clients</name>
+    <style>none</style>
+    <subject>How to talk about moving to the cloud with your clients</subject>
+    <textOnly>*|MC:SUBJECT|*
+
+Have an informed conversation about cloud accounting
+
+View this email in your browser
+
+Cloud accounting is here – and like anything new, some small businesses have jumped in, some are skeptical about it and some are simply waiting for a reason to move. So who are these small businesses going to go to for guidance on what’s right for them. Yep, you!
+Framing the cloud conversation
+You know your clients, and we know cloud accounting, so we’ve put together this guide to help you have an informed conversation with your clients about moving their books online.
+
+From the benefits of cloud accounting, to explaining common concerns, to questions to ask to determine a client’s readiness, this guide is a handy tool to assist you talk to your clients about upgrading to the cloud.
+
+&lt;&lt; Download the guide
+
+If we can help with your move to the cloud in any way, please call the team on
+1800 618 521 who’ll be happy to assist.
+
+Thanks!
+
+QuickBooks Online ProAdvisor Team
+
+You&apos;re receiving this email because you have provided Intuit your details or have been referred by a colleague.
+
+unsubscribe from this list
+
+Intuit Australia
+Level 13, 2 Park Street
+SYDNEY  NSW  2000</textOnly>
+    <type>custom</type>
+</EmailTemplate>

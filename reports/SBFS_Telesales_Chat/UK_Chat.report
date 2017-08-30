@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>LEAD_SOURCE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Chat</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Lead_Originator__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Dylan Arbuthnot,Evelyne Van Eldik,Joshua Frost,Michael Imbrie,Caitlyn Schepps,Cortney Brown,Jennifer DeMarco,Justin Hayes,Katrina Fortune,Zavala,Diwa,Donnah Dizon,Rae Randall De Guzman,Jofer Dela Cruz,Mia Dela Cruz,Montalban,Jan Ray Najera,Heidi Pangilinan,Pelayo,Jayson Reyes,Maria Jenica Santos,Gailynn Sarmiento,Siccion,Kristine Balboa,Fragata,Fairy Lyn Cortes,Cristobal,Galang,Ace Garcia,Maria Joanna Joson,Nunag,Josanne Samantha Santos,Mibeth Enriquez,Joan Villabroza,Magno,Orson Ocampo,Bacani,Timpug,Sicat,Pallasigui,Chemarie,Madayag,Richard Rodrigo</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Product_Family_of_Interest__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Hosting,QB Enterprise Solutions (QBES),QB Mac,QB Point-of-Sale (POS),QB Pro/Premier,QuickBooks Online (QBO)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>LEAD_OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Brittany Benjamin,Jenny Rafia,Jim Nagun,Francis Martin,Danielle Angelo</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Week</dateGranularity>
+        <field>CREATED_DATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Lead.Product_Family_of_Interest__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>STATUS</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>UK Chat</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityLead</reportType>
+    <scope>org</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

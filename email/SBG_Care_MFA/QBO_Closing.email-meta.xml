@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>QBO - Closing</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Desktop_Data_Services</letterhead>
+    <name>QBO - Closing</name>
+    <style>freeForm</style>
+    <subject>Master Administrator Claim</subject>
+    <textOnly>{!Case.Contact},
+Regarding Company: {!Case.Account}
+
+Unfortunately the information provided in regards to the Master Administrator change has not proved ownership of this account. We still require additional documents that prove you have legal right to the QuickBooks Online subscription. No changes will be made at this time. To continue your claim please send the following documents so that we may verify this:
+
+ 
+
+Include the following information and attach it to this email:
+
+Case# {!Case.CaseNumber}
+
+QBO Company ID: {!Contact.Company_ID__c}
+
+Company Name: {!Case.Account}
+
+ 
+
+We are closing your case for now. However, the claim will be reopened if you email the documentation requested in this email within the next 30 days.
+
+ 
+
+Sincerely,
+
+The Intuit QuickBooks Online Support Team</textOnly>
+    <type>html</type>
+</EmailTemplate>

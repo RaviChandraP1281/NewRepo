@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Brief intro conversation</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Upload_Blank_Editable</letterhead>
+    <name>Intro QBO</name>
+    <style>freeForm</style>
+    <subject>Congratulations! and Welcome to QuickBooks Enterprise</subject>
+    <textOnly>Account #{!Contact.CAN__c}
+
+
+
+
+Dear {!Contact.FirstName},
+
+It was great speaking with you today. Here are the benefits that you’ll have access to during the Enterprise Onboarding Process to ensure the successful installation and implementation of your QuickBooks Enterprise software.
+Onboarding Account Manager: My name is {!User.FirstName} {!User.LastName} and I will be your primary contact for everything Intuit. Please reach out to me for all your business needs.
+
+Direct Phone Number: the phone number connecting directly to me. I can be reached Monday through Friday, AM to PM PST at {!User.Phone} ext {!User.Extension}.
+
+Installation: a team that can take you step-by-step through the installation process. Please reach out to me if you have a day &amp; time in mind. My team typically needs a 24 hour notice and is available Mon - Fri between 7:00 AM &amp; 3:00 PM PST)
+
+Data Migration: It appears that you’re coming from QuickBooks Online, if that is in fact the case, Intuit has a team in place that will take as much of your data as possible from your QBO Company File and convert it to an Enterprise friendly file for you. For more details and to begin this process, please reach out to them at 800-926-3667. Once this process has been completed, an Installation Expert on my team can also work with you on the best procedures to transfer any additional data, if applicable.
+
+Training: You have the option to receive, at no additional charge, QuickBooks training sessions that will be 1-on-1 with an Enterprise Expert. I can assist you in customizing our training program to meet your needs. If you’d like a list of the training options we offer, let me know and I’d be happy to email it to you.
+We at Intuit value your business and are continuously working to improve the experience we provide to our valued customers and are excited to offer you this new benefit.
+
+I look forward to working with you.
+
+{!User.FirstName} {!User.LastName} | Enterprise Account Manager
+Work Phone: {!User.Phone} ext {!User.Extension} | {!User.Email}
+
+Intuit | simplify the business of life
+
+this transmittal is intended only for the use of the individual or entity to which it is addressed and may contain information that is privileged, confidential and exempt from disclosure under applicable law. If the reader of this transmittal is not the intended recipient or the employee or agent responsible for delivering the transmittal to the intended recipient, you are hereby notified that any dissemination, distribution or copying of this communication is strictly prohibited.</textOnly>
+    <type>html</type>
+</EmailTemplate>

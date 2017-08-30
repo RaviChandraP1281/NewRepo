@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>DUE_DATE</field>
+    </columns>
+    <columns>
+        <field>PRIORITY</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <columns>
+        <field>TASK</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT</field>
+    </columns>
+    <columns>
+        <field>CREATED_BY</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>1 AND 2 AND (3 or 4)</booleanFilter>
+        <criteriaItems>
+            <column>ASSIGNED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>,alyssa hogue,taylor whitaker,tyran basil,eric patterson,anibal portillo,kayli grimm,marcus rhines,alec reece,richard crescente</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>TASK</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED_BY</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Gabriel Harpe,Susan Heller,Lily Berrios,Valarie Wiggins,Stevan Warren,Analise Valentin,Jacarra Tillmon,Kevon saunders,Mathew haddon,Zachary scott,Brandon robles,saad omar,Jennifer Millington,gabrielle harpe,Scott Bernard,Casey Billups,Hayley Bruy,Jeanette Creighton,Zacchaeus Williams,Brian West,Tylor Domina,Rachel Ehrbar,Haily Melendez,David Thomas,Brianna Johnson,Jovon Johnson,Krystal Krauss,Jason Legg,Karla Miles,Jarrica Oquin,Sayyid Otero,Nicholas Rodriguez,Frank Royko-Adkins,Grace Wilson,Shaquonda Armstrong,Samantha Baumgardner,charles M Diaz,Emily Dyer,Elizabeth Guzman,Shannon Hempel,Lindsey Laughton,Elizabeth Martin,Chelsey Meade,Melissa Muro,Brandyn Offley,Amy Sherman,Matthew Shea,Michael Taylor,Jazmyn Vazquez,Danielle Weldon,Ashley Doherty</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED_BY</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Christopher Estepa,anisha tims,William Clay,James Contreras,Audriana Cortes,Crystal Cruz,Shelby Davis,Taya Dipersia,Joirnique George,Carlos Harris,Ivy Larabel,Naomi Lubrin,Jarrett McGraw,Kenneth Farrington,Nichole Oquin,Nichelle Pagan,Tracy Parent,Joseph Reno,Mary Girardi,Josh Vizcaino,Ronald Wentworth,Justin Doane,Tyran Basil,Jose Carrau,Tiarra Cambio,Desiree Conover,Daniel Dickens,Kyle Hanson,Tyler Kramer,Tracy Lesch,Alina Lounsbury,David Manning,Dustin Mueller,Eric Patterson,Ryan Robinson,Shannon Roche,Brooke Albin,Joshua Belloir,Deanna Colom,Tim Cummings,Wayne DeMonte,Aaron Duttweiler,Mackenzie Fleetwood,Keoni Grabowski,Gabriel Legarreta,Chyanna Longmire,Kaylie Owens,Christina Raghonath,Amber Snodgrass,Kristen Bradeen,Tyler DuRapau,Larry Faith,Kevin Gomez,Leslie Hannans,Michael Minshall,Mykala Montanez,Edgar Soto,Devin Whitaker,Amber Wren</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>ASSIGNED</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Tier 2 Tasks</name>
+    <params>
+        <name>closed</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>type</name>
+        <value>t</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Activity</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>DUE_DATE</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>DUE_DATE</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>VerticalColumn</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>CREATED_DATE</groupingColumn>
+        <location>CHART_TOP</location>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>true</showValues>
+        <size>Large</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>CREATED</field>
+    </columns>
+    <columns>
+        <field>CASE_NUMBER</field>
+    </columns>
+    <columns>
+        <field>DESCRIPTION</field>
+    </columns>
+    <columns>
+        <field>CASE_COMMENT</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <columns>
+        <field>AGE</field>
+    </columns>
+    <columns>
+        <field>ORIGIN</field>
+    </columns>
+    <columns>
+        <field>Case.Product__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>(((1 OR 2 or 3 or 4 or 5 or 6 or 7))) AND 8</booleanFilter>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Andrew Panti,Bernard Jr Payawal,Karen Taneza,Analyn Gonzales,Joseph Moico,Ruel Cruz,Alwin Dominguez,Danver Quigao,John Terence Ifurung,Rose May Kasilag,Cynthia Nadado,Decie Rose Paa,Maria Theresa Torzar,Reah Mendano</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Mara Baldago,Monica Gonzales,Denise Alyssa Katon,Kelvin Panaligan,Jessabelle Lorono</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Lloyd Irvin Lopez,Isagani Nunez,Leialoha Farah Odono,Joy Lorena Sabellona,Diana Arlene San Juan,Silvestre Margie Mae,Romeo Borromeo,Roan Penarada</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Jan Paul Acdal,John Axel Dona,Ma Rencelle Fabregas,Ryan Dolph Galicha,Tara Turgano</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>John Ross Torres,Mark Anthony Macapas,Alfred Andy Ambrosio,Joshua Del Remedios,John Jayson Fernando,Patrick Pagayona,Billy Geer Villegas,Amelia Nogar,Catherine Zulla,John Fernando,Reginald Belvis,Darill Nuqui,Camille Penaflor,Ronaldo Callejo,Aldrin Caratao</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Reginald Adonis Albano,Jay-R Balles,Twain Japeth Caones,Arnold Cendana,Allan Mhon Cruz,Michael Jan Domingo,Christy Marie Edrada,Rafael Fernandez,Menard Kit Garcia,Luther Javier,Nadine Bernadette Justo,Arnel Labong,Danilo Lastimosa,Sheryl Parreno,Gilbert Perlada,Dennis Raule,Carlo Ryoichi Sakuma,Edmond Cedrick Santos,Jessie Semillano,Bien Marie Silva,Roselle Aileen Solis,Melvin Tullao,Mary Rose Verdad</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Joana Marie Lobitos,Thomas Julius Bautista,Ray Karlo Manalo,Marlon Umbao,Rachelle Lignes,Jonathan Abayan,Georgina Anastacio,Alchin Confesor,Rey Sonny Cajilig,Samantha Sanchez,Harvey Lugmao,Clarizze Rebulanan,Jennifer Magdamit,Aseil Aiea Doroja,Aivan Joshua Badayos,Erma Hernandez,Lady Ann Aquino,Ferdinand Gavino,Roldan Estay</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CASE_COMMENT</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>internal error</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CREATED_DATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Internal Error</name>
+    <params>
+        <name>units</name>
+        <value>d</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATEONLY</dateColumn>
+        <endDate>2016-10-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2016-09-25</startDate>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,22 @@
+Hello {!Contact.FirstName}, 
+
+I am contacting you today about a special offer to obtain QuickBooks Enterprise for 2015 at a discounted price.  Because you’ve purchased this product in the past, we can offer you a discount of 40% off the regular purchase price of 5 user or more.  However, this limited time offer expires on 1/16/2015.
+2015 QuickBooks Enterprise Subscription gives you: 
+•	Annual Software upgrades (always have the latest version with the latest features)
+•	Advice from U.S.-based Product Experts
+•	Unlimited calls to Technical Support
+•	Data Recovery Service
+•	In-depth Online Training 
+•	NEW!  Advanced Reporting with our Version 2015
+If you are currently running QuickBooks Enterprise Solutions 12, you will need to update before June 2015 to stay on a supported version.  
+I’d love to connect with you to learn more about the specific needs of your business and determine which subscription best suits your your needs.  For more details on this offer, please contact me directly. 
+
+Thank you, 
+{!User.Name} 
+Small Business Specialist - Intuit Inc 
+{!User.Phone} Ext.{!User.Extension} 
+{!User.Email} 
+{!User.Address} 
+
+Intuit respects the personal nature of email communication. Every effort is made to offer only information that may be of value to you or your business. If you do not want to receive future marketing emails from Intuit, please visit this url: https://security.intuit.com/privacy/. 
+This email was sent to the following address: {!Contact.Email} .

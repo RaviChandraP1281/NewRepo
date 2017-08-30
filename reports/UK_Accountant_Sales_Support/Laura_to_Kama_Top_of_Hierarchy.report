@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>USERS.NAME</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT_ID</field>
+    </columns>
+    <columns>
+        <field>Account.Territory__c</field>
+    </columns>
+    <currency>GBP</currency>
+    <filter>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <column>ACCOUNT_ID</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>001i000000qKQOb,001i000000qN5ay,001i000000r3iO1,001i000001cvGfY,001i000001ds3sj,001i000001e4dTW,001i000001e4eNo,001i000001e6ErE,001i000001e7KZF,001i000001e7Q2c,001i000001f9njV,001i000001fAmIH,001i000001fCjmq,001i000001gBIBT,001i000001gpNKB,001i000001gpTDk,001i000001i02Op,001i000001iSOwb,001i000001j7Ena,001i000001kxmru,001i000001l8yeV,001i000001l9XQ0,001i000001lWnlY,001i000001lWnWE,001i000001lXiqo,001i000001lXjbf,001i000001lXjV3,001i000001lXPmp,001i000001lXsyd,001i000001lY1AR,001i000001lYHgl,001i000001lYKtO,001i000001lYsPj,001i000001lYyM7,001i000001lYZhZ,001i000001lZ6fn,001i000001lZcmp,001i000001lZCmS,001i000001lZKpA,001i000001lZmbG,001i000001lZSuG,001i000001lZURY,001i000001lZXND,001i000001n0dxw,001i000001n0TKZ,001i000001n0uFb,001i000001n0UON,001i000001n18ao,001i000001n18cf,001i000001n18k0,001i000001n19q9,001i000001n1A9V,001i000001n1jc0,001i000001n1jIG,001i000001n1jjH,001i000001n1naD,001i000001n1Qn2,001i000001n1RTs</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ACCOUNT_ID</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>001i000001n23EV,001i000001n2DDi,001i000001n2GY5,001i000001n2JiN,001i000001n2Jjf,001i000001n2KIf,001i000001oYnQK,001i000001UU46X,001i000001UVanh,001i000001UVEPm,001i000001UW0NR</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Laura to Kama- Top of Hierarchy</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

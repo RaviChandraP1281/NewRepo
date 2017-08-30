@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>tNPS_Opportunity_Survey</name>
+    <style>none</style>
+    <subject>Your Opinion Matters to EBS! Please take a moment to respond to a 5 question survey about your experience with Salesforce</subject>
+    <type>text</type>
+</EmailTemplate>

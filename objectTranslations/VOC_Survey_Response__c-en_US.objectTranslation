@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>VOC Survey Response</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>VOC Survey Response</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- VOC Survey Response --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Answer Cares --></label>
+        <name>Answer_Cares__c</name>
+    </fields>
+    <fields>
+        <label><!-- Answer NPS --></label>
+        <name>Answer_NPS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Answer Resolved Issue --></label>
+        <name>Answer_Resolved_Issue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Avg Score --></label>
+        <name>Avg_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case --></label>
+        <name>CaseId__c</name>
+        <relationshipLabel><!-- VOC Survey Response --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- VOC Survey Response --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>OpportunityId__c</name>
+        <relationshipLabel><!-- VOC Survey Response --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Opportunity Owner --></label>
+        <name>Opportunity_Owner__c</name>
+        <relationshipLabel><!-- VOC Survey Response --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Question Cares --></label>
+        <name>Question_Cares__c</name>
+    </fields>
+    <fields>
+        <label><!-- Question_NPS --></label>
+        <name>Question_NPS__c</name>
+    </fields>
+    <fields>
+        <label><!-- Question Resolved Issue --></label>
+        <name>Question_Resolved_Issue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response 10 --></label>
+        <name>Question_Response10__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response11 --></label>
+        <name>Question_Response11__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response 1 --></label>
+        <name>Question_Response1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response 2 --></label>
+        <name>Question_Response2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response3 --></label>
+        <name>Question_Response3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response 4 --></label>
+        <name>Question_Response4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response 5 --></label>
+        <name>Question_Response5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response 6 --></label>
+        <name>Question_Response6__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response7 --></label>
+        <name>Question_Response7__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response 8 --></label>
+        <name>Question_Response8__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response 9 --></label>
+        <name>Question_Response9__c</name>
+    </fields>
+    <fields>
+        <label><!-- Question 10 --></label>
+        <name>Question_Text10__c</name>
+    </fields>
+    <fields>
+        <label><!-- Question 11 --></label>
+        <name>Question_Text11__c</name>
+    </fields>
+    <fields>
+        <label><!-- Question 1 --></label>
+        <name>Question_Text1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Question 2 --></label>
+        <name>Question_Text2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Question 3 --></label>
+        <name>Question_Text3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Question 4 --></label>
+        <name>Question_Text4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Question 5 --></label>
+        <name>Question_Text5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Question 6 --></label>
+        <name>Question_Text6__c</name>
+    </fields>
+    <fields>
+        <label><!-- Question 7 --></label>
+        <name>Question_Text7__c</name>
+    </fields>
+    <fields>
+        <label><!-- Question 8 --></label>
+        <name>Question_Text8__c</name>
+    </fields>
+    <fields>
+        <label><!-- Question 9 --></label>
+        <name>Question_Text9__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response 1 Numeric --></label>
+        <name>Response_1_Numeric__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response 3 Numeric --></label>
+        <name>Response_3_Numeric__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response 4 Numeric --></label>
+        <name>Response_4_Numeric__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response Answer 11 --></label>
+        <name>Response_Answer_11__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response Answer 3 --></label>
+        <name>Response_Answer_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response Answer 7 --></label>
+        <name>Response_Answer_7__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response 11 --></label>
+        <name>Response_Formula11__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response 3 --></label>
+        <name>Response_Formula3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response 7 --></label>
+        <name>Response_Formula7__c</name>
+    </fields>
+    <fields>
+        <label><!-- Survey Response Link --></label>
+        <name>SurveyResponseURL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Survey Identifier --></label>
+        <name>Survey_Identifier__c</name>
+    </fields>
+    <fields>
+        <label><!-- Survey Received Date --></label>
+        <name>Survey_Received_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Survey Sent Date --></label>
+        <name>Survey_Sent_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- The unique identifier for the Survey. --></help>
+        <label><!-- Survey --></label>
+        <name>Survey__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

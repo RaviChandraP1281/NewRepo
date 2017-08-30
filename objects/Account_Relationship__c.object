@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <validationRules>
+        <fullName>Online_Account_Relationship_Update</fullName>
+        <active>false</active>
+        <description>Prevent the users from changing the Online Accounts Relationships directly in the SFDC Application.</description>
+        <errorConditionFormula>IF( AND($Profile.Name != &quot;API Only&quot;, OR(Partner_Company_Id__c != &quot;&quot;,  Related_Company_Id__c != &quot;&quot;), AND(OR(ISNEW() , ISCLONE()), OR(Partner_Company_Id__c != &quot;&quot;,  Related_Company_Id__c != &quot;&quot;) )), true, false)</errorConditionFormula>
+        <errorMessage>Changes to relationships for Online Accountants/ Online Companies are not allowed in SFDC. Please change in the offering.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Online_Account_Relationship_Update_New</fullName>
+        <active>true</active>
+        <description>Prevent the users from changing the Online Accounts Relationships directly in the SFDC Application.</description>
+        <errorConditionFormula>IF( AND
+        ($Profile.Name != &quot;API Only&quot;, 
+        AND(
+           OR(ISNEW(),ISCLONE()),
+           AND(ISPICKVAL(Partner_Account__r.Customer_Type__c,&quot;Partner&quot;),ISPICKVAL(Partner_Account__r.Customer_Sub_Type__c,&quot;Small Biz Acct&quot;))
+           )), 
+            true, false)</errorConditionFormula>
+        <errorMessage>Creation of relationships between Online Accountants using QBOA and their Clients are not allowed in Salesforce. These Accountant Relationships must be created from within the QBOA product.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Restrict_fields_for_Discount_Relation</fullName>
+        <active>true</active>
+        <description>Restrict populating the primary check box and billing code fields when the relationship type is Full Price Company - Discount Company.</description>
+        <errorConditionFormula>AND( 
+OR( 
+NOT(ISBLANK(QBO_Billing_Code__c)), 
+Primary_Relationship__c = True 
+), 
+ISPICKVAL(Relationship_Type__c ,&quot;Full Price Company - Discounted Company&quot;) 
+)</errorConditionFormula>
+        <errorDisplayField>Relationship_Type__c</errorDisplayField>
+        <errorMessage>Primary Relationship and QBO Billing Code fields must be blank when Relationship Type is &apos;Full Price Company - Discounted Company&apos;. Please remove values from these fields.</errorMessage>
+    </validationRules>
+</CustomObject>

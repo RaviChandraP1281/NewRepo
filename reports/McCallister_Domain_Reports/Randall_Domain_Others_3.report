@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>OWNER_FULL_NAME</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT_ID</field>
+    </columns>
+    <columns>
+        <field>Account.Company_ID__c</field>
+    </columns>
+    <columns>
+        <field>Account.CAN__c</field>
+    </columns>
+    <columns>
+        <field>Account.Customer_Type__c</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>((1 OR 2) AND 3)</booleanFilter>
+        <criteriaItems>
+            <column>EMAIL</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>sanahwal@gmail.com,sarastolyar@earthlink.net,scgfs@earthlink.net,scherazades@gmail.com,seanecurrey@gmail.com,senosr@hotmail.com,sheacrofoot@gmail.com,sheri.farley@ymail.com,stargazers90@hotmail.com,susankudo@gmail.com,susanquickbooks@gmail.com,suzanne.werden@yahoo.com,suzyg@sonic.net,tahent@gmail.com,tania.arvizu@att.net,taureanbookkeeper@gmail.com,taureanbookkeeper@icloud.com,tax200083@yahoo.com,tgierth@comcast.net,tgplarryt@aol.com,theqbpro@gmail.com,thomannii@aol.com,timnott@gmail.com,timothyphammd@cox.net,tmreedcpa@gmail.com,vanessakruze@gmail.com,vangelderenterprises@gmail.com,virtualbookkeep@gmail.com,virtualj@sonic.net</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>EMAIL</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>vivian.sarkisian@gmail.com,walterho.rei@gmail.com,zerotax@pacbell.net</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER_FULL_NAME</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Eric Randall</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <name>Randall Domain Others #3</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContactList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>ACCOUNT.CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>BillingAndFinancialInformation__c</fullName>
+        <externalId>false</externalId>
+        <label>BillingAndFinancialInformation</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CS_Server_URL__c</fullName>
+        <externalId>false</externalId>
+        <label>CS Server URL</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Canadian_CS_Server_URL__c</fullName>
+        <externalId>false</externalId>
+        <label>Canadian CS Server URL</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Direct_Deposits__c</fullName>
+        <externalId>false</externalId>
+        <label>Direct Deposits</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Employees_Contractors__c</fullName>
+        <externalId>false</externalId>
+        <label>Employees Contractors</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Forms_Filed_CS_Server__c</fullName>
+        <externalId>false</externalId>
+        <label>Forms Filed CS Server</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Forms_Filed_Sentinal__c</fullName>
+        <externalId>false</externalId>
+        <label>Forms Filed Sentinal</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Payroll_Details__c</fullName>
+        <externalId>false</externalId>
+        <label>Payroll Details</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Paystubs_by_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Paystubs by Date</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Public_Login_URL__c</fullName>
+        <externalId>false</externalId>
+        <label>Public Login URL</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SubscriptionFees_OtherCharges__c</fullName>
+        <externalId>false</externalId>
+        <label>SubscriptionFees&amp;OtherCharges</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tax_Liabilities__c</fullName>
+        <externalId>false</externalId>
+        <label>Tax Liabilities</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tax_Payments_Due__c</fullName>
+        <externalId>false</externalId>
+        <label>Tax Payments Due</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tax_Payments_Made__c</fullName>
+        <externalId>false</externalId>
+        <label>Tax Payments Made</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Tax_Wage_Summary__c</fullName>
+        <externalId>false</externalId>
+        <label>Tax &amp; Wage Summary</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+</CustomObject>

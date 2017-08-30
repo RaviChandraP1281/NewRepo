@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>Donut</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>false</expandOthers>
+        <groupingColumn>STATUS</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_TOP</location>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>true</showTotal>
+        <showValues>true</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>OWNER</field>
+    </columns>
+    <columns>
+        <field>CASE_NUMBER</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>AGE</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>(((((((((((((((1) OR 2) OR 3) OR 4) OR 5) OR 6) OR 7) OR 8) OR 9) OR 10) OR 11) OR 12) OR 13) OR 14) OR 15) OR 16</booleanFilter>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>,Sharmain Salazar,Marife Bicera,Marilou Lopez,Joana Marie Recto,Jose Paolo Quimpo,Maria Carla Tolentino,Mark Anthony Balagot,Ivan Claire Barcebal,Brenda Flores,Belen Ruiz,Jaylan Navarra,Diana Rose Julve</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Jenny rose Cagalawan,Marc Robin Barias,Raquel Santiago,Cyrus Robles,Grace Mary Abengoza,Paulito Julio,Lea Grace Jontado,Domingo Manalang Jr,Rico Cortez,Mark Anthony Marquez,Karissa Jane Gaboy,Edward Paolo Roque,Ernesto Llarenas,Lenie Yamada</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>,Michelle Mondares,Rhodora Quinal,Arnelyn Heleran,Melody Tawatan,Ralph Daimier Lim,Carlo Gabriel Baldemeca,Kenneth Eugenio,Stenile Denise Galang,Shiela Mae Egonia,Marvin Ledsey,Paolo San Luis,Romulo Gabriel Fernandez,Jerico Mendoza,Michelle Delos Santos</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>,Kathleen Rae Layug,Mark Sevilla,Tristan Bulaag,Jose Rodrigo Carbonell,Kate Catherine Mendoza,Paborito John Edward,Chastyn Alaine Fausto,Nicole Santos,Ma Fatima Llaneta,Gladys Abelong,Perez Mary Ruth,Zharie Janne Asis</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Rochelle Penas,Jomer Jadulco,Rose Ann Azur,Reylita Manatad,Redentor Jr Lugtu,Joey Gaspar,John Viray,Jamillah Ibrahim,Maximo Trinidad Jr,Mary Jane Sierra,Anna Veronica Cabatbat,Ailene Dacanay,Orlando Jr Dela Pena,Reymil Almazar</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Christian Lagria,John Sorio,Joshua Cuenza,Aileen Fabros,James Emmanuelle Austria,Jordan Daiz,Andrei Eugienio,Gaspar Maningo,John Ceasar Ucol,Jerome Cabungcal,Mark Anthony Winston Lim,Gerald Barra</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>,Hellen Haldos,Sofhia Sario,Mark Colon,Eledzar Malitan,Maria Theresa Along,Francis Amoroso,Kimberly Ann Dayag,Charles Dave Dela Pena,Mabel Dizon,Tim Andrew Franche,John Michael Godoyo,Thelma Katherine Ismael,Rene Vincent Javier,Chris Evert Loyd Magtibay,Mark Deo Marcos,Rosemarie Mendoza,Lisamari Jennise Nerval,Eliseo Norona,Karen Mai Panlilio,Diana Camille Piano,Ronna Polistico,Feliciana Reyes,Genesis Tapang,Alyssa Valerio</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>,Jessica Letada,Joanna Marie Caramoan,Mark Anthony Reyes,Alister Jagmis,Jerome Aguja,Dennis Almazan,Jhowenell Larua,John Rich Merana,Jethro Ibardaloza,Foster Bonifacio,Johannez De la Cruz,Aaron jonathan Cobacha,Marlon Jake Leahy,Robelyn Soleta,Bueno Caesar Baldado</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Jennilyn Cuyo,Alfred Rainer Guillermo,Donie Angelo Salvador,Glen Paul Ibay,Kurt Russel Arroyo,Anne Rae Balite,Francis Biglete,Edgar Dela Cruz,Desiree Dela Torre,Kim Marie Pampanga,Reziel Ranada,Trisha Columbia Saniel,Crisanto Torrejos</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Jayson Faustino,Betina Clarice Formoso,Maria Carla Gerero,Fra Angelico Cristobal,John Dominick Ambolario,Nico Reginald Cajucom,Alyssa Milani Landig,Karen Joy Marinas,Marron Christian Panganiban,Francis Paule,Amado Petallana,Daryl Jay Quiambao,Alpha Joy Sto Domingo,John Timothy Wong,Jeffrey Christian Franco</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Christiane Lombos,Jamaica Denoga,Macario II Pagaran,Stephanie Joy Abuda,Giovanni Daniel Agbuya,Shairmaine Cham,Riza Mae Galve,Renz Alvin Laurente,Mengoria Limwel,Hussien Mangontong,Roxette Marges,Hosara Patic,Raymond Anthony Perez,Rogelio Quezon,Marwill Ranosa</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Mark Taguibao,Juvelyn Navarro,Alberto Aguilar,Glenda Meir Estocapio,Arlene Brila,Graciela Chuaquico,Annabella Libunao,Rodel Buenconsejo,Marianne Artates,Maylanie Perez,Shaira Ann Santos,Fehbee Oblea,Lorena Icban</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Rebecca Ng,Orlando Acta,Francis Aragoncillo,Gregorio Joseph,Julius Guevarra,Albert jerome peregrine Dureza,Junnalyn Bucol,Ryan Gamboa,Carmelita Carreon,Rc Cruz,Roniel Acla,Zylly Hymn De Ocampo,Alexander Armas,Anie Rose Formoso,Dru Roco,Charina Villanueva</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Felice Mendiola,Nico Dominguez,Jojelyn Bentayo,Albert Cadalo,Jean Harry Condecido,Dustine Austin De la Cruz,Sean Jacob Dela Rosa,Arjay Fernandez,Karen Gonzales,Jestony Mayordomo,Ferdinand Mendoza,Joanah Cammille Ong,Alejandrio Pahati,Leilanie Rullan,Vernie Jireh Santos,John Abarte</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Jefferson Olango,Mark Joseph Pradas,Jessa Lyn Villa,Ricky DeLaCruz,Jennelyn Berdin,Ziren Blanch Bordon,Jon Jon Ferrer,Pippen Skum Lising,Nicole Kaye Nartea,Michael Allan Saleh,Fatima Louise Tiongson,Mariane Angelie Azucena,Crystel Irish Joaquin,Carlos Relly Baltazar</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Jorell Mendoza,Kenneth Hidalgo,Enrico Pural,Geraldine Magondacan,Ana Jerilou Gorayeb,Jann Kiel Salvador,Emmanuel Ronald Meneses,Von Ruel Gaspar,Barbara De Vera,Vincent Albert De Guzman,Cherry Ann Duran,Ernest franz u Uy,Edjy Boy Banal,Robbie Gem Suban,Maybelle De Guzman,Ralph Christian Vendiola,Marlon Evangelista,Lizel Prado,Jennie Lyn Acuna,Nelyn Nym Basto,Jacqueline Balingit</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>STATUS</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>DAILY CASES-PPBA DASHBOARD(Created By)</name>
+    <params>
+        <name>units</name>
+        <value>d</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATEONLY</dateColumn>
+        <interval>INTERVAL_TODAY</interval>
+    </timeFrameFilter>
+</Report>

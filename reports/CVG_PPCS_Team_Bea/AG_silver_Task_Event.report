@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ASSIGNED</field>
+    </columns>
+    <columns>
+        <field>CASE</field>
+    </columns>
+    <columns>
+        <field>CREATED_BY</field>
+    </columns>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>CONTRACT_STATUS</field>
+    </columns>
+    <columns>
+        <field>DUE_DATE</field>
+    </columns>
+    <columns>
+        <field>PRIORITY</field>
+    </columns>
+    <columns>
+        <field>TASK</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT</field>
+    </columns>
+    <columns>
+        <field>CONTACT</field>
+    </columns>
+    <columns>
+        <field>LEAD</field>
+    </columns>
+    <columns>
+        <field>OPPORTUNITY</field>
+    </columns>
+    <currency>USD</currency>
+    <description>Task Event (callback)</description>
+    <filter>
+        <booleanFilter>(1 or 2 or 3 OR 4) AND 5</booleanFilter>
+        <criteriaItems>
+            <column>CREATED_BY</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Floriz Donato,Larissa Claridades,Aljunar Cruz,Amalyn Malhabour,Mary Charlene Penaverde,Cristine Mamadil,Ma Fatima Llaneta,Reva Garcia,Martin Estrelles,Mary Joyce Guinto,Carlo Villarica Caluag,Lovely Salcedo,Jinky Rance,Ryan O&apos;neal Basconcillo,Dranreb Ignacio,Jasmin Sereno,Jennifer Cruz,Lenie Yamada,Mardonio Jr Alipao,Maricar Dolores,aula Marie Krishna Prado,Peter Louie Galgana,Rey Rogaciano Uldarico Tatoy,Rhia Del Rosario,Maeriel Custodio,Melody Tawatan Jayson Paul Nato,Donato Jr De Vera,Lovely Jane Fabalina</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED_BY</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Rose Ann Azur,Ernesto Llarenas,Shiela Mae Egonia,Jose Julieto Jr Liboon,Juvelyn Navarro,Mark Anthony Balagot,John Carlo Caleda,Grace Barrera,Noel Ruado,Charles Dave Dela Pena,Marnel Artates,Jean Karla Galit,Archieval Soriano,Colastre Kristoffer Jeff,Lowie Alcoy,Don Miguel Perico Alviar,Hannah Joy Sanuco,James Anthony Nasol,Kim Mirandilla,Maria Estelita Deveza,Marianne Artates,Maricar Ortega,Virgo Tordera,Rowell Castaneda,Raymond Anthony Perez,Nemeilyn Valdoezo,Glo-Marie Manalastas</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED_BY</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Gian Carla Endozo,Hanna Grace Prieto,Ma Elena Morante,Ryan Gutierrez,Arlene Jane Obedoza,Mark Anthony Marquez,Edjy Boy Banal,Menard Kit Garcia,Twain Japeth Caones,Anna Karina Juangco,Elvie Mendez,Ralph Christian Vendiola,Betina Clarice Formoso,Joshua Patrick Borromeo,Maria Corazon Apolinario,Joanna Marie Caramoan,Stenile Denise Galang,Miguel Louis Zapanta,Artemio Bongar,Ariel Canares,Garry Endrino,Mhoana Marie Gayoso,Cronica Ezra Villasin,Rc Cruz</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED_BY</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Rose Anne De Manuel,Jezreel Avellanoza,John Ponce Cruz,Apole Limjoco,Mario Allan Navato,Calvin Quicho,Joan Roldan,Sydfrey Evaristo,Jose Renulfo Ladlad,Fritzgerald sawit,rebecca lingon,jeri paul gayo,kenmar vibar,dennis estrella,Garry Endrino,Marc Joseph Marasigan</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>STATUS</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Not Started,In Progress,Completed,Waiting on someone else,Deferred</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <name>AG silver Task Event</name>
+    <params>
+        <name>closed</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>type</name>
+        <value>te</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Activity</reportType>
+    <scope>team</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>DUE_DATE</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>DUE_DATE</dateColumn>
+        <endDate>2017-06-30</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2017-01-01</startDate>
+    </timeFrameFilter>
+</Report>

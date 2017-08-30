@@ -1,0 +1,1310 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Is the Agent Tool active?</description>
+        <externalId>false</externalId>
+        <label>Active</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Agent_Tool_Label__c</fullName>
+        <description>The label used to display a Tool in the User Interface.</description>
+        <externalId>false</externalId>
+        <label>Agent Tool Label</label>
+        <length>80</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Category_Label__c</fullName>
+        <description>A label for the category of an Agent Tool.</description>
+        <externalId>false</externalId>
+        <label>Category Label</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Agent News</fullName>
+                    <default>false</default>
+                    <label>Agent News</label>
+                </value>
+                <value>
+                    <fullName>Case-Specific Tools</fullName>
+                    <default>false</default>
+                    <label>Case-Specific Tools</label>
+                </value>
+                <value>
+                    <fullName>Core Tools</fullName>
+                    <default>false</default>
+                    <label>Core Tools</label>
+                </value>
+                <value>
+                    <fullName>Help Content</fullName>
+                    <default>false</default>
+                    <label>Help Content</label>
+                </value>
+                <value>
+                    <fullName>Other Tools</fullName>
+                    <default>false</default>
+                    <label>Other Tools</label>
+                </value>
+                <value>
+                    <fullName>Universal</fullName>
+                    <default>false</default>
+                    <label>Universal</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Category__c</fullName>
+        <description>The category of an Agent Tool.</description>
+        <externalId>false</externalId>
+        <label>Category</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Universal Tools</fullName>
+                    <default>false</default>
+                    <label>Universal Tools</label>
+                </value>
+                <value>
+                    <fullName>Restricted Tools</fullName>
+                    <default>false</default>
+                    <label>Restricted Tools</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Custom_Error_Message__c</fullName>
+        <externalId>false</externalId>
+        <label>Custom Error Message</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Open_Link_In__c</fullName>
+        <description>Where should the Agent Tool url be opened?</description>
+        <externalId>false</externalId>
+        <label>Open Link In</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Primary Tab</fullName>
+                    <default>false</default>
+                    <label>Primary Tab</label>
+                </value>
+                <value>
+                    <fullName>Sub Tab</fullName>
+                    <default>false</default>
+                    <label>Sub Tab</label>
+                </value>
+                <value>
+                    <fullName>New Window</fullName>
+                    <default>false</default>
+                    <label>New Window</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>PERF_URL__c</fullName>
+        <description>PERF URL for the Agent Tool.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This is the URL that will be used in the PERF (Performance) environment.</inlineHelpText>
+        <label>PERF URL</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Production_URL__c</fullName>
+        <description>Production URL of the Agent Tool.</description>
+        <externalId>false</externalId>
+        <label>Production URL</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Provisioned_Roles__c</fullName>
+        <description>Agent Roles Provisioned for Tool Access</description>
+        <externalId>false</externalId>
+        <label>Provisioned Roles</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>AAG AEL</fullName>
+                    <default>false</default>
+                    <label>AAG AEL</label>
+                </value>
+                <value>
+                    <fullName>AAG BDM Sales Consultant</fullName>
+                    <default>false</default>
+                    <label>AAG BDM Sales Consultant</label>
+                </value>
+                <value>
+                    <fullName>AAG Care Mgr</fullName>
+                    <default>false</default>
+                    <label>AAG Care Mgr</label>
+                </value>
+                <value>
+                    <fullName>AAG Cloud PAP Coach Mgr</fullName>
+                    <default>false</default>
+                    <label>AAG Cloud PAP Coach Mgr</label>
+                </value>
+                <value>
+                    <fullName>AAG Coach Mgr</fullName>
+                    <default>false</default>
+                    <label>AAG Coach Mgr</label>
+                </value>
+                <value>
+                    <fullName>AAG Executive</fullName>
+                    <default>false</default>
+                    <label>AAG Executive</label>
+                </value>
+                <value>
+                    <fullName>AAG Partner Coach Mgr</fullName>
+                    <default>false</default>
+                    <label>AAG Partner Coach Mgr</label>
+                </value>
+                <value>
+                    <fullName>AAG Partner Mgr</fullName>
+                    <default>false</default>
+                    <label>AAG Partner Mgr</label>
+                </value>
+                <value>
+                    <fullName>AAG Sales Consultant</fullName>
+                    <default>false</default>
+                    <label>AAG Sales Consultant</label>
+                </value>
+                <value>
+                    <fullName>AAG Sales Mgr</fullName>
+                    <default>false</default>
+                    <label>AAG Sales Mgr</label>
+                </value>
+                <value>
+                    <fullName>AAG Service</fullName>
+                    <default>false</default>
+                    <label>AAG Service</label>
+                </value>
+                <value>
+                    <fullName>AAG Support</fullName>
+                    <default>false</default>
+                    <label>AAG Support</label>
+                </value>
+                <value>
+                    <fullName>AAG Support and Service</fullName>
+                    <default>false</default>
+                    <label>AAG Support and Service</label>
+                </value>
+                <value>
+                    <fullName>Accountant Phone Sales Agent</fullName>
+                    <default>false</default>
+                    <label>Accountant Phone Sales Agent</label>
+                </value>
+                <value>
+                    <fullName>Accountant Phone Sales Mgr</fullName>
+                    <default>false</default>
+                    <label>Accountant Phone Sales Mgr</label>
+                </value>
+                <value>
+                    <fullName>Acctnt Executive</fullName>
+                    <default>false</default>
+                    <label>Acctnt Executive</label>
+                </value>
+                <value>
+                    <fullName>Acctnt IB Mgr</fullName>
+                    <default>false</default>
+                    <label>Acctnt IB Mgr</label>
+                </value>
+                <value>
+                    <fullName>Acctnt Inbound Consultant</fullName>
+                    <default>false</default>
+                    <label>Acctnt Inbound Consultant</label>
+                </value>
+                <value>
+                    <fullName>Acctnt ISAM Consultant</fullName>
+                    <default>false</default>
+                    <label>Acctnt ISAM Consultant</label>
+                </value>
+                <value>
+                    <fullName>Acctnt Mgr ISAM</fullName>
+                    <default>false</default>
+                    <label>Acctnt Mgr ISAM</label>
+                </value>
+                <value>
+                    <fullName>Acctnt Sales Leader</fullName>
+                    <default>false</default>
+                    <label>Acctnt Sales Leader</label>
+                </value>
+                <value>
+                    <fullName>Admin</fullName>
+                    <default>false</default>
+                    <label>Admin</label>
+                </value>
+                <value>
+                    <fullName>Agent Online Care</fullName>
+                    <default>false</default>
+                    <label>Agent Online Care</label>
+                </value>
+                <value>
+                    <fullName>AgentTier1</fullName>
+                    <default>false</default>
+                    <label>AgentTier1</label>
+                </value>
+                <value>
+                    <fullName>APD Administrator</fullName>
+                    <default>false</default>
+                    <label>APD Administrator</label>
+                </value>
+                <value>
+                    <fullName>APD Sales Leader</fullName>
+                    <default>false</default>
+                    <label>APD Sales Leader</label>
+                </value>
+                <value>
+                    <fullName>APD Sales Manager</fullName>
+                    <default>false</default>
+                    <label>APD Sales Manager</label>
+                </value>
+                <value>
+                    <fullName>APD Sales Rep</fullName>
+                    <default>false</default>
+                    <label>APD Sales Rep</label>
+                </value>
+                <value>
+                    <fullName>AUS BDM Acctnt</fullName>
+                    <default>false</default>
+                    <label>AUS BDM Acctnt</label>
+                </value>
+                <value>
+                    <fullName>AUS BDM Bookkeeper</fullName>
+                    <default>false</default>
+                    <label>AUS BDM Bookkeeper</label>
+                </value>
+                <value>
+                    <fullName>AUS BDM Consultant</fullName>
+                    <default>false</default>
+                    <label>AUS BDM Consultant</label>
+                </value>
+                <value>
+                    <fullName>AUS BDM Leader</fullName>
+                    <default>false</default>
+                    <label>AUS BDM Leader</label>
+                </value>
+                <value>
+                    <fullName>AUS BDM Mgr</fullName>
+                    <default>false</default>
+                    <label>AUS BDM Mgr</label>
+                </value>
+                <value>
+                    <fullName>AUS ISAM Acctnt</fullName>
+                    <default>false</default>
+                    <label>AUS ISAM Acctnt</label>
+                </value>
+                <value>
+                    <fullName>AUS ISAM Bookkeeper</fullName>
+                    <default>false</default>
+                    <label>AUS ISAM Bookkeeper</label>
+                </value>
+                <value>
+                    <fullName>AUS ISAM Mgr</fullName>
+                    <default>false</default>
+                    <label>AUS ISAM Mgr</label>
+                </value>
+                <value>
+                    <fullName>AUS Lead Accountant BDM</fullName>
+                    <default>false</default>
+                    <label>AUS Lead Accountant BDM</label>
+                </value>
+                <value>
+                    <fullName>AUS Mktg and Fin</fullName>
+                    <default>false</default>
+                    <label>AUS Mktg and Fin</label>
+                </value>
+                <value>
+                    <fullName>AUS Tele Consultant</fullName>
+                    <default>false</default>
+                    <label>AUS Tele Consultant</label>
+                </value>
+                <value>
+                    <fullName>AUS Tele Mgr</fullName>
+                    <default>false</default>
+                    <label>AUS Tele Mgr</label>
+                </value>
+                <value>
+                    <fullName>B2B Payroll Support</fullName>
+                    <default>false</default>
+                    <label>B2B Payroll Support</label>
+                </value>
+                <value>
+                    <fullName>BDM Admin</fullName>
+                    <default>false</default>
+                    <label>BDM Admin</label>
+                </value>
+                <value>
+                    <fullName>BDM Sales Leader</fullName>
+                    <default>false</default>
+                    <label>BDM Sales Leader</label>
+                </value>
+                <value>
+                    <fullName>BDM Sales Rep</fullName>
+                    <default>false</default>
+                    <label>BDM Sales Rep</label>
+                </value>
+                <value>
+                    <fullName>Bus Admin</fullName>
+                    <default>false</default>
+                    <label>Bus Admin</label>
+                </value>
+                <value>
+                    <fullName>Campaign Agent</fullName>
+                    <default>false</default>
+                    <label>Campaign Agent</label>
+                </value>
+                <value>
+                    <fullName>Campaign Lead Dev</fullName>
+                    <default>false</default>
+                    <label>Campaign Lead Dev</label>
+                </value>
+                <value>
+                    <fullName>Campaign Mgr</fullName>
+                    <default>false</default>
+                    <label>Campaign Mgr</label>
+                </value>
+                <value>
+                    <fullName>CAN BDM Consultant</fullName>
+                    <default>false</default>
+                    <label>CAN BDM Consultant</label>
+                </value>
+                <value>
+                    <fullName>CAN Chat Agent</fullName>
+                    <default>false</default>
+                    <label>CAN Chat Agent</label>
+                </value>
+                <value>
+                    <fullName>CAN IAM Consultant</fullName>
+                    <default>false</default>
+                    <label>CAN IAM Consultant</label>
+                </value>
+                <value>
+                    <fullName>CAN Inbound Consultant</fullName>
+                    <default>false</default>
+                    <label>CAN Inbound Consultant</label>
+                </value>
+                <value>
+                    <fullName>CAN Mgr BDM</fullName>
+                    <default>false</default>
+                    <label>CAN Mgr BDM</label>
+                </value>
+                <value>
+                    <fullName>CAN Mgr IAM</fullName>
+                    <default>false</default>
+                    <label>CAN Mgr IAM</label>
+                </value>
+                <value>
+                    <fullName>CAN Mgr Inbound</fullName>
+                    <default>false</default>
+                    <label>CAN Mgr Inbound</label>
+                </value>
+                <value>
+                    <fullName>CAN Mgr Outbound</fullName>
+                    <default>false</default>
+                    <label>CAN Mgr Outbound</label>
+                </value>
+                <value>
+                    <fullName>CAN Mgr ProTax</fullName>
+                    <default>false</default>
+                    <label>CAN Mgr ProTax</label>
+                </value>
+                <value>
+                    <fullName>CAN Outbound Consultant</fullName>
+                    <default>false</default>
+                    <label>CAN Outbound Consultant</label>
+                </value>
+                <value>
+                    <fullName>CAN ProTax Consultant</fullName>
+                    <default>false</default>
+                    <label>CAN ProTax Consultant</label>
+                </value>
+                <value>
+                    <fullName>CAN QBES Consultant</fullName>
+                    <default>false</default>
+                    <label>CAN QBES Consultant</label>
+                </value>
+                <value>
+                    <fullName>CAN Sales Leader</fullName>
+                    <default>false</default>
+                    <label>CAN Sales Leader</label>
+                </value>
+                <value>
+                    <fullName>CAN TOF Consultant</fullName>
+                    <default>false</default>
+                    <label>CAN TOF Consultant</label>
+                </value>
+                <value>
+                    <fullName>CarePayrollAgent</fullName>
+                    <default>false</default>
+                    <label>CarePayrollAgent</label>
+                </value>
+                <value>
+                    <fullName>Care Payroll Agent</fullName>
+                    <default>false</default>
+                    <label>Care Payroll Agent</label>
+                </value>
+                <value>
+                    <fullName>Channel Marketing</fullName>
+                    <default>false</default>
+                    <label>Channel Marketing</label>
+                </value>
+                <value>
+                    <fullName>Chat Agent</fullName>
+                    <default>false</default>
+                    <label>Chat Agent</label>
+                </value>
+                <value>
+                    <fullName>DTOL Mgr</fullName>
+                    <default>false</default>
+                    <label>DTOL Mgr</label>
+                </value>
+                <value>
+                    <fullName>DTOL Payroll Tier 1</fullName>
+                    <default>false</default>
+                    <label>DTOL Payroll Tier 1</label>
+                </value>
+                <value>
+                    <fullName>DTOL Payroll Tier 2</fullName>
+                    <default>false</default>
+                    <label>DTOL Payroll Tier 2</label>
+                </value>
+                <value>
+                    <fullName>DTOL Payroll Tier 3</fullName>
+                    <default>false</default>
+                    <label>DTOL Payroll Tier 3</label>
+                </value>
+                <value>
+                    <fullName>DTOL Tier 1</fullName>
+                    <default>false</default>
+                    <label>DTOL Tier 1</label>
+                </value>
+                <value>
+                    <fullName>DTOL Tier 2</fullName>
+                    <default>false</default>
+                    <label>DTOL Tier 2</label>
+                </value>
+                <value>
+                    <fullName>DTOL Tier3</fullName>
+                    <default>false</default>
+                    <label>DTOL Tier3</label>
+                </value>
+                <value>
+                    <fullName>Enabling Agent</fullName>
+                    <default>false</default>
+                    <label>Enabling Agent</label>
+                </value>
+                <value>
+                    <fullName>ES Acquisition Rep</fullName>
+                    <default>false</default>
+                    <label>ES Acquisition Rep</label>
+                </value>
+                <value>
+                    <fullName>ES LDR Rep</fullName>
+                    <default>false</default>
+                    <label>ES LDR Rep</label>
+                </value>
+                <value>
+                    <fullName>ES Renewal Rep</fullName>
+                    <default>false</default>
+                    <label>ES Renewal Rep</label>
+                </value>
+                <value>
+                    <fullName>ES Sales Enablement</fullName>
+                    <default>false</default>
+                    <label>ES Sales Enablement</label>
+                </value>
+                <value>
+                    <fullName>ES Sales Leader</fullName>
+                    <default>false</default>
+                    <label>ES Sales Leader</label>
+                </value>
+                <value>
+                    <fullName>ES Sales Manager</fullName>
+                    <default>false</default>
+                    <label>ES Sales Manager</label>
+                </value>
+                <value>
+                    <fullName>ExecDesktop</fullName>
+                    <default>false</default>
+                    <label>ExecDesktop</label>
+                </value>
+                <value>
+                    <fullName>ExecOnline</fullName>
+                    <default>false</default>
+                    <label>ExecOnline</label>
+                </value>
+                <value>
+                    <fullName>FMS Inbound Mgr</fullName>
+                    <default>false</default>
+                    <label>FMS Inbound Mgr</label>
+                </value>
+                <value>
+                    <fullName>FMS Pipeline Mgr</fullName>
+                    <default>false</default>
+                    <label>FMS Pipeline Mgr</label>
+                </value>
+                <value>
+                    <fullName>FMS Sales Leader</fullName>
+                    <default>false</default>
+                    <label>FMS Sales Leader</label>
+                </value>
+                <value>
+                    <fullName>France BDM Consultant</fullName>
+                    <default>false</default>
+                    <label>France BDM Consultant</label>
+                </value>
+                <value>
+                    <fullName>France BDM Mgr</fullName>
+                    <default>false</default>
+                    <label>France BDM Mgr</label>
+                </value>
+                <value>
+                    <fullName>France Sales Leader</fullName>
+                    <default>false</default>
+                    <label>France Sales Leader</label>
+                </value>
+                <value>
+                    <fullName>FRA Tele Consultant</fullName>
+                    <default>false</default>
+                    <label>FRA Tele Consultant</label>
+                </value>
+                <value>
+                    <fullName>Global Desktop</fullName>
+                    <default>false</default>
+                    <label>Global Desktop</label>
+                </value>
+                <value>
+                    <fullName>High Value Customer</fullName>
+                    <default>false</default>
+                    <label>High Value Customer</label>
+                </value>
+                <value>
+                    <fullName>HVC Consultant</fullName>
+                    <default>false</default>
+                    <label>HVC Consultant</label>
+                </value>
+                <value>
+                    <fullName>IFS NM Account Executive</fullName>
+                    <default>false</default>
+                    <label>IFS NM Account Executive</label>
+                </value>
+                <value>
+                    <fullName>IFS NM Account Manager Sales</fullName>
+                    <default>false</default>
+                    <label>IFS NM Account Manager Sales</label>
+                </value>
+                <value>
+                    <fullName>IFS NM VP Sales</fullName>
+                    <default>false</default>
+                    <label>IFS NM VP Sales</label>
+                </value>
+                <value>
+                    <fullName>Inbound Agent</fullName>
+                    <default>false</default>
+                    <label>Inbound Agent</label>
+                </value>
+                <value>
+                    <fullName>Inbound Mgr</fullName>
+                    <default>false</default>
+                    <label>Inbound Mgr</label>
+                </value>
+                <value>
+                    <fullName>India BDM Mgr</fullName>
+                    <default>false</default>
+                    <label>India BDM Mgr</label>
+                </value>
+                <value>
+                    <fullName>India Consultant Renewals</fullName>
+                    <default>false</default>
+                    <label>India Consultant Renewals</label>
+                </value>
+                <value>
+                    <fullName>India Lead Telesales</fullName>
+                    <default>false</default>
+                    <label>India Lead Telesales</label>
+                </value>
+                <value>
+                    <fullName>India Onboarding Mgr</fullName>
+                    <default>false</default>
+                    <label>India Onboarding Mgr</label>
+                </value>
+                <value>
+                    <fullName>India Sales Leader</fullName>
+                    <default>false</default>
+                    <label>India Sales Leader</label>
+                </value>
+                <value>
+                    <fullName>India Telesales Consultant</fullName>
+                    <default>false</default>
+                    <label>India Telesales Consultant</label>
+                </value>
+                <value>
+                    <fullName>India Telesales Mgr</fullName>
+                    <default>false</default>
+                    <label>India Telesales Mgr</label>
+                </value>
+                <value>
+                    <fullName>Intuit SFDC Training</fullName>
+                    <default>false</default>
+                    <label>Intuit SFDC Training</label>
+                </value>
+                <value>
+                    <fullName>ITO Care Coach Mgr</fullName>
+                    <default>false</default>
+                    <label>ITO Care Coach Mgr</label>
+                </value>
+                <value>
+                    <fullName>KA Onboarding</fullName>
+                    <default>false</default>
+                    <label>KA Onboarding</label>
+                </value>
+                <value>
+                    <fullName>LeadDesktop</fullName>
+                    <default>false</default>
+                    <label>LeadDesktop</label>
+                </value>
+                <value>
+                    <fullName>Manager Online Care</fullName>
+                    <default>false</default>
+                    <label>Manager Online Care</label>
+                </value>
+                <value>
+                    <fullName>Market Response Agent</fullName>
+                    <default>false</default>
+                    <label>Market Response Agent</label>
+                </value>
+                <value>
+                    <fullName>Market Response Mgr</fullName>
+                    <default>false</default>
+                    <label>Market Response Mgr</label>
+                </value>
+                <value>
+                    <fullName>MgrDesktop</fullName>
+                    <default>false</default>
+                    <label>MgrDesktop</label>
+                </value>
+                <value>
+                    <fullName>MgrOnline</fullName>
+                    <default>false</default>
+                    <label>MgrOnline</label>
+                </value>
+                <value>
+                    <fullName>MgrQBSE</fullName>
+                    <default>false</default>
+                    <label>MgrQBSE</label>
+                </value>
+                <value>
+                    <fullName>MgrStandAlonePayroll</fullName>
+                    <default>false</default>
+                    <label>MgrStandAlonePayroll</label>
+                </value>
+                <value>
+                    <fullName>New Offerings Agent</fullName>
+                    <default>false</default>
+                    <label>New Offerings Agent</label>
+                </value>
+                <value>
+                    <fullName>New Offerings Mgr</fullName>
+                    <default>false</default>
+                    <label>New Offerings Mgr</label>
+                </value>
+                <value>
+                    <fullName>Onboard Assd Payroll Consultant</fullName>
+                    <default>false</default>
+                    <label>Onboard Assd Payroll Consultant</label>
+                </value>
+                <value>
+                    <fullName>Onboard Chat Payroll Consultant</fullName>
+                    <default>false</default>
+                    <label>Onboard Chat Payroll Consultant</label>
+                </value>
+                <value>
+                    <fullName>Onboard FSP Payroll Consultant</fullName>
+                    <default>false</default>
+                    <label>Onboard FSP Payroll Consultant</label>
+                </value>
+                <value>
+                    <fullName>Onboard Leader</fullName>
+                    <default>false</default>
+                    <label>Onboard Leader</label>
+                </value>
+                <value>
+                    <fullName>Onboard Mgr Payroll</fullName>
+                    <default>false</default>
+                    <label>Onboard Mgr Payroll</label>
+                </value>
+                <value>
+                    <fullName>Onboard Payments Mgr</fullName>
+                    <default>false</default>
+                    <label>Onboard Payments Mgr</label>
+                </value>
+                <value>
+                    <fullName>Online Care Agent</fullName>
+                    <default>false</default>
+                    <label>Online Care Agent</label>
+                </value>
+                <value>
+                    <fullName>Online Care Leader</fullName>
+                    <default>false</default>
+                    <label>Online Care Leader</label>
+                </value>
+                <value>
+                    <fullName>Online Care Mgr</fullName>
+                    <default>false</default>
+                    <label>Online Care Mgr</label>
+                </value>
+                <value>
+                    <fullName>Outbound Leader</fullName>
+                    <default>false</default>
+                    <label>Outbound Leader</label>
+                </value>
+                <value>
+                    <fullName>Partner Care Mgr</fullName>
+                    <default>false</default>
+                    <label>Partner Care Mgr</label>
+                </value>
+                <value>
+                    <fullName>Partner Coach</fullName>
+                    <default>false</default>
+                    <label>Partner Coach</label>
+                </value>
+                <value>
+                    <fullName>PartnerMgrDesktop</fullName>
+                    <default>false</default>
+                    <label>PartnerMgrDesktop</label>
+                </value>
+                <value>
+                    <fullName>Partner Service and Support</fullName>
+                    <default>false</default>
+                    <label>Partner Service and Support</label>
+                </value>
+                <value>
+                    <fullName>Payments Agent</fullName>
+                    <default>false</default>
+                    <label>Payments Agent</label>
+                </value>
+                <value>
+                    <fullName>Payments Leader</fullName>
+                    <default>false</default>
+                    <label>Payments Leader</label>
+                </value>
+                <value>
+                    <fullName>Payments Mgr</fullName>
+                    <default>false</default>
+                    <label>Payments Mgr</label>
+                </value>
+                <value>
+                    <fullName>Payroll Chat Agent</fullName>
+                    <default>false</default>
+                    <label>Payroll Chat Agent</label>
+                </value>
+                <value>
+                    <fullName>Payroll Inbound Agent</fullName>
+                    <default>false</default>
+                    <label>Payroll Inbound Agent</label>
+                </value>
+                <value>
+                    <fullName>Payroll Mgr Inbound</fullName>
+                    <default>false</default>
+                    <label>Payroll Mgr Inbound</label>
+                </value>
+                <value>
+                    <fullName>Pipeline Agent</fullName>
+                    <default>false</default>
+                    <label>Pipeline Agent</label>
+                </value>
+                <value>
+                    <fullName>Pipeline Mgr</fullName>
+                    <default>false</default>
+                    <label>Pipeline Mgr</label>
+                </value>
+                <value>
+                    <fullName>POS Agent</fullName>
+                    <default>false</default>
+                    <label>POS Agent</label>
+                </value>
+                <value>
+                    <fullName>POS Lead Gen</fullName>
+                    <default>false</default>
+                    <label>POS Lead Gen</label>
+                </value>
+                <value>
+                    <fullName>POS Mgr</fullName>
+                    <default>false</default>
+                    <label>POS Mgr</label>
+                </value>
+                <value>
+                    <fullName>PSG Agent</fullName>
+                    <default>false</default>
+                    <label>PSG Agent</label>
+                </value>
+                <value>
+                    <fullName>PSG and Chat Mgr</fullName>
+                    <default>false</default>
+                    <label>PSG and Chat Mgr</label>
+                </value>
+                <value>
+                    <fullName>PTG AandE Customer Service</fullName>
+                    <default>false</default>
+                    <label>PTG AandE Customer Service</label>
+                </value>
+                <value>
+                    <fullName>PTG Care Coach Mgr</fullName>
+                    <default>false</default>
+                    <label>PTG Care Coach Mgr</label>
+                </value>
+                <value>
+                    <fullName>PTG Care Leader</fullName>
+                    <default>false</default>
+                    <label>PTG Care Leader</label>
+                </value>
+                <value>
+                    <fullName>PTG Customer Service Agent</fullName>
+                    <default>false</default>
+                    <label>PTG Customer Service Agent</label>
+                </value>
+                <value>
+                    <fullName>PTG Exec</fullName>
+                    <default>false</default>
+                    <label>PTG Exec</label>
+                </value>
+                <value>
+                    <fullName>PTG Executive</fullName>
+                    <default>false</default>
+                    <label>PTG Executive</label>
+                </value>
+                <value>
+                    <fullName>PTG FL Support Agent</fullName>
+                    <default>false</default>
+                    <label>PTG FL Support Agent</label>
+                </value>
+                <value>
+                    <fullName>PTG ITO Care Mgr</fullName>
+                    <default>false</default>
+                    <label>PTG ITO Care Mgr</label>
+                </value>
+                <value>
+                    <fullName>PTG Partner Care Leader</fullName>
+                    <default>false</default>
+                    <label>PTG Partner Care Leader</label>
+                </value>
+                <value>
+                    <fullName>PTG Service Tier 2 and 3</fullName>
+                    <default>false</default>
+                    <label>PTG Service Tier 2 and 3</label>
+                </value>
+                <value>
+                    <fullName>PTG Systems Support AandE</fullName>
+                    <default>false</default>
+                    <label>PTG Systems Support AandE</label>
+                </value>
+                <value>
+                    <fullName>PTG Systems Tier 2 and 3</fullName>
+                    <default>false</default>
+                    <label>PTG Systems Tier 2 and 3</label>
+                </value>
+                <value>
+                    <fullName>PTG Tax Support AandE</fullName>
+                    <default>false</default>
+                    <label>PTG Tax Support AandE</label>
+                </value>
+                <value>
+                    <fullName>PTG Tax Tier 2 and 3</fullName>
+                    <default>false</default>
+                    <label>PTG Tax Tier 2 and 3</label>
+                </value>
+                <value>
+                    <fullName>PTG US Care Mgr</fullName>
+                    <default>false</default>
+                    <label>PTG US Care Mgr</label>
+                </value>
+                <value>
+                    <fullName>QBO Chat OB</fullName>
+                    <default>false</default>
+                    <label>QBO Chat OB</label>
+                </value>
+                <value>
+                    <fullName>QBO Trial OB</fullName>
+                    <default>false</default>
+                    <label>QBO Trial OB</label>
+                </value>
+                <value>
+                    <fullName>QBPC CSM Mgr</fullName>
+                    <default>false</default>
+                    <label>QBPC CSM Mgr</label>
+                </value>
+                <value>
+                    <fullName>QBPC Customer Success Mgr</fullName>
+                    <default>false</default>
+                    <label>QBPC Customer Success Mgr</label>
+                </value>
+                <value>
+                    <fullName>QB Teletech Chat Agent</fullName>
+                    <default>false</default>
+                    <label>QB Teletech Chat Agent</label>
+                </value>
+                <value>
+                    <fullName>Renewals Consultant</fullName>
+                    <default>false</default>
+                    <label>Renewals Consultant</label>
+                </value>
+                <value>
+                    <fullName>Renewals Mgr</fullName>
+                    <default>false</default>
+                    <label>Renewals Mgr</label>
+                </value>
+                <value>
+                    <fullName>Reseller Agent</fullName>
+                    <default>false</default>
+                    <label>Reseller Agent</label>
+                </value>
+                <value>
+                    <fullName>Reseller Mgr</fullName>
+                    <default>false</default>
+                    <label>Reseller Mgr</label>
+                </value>
+                <value>
+                    <fullName>RiskPayroll</fullName>
+                    <default>false</default>
+                    <label>RiskPayroll</label>
+                </value>
+                <value>
+                    <fullName>Sales Executive</fullName>
+                    <default>false</default>
+                    <label>Sales Executive</label>
+                </value>
+                <value>
+                    <fullName>SB Care Leader</fullName>
+                    <default>false</default>
+                    <label>SB Care Leader</label>
+                </value>
+                <value>
+                    <fullName>SBFS Exec</fullName>
+                    <default>false</default>
+                    <label>SBFS Exec</label>
+                </value>
+                <value>
+                    <fullName>SBFS Executive</fullName>
+                    <default>false</default>
+                    <label>SBFS Executive</label>
+                </value>
+                <value>
+                    <fullName>SBMS Executive</fullName>
+                    <default>false</default>
+                    <label>SBMS Executive</label>
+                </value>
+                <value>
+                    <fullName>SerandSupportDesktop</fullName>
+                    <default>false</default>
+                    <label>SerandSupportDesktop</label>
+                </value>
+                <value>
+                    <fullName>SrMgrOnline</fullName>
+                    <default>false</default>
+                    <label>SrMgrOnline</label>
+                </value>
+                <value>
+                    <fullName>Supplies Agent</fullName>
+                    <default>false</default>
+                    <label>Supplies Agent</label>
+                </value>
+                <value>
+                    <fullName>Supplies Chat Mgr</fullName>
+                    <default>false</default>
+                    <label>Supplies Chat Mgr</label>
+                </value>
+                <value>
+                    <fullName>Supplies Mgr</fullName>
+                    <default>false</default>
+                    <label>Supplies Mgr</label>
+                </value>
+                <value>
+                    <fullName>Team Lead Onboard Payroll</fullName>
+                    <default>false</default>
+                    <label>Team Lead Onboard Payroll</label>
+                </value>
+                <value>
+                    <fullName>Tier1Desktop</fullName>
+                    <default>false</default>
+                    <label>Tier1Desktop</label>
+                </value>
+                <value>
+                    <fullName>Tier1Online</fullName>
+                    <default>false</default>
+                    <label>Tier1Online</label>
+                </value>
+                <value>
+                    <fullName>Tier1QBSE</fullName>
+                    <default>false</default>
+                    <label>Tier1QBSE</label>
+                </value>
+                <value>
+                    <fullName>Tier1StandAlonePayroll</fullName>
+                    <default>false</default>
+                    <label>Tier1StandAlonePayroll</label>
+                </value>
+                <value>
+                    <fullName>Tier2Online</fullName>
+                    <default>false</default>
+                    <label>Tier2Online</label>
+                </value>
+                <value>
+                    <fullName>Tier2QBSE</fullName>
+                    <default>false</default>
+                    <label>Tier2QBSE</label>
+                </value>
+                <value>
+                    <fullName>Tier2ServiceDesktop</fullName>
+                    <default>false</default>
+                    <label>Tier2ServiceDesktop</label>
+                </value>
+                <value>
+                    <fullName>Tier2StandAlonePayroll</fullName>
+                    <default>false</default>
+                    <label>Tier2StandAlonePayroll</label>
+                </value>
+                <value>
+                    <fullName>Tier2SupportDesktop</fullName>
+                    <default>false</default>
+                    <label>Tier2SupportDesktop</label>
+                </value>
+                <value>
+                    <fullName>Tier3Desktop</fullName>
+                    <default>false</default>
+                    <label>Tier3Desktop</label>
+                </value>
+                <value>
+                    <fullName>Tier3Online</fullName>
+                    <default>false</default>
+                    <label>Tier3Online</label>
+                </value>
+                <value>
+                    <fullName>UK_RiskPayments</fullName>
+                    <default>false</default>
+                    <label>UK_RiskPayments</label>
+                </value>
+                <value>
+                    <fullName>UK BDM Consultant</fullName>
+                    <default>false</default>
+                    <label>UK BDM Consultant</label>
+                </value>
+                <value>
+                    <fullName>UK BDM Mgr</fullName>
+                    <default>false</default>
+                    <label>UK BDM Mgr</label>
+                </value>
+                <value>
+                    <fullName>UK Enabling Partner</fullName>
+                    <default>false</default>
+                    <label>UK Enabling Partner</label>
+                </value>
+                <value>
+                    <fullName>UK Sales Account Managers</fullName>
+                    <default>false</default>
+                    <label>UK Sales Account Managers</label>
+                </value>
+                <value>
+                    <fullName>UK Sales Leader</fullName>
+                    <default>false</default>
+                    <label>UK Sales Leader</label>
+                </value>
+                <value>
+                    <fullName>UK Tele Consultant</fullName>
+                    <default>false</default>
+                    <label>UK Tele Consultant</label>
+                </value>
+                <value>
+                    <fullName>UK Tele Mgr</fullName>
+                    <default>false</default>
+                    <label>UK Tele Mgr</label>
+                </value>
+                <value>
+                    <fullName>US BDM Sales Mgr</fullName>
+                    <default>false</default>
+                    <label>US BDM Sales Mgr</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>8</visibleLines>
+    </fields>
+    <fields>
+        <fullName>STG_URL__c</fullName>
+        <description>STG URL for the Agent Tool</description>
+        <externalId>false</externalId>
+        <label>STG URL</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>SYS_URL__c</fullName>
+        <description>SYS (DEV, MDEV, FUNC, SYS, all others) URL for Agent Tool.</description>
+        <externalId>false</externalId>
+        <label>SYS URL</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Sort_Order__c</fullName>
+        <description>The sort order for an Agent Tool.</description>
+        <externalId>false</externalId>
+        <label>Sort Order</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Agent_Tool_Label__c</columns>
+        <columns>Category_Label__c</columns>
+        <columns>Category__c</columns>
+        <columns>Open_Link_In__c</columns>
+        <columns>Sort_Order__c</columns>
+        <columns>Active__c</columns>
+        <columns>Provisioned_Roles__c</columns>
+        <columns>Production_URL__c</columns>
+        <columns>STG_URL__c</columns>
+        <columns>PERF_URL__c</columns>
+        <columns>SYS_URL__c</columns>
+        <columns>LAST_UPDATE</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Agent_Tool_Label__c</field>
+            <operation>contains</operation>
+        </filters>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>Onboarding_Payroll_Tools</fullName>
+        <columns>NAME</columns>
+        <columns>Agent_Tool_Label__c</columns>
+        <columns>Category__c</columns>
+        <columns>Category_Label__c</columns>
+        <columns>Active__c</columns>
+        <columns>Production_URL__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Provisioned_Roles__c</field>
+            <operation>includes</operation>
+            <value>Onboard Assd Payroll Consultant</value>
+        </filters>
+        <filters>
+            <field>Provisioned_Roles__c</field>
+            <operation>includes</operation>
+            <value>Onboard FSP Payroll Consultant</value>
+        </filters>
+        <label>Onboarding-Payroll Tools</label>
+        <language>en_US</language>
+    </listViews>
+    <listViews>
+        <fullName>PTG_Core_Tools</fullName>
+        <columns>NAME</columns>
+        <columns>Agent_Tool_Label__c</columns>
+        <columns>Category_Label__c</columns>
+        <columns>Sort_Order__c</columns>
+        <columns>Open_Link_In__c</columns>
+        <columns>Active__c</columns>
+        <columns>Category__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Category_Label__c</field>
+            <operation>equals</operation>
+            <value>Core Tools</value>
+        </filters>
+        <label>PTG Core Tools</label>
+        <sharedTo>
+            <role>Sales_Executive</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>PTG_Help_Content</fullName>
+        <columns>NAME</columns>
+        <columns>Agent_Tool_Label__c</columns>
+        <columns>Category_Label__c</columns>
+        <columns>Sort_Order__c</columns>
+        <columns>Open_Link_In__c</columns>
+        <columns>Active__c</columns>
+        <columns>Category__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Category_Label__c</field>
+            <operation>equals</operation>
+            <value>Help Content</value>
+        </filters>
+        <label>PTG Help Content</label>
+        <sharedTo>
+            <role>Sales_Executive</role>
+        </sharedTo>
+    </listViews>
+    <listViews>
+        <fullName>PTG_Other_Tools</fullName>
+        <columns>NAME</columns>
+        <columns>Agent_Tool_Label__c</columns>
+        <columns>Category_Label__c</columns>
+        <columns>Sort_Order__c</columns>
+        <columns>Open_Link_In__c</columns>
+        <columns>Active__c</columns>
+        <columns>Category__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Category_Label__c</field>
+            <operation>equals</operation>
+            <value>Other Tools</value>
+        </filters>
+        <label>PTG Other Tools</label>
+        <sharedTo>
+            <role>Sales_Executive</role>
+        </sharedTo>
+    </listViews>
+</CustomObject>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <validationRules>
+        <fullName>AddressLine1Length</fullName>
+        <active>true</active>
+        <description>This specifies that address 1st Line length should be between 2 and 55 characters</description>
+        <errorConditionFormula>LEN( Name ) &lt; 2</errorConditionFormula>
+        <errorDisplayField>Name</errorDisplayField>
+        <errorMessage>Address Line 1 should have minimum of two characters</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>City_SplChar</fullName>
+        <active>false</active>
+        <description>This makes sure that we allow only .,- as special characters in address apart from alpha numeric values</description>
+        <errorConditionFormula>NOT(REGEX( City__c ,&quot;[ a-zA-Z0-9&apos;.-]+&quot;))</errorConditionFormula>
+        <errorMessage>City cannot have special characters other than {.-&apos;} and alpha numeric characters</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Internationalstatecharlimit10</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND (OR(ISBLANK( Account__r.Company_ID__c ), ISNULL(Account__r.Company_ID__c )),
+	( $Profile.Name &lt;&gt; &apos;API Only&apos; ),
+	NOT(ISPICKVAL(Country__c , &quot;USA&quot;)),
+	NOT(ISPICKVAL(Country__c , &quot;Canada&quot;)),
+	LEN(State__c ) &gt;10)</errorConditionFormula>
+        <errorDisplayField>State__c</errorDisplayField>
+        <errorMessage>State must have less than 10 characters</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PostalCodealphanumeric</fullName>
+        <active>true</active>
+        <description>Postal code is alpha numeric for addresses except USA</description>
+        <errorConditionFormula>AND (OR ((ISBLANK( Account__r.Company_ID__c )), ISNULL(Account__r.Company_ID__c )), ( $Profile.Name &lt;&gt; &apos;API Only&apos; ), ISPICKVAL(Country__c , &quot;USA&quot;), NOT(REGEX(Postal_Code__c,
+&quot;\\d{5}(-\\d{4})?&quot;)))</errorConditionFormula>
+        <errorDisplayField>Postal_Code__c</errorDisplayField>
+        <errorMessage>Zip code must be in 99999 or 99999-9999 format.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PostalCodealphanumericCanada</fullName>
+        <active>true</active>
+        <description>Postal code is alpha numeric for addresses except USA</description>
+        <errorConditionFormula>AND (OR ((ISBLANK( Account__r.Company_ID__c )), ISNULL(Account__r.Company_ID__c )), ( $Profile.Name   &lt;&gt; &apos;API Only&apos; ), ISPICKVAL(Country__c , &quot;Canada&quot;), NOT(REGEX(Postal_Code__c,
+&quot;((?i)[ABCEGHJKLMNPRSTVXY]\\d[A-Z]?\\s?\\d[A-Z]\\d)?&quot;)))</errorConditionFormula>
+        <errorDisplayField>Postal_Code__c</errorDisplayField>
+        <errorMessage>Canadian postal code must be in A9A 9A9 format.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>PostalCodelengthINTLAddress</fullName>
+        <active>true</active>
+        <description>Postal code length must be greater than 2 for international address.</description>
+        <errorConditionFormula>AND (
+OR (
+(ISBLANK( Account__r.Company_ID__c )), ISNULL(Account__r.Company_ID__c )
+),
+( $Profile.Name &lt;&gt; &apos;API Only&apos; ),
+NOT(ISPICKVAL(Country__c , &quot;USA&quot;)),
+NOT(ISPICKVAL(Country__c , &quot;Canada&quot;)),
+NOT(ISPICKVAL(Country__c , &quot;United Kingdom&quot;)),
+NOT(ISPICKVAL(Country__c , &quot;Australia&quot;)),
+OR(AND(LEN(Postal_Code__c) &gt;0,
+LEN(Postal_Code__c) &lt;3),
+NOT( REGEX( Postal_Code__c , &quot;[a-zA-Z0-9]+&quot;))))</errorConditionFormula>
+        <errorDisplayField>Postal_Code__c</errorDisplayField>
+        <errorMessage>Postal Code must be greater than 2 characters for International address</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Delete_Address</fullName>
+        <availability>online</availability>
+        <description>Provides a way to allow for the deletion of an Address throughout all back-end systems. The process initiated by this button will contact Siebel to verify that the Address can be deleted, and then initiate deletion with a call to MDM. If both of these actions are successful, the Address will then be &quot;soft deleted&quot; in Salesforce.</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>Delete Address</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <url>/apex/SafeDeleteAddress?id={!Address__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Address</fullName>
+        <availability>online</availability>
+        <description>Override of New Address button</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>New Address</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>false</requireRowSelection>
+        <url>if (typeof(srcUp) == &apos;function&apos;) {
+    srcUp(&quot;{!URLFOR( $Action.Address__c.New , null, [saveURL=&apos;/&apos; &amp; Account.Id, retURL=&apos;/&apos; &amp; Account.Id, CF00Ni000000CfAxV_lkid=Account.Id , CF00Ni000000CfAxV=Account.Name])}&quot;, &quot;_self&quot;);
+} else {   
+    window.open(&quot;{!URLFOR( $Action.Address__c.New , null, [saveURL=&apos;/&apos; &amp; Account.Id, retURL=&apos;/&apos; &amp; Account.Id, CF00Ni000000CfAxV_lkid=Account.Id , CF00Ni000000CfAxV=Account.Name])}&quot;, &quot;_top&quot;);
+}</url>
+    </webLinks>
+</CustomObject>

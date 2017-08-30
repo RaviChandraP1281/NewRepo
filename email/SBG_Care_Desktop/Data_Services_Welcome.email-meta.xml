@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Data Services - Welcome</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Desktop_Data_Services</letterhead>
+    <name>Data Services - Welcome</name>
+    <style>freeForm</style>
+    <subject>Data Services - Welcome</subject>
+    <textOnly>Welcome to Data Services {!Case.CaseNumber}
+
+Dear {!Contact.Name},
+
+
+Your Data Services request has been submitted on {!Case.CreatedDate}.
+
+Your company file must be received by [Upload Deadline]. This is to ensure cases are completed in a timely manner. Failure to do so will result in your case being closed. An email will be sent 2 business days prior to the closing of your case, to remind you of the deadline. We appreciate your understanding and cooperation.
+
+During the data recovery process, you will need the following information to upload, download, and access your repaired file. The credentials are case sensitive so it might be best to copy and paste from your email(s).
+
+Case ID: {!Case.CaseNumber}
+Email: {!Contact.Email}
+PIN # - This will be sent in a separate email
+Account Number/ CAN: {!Case.CAN__c}
+
+
+File Doctor/Ground Mail: You&apos;ll still need this information if you upload your company file through File Dr. or if you mail it in through USPS, FedEx, UPS or other. The link to download your file is provided in this email and in the notification when we complete your request.
+
+New with Data Services!
+
+* Visit the Data Services Case Status Information page to get the latest updates with your company file, if you lost your File Transfer PIN, or QuickBooks Password.
+* Communicate with the agent assigned to your case without having to leave a voicemail or send an separate email.
+
+Haven&apos;t uploaded yet?
+
+1. Click the following link http://intuitb2b.force.com/FileExchange (If the link doesn&apos;t work, copy and paste it into your browser&apos;s address bar).
+2. Enter the information and click the I have read and agree to the Terms of Servicecheck box.
+3. Click Sign In.
+4. In the Customer File Upload section, browse your computer for your company file (.QBW, .QBB, .QBM, .QBA, .QPB, .QPT, .QB201X, .QBBMac).
+5. Once found, select it and click Open.
+6. Click Upload.
+
+The upload site will inform you when the upload has been completed.
+
+
+Note: If you have multiple files to upload, they must be uploaded separately.
+
+
+What&apos;s next?
+
+* We operate MOnday - Friday
+     - Files Uploaded by 3:30 PM Pacific Time will be assigned the same day.
+     - Files Uploaded after 3:30 PM Pacific Time will be assigned the following 
+        business  day.
+*You&apos;ll receive emails from us throughout the stages of repairing your file.
+*We may contact you by phone or email if there are additional questions we have.
+*If you haven&apos;t uploaded your file today, you&apos;ll receive multiple reminders until one has been uploaded. We can&apos;t start the work without your file.
+
+Thank you,
+Intuit Data Services
+Data Services Case Status Information
+
+This is an automated email. Please do not reply directly as you will not receive a response.
+
+
+This is an automated email. Please do not reply directly as you will not receive a response.</textOnly>
+    <type>html</type>
+</EmailTemplate>

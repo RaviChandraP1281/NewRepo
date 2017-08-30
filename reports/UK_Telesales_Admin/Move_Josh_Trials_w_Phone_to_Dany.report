@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Opportunity$Id</field>
+    </columns>
+    <columns>
+        <field>Opportunity$Opportunity_Owner_Read_Only__c</field>
+    </columns>
+    <currency>GBP</currency>
+    <filter>
+        <criteriaItems>
+            <column>Opportunity.AMX_Distribution_Logs__r$AMX_Distributor__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>UK Telesales</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity$Primary_Contact_Phone__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>6509444444</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity$Opportunity_Owner_Read_Only__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Joshua Revan</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity$Primary_Contact_Phone__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity$StageName</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Validate,Assess</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <name>Move Josh Trials w/ Phone to Dany</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunities_with_Distribution_Log__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Opportunity.AMX_Distribution_Logs__r$Assignment_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2017-05-01</startDate>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_67112700</developerName>
+        <masterLabel>Opportunity Type</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>OPPORTUNITY_NAME</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>TY15 eSignaure Oppty</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY15 eSignature Oppty</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY15 eSignature Opportunity</sourceValue>
+            </sourceValues>
+            <value>eSignature</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>TY15 Link Opportunity</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY15 Link Oppty</sourceValue>
+            </sourceValues>
+            <value>Link</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>STAGE_NAME</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>TASK_TYPE</field>
+    </columns>
+    <columns>
+        <field>CREATED_BY</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Opportunity_ID__c</field>
+    </columns>
+    <columns>
+        <field>OPPORTUNITY_NAME</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Legacy_Treatment_Name__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.CAN__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Primary_Contact__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Primary_Contact_Phone__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Primary_Contact_Email__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>CREATED_BY</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Lynda Morrill,Robin Verstreate,Adam Bartley,Andrea Jennings,Angie Millar,Anthony Akiniz,Anthony DeMarco,Belinda Brown,Brandon Owens-Collie,Bruce Dash,Christina Dorschel,Christine Duval,Ebonee Farrare,Erin Sullivan,John Vail,Joseph Lahey,Karen Sparks,Katy Allison,Kerri Guidry,Kristin Alexander,Lisa Vogt,Maggie Kesel,Marc Delamarter,Matha Harris,Meredith Couture,Ramiro Alarcon,Sara Becker,Shana Colbert,Taiyana WIlson,De Jon Washington,Dian Rose Dioso,Rivgil Nino Magallanes,Paul Anderson Jr,Tendai Makumbe,Llewelyn Chidakwa,Alfred Bradley,Patrick Wittkopp,De&apos;Jon Washington,Phillip Moulton,Ramil Ignacio,Florine Rapley,Tom Fortunato,Thorvald Jensen,MaGlenda Rebancos</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Opportunity_Name__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Link,eSig</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>TASK_TYPE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Customer Action</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>STAGE_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Educate,Closed Won,Closed Lost</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_67112700</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>OPPORTUNITY_OWNER</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>OPPORTUNITY_LAST_ACTIVITY</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Last Activity for Care Leads by Owner</name>
+    <params>
+        <name>closed</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>type</name>
+        <value>te</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityActivity</reportType>
+    <roleHierarchyFilter>Admin</roleHierarchyFilter>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2016-02-08</startDate>
+    </timeFrameFilter>
+</Report>

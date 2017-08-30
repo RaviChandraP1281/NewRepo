@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>6 Mo Check In</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Upload_Blank_Editable</letterhead>
+    <name>6 MO Check In</name>
+    <style>freeForm</style>
+    <subject>QuickBooks Onboarding: Courtesy Check In</subject>
+    <textOnly>Account #{!Contact.CAN__c}
+
+Hi {!Contact.FirstName},
+
+
+Just wanted to check in to see how things are going with your QuickBooks Enterprise. I know that you have now been using the software for about 6 months and wanted to see if you have any other questions I can answer for you.
+
+If you would please let me know how things are going as well as if there is anything that you need.
+
+Thank you,
+
+{!User.FirstName} {!User.LastName} | Enterprise Account Manager
+Work Phone: {!User.Phone} ext {!User.Extension} | {!User.Email}
+
+Intuit | simplify the business of life
+
+this transmittal is intended only for the use of the individual or entity to which it is addressed and may contain information that is privileged, confidential and exempt from disclosure under applicable law. If the reader of this transmittal is not the intended recipient or the employee or agent responsible for delivering the transmittal to the intended recipient, you are hereby notified that any dissemination, distribution or copying of this communication is strictly prohibited.</textOnly>
+    <type>html</type>
+</EmailTemplate>

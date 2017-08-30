@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Invitation to January 2016 Coffs Harbour</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Coffs Harbour 2016</name>
+    <style>none</style>
+    <subject>COFFS HARBOUR EVENT - See how QuickBooks Online can help grow your practice</subject>
+    <textOnly>Intuit
+
+
+
+Join us for an introductory event to learn how QuickBooks Online and  Quickbooks Online Accountant can help you grow and run your practice more efficiently.
+
+Agenda
+
+•    Benefits of partnering with the No. 1 global cloud accounting solution
+•    Latest feature demonstration including payments, inventory, attachments and the mobile app
+•    Hear what enhancements are in the pipeline
+•    See how to run payroll efficiently and accurately
+•    Get an overview of the various apps you can connect to QuickBooks Online
+•    Hear how a local accounting firm has adopted QuickBooks Online
+•    Learn hints and tips from QuickBooks Online expert, Alee Cochrane
+•    Q &amp; A time plus general networking
+
+
+Food and drinks will be provided.
+
+Where and When
+
+Venue:    Opal Cove Resort
+Opal Boulevard,
+Coffs Harbour NSW 2450
+Plenty of parking is available.
+Date:    Thursday, 28th January 2016
+Time:    5:00 - 7:30pm
+
+
+We look forward to meeting you on the day.
+
+Intuit Australia
+
+
+
+
+
+Level 34, 1 O&apos;Connell Street,
+Sydney, NSW 2000
+intuit.com.au
+
+You are receiving this email as you have logged your details and
+made contact with Intuit before.
+
+Privacy Statement | Unsubscribe
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</textOnly>
+    <type>custom</type>
+</EmailTemplate>

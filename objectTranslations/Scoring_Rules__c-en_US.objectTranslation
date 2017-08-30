@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Scoring Rules</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Scoring Rules</value>
+    </caseValues>
+    <fields>
+        <label><!-- Action --></label>
+        <name>Action__c</name>
+        <picklistValues>
+            <masterLabel>Insert</masterLabel>
+            <translation><!-- Insert --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Update</masterLabel>
+            <translation><!-- Update --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Family Of Interest --></label>
+        <name>PFoI_Unique__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Family of Interest --></label>
+        <name>Product_Family_of_Interest__c</name>
+        <picklistValues>
+            <masterLabel>Assisted Payroll</masterLabel>
+            <translation><!-- Assisted Payroll --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Canada Desktop Products</masterLabel>
+            <translation><!-- Canada Desktop Products --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Checks/Supplies</masterLabel>
+            <translation><!-- Checks/Supplies --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DIY Payroll</masterLabel>
+            <translation><!-- DIY Payroll --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DemandForce</masterLabel>
+            <translation><!-- DemandForce --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hosting</masterLabel>
+            <translation><!-- Hosting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intuit Care Plans</masterLabel>
+            <translation><!-- Intuit Care Plans --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intuit Care Plans for QB Prior to 2011</masterLabel>
+            <translation><!-- Intuit Care Plans for QB Prior to 2011 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intuit Data Services (IDS)</masterLabel>
+            <translation><!-- Intuit Data Services (IDS) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intuit Full Service Payroll (IFSP)</masterLabel>
+            <translation><!-- Intuit Full Service Payroll (IFSP) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intuit Online Payroll (IOP)</masterLabel>
+            <translation><!-- Intuit Online Payroll (IOP) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Intuit Partner Platform</masterLabel>
+            <translation><!-- Intuit Partner Platform --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Merchant Account Services</masterLabel>
+            <translation><!-- Merchant Account Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pro Advisor</masterLabel>
+            <translation><!-- Pro Advisor --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pro Tax Other</masterLabel>
+            <translation><!-- Pro Tax Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ProTax - Lacerte</masterLabel>
+            <translation><!-- ProTax - Lacerte --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ProTax - ProSeries</masterLabel>
+            <translation><!-- ProTax - ProSeries --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QB Accountants Edition</masterLabel>
+            <translation><!-- QB Accountants Edition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QB Connected Services</masterLabel>
+            <translation><!-- QB Connected Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QB Enterprise Solutions (QBES)</masterLabel>
+            <translation><!-- QB Enterprise Solutions (QBES) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QB Mac</masterLabel>
+            <translation><!-- QB Mac --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QB Point-of-Sale (POS)</masterLabel>
+            <translation><!-- QB Point-of-Sale (POS) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QB Pro/Premier</masterLabel>
+            <translation><!-- QB Pro/Premier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QuickBase</masterLabel>
+            <translation><!-- QuickBase --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QuickBooks DirectConnect</masterLabel>
+            <translation><!-- QuickBooks DirectConnect --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QuickBooks Financing</masterLabel>
+            <translation><!-- QuickBooks Financing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QuickBooks Online (QBO)</masterLabel>
+            <translation><!-- QuickBooks Online (QBO) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QuickBooks Online Acct (QBOA)</masterLabel>
+            <translation><!-- QuickBooks Online Acct (QBOA) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QuickBooks Reseller</masterLabel>
+            <translation><!-- QuickBooks Reseller --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QuickBooks WebConnect</masterLabel>
+            <translation><!-- QuickBooks WebConnect --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quicken DirectConnect</masterLabel>
+            <translation><!-- Quicken DirectConnect --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quicken WebConnect</masterLabel>
+            <translation><!-- Quicken WebConnect --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SalesForce</masterLabel>
+            <translation><!-- SalesForce --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UK Desktop Products</masterLabel>
+            <translation><!-- UK Desktop Products --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Reset Score if No action --></label>
+        <name>Reset_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rule Object --></label>
+        <name>Rule_Object__c</name>
+        <picklistValues>
+            <masterLabel>Lead</masterLabel>
+            <translation><!-- Lead --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Score Summation --></label>
+        <name>Score_Summation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subset Field --></label>
+        <name>Subset_Field__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Subset Rule --></label>
+        <name>Subset_Rule__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subset Value --></label>
+        <name>Subset_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Breakpoint 1 (MQL) --></label>
+        <name>Threshold_Breakpoint1MQL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Breakpoint 2 --></label>
+        <name>Threshold_Breakpoint2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Maximum --></label>
+        <name>Threshold_Maximum__c</name>
+    </fields>
+    <fields>
+        <label><!-- Minimum --></label>
+        <name>Threshold_Minimum__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>User.Case$CreatedById$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>User.Case$CreatedById$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>User.Case$CreatedById$Days_Case_Open__c</field>
+    </columns>
+    <columns>
+        <field>User.Case$CreatedById$Status</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>(2 or 3 or 4 or 5 or 6 or 7 or 8 or 9 or 10 or 11 or 12 or 13 or 14 or 15 or 16 or 17) and 1</booleanFilter>
+        <criteriaItems>
+            <column>User.Case$CreatedById$Status</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$CreatedById$Owner</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>BR Online Tier 2</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$CreatedById$Owner</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>BR Online ZeroPaper eCase</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$CreatedById$Owner</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>BR Online General SMB eCase</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$CreatedById$Owner</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>Carlos Dudas</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$CreatedById$Owner</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Christian Araujo</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$CreatedById$Owner</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Debora Pereira</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$CreatedById$Owner</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Evandro Merli</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$CreatedById$Owner</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Felipe Monteiro</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$CreatedById$Owner</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Luiz Malaquias</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$CreatedById$Owner</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Marco Lupion</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$CreatedById$Owner</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Paola Teixeira</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$CreatedById$Owner</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Wesley Rocha</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$CreatedById$Owner</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Juliana Abdon</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$CreatedById$Owner</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Maura Sannini</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$CreatedById$Owner</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Rafael Techima</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$CreatedById$Owner</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Paulo de Tarso Proença Filho</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>User.Case$CreatedById$Owner</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Open Cases - Care Team Brazil</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Users_and_Cases_1__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>User.Case$CreatedById$CreatedDate</dateColumn>
+        <endDate>2017-05-17</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2015-08-01</startDate>
+    </timeFrameFilter>
+</Report>

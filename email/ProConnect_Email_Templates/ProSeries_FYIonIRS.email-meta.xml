@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>ProSeries-FYIonIRS</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>ProSeries-FYIonIRS</name>
+    <style>none</style>
+    <subject>ProSeries-FYIonIRS</subject>
+    <textOnly>Intuit - ProSeries Tax
+
+Dear {!Contact.Name},
+
+Thanks for your interest in ProSeries Tax software.  I wanted to make sure you have the information you need to have a successful 2013 tax season.  Below is some information about IRS regulations that affect paid tax preparers.  You may already be aware of these but just in case, I did not want any of these to catch you off guard.
+
+Important IRS requirement information you should know
+IRS regulations require all paid tax return preparers to apply for a Preparer Tax Identification Number (PTIN) — even those who already have one. Apply for your PTIN.
+
+The IRS law requires many paid tax return preparers to electronically file federal income tax returns prepared and filed for individuals, trusts, and estates.  For tax year 2012 you must efile the returns if the preparer anticipates filing 11 or more 1040, 1040A, 1040EZ and 1041 during the year. Start the process of getting an EFIN. It is important not to delay in getting your EFIN. If you take the following steps in the link provided it is possible for you to get your EFIN number within 4 to 6 weeks.
+
+I look forward to working with you. If there’s anything I can do to help you during your evaluation process, please call me at directly at {!User.Phone} or email me at {!User.Email}
+
+Sincerely,
+{!User.Name}
+
+We have a new customer program that guarantees you’ll be season-ready on ProSeries in  30 days.
+
+IMPORTANT: Intuit respects the personal nature of email  communication. Every effort is made to offer only information that may be of  value to you or your business. If you do not wish to receive marketing email  from Intuit in the future, please click here.
+
+If you have any questions or comments, please DO NOT REPLY to this email. Contact Customer Service at 800.765.7777 for assistance. If you receive an email message that appears to come from  Intuit but that you suspect is a phishing email, please forward it immediately  to spoof@intuit.com.  Please visit http://security.intuit.com for additional security information.
+
+® 2012-2013 Intuit Inc. All rights reserved. Intuit, the Intuit logo are trademarks or registered trademarks and/or registered service marks of Intuit Inc. in the United States and other countries. All other marks are the property of their respective owners, should be treated as such, and may be registered in various jurisdictions.
+
+Intuit Inc., Customer Communications, 2800 E. Commerce Center Place, Tucson, AZ 85706</textOnly>
+    <type>custom</type>
+</EmailTemplate>

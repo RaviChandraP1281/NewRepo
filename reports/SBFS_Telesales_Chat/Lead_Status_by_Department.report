@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>User.Leads__r$Lead_Owner_Read_Only__c</field>
+    </columns>
+    <currency>USD</currency>
+    <description>Chat Agent QB AZ, Chat Agent QB PHP, Chat Agent QB Other, Chat Agent ES, Chat Agent POSPCS, Chat Agent Payroll</description>
+    <filter>
+        <criteriaItems>
+            <column>User$Department</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Chat Agent QB AZ,Chat Agent QB PHP,Chat Agent QB Other,Chat Agent ES,Chat Agent POSPCS,Chat Agent Payroll</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>User$Department</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>User.Leads__r$Status</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Lead Status by Department</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>User_Data_and_Leads__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>User.Leads__r$CreatedDate</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

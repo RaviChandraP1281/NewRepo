@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>Donut</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>false</expandOthers>
+        <groupingColumn>STATUS</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_TOP</location>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>true</showTotal>
+        <showValues>true</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>OWNER</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATE_BY</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>CASE_NUMBER</field>
+    </columns>
+    <columns>
+        <field>AGE</field>
+    </columns>
+    <columns>
+        <field>DESCRIPTION</field>
+    </columns>
+    <columns>
+        <field>CLOSED_DATE</field>
+    </columns>
+    <columns>
+        <field>Case.Resolution_Code__c</field>
+    </columns>
+    <columns>
+        <field>Case.Survey_Stage__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>(((((((((((((((((((1 OR 2) OR 3) OR 4) OR 5) OR 6) OR 7) OR 8) OR 9) OR 10) OR 11) OR 12) OR 13) OR 14) OR 15) OR 16) OR 17) or 18) or 19) or 20)</booleanFilter>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Rochelle De las Penas,Crisanto Torrejos,Donie Angelo Salvador,Grace Mary Abengoza,Graciela Chuaquico,John Viray,Jomer Jadulco,Karissa Jane Gaboy,Kate Catherine Mendoza,Kurt Russel Arroyo,Mark Anthony Winston Lim,Mary Jane Sierra,Orlando Jr Dela Pena,Stephanie Joy Abuda</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Von Ruel Gaspar,Daniel Joshua Bulan,Edward Vincent Lee,Francis Biglete,Jeffrey Christian Franco,Joanah Cammille Ong,John Michael Tomas,Jojo Cruz,Mariane Angelie Azucena,Paul John Estandarte,Rhola Estadilla</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Hellen Haldos,Abegail Parado,Antonio Birol,Clint Andrew Apdian,Desiree Dela Torre,Ethan Lorenz Amatong,Flordeliza Colico,Gino Palle Cruz,June Vic Lomosad,Nanette Paringit,Patrick Consulta</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Jefferson Olango,Arlene Brila,Crisanto Torrejos,Ivan Claire Barcebal,Kenneth Eugenio,Kurt Russel Arroyo,Maria Zenith Manuel,Mark Anthony Winston Lim,Mark Deo Marcos,Michelle Delos Santos,Paolo San Luis,Rhodora Quinal</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Lexi Jim Grapilon,Arjel John Senence,Brenda Flores,Daryl Francisco,Dustine Austin De la Cruz,Ferdinand Mendoza,Honey Joy Miclat,Jay Vincent Dela Cruz,Jeremy Junnel Borres,Jimmelin Joy Casipit,Justin Jessica Flores,Leilanie Rullan,Ma Rowena Sanchez,Margie Mabalot,Raymond Anthony Perez,Robbie Liza Excelsa Ilagan,Rui Misaelle Liwag,Tina Galang</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Christian Lagria,Akito Machiya,Arjay Fernandez,Arjel John Senence,Charity Salas,Claire Zolina,Ernest Theodore Alitagtag,Jan Nik Xan Rojas,Jennelyn Berdin,Joanne Purugganan,Joshua Morato,Kharel Joy Polido,Loida Medina,Maeriel Custodio,Vanessa Kristine Obispo</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Gretchen Quinones,Akito Machiya,Angelo Ballon,Caren Ann Licup,Erica Joy Bollozos,Florence Dizon,Francis Kevin Garin,Joshua Morato,Lambert Wilson Uy,Loida Medina,Ma Luz Puyat,Melody Jerah Bonifacio,Noel Hermogenes,Princess Jhielyn Albano,Rowell Castaneda,Zion Rhandal Velasquez</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Ernest Franz uy,Aileen Rose Olila,Angelica Bilaw,Charity Salas,Claire Zolina,Ernest Theodore Alitagtag,Felix Dalendeg,Jan Nik Xan Rojas,Jerald Bautista,Jessa Grace Labasa,Karla Jane Guillermo,Lowie Alcoy,Mark Anthony Ida,Martin Estrelles,Michael Andrew Mangundayao,Nestor Tanyag,Rafael Calangian Enriquez,Rubelyn Parungao,Vanessa Kristine Obispo,William Cordero</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Encarnacion Santos,Alberto Aguilar,Anna Karina Juangco,Annabella Libunao,Arjay Fernandez,Chris Evert Lloyd Magtibay,Eleonor Casimiro,Jay Tosposo,Jennelyn Berdin,Joanne Purugganan,Jobert Fulgencio,Jose Rodrigo Carbonell,Kharel Joy Polido,Limwel Mengoria,Lionita Germina,Melody Tawatan,Nemeilyn Valdoezo,Nerlyn Peralta,Renz Alvin Laurente,Thelma Katherine Ismael</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Jessica Letada,Aaron jonathan Cobacha,Alejandro Pahati,Alfred Rainer Guillermo,April Sarong,Arnee Dasig,Charisse Biaoco,Dandy Dela Cruz,Feliciana Reyes,Gaspar Maningo,Ivan Patrick Pospos,Jean Mehj Garcia,John Abarte,John Michael Tribol,Joshua Cuenza,Lea Grace Jontado,Marilou Lopez,Mark Anthony Reyes,Mark Sevilla,Myra Jean Sartiga,Nelen Basto,Novelyn Galecio,Pilarica Natherine Ramirez,Ricky DeLaCruz,Roxette Marges,Ryan Dolph Galicha,Sofhia Sario</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Cagalawan Jenny Rose,Desserie Ann Santos,Francis Domondon,Jeffrey Bayogos,Mark Joseph Badayos,Markwin Allison,Nerwin Pablo,Patricia Anne Magat,Ramil Bernos Fabon,Renan Cruz,Rogelio Patricio,Rommel James Aguel,Rose Anne De Manuel,Trisha Besira,Victor Harel Ongchangco</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Joana Camacho,Alfred Edison Manzon,Elvie Mendez,Gayda Ghee Gabrieles,Jelamarie Nierva,Jomer Sabino,Joshua Emmanuel Bernabe,Marcelino Fontanilla,Maria Angela Stephanie Hefti,Mariel Naces,Monico Vargas,Novelyn Plan,Ralph Jermayne Delfin,Ramil Bernos Fabon,Sonny Andrew Castro</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Cherry Ann Duran,Anabelle Paura,Danniel Lim,Devy Lester San Andres,Froilan Adelmo Penaflor,Jasmin Mahilum,Joren Aguilar,Kennith Jackson Edwards,Kerstin Garay,Kitjan Marie Montilla,Marcil Patungan,Maria Regina Cruz,Maricel Tosco,Stella Maris Benito</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Kenneth Rhoy Hidalgo,Alexandra Nikka Lorraine Cadelina,Anabelle Paura,Angel Baluran,Froilan Adelmo Penaflor,Lavinia Galvez,Michelle Salagan,Orly Tomayao,Ronie Torres,Rowena Socorro Fatima Cahiuat,Ruffel Ann Caryl Hornilla,Ryan O&apos;neal Basconcillo</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Christiane Ross Lombos,Adam Paul Mahya,Alexandra Nikka Lorraine Cadelina,Alexis Constantino,Demosthenes Apostol,Eduardo Perena,Hanz Lester Labordo,Jeffrey Christopher Tupas,Justine Ignacio,Kunimori Medrano,Lavinia Galvez,Mark Jayson Deliverio,Mary Glor Mangubat,Michelle Mago,Michelle Salagan,Orly Tomayao,Ryan Magallanes</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Edson Olis,Christopher Piamonte,Gally Balorio,Gina Villanueva,Jenylin Zausa,Jessica Fabella,Jose Renulfo Ladlad,Junryn Suerte,Mark Milo Figuracion,Mary Abegail Villaflor,Mary Ann Miralo,Nathaniel Joule Salgado,Reuben Symoun Andes,Reynaldo Cangke,Robert Torno,Sydfrey Evaristo</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Mark Christian Taguibao,Abdul Rahman Unte,Arvin Bautista,Denis Dolleson,Elilyn Farrah Belle Barredo,Joven Lester Diaz,Kimberly Lexlie Garcia,Maria April Verdadero,Mark Millian Dela Cruz,Marnel Artates,Mayan Villamarzo,Myreen Pitallano,Paola Marie Climaco,Reginald Kim Gomez,Trizia Mae Alejo</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Michelle Mondares,Aaron jonathan Cobacha,April Sarong,Arnee Dasig,Bermalie De Vera,Charls Kem Villaester,Daryl Francisco,Eledzar Malitan,Feliciana Reyes,Glen Paul Ibay,Ivan Patrick Pospos,Jean Mehj Garcia,Jobert Fulgencio,John Abarte,John Michael Tribol,John Walter Cauzon,Lea Grace Jontado,Lorena Icban,Maria Carla Gerero,Maria Rose Ann Pascua,Marilou Lopez,Mark Anthony Reyes,Mark Sevilla,Myra Jean Sartiga,Nelen Basto,Nico Dominguez,Pilarica Natherine Ramirez,Renz Alvin Laurente,Roxette Marges</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Rebecca Ng,Albert jerome peregrine Dureza,Alexander Armas,Anie Rose Formoso,Charina Villanueva,Chastyn Alaine Fausto,Dennis Almazan,Francis Aragoncillo,Glen Paul Ibay,Gregorio Joseph,Jaylan Navarra,Jon Jon Ferrer,Junnalyn Bucol,Macario II Pagaran,Maikus Schuyler Soria,Maria Carla Gerero,Marlon Evangelista,Marlon Jake Leahy,Marvin Ledsey,Maximo Trinidad Jr,Orlando Acta,Ryan Gamboa,Sieg Gabriel Villarias</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Felice Mendiola,Alexander Armas,Francis Aragoncillo,Joshua Cuenza,Macario II Pagaran,Marlon Jake Leahy</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>STATUS</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>PPBA Open Cases - Dru</name>
+    <params>
+        <name>units</name>
+        <value>d</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATEONLY</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

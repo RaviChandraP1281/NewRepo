@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>Pie</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>VOC_Survey_Response__c.Question_Response3__c</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_TOP</location>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>true</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_CASE_CREATED_DATEONLY</field>
+    </columns>
+    <columns>
+        <field>FK_CASE_OWNER_NAME</field>
+    </columns>
+    <currency>USD</currency>
+    <description>All active and In training agents in Wilsonville.</description>
+    <filter>
+        <booleanFilter>1 or 2 or 3</booleanFilter>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Janice Pena,Shane Harpole,Thomas Young,Mark Ryan,Ann Schmolinski,Isaac Sunderland,Sabrina Swanson,Stephen Bell,Andrew Bradham,William Brennan,Alexander Gaskill,Kenneth Jones,Cosette Luque,Melissa Moro,Tamara Nielsen,Aaron Pickel,Tani Bixler,Michael Cook,Jermaine Davis,Karen Dollaga,Loren Glenn,Cheryl Hulshizer,Kelsey Landreth,Kimberly Patterson,Daniel Tonacchio,Jesse Tripp,Ron Beck,Kymberli Schmidt,Huan Justin Nguyen,Raymond Ortiz Jr,Alan Sheeler,Amanda Wilder,Andrea Forshaw,Bryan Santino,Christopher Watson,David Ramer,Gregory Seikaly,Gregory Smith,Jacob Fritz,James Paris</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Johanas Kile,John Bartley,John Bushell,John Forster,Kieran Jones,Kori Curry,Kristin Waterbury,Mary Clifton,Michael Johnson,Myron Bovee,Paul Goodsell,Rebecca Kingsbury,Robert Cox,Robyn Young,Simon Clowes,Valentin Molnar,William Kennedy,Winston Boyle,Zoey Trovato,Shane Harpole,Noelle Irisoanga,Anthony Kesler,Knight Yabut,Elyse Conners,Maritza Gonzales-Hernandez,Jacob Mauselle,Janice Pena,Whitney Prieger,Brian Samuel,Melissa Walker,Ken Ableman,LaToya Anderson,Joshua Brown,James Colvin,Kevin Early,Paula Gilcrist,Clinton Hoover,Martin Irish,Ryan Marshall,Tony Nelson,Mary Shaw,Jordan Tudor</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Shawn Miller,Fartuun Ali,Kenneth Bringhurst,Jennifer Bruner,Gregory Long,Cassandra Morris-Scotch,Benjamin Phimmasone,Lawrence Sikarskie,Rebecca Stoddard,Samantha Bower-Wilson,Paul Ditter,Stephen Faupel,Nathan Faust,Nathan Frazier,Meagan Gallaway,Joshua Jesser,Kelle Karn,Chelsea Mcallister,Robert Meyers,Daniel Nikolas,Melissa Parrish,Steadman Strickland,Leroy Takao,Lance Tipton,Krystle Woodruf</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>VOC_Survey_Response__c.Question_Response3__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Wilsonville Prior Day Entire Roster</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$VOC_Survey_Response__c@VOC_Survey_Response__c.CaseId__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_YESTERDAY</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>VerticalColumn</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>TASK_TYPE</groupingColumn>
+        <location>CHART_TOP</location>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>true</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT</field>
+    </columns>
+    <columns>
+        <field>CONTACT</field>
+    </columns>
+    <columns>
+        <field>PHONE1</field>
+    </columns>
+    <columns>
+        <field>CASE</field>
+    </columns>
+    <columns>
+        <field>CREATED_BY</field>
+    </columns>
+    <columns>
+        <field>ASSIGNED</field>
+    </columns>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>CASE_SUBJECT</field>
+    </columns>
+    <columns>
+        <field>CASE_STATUS</field>
+    </columns>
+    <columns>
+        <field>START_DATE_TIME</field>
+    </columns>
+    <columns>
+        <field>END_DATE_TIME</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATE</field>
+    </columns>
+    <columns>
+        <field>PRIORITY</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>((((((((((((((((1 OR 2 OR 3) OR 4) OR 5) OR 6) OR 7) OR 8) OR 9) OR 10) OR 11) OR 12) OR 13) OR 14) OR 15) OR 16) OR 17) OR 18) OR 19</booleanFilter>
+        <criteriaItems>
+            <column>CREATED_BY</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Cherry Ann Duran,Ivan Claire Barcebal,Kate Catherine Mendoza,Chastyn Alaine Fausto,Ma Fatima Llaneta,Juvelyn Navarro,Glenda Meir Estocapio</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CASE_STATUS</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>TASK_TYPE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED_BY</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Von Ruel Gaspar,Mark Anthony Balagot,Mark Anthony Marquez,Maylanie Perez,Rodel Buenconsejo,Paulito Julio,Rico Cortez,Lorena Icban</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED_BY</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Felice Mendiola,Nico Dominguez,Albert Cadalo,Dustine Austin De la Cruz,Sean Jacob Dela Rosa,Arjay Fernandez,Karen Gonzales,Ferdinand Mendoza,Joanah Cammille Ong,Alejandrio Pahati,Leilanie Rullan,Crisanto Torrejos</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED_BY</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Christiane Lombos,Riza Mae Galve,Hussien Mangontong,Roxette Marges,Raymond Anthony Perez,Rogelio Quezon,Aileen Fabros,Kim Marie Pampanga,Marilou Lopez,Brenda Flores,Jaylan Navarra,Honey Joy Miclat</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED_BY</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Michelle Mondares,Rhodora Quinal,Arnelyn Heleran,Kenneth Eugenio,Stenile Denise Galang,Shiela Mae Egonia,Paolo San Luis,Jerico Mendoza,Michelle Delos Santos,Arlene Brila,Jamaica Denoga</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED_BY</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Rochelle De Las Penas,Jomer Jadulco,Reylita Manatad,John Viray,Jamillah Ibrahim,Maximo Trinidad Jr,Mary Jane Sierra,Orlando Jr Dela Pena,Graciela Chuaquico,Stephanie Joy Abuda,Donie Angelo Salvador,Grace Mary Abengoza,Ernesto Llarenas,Jessa Lyn Villa</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED_BY</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Israel king Junio,Roselyn Balino,Jenny rose Cagalawan,Mark Taguibao,Gretchen Quinones</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED_BY</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Rose Ann Ponte,Cyrus Robles,Ernest Theodore Alitagtag,Romerico Castillo,Arnee Dasig,Joseph  Del Rosario,Rhola Estadilla,Jean Mehj Garcia,Khalee Marielle Jimenez,Akito Machiya,Roberto Jr Mojica,Jose Moulic,Ivan Patrick  Pospos,Cesar  Ramirez,Nor Diana  Tomo,Ava Marie Yadan,Claire Zolina,John Michael Tribol</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED_BY</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Edson Olis,John Abarte,Jeniel Dasig,Nikka Virginia Esguerra,Pilarica Natherine Ramirez,Yves Siva,Sieg Gabriel Villarias,Phoebe Angela Carreon,Eleonor Casimiro,Teodore Joseph Fajota,Paulo Lagman,Joanne Purugganan,Maikus Schuyler Soria</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED_BY</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Hellen Haldos,Maria Theresa Along,Feliciana Reyes,Thelma Katherine Ismael,Mark Deo Marcos,Rosemarie Mendoza,Tim Andrew Franche,Fra Angelico Cristobal,John Dominick Ambolario,Nico Reginald Cajucom,Karen Joy Marinas,Marron Christian Panganiban,Amado Petallana,John Timothy Wong,Desiree Dela Torre</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED_BY</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Jayson Faustino,Royce Austin Tambadoc,John Michael Tomas,Gerwin Anthony Celino,Daniel Joshua Bulan,Shiena Mae Villas,Lionita Germina,Melanie Sabado,Edward Vincent Lee,Jan Nik Xan Rojas,Christian Jay Leyson,Ericka Elleanor Bacho,Irish Katrine Atienza,Maria Zenith Manuel,Wilkin Umayam,Renan Rodriguez,Gerald Barra</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED_BY</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Jefferson Olango,Jennelyn Berdin,Jon Jon Ferrer,Nicole Kaye Nartea,Carlos Relly Baltazar,Andrei Eugienio,Gaspar Maningo,Mark Anthony Winston Lim,Michael Allan Saleh,Mariane Angelie Azucena,Sofhia Sario,Kurt Russel Arroyo,Francis Biglete,Alyssa Milani Landig,Francis Paule,Jeffrey Christian Franco,Maria Carla Gerero</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED_BY</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Jessica Letada,Mark Anthony Reyes,Alister Jagmis,Jerome Aguja,Dennis Almazan,John Rich Merana,Jethro Ibardaloza,Foster Bonifacio,Johannez De la Cruz,Aaron jonathan Cobacha,Marlon Jake Leahy,Robelyn Soleta,Glen Paul Ibay,Charisse Biaoco,Riella Maey Fabro,Joshua Cuenza,Eledzar Malitan,Vernie Jireh Santos,Mark Colon,Ricky DeLaCruz</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED_BY</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Rebecca Ng,Orlando Acta,Francis Aragoncillo,Gregorio Joseph,Julius Guevarra,Albert jerome peregrine Dureza,Junnalyn Bucol,Ryan Gamboa,Rc Cruz,Zylly Hymn De Ocampo,Alexander Armas,Dru Roco,Charina Villanueva,Tristan Bulaag,Cherry Pie Quintanilla,Jann Kiel Salvador,Marlon Evangelista,Mark Joseph Pradas,Macario II Pagaran,Jacqueline Balingit</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED_BY</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Patricia mae c Aliling,Camille Mijares,John ross a Torres,Israel king Junio</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED_BY</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Theodore Gareza Iii,Jorell Mendoza,Kenneth Hidalgo,Enrico Pural,Ana Jerilou Gorayeb,Emmanuel Ronald Meneses,Barbara De Vera,Vincent Albert De Guzman,Ernest franz u Uy,Robbie Gem Suban,Maybelle De Guzman,Ralph Christian Vendiola,Lizel Prado,Jennie Lyn Acuna,Nelen Basto,Anie Rose Formoso,Jhowenell Larua,John Sorio,Jennilyn Cuyo,Christian Lagria,Geraldine Magondacan</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED_BY</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Encarnacion Santos,Edward Paolo Roque,Melody Tawatan,Ralph Daimier Lim,Ailene Dacanay,Edgy Boy Banal</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>TASK_TYPE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>PPBA Callback Report</name>
+    <params>
+        <name>closed</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>type</name>
+        <value>e</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Activity</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>DUE_DATE</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

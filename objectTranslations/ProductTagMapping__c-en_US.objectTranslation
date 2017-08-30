@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>ProductTagMapping</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>ProductTagMappings</value>
+    </caseValues>
+    <fields>
+        <label><!-- Ecosystem --></label>
+        <name>Ecosystem__c</name>
+        <picklistValues>
+            <masterLabel>pcg</masterLabel>
+            <translation><!-- pcg --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>sbg</masterLabel>
+            <translation><!-- sbg --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- SFDataCategoryEdition --></label>
+        <name>SFDataCategoryEdition__c</name>
+    </fields>
+    <fields>
+        <label><!-- SFDataCategoryPlatform --></label>
+        <name>SFDataCategoryPlatform__c</name>
+    </fields>
+    <fields>
+        <label><!-- SFDataCategoryProduct --></label>
+        <name>SFDataCategoryProduct__c</name>
+    </fields>
+    <fields>
+        <label><!-- SFDataCategoryVersion --></label>
+        <name>SFDataCategoryVersion__c</name>
+    </fields>
+    <fields>
+        <label><!-- SFDataCategory --></label>
+        <name>SFDataCategory__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

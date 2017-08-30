@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Asset.Siebel_Suspended_Date__c</field>
+    </columns>
+    <columns>
+        <field>Asset.Siebel_Owner_Account_First_Name__c</field>
+    </columns>
+    <columns>
+        <field>Asset.Siebel_Owner_Account_Last_Name__c</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>PHONE6</field>
+    </columns>
+    <columns>
+        <field>Asset.Siebel_Product_Name__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Show Time Frame Date Field Range 	From 	To Run Report Filtered By:   Edit      	Product Name equals Intuit QuickBooks Care Plus Monthly Subscription,Intuit Care Protection Plan Annual - QB 2011 Onwards,Intuit Care Protection Plan Monthly - QB 2011 Onwards,Intuit QuickBooks 90 Day Expert Support Plan,Intuit QuickBooks Care Plus Annual Subscription,Intuit QuickBooks Payroll Disk Delivery,Intuit QuickBooks Point of Sale Monthly Support Plan,Intuit QuickBooks Version Protection,Intuit QuickBooks Connect Bundle Monthly with Support - QB 2011 Onwards,Intuit Care Protection Plan for MAC Annual,Intuit Care Protection Plan for MAC Monthly,Intuit QuickBooks Support Plan Monthly - QB 2010 and Prior,Intuit QuickBooks Support Plan Annual - QB 2010 and Prior,Intuit QuickBooks Connect Bundle Annual with Support - QB 2011 Onwards</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <name>Suspended Accounts McKenna</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ProductAsset@Product2.Template__c</reportType>
+    <showDetails>true</showDetails>
+    <sortColumn>Asset.Siebel_Owner_Account_Last_Name__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Asset.Siebel_Suspended_Date__c</dateColumn>
+        <interval>INTERVAL_YESTERDAY</interval>
+    </timeFrameFilter>
+</Report>

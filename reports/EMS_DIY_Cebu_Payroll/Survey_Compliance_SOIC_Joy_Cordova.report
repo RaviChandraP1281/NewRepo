@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_53605472</developerName>
+        <masterLabel>Team Manager</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>OWNER</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Angielle Bano</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Fritzie Hazel Baynosa</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Canto Cristine Jane</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Kristen Jean Coronel</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Belsenhower Bonne Gonzales</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Joseph Adrian Luayon</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Jhunmar Miano</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Brian Navaja</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Diane Payosalan</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Dennis Floyd Quilog</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Bryan Rata</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Cullen Cecilio Seno</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Michelle Tuwahan</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Lucky Luke Vidal</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Joramie Yballe</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Lord Cirus Ybanez</sourceValue>
+            </sourceValues>
+            <value>Hony Tero</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Mary Roselyn Gaspay</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Hony Fe Tero</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Jan Ray Bonita</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Vanessa de Gracia</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Judizeus Gumiran</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Nicole Herrera</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Jordan Lemente</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Warren Manago</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Marnina Mantos</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Ella Cecile Tabanyag</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Ro-Ann Tabaranza</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Joseph Oliver Tudtud</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Cyril Abalde</sourceValue>
+            </sourceValues>
+            <value>Mary Gaspay</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#9999FF</backgroundColor1>
+        <backgroundColor2>#663366</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>VerticalColumnStacked</chartType>
+        <enableHoverLabels>true</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>BucketField_53605472</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_TOP</location>
+        <secondaryGroupingColumn>STATUS</secondaryGroupingColumn>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <title>Closed vs Open</title>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>CREATED_DATEONLY</field>
+    </columns>
+    <columns>
+        <field>OWNER</field>
+    </columns>
+    <columns>
+        <field>CREATED</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATE_BY</field>
+    </columns>
+    <columns>
+        <field>ORIGIN</field>
+    </columns>
+    <columns>
+        <field>Case.Resolution_Code__c</field>
+    </columns>
+    <columns>
+        <field>Case.Product__c</field>
+    </columns>
+    <columns>
+        <field>CONTACT.EMAIL</field>
+    </columns>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>DESCRIPTION</field>
+    </columns>
+    <columns>
+        <field>CASE_NUMBER</field>
+    </columns>
+    <columns>
+        <field>AGE</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATE</field>
+    </columns>
+    <columns>
+        <field>CLOSED_DATEONLY</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Mary Roselyn Gaspay,Hony Fe Tero,Jan Ray Bonita,Vanessa de Gracia,Judizeus Gumiran,Nicole Herrera,Jordan Lemente,Warren Manago,Marnina Mantos,Ella Cecile Tabanyag,Ro-Ann Tabaranza,Joseph Oliver Tudtud,Cyril Abalde,Angielle Bano,Fritzie Hazel Baynosa,Canto Cristine Jane,Kristen Jean Coronel,Belsenhower Bonne Gonzales,Joseph Adrian Luayon,Jhunmar Miano,Brian Navaja,Diane Payosalan,Dennis Floyd Quilog,Bryan Rata,Cullen Cecilio Seno,Michelle Tuwahan,Lucky Luke Vidal,Joramie Yballe,Lord Cirus Ybanez</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_53605472</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>STATUS</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Survey Compliance: SOIC Joy Cordova</name>
+    <params>
+        <name>units</name>
+        <value>d</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATEONLY</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

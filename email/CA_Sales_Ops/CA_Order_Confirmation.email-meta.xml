@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Empty_Letterhead</letterhead>
+    <name>CA - Order Confirmation</name>
+    <style>formalLetter</style>
+    <subject>Order Confirmation Form</subject>
+    <textOnly>About you?
+
+Number of Employees: {!Account.NumberOfEmployees}
+
+Number of Small business’s supported: {!Account.Customer_Lifetime__c}
+
+
+Certification Completed?                              YES      NO
+
+
+If ‘no’ date to be completed:
+
+
+Does the firm require implementation: YES      NO
+
+Date:
+
+Sales Promotions
+
+Names of Small Businesses to be added to promotion:
+
+1.
+
+
+2.
+
+
+3.
+
+
+4.
+
+
+5.
+
+
+*All units to be activated within 180 days.  If all units are not active within 180 days, all copies will revert to regular pricing as available through your ProAdvisor Program
+
+
+180 Days from purchase date is:
+
+*Each firm may take advantage of this offer only once.
+Has your firm taken advantage of this offer in the past? YES    NO
+
+
+Confirmation
+
+Name: {!Contact.FirstName} {!Contact.LastName}
+
+
+
+Date:
+
+
+
+
+
+To unsubscribe from our marketing communications you can email your request to privacyofficer@intuit.com with the subject line “Opt Out”. Please include your email address/ other contact information where you no longer wish to receive marketing communications from Intuit. Requests may take up to 10 days to process, during which time you may continue to receive marketing communications from Intuit. Remember that even if you choose not to receive marketing communications from us, we will continue to send you mandatory service or transactional communications.
+
+Intuit respects your privacy. To learn more read our Privacy Statement (http://www.intuit.ca/about-intuit-canada/info/privacy-policy.jsp). If you receive a suspicious email, please report it by forwarding the email to spoof@intuit.com.
+
+© 2017 Intuit Inc. All rights reserved.
+5100 Spectrum Way, Mississauga, Ontario, Canada L4W 5S2</textOnly>
+    <type>html</type>
+</EmailTemplate>

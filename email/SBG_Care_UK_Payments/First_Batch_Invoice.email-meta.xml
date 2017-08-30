@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>First Batch + Invoice</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Desktop_Data_Services</letterhead>
+    <name>First Batch Invoice</name>
+    <style>freeForm</style>
+    <subject>Your QuickBooks Payments Account - Understanding your Business, Invoice Request</subject>
+    <type>html</type>
+</EmailTemplate>

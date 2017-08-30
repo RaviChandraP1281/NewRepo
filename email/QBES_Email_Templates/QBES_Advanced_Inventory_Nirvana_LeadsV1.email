@@ -1,0 +1,91 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Thank You for Choosing QuickBooks Enterprise Solutions</title>
+<style type="text/css">
+<!--
+.style1 {font-size: small}
+body,td,th {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: small;
+}
+.style2 {font-size: x-small; }
+.style3 {
+	color: #3366CC;
+	font-weight: bold;
+}
+.style4 {color: #3366CC}
+-->
+</style>
+</head>
+
+<body>
+<p>&nbsp;</p>
+<table border="0" cellspacing="0" cellpadding="0" width="602">
+  <tr>
+  <tr>
+    <td colspan="2"><p><a href="http://enterprisesuite.intuit.com/"><strong><img border="0" width="410" height="49" src="http://http-download.intuit.com/http.intuit/CMO/qbes/email/telesales_templates/images/logo_intuit_qbes.gif" /></strong></a> </p></td>
+  </tr>
+  <tr>
+    <td colspan="2"><p class="style1">&nbsp;</p></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td colspan="2" valign="top"><p>Dear {!Lead.FirstName} {!Lead.LastName}: </p>
+      <p>I am pleased to tell you about QuickBooks Enterprise  Solutions <a href="http://enterprisesuite.intuit.com/products/advanced-inventory/">Advanced  Inventory</a> (1) to help you efficiently manage inventory across your  business. Learn more at <a href="http://enterprisesuite.intuit.com/products/advanced-inventory/">http://enterprisesuite.intuit.com/products/advanced-inventory/</a>.      </p>
+      <p>When you add Advanced Inventory, you’ll get these  sophisticated inventory capabilities right in QuickBooks with the same user  interface—there’s no need for separate software or data integration:<br />
+        <br />
+          <span class="style3">NEW! Bin Location Tracking</span><br />
+Track specific inventory items down to the bin location level within one or more warehouses. When filling out forms, automatically see quantities and serial or lot numbers for each bin. Sort pick lists and item receipts by location for efficient picking and stocking.<br />
+<br />
+<strong><span class="style4">NEW! Barcode Scanning</span><br />
+</strong>Increase efficiency and reliability for all inventory  data entry by scanning items and serial numbers without touching a keyboard —  QuickBooks automatically puts the information into the right field. If you  don't have barcodes, QuickBooks will create them for you. Integrates with any  simple USB barcode scanner. (2)<br />
+<br />
+<br />
+<strong><span class="style4">Track Serial Numbers or Lot Numbers</span><br />
+</strong>Enter serial numbers and  lots at the time of purchase, transfer, or sale for more reliable tracking.  Plus, track defective lots through assemblies and subassemblies, in stock on  shelves, and customer purchases with new reports.<br />
+<br />
+<br />
+<strong><span class="style4">Use FIFO Inventory Costing</span><br />
+</strong>Get the flexibility to  track inventory using FIFO costing or average costing, and switch between the  two methods at any time. (3)<br />
+<br />
+<span class="style4"><strong>Know the value and quantity of inventory in multiple locations<br />
+</strong></span>For each location, you can see how many items are on hand, on sales  order, on purchase order, and your reorder point.</p>
+  <p>If you have questions about what Advanced  Inventory can do for you, I can help. Just call me  Mon-Fri, 5:30  am-5:30 pm PST.<br />
+          <br />
+        Regards, <br />
+  </p>
+  <div align="center">
+        <hr size="2" width="100%" align="center" />
+  </div>
+      <p class="style2">(1) Additional fees apply for the Advanced  Inventory add-on subscription. Requires QuickBooks Enterprise Solutions 13.0  with an active Full Service Plan and an Internet connection.</p>
+      <p class="style2">(2) Barcode scanner sold separately.</p>
+      <p class="style2">(3) If the Advanced Inventory add-on subscription lapses, users' data will revert to average cost for all dates.</p>
+      <p class="style2">Note: Terms, conditions, pricing, special offers, features, and service    options subject to change without notice.</p>
+      <p class="style2">© 2012 Intuit Inc. All rights reserved.  Intuit and QuickBooks, among others, are registered trademarks of Intuit Inc.  in the United States and other countries. Other parties' trademarks or service  marks are the property of their respective owners and should be treated as  such.<br />
+      </p>
+      <p class="style2">This message was sent to inform you of a critical matter. Please    note that if you have chosen not to receive marketing messages from Intuit,    that choice applies only to promotional materials. You will continue to    receive critical notifications that are legally required or could affect your    service or software. <br />
+            <br />
+        Intuit Inc., Customer Communications, 2800 E. Commerce Center Place, Tucson,    AZ 85706<br />
+        <br />
+      </p></td>
+  </tr>
+  <tr>
+    <td colspan="2" valign="top"></td>
+  </tr>
+  <tr>
+    <td colspan="2" valign="top"></td>
+  </tr>
+  <tr>
+    <td colspan="2" valign="top"></td>
+  </tr>
+  <tr>
+    <td colspan="2" valign="top"><p class="style2">Intuit respects the personal    nature of email and this email is in response to your request for additional    information.</p></td>
+  </tr>
+</table>
+</body>
+</html>

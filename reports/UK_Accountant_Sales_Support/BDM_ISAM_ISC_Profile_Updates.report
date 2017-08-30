@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>User.Role__c</field>
+    </columns>
+    <columns>
+        <field>PROFILE</field>
+    </columns>
+    <columns>
+        <field>ACTIVE</field>
+    </columns>
+    <columns>
+        <field>ADDRESS_COUNTRY</field>
+    </columns>
+    <columns>
+        <field>TIMEZONE</field>
+    </columns>
+    <columns>
+        <field>LOCALE</field>
+    </columns>
+    <columns>
+        <field>LANGUAGE</field>
+    </columns>
+    <columns>
+        <field>DEFAULT_CURRENCY</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>FULL_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Alexander Davis,Andy Gleeson,Cameron John,Caroline McHale,Elena Prekopova,Geoffrey Thompson,Jonathan Horton,Neil Derbyshire,Robert Hoyle,Aman Mangat,Andrew Petersen,Aqueel Rahman,Daniel Sullivan,Kama Szekalska,Sofia Lanfranconi,Adris Gulab,Cameron Duncan,Maro Odeh,Martin Williams,Nicholas Hughes,Alessandro Latino,Jazmine Thom</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.User_Profile__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>chatter free user</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>BDM/ISAM/ISC Profile Updates</name>
+    <params>
+        <name>active</name>
+        <value>active</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>User</reportType>
+    <showDetails>true</showDetails>
+    <sortColumn>User.Role__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>LAST_LOGIN</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

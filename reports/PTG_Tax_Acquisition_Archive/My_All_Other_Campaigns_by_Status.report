@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_19301507</developerName>
+        <masterLabel>Competitor</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>Lead.Legacy_Treatment_Name__c</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>ATX Campaign</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>ATX Postcard Campaign</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY12 ATX Campaign</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY12 ATX Gap Closer</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY12 ATX Low Volume</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY12 ATX Pain Assessment</sourceValue>
+            </sourceValues>
+            <value>ATX</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>TY12 Drake Campaign</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY12 Drake Gap Closer</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY12 Drake Lead Generation</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Drake Postcard Campaign</sourceValue>
+            </sourceValues>
+            <value>Drake</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>TY12 TaxWise Campaign</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY12 TaxWise Gap Closer</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TaxWise Postcard Campaign</sourceValue>
+            </sourceValues>
+            <value>TaxWise</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>TY12 TaxWorks Low Volume</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY12 TaxWorks Gap Closer 4/20</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY12 TaxWorks Gap Closer</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY12 TaxWorks Campaign</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TaxWorks Campaign</sourceValue>
+            </sourceValues>
+            <value>TaxWorks</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>CCH Postcard Campaign</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY12 CCH Gap Closer</sourceValue>
+            </sourceValues>
+            <value>CCH</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>CSI Postcard Campaign</sourceValue>
+            </sourceValues>
+            <value>CSI</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>VerticalColumnStacked</chartType>
+        <enableHoverLabels>true</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>STATUS</groupingColumn>
+        <legendPosition>Bottom</legendPosition>
+        <location>CHART_TOP</location>
+        <secondaryGroupingColumn>Lead.Legacy_Treatment_Name__c</secondaryGroupingColumn>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Huge</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>OWNER</field>
+    </columns>
+    <columns>
+        <field>LAST_ACTIVITY</field>
+    </columns>
+    <columns>
+        <field>COMPANY</field>
+    </columns>
+    <columns>
+        <field>PHONE</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <columns>
+        <field>STREET</field>
+    </columns>
+    <columns>
+        <field>CITY</field>
+    </columns>
+    <columns>
+        <field>STATE</field>
+    </columns>
+    <columns>
+        <field>ZIP</field>
+    </columns>
+    <columns>
+        <field>RATING</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Lead.Legacy_Treatment_Name__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notContain</operator>
+            <value>Expire,ATX,CCH,CSI,Drake,TaxWise,TaxWorks,CrossLink,Professional Web,Web Lacerte Evals,TY13 Lacerte Eval PreOrder,TY13 ProSeries Eval PreOrder,Lacerte Webinar,ProSeries Webinar,4/20</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>STATUS</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Lead.Legacy_Treatment_Name__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>My Other Campaigns by Status</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LeadList</reportType>
+    <scope>user</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

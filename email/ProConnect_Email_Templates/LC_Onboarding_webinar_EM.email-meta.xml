@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>LC Onboarding webinar EM</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>LC Onboarding webinar EM</name>
+    <style>none</style>
+    <subject>Important Info Regarding Lacerte Onboarding Program</subject>
+    <textOnly>Dear {!Contact.Name},
+
+Thank you again for your business &amp; for joining the Lacerte team. A critical first step for success is to sign up for a new client services webinar to get your firm setup. These webinars are scheduled for 2 hours. In the first hour, we will share on-boarding information including data conversion. 
+
+In the second hour, we will cover return preparation training. Additionally, you will receive an invitation to a 30 minute one-on-one session after attending the webinar. Below is the link to choose the time that best works for you.
+
+ 
+Regards,
+{!User.Name}
+Lacerte Tax Consultant
+{!User.Phone}
+{!User.Email}
+ 
+  
+To unsubscribe or change your email preferences, Click Here.
+
+Intuit respects your privacy. To learn more, read our Privacy Statement.
+
+If you have any questions or comments, please DO NOT REPLY to this email. Visit the Ask Lacerte website for fast answers, and contact information for our Service and Support department.
+
+If you receive a suspicious email, please Report It. Visit Security to find out more.
+
+© 2014 Intuit Inc. All rights reserved. Trademarks.
+
+Intuit Inc., Customer Communications, 2800 E. Commerce Center Place, Tucson, AZ 85706.</textOnly>
+    <type>custom</type>
+</EmailTemplate>

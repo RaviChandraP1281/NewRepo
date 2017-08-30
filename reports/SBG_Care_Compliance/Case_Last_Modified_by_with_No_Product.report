@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>User$Division</field>
+    </columns>
+    <columns>
+        <field>User.Case$LastModifiedById$CaseNumber</field>
+    </columns>
+    <currency>USD</currency>
+    <description>Using the Last Modified by, showing cases with no products, by division</description>
+    <filter>
+        <criteriaItems>
+            <column>User*User$Role__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>desktop,online</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$LastModifiedById$Status</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$LastModifiedById$Origin</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Internal</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$LastModifiedById$Product__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Case (Last Modified by) with No Product</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Users_and_Case_Last_Modified_By__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>User.Case$LastModifiedById$ClosedDate</dateColumn>
+        <interval>INTERVAL_LAST7</interval>
+    </timeFrameFilter>
+</Report>

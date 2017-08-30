@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <fullName>AssistedinSaleReqdProductAreaSelected</fullName>
+        <active>true</active>
+        <errorConditionFormula>NOT(ISBLANK( Assisted_Sales_Product_Area__c )) &amp;&amp; NOT (Assisted_in_Sale__c)</errorConditionFormula>
+        <errorDisplayField>Assisted_Sales_Product_Area__c</errorDisplayField>
+        <errorMessage>You cannot select Product Area when Assisted in Sale is not checked.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Contact_Should_exist_before_closing_Case</fullName>
+        <active>true</active>
+        <description>Contact_Should_exist_before_closing_Case</description>
+        <errorConditionFormula>IF($User.User_Profile__c!= &apos;API Only&apos;,(ISPICKVAL(Status,&quot;Closed&quot;) &amp;&amp; ContactId = null &amp;&amp; (CreatedBy.Profile.Name &lt;&gt; &quot;API Only&quot;&amp;&amp; Not($Permission.Brazil_Contact_Not_Required) )),false)</errorConditionFormula>
+        <errorMessage>Contact is mandatory before closing a Case</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>FDS_Field_Validations</fullName>
+        <active>true</active>
+        <description>Please enter valid value for FI Identifier, Customer Central Id &amp; Internal Error Code.</description>
+        <errorConditionFormula>AND(
+Owner:Queue.DeveloperName=&quot;IFIG_Customer_Central_Error_Escalation&quot;,
+AND(
+OR( ISBLANK(FI_Identifier__c),
+NOT(ISNUMBER(FI_Identifier__c)) ,
+VALUE(FI_Identifier__c) &lt;=0,
+
+ISBLANK(Customer_Central_ID__c),
+NOT(ISNUMBER(Customer_Central_ID__c)),
+VALUE(Customer_Central_ID__c) &lt;= 0,
+
+ISBLANK(Internal_Error_Code__c),
+NOT(ISNUMBER(Internal_Error_Code__c)),
+VALUE(Internal_Error_Code__c) &lt; 0
+),
+ISBLANK(Provider_Id__c))
+)</errorConditionFormula>
+        <errorMessage>Please enter valid value for FI Identifier, Customer Central Id &amp; Internal Error Code.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Future_Close_Date_Validation</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND(TEXT(Status) != &apos;Closed&apos;,Future_Close_Date__c &lt; TODAY())</errorConditionFormula>
+        <errorDisplayField>Future_Close_Date__c</errorDisplayField>
+        <errorMessage>Future Close date cannot be less than Today</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>InactiveContact</fullName>
+        <active>true</active>
+        <description>To prompt a user to change the contact on the Case because its inactive</description>
+        <errorConditionFormula>AND(NOT(Contact.Active_Status__c), $Profile.Name &lt;&gt; &apos;API Only&apos;, NOT(ISPICKVAL(Status,&apos;Closed&apos;)))</errorConditionFormula>
+        <errorMessage>Please change the contact on the Case ; the contact has been deleted</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Internal_Error_Code</fullName>
+        <active>true</active>
+        <description>Internal Error Code can only accept numbers</description>
+        <errorConditionFormula>NOT(ISNUMBER(Internal_Error_Code__c))&amp;&amp; NOT(ISBLANK(Internal_Error_Code__c))</errorConditionFormula>
+        <errorDisplayField>Internal_Error_Code__c</errorDisplayField>
+        <errorMessage>Please enter numeric values 0 through 9 only.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>LockClosedCase</fullName>
+        <active>true</active>
+        <description>AND(
+    ISPICKVAL(PRIORVALUE(Status),&quot;Closed&quot;),ISPICKVAL(Status,&quot;Open&quot;)
+    )</description>
+        <errorConditionFormula>AND(
+ISPICKVAL(PRIORVALUE(Status),&quot;Closed&quot;),OR(
+ISCHANGED(Status),ISCHANGED(Priority),ISCHANGED(Sub_Status__c),ISCHANGED(Resolution_Code__c),ISCHANGED(Subarea__c),ISCHANGED(Area__c),ISCHANGED(Subject),ISCHANGED(Type),ISCHANGED( AssetId ),ISCHANGED( ParentId ),ISCHANGED( Future_Close_Date__c),ISCHANGED(ContactId),ISCHANGED( Product__c ),
+ISCHANGED(AccountId),ISCHANGED(Origin),ISCHANGED(Reason) ,ISCHANGED(Description),ISCHANGED( Biz_Line__c),ISCHANGED(SB_Type__c),ISCHANGED(SB_Area__c),ISCHANGED(SB_SubArea__c),ISCHANGED(Internal_Error_Code__c),ISCHANGED(Customer_Central_ID__c),ISCHANGED(FI_Identifier__c),ISCHANGED(Related_Case_ID__c),ISCHANGED(Transactional_Issue__c),ISCHANGED(Time_of_error__c),ISCHANGED(FI_Name__c),ISCHANGED(Assisted_in_Sale__c),ISCHANGED( Assisted_Sales_Product_Area__c)) , NOT($UserRole.Name = &quot;Admin&quot;)
+)</errorConditionFormula>
+        <errorMessage>Closed case cannot be re-opened or edited</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>LockInactiveContact</fullName>
+        <active>true</active>
+        <description>To prompt a user to change the contact on the Case because its inactive</description>
+        <errorConditionFormula>AND(NOT(Contact.Active_Status__c), $Profile.Name &lt;&gt; &apos;API Only&apos;, ISPICKVAL(Status,&apos;Closed&apos;), NOT( ISCHANGED( Case_Investigation__c ) ) )</errorConditionFormula>
+        <errorMessage>Closed case cannot be re-opened or edited</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>ProductAreaIsRequiredForAssistedSale</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND((Assisted_in_Sale__c),ISBLANK( Assisted_Sales_Product_Area__c ))</errorConditionFormula>
+        <errorDisplayField>Assisted_Sales_Product_Area__c</errorDisplayField>
+        <errorMessage>Product Area is Required when Assisted in Sale is checked.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Study_End_Date_should_beafter_start_Date</fullName>
+        <active>true</active>
+        <description>Study End date should be after start date</description>
+        <errorConditionFormula>IF(Study_End_Date__c &lt; Study_Start_Date__c,true,false)</errorConditionFormula>
+        <errorMessage>End date of Study should be later than  Start Date of Study.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Sub_Status_Auto_Closed_Check</fullName>
+        <active>true</active>
+        <description>Auto closed Sub Status can only be set by the System Administrator</description>
+        <errorConditionFormula>IF($User.User_Profile__c!= &apos;API Only&apos;, AND((TEXT(Status) != &apos;Closed&apos; || $User.User_Profile__c != &apos;System Administrator&apos;),TEXT(Sub_Status__c) == &apos;Auto Closed&apos;, NOT( ISCHANGED( Case_Investigation__c ) ) ), false)</errorConditionFormula>
+        <errorDisplayField>Sub_Status__c</errorDisplayField>
+        <errorMessage>Auto closed Sub Status can only be set by the System Administrator and by setting status to closed</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Sub_Status_Resolved_Check</fullName>
+        <active>true</active>
+        <description>Sub Status cannot be Resolved if status is not closed</description>
+        <errorConditionFormula>AND(TEXT(Status)!=&apos;Closed&apos;,TEXT(Sub_Status__c)==&apos;Resolved&apos;)</errorConditionFormula>
+        <errorDisplayField>Sub_Status__c</errorDisplayField>
+        <errorMessage>Sub Status cannot be set to resolved if status is not closed</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>eCase_Future_Close_Date</fullName>
+        <active>true</active>
+        <description>Future close date can only be set for eCases</description>
+        <errorConditionFormula>IF($User.User_Profile__c!= &apos;API Only&apos;, AND (UPPER(CreatedBy.Alias) != &quot;OUSER&quot;, NOT(ISNULL(Future_Close_Date__c)),
+NOT(CONTAINS($UserRole.Name, &apos;PTG&apos;) )
+), false)</errorConditionFormula>
+        <errorMessage>Future Close Date can only be set for eCases - Please remove the Future Close date to proceed.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Agent_Knowledge_Base</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Agent Knowledge Base</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>//alert(&apos;{!$Label.IntuitOKMURL}&apos;);
+var newurl=&quot;{!$Label.IntuitOKMURL}&amp;case={!Case.Id}&amp;question={!Case.Subject}&amp;auto=y&amp;height=full&quot;;
+window.open(newurl, &apos;_blank&apos;);</url>
+    </webLinks>
+    <webLinks>
+        <fullName>New_Investigation</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>New Investigation</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/apex.js&quot;)}
+{!REQUIRESCRIPT(&quot;/support/console/28.0/integration.js&quot;)}
+
+var user = sforce.connection.getUserInfo();
+var userId = user.userId ;
+var HavePermission= sforce.apex.execute(&quot;getBU_Utility&quot;,&quot;getInvestigationPrivileges&quot;, {UserId:userId});
+//alert(userBU);
+if(HavePermission== &apos;N&apos;){
+alert(&apos;User is not authorized to create new Investigations. Please contact system admin&apos;);
+}
+else{
+var CaseId= &apos;{!Case.Id}&apos;; 
+var url=&apos;/apex/NewEditPageInvestigation?CaseId=&apos;+CaseId+&apos;&amp;isdtp=vw&apos;;
+
+if (sforce.console.isInConsole()) { 
+srcUp(url);
+} else { 
+window.open(url,&apos;_blank&apos;);
+}
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>PickAsset</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>PickAsset</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&apos;/soap/ajax/29.0/connection.js&apos;)}
+{!REQUIRESCRIPT(&apos;/resource/jquery191&apos;)}
+{!REQUIRESCRIPT(&apos;/resource/jquery_ui_js&apos;)}
+{!REQUIRESCRIPT(&apos;/support/console/29.0/integration.js&apos;)}
+
+var caseId = &apos;{!Case.Id}&apos;;
+var accId = &apos;{!Case.AccountId}&apos;
+
+console.log(&apos;Case Id: &apos; + caseId);
+
+if(&apos;{!Case.AccountId}&apos; != &apos;&apos;) {
+var j$ = jQuery.noConflict();
+var iframe_url = &apos;{!URLFOR(&quot;/apex/PickupAsset&quot;)}&apos; + &apos;?csid=&apos; + caseId +&apos;&amp;AccountId=&apos; + accId+&apos;&amp;id=&apos;+caseId;
+
+var childWin= window.open(iframe_url,&quot;_blank&quot;, &quot;scrollbars=yes, resizable=yes, top=350, left=400, width=1000, height=300,titlebar=no,toolbar=no,location=no&quot;);
+intervalId = window.setInterval(&apos;checkIfChildWindowIsClosed()&apos;, 1*1000);
+checkIfChildWindowIsClosed = function(){
+    if(childWin.closed)
+    {
+        clearInterval(window.intervalId);
+        window.location.reload();
+    }
+}
+} else {
+alert(&apos;Asset cannot be picked for Case with no Account!.&apos;);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Pick_Asset</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Pick Asset</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&apos;/soap/ajax/29.0/connection.js&apos;)}
+{!REQUIRESCRIPT(&apos;/resource/jquery191&apos;)}
+{!REQUIRESCRIPT(&apos;/resource/jquery_ui_js&apos;)}
+{!REQUIRESCRIPT(&apos;/support/console/29.0/integration.js&apos;)}
+
+requireCssFile(&apos;/resource/jquery_ui_1_10_4/jquery-ui-1.10.4.custom/css/flick/jquery-ui-1.10.4.custom.css&apos;);
+
+function requireCssFile(filename) {
+    var fileref = document.createElement(&apos;link&apos;);
+    fileref.setAttribute(&apos;rel&apos;, &apos;stylesheet&apos;);
+    fileref.setAttribute(&apos;type&apos;, &apos;text/css&apos;);
+    fileref.setAttribute(&apos;href&apos;, filename);
+    document.getElementsByTagName(&apos;head&apos;)[0].appendChild(fileref);
+}
+
+var caseId = &apos;{!Case.Id}&apos;;
+var accId = &apos;{!Case.AccountId}&apos;
+
+console.log(&apos;Case Id: &apos; + caseId);
+
+if(&apos;{!Case.AccountId}&apos; != &apos;&apos;) {
+   var j$ = jQuery.noConflict();
+   var iframe_url = &apos;{!URLFOR(&quot;/apex/PickAssetST&quot;)}&apos; + &apos;?csid=&apos; + caseId +&apos;&amp;AccountId=&apos; + accId+&apos;&amp;CaseId=&apos; + caseId;
+   
+   console.log(&apos;iframe_url: &apos; + iframe_url);
+   
+   var j$modalDialog = j$(&apos;&lt;div&gt;&lt;/div&gt;&apos;)
+       .html(&apos;&lt;iframe id=&quot;iframeContentId&quot; src=&quot;&apos; + iframe_url + &apos;&quot; frameborder=&quot;0&quot;     height=&quot;100%&quot; width=&quot;100%&quot; marginheight=&quot;0&quot; marginwidth=&quot;0&quot; /&gt;&apos;)
+       .dialog({
+            autoOpen: false,
+            title: &apos;Select Asset&apos;,
+            resizable: false,
+            width: 800,
+            height: 500,
+            autoResize: true,
+            modal: true,
+            draggable: true
+   });
+
+   j$modalDialog.dialog(&apos;open&apos;);
+
+   j$modalDialog.bind(&apos;dialogclose&apos;, function(event) {
+      window.location.reload(true);
+   });
+} else {
+    alert(&apos;Asset cannot be picked for Case with no Account!.&apos;);
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Request_Check_Concession</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Request Check Concession</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/30.0/apex.js&quot;)}
+{!REQUIRESCRIPT(&quot;/support/console/28.0/integration.js&quot;)}
+
+var user = sforce.connection.getUserInfo();
+var userId = user.userId ;
+var userBU = sforce.apex.execute(&quot;getBU_Utility&quot;,&quot;getBU&quot;,                                                       {UserId:userId});
+if(userBU == &apos;N&apos;){
+  alert(&apos;User is not authorized to launch check concession process . Please contact system admin&apos;);
+}
+else{
+  var CaseId= &apos;{!Case.Id}&apos;; 
+  var ContactId = &apos;{!Case.ContactId}&apos;;
+  var url=&apos;/apex/CheckConcessionRequest?CaseId=&apos;+CaseId+&apos;&amp;AgentBU=&apos;+userBU +&apos;&amp;ContactId=&apos;+ContactId+&apos;&amp;mode=New&apos;+&apos;&amp;isdtp=vw&apos;;
+if (sforce.console.isInConsole()) { 
+    srcUp(url);
+} else { 
+    window.open(url,&apos;_blank&apos;);
+}
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>crmc_Mass_Update</fullName>
+        <availability>online</availability>
+        <description>This is the function perform mass updates from care console ; Sales Application</description>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Mass Update</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>if (typeof(srcUp) == &apos;function&apos;) {
+if({!GETRECORDIDS( $ObjectType.Case)} ==&apos;&apos;){alert(&quot;Please select at least one record.&quot;);}
+else{
+var retURL = window.location.href;
+src=&quot;/apex/CRMC_MassUpdate__crmcMassUpdate?ts=&quot;+(new Date).getTime()+&apos;&amp;Ids=&apos;+{!GETRECORDIDS( $ObjectType.Case)};
+srcSelf(&apos;&apos;+src+&apos;&amp;retURL=&apos;+retURL+&apos;&amp;isdtp=vw&apos;);
+}} else {   
+    (function (e,t){var n=document.getElementsByTagName(&quot;HEAD&quot;).item(0),r=document.createElement(&quot;script&quot;);r.type=&quot;text/javascript&quot;,n.appendChild(r),r.onload=function(){MassUpdate.massUpdate(e,t)},r.src=&quot;/resource/CRMC_MassUpdate__MassUpdate?ts=&quot;+(new Date).getTime()}({!GETRECORDIDS( $ObjectType.Case)},window.top.location.href));
+}</url>
+    </webLinks>
+</CustomObject>

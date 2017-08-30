@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Case_Investigation__c.Area_Product_Category__c</field>
+    </columns>
+    <columns>
+        <field>Case_Investigation__c.of_Cases__c</field>
+    </columns>
+    <currency>USD</currency>
+    <description>All Error code based INV</description>
+    <filter>
+        <criteriaItems>
+            <column>Case_Investigation__c.Impacted_Products__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>includes</operator>
+            <value>QuickBooks Online Bank Feeds</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case_Investigation__c.Product_Category__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>OnlineBanking-FDS</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case_Investigation__c.Area_Product_Category__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Banking Error Codes</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case_Investigation__c.Status__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Closed</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Case_Investigation__c.Sub_Area_Product_Category__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>OLB Error Code</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Case_Investigation__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

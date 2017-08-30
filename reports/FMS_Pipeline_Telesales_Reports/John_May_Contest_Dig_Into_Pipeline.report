@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_65934834</developerName>
+        <masterLabel>Current Solution - Potential for FRESH?</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>Opportunity.Current_Solution__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Service Bureau</sourceValue>
+            </sourceValues>
+            <value>Tax SW</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Competitor</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>DT Max</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Great Plains</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Other</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sage/PeachTree</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Franchise</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>No Current Solution</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Premier</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Pro</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QB for Mac</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QB Point-of-Sale (POS)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QB Mobile</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QBO</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QB Accountant</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Inactive QBES</sourceValue>
+            </sourceValues>
+            <value>FRESH POTENTIAL</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>QBES</sourceValue>
+            </sourceValues>
+            <value>NON-FRESH POTENTIAL</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>number</bucketType>
+        <developerName>BucketField_23893027</developerName>
+        <masterLabel>Days to Close Bucket</masterLabel>
+        <nullTreatment>z</nullTreatment>
+        <sourceColumnName>AGE</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <to>0</to>
+            </sourceValues>
+            <value>0</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>0</from>
+                <to>7</to>
+            </sourceValues>
+            <value>1 to 7</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>7</from>
+                <to>14</to>
+            </sourceValues>
+            <value>8 to 14</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>14</from>
+                <to>21</to>
+            </sourceValues>
+            <value>15 to 21</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>21</from>
+                <to>28</to>
+            </sourceValues>
+            <value>21 to 28</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>28</from>
+            </sourceValues>
+            <value>&gt;28</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_62593327</developerName>
+        <masterLabel>ES Sub Items</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Product2.Siebel_Part_Number__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <value>Gold</value>
+        </values>
+        <values>
+            <value>Silver</value>
+        </values>
+        <values>
+            <value>Platinum</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_70780261</developerName>
+        <masterLabel>Stage</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>STAGE_NAME</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Solution Fit</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Proposal</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Value Proposition</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Perception Analysis</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Proposal/Price Quote</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Negotiation/Review</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Pre-Pipeline</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Discovery</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Solution Design</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Contract Execution</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Validate</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Assess</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Educate</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Solution</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Negotiate</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Needs Winback</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Negotiation</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Prospecting</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Qualification</sourceValue>
+            </sourceValues>
+            <value>Open</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Closed Lost</sourceValue>
+            </sourceValues>
+            <value>Closed Lost</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Closed Won</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Future Hold</sourceValue>
+            </sourceValues>
+            <value>Closed Won</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>BucketField_65934834</field>
+    </columns>
+    <columns>
+        <field>AGE</field>
+    </columns>
+    <columns>
+        <field>LAST_STAGE_CHANGE_DATE</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT_NAME</field>
+    </columns>
+    <columns>
+        <field>OPPORTUNITY_NAME</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Primary_Contact_Email__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Primary_Contact_Phone__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Current_Solution__c</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Order_Number_Siebel_Order_Id__c</field>
+    </columns>
+    <columns>
+        <field>CLOSE_DATE</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>((1 AND 2 AND 3 AND 4 AND 5 AND 6) OR (2 AND 3 AND 4 AND 5 AND 6 AND 7 AND 8))</booleanFilter>
+        <criteriaItems>
+            <column>STAGE_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Validate,Assess,Educate,Solution,Negotiate</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ROLLUP_DESCRIPTION</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Pipeline Agent</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Current_Solution__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>QBES,QB Point-of-Sale (POS)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ALIAS</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>JLohm</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Product_Family_of_Interest__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Merchant Account Services</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OPPORTUNITY_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>HV Onboarding</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>LAST_STAGE_CHANGE_DATE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>greaterThan</operator>
+            <value>5/8/2016 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>STAGE_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Closed Won</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_70780261</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FULL_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>John May Contest - Dig Into Pipeline</name>
+    <params>
+        <name>open</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityProduct</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>AGE</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_LAST120</interval>
+    </timeFrameFilter>
+</Report>

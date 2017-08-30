@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Billing Profile</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Billing Profiles</value>
+    </caseValues>
+    <fields>
+        <label><!-- ACCOUNT_CAN --></label>
+        <name>ACCOUNT_CAN__c</name>
+    </fields>
+    <fields>
+        <label><!-- ACCOUNT_NAME --></label>
+        <name>ACCOUNT_NAME__c</name>
+    </fields>
+    <fields>
+        <label><!-- BP_BDOM --></label>
+        <name>BP_BDOM__c</name>
+    </fields>
+    <fields>
+        <label><!-- BP_CC_EXP_MONTH --></label>
+        <name>BP_CC_EXP_MONTH__c</name>
+    </fields>
+    <fields>
+        <label><!-- BP_CC_EXP_YEAR --></label>
+        <name>BP_CC_EXP_YEAR__c</name>
+    </fields>
+    <fields>
+        <label><!-- BP_CC_TYPE --></label>
+        <name>BP_CC_TYPE__c</name>
+    </fields>
+    <fields>
+        <label><!-- BP_CONTACT_CACI --></label>
+        <name>BP_CONTACT_CACI__c</name>
+    </fields>
+    <fields>
+        <label><!-- BP_CON_FIRST_NAME --></label>
+        <name>BP_CON_FIRST_NAME__c</name>
+    </fields>
+    <fields>
+        <label><!-- BP_CON_LAST_NAME --></label>
+        <name>BP_CON_LAST_NAME__c</name>
+    </fields>
+    <fields>
+        <label><!-- BP_CON_SFDC_ID --></label>
+        <name>BP_CON_SFDC_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- BP_CON_SIEBEL_ID --></label>
+        <name>BP_CON_SIEBEL_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- BP_MASKED_CC_NUMBER --></label>
+        <name>BP_MASKED_CC_NUMBER__c</name>
+    </fields>
+    <fields>
+        <label><!-- BP_NAME_ON_CARD --></label>
+        <name>BP_NAME_ON_CARD__c</name>
+    </fields>
+    <fields>
+        <label><!-- BP_NAME --></label>
+        <name>BP_NAME__c</name>
+    </fields>
+    <fields>
+        <label><!-- BP_PAYMENT_METHOD --></label>
+        <name>BP_PAYMENT_METHOD__c</name>
+    </fields>
+    <fields>
+        <label><!-- BP_STATUS --></label>
+        <name>BP_STATUS__c</name>
+    </fields>
+    <fields>
+        <label><!-- BP_TOKENIZED_CC_NUMBER --></label>
+        <name>BP_TOKENIZED_CC_NUMBER__c</name>
+    </fields>
+    <fields>
+        <label><!-- PRIMARY_CONTACT_CACI --></label>
+        <name>PRIMARY_CONTACT_CACI__c</name>
+    </fields>
+    <fields>
+        <label><!-- PRIMARY_CON_FIRST_NAME --></label>
+        <name>PRIMARY_CON_FIRST_NAME__c</name>
+    </fields>
+    <fields>
+        <label><!-- PRIMARY_CON_LAST_NAME --></label>
+        <name>PRIMARY_CON_LAST_NAME__c</name>
+    </fields>
+    <fields>
+        <label><!-- PRIMARY_CON_SFDC_ID --></label>
+        <name>PRIMARY_CON_SFDC_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- PRIMARY_CON_SIEBEL_ID --></label>
+        <name>PRIMARY_CON_SIEBEL_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- SFDC_ACCOUNT_ID --></label>
+        <name>SFDC_ACCOUNT_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- SIEBEL_ACCOUNT_ID --></label>
+        <name>SIEBEL_ACCOUNT_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- SIEBEL_BP_ID --></label>
+        <name>SIEBEL_BP_ID__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

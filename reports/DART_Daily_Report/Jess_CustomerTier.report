@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Contact.AccountCAN__c</field>
+    </columns>
+    <columns>
+        <field>Contact.Company_ID__c</field>
+    </columns>
+    <columns>
+        <field>Account.Customer_Tier__c</field>
+    </columns>
+    <crossFilters>
+        <operation>with</operation>
+        <primaryTableColumn>CONTACT_ID</primaryTableColumn>
+        <relatedTable>Case</relatedTable>
+        <relatedTableJoinColumn>Contact</relatedTableJoinColumn>
+    </crossFilters>
+    <currency>USD</currency>
+    <format>Tabular</format>
+    <name>Jess - CustomerTier</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContactList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Contact.Last_Survey_Date__c</dateColumn>
+        <endDate>2017-06-15</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2017-06-01</startDate>
+    </timeFrameFilter>
+</Report>

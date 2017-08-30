@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <attachedDocuments>SharedDocuments/UK_Moving_data_to_QBO.pdf</attachedDocuments>
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Email_Letterhead</letterhead>
+    <name>UK Welcome MMB</name>
+    <style>formalLetter</style>
+    <subject>QuickBooks Online order confirmation – how to move your data</subject>
+    <textOnly>Dear {!Contact.FirstName},
+
+It was good to talk to you today about QuickBooks Online.
+
+
+I’m pleased to report that we’ve now set up your QuickBooks Online account.
+
+
+How to sign in
+
+
+You can sign in to QuickBooks Online at www.intuit.co.uk. Just use these details:
+
+
+User ID:
+
+{!Opportunity.Legacy_Treatment_Name__c}
+
+Password:
+
+{!Opportunity.Legacy_Treatment_Code__c}
+
+Company ID:
+
+{!Opportunity.Company_ID__c}
+
+
+How to move your data
+
+
+The instructions attached to this email explain what you should do now to move your data to QuickBooks Online. They tell you how to:
+
+
+· Login to QuickBooks Online for the first time
+
+· Upload your company data file to the Movemybooks website.
+
+
+If you have any questions about these instructions, please call our care team on 0808 234 5337. We’re available 8am — 8pm on working days and happy to help.
+
+
+If you have any other queries or just aren’t sure who to speak to, you can also call me directly on {!User.Phone}.
+
+
+Tell us how it’s going
+
+
+We hope that getting started with QuickBooks Online has been easy so far.
+
+
+Your feedback helps improve the service we provide, so we&apos;ll send you a survey within the next 24 hours. It would be great if you could complete it to let us know how you’ve found things.
+
+
+You can also send any other thoughts straight to my manager by clicking the green tick below.
+
+Thanks again for choosing QuickBooks.
+
+
+Kind regards,
+
+
+
+{!User.FirstName} {!User.LastName}
+
+{!User.Email}</textOnly>
+    <type>html</type>
+</EmailTemplate>

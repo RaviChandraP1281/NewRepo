@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <fullName>At_Risk_Reason_Detail_is_required</fullName>
+        <active>true</active>
+        <description>This validation ensures &quot;At Risk Reason Detail&quot; field is populated when Opportunity is &apos;At Risk&apos;.</description>
+        <errorConditionFormula>IF( (At_Risk__c = true) &amp;&amp; ISPICKVAL(At_Risk_Reason_Detail__c, &apos;&apos;), true, false)</errorConditionFormula>
+        <errorDisplayField>At_Risk_Reason_Detail__c</errorDisplayField>
+        <errorMessage>&quot;At Risk Reason Detail&quot; field value is required when Opportunity was marked as &quot;At Risk&quot;.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>At_Risk_Reason_is_required</fullName>
+        <active>true</active>
+        <description>&quot;At Risk Reason&quot; field is required when an Opportunity was flagged as &quot;At Risk&quot;.</description>
+        <errorConditionFormula>IF( (At_Risk__c = true)  &amp;&amp; ISPICKVAL(At_Risk_Reason__c, &apos;&apos;) , true, false)</errorConditionFormula>
+        <errorDisplayField>At_Risk_Reason__c</errorDisplayField>
+        <errorMessage>&quot;At Risk Reason&quot; field value is required when Opportunity was marked as &quot;At Risk&quot;.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Closed_Lost_Reason</fullName>
+        <active>true</active>
+        <errorConditionFormula>ISPICKVAL(StageName, &quot;Closed Lost&quot;) &amp;&amp; ISPICKVAL( Won_Lost_Reason__c ,&quot;&quot;)</errorConditionFormula>
+        <errorDisplayField>StageName</errorDisplayField>
+        <errorMessage>Closed Lost reason is required to move an opportunity to Closed Lost</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>InactiveContact</fullName>
+        <active>true</active>
+        <description>The Contact on the Opportunity has been Deleted and needs to be replaced.</description>
+        <errorConditionFormula>AND( NOT(Primary_Contact__r.Active_Status__c), $Profile.Name &lt;&gt; &apos;API Only&apos;)</errorConditionFormula>
+        <errorMessage>Please change the contact on the opportunity; the contact has been deleted</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Lock_Down_Standard_Fields_Closed_Won</fullName>
+        <active>true</active>
+        <description>Only Sys Admin can edit fields after the Opportunity is Closed Won. This is needed because certain standard fields cannot be read only on the page layout.</description>
+        <errorConditionFormula>AND(
+    OR(
+       AND(
+          ISCHANGED(StageName),
+          ISPICKVAL(PRIORVALUE(StageName), &apos;Closed Won&apos;)
+          ),
+       AND(
+           NOT(ISCHANGED(StageName)),
+           ISPICKVAL(StageName, &apos;Closed Won&apos;), 
+           OR (
+               ISCHANGED(Name),
+               ISCHANGED(CloseDate),
+	       ISCHANGED(ForecastCategoryName),
+ISCHANGED(CurrencyIsoCode),
+ISCHANGED(Product_Family_of_Interest__c)
+               ) 
+           )
+      ),
+      $Profile.Name &lt;&gt; &quot;System Administrator&quot;, 
+$Profile.Name &lt;&gt; &quot;API Only&quot;,
+$Profile.Name &lt;&gt; &quot;ProTax Bus Admin&quot;
+   )</errorConditionFormula>
+        <errorMessage>Cannot edit an Opportunity when Stage is Closed Won.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>No_IOP_IFSP_oppty_on_Desktop_acct</fullName>
+        <active>true</active>
+        <description>Prevents agents from creating IOP or IFSP opportunities on existing Desktop accounts unless they are for a Saves opportunity</description>
+        <errorConditionFormula>AND(
+OR(
+ISPICKVAL(Product_Family_of_Interest__c,&quot;Intuit Online Payroll (IOP)&quot;),
+ISPICKVAL(Product_Family_of_Interest__c,&quot;Intuit Full Service Payroll (IFSP)&quot;)
+),
+NOT(ISBLANK(CAN__c)),
+NOT(ISPICKVAL(LeadSource,&quot;Saves&quot;)),
+$User.Role__c &lt;&gt; &quot;Accountant Phone Sales Agent&quot;,
+$User.Role__c &lt;&gt; &quot;Acctnt Inbound Consultant&quot;,
+       $Profile.Name &lt;&gt; &quot;System Administrator&quot;,
+        $Profile.Name &lt;&gt; &quot;API Only&quot;,
+NOT (ISPICKVAL(StageName,&quot;Closed Lost&quot;))
+)</errorConditionFormula>
+        <errorMessage>IOP &amp; IFSP orders cannot be created on existing Desktop accounts. Please create a new IOP or IFSP lead and convert to a new Account to continue.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Payments_Application_Id</fullName>
+        <active>true</active>
+        <errorConditionFormula>(
+ISPICKVAL( StageName ,&apos;Closed Won&apos;) &amp;&amp; Application_ID__c = &apos;&apos;
+) 
+&amp;&amp; 
+ISPICKVAL(Product_Family_of_Interest__c ,&apos;Merchant Account Services&apos;
+)</errorConditionFormula>
+        <errorDisplayField>Application_ID__c</errorDisplayField>
+        <errorMessage>Application Id Required to move a Payments opportunity to Closed Won.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Product_Family_of_Interest_Required</fullName>
+        <active>true</active>
+        <description>Product Family of Interest is required field for Standard Intuit Opportunities.</description>
+        <errorConditionFormula>AND(
+ISPICKVAL(Product_Family_of_Interest__c, &apos;&apos;),
+$Profile.Name &lt;&gt; &quot;Intuit Enterprise BDM&quot;)</errorConditionFormula>
+        <errorDisplayField>Product_Family_of_Interest__c</errorDisplayField>
+        <errorMessage>Product Family of Interest is required.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>QBES_Lead_Source_Required</fullName>
+        <active>false</active>
+        <description>Lead Source is required field for QBES implementation</description>
+        <errorConditionFormula>IF( $RecordType.DeveloperName = &apos;QBES_Opportunity&apos;, ISPICKVAL(LeadSource, &apos;&apos;), false)</errorConditionFormula>
+        <errorDisplayField>LeadSource</errorDisplayField>
+        <errorMessage>Lead Source is required.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Sales_Opportunity_Stage_Update</fullName>
+        <active>true</active>
+        <description>Specific profile user cannot change stage to Closed Won. Updated 4/7 to remove Sales Consultant and Sales Mgr profiles from being restricted.</description>
+        <errorConditionFormula>AND(
+    ISCHANGED(StageName),  
+    ISPICKVAL(StageName, &apos;Closed Won&apos;),
+    OR(
+       $Profile.Name  = &apos;Customer Service&apos;,
+       $Profile.Name  = &apos;Service AandE&apos;,
+       $Profile.Name  = &apos;SBFS Sales&apos;
+      ), 
+    OR(
+       Country__c   = &apos;USA&apos;,
+       Country__c = &apos;India&apos;,
+       Country__c  = &apos;Australia&apos;
+      )
+   )</errorConditionFormula>
+        <errorDisplayField>StageName</errorDisplayField>
+        <errorMessage>You cannot update StageName to Closed Won.</errorMessage>
+    </validationRules>
+    <webLinks>
+        <fullName>Add_Lead_Qualifier</fullName>
+        <availability>online</availability>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Add Lead Qualifier</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/27.0/connection.js&quot;)}
+{!REQUIRESCRIPT(&quot;/soap/ajax/27.0/apex.js&quot;)}
+sforce.apex.execute(&quot;QBES_PopulateLeadQualifier&quot;,&quot;populateByOpp&quot;, {id:&quot;{!Opportunity.Id}&quot;});
+window.alert(&quot;Complete.&quot; );</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Clone_w_Lead_Originator</fullName>
+        <availability>online</availability>
+        <description>Custom button that would clone an opportunity and set lead originator</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <linkType>url</linkType>
+        <masterLabel>Clone</masterLabel>
+        <openType>replace</openType>
+        <protected>false</protected>
+        <url>/{!Opportunity.Id}/e?clone=1&amp;retURL=%2Fapex%2FOpportunityDetailOverride%3Fid%3D{!Opportunity.Id}%26sfdc.override%3D1&amp;{!$Setup.OpportunityCloning__c.Field_ID_for_Original_Oppty_ID__c}={!Opportunity.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Notes_Attachments</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Notes &amp; Attachments</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>var url = window.location.href;
+var urlRef;
+if (url.indexOf(&apos;sfdc.override=1&apos;) &gt; -1){
+   urlRef = url.substring(0,url.indexOf(&apos;sfdc.override=1&apos;))
+   urlRef += &apos;#optyDetail:j_id28_target&apos;;
+}else{
+   if(url.indexOf(&apos;&amp;&apos;) &gt; -1){
+    urlRef = url.substring(0,url.indexOf(&apos;&amp;&apos;));
+  }
+   urlRef += &apos;#optyDetail:j_id28_target&apos;;
+}
+window.location.href = urlRef;</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Re_assign</fullName>
+        <availability>online</availability>
+        <description>Manual re-assign of Oppty owner.</description>
+        <displayType>button</displayType>
+        <height>600</height>
+        <linkType>page</linkType>
+        <masterLabel>Re-assign</masterLabel>
+        <openType>sidebar</openType>
+        <page>OpportunityReassign</page>
+        <protected>false</protected>
+    </webLinks>
+    <webLinks>
+        <fullName>Select_Contract</fullName>
+        <availability>online</availability>
+        <description>Custom button to enable sales consultants to select from a list of templates to send to the customer.</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Select Contract</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>//  ======================================================================
+//  NAME : EchoSign for Salesforce Big Button
+//  AUTHOR : Chris Merrill (cmerrill@adobe.com)
+//  UPDATES : Latest version available at http://j.mp/1vPHwS8
+//  ======================================================================
+//  This button will query for all agreement templates and
+//  present a list for the user to choose an agreement template from.
+//  If there is only 1 template, no options are given and that agreement 
+//  template is used.
+//  If there are no agreement templates, an alert is displayed.
+//  ======================================================================
+//      
+// Id of MasterObjectType. Taken from URL
+//var MasterObjectId     = document.URL.split(&quot;/&quot;)[3].split(&quot;?&quot;)[0];
+var MasterObjectId     = document.URL.split(&quot;/&quot;)[4].split(&quot;?&quot;)[1].split(&quot;&amp;&quot;)[0].split(&quot;=&quot;)[1];
+// Try to determine ObjectType by Id Prefix
+// Master Object to be used with the agreement template
+// Prefix to standard object mapping definitions: http://j.mp/1BY2cYY
+var MasterObjectType; 
+switch ( MasterObjectId.substring(0, 3) ) {
+    case &apos;001&apos;:	MasterObjectType = &apos;Account&apos;; break;
+    case &apos;003&apos;:	MasterObjectType = &apos;Contact&apos;; break;
+    case &apos;005&apos;: MasterObjectType = &apos;User&apos;; break;
+    case &apos;006&apos;: MasterObjectType = &apos;Opportunity&apos;; break;
+    case &apos;800&apos;: MasterObjectType = &apos;Contract&apos;; break;
+    case &apos;500&apos;: MasterObjectType = &apos;Case&apos;; break;
+    case &apos;00Q&apos;: MasterObjectType = &apos;Lead&apos;; break;
+    
+    // If you are using a custom object, or one not listed above, 
+    // Change the default below  
+    default: 	MasterObjectType = &quot;Opportunity&quot;;
+}	//&lt;/switch
+
+// Salesforce.com Javascript libraries
+{!REQUIRESCRIPT( &quot;/soap/ajax/31.0/connection.js&quot; )}
+{!REQUIRESCRIPT( &quot;/soap/ajax/31.0/apex.js&quot; )}
+
+// DMD 4/19/2016 -- swallow errors if agent has no access
+try {
+
+// Find Agreement templates related to MasterObjectType
+// Change the query as needed to add additional filters for the agreement templates
+var agreements = sforce.connection.query( &quot;SELECT Id, Name FROM echosign_dev1__Agreement_Template__c WHERE echosign_dev1__Master_Object_Type__c = &apos;&quot; + MasterObjectType + &quot;&apos;&quot; );
+
+// Get array of related Agreement Templates
+records = agreements.getArray( &quot;records&quot; );
+  	
+// If there are zero templates, alert user and do nothing  
+if( records.length == 0) {
+    alert(&apos;There are no agreement templates to choose from.&apos;);
+// If there is ONE template, there is no need to choose one. Navigate user forward
+}
+// Persistent team : BTBS-4897: commenting the code to show quote list with agrrement list in the same popup 
+/* else if(records.length == 1) {
+    location.href = &apos;/apex/echosign_dev1__AgreementTemplateProcess?masterId=&apos; + MasterObjectId + &apos;&amp;TemplateId=&apos; + records[0].Id;
+  
+    // If there are more than one, Let the user choose which template to user
+} */
+else {
+    /* ==== Changes for showing Quote list with agrrement list in the same popup ===== */
+    // Declare HTML string for popup
+    var agreementListHtml = &apos;&lt;div id=&quot;templateLinks&quot;&gt; &lt;b&gt;Select Agreement Template&lt;/b&gt; &lt;br/&gt;&lt;br /&gt;&apos;;
+    // Build HTML to show in modal.
+    for (var i=0; i&lt; records.length; i++) {
+        agreementListHtml += &apos;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;input type=&quot;radio&quot; name=&quot;agrrementTemps&quot; value=&quot;&apos; + records[i].Id + 
+        &apos;&quot; title=&quot;&apos; + records[i].Id + &apos;&quot; onClick=&quot;activeContinueButton()&quot;/&gt;&amp;nbsp;&apos;+ records[i].Name;
+        if( i&lt; records.length ) {
+            agreementListHtml += &apos;&lt;br /&gt;&lt;br /&gt;&apos;;
+        } // &lt;/if
+
+    }
+    agreementListHtml += &apos;&lt;/div&gt;&apos;;
+    // &lt;/for
+
+    //Persistent team BTBS-4897: Made the changes to show Quote list for generating Pdf on clicking Select Contract button. 
+    var quoteList = sforce.apex.execute(&quot;QuotePdfGenerator&quot;,&quot;getQuoteListForOpp&quot;,{opportunityId:MasterObjectId});
+	// BTBS-4897 to show Quote list in same popup to generate Pdf.
+    var quoteListradio = &apos;&lt;div id=&quot;quoteResult&quot;&gt;&lt;/div&gt;&lt;br /&gt;&apos;+
+            &apos;&lt;span&gt;&lt;b&gt;Select Quote for generating PDF and attaching with Agreement.&lt;/b&gt;&lt;/span&gt;&apos;+
+            &apos;&lt;div id=&quot;QuoteList&quot; style=&quot;overflow-y: auto; height: 100px;&quot;&gt;&lt;br/&gt;&apos;;
+    for (var i=0; i&lt; quoteList.length; i++) {
+        quoteListradio += &apos;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;input type=&quot;radio&quot; name=&quot;Quote&quot; value=&quot;&apos; + quoteList[i].Id + 
+        &apos;&quot; onClick=&quot;qenerateQuotePdf(\&apos;&apos; +  MasterObjectId + &apos;\&apos;, this)&quot;/&gt;&apos;
+        + quoteList[i].Name;
+
+        if( i&lt; quoteList.length ) {
+            quoteListradio += &apos;&lt;br /&gt;&lt;br /&gt;&apos;;
+        } // &lt;/if
+    }
+    quoteListradio += &apos;&lt;/div&gt;&lt;br /&gt;&apos;;
+
+    // HTML for close button that is included at the bottom of the modal
+    var closeButtonHtml = &quot;&lt;div style=&apos;display: inline-block;&apos;&gt;&lt;button class=&apos;btn&apos; onclick=&apos;window.console.sd.hide(); return false;&apos;&gt;&amp;nbsp;Close&amp;nbsp;&lt;/button&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/div&gt;&quot;;
+
+    // BTBS-4897: HTML for continue button that is included at the bottom of the modal
+    var continueButtonHtml = &quot;&lt;div style=&apos;display: inline-block;&apos;&gt;&lt;button id=&apos;continueButton&apos; class=&apos;btnDisabled&apos; onclick=agreementTemplateProcess(&apos;&quot;+ MasterObjectId +&quot;&apos;) disabled=\&quot;true\&quot;&gt;&amp;nbsp;Continue&amp;nbsp;&lt;/button&gt;&amp;nbsp;&amp;nbsp;&amp;nbsp;&lt;/div&gt;&quot;;
+
+    var popupButtonList = &quot;&lt;div style=&apos;text-align:right;&apos;&gt;&quot; +continueButtonHtml + closeButtonHtml + &quot;&lt;/div&gt;&quot;;
+    // Use salesforce.com native SimpleDialog() to show modal
+    var sd = new SimpleDialog( &quot;Agreement Template Chooser&quot; + Math.random(), false );    
+    sd.setTitle( &quot;Choose an Agreement Template and Quote for generating Pdf&quot; );
+    sd.createDialog();   
+    // BTBE-122: window.parent was not working under sales console application 
+    //window.parent.sd = sd; 
+    window.console.sd = sd;	
+    sd.setContentInnerHTML(agreementListHtml + quoteListradio + popupButtonList);    
+    sd.show();  
+
+} // &lt;/else
+} catch ( Ex ) {
+  // Display error message?
+  alert( &quot;You do not have permission to select a contract&quot; );
+  // exit quietly?
+}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>crmc_Mass_Update</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Mass Update</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>(function (e,t){var n=document.getElementsByTagName(&quot;HEAD&quot;).item(0),r=document.createElement(&quot;script&quot;);r.type=&quot;text/javascript&quot;,n.appendChild(r),r.onload=function(){MassUpdate.massUpdate(e,t)},r.src=&quot;/resource/CRMC_MassUpdate__MassUpdate?ts=&quot;+(new Date).getTime()}({!GETRECORDIDS( $ObjectType.Opportunity)},window.top.location.href));</url>
+    </webLinks>
+</CustomObject>

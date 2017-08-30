@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Staging Object</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Staging Object</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>AccountId__c</name>
+        <relationshipLabel><!-- Staging Object --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Asset_Name --></label>
+        <name>Asset_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Cancel Date --></label>
+        <name>Cancel_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Channel --></label>
+        <name>Channel__c</name>
+    </fields>
+    <fields>
+        <label><!-- Company Id --></label>
+        <name>Company_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>Contact__c</name>
+        <relationshipLabel><!-- Staging Object --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Converted Asset --></label>
+        <name>Converted_Asset__c</name>
+        <relationshipLabel><!-- Staging Object (Converted Asset) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Current Product --></label>
+        <name>Current_Product__c</name>
+        <relationshipLabel><!-- Staging Records --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Delete_Date --></label>
+        <name>Delete_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Charge Date --></label>
+        <name>First_Charge_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Login Date --></label>
+        <name>Last_Login_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Migrate In Date --></label>
+        <name>Migrate_In_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Migrate Out Date --></label>
+        <name>Migrate_Out_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Name --></label>
+        <name>Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Next Charge Date --></label>
+        <name>Next_Charge_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Object Type --></label>
+        <name>Object_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Online Cancel Reason --></label>
+        <name>Online_Cancel_Reason__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expiry Date --></label>
+        <name>Online_Expiry_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- This date will reflect the GNS date for WSB assets for all countries as the signup date, and for all other QBO assets as the First Charge Date. --></help>
+        <label><!-- Online_GNS_Date --></label>
+        <name>Online_GNS_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Online Offer Code --></label>
+        <name>Online_Offer_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Online_Parent --></label>
+        <name>Online_Parent__c</name>
+        <relationshipLabel><!-- Parent Assets --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Online Updated Date --></label>
+        <name>Online_Updated_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- Staging Object --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Original Product --></label>
+        <name>Original_Product__c</name>
+        <relationshipLabel><!-- Staging Object (Original Product) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Payment Setup Date --></label>
+        <name>Payment_Setup_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary --></label>
+        <name>Primary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product --></label>
+        <name>Product__c</name>
+        <relationshipLabel><!-- Staging Object (Product) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Projected First Charge Date --></label>
+        <name>Projected_First_Charge_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- ReSubscribe Date --></label>
+        <name>ReSubscribe_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Related_Company_Id --></label>
+        <name>Related_Company_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Score --></label>
+        <name>Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Signup Date --></label>
+        <name>Signup_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Suspend Date --></label>
+        <name>Suspend_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Trial End Date --></label>
+        <name>Trial_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type --></label>
+        <name>Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Upgrade Date --></label>
+        <name>Upgrade_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- # of Logins --></label>
+        <name>of_Logins__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

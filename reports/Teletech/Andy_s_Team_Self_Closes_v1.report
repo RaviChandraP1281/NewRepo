@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>AMOUNT</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>((1 AND 2 AND (3 OR 4)) AND 5) AND 6</booleanFilter>
+        <criteriaItems>
+            <column>STAGE_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Closed Won,asses</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FULL_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>cortney,demarco,evelyne,fortune,schepps,hayes,desiree,denzel,austin harrison,fierro,fredette,donald holy,tien,maria smith,spillane,darryn,salley,ellis,alian,jiaying,beverage,kaltz,rico,carrillo,randaz,cheyenne,kobe</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Lead_Originator__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>cortney,demarco,evelyne,fortune,schepps,hayes,desiree,denzel,austin harrison,fierro,fredette,donald holy,tien,maria smith,spillane,darryn,salley,ellis,alian,jiaying,beverage,kaltz,rico,carrillo,randaz,cheyenne,kobe</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>cortney,demarco,evelyne,fortune,schepps,hayes,desiree,denzel,austin harrison,fierro,fredette,donald holy,tien,maria smith,spillane,darryn,salley,ellis,alian,jiaying,beverage,kaltz,rico,carrillo,randaz,cheyenne,kobe</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>LEAD_SOURCE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Chat</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>AMOUNT</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>greaterThan</operator>
+            <value>USD 1</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Month</dateGranularity>
+        <field>CLOSE_DATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FULL_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Andy&apos;s Team - Self Closes.v1</name>
+    <params>
+        <name>open</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunity</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CLOSE_DATE</dateColumn>
+        <endDate>2016-04-10</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2016-04-01</startDate>
+    </timeFrameFilter>
+</Report>

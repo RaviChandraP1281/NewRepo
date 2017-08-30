@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_44521724</developerName>
+        <masterLabel>Time Zone</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Account.Territory__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>NORCAL</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>North West</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>SOCAL</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>South West</sourceValue>
+            </sourceValues>
+            <value>PST</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Mid West</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>South Central</sourceValue>
+            </sourceValues>
+            <value>CST</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>North East</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>South East</sourceValue>
+            </sourceValues>
+            <value>EST</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>VerticalColumn</chartType>
+        <enableHoverLabels>true</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>BucketField_44521724</groupingColumn>
+        <location>CHART_TOP</location>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>true</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>ACCOUNT_ID</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.Program_Status__c</field>
+    </columns>
+    <columns>
+        <field>Account.CAN__c</field>
+    </columns>
+    <columns>
+        <field>Account.Company_ID__c</field>
+    </columns>
+    <columns>
+        <field>DUE_DATE</field>
+    </columns>
+    <columns>
+        <field>Account.Territory__c</field>
+    </columns>
+    <crossFilters>
+        <criteriaItems>
+            <column>Sub_Type__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Care,Onboarding,Other,Respond to Marketing Email,Sales,Training Inquiry,Update Information</value>
+        </criteriaItems>
+        <operation>without</operation>
+        <primaryTableColumn>ACCOUNT_ID</primaryTableColumn>
+        <relatedTable>Activity</relatedTable>
+        <relatedTableJoinColumn>Account</relatedTableJoinColumn>
+    </crossFilters>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Account.Customer_Tier__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>QB Priority Circle Tier 1,QB Priority Circle Tier 2,QB Priority Circle Tier 3</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Program_Status__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Engaged,Opted Out</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <aggregateType>RowCount</aggregateType>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_44521724</field>
+        <sortByName>RowCount</sortByName>
+        <sortOrder>Asc</sortOrder>
+        <sortType>Aggregate</sortType>
+    </groupingsDown>
+    <name>My Accounts not Engaged</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>ownaccountteam</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>DUE_DATE</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

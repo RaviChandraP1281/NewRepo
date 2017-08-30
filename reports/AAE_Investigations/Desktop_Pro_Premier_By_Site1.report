@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_84168543</developerName>
+        <masterLabel>Valid</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Case_Investigation__c.Sub_Status__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Entered in Jira</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Company Specific Fix</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Company Data Fix</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Resolved</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>KB Created</sourceValue>
+            </sourceValues>
+            <value>Valid</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Researching</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Follow Up Needed</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Unassigned</sourceValue>
+            </sourceValues>
+            <value>Researching</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Will Not Fix</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Waiting for More Information</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Aging Closed</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Duplicate</sourceValue>
+            </sourceValues>
+            <value>Invalid</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Case_Investigation__c.Subject__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Case_Investigation__c.Impacted_Regions__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>includes</operator>
+            <value>United States</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case_Investigation__c.Impacted_Products__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>includes</operator>
+            <value>QuickBooks Desktop Accountant,QuickBooks Desktop Enterprise,QuickBooks Desktop Pro Premier,QuickBooks Desktop Mac</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Case_Investigation__c.Created_Site__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_84168543</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Desktop Pro/Premier By Site</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Case_Investigation__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <endDate>2017-06-30</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2017-06-21</startDate>
+    </timeFrameFilter>
+</Report>

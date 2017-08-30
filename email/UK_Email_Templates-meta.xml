@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessType>Shared</accessType>
+    <name>UK Email Templates</name>
+    <publicFolderAccess>ReadOnly</publicFolderAccess>
+    <sharedTo>
+        <role>Global_Executive</role>
+        <roleAndSubordinates>UK_BDM_Mgr</roleAndSubordinates>
+        <roleAndSubordinates>UK_Sales_Leader</roleAndSubordinates>
+        <roleAndSubordinates>UK_Tele_Mgr</roleAndSubordinates>
+    </sharedTo>
+</EmailFolder>

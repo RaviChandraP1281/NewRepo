@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Case$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>Case.CaseArticles$ArticleNumber</field>
+    </columns>
+    <columns>
+        <field>Case.CaseArticles$ArticleType</field>
+    </columns>
+    <columns>
+        <field>Case.CaseArticles$Language</field>
+    </columns>
+    <columns>
+        <field>Case.CaseArticles$ArticleLanguage</field>
+    </columns>
+    <columns>
+        <field>Case.CaseArticles$CreatedBy</field>
+    </columns>
+    <columns>
+        <field>Case.CaseArticles$Summary</field>
+    </columns>
+    <currency>USD</currency>
+    <description>KM articles that were used within cases.  For the current fiscal quarter</description>
+    <format>Tabular</format>
+    <name>KM with Cases</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Cases_and_KM__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Case$ClosedDate</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>NATACC Reminder Email Template</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Desktop_Data_Services</letterhead>
+    <name>NATACC Reminder Email</name>
+    <style>freeForm</style>
+    <subject>&lt;case reason&gt;, Case #: &lt;case number&gt;</subject>
+    <textOnly>Dear {!Contact.Name},
+
+As the Care Account Manager responsible for {!Account.Name}, I wanted to take a moment to remind you that the National Accounts Team is available to assist you with QuickBooks desktop software, QuickBooks Online Accountant, and QBO issues. Additionally, we have direct access to dedicated resources for issues or questions regarding Payroll, Merchant Services, Third Party Apps, etc.  If it connects to QuickBooks, we are ready to assist you with the issue.
+
+The best method for contacting me directly is to either send an email to NATACC@INTUIT.COM with a Subject &quot;Attn: {!Case.OwnerFirstName} or call me directly at [AGENT DIRECT DIAL PHONE NUMBER]. If you email or call, and leave a voicemail message, either myself or another team member will respond as soon as we are able. If your situation is critical or time sensitive, send your email with the Subject &quot;URGENT&quot;. For immediate assistance, please call 888-333-3451 and speak to one of our Diamond ProAdvisor Customer Support Specialists.
+
+Thank you,
+{!Case.OwnerFullName}
+National Accounts - Accountant Care Specialist
+ProAdvisor Technical Support: 888-333-3451
+Email: NATACC@intuit.com
+
+Please complete the survey if the opportunity presents itself.  If you did not receive a survey but would like to provide feedback on my performance, please email my manager directly at Sean_Randall@Intuit.com</textOnly>
+    <type>html</type>
+</EmailTemplate>

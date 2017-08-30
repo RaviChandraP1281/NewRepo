@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Study__c$Name</field>
+    </columns>
+    <columns>
+        <field>Study__c.Study_Participants__r.Participant_Surveys_Feedback__r$Name</field>
+    </columns>
+    <columns>
+        <field>Study__c.Study_Participants__r.Participant_Surveys_Feedback__r$NPS_Recommended__c</field>
+    </columns>
+    <columns>
+        <field>Study__c.Study_Participants__r.Participant_Surveys_Feedback__r$What_do_in_future_to_get_a_9_or_10__c</field>
+    </columns>
+    <columns>
+        <field>Study__c.Study_Participants__r.Participant_Surveys_Feedback__r$What_did_we_do_really_well__c</field>
+    </columns>
+    <columns>
+        <field>Study__c.Study_Participants__r.Participant_Surveys_Feedback__r$Anything_to_Share_with_us__c</field>
+    </columns>
+    <currency>USD</currency>
+    <description>This report will display the Participant NPS score w.r.t recruiter and verbatims</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Study__c$Recruiter__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Participant NPS by Recruiter &amp; Verbatims</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Participant_NPS_by_Recruiter_verbatims__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Study__c$CreatedDate</dateColumn>
+        <interval>INTERVAL_CURRENT</interval>
+    </timeFrameFilter>
+</Report>

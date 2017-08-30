@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_39927456</developerName>
+        <masterLabel>Lead Type</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>Lead.Legacy_Treatment_Name__c</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Professional Web</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY14 ProSeries Evals</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Try it Free</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sign up for a webinar</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Schedule a call</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>ProSeries Eval - Default</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY15 ProSeries Pre-Order Eval</sourceValue>
+            </sourceValues>
+            <value>ProSeries Eval</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Web Lacerte Evals</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY14 Lacerte Eval</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Lacerte Eval - Default</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY15 Lacerte Pre-Order Eval</sourceValue>
+            </sourceValues>
+            <value>Lacerte Eval</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Lacerte Webinar</sourceValue>
+            </sourceValues>
+            <value>Lacerte Webinar</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>ProSeries Webinar</sourceValue>
+            </sourceValues>
+            <value>ProSeries Webinar</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>TY14 Trade Show (IRS Chicago)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY14 Trade Show (IRS NOLA)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY14 Trade Show (IRS San Diego)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY14 Trade Show (IRS DC)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY14 Trade Show (LTPA Vegas)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY14 Trade Show (NAEA Vegas)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY14 Trade Show (NATP Orlando)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY14 Trade Show (NATP Orlando))</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY14 Trade Show (Vegas NAEA).</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Vegas NAEA (TY14)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Vegas LTPA (TY14)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY14 Trade Show (IRS SD)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY14 Trade Show (IRS Orlando)</sourceValue>
+            </sourceValues>
+            <value>Trade Show</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>ACA Webinar</sourceValue>
+            </sourceValues>
+            <value>ACA Webinar</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>RT Web Lead</sourceValue>
+            </sourceValues>
+            <value>RT Web Lead</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>Lead.Retire_Reason__c</field>
+    </columns>
+    <columns>
+        <field>OWNER</field>
+    </columns>
+    <columns>
+        <field>Lead.Legacy_Treatment_Code__c</field>
+    </columns>
+    <columns>
+        <field>Lead.Legacy_Treatment_Name__c</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATE_BY</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATE</field>
+    </columns>
+    <columns>
+        <field>COMPANY</field>
+    </columns>
+    <columns>
+        <field>PHONE</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <currency>USD</currency>
+    <description>list from mrktg that indicated shopping</description>
+    <filter>
+        <booleanFilter>1 AND 2 AND (3 OR 4 OR 5)</booleanFilter>
+        <criteriaItems>
+            <column>CREATED_DATE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>4/15/2015 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>PCG - Speed Of Contact Team,Sharbel Abi-Habib,Marc Freidberg,Corey Spear,Brian Curran,Cynthia Thomas,Gerald Henry,Kelsey Alford,Kimberly Gallahan,Michael Chavez,Jason Tritle,Justin Evans,John Trammell,Jonathan Lovitt,Maria Harris,Robert Randall,Otto Prado,Victoria Maher</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Legacy_Treatment_Name__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Append</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Treatment_Code__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Append</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Legacy_Treatment_Code__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Append</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>STATUS</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Lead.Lead_Owner_Read_Only__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>IRS Append Records</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LeadList</reportType>
+    <scope>org</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>LAST_UPDATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2016-04-01</startDate>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,16 @@
+QuickBooks Online Edition Company ID {!Contact.Company_ID__c} for {!Account.Name} 
+
+Hello {!Contact.FirstName}, 
+
+I just wanted to send you a quick follow-up email regarding your QuickBooks Online. Your trial is ending soon and I wanted to offer a discount on your subscription. 
+
+Just let me know the best time and number to reach you to review the promotions available. I look forward to speaking with you soon.
+
+Thank you,
+
+{!User.Name}
+Small Business Specialist - Intuit Inc.
+
+{!User.Email}
+{!User.Phone}
+{!User.Address}

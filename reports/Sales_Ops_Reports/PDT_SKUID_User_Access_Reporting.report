@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>User.SkuidPageHistorys__r$LastVisitedDate__c</field>
+    </columns>
+    <columns>
+        <field>User.SkuidPageHistorys__r$VisitCount__c</field>
+    </columns>
+    <crossFilters>
+        <operation>with</operation>
+        <primaryTableColumn>User$Id</primaryTableColumn>
+        <relatedTable>SkuidPageHistory__c</relatedTable>
+        <relatedTableJoinColumn>UserId__c</relatedTableJoinColumn>
+    </crossFilters>
+    <currency>USD</currency>
+    <description>Report of SKUID page adoption showing only users who have accessed SKUID pages.</description>
+    <filter>
+        <criteriaItems>
+            <column>User*User$User_Profile__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Sales Consultant,Global Sales,US Account Management,Global Account Management,Onboarding Support</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User$IsActive</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>User.SkuidPageHistorys__r$PageName__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>User*User$Role__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>User$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>PDT SKUID User Access Reporting</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Users_with_or_without_SKUIDPageHistory__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>User.SkuidPageHistorys__r$LastVisitedDate__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>User$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

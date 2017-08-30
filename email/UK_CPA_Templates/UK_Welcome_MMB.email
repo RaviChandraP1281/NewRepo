@@ -1,0 +1,117 @@
+<table height="400" width="600" cellpadding="5" border="0" cellspacing="5" >
+<tr height="50" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r1" locked="0" aEditID="c1r1" >
+<![CDATA[<p class="JohnBodytext"><span style="font-size: 11pt; line-height: 115%;">Dear </span><span lang="EN-US" style="font-size: 11pt; line-height: 115%;">{!Contact.FirstName}</span><span lang="EN-US" style="font-size: 11pt; line-height: 115%;">,</span><span lang="EN-US" style="color: red; font-size: 11pt; line-height: 115%;"><o:p></o:p></span></p>]]></td>
+</tr>
+<tr height="300" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r2" locked="0" aEditID="c1r2" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0);">It was good to talk to you today about QuickBooks Online.<span lang="EN-US"><o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0);"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0);">I’m pleased to report that we’ve now set up your QuickBooks
+Online account.<o:p></o:p></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0);"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0);"><b><span style="font-size:14.0pt">How to sign in<o:p></o:p></span></b></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0);"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0);">You can sign in to QuickBooks Online at <span lang="EN-US"><span lang="EN-GB"><a href="http://www.intuit.co.uk">www.intuit.co.uk</a></span></span>.
+Just use these details:<o:p></o:p></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0);"><o:p>&nbsp;</o:p></p>
+
+<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" style="color: rgb(0, 0, 0); border-collapse: collapse;">
+ <tbody><tr>
+  <td style="border:solid black 1.0pt;padding:2.7pt 2.7pt 2.7pt 2.7pt">
+  <p class="MsoNormal" style="line-height:115%"><b><span style="font-size: 9pt; line-height: 115%; font-family: Arial, sans-serif;">User ID:<o:p></o:p></span></b></p>
+  </td>
+  <td style="border:solid black 1.0pt;border-left:none;padding:2.7pt 2.7pt 2.7pt 2.7pt">
+  <p class="MsoNormal"><font face="Arial, sans-serif" color="#ff0000"><span style="font-size: 12px; line-height: 13.800000190734863px;">{!Opportunity.Legacy_Treatment_Name__c}</span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border:solid black 1.0pt;border-top:none;padding:2.7pt 2.7pt 2.7pt 2.7pt">
+  <p class="MsoNormal" style="line-height:115%"><b><span style="font-size: 9pt; line-height: 115%; font-family: Arial, sans-serif;">Password:<o:p></o:p></span></b></p>
+  </td>
+  <td style="border-top:none;border-left:none;border-bottom:solid black 1.0pt;
+  border-right:solid black 1.0pt;padding:2.7pt 2.7pt 2.7pt 2.7pt">
+  <p class="MsoNormal"><font face="Arial, sans-serif" color="#ff0000"><span style="font-size: 12px; line-height: 13.800000190734863px;">{!Opportunity.Legacy_Treatment_Code__c}</span></font></p>
+  </td>
+ </tr>
+ <tr>
+  <td style="border:solid black 1.0pt;border-top:none;padding:2.7pt 2.7pt 2.7pt 2.7pt">
+  <p class="MsoNormal" style="line-height:115%"><b><span style="font-size: 9pt; line-height: 115%; font-family: Arial, sans-serif;">Company ID:<o:p></o:p></span></b></p>
+  </td>
+  <td style="border-top:none;border-left:none;border-bottom:solid black 1.0pt;
+  border-right:solid black 1.0pt;padding:2.7pt 2.7pt 2.7pt 2.7pt">
+  <p class="MsoNormal"><font face="Arial, sans-serif" color="#ff0000"><span style="font-size: 12px; line-height: 13.800000190734863px;">{!Opportunity.Company_ID__c}</span></font></p>
+  </td>
+ </tr>
+</tbody></table>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0);"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0);"><b><span style="font-size:14.0pt">How to move your data<o:p></o:p></span></b></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0);"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0);"><b><span lang="EN-US">The instructions attached to this email explain what you should do now
+to move your data to QuickBooks Online.</span></b><span lang="EN-US"> They tell you how to:<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0);"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoListParagraphCxSpFirst" style="color: rgb(0, 0, 0); text-indent: -18pt;"><!--[if !supportLists]--><span lang="EN-US" style="font-family: Symbol;">·<span style="font-size: 7pt; font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]--><b><span lang="EN-US">Login to QuickBooks Online </span></b><span lang="EN-US">for the first time<o:p></o:p></span></p>
+
+<p class="MsoListParagraphCxSpLast" style="color: rgb(0, 0, 0); text-indent: -18pt;"><!--[if !supportLists]--><span lang="EN-US" style="font-family: Symbol;">·<span style="font-size: 7pt; font-family: 'Times New Roman';">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><!--[endif]--><b><span lang="EN-US">Upload your company data file </span></b><span lang="EN-US">to the Movemybooks
+website.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0);"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0);"><span lang="EN-US">If
+you have any questions about these instructions, please call our care team on <b>0808
+234 5337</b>. We’re available 8am — 8pm on working days and happy to help.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0);"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal"><span lang="EN-US">If
+you have any other queries or just aren’t sure who to speak to, you can also
+call me directly on </span><span lang="EN-US">{!User.Phone}</span><span lang="EN-US" style="color: rgb(0, 0, 0);">. <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0);"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0);"><b><span style="font-size:14.0pt">Tell us how it’s going<o:p></o:p></span></b></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0);"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0);"><span lang="EN-US">We hope
+that getting started with QuickBooks Online has been easy so far.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0);"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0);"><span lang="EN-US">Your
+feedback helps improve the service we provide, so we'll send you a survey
+within the next 24 hours. It would be great if you could complete it to let us
+know how you’ve found things. <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0);"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0);"><span lang="EN-US">You can
+also send any other thoughts straight to my manager by clicking the green tick
+below.</span></p>]]></td>
+</tr>
+<tr height="50" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c1r3" locked="0" aEditID="c1r3" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span lang="EN-US">Thanks again
+for choosing QuickBooks.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span lang="EN-US">&nbsp;</span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span lang="EN-US">Kind
+regards,<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span lang="EN-US"><br></span></p><p class="MsoNormal"><span lang="EN-US"><font face="arial">{!User.FirstName}&nbsp;</font></span><font face="arial">{!User.LastName}</font></p><p class="MsoNormal"><font face="arial">{!User.Email}</font></p>]]></td>
+</tr>
+</table>

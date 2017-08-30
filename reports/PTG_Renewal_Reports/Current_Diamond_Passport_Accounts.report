@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$CAN__c</field>
+    </columns>
+    <columns>
+        <field>Account$Owner</field>
+    </columns>
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Renewals__r$Renewal_Preference__c</field>
+    </columns>
+    <columns>
+        <field>Account.Renewals__r$Value_Rank__c</field>
+    </columns>
+    <columns>
+        <field>Account.Renewals__r$Renewal_Product__c</field>
+    </columns>
+    <columns>
+        <field>Account.Renewals__r$LastModifiedBy</field>
+    </columns>
+    <columns>
+        <field>Account.Renewals__r$LastModifiedDate</field>
+    </columns>
+    <crossFilters>
+        <criteriaItems>
+            <column>Value_Rank__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>05 - Diamond Passport</value>
+        </criteriaItems>
+        <operation>with</operation>
+        <primaryTableColumn>Account$Id</primaryTableColumn>
+        <relatedTable>Renewals__c</relatedTable>
+        <relatedTableJoinColumn>Account_Renewal__c</relatedTableJoinColumn>
+    </crossFilters>
+    <currency>USD</currency>
+    <description>List of Diamond Passport accounts marked in SFDC.</description>
+    <format>Tabular</format>
+    <name>Current Diamond Passport Accounts</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Accounts_with_Renewal_Preference__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

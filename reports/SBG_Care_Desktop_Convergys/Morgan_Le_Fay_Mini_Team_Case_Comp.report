@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_18010109</developerName>
+        <masterLabel>Mini Team</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>OWNER</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>abigail marie maypa</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>jose zaldy jr rebucan</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>mar anthony diano</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>rhoda liza abesamis</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>samson arjie samson</sourceValue>
+            </sourceValues>
+            <value>Rhoda</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>irene may montanez</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>juvie villar</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>mary grace saladas</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>mona crisa rosal</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>rosamie bangaslao</sourceValue>
+            </sourceValues>
+            <value>Mona</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Diane Payosalan</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>giefril berjame</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>jesrell mauro</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>kristine kaye bayawa</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>mark albert bacanaya</sourceValue>
+            </sourceValues>
+            <value>Jess</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Sundee Alvez</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>efraim gallogo</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>jan roger cape</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>jenelyn dalman</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>neslyn taguran</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>listel grace bulacan</sourceValue>
+            </sourceValues>
+            <value>Sundee</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFF99</backgroundColor1>
+        <backgroundColor2>#FFCC99</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>HorizontalBarGrouped</chartType>
+        <enableHoverLabels>true</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>BucketField_18010109</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_TOP</location>
+        <secondaryGroupingColumn>STATUS</secondaryGroupingColumn>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>true</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>18</textSize>
+        <title>Mini Team&apos;s Survey Case Comp</title>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>CASE_NUMBER</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>AGE</field>
+    </columns>
+    <columns>
+        <field>ORIGIN</field>
+    </columns>
+    <columns>
+        <field>OPEN</field>
+    </columns>
+    <columns>
+        <field>CLOSED</field>
+    </columns>
+    <columns>
+        <field>ESCALATION_STATE</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Mona Crisa Rosal,Mar Anthony Diano,Diane Payosalan,Rhoda Liza Abesamis,Rosamie Bangaslao,Kristine Kaye Bayawa,Listel Grace Bulacan,Jenelyn Dalman,Jesrell Mauro,Irene May Montanez,Mary Grace Saladas,Sundee Alvez,Mark Albert Bacanaya,Samson Arjie Samson,Juvie Villar,Giefril Berjame,Jan Roger Cape,Efraim Gallogo,Abigail Marie Maypa,Jose Zaldy Jr Rebucan,Neslyn Taguran</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>STATUS</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_18010109</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>OWNER</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Morgan Le Fay Mini Team Case Comp</name>
+    <params>
+        <name>units</name>
+        <value>d</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATEONLY</dateColumn>
+        <endDate>2016-10-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2016-10-01</startDate>
+    </timeFrameFilter>
+</Report>

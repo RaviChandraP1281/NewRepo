@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CREATED</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>field_key</field>
+    </columns>
+    <columns>
+        <field>NEWVAL</field>
+    </columns>
+    <columns>
+        <field>Case.Asset__c</field>
+    </columns>
+    <columns>
+        <field>Case.Product__c</field>
+    </columns>
+    <columns>
+        <field>TYPE</field>
+    </columns>
+    <columns>
+        <field>CASE_NUMBER</field>
+    </columns>
+    <columns>
+        <field>DESCRIPTION</field>
+    </columns>
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>Case.SurveySendDate__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>1 OR 2 OR 3 OR 4</booleanFilter>
+        <criteriaItems>
+            <column>CASE_OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>David Carty,Julia Wright,Kincey Hess,Kayla Yeary,Michael Rose,Michael Sturgill,Rebecca Stansberry,Summer Stapleton,Thomas Hillman,Taylor Puckett,Vicki Culbertson,Yolonda Slemp,Nichole Wells,Travis Riggins,Laken Jenkins,Samantha Landingham,Stephanie Byington,Lindsey Isaacs,Sonja Smith,Joanne Robinson,Beth Hutson,Kimberly Alley,Grant Bloomer,Lindsey Strong,Pamela Hamilton,Allison Cole,Leona Baker,Bradley Blanton,Vanessa Gilbert,Anthony Tipton,Misty Minton,Christopher Porter,Heather Cllisso,Tracy Mullins,Isaiah Kinsey,Elmer Stapleton,Emily Hubbard,Lauren Stallard,Noah Fields Victoria Villiard,Nathan Ward,Zachary Pilkenton</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CASE_OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Columbus Turner,Amanda Wright,Carson Couch,Amber Skeens,Stephanie Finch,Terry Davenport,Nikki Carr,Zachary Douglas,Kelli Lane,Travis Day,Kennedy Allen,Kellie Phillips,Christopher Mullins,Richard Pickell,Skyler Poole,Benjamin Vanover,Ashley Adkins,Andrew Anderson,Caleb Thacker,Matthew Bledsoe,Christian Dimick,Greg Milam,Kelsey Aistrop,Rebecca Sturgill,Jeffery Sykes,Joshua Crabtree,Kimberly Fuller,Phillip Mullins,Gage Baker,Jacob Baldwin,Laken Blair,Patricia Brock,Stephanie Cantrell,Jeremy Davis,Elissa Dutton,Kayla Freeman,Angela Hackney,Megan Hall,Robert Harris,Natasha Lee,Connie Little,Eli Peters,Jaymil Sensabaugh,Victoria Wilkins</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CASE_OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Taylor Holbrook,Johnathan Schill,Zachary Herrell,Brittany Nixon,Heather Jones,Rebecca Wamsley,Chessie Molinary,William Steven,Camron Phipps,Travis Chestnut,Roseanne Purkey,Carolyn Collins,Bonnie Horne,Elizabeth Ward,Andrew Bentley,Michael Kirk,Lori Lawson,Hannah Bolling,Brent Dingus,Emily Edwards,Virginia Phillips,Amanda Gardner,Amanda Hubbard,Aaron Banks,Jay Coleman,Dylan Cooke,Shannon Cox,Christopher Deel,Steven Ferguson,Kayla Hill,Rebecca Kiser,Steven Knisley,Jordan Lambert,Seth Mitchell,Tamika Mooney,Taylor Moore,James Polly,Jonathan Powers,Kristina Richardson,Brian Salyer,Jessica Salyers,Paul Stacy,Crystal Wagner,Jeff Ward,Tammy Ward</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CASE_OWNER</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Alexis Palmer,Dustin Blackson,Laura Carter,Jacob Stallard,John Spaulding,Charles Gardner,Jeff Dean,Candace Rose,Robert Menteer,Kinsley Maggard,Chantry Powers,Heather Gillespie,Brittick Davis,Andrew Freeman,Jason Bentley,Alice Meade,Matthew Barrett,Jacob Freeman,Alexandra Louis,James Croley,Ethan Davis,Dustin Cumbo,Steven Knisley,Noah Fields</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CASE_OWNER</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Team Wise Open Cases</name>
+    <params>
+        <name>units</name>
+        <value>m</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseAuditHistory</reportType>
+    <scope>useronly</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>CREATED_DATE</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CASE_CREATED_DATE</dateColumn>
+        <endDate>2017-01-27</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2017-01-27</startDate>
+    </timeFrameFilter>
+</Report>

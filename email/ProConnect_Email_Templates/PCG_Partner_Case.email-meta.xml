@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>ProConnect_Emails</letterhead>
+    <name>PCG - Partner Case</name>
+    <style>freeForm</style>
+    <subject>Thank you for contacting Intuit ProConnect Customer Service</subject>
+    <textOnly>Dear {!Contact.FirstName} {!Contact.LastName},
+
+
+Thank you for contacting Intuit ProConnect Lacerte Customer Service.  It was a pleasure assisting you.
+
+
+
+Today we discussed your concerns regarding: [Recap the customer&apos;s concerns as succinctly as possible].  To resolve your concerns, we [add the steps you took to resolve, include any customer-facing articles used as reference and include the overall outcome of the interaction].
+
+
+We would like to make sure this has been completely resolved for you. Should you need to contact us again about this, you may use case #__________________ as the incident number.
+
+
+
+I appreciate the opportunity to assist you today and thank you for being a valued Intuit customer.
+
+
+
+Customer Account Number  {!Account.CAN__c}
+
+Account Name  {!Account.Name}
+
+
+
+
+
+Thank you,
+
+{!User.FirstName} {!User.LastName}</textOnly>
+    <type>html</type>
+</EmailTemplate>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Introducing QuickBooks Online- Intuit India</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>RNR Try Again Format 2</name>
+    <style>none</style>
+    <subject>Introducing QuickBooks Online- Intuit India</subject>
+    <textOnly>Intuit QuickBooks
+
+Let&apos;s connect!
+
+Dear {!Opportunity.Primary_Contact__c},
+
+I&apos;m {!User.FirstName}, your dedicated Quickbooks Consultant at Intuit. First of all, let me thank you for your interest in QuickBooks &amp; signing up for a free trial. I attempted to contact you on several occasions but were unable to do so. I request you to suggest when can we connect so that we can show you the important features of QuickBooks, and help you understand how it can work for your business.
+
+Benefits of QuickBooks for Business Owners:
+
+• See who owes you money and send them reminders
+• Get instant insights to your finances
+• Get complete visibility of your business (balance sheet, P&amp;L, tax details) with a click
+• Monitor key trends in your business like cash flow and revenue
+• Easy invoicing and estimates
+• Online banking integration
+• Multi user login, accountant login
+• Track sales and expense
+
+Feel free to call me on the number given below or drop me an email to discuss in detail.
+
+Thanks &amp; Regards
+{!User.Name}
+Quickbooks Consultant
+{!User.MobilePhone}
+{!User.Email}</textOnly>
+    <type>custom</type>
+</EmailTemplate>

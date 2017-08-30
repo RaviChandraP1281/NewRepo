@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>USERS.NAME</field>
+    </columns>
+    <columns>
+        <field>FK_CNTC_FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>1 AND 2 AND 3 AND (4 OR 5)</booleanFilter>
+        <criteriaItems>
+            <column>CUST_CREATED_DATE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>8/13/2014 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Country__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>United Kingdom</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Customer_Type__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Partner</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CNTC_ID</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>startsWith</operator>
+            <value>003i000000rQ1Oi,003i000000raQSB,003i000000rhKUD,003i000001EqOPv,003i000001EqOhE,003i000001EqOhU,003i000001EqOwA,003i000001EqP1H,003i000001EqP5m,003i000001EqP9B,003i000001EqPBk,003i000001EqPN2,003i000001EqPhK,003i000001EqPjb,003i000001EqQTZ,003i000001GTbOI,003i000001GTcJk,003i000001GTnoW,003i000000VtFFm,003i000000rcQGY,003i000001EqP8m,003i000001EqPRH,003i000001EqPl0,003i000001EqPmS,003i000001EqPnN,003i000001EqPux,003i000001EqPxF,003i000001EqQcn</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CNTC_EMAIL</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>gama@alderwick-james.co.uk,rashi.seksaria@goldblatts.co.uk,everard@michaelleigh.co.uk,stuart.dey@shipleys.com,keiko@sandersgroup.co.uk,marcusredford@redford.co.uk,jaimal.chandarana@googlemail.com,ian@parlow-associates.co.uk,johnassie@nicholasassie.com,sarah@leecons.co.uk,raj.chandarana@gmail.com,artijchandarana@googlemail.com,eqaccounting@hotmail.com,bjcyrus@hotmail.com,rak@westwakeprice.co.uk,albert@goldblatts.co.uk,cityroadoffice@aol.com,mailmrfarooq@gmail.com,cityroadoffiuce@aol.com,kmiller@montpeliergroup.com</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>ACCOUNT.NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Contacts w/ Rels Post 13Aug14/London/SWA</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountCustomEntity$Account_Relationship__c@Account_Relationship__c.Partner_Account_Contact__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>CUST_CREATED_DATE</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>DUE_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

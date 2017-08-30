@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_3616495</developerName>
+        <masterLabel>Offering</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>QLI.PRODUCT.PRODUCT_CODE</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>1300012</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>1300013</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>1300014</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>1300048</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>1300049</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>1300050</sourceValue>
+            </sourceValues>
+            <value>Subs Sale</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>1100759</sourceValue>
+            </sourceValues>
+            <value>Hosting Sale</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_74513775</developerName>
+        <masterLabel>Sub Level</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>QLI.PRODUCT.PRODUCT_CODE</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>1300012</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>1300048</sourceValue>
+            </sourceValues>
+            <value>1. Silver</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>1300013</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>1300049</sourceValue>
+            </sourceValues>
+            <value>2. Gold</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>1300014</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>1300050</sourceValue>
+            </sourceValues>
+            <value>3. Platinum</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_88926747</developerName>
+        <masterLabel>Team</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>FULL_NAME</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Angela Franzen</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Elham Kazemi</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Gerardo Valenzuela</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Jeremy Tilton</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Rick Fasnacht</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Paul LaPointe</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Tina Gray</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Kelly Diamond</sourceValue>
+            </sourceValues>
+            <value>&quot;Oldies&quot;</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Amanda Atchison</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Andrew Boone</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Andrew Ford</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Guillermo Leon</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>James Lott</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>John Lohmeier</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Linda Vasquez</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Christopher Jackson</sourceValue>
+            </sourceValues>
+            <value>&quot;Newbies&quot;</value>
+        </values>
+    </buckets>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>AMOUNT</field>
+    </columns>
+    <columns>
+        <field>QuoteLineItem.Siebel_Action_Code__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Siebel_Order_id__c</field>
+    </columns>
+    <columns>
+        <field>QLI.PRODUCT.PRODUCT_CODE</field>
+    </columns>
+    <columns>
+        <field>QLI.PRODUCT.NAME</field>
+    </columns>
+    <columns>
+        <field>QuoteLineItem.Siebel_Attrib__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Product_Family_of_Interest__c</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>LAST_STAGE_CHANGE_DATE</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Quote.Siebel_Status_Code__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Order Placed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ROLLUP_DESCRIPTION</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Market Response Agent</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FULL_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>MRT Sales &amp; Order Information</name>
+    <params>
+        <name>open</name>
+        <value>closedwon</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>QuoteProduct</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CLOSE_DATE</dateColumn>
+        <interval>INTERVAL_TODAY</interval>
+    </timeFrameFilter>
+</Report>

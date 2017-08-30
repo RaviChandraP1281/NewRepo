@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Assignment Team</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Assignment Teams</value>
+    </caseValues>
+    <fields>
+        <help><!-- The API name of the field that determines if a record is &quot;active&quot; for this AMX Team.  Distributors owned by this team will ONLY be able to filter against records that have this correct value or values. --></help>
+        <label><!-- Active Status Field Name --></label>
+        <name>Active_Status_Field_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Active Status Values --></label>
+        <name>Active_Status_Values__c</name>
+    </fields>
+    <fields>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <help><!-- Order of execution for this team. --></help>
+        <label><!-- Execution Order --></label>
+        <name>Execution_Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- Object Name --></label>
+        <name>Object_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Team Hours --></label>
+        <name>Team_Hours__c</name>
+        <relationshipLabel><!-- Assignment Teams --></relationshipLabel>
+    </fields>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

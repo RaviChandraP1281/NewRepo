@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Scoring Rule Fields</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Scoring Rule Fields</value>
+    </caseValues>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Field Comparison --></label>
+        <name>FieldComparison__c</name>
+    </fields>
+    <fields>
+        <label><!-- Use Field as Score --></label>
+        <name>FieldScore__c</name>
+    </fields>
+    <fields>
+        <label><!-- Field Name --></label>
+        <name>Field_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Field Type --></label>
+        <name>Field_Type__c</name>
+        <picklistValues>
+            <masterLabel>Boolean</masterLabel>
+            <translation><!-- Boolean --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Date</masterLabel>
+            <translation><!-- Date --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Date/Time</masterLabel>
+            <translation><!-- Date/Time --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Number</masterLabel>
+            <translation><!-- Number --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>String</masterLabel>
+            <translation><!-- String --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Value --></label>
+        <name>Field_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Operator --></label>
+        <name>Operator__c</name>
+        <picklistValues>
+            <masterLabel>Contains</masterLabel>
+            <translation><!-- Contains --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Does not contain</masterLabel>
+            <translation><!-- Does not contain --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ends with</masterLabel>
+            <translation><!-- Ends with --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Equals</masterLabel>
+            <translation><!-- Equals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Greater than</masterLabel>
+            <translation><!-- Greater than --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Greater than or equal</masterLabel>
+            <translation><!-- Greater than or equal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Less than</masterLabel>
+            <translation><!-- Less than --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Less than or equal</masterLabel>
+            <translation><!-- Less than or equal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not equals</masterLabel>
+            <translation><!-- Not equals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Regular Expression</masterLabel>
+            <translation><!-- Regular Expression --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Starts with</masterLabel>
+            <translation><!-- Starts with --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Score --></label>
+        <name>Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Scoring Rules --></label>
+        <name>Scoring_Rules__c</name>
+        <relationshipLabel><!-- Scoring Rule Fields --></relationshipLabel>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Data Services - Received Your Email</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Desktop_Data_Services</letterhead>
+    <name>Data Services - Received Your Email</name>
+    <style>freeForm</style>
+    <subject>Data Services - Data Services Received Your Voicemail or Email</subject>
+    <textOnly>Data Services Received Your Voicemail or Email {!Case.CaseNumber}
+
+Dear {!Contact.Name},
+
+[Template 1 - Received Audix]--------------------------------------------------------------------------------------------------------
+You sent us an email on [DATE], regarding {!Case.CaseNumber}. We have assigned your message to the agent working on your case. We always try to contact you as soon as possible, but we may be working with another customer.
+
+The expected turnaround time of callback from Data Services is 2 Business hours.
+
+Looking for Status Update?
+
+We recommend visiting the Data Services Case Status Information page. You will need the information you received from your Welcome email with &quot;SBG Data Services&quot; in the subject line. It contains the information you&apos;ll need to log in and see where your case is at in the recovery process.
+
+You also can leave a message directly to the specialist working on your case or provide additional information.
+
+We appreciate your time and patience.
+
+Thank you,
+Intuit Data Services
+
+This is an automated email. Please do not reply directly as you will not receive a response.</textOnly>
+    <type>html</type>
+</EmailTemplate>

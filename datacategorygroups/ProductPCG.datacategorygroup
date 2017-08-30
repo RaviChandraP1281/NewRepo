@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCategoryGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <label>Lacerte Tax</label>
+                <name>Lacerte_Tax</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Lacerte Tax Planner</label>
+                <name>Lacerte_Tax_Planner</name>
+            </dataCategory>
+            <label>Lacerte</label>
+            <name>Lacerte</name>
+        </dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <label>ProSeries Professional</label>
+                <name>ProSeries_Professional</name>
+            </dataCategory>
+            <dataCategory>
+                <label>ProSeries Basic</label>
+                <name>ProSeries_Basic</name>
+            </dataCategory>
+            <dataCategory>
+                <label>ProSeries Fixed Asset Manager</label>
+                <name>ProSeries_Fixed_Asset_Manager</name>
+            </dataCategory>
+            <label>ProSeries</label>
+            <name>ProSeries</name>
+        </dataCategory>
+        <dataCategory>
+            <label>ProConnect Tax Online</label>
+            <name>ProConnect_Tax_Online</name>
+        </dataCategory>
+        <dataCategory>
+            <label>ProFile</label>
+            <name>ProFile</name>
+        </dataCategory>
+        <dataCategory>
+            <label>EasyACCT</label>
+            <name>EasyACCT</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Document Management System</label>
+            <name>Document_Management_System</name>
+        </dataCategory>
+        <dataCategory>
+            <label>eSignature</label>
+            <name>eSignature</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Intuit Link</label>
+            <name>Intuit_Link</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Quick Collect</label>
+            <name>Quick_Collect</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Pay-by-Refund</label>
+            <name>Pay_by_Refund</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Quick Employer Forms</label>
+            <name>Quick_Employer_Forms</name>
+        </dataCategory>
+        <dataCategory>
+            <label>ProConnect Integrated App</label>
+            <name>ProConnect_Integrated_App</name>
+        </dataCategory>
+        <label>All</label>
+        <name>All</name>
+    </dataCategory>
+    <label>Product (PCG)</label>
+    <objectUsage>
+        <object>KnowledgeArticleVersion</object>
+    </objectUsage>
+</DataCategoryGroup>

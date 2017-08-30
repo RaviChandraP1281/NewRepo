@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This will be used by RNW(Future calling team)</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Email_Letterhead</letterhead>
+    <name>Video Links</name>
+    <style>freeForm</style>
+    <subject>QuickBooks Online- Get started with these Video Tutorials</subject>
+    <textOnly>Dear {!Contact.Name},
+
+Thank you for evaluating QuickBooks Online. Please visit the video tutorial of Quickbooks to learn more.
+
+You can also write us for more details.
+
+How to create free trial in QB
+
+http://goo.gl/4Bfa2a
+
+
+How to import customers and suppliers in QB
+
+http://goo.gl/oG4kCy
+
+
+How to import products and services in QB
+
+http://goo.gl/FumXPT
+
+
+How to create a customer in QB
+
+http://goo.gl/MyZoEt
+
+
+How to create an invoice in QB
+
+http://goo.gl/gU0ulq
+
+
+How to customize an invoice in QB
+
+http://goo.gl/rZ0PII
+
+
+How to create estimates in QB
+
+http://goo.gl/9Y1gYP
+
+
+How to convert estimates to invoice in QB
+
+http://goo.gl/Ox7cnT
+
+
+How to receive payment in QB
+
+http://goo.gl/kQXxB0
+
+
+How to create a new supplier in QB
+
+http://goo.gl/JHFUh9
+
+
+How to enter a bill in QB
+
+http://goo.gl/6JpncK
+
+
+How to enter a bill without TDS in QB
+
+http://goo.gl/25xiLf
+
+
+How to create a purchase order in QB
+
+http://goo.gl/RQj4qN
+
+
+How to record expense in QB
+
+http://goo.gl/5zG0Gk
+
+
+How to generate reports in QB
+
+http://goo.gl/AY9jZ1
+
+
+How to reconcile accounts with bank statements in QB
+
+http://goo.gl/nCkrnk
+
+
+How to download bank transactions in QB
+
+http://goo.gl/hquwyf
+
+
+How to import bank statements in .csv format in QB
+
+http://goo.gl/4LnKBm
+
+
+How to work with downloaded bank transactions in QB
+
+http://goo.gl/DlUeOO
+
+
+How to enable tax in QB
+
+http://goo.gl/9nRXp4
+
+
+How to create &amp; track budget in QB
+
+http://goo.gl/BNZy2K
+
+
+
+Thanks Again,
+QuickBooks Team India
+1800 102 5599</textOnly>
+    <type>html</type>
+</EmailTemplate>

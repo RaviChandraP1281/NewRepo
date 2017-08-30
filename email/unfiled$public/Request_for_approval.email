@@ -1,0 +1,5 @@
+Hello, 
+
+You are a member of the Approval Queues and there is a pending Concession Check request. Please follow the below link to continue the Concession Check process. 
+
+{!ApprovalRequest.Internal_URL}

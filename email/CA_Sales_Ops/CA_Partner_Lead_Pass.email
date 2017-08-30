@@ -1,0 +1,167 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif;
+mso-bidi-font-weight:bold">Hello ,<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif;
+mso-bidi-font-weight:bold">&nbsp;</span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif;
+mso-bidi-font-weight:bold">I was speaking with one of our QuickBooks Online
+customers earlier today and believe they would be a great fit. <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif;
+mso-bidi-font-weight:bold">&nbsp;</span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif;
+mso-bidi-font-weight:bold">Below is their information and contact details. I
+would really appreciate it if you could follow up with them in the next 24
+hours as they are expecting your call.</span><span style="font-size:10.0pt;
+font-family:&quot;Arial&quot;,sans-serif"> <o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif">&nbsp;</span></p>
+
+<table class="MsoNormalTable" border="0" cellspacing="0" cellpadding="0" align="left" width="623" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt; width: 467.25pt; border-collapse: collapse; margin-left: 6.75pt; margin-right: 6.75pt;">
+ <tbody><tr>
+  <td width="285" valign="top" style="width:213.55pt;border:solid black 1.0pt;
+  padding:5.25pt 5.25pt 5.25pt 5.25pt">
+  <p class="MsoNormal"><b><span style="font-size:10.0pt;font-family:
+  &quot;Arial&quot;,sans-serif;mso-bidi-font-style:italic">Name:</span></b><b><span style="font-size:10.0pt;font-family:
+  &quot;Arial&quot;,sans-serif"><o:p></o:p></span></b></p>
+  </td>
+  <td width="338" valign="top" style="width:253.7pt;border:solid windowtext 1.0pt;
+  border-left:none;mso-border-left-alt:solid windowtext .25pt;padding:5.25pt 5.25pt 5.25pt 5.25pt">{!Lead.FirstName}&nbsp;{!Lead.LastName}</td>
+ </tr>
+ <tr>
+  <td width="285" valign="top" style="width:213.55pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .25pt;padding:5.25pt 5.25pt 5.25pt 5.25pt">
+  <p class="MsoNormal"><b><span style="font-size:10.0pt;font-family:
+  &quot;Arial&quot;,sans-serif;mso-bidi-font-style:italic">Business Name:</span></b><b><span style="font-size:10.0pt;font-family:
+  &quot;Arial&quot;,sans-serif"><o:p></o:p></span></b></p>
+  </td>
+  <td width="338" valign="top" style="width:253.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .25pt;mso-border-left-alt:solid windowtext .25pt;
+  padding:5.25pt 5.25pt 5.25pt 5.25pt">{!Lead.Company}</td>
+ </tr>
+ <tr>
+  <td width="285" valign="top" style="width:213.55pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .25pt;padding:5.25pt 5.25pt 5.25pt 5.25pt">
+  <p class="MsoNormal"><b><span style="font-size:10.0pt;font-family:
+  &quot;Arial&quot;,sans-serif;mso-bidi-font-style:italic">Phone:</span></b><b><span style="font-size:10.0pt;font-family:
+  &quot;Arial&quot;,sans-serif"><o:p></o:p></span></b></p>
+  </td>
+  <td width="338" valign="top" style="width:253.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .25pt;mso-border-left-alt:solid windowtext .25pt;
+  padding:5.25pt 5.25pt 5.25pt 5.25pt">{!Lead.Phone}</td>
+ </tr>
+ <tr>
+  <td width="285" valign="top" style="width:213.55pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .25pt;padding:5.25pt 5.25pt 5.25pt 5.25pt">
+  <p class="MsoNormal"><b><span style="font-size:10.0pt;font-family:
+  &quot;Arial&quot;,sans-serif;mso-bidi-font-style:italic">Email Address:</span></b><b><span style="font-size:10.0pt;font-family:
+  &quot;Arial&quot;,sans-serif"><o:p></o:p></span></b></p>
+  </td>
+  <td width="338" valign="top" style="width:253.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .25pt;mso-border-left-alt:solid windowtext .25pt;
+  padding:5.25pt 5.25pt 5.25pt 5.25pt">{!Lead.Email}</td>
+ </tr>
+ <tr>
+  <td width="285" valign="top" style="width:213.55pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .25pt;padding:5.25pt 5.25pt 5.25pt 5.25pt">
+  <p class="MsoNormal"><b><span style="font-size:10.0pt;font-family:
+  &quot;Arial&quot;,sans-serif;mso-bidi-font-style:italic">Title / Role in Firm</span></b><b><span style="font-size:10.0pt;font-family:
+  &quot;Arial&quot;,sans-serif"><o:p></o:p></span></b></p>
+  </td>
+  <td width="338" valign="top" style="width:253.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .25pt;mso-border-left-alt:solid windowtext .25pt;
+  padding:5.25pt 5.25pt 5.25pt 5.25pt"></td>
+ </tr>
+ <tr>
+  <td width="285" valign="top" style="width:213.55pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .25pt;padding:5.25pt 5.25pt 5.25pt 5.25pt">
+  <p class="MsoNormal"><b><span style="font-size:10.0pt;font-family:
+  &quot;Arial&quot;,sans-serif;mso-bidi-font-style:italic">Best Contact Time</span></b><b><span style="font-size:10.0pt;font-family:
+  &quot;Arial&quot;,sans-serif"><o:p></o:p></span></b></p>
+  </td>
+  <td width="338" valign="top" style="width:253.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .25pt;mso-border-left-alt:solid windowtext .25pt;
+  padding:5.25pt 5.25pt 5.25pt 5.25pt"></td>
+ </tr>
+ <tr>
+  <td width="285" valign="top" style="width:213.55pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .25pt;padding:5.25pt 5.25pt 5.25pt 5.25pt">
+  <p class="MsoNormal"><b><span style="font-size:10.0pt;font-family:
+  &quot;Arial&quot;,sans-serif;mso-bidi-font-style:italic">Channel (BDM or Direct):</span></b><b><span style="font-size:10.0pt;font-family:
+  &quot;Arial&quot;,sans-serif"><o:p></o:p></span></b></p>
+  </td>
+  <td width="338" valign="top" style="width:253.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .25pt;mso-border-left-alt:solid windowtext .25pt;
+  padding:5.25pt 5.25pt 5.25pt 5.25pt"></td>
+ </tr>
+ <tr>
+  <td width="285" valign="top" style="width:213.55pt;border:solid windowtext 1.0pt;
+  border-top:none;mso-border-top-alt:solid windowtext .25pt;padding:5.25pt 5.25pt 5.25pt 5.25pt">
+  <p class="MsoNormal"><b><span style="font-size:10.0pt;font-family:
+  &quot;Arial&quot;,sans-serif;mso-bidi-font-style:italic">Intuit Rep Name:</span></b><b><span style="font-size:10.0pt;font-family:
+  &quot;Arial&quot;,sans-serif"><o:p></o:p></span></b></p>
+  </td>
+  <td width="338" valign="top" style="width:253.7pt;border-top:none;border-left:
+  none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+  mso-border-top-alt:solid windowtext .25pt;mso-border-left-alt:solid windowtext .25pt;
+  padding:5.25pt 5.25pt 5.25pt 5.25pt">{!Lead.OwnerFullName}</td>
+ </tr>
+</tbody></table>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif">&nbsp;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif">&nbsp;</span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif">Additionally,
+so we can both track the opportunity presented with this customer, could you
+please log your call details. With this information
+we can determine if the opportunity has been closed, or if there are further
+actions we should take.<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif">&nbsp;</span></p>
+
+<p class="MsoNormal"><font face="Arial, sans-serif" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 10pt;">Please
+don’t hesitate to reach out to me with any questions at all. I can be contacted by phone at 1-877-220-9322</span></font><font face="Arial, sans-serif" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 10pt;">&nbsp;or by email&nbsp;</span></font><font face="Arial, sans-serif"><span style="font-size: 13.3333px;">{!Lead.OwnerEmail}</span></font>
+<!--[endif]--><font face="Arial, sans-serif" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size: 10pt;"><o:p></o:p></span></font></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif">&nbsp;<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif">Thank
+you and good luck!<o:p></o:p></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif">&nbsp;</span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif">Sincerely,<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif"><br></span></p>
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;">{!Lead.OwnerFullName}</p>
+
+
+
+<p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif">The
+QuickBooks Online Team<o:p></o:p></span></p><p class="MsoNormal" style="color: rgb(0, 0, 0); font-family: arial; font-size: 12pt;"><span style="font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif"><br></span></p><p class="MsoNormal" style="margin-left:.25in;vertical-align:middle"><span style="font-size: 10pt;">To unsubscribe from our marketing
+communications you can email your request to </span><a href="mailto:privacyofficer@intuit.com"><span style="font-size:10.0pt">privacyofficer@intuit.com</span></a><span style="font-size: 10pt;"> with the subject line “Opt Out”. Please
+include your email address/ other contact information where you no longer wish
+to receive marketing communications from Intuit. Requests may take up to 10
+days to process, during which time you may continue to receive marketing
+communications from Intuit. Remember that even if you choose not to receive
+marketing communications from us, we will continue to send you mandatory
+service or transactional communications. <br>
+<br>
+Intuit respects your privacy. To learn more read our Privacy Statement (</span><a href="http://www.intuit.ca/about-intuit-canada/info/privacy-policy.jsp" target="_blank"><span style="font-size:10.0pt;color:black">http://www.intuit.ca/about-intuit-canada/info/privacy-policy.jsp</span></a><span style="font-size: 10pt;">). If you receive a suspicious email,
+please report it by forwarding the email to </span><a href="mailto:spoof@intuit.com"><span style="font-size:10.0pt;color:black">spoof@intuit.com</span></a><span style="font-size: 10pt;">. <br>
+<br>
+© 2017 Intuit Inc. All rights reserved. <br>
+5100 Spectrum Way, Mississauga, Ontario, Canada L4W 5S2<o:p></o:p></span></p>]]></td>
+</tr>
+</table>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <calculatedFormula>WON:SUM/RowCount</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA1</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Lead to Sale Conversion</masterLabel>
+        <scale>0</scale>
+    </aggregates>
+    <aggregates>
+        <calculatedFormula>CONVERTED:SUM/RowCount</calculatedFormula>
+        <datatype>percent</datatype>
+        <developerName>FORMULA2</developerName>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>Lead to Opp Conversion</masterLabel>
+        <scale>0</scale>
+    </aggregates>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>CONVERTED</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>WON</field>
+    </columns>
+    <columns>
+        <field>COMPANY_ACCT</field>
+    </columns>
+    <columns>
+        <field>LEAD_SOURCE</field>
+    </columns>
+    <columns>
+        <field>OPP_OWNER</field>
+    </columns>
+    <columns>
+        <field>AMOUNT</field>
+    </columns>
+    <columns>
+        <field>CLOSE_DATE</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>(1 AND 2 AND 3) OR (4  AND 5 AND 3)</booleanFilter>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Alka Szczygiel,Alysia Lacy,April Khan,Aquila Brown,Ashlynn Williams,Brandon Meade,Brad Baker,Cheron Kearney,Christopher Whitley,Connor Sullivan,Corey O&apos;Neal,Constanza Perry,Daylene Riley,Derin Harrison,Devon Dye,Dianne Bryant,Dyan Petke,Elisha James,Elizabeth Carter,Felicia Hamn,Lizz Kennon,Ellenor McCauley,Gladys Lambert,Jacquelyn Williams,Jennifer Mack,Kara Knudson,Karen Smith,Kathy Chadwick,Kristie Peters,Kyle Prouty,Latasha Johnson,Marcia Vines,Marilyn Tate,Mark Lupro</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>LEAD_OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Alka Szczygiel,Alysia Lacy,April Khan,Aquila Brown,Ashlynn Williams,Brandon Meade,Brad Baker,Cheron Kearney,Christopher Whitley,Connor Sullivan,Corey O&apos;Neal,Constanza Perry,Daylene Riley,Derin Harrison,Devon Dye,Dianne Bryant,Dyan Petke,Elisha James,Elizabeth Carter,Felicia Hamn,Lizz Kennon,Ellenor McCauley,Gladys Lambert,Jacquelyn Williams,Jennifer Mack,Kara Knudson,Karen Smith,Kathy Chadwick,Kristie Peters,Kyle Prouty,Latasha Johnson,Marcia Vines,Marilyn Tate,Mark Lupro</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Product_Family_of_Interest__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Hosting,QB Enterprise Solutions (QBES)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Monica Hargrove,Peter Supernaugh,Rocio Cruz,Ross Kimball,Saida Hersi,Sean Wellington,Sean Arthurton,Shantece Tyler,Sharelle Hunter,Shirley Donahue,Tamila Knight,Tia Blake,Tina Farmer,Victoria Evans,Victoria Maxwell,William Thomas</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>LEAD_OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Monica Hargrove,Peter Supernaugh,Rocio Cruz,Ross Kimball,Saida Hersi,Sean Wellington,Sean Arthurton,Shantece Tyler,Sharelle Hunter,Shirley Donahue,Tamila Knight,Tia Blake,Tina Farmer,Victoria Evans,Victoria Maxwell,William Thomas</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Month</dateGranularity>
+        <field>CREATED_DATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CREATED</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>ES Lead Pass Contest Data</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityLead</reportType>
+    <scope>org</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <endDate>2017-05-27</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2017-05-21</startDate>
+    </timeFrameFilter>
+</Report>

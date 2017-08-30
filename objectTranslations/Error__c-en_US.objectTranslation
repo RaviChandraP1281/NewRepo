@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Error</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Errors</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Errors --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- CACI --></label>
+        <name>CACI__c</name>
+    </fields>
+    <fields>
+        <label><!-- CAN --></label>
+        <name>CAN__c</name>
+    </fields>
+    <fields>
+        <label><!-- Company Id --></label>
+        <name>Company_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Detail Message --></label>
+        <name>Detail_Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Error Code --></label>
+        <name>Error_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Error Description --></label>
+        <name>Error_Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- Feature where the error has occured --></help>
+        <label><!-- Feature --></label>
+        <name>Feature__c</name>
+    </fields>
+    <fields>
+        <label><!-- IsAccountNameChanged --></label>
+        <name>IsAccountNameChanged__c</name>
+    </fields>
+    <fields>
+        <label><!-- SFDCId --></label>
+        <name>SFDCId__c</name>
+    </fields>
+    <fields>
+        <label><!-- UAI --></label>
+        <name>UAI__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

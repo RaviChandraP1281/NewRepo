@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>General</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>General</value>
+    </caseValues>
+    <fields>
+        <label><!-- APIUploadDate --></label>
+        <name>APIUploadDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Additional Notes --></label>
+        <name>Additional_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Attachment1 --></label>
+        <name>Attachment1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Attachment2 --></label>
+        <name>Attachment2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Attachment3 --></label>
+        <name>Attachment3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Attachment4 --></label>
+        <name>Attachment4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Attachment5 --></label>
+        <name>Attachment5__c</name>
+    </fields>
+    <fields>
+        <help><!-- Is for internal content only. Only Internal users should be able to view the content. Not available for external use. --></help>
+        <label><!-- Description (Internal Only) --></label>
+        <name>Body_Internal_Only__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description (External Only) --></label>
+        <name>Body__c</name>
+    </fields>
+    <fields>
+        <help><!-- Choose child article region --></help>
+        <label><!-- Child Article Region --></label>
+        <name>Child_Article_Region__c</name>
+        <picklistValues>
+            <masterLabel>AU</masterLabel>
+            <translation><!-- AU --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>BR</masterLabel>
+            <translation><!-- BR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>CA</masterLabel>
+            <translation><!-- CA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FR</masterLabel>
+            <translation><!-- FR --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GB</masterLabel>
+            <translation><!-- GB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IN</masterLabel>
+            <translation><!-- IN --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SG</masterLabel>
+            <translation><!-- SG --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Content Owner (Chatter Group) --></label>
+        <name>Content_Owner_Chatter_Group__c</name>
+    </fields>
+    <fields>
+        <label><!-- Future Notes --></label>
+        <name>Future_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Future Section --></label>
+        <name>Future_Section__c</name>
+    </fields>
+    <fields>
+        <label><!-- InteralBody --></label>
+        <name>InteralBody__c</name>
+    </fields>
+    <fields>
+        <label><!-- InternalBody --></label>
+        <name>InternalBody__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legacy Notes --></label>
+        <name>Internal_Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description (Email/Other) --></label>
+        <name>Internal_Other__c</name>
+    </fields>
+    <fields>
+        <label><!-- Language_Value --></label>
+        <name>Language_Value__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legacy Document Id --></label>
+        <name>Legacy_Document_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Legacy Master Article Id --></label>
+        <name>Legacy_Master_Article_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notification --></label>
+        <name>Notification__c</name>
+        <relationshipLabel><!-- General Articles --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Permanent Link --></label>
+        <name>Permanent_Link__c</name>
+    </fields>
+    <fields>
+        <help><!-- This Article is related to --></help>
+        <label><!-- Parent Article --></label>
+        <name>Related_Article_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- visibility --></label>
+        <name>visibility__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

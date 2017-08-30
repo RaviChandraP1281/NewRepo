@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>Edit</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>Payments Agent</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>Payments Agent</name>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>Payments_Mgr</parentRole>
+</Role>

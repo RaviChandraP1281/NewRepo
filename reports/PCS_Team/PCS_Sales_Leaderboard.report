@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>AMOUNT</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>EXP_AMOUNT</field>
+    </columns>
+    <columns>
+        <field>AGE</field>
+    </columns>
+    <columns>
+        <field>ROLLUP_DESCRIPTION</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>STAGE_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Closed Won</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FULL_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Sara Andrews,Robert Chevalier,Sean Degnon,David Franco,Cheryl Kopstein,George Madenian,Jorge Martinez,Steve Matarazzo,Andy Mechammil,Tina Rafdal,Steven Ryan,Ahmad Soudani,Brian Curran,Melissa Daleske,Larry Flanigan,Kirstan Villasenor,Derrick Kuntz,Megan Libardi,Abram Madero,Botond Perehazy,Marvin Safi,Tomas Salazar,Dennis Snee,Gabor Terebesi,Joseph Yalinkatian,Eric Boecker,Greg Chapman,Brekita Craft,Abby Dixon,John Evans,Lindsay Hurndon,Stephanie Jackson,Socory Jordan,Edward Kransinki,Brian Linville,Jennifer Mcclain,Lynn Morgan,Allison Morton,Urlissa Sheffield,Ryan Taylor,James Tsao,Felecia Smith,Rachael Baker,John Bilthuis,Thomas May,Rasheeda Meadows,Summer Payne,Jo Wyatt</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FULL_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>PCS Sales Leaderboard</name>
+    <params>
+        <name>open</name>
+        <value>closed</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunity</reportType>
+    <roleHierarchyFilter>Payments_Leader</roleHierarchyFilter>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CLOSE_DATE</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

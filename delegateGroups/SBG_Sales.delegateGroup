@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DelegateGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <groups>Historic List View Users</groups>
+    <groups>India BDM</groups>
+    <groups>Content Channel Marketing</groups>
+    <groups>Content Sales Leaders</groups>
+    <groups>Content Sales Agents</groups>
+    <groups>India onboarding and Telesales</groups>
+    <groups>AAG Sales Partners</groups>
+    <groups>AAG IAM - Eric Randall</groups>
+    <groups>AAG IAM - Rachel Norvelle</groups>
+    <groups>AAG IAM - Rhizel Gooding</groups>
+    <groups>AAG IAM - Teresa Albor</groups>
+    <groups>AAG IAM - Rothe James</groups>
+    <groups>AAG IAM - Chad Simpson</groups>
+    <groups>AAG IAM - Randall Cassen</groups>
+    <groups>AAG IAM - John Brakey</groups>
+    <groups>AAG IAM - Jeffrey Johnson</groups>
+    <groups>AAG IAM - Thomas Wineteer</groups>
+    <groups>AAG IAM - Sherri Voirin</groups>
+    <groups>Global AAG BDM Collateral</groups>
+    <groups>Audrey Craig</groups>
+    <groups>All UK BDM</groups>
+    <label>SBG Sales</label>
+    <loginAccess>false</loginAccess>
+    <roles>Admin</roles>
+    <roles>Global Executive</roles>
+    <roles>Acctnt Executive</roles>
+</DelegateGroup>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>User.Case$OwnerId$Owner</field>
+    </columns>
+    <columns>
+        <field>User.Case$OwnerId$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>User.Case$OwnerId$Subject</field>
+    </columns>
+    <columns>
+        <field>User.Case$OwnerId$Status</field>
+    </columns>
+    <columns>
+        <field>User.Case$OwnerId$Sub_Status__c</field>
+    </columns>
+    <columns>
+        <field>User$Division</field>
+    </columns>
+    <columns>
+        <field>User.Case$OwnerId$Origin</field>
+    </columns>
+    <columns>
+        <field>User.Case$OwnerId$Product__c</field>
+    </columns>
+    <columns>
+        <field>User.Case$OwnerId$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>User.Case$OwnerId$LastModifiedDate</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>(1 AND 2 AND (3 or 4)) AND 5</booleanFilter>
+        <criteriaItems>
+            <column>User*User$Role__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Online,DTOL Tier 2,Tier2Online,Tier1Online</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$OwnerId$Status</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User$Division</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>SBG QBO Support Staff-CVG-OLA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User$Division</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>SBG QBO Tier 1-CVG-OLA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User$Name</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Devin Christman,Renean Griddine,Ryan Clay,Ronald Shields,Kimberly Jones,Rochelle Walker,Tony West,angelito Dela Cruz jr,Christopher Adams,Olivia Petkash,Ryan Jackson</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Callback Queue - Olathe</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Users_and_Case_Owner__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>User.Case$OwnerId$Owner</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>User.Case$OwnerId$CreatedDate</dateColumn>
+        <endDate>2017-08-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2017-05-01</startDate>
+    </timeFrameFilter>
+</Report>

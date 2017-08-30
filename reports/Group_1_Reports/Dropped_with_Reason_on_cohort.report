@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_3558748</developerName>
+        <masterLabel>Drop Reasons</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>Opportunity.Won_Lost_Reason__c</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Acquisition</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Bad data</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Closed by admin</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Duplicate</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Test Opportunity</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>No response/Contact</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Out of biz/Retired</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Student</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>No Phone Number</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Wrong Prospect/Product</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Web</sourceValue>
+            </sourceValues>
+            <value>Invalid</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Same Solution Fit</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Different Solution Fit</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Not interested</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>No solution fit</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Price</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Timing</sourceValue>
+            </sourceValues>
+            <value>Dropped</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>CLOSE_DATE</field>
+    </columns>
+    <columns>
+        <field>AGE</field>
+    </columns>
+    <columns>
+        <field>FULL_NAME</field>
+    </columns>
+    <columns>
+        <field>OPPORTUNITY_NAME</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT_NAME</field>
+    </columns>
+    <columns>
+        <field>STAGE_NAME</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Primary_Contact_Phone__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Primary_Contact_Email__c</field>
+    </columns>
+    <currency>INR</currency>
+    <filter>
+        <criteriaItems>
+            <column>Opportunity.Country__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>India</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Company_ID__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>BucketField_3558748</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Dropped</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_3558748</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Opportunity.Won_Lost_Reason__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Opportunity.Onboarding__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Dropped Reason on cohort</name>
+    <params>
+        <name>open</name>
+        <value>closed</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunity</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Opportunity.Signup_Date__c</dateColumn>
+        <interval>INTERVAL_CURFY</interval>
+    </timeFrameFilter>
+</Report>

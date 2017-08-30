@@ -1,0 +1,21 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="1" >
+<![CDATA[<font face="Times New Roman, Times, serif">Dear {!Contact.FirstName} {!Contact.LastName},</font><div><font face="Times New Roman, Times, serif"><br></font><p class="MsoNormal"><font face="Times New Roman, Times, serif">You are receiving this communication because you recently
+applied for our Deferred Payment Option.&nbsp; In
+order to be eligible for this benefit, your total cost must be greater than
+$1,200, including taxes, shipping and handling.&nbsp;
+Unfortunately, your product selection did not meet this threshold.</font></p><p class="MsoNormal"><font face="Times New Roman, Times, serif">&nbsp;&nbsp;&nbsp;&nbsp; <br></font></p><p class="MsoNormal"><font face="Times New Roman, Times, serif">Log in to <a href="https://accountants.intuit.com/login.jsp">My
+Account</a> to select the payment option that works best for you.&nbsp; Alternatively, contact us at: ProSeries
+800-934-1040 if you would like to add additional products to your license.</font></p><p class="MsoNormal"><font face="Times New Roman, Times, serif">&nbsp;&nbsp;&nbsp;&nbsp; <br></font></p><p class="MsoNormal"><font face="Times New Roman, Times, serif">Thank you for choosing ProSeries Tax.&nbsp; We value you as a customer.</font></p><p class="MsoNormal"><font face="Times New Roman, Times, serif"><br></font></p>
+
+<p class="MsoNormal" align="left"><font face="Times New Roman, Times, serif">Sincerely,&nbsp;</font></p><p class="MsoNormal" align="left"><b style="font-size: 12pt;"><font face="Times New Roman, Times, serif">The ProSeries Team</font></b></p>
+
+<p class="MsoNormal" style="margin-bottom: 0.0001pt;" align="left"><b><font face="Times New Roman, Times, serif">Intuit ProConnect Group</font></b></p><p class="MsoNormal" style="margin-bottom: 0.0001pt;" align="left"><br></p><p class="MsoNormal" style="margin-bottom: 0.0001pt;" align="left"><br></p><p class="MsoNormal" style="margin-bottom: 0.0001pt;" align="left"><br></p><p class="MsoNormal" style="margin-bottom: 0.0001pt;" align="left"><br></p><p class="MsoNormal" style="margin-bottom: 0.0001pt;" align="left"><br></p><p class="MsoNormal" style="margin-bottom: 0.0001pt;" align="left"><img alt="" src="https://intuitb2b--c.na15.content.force.com/servlet/servlet.ImageServer?id=015i000000BfTYy&amp;oid=00Di0000000Xs0j" border="0" align="left"><br></p>
+
+<b style="font-family: arial;"><span style="font-size:11.0pt;line-height:115%;font-family:&quot;Calibri&quot;,sans-serif;
+mso-fareast-font-family:Calibri;mso-bidi-font-family:&quot;Times New Roman&quot;;
+background:yellow;mso-highlight:yellow;mso-ansi-language:EN-US;mso-fareast-language:
+EN-US;mso-bidi-language:AR-SA"></span></b></div>]]></td>
+</tr>
+</table>

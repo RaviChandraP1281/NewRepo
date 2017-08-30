@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Asset MACD Permissions</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Asset MACD Permissions</value>
+    </caseValues>
+    <fields>
+        <help><!-- Cancel Permission --></help>
+        <label><!-- Cancel --></label>
+        <name>Cancel__c</name>
+    </fields>
+    <fields>
+        <label><!-- Clone Quote With New Opp --></label>
+        <name>Clone_Quote_With_New_Opp__c</name>
+    </fields>
+    <fields>
+        <help><!-- Migrate Permission --></help>
+        <label><!-- Migrate --></label>
+        <name>Migrate__c</name>
+    </fields>
+    <fields>
+        <help><!-- Modify Permission --></help>
+        <label><!-- Modify --></label>
+        <name>Modify__c</name>
+    </fields>
+    <fields>
+        <label><!-- Resume --></label>
+        <name>Resume__c</name>
+    </fields>
+    <fields>
+        <help><!-- Suspend Permission --></help>
+        <label><!-- Suspend --></label>
+        <name>Suspend__c</name>
+    </fields>
+    <fields>
+        <help><!-- Version Protection --></help>
+        <label><!-- Version Protection --></label>
+        <name>Version_Protection__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

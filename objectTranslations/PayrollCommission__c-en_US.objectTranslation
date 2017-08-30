@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>PayrollCommission</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>PayrollCommission</value>
+    </caseValues>
+    <fields>
+        <label><!-- Asset Name --></label>
+        <name>Asset_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Activation Date --></label>
+        <name>Billing_Activation_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Billing Date --></label>
+        <name>Billing_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Billing Type --></label>
+        <name>Billing_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Channel --></label>
+        <name>Channel__c</name>
+    </fields>
+    <fields>
+        <label><!-- Company Type --></label>
+        <name>Company_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Deleted? --></label>
+        <name>Deleted__c</name>
+    </fields>
+    <fields>
+        <label><!-- Error Description --></label>
+        <name>Error_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Feature Set Id --></label>
+        <name>Feature_Set_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Funds Hold Date --></label>
+        <name>Funds_Hold_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Inactive Date --></label>
+        <name>Inactive_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Bundle --></label>
+        <name>Is_Bundle__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Billing Date --></label>
+        <name>Last_Billing_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Login --></label>
+        <name>Last_Login__c</name>
+    </fields>
+    <fields>
+        <label><!-- Next Billing Date --></label>
+        <name>Next_Billing_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner Id --></label>
+        <name>Partner_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Company Id --></label>
+        <name>Payroll_Company_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product --></label>
+        <name>Product__c</name>
+    </fields>
+    <fields>
+        <label><!-- Provider Id --></label>
+        <name>Provider_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Provider Payroll Company Id --></label>
+        <name>Provider_Payroll_Company_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Provider Realm Id --></label>
+        <name>Provider_Realm_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Realm Id --></label>
+        <name>Realm_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- SFDC Product Id --></label>
+        <name>SFDC_Product_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- SFDC Product Name --></label>
+        <name>SFDC_Product_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Type --></label>
+        <name>Service_Type__c</name>
+    </fields>
+    <fields>
+        <label><!-- Signup Date --></label>
+        <name>Signup_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source Code --></label>
+        <name>Source_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Current Status New --></label>
+        <name>Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Termination Date --></label>
+        <name>Termination_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Trial Date --></label>
+        <name>Trial_Date__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

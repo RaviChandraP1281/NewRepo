@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Intuit QuickBooks</title>
+<style type="text/css">
+body {
+	margin: 0px;
+}
+</style>
+</head>
+
+<body>
+<table width="700" align="center" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td style=" border:1px solid #cccccc;" ><table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td bgcolor="#f4f5f9" ><img src="https://intuitb2b--c.na42.content.force.com/servlet/servlet.ImageServer?id=0152A000006pii2&oid=00Di0000000Xs0j&lastMod=1487223145000" width="17" height="12" style="display:block;" border="0" /></td>
+      </tr>
+      <tr>
+        <td style="border-left:11px solid #f4f5f9; border-right:11px solid #f4f5f9;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td width="18">&nbsp;</td>
+            <td height="74"><a href="http://www.quickbooks.in/qbhome/" target="_blank"><img src="https://intuitb2b--c.na42.content.force.com/servlet/servlet.ImageServer?id=0152A000006pihs&oid=00Di0000000Xs0j&lastMod=1487223057000" alt="Intuit quickbooks" width="180" height="36" style="display:block;" border="0" /></a></td>
+            </tr>
+          </table></td>
+      </tr>
+      <tr>
+        <td style="border-left:11px solid #f4f5f9; border-right:11px solid #f4f5f9;"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <td align="center" style="border-top:2px solid #f4f5f9; border-bottom:2px solid #f4f5f9;" ><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="40">&nbsp;</td>
+              </tr>
+              <tr>
+                <td height="80" align="center" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:32px; line-height:34px; color:#2ca048;">Let us help you<br />
+                  organize your business.</td>
+              </tr>
+              <tr>
+                <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td width="384" align="center" valign="top"><img src="https://intuitb2b--c.na42.content.force.com/servlet/servlet.ImageServer?id=0152A000006pijt&oid=00Di0000000Xs0j&lastMod=1487223715000" width="384" height="77" style="display:block;" border="0"/></td>
+                    <td>&nbsp;</td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <tr>
+                <td height="40">&nbsp;</td>
+                </tr>
+              </table></td>
+          </tr>
+          <tr>
+            <td align="center" style=" border-bottom:2px solid #f4f5f9;" ><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="40">&nbsp;</td>
+              </tr>
+              <tr>
+                <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="35">&nbsp;</td>
+                    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td height="30" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:15px;  color:#101215;">Dear {!Opportunity.Primary_Contact__c},</td>
+                      </tr>
+                      <tr>
+                        <td height="28" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:15px; line-height:18px; color:#101215;">We haven't seen you in a while. Hope you’re doing great.</td>
+                      </tr>
+                      <tr>
+                        <td height="28" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:15px; line-height:18px; color:#101215;">We are here to help you run your business with our online accounting solution, QuickBooks.</td>
+                      </tr>
+                      <tr>
+                        <td height="45" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:15px; line-height:18px; color:#101215;">QuickBooks is designed for business owners who may not be familiar with accounting.
+Simply enter your sales and purchases, and QuickBooks will do the rest.The benefits it
+provides are:</td>
+                      </tr>
+                    </table></td>
+                    <td width="35">&nbsp;</td>
+                  </tr>
+                </table></td>
+              </tr>
+              <tr>
+                <td height="40" style=" border-bottom:2px solid #f4f5f9;">&nbsp;</td>
+              </tr>
+              <tr>
+                <td align="center" ><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td height="40">&nbsp;</td>
+                  </tr>
+                  <tr>
+                    <td height="40"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="35">&nbsp;</td>
+                        <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td height="40"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td width="96" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td valign="middle"><img src="https://intuitb2b--c.na42.content.force.com/servlet/servlet.ImageServer?id=0152A000006pijy&oid=00Di0000000Xs0j&lastMod=1487223734000" width="130" height="69"  style="display:block;" border="0"/></td>
+                                    </tr>
+                                  </table></td>
+                                <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td height="31" valign="middle" style="font-family:Arial, Helvetica, sans-serif; font-size:16px;  color:#101215;"><strong>Get paid faster</strong></td>
+                                    </tr>
+                                  <tr>
+                                    <td height="31" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:16px;  color:#101215;">Create invoices, email them to customers and track payments</td>
+                                  </tr>
+                                  </table></td>
+                                </tr>
+                              </table></td>
+                          </tr>
+                          <tr>
+                            <td height="29">&nbsp;</td>
+                          </tr>
+                          <tr>
+                            <td height="40"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td width="96" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td valign="middle"><img src="https://intuitb2b--c.na42.content.force.com/servlet/servlet.ImageServer?id=0152A000006pikD&oid=00Di0000000Xs0j&lastMod=1487223893000" width="130" height="87"  style="display:block;" border="0"/></td>
+                                  </tr>
+                                </table></td>
+                                <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td height="31" valign="middle" style="font-family:Arial, Helvetica, sans-serif; font-size:16px;  color:#101215;"><strong>Save time</strong></td>
+                                  </tr>
+                                  <tr>
+                                    <td height="31" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:16px;  color:#101215;">Mobile app on iOS and Android, online banking integration and<br />
+                                      integrated payroll</td>
+                                  </tr>
+                                </table></td>
+                              </tr>
+                            </table></td>
+                          </tr>
+                          <tr>
+                            <td height="28">&nbsp;</td>
+                          </tr>
+                          <tr>
+                            <td height="40"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                              <tr>
+                                <td width="96" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td valign="middle"><img src="https://intuitb2b--c.na42.content.force.com/servlet/servlet.ImageServer?id=0152A000006pik8&oid=00Di0000000Xs0j&lastMod=1487223867000" width="130" height="75" style="display:block;" border="0"/></td>
+                                  </tr>
+                                </table></td>
+                                <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                  <tr>
+                                    <td height="31" valign="middle" style="font-family:Arial, Helvetica, sans-serif; font-size:16px;  color:#101215;"><strong>Get real-time insights</strong></td>
+                                    </tr>
+                                  <tr>
+                                    <td height="31" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:16px;  color:#101215;">Monitor business performance, balance sheets, P&amp;L and tax reports<br />
+                                      with a click</td>
+                                  </tr>
+                                </table></td>
+                              </tr>
+                            </table></td>
+                          </tr>
+                        </table></td>
+                      </tr>
+                    </table></td>
+                  </tr>
+                  </table></td>
+              </tr>
+              <tr>
+                <td height="40" valign="middle" >&nbsp;</td>
+              </tr>
+              </table></td>
+          </tr>
+          <tr>
+            <td align="center" ><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td align="center" ><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td height="40">&nbsp;</td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <tr>
+                <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="45">&nbsp;</td>
+                    <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td height="45" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:15px;  color:#101215;">If you need any help with your QuickBooks 30-day free trial, reply to this email or give us a
+call at {!User.MobilePhone}. We are here to help.</td>
+                        </tr>
+                      <tr>
+                        <td height="45" valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:15px; line-height:20px; color:#101215;">Ready to purchase QuickBooks? Just  <a href="https://qbo.intuit.com/qbo37/login?locale=en_IN" target="_blank" style=" color:#04adf0; ">sign into your account</a> and convert your free trial
+                          into a paid subscription.</td>
+                        </tr>
+                      <tr>
+                        <td height="35" valign="middle" style="font-family:Arial, Helvetica, sans-serif; font-size:15px; line-height:20px; color:#101215;">We are looking forward to have you in our Intuit family.</td>
+                      </tr>
+                      <tr>
+                        <td height="35" valign="middle" style="font-family:Arial, Helvetica, sans-serif; font-size:15px; line-height:20px; color:#101215;">Have an awesome day!</td>
+                        </tr>
+                      <tr>
+                        <td height="45" valign="middle" style="font-family:Arial, Helvetica, sans-serif; font-size:15px; line-height:20px; color:#101215;">{!User.Name}<br />
+                          Quickbooks Consultant <br />
+                          {!User.Email}<br />
+                          {!User.MobilePhone}</td>
+                        </tr>
+                      </table></td>
+                    <td width="43">&nbsp;</td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <tr>
+                <td height="25">&nbsp;</td>
+              </tr>
+            </table></td>
+          </tr>
+          <tr>
+            <td height="165" valign="top" bgcolor="#F4F5F9"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+              <tr>
+                <td height="40">&nbsp;</td>
+                </tr>
+              <tr>
+                <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="285">&nbsp;</td>
+                    <td ><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                      <tr>
+                        <td width="120"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td width="11" valign="top"><a href="https://www.facebook.com/IntuitQuickBooksIndia" target="_blank"><img src="https://intuitb2b--c.na42.content.force.com/servlet/servlet.ImageServer?id=0152A000006pih4&oid=00Di0000000Xs0j&lastMod=1487224528000" alt="Facebook" width="17" height="18" style="display:block;" border="0"/></a></td>
+                            <td width="12">&nbsp;</td>
+                            <td width="17" valign="top"><a href="https://www.linkedin.com/company/intuit-quickbooks-india?trk=company_name" target="_blank"><img src="https://intuitb2b--c.na42.content.force.com/servlet/servlet.ImageServer?id=0152A000006pihn&oid=00Di0000000Xs0j&lastMod=1487223007000" alt="Linkedin" width="17" height="18" style="display:block;" border="0" /></a></td>
+                            <td width="12">&nbsp;</td>
+                            <td width="17" valign="top"><a href="https://twitter.com/QuickBooksIN" target="_blank"><img src="https://intuitb2b--c.na42.content.force.com/servlet/servlet.ImageServer?id=0152A000006pii7&oid=00Di0000000Xs0j&lastMod=1487223172000" alt="Twitter" width="17" height="18" style="display:block;" border="0"/></a></td>
+                            <td width="12">&nbsp;</td>
+                            <td width="17" valign="top"><a href="https://www.youtube.com/user/QBOIndia" target="_blank"><img src="https://intuitb2b--c.na42.content.force.com/servlet/servlet.ImageServer?id=0152A000006piiC&oid=00Di0000000Xs0j&lastMod=1487223200000" alt="youtube" width="17" height="18" style="display:block;" border="0"/></a></td>
+                            </tr>
+                          </table></td>
+                        </tr>
+                      </table></td>
+                    <td width="285">&nbsp;</td>
+                    </tr>
+                  </table></td>
+                </tr>
+              <tr>
+                <td height="25">&nbsp;</td>
+                </tr>
+              <tr>
+                <td><table width="100%" border="0" cellspacing="0" cellpadding="0">
+                  <tr>
+                    <td width="39">&nbsp;</td>
+                    <td valign="top" style="font-family:Arial, Helvetica, sans-serif; font-size:12px; color:#6b6c72; line-height:15px;">The terms and conditions of pricing for purchase and renewal of QuickBooks subscriptions may change<br />
+                      without prior notice.<br />
+                      © Intuit India Software Solutions Pvt. Ltd. </td>
+                    </tr>
+                  </table></td>
+                </tr>
+              <tr>
+                <td>&nbsp;</td>
+                </tr>
+              </table></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>

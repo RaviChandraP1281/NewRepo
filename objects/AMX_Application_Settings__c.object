@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Default_Sort_Column__c</fullName>
+        <defaultValue>&quot;OwnerId&quot;</defaultValue>
+        <description>The API name of the Distributor Record field that should be specified as the ORDER BY column in the Distributor Record Query.  This column should be Id or OwnerId, usually.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The API name of the Distributor Record field that should be specified as the ORDER BY column in the Distributor Record Query.  
+
+Recommended values are &quot;Id&quot; or &quot;OwnerId&quot;.
+
+DO NOT use other column names without first clearing with Engineering.</inlineHelpText>
+        <label>Default Sort Column</label>
+        <length>40</length>
+        <required>true</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Distributor_Query_Record_Limit__c</fullName>
+        <defaultValue>50</defaultValue>
+        <description>Specifies the value used in the LIMIT clause of AMX &quot;Distributor Record&quot; queries made via AMX_GenericSelector.  Values greater than 100 may result in poorly performing Distributors when highly complex filters are used. Value should never be &gt; 9999</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies the value used in the LIMIT clause of AMX &quot;Distributor Record&quot; queries made via AMX_GenericSelector.
+
+Values greater than 100 may result in poorly performing Distributors when highly complex filters are used.
+
+Value should never be &gt; 9999</inlineHelpText>
+        <label>Distributor Query Record Limit</label>
+        <precision>4</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Engine_Execution_Count_Maximum__c</fullName>
+        <defaultValue>2</defaultValue>
+        <description>The maximum number of times that the Engine will &quot;re-queue&quot; itself in the event that processing stops, leaving the engine with an INCOMPLETE status. This value should be 2 until after the Spring &apos;15 release goes GA.  For &quot;infinite&quot; runs, enter 999.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The maximum number of times that the Engine will &quot;re-queue&quot; itself in the event that processing stops, leaving the engine with an INCOMPLETE status.
+
+This value should be 2 until after the Spring &apos;15 release goes GA.  For &quot;infinite&quot; runs, enter 999.</inlineHelpText>
+        <label>Engine Execution Count Maximum</label>
+        <precision>3</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Limits_Threshold_CPU_Time__c</fullName>
+        <defaultValue>5000</defaultValue>
+        <description>Limits Threshold Offset value for CPU time (milliseconds). 
+
+Recommended range is 3000 to 5000.
+
+Offsets are subtracted from the current Execution Context&apos;s limit to compute a &quot;threshold&quot;. Crossing this threshold causes the Engine to re-queue.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Limits Threshold Offset value for CPU time (milliseconds). 
+
+Recommended range is 3000 to 5000.
+
+Offsets are subtracted from the current Execution Context&apos;s limit to compute a &quot;threshold&quot;. Crossing this threshold causes the Engine to re-queue.</inlineHelpText>
+        <label>Limits Threshold Offset: CPU Time</label>
+        <precision>6</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Limits_Threshold_DML_Records__c</fullName>
+        <defaultValue>2000</defaultValue>
+        <description>Limits Threshold Offset value for DML Records.
+
+Recommended range is 2000 to 5000.
+
+Offsets are subtracted from the current Execution Context&apos;s limit to compute a &quot;threshold&quot;. Crossing this threshold causes the Engine to re-queue.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Limits Threshold Offset value for DML Records.
+
+Recommended range is 2000 to 5000.
+
+Offsets are subtracted from the current Execution Context&apos;s limit to compute a &quot;threshold&quot;. Crossing this threshold causes the Engine to re-queue.</inlineHelpText>
+        <label>Limits Threshold Offset: DML Records</label>
+        <precision>5</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Limits_Threshold_DML_Statements__c</fullName>
+        <defaultValue>20</defaultValue>
+        <description>Limits Threshold Offset value for DML Statements.
+
+Recommended range is 10 to 20.
+
+Offsets are subtracted from the current Execution Context&apos;s limit to compute a &quot;threshold&quot;. Crossing this threshold causes the Engine to re-queue.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Limits Threshold Offset value for DML Statements.
+
+Recommended range is 10 to 20.
+
+Offsets are subtracted from the current Execution Context&apos;s limit to compute a &quot;threshold&quot;. Crossing this threshold causes the Engine to re-queue.</inlineHelpText>
+        <label>Limits Threshold Offset: DML Statements</label>
+        <precision>3</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Limits_Threshold_Future_Methods__c</fullName>
+        <defaultValue>10</defaultValue>
+        <description>Limits Threshold Offset value for Future Methods.
+
+Recommended range is 10 to 20.
+
+Offsets are subtracted from the current Execution Context&apos;s limit to compute a &quot;threshold&quot;. Crossing this threshold causes the Engine to re-queue.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Limits Threshold Offset value for Future Methods.
+
+Recommended range is 10 to 20.
+
+Offsets are subtracted from the current Execution Context&apos;s limit to compute a &quot;threshold&quot;. Crossing this threshold causes the Engine to re-queue.</inlineHelpText>
+        <label>Limits Threshold Offset: Future Methods</label>
+        <precision>3</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Limits_Threshold_Heap_Size__c</fullName>
+        <defaultValue>1000000</defaultValue>
+        <description>Limits Threshold Offset value for Heap Size.
+
+Recommended range is 1,000,000 to 2,000,000 (1-2 MB).
+
+Offsets are subtracted from the current Execution Context&apos;s limit to compute a &quot;threshold&quot;. Crossing this threshold causes the Engine to re-queue.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Limits Threshold Offset value for Heap Size.
+
+Recommended range is 1,000,000 to 2,000,000 (1-2 MB).
+
+Offsets are subtracted from the current Execution Context&apos;s limit to compute a &quot;threshold&quot;. Crossing this threshold causes the Engine to re-queue.</inlineHelpText>
+        <label>Limits Threshold Offset: Heap Size</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Limits_Threshold_SOQL_Queries__c</fullName>
+        <defaultValue>20</defaultValue>
+        <description>Limits Threshold Offset value for SOQL Queries.
+
+Recommended range is 15 to 25
+
+Offsets are subtracted from the current Execution Context&apos;s limit to compute a &quot;threshold&quot;. Crossing this threshold causes the Engine to re-queue.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Limits Threshold Offset value for SOQL Queries.
+
+Recommended range is 15 to 25
+
+Offsets are subtracted from the current Execution Context&apos;s limit to compute a &quot;threshold&quot;. Crossing this threshold causes the Engine to re-queue.</inlineHelpText>
+        <label>Limits Threshold Offset: SOQL Queries</label>
+        <precision>3</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Limits_Threshold_SOQL_Records__c</fullName>
+        <defaultValue>5000</defaultValue>
+        <description>Limits Threshold Offset value for SOQL Records.
+
+Recommended range is 5,000 to 10,000
+
+Offsets are subtracted from the current Execution Context&apos;s limit to compute a &quot;threshold&quot;. Crossing this threshold causes the Engine to re-queue.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Limits Threshold Offset value for SOQL Records.
+
+Recommended range is 5,000 to 10,000
+
+Offsets are subtracted from the current Execution Context&apos;s limit to compute a &quot;threshold&quot;. Crossing this threshold causes the Engine to re-queue.</inlineHelpText>
+        <label>Limits Threshold Offset: SOQL Records</label>
+        <precision>6</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Scheduler_Frequency_Minutes__c</fullName>
+        <defaultValue>1</defaultValue>
+        <description>Specifies the number of minutes between scheduled runs of the AMX Distribution Engine.  This value can not be less than one.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Specifies the number of minutes between scheduled runs of the AMX Distribution Engine.
+
+This value must be between 1 and 9999.</inlineHelpText>
+        <label>Scheduler Frequency (Minutes)</label>
+        <precision>4</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Truncate_Distribution_Logs_After__c</fullName>
+        <defaultValue>30</defaultValue>
+        <description>The number of days after which Distribution Logs will be truncated.  Distribution Log records that are older than NOW, minus the number of days specified, will be deleted whenever the Scheduled Maintenance job is executed (currently once per hour).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The number of days after which Distribution Logs will be truncated.  
+
+Distribution Log records that are older than NOW, minus the number of days specified, will be deleted whenever the Scheduled Maintenance job is executed.</inlineHelpText>
+        <label>Truncate Distribution Logs After (Days)</label>
+        <precision>3</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Truncate_Engine_Logs_After__c</fullName>
+        <defaultValue>2</defaultValue>
+        <description>The number of days after which Engine Logs will be truncated.  Engine Log records that are older than NOW, minus the number of days specified, will be deleted whenever the Scheduled Maintenance job is executed (currently once per hour).</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The number of days after which Engine Logs will be truncated.
+
+Engine Log records that are older than NOW, minus the number of days specified, will be deleted whenever the Scheduled Maintenance job is executed.</inlineHelpText>
+        <label>Truncate Engine Logs After (Days)</label>
+        <precision>3</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+</CustomObject>

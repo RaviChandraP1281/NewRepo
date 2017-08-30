@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CONTACT_LAST_UPDATE_BY</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>CONTACT_LAST_UPDATE_BY</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Jamayca Estrella,Edgar Billones,Winston Alvarez,Maria Fatima Manlicdem,Paul Ryan Castro,Iris Ecal,Sho Andres,Miguel Louis Zapanta,Christian Jasper Policarpio,Christine Rhea Lacaste,Jan Paulo Torres,Rolly Galinato,Aileen Rachel Galeno,Elaine Billones,Iris Patricia Cruz,Charlene Fallurin,Rowelyn Montes,Humbert Doloroso,Grace Anne De Las Armas,Jay-r Didulo,Jeanne Celine Logan,Alfredo Jr Teng,Carlo Bacabac,Joram Constantino,Mary Joyce Camille Reyes,Joana Marie Gamutan,Sheryl Romas,Santos Girard,Jenifer Sta Ana,Jullie Ann Lagos,Honeyluck Pajo,Josephine Tan</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Email Check</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContactList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <endDate>2016-02-29</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2016-02-01</startDate>
+    </timeFrameFilter>
+</Report>

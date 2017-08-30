@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>USERS.NAME</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>FK_CNTC_FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>1 AND 2 AND 3 AND (4 OR 5)</booleanFilter>
+        <criteriaItems>
+            <column>CUST_CREATED_DATE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>9/22/2014 12:00 AM</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Country__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>United Kingdom</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Customer_Type__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Partner</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CNTC_ID</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>startsWith</operator>
+            <value>003i000000rQIM8,003i000000rZWIW,003i000000rZWIc,003i000000rcVFi,003i000000rgToT,003i000000rhHje,003i000000rhHw4,003i000000rhIBX,003i000000rhK8q,003i000000sY4zE,003i000000v7dp5,003i0000013NzzE,003i000001IdYg8,003i000001IdYj1,003i000001IdvBB,003i000001IdvY7,003i000001IdvmR,003i000001IdvpO,003i000001Idvub,003i000001IuDkC</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CNTC_EMAIL</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>chris.scanlon@fintech-ltd.co.uk,anna@balanceduk.co.uk,mail@limelight-accountancy.co.uk,chris@da-silva-skinner.co.uk,mark.hooton@btinternet.com,nicky@goringeaccountants.co.uk,penny@wcon.co.uk,anne@annegood.co.uk,john.mcgiffen@aims.co.uk,carol@cjoseyaccountants.co.uk,cibbett@certax.co.uk,gbaccountants@outlook.com,vallloyd@taxassist.co.uk,charles@certax.co.uk,amrit@goldstaraccountants.com,bishwa@gb-accountants.co.uk,marie@scandinavian.co.uk</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CUST_CREATED_DATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Post 22Sep/Reading- Created Date</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountCustomEntity$Account_Relationship__c@Account_Relationship__c.Partner_Account_Contact__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>DUE_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

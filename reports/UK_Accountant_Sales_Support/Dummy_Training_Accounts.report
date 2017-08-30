@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <currency>GBP</currency>
+    <filter>
+        <criteriaItems>
+            <column>EMAIL</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>del001@qbtrguk.com,del002@qbtrguk.com,del003@qbtrguk.com,del004@qbtrguk.com,del005@qbtrguk.com,del006@qbtrguk.com,del007@qbtrguk.com,del008@qbtrguk.com,del009@qbtrguk.com,del010@qbtrguk.com,del011@qbtrguk.com,del012@qbtrguk.com,del013@qbtrguk.com,del014@qbtrguk.com,del015@qbtrguk.com,del016@qbtrguk.com,del017@qbtrguk.com,del018@qbtrguk.com,del019@qbtrguk.com,del020@qbtrguk.com,trn001@qbtrguk.com</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Customer_Type__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Partner</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Dummy Training Accounts</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContactList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

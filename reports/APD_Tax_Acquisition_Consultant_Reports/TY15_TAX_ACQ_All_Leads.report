@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_39927456</developerName>
+        <masterLabel>Lead Type</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>Lead.Legacy_Treatment_Name__c</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Professional Web</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Schedule a call</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sign up for a webinar</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Try it Free</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY14 ProSeries Evals</sourceValue>
+            </sourceValues>
+            <value>ProSeries Eval</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Web Lacerte Evals</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY14 Lacerte Eval</sourceValue>
+            </sourceValues>
+            <value>Lacerte Eval</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Lacerte Webinar</sourceValue>
+            </sourceValues>
+            <value>Lacerte Webinar</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>ProSeries Webinar</sourceValue>
+            </sourceValues>
+            <value>ProSeries Webinar</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>TY14 Trade Show (IRS Chicago)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY14 Trade Show (IRS NOLA)</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY14 Trade Show (IRS San Diego)</sourceValue>
+            </sourceValues>
+            <value>Tradeshow</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>STATUS</field>
+    </columns>
+    <columns>
+        <field>Lead.Aging__c</field>
+    </columns>
+    <columns>
+        <field>LAST_ACTIVITY</field>
+    </columns>
+    <columns>
+        <field>COMPANY</field>
+    </columns>
+    <columns>
+        <field>Lead.Legacy_Treatment_Name__c</field>
+    </columns>
+    <columns>
+        <field>DESCRIPTION</field>
+    </columns>
+    <columns>
+        <field>PHONE</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <currency>USD</currency>
+    <description>All web, campaign and self-created leads untouched over 15 days</description>
+    <filter>
+        <booleanFilter>((1 AND 2 AND 3 AND 4 AND 5 AND 6) or (1 AND 2 AND 3 AND 4 AND 6))</booleanFilter>
+        <criteriaItems>
+            <column>OWNER_ROLE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>New Offerings Consultant</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>STATUS</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Working,New</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Corey Spear,Cynthia Thomas,Gerald Henry,Marc Freidberg,Daniel Brommer,Kelsey Alford,Sharbel Abi-habib,Brian Curran,Justin Evans,Kimberly Gallahan,Jonathan Lovitt,Michael Chavez,John Trammell,Roland Carrion,Tiffany Randall,maria Harris,Victor Nolasco,Robert Randall,Jason Tritle</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Legacy_Treatment_Name__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notContain</operator>
+            <value>ITO,QBOA,Flip,trade,ATX,Top,Pre-order</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>UNREAD</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>1</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>LAST_ACTIVITY</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>lessOrEqual</operator>
+            <value>N_DAYS_AGO:15</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>OWNER</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>TY15 TAX ACQ All Leads</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LeadList</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>LAST_ACTIVITY</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2015-04-15</startDate>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>HorizontalBar</chartType>
+        <enableHoverLabels>true</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>STATUS</groupingColumn>
+        <location>CHART_TOP</location>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>true</showValues>
+        <size>Small</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>CASE_NUMBER</field>
+    </columns>
+    <columns>
+        <field>OWNER_ROLE</field>
+    </columns>
+    <columns>
+        <field>OWNER</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATE_BY</field>
+    </columns>
+    <columns>
+        <field>ORIGIN</field>
+    </columns>
+    <columns>
+        <field>AGE</field>
+    </columns>
+    <columns>
+        <field>LAST_UPDATEONLY</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>((((((1 OR 2) OR 3) OR 4) or 5) or 11) AND (((((6 or 7) or 8) or 9) or 10) or 12))</booleanFilter>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Mark Anthony Avellaneda,Renz Daniel Gregorio,Roda Mariñas,Alexis Martinez,Rommel Perez,Kim Rivera,Zestha Faith Marie Sumbanon,Elgart Villapaña,Jordan Alfonso,Edralyn Cabiles,Robween Chan,Gene Arvey Dimanalata,Bernadette Giray,Karl Vincent Noserale,Charlene Obina,John Archie Pielago,John Paul Silvero,Rochelle Triguero,Christian Paul Villamil</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Ahron Leo Antonio,Warren Baliwag,Christian Caayao,Edward Jean Louis Cura,Anabelle Dioso,Gilbert Enriquez,Jerome Santiago,Ma. Angely Abe,Mark Gil Cabral,Rolly David James Castillo,Reyna Anne Gabriel,German Louise Malinao,Jesmar Joseph Mangahas,Marcus Miguel Navarro,Jaime Robles Jr.,Farhana Taha,Bryan Martin Vargas,Edmark Louie Largadas,Clarshin Hazel Accad</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Ian Kervi Balase,Mark James Torio,Marizz Manuelle,Josee Virgillo Barbas,Angelica Joy De Guzman,Marrien Gabay,Karen Anne Mendoza,Kenneth Moises,Frank Salvador Poblete,Maria Rosana Ras,King Lexter Tanglao,Edward Yagi,Ma. Justine Ann Yumang,Jezreel Avellanoza,Russel Ross Jonie De Jesus,Bryan Jimenez</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Joshua Adsuara,Ian John Alemania,Jessa Maj Ang,Anthony Darwin Avellanosa,Melvin Bautista,Carla Crisanta Catiban,Miles Matthew Chin,John Ponce Cruz,Cristal De Vera,Ben Jasmine Dela Cerna,Jefferson Diadid,Ann Michelle Francisco,Christian Marin,Ritchelle May Peolio,Leean Paulus Quintana,Nicolai Marie Sausa,Leonilo Tejano,Jennifer Bermundo</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Jomar Escalante,Lea Sara Razon,Ellen Grace Mandin,Jessa Mae Gorospe,Juniebar Gamboa,Brent John Ceralde,Calvin Quicho,Luigi Fulitado,Zhanta Mae Abello,Mark Gene Sampol,Renz Gomez,Apole Limjoco,Joan Roldan,Jexie Libaton,Mario Allan Navato,Yganne Dela Cruz,Nicole-Anne Puddunan,Niel Tristan Lumbo,Bazare Saliling,Alexander Paul Adoremos,Christian Glenn Cruz</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Mark Anthony Avellaneda,Renz Daniel Gregorio,Roda Mariñas,Alexis Martinez,Rommel Perez,Kim Rivera,Zestha Faith Marie Sumbanon,Elgart Villapaña,Jordan Alfonso,Edralyn Cabiles,Robween Chan,Gene Arvey Dimanalata,Bernadette Giray,Karl Vincent Noserale,Charlene Obina,John Archie Pielago,John Paul Silvero,Rochelle Triguero,Christian Paul Villamil</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Ahron Leo Antonio,Warren Baliwag,Christian Caayao,Edward Jean Louis Cura,Anabelle Dioso,Gilbert Enriquez,Jerome Santiago,Ma. Angely Abe,Mark Gil Cabral,Rolly David James Castillo,Reyna Anne Gabriel,German Louise Malinao,Jesmar Joseph Mangahas,Marcus Miguel Navarro,Jaime Robles Jr.,Farhana Taha,Bryan Martin Vargas,Edmark Louie Largadas,Clarshin Hazel Accad</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Ian Kervi Balase,Mark James Torio,Marizz Manuelle,Josee Virgillo Barbas,Angelica Joy De Guzman,Marrien Gabay,Karen Anne Mendoza,Kenneth Moises,Frank Salvador Poblete,Maria Rosana Ras,King Lexter Tanglao,Edward Yagi,Ma. Justine Ann Yumang,Jezreel Avellanoza,Russel Ross Jonie De Jesus,Bryan Jimenez</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Joshua Adsuara,Ian John Alemania,Jessa Maj Ang,Anthony Darwin Avellanosa,Melvin Bautista,Carla Crisanta Catiban,Miles Matthew Chin,John Ponce Cruz,Cristal De Vera,Ben Jasmine Dela Cerna,Jefferson Diadid,Ann Michelle Francisco,Christian Marin,Ritchelle May Peolio,Leean Paulus Quintana,Nicolai Marie Sausa,Leonilo Tejano,Jennifer Bermundo</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Jomar Escalante,Lea Sara Razon,Ellen Grace Mandin,Jessa Mae Gorospe,Juniebar Gamboa,Brent John Ceralde,Calvin Quicho,Luigi Fulitado,Zhanta Mae Abello,Mark Gene Sampol,Renz Gomez,Apole Limjoco,Joan Roldan,Jexie Libaton,Mario Allan Navato,Yganne Dela Cruz,Nicole-Anne Puddunan,Niel Tristan Lumbo,Bazare Saliling,Alexander Paul Adoremos,Christian Glenn Cruz</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Rhahima Angeles,Rhezadel Avanzado,Jaymart Baluyut,Czar Alfred Basco,Mary Roan Bonus,Rina De leon,Jasi Ann De Mateo,Noel Jr Dy,James Ashley Lopez,Jennilyn Nadonga,Crisologo Ocbania,Jennilyn Papa,Ma. Frances Rana,Alice Santos,Evelyn Severino,Anifa Tomawis,Mary Rose Victoria,Emmanuel Oregas</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>,Rhahima Angeles,Rhezadel Avanzado,Jaymart Baluyut,Czar Alfred Basco,Mary Roan Bonus,Rina De leon,Jasi Ann De Mateo,Noel Jr Dy,James Ashley Lopez,Jennilyn Nadonga,Crisologo Ocbania,Jennilyn Papa,Ma. Frances Rana,Alice Santos,Evelyn Severino,Anifa Tomawis,Mary Rose Victoria,Emmanuel Oregas</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>STATUS</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Cluster Sheng Cases</name>
+    <params>
+        <name>units</name>
+        <value>d</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>OWNER</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATEONLY</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

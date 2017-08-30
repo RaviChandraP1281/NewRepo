@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>USERS.NAME</field>
+    </columns>
+    <columns>
+        <field>Account_Relationship__c.Relationship_Established_on__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Account.Company_ID__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>1352691490,1407031495,181995742,1010554215,445332895,1044152115,1291444935,1365305595,1039508155,1301622055,1054077115,1357471455,184077151,717714385,1265410865,668989490,1385191615,585800585,324900315,1382383380,1029442815,381275376,1265388970,1377549925,631653820,744068995,1348227260,1379660855,334458255,1327291720,1313522320,1383006975,1395438610,1204849320,1395139630,359952985,574335005,1377488835,539504245,1379603695,1394177055,711449705,129988030,1400277935,380048201,1220203370,835722380,1121430435,1363197545,404605181,1385605855,1378753780,798971570,786853815,1236880415,1333457450,1256620740,1110075630,1276275935,1313038160,1050968695,123145652989887,390738165,383599135,1013809400</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account_Relationship__c.Relationship_Established_on__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>greaterThan</operator>
+            <value>2/1/2016</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Company_ID__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Co-Marketing 03/16/2016</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountCustomEntity$Account_Relationship__c</reportType>
+    <scope>user</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>DUE_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

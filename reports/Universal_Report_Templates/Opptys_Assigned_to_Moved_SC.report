@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>AMX_Distribution_Log__c$Opportunity__c</field>
+    </columns>
+    <columns>
+        <field>AMX_Distribution_Log__c$Assigned_Record_ID__c</field>
+    </columns>
+    <columns>
+        <field>AMX_Distribution_Log__c$Owner</field>
+    </columns>
+    <columns>
+        <field>AMX_Distribution_Log__c$Assigned_Object_Type__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>AMX_Distribution_Log__c$AMX_Distributor__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Hot Opptys</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>AMX_Distribution_Log__c$Assigned_Owner__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notContain</operator>
+            <value>Eigner,Tang</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>AMX_Distribution_Log__c$Assigned_Owner__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Sarah Kouri,Charlie Phannes,Marco Estupinan,Kimberly Craig,Merrie Everson,Eric Galarza,Brandon Goldberg</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>AMX_Distribution_Log__c$Distributor_Name__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Hot Opptys</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>AMX_Distribution_Log__c$CreatedDate</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>AMX_Distribution_Log__c$Assignment_Date__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>AMX_Distribution_Log__c$Assigned_Owner__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Opptys Assigned to Moved SC</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Distributor_Logs__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>AMX_Distribution_Log__c$Assignment_Date__c</dateColumn>
+        <endDate>2016-04-01</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2016-03-01</startDate>
+    </timeFrameFilter>
+</Report>

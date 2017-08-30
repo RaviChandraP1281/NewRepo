@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <fields>
+        <fullName>Account__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Account</label>
+        <referenceTo>Account</referenceTo>
+        <relationshipLabel>VOC Survey Response</relationshipLabel>
+        <relationshipName>VOC_Survey_Response</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Answer_Cares__c</fullName>
+        <externalId>false</externalId>
+        <label>Answer Cares</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Answer_NPS__c</fullName>
+        <externalId>false</externalId>
+        <label>Answer NPS</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Answer_Resolved_Issue__c</fullName>
+        <externalId>false</externalId>
+        <label>Answer Resolved Issue</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Avg_Score__c</fullName>
+        <description>The custom field is added as part of SA-639. The field will calculate the average score for Sales VOC survey.</description>
+        <externalId>false</externalId>
+        <formula>IF((If(ISBLANK(Response_1_Numeric__c) ,0,1) + IF(ISBLANK(Response_3_Numeric__c),0,1)+if(ISBLANK(Response_4_Numeric__c),0,1))&gt;0,((IF(ISBLANK(Response_1_Numeric__c),0,Response_1_Numeric__c) + IF(ISBLANK( Response_3_Numeric__c ),0, Response_3_Numeric__c ) + if(ISBLANK( Response_4_Numeric__c ),0, Response_4_Numeric__c ))
+/
+(If(ISBLANK(Response_1_Numeric__c) ,0,1) + IF(ISBLANK(Response_3_Numeric__c),0,1)+if(ISBLANK(Response_4_Numeric__c),0,1))), 0)</formula>
+        <label>Avg Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>CaseId__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Case</label>
+        <referenceTo>Case</referenceTo>
+        <relationshipName>Case_NPS</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Contact__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Contact</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>VOC Survey Response</relationshipLabel>
+        <relationshipName>VOC_Survey_Response</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>OpportunityId__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>The lookup for Opportunity object for which the survey is targeted.</description>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipLabel>VOC Survey Response</relationshipLabel>
+        <relationshipName>VOC_Survey_Response</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Opportunity_Owner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>This will hold the Opportunity Owner Id and will get displayed on &quot;Related List&quot; for this object</description>
+        <externalId>false</externalId>
+        <label>Opportunity Owner</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>VOC_Survey_Response</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Question_Cares__c</fullName>
+        <externalId>false</externalId>
+        <label>Question Cares</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Question_NPS__c</fullName>
+        <externalId>false</externalId>
+        <label>Question_NPS</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Question_Resolved_Issue__c</fullName>
+        <externalId>false</externalId>
+        <label>Question Resolved Issue</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Question_Response10__c</fullName>
+        <externalId>false</externalId>
+        <label>Response 10</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Question_Response11__c</fullName>
+        <externalId>false</externalId>
+        <label>Response11</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Question_Response1__c</fullName>
+        <externalId>false</externalId>
+        <label>Response 1</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Question_Response2__c</fullName>
+        <externalId>false</externalId>
+        <label>Response 2</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Question_Response3__c</fullName>
+        <externalId>false</externalId>
+        <label>Response3</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Question_Response4__c</fullName>
+        <externalId>false</externalId>
+        <label>Response 4</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Question_Response5__c</fullName>
+        <externalId>false</externalId>
+        <label>Response 5</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Question_Response6__c</fullName>
+        <externalId>false</externalId>
+        <label>Response 6</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Question_Response7__c</fullName>
+        <externalId>false</externalId>
+        <label>Response7</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Question_Response8__c</fullName>
+        <externalId>false</externalId>
+        <label>Response 8</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Question_Response9__c</fullName>
+        <externalId>false</externalId>
+        <label>Response 9</label>
+        <length>32768</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>2</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Question_Text10__c</fullName>
+        <externalId>false</externalId>
+        <label>Question 10</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Question_Text11__c</fullName>
+        <externalId>false</externalId>
+        <label>Question 11</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Question_Text1__c</fullName>
+        <externalId>false</externalId>
+        <label>Question 1</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Question_Text2__c</fullName>
+        <externalId>false</externalId>
+        <label>Question 2</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Question_Text3__c</fullName>
+        <externalId>false</externalId>
+        <label>Question 3</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Question_Text4__c</fullName>
+        <externalId>false</externalId>
+        <label>Question 4</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Question_Text5__c</fullName>
+        <externalId>false</externalId>
+        <label>Question 5</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Question_Text6__c</fullName>
+        <externalId>false</externalId>
+        <label>Question 6</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Question_Text7__c</fullName>
+        <externalId>false</externalId>
+        <label>Question 7</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Question_Text8__c</fullName>
+        <externalId>false</externalId>
+        <label>Question 8</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Question_Text9__c</fullName>
+        <externalId>false</externalId>
+        <label>Question 9</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Response_1_Numeric__c</fullName>
+        <description>This field will be used to store numeric response</description>
+        <externalId>false</externalId>
+        <label>Response 1 Numeric</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Response_3_Numeric__c</fullName>
+        <description>This field will be used to store numeric response</description>
+        <externalId>false</externalId>
+        <label>Response 3 Numeric</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Response_4_Numeric__c</fullName>
+        <description>This field will be used to store numeric response</description>
+        <externalId>false</externalId>
+        <label>Response 4 Numeric</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Response_Answer_11__c</fullName>
+        <externalId>false</externalId>
+        <label>Response Answer 11</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Response_Answer_3__c</fullName>
+        <externalId>false</externalId>
+        <label>Response Answer 3</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Response_Answer_7__c</fullName>
+        <externalId>false</externalId>
+        <label>Response Answer 7</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Response_Formula11__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Question_Response11__c, 
+&quot;0&quot;, &quot;Extremely Disatisfied&quot;,
+&quot;1&quot;, &quot;Extremely Disatisfied&quot;,
+&quot;2&quot;, &quot;Extremely Disatisfied&quot;,
+&quot;3&quot;, &quot;Extremely Disatisfied&quot;, 
+&quot;4&quot;, &quot;Extremely Disatisfied&quot;, 
+&quot;5&quot;, &quot;Extremely Disatisfied&quot;, 
+&quot;6&quot;, &quot;Extremely Disatisfied&quot;, 
+&quot;7&quot;, &quot;Neutral&quot;, 
+&quot;8&quot;, &quot;Neutral&quot;, 
+&quot;9&quot;, &quot;Extremely Satisfied&quot;, 
+&quot;10&quot;,&quot;Extremely Satisfied&quot;,
+&quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Response 11</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Response_Formula3__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Question_Response3__c,
+&quot;0&quot;, &quot;Extremely Disatisfied&quot;, 
+&quot;1&quot;, &quot;Extremely Disatisfied&quot;,
+&quot;2&quot;, &quot;Extremely Disatisfied&quot;,
+&quot;3&quot;, &quot;Extremely Disatisfied&quot;, 
+&quot;4&quot;, &quot;Extremely Disatisfied&quot;, 
+&quot;5&quot;, &quot;Extremely Disatisfied&quot;, 
+&quot;6&quot;, &quot;Extremely Disatisfied&quot;, 
+&quot;7&quot;, &quot;Neutral&quot;, 
+&quot;8&quot;, &quot;Neutral&quot;, 
+&quot;9&quot;, &quot;Extremely Satisfied&quot;, 
+&quot;10&quot;,&quot;Extremely Satisfied&quot;,
+&quot;&quot;)</formula>
+        <label>Response 3</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Response_Formula7__c</fullName>
+        <externalId>false</externalId>
+        <formula>CASE(Question_Response7__c, 
+&quot;0&quot;, &quot;Extremely Disatisfied&quot;,
+&quot;1&quot;, &quot;Extremely Disatisfied&quot;,
+&quot;2&quot;, &quot;Extremely Disatisfied&quot;,
+&quot;3&quot;, &quot;Extremely Disatisfied&quot;, 
+&quot;4&quot;, &quot;Extremely Disatisfied&quot;, 
+&quot;5&quot;, &quot;Extremely Disatisfied&quot;, 
+&quot;6&quot;, &quot;Extremely Disatisfied&quot;, 
+&quot;7&quot;, &quot;Neutral&quot;, 
+&quot;8&quot;, &quot;Neutral&quot;, 
+&quot;9&quot;, &quot;Extremely Satisfied&quot;, 
+&quot;10&quot;,&quot;Extremely Satisfied&quot;,
+&quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Response 7</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>SurveyResponseURL__c</fullName>
+        <externalId>false</externalId>
+        <label>Survey Response Link</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Url</type>
+    </fields>
+    <fields>
+        <fullName>Survey_Identifier__c</fullName>
+        <externalId>false</externalId>
+        <label>Survey Identifier</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Survey_Received_Date__c</fullName>
+        <defaultValue>now()</defaultValue>
+        <description>This will store the date on which survey response received.</description>
+        <externalId>false</externalId>
+        <label>Survey Received Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Survey_Sent_Date__c</fullName>
+        <description>This will store the date of Survey Trigger.</description>
+        <externalId>false</externalId>
+        <label>Survey Sent Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Survey__c</fullName>
+        <description>This Field Stores the unique identifier for the survey to ensure that we are able to distinguish between the different survey types.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The unique identifier for the Survey.</inlineHelpText>
+        <label>Survey</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <listViews>
+        <fullName>All</fullName>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+</CustomObject>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportFolder xmlns="http://soap.sforce.com/2006/04/metadata">
+    <folderShares>
+        <accessLevel>View</accessLevel>
+        <sharedTo>AAG_IAM_John_Brakey</sharedTo>
+        <sharedToType>Group</sharedToType>
+    </folderShares>
+    <name>John&apos;s Firms</name>
+</ReportFolder>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>SkuidPageHistory__c.UserId__c</field>
+    </columns>
+    <columns>
+        <field>SkuidPageHistory__c.LastVisitedDate__c</field>
+    </columns>
+    <currency>GBP</currency>
+    <filter>
+        <criteriaItems>
+            <column>SkuidPageHistory__c.UserId__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>contains</operator>
+            <value>wellman,mcfarlane,koitmaa,scheffel,wilfon,yajaira,villigrana</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>SkuidPageHistory__c.PageName__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>SKUID Usage</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$SkuidPageHistory__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>SkuidPageHistory__c.LastVisitedDate__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>SkuidPageHistory__c.LastVisitedDate__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_48489915</developerName>
+        <masterLabel>Profiled</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>Account.Accounts_Management__r$Attribute__c</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue># CanTax Clients</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue># Other Tax Solution Clients</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue># TaxCycle Clients</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue># TaxPrep Clients</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue># TurboTax Clients</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue># VisualTax Clients</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Products -Tax</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Services - Tax Only</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Services - Tax Planning</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Services - Tax Prep</sourceValue>
+            </sourceValues>
+            <value>Profiled</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>Account$Id</field>
+    </columns>
+    <columns>
+        <field>Account$Company_ID__c</field>
+    </columns>
+    <columns>
+        <field>Account$Integra_ICIS_ID__c</field>
+    </columns>
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account$Customer_Lifetime__c</field>
+    </columns>
+    <columns>
+        <field>Account.Accounts_Management__r$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Accounts_Management__r$Value__c</field>
+    </columns>
+    <columns>
+        <field>Account.Accounts_Management__r$Group__c</field>
+    </columns>
+    <columns>
+        <field>Account.Accounts_Management__r$Other_Value__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Account$Country__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Canada</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Status__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Active</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Customer_Type__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Partner</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Accounts_Management__r$Attribute__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Tax</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Owner</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Bogdan Masala,Brad Hull,Claude Powell,Curtis Voisin,Jeremy Burke,Harvey Kooner,Ryan Kilbourne,Steve Blaszko,Matthew Bennett,Heidi Gerstner,Vidya Natarjan,Patrick Harrison,Brooke Aguanno,Corey Bullock,Joseph Dimacuha,Robert Polisena,Saarim Mujtaba,Saniya Narvel,Abhishek Paul,Michael Yanosev,Jessie Bull,Steven McLeod</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Parent</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_48489915</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Accounts_Management__r$Attribute__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account$Owner</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>CAN - Account Management Profiles - Summ</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Accounts_with_Accounts_Management_Info__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

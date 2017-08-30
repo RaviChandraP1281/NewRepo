@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>picklist</bucketType>
+        <developerName>BucketField_45204365</developerName>
+        <masterLabel>Oppty Stage %</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>STAGE_NAME</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Validate</sourceValue>
+            </sourceValues>
+            <value>Validate 0%- Not Yet Attempted/ Attempted</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Assess</sourceValue>
+            </sourceValues>
+            <value>Assess 10%</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Educate</sourceValue>
+            </sourceValues>
+            <value>Educate 25%</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Solution</sourceValue>
+            </sourceValues>
+            <value>Solution 50%- MYC in Process/ In Process</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Negotiate</sourceValue>
+            </sourceValues>
+            <value>Negotiate 75%- Committed to Renew</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Future Hold</sourceValue>
+            </sourceValues>
+            <value>Future Hold 90%- FDH, DPP</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Closed Lost</sourceValue>
+            </sourceValues>
+            <value>Closed Lost 0%- Lost</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Closed Won</sourceValue>
+            </sourceValues>
+            <value>Closed Won 100%- Renewed</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#663333</backgroundColor2>
+        <backgroundFadeDir>LeftToRight</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>HorizontalBarGrouped</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>FULL_NAME</groupingColumn>
+        <legendPosition>Bottom</legendPosition>
+        <location>CHART_TOP</location>
+        <secondaryGroupingColumn>STAGE_NAME</secondaryGroupingColumn>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>true</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>10</textSize>
+        <title>Team Renewal Report</title>
+        <titleColor>#333333</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <currency>USD</currency>
+    <description>Track team&apos;s renewal progress</description>
+    <filter>
+        <criteriaItems>
+            <column>OPPORTUNITY_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Renewal Oppty for</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FULL_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Donald André,Phil Jobe,Antoine McCoy,Ben Duff,Michael Maahs,Ben Mitchell,Alexa Vujovich,Veronica Jackson,Keisha McDaniel,Kent Conway,Kevin Smith,Charles Lewis,Kelly Rhea</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>BucketField_45204365</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Closed Won,Future Hold</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Month</dateGranularity>
+        <field>CLOSE_MONTH</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FULL_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>STAGE_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>TAC Team Renewal Report</name>
+    <params>
+        <name>open</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunity</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CLOSE_DATE</dateColumn>
+        <endDate>2016-04-01</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2015-03-31</startDate>
+    </timeFrameFilter>
+</Report>

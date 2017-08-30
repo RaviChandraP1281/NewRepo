@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Q.CREATED</field>
+    </columns>
+    <columns>
+        <field>Q.CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>QUOTE_ID</field>
+    </columns>
+    <columns>
+        <field>QUOTE_NAME</field>
+    </columns>
+    <columns>
+        <field>QUOTE_NUMBER</field>
+    </columns>
+    <format>Summary</format>
+    <name>Quotes Created Today</name>
+    <params>
+        <name>open</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>QuoteProduct</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Q.CREATED_DATE</dateColumn>
+        <interval>INTERVAL_TODAY</interval>
+    </timeFrameFilter>
+</Report>

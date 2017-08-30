@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>FREE tools to help you promote cloud accounting to your clients</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Grow client base My Marketing</name>
+    <style>none</style>
+    <subject>FREE tools to help you promote cloud accounting to your clients</subject>
+    <textOnly>*|MC:SUBJECT|*
+
+Create new value-add services using our special 4.99 offer
+
+View this email in your browser
+
+Ready-made marketing tools to save you time
+
+Finding time to promote cloud accounting to your clients can be time-consuming … until now.
+
+Located in the ProAdvisor Partner Portal, there’s a range of ready-to-use emails, web pages, flyers, web banners and more to help you grow your practice by moving your clients to the cloud.
+
+So if you want to send out an email, add a banner to your website or run a client event, all you need to do is add your logo, add the relevant detail and you’re ready to go!
+
+Learn how to create your own email campaign here
+
+If you need any assistance with the marketing tools in the Portal, please call us on 1800 618 521 and we’ll gladly help you out.
+
+Thanks!
+
+QuickBooks Online ProAdvisor Team
+
+You&apos;re receiving this email because you have provided Intuit your details or have been referred by a colleague.
+
+unsubscribe from this list
+
+Intuit Australia
+Level 13, 2 Park Street
+SYDNEY  NSW  2000</textOnly>
+    <type>custom</type>
+</EmailTemplate>

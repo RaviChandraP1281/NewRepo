@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Case$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>Case$CaseOwnerFullName__c</field>
+    </columns>
+    <columns>
+        <field>Case$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>Case.CaseComments$CommentBody</field>
+    </columns>
+    <columns>
+        <field>Case.CaseComments$Id</field>
+    </columns>
+    <columns>
+        <field>Case.CaseComments$CreatedBy</field>
+    </columns>
+    <columns>
+        <field>Case.CaseComments$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>Case.CaseComments$LastModifiedBy</field>
+    </columns>
+    <columns>
+        <field>Case.CaseComments$LastModifiedDate</field>
+    </columns>
+    <columns>
+        <field>Case.CaseComments$IsPublished</field>
+    </columns>
+    <currency>USD</currency>
+    <description>#EMU case search</description>
+    <filter>
+        <criteriaItems>
+            <column>Case$CaseOwnerFullName__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Wesley Amos,Mable Butler,Mary Camacho,Cody Chavis,Laura Cruse,Thomas,Ettore,Selena Goosby,Taylor Hadley,Shiree Harrison,Scott Joseph,Taiji Mainor,Phillip Manchester,Arnashia Matherson,Whitney Miller,Robert Monroe,Ayanira Olmedo,Kyle Peterson,Nicole Shrimplin,Alexandra Vester</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Mobile emulator Kevin Caine Team</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Cases_with_Case_Comments__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Case$CreatedDate</dateColumn>
+        <endDate>2017-07-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2017-04-10</startDate>
+    </timeFrameFilter>
+</Report>

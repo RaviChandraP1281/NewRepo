@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>AMOUNT</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>1 AND (2 or 3 or 4) AND (5 or 6 or 7)</booleanFilter>
+        <criteriaItems>
+            <column>STAGE_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Closed Won</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Lead_Originator__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Aldrin Sotto,Aljoner Siccion,Almar Canlas,Aurelio Jr De Jesus,Chemarie Thomas Kabigting,Criselle Nunag,Donnah Dizon,Dyan Valery Manalansan,Fairy Lyn Cortes,Fatima Cristobal,Gailynn Sarmiento,Galang Plinky Rose,Heidi Pangilinan,Herlie Calma,Jane Nica Vinluan,Janice Quinto,Jayson Reyes,Jerome Pallasigui,Joanna Liza Pelayo,Joan Villabroza,Jofer Dela Cruz,Jomalyn Bacani,Joneth Vianney Diwa,Josanne Samantha Santos,Keaton Bustos,Kinno Garcia,Kristine Balboa,Maria Jenica Santos,Maria Joanna Joson,Marjorie Gail Timpug,Mark Lyle Timpug,Mibeth Enriquez,Princess Bea Carreon,Rae Randall De Guzman,Rexson Jordan Nulud,Rhia Ann Mangune,Cristina Basilio,mia dela cruz</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Lead_Originator__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Allen Joie Navarro,Arlene David,Christine Umali,David Avner Francisco,Realyn Hipolito,Mark Roy Del Rosario,Michael Martin Nazarene Madayag,Ana May Castro,Leamor Morales,Richard Rodrigo</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Lead_Originator__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Edzel Galang,Clarissa Gonzalez,Melissa Mamangun,John Edison Pangilinan,Ardee Ponce,Rio Mary Ann Romero,Jeneah Danica Silerio,Wylliane Aubrey Tarroza</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FULL_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notContain</operator>
+            <value>Aldrin Sotto,Aljoner Siccion,Almar Canlas,Aurelio Jr De Jesus,Chemarie Thomas Kabigting,Criselle Nunag,Donnah Dizon,Dyan Valery Manalansan,Fairy Lyn Cortes,Fatima Cristobal,Gailynn Sarmiento,Galang Plinky Rose,Heidi Pangilinan,Herlie Calma,Jane Nica Vinluan,Janice Quinto,Jayson Reyes,Jerome Pallasigui,Joanna Liza Pelayo,Joan Villabroza,Jofer Dela Cruz,Jomalyn Bacani,Joneth Vianney Diwa,Josanne Samantha Santos,Keaton Bustos,Kinno Garcia,Kristine Balboa,Maria Jenica Santos,Maria Joanna Joson,Marjorie Gail Timpug,Mark Lyle Timpug,Mibeth Enriquez,Princess Bea Carreon,Rae Randall De Guzman,Rexson Jordan Nulud,Rhia Ann Mangune,Cristina Basilio,mia dela cruz</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FULL_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notContain</operator>
+            <value>Allen Joie Navarro,Arlene David,Christine Umali,David Avner Francisco,Realyn Hipolito,Mark Roy Del Rosario,Michael Martin Nazarene Madayag,Ana May Castro,Leamor Morales,Richard Rodrigo</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FULL_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notContain</operator>
+            <value>Edzel Galang,Clarissa Gonzalez,Melissa Mamangun,John Edison Pangilinan,Ardee Ponce,Rio Mary Ann Romero,Jeneah Danica Silerio,Wylliane Aubrey Tarroza</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Week</dateGranularity>
+        <field>CLOSE_DATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Opportunity.Lead_Originator__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Opportunity.Product_Family_of_Interest__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Report - HCR</name>
+    <params>
+        <name>open</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunity</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CLOSE_DATE</dateColumn>
+        <endDate>2016-08-06</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2016-08-01</startDate>
+    </timeFrameFilter>
+</Report>

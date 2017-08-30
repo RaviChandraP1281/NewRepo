@@ -1,0 +1,934 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Country__c</fullName>
+        <externalId>false</externalId>
+        <label>Country</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Region__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Australia</fullName>
+                    <default>false</default>
+                    <label>Australia</label>
+                </value>
+                <value>
+                    <fullName>Canada</fullName>
+                    <default>false</default>
+                    <label>Canada</label>
+                </value>
+                <value>
+                    <fullName>India</fullName>
+                    <default>false</default>
+                    <label>India</label>
+                </value>
+                <value>
+                    <fullName>United Kingdom</fullName>
+                    <default>false</default>
+                    <label>United Kingdom</label>
+                </value>
+                <value>
+                    <fullName>USA</fullName>
+                    <default>false</default>
+                    <label>USA</label>
+                </value>
+                <value>
+                    <fullName>France</fullName>
+                    <default>false</default>
+                    <label>France</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Americas</controllingFieldValue>
+                <valueName>Canada</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Americas</controllingFieldValue>
+                <valueName>USA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>APAC</controllingFieldValue>
+                <valueName>Australia</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>APAC</controllingFieldValue>
+                <valueName>India</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Europe</controllingFieldValue>
+                <valueName>United Kingdom</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Europe</controllingFieldValue>
+                <valueName>France</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Is_Active__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Indicates whether or not this TSS Rule is active.  Only active rules will be used by the TSS Engine when attempting to match Postal Codes.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Indicates whether or not this TSS Rule is active.</inlineHelpText>
+        <label>Active</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Notes__c</fullName>
+        <externalId>false</externalId>
+        <label>Notes</label>
+        <length>32768</length>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Html</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>RegEx_String__c</fullName>
+        <externalId>false</externalId>
+        <label>RegEx String</label>
+        <length>10240</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Region__c</fullName>
+        <externalId>false</externalId>
+        <label>Region</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Americas</fullName>
+                    <default>false</default>
+                    <label>Americas</label>
+                </value>
+                <value>
+                    <fullName>APAC</fullName>
+                    <default>false</default>
+                    <label>APAC</label>
+                </value>
+                <value>
+                    <fullName>Europe</fullName>
+                    <default>false</default>
+                    <label>Europe</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Sequence__c</fullName>
+        <defaultValue>0</defaultValue>
+        <description>The order in which this TSS Rule should be processed, relative to the other TSS Rules that are defined for the same Country.  This value should not be exposed to users unless rule sequencing features are implemented.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The order in which this TSS Rule should be processed, relative to the other TSS Rules that are defined for the same Country.</inlineHelpText>
+        <label>Sequence</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Territory__c</fullName>
+        <description>The name of the Territory that this TSS Rule is a match for.  This name must EXACTLY match the corresponding Picklist value for the Territory__c field on the Account object.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>The name of the Territory that this TSS Rule is a match for.</inlineHelpText>
+        <label>Territory</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Country__c</controllingField>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>ACT - 1</fullName>
+                    <default>false</default>
+                    <label>ACT - 1</label>
+                </value>
+                <value>
+                    <fullName>ACT - 2</fullName>
+                    <default>false</default>
+                    <label>ACT - 2</label>
+                </value>
+                <value>
+                    <fullName>ACT - All</fullName>
+                    <default>false</default>
+                    <label>ACT - All</label>
+                </value>
+                <value>
+                    <fullName>Alberta</fullName>
+                    <default>false</default>
+                    <label>Alberta</label>
+                </value>
+                <value>
+                    <fullName>British Columbia</fullName>
+                    <default>false</default>
+                    <label>British Columbia</label>
+                </value>
+                <value>
+                    <fullName>Calgary</fullName>
+                    <default>false</default>
+                    <label>Calgary</label>
+                </value>
+                <value>
+                    <fullName>Central Midlands</fullName>
+                    <default>false</default>
+                    <label>Central Midlands</label>
+                </value>
+                <value>
+                    <fullName>East Anglia</fullName>
+                    <default>false</default>
+                    <label>East Anglia</label>
+                </value>
+                <value>
+                    <fullName>East London</fullName>
+                    <default>false</default>
+                    <label>East London</label>
+                </value>
+                <value>
+                    <fullName>East Midlands</fullName>
+                    <default>false</default>
+                    <label>East Midlands</label>
+                </value>
+                <value>
+                    <fullName>East Ontario</fullName>
+                    <default>false</default>
+                    <label>East Ontario</label>
+                </value>
+                <value>
+                    <fullName>East Toronto</fullName>
+                    <default>false</default>
+                    <label>East Toronto</label>
+                </value>
+                <value>
+                    <fullName>Edmonton</fullName>
+                    <default>false</default>
+                    <label>Edmonton</label>
+                </value>
+                <value>
+                    <fullName>Edmonton/Calgary</fullName>
+                    <default>false</default>
+                    <label>Edmonton/Calgary</label>
+                </value>
+                <value>
+                    <fullName>GTA</fullName>
+                    <default>false</default>
+                    <label>GTA</label>
+                </value>
+                <value>
+                    <fullName>GTA North</fullName>
+                    <default>false</default>
+                    <label>GTA North</label>
+                </value>
+                <value>
+                    <fullName>GTA West</fullName>
+                    <default>false</default>
+                    <label>GTA West</label>
+                </value>
+                <value>
+                    <fullName>Hamilton-Niagara</fullName>
+                    <default>false</default>
+                    <label>Hamilton-Niagara</label>
+                </value>
+                <value>
+                    <fullName>Montreal</fullName>
+                    <default>false</default>
+                    <label>Montreal</label>
+                </value>
+                <value>
+                    <fullName>North East</fullName>
+                    <default>false</default>
+                    <label>North East</label>
+                </value>
+                <value>
+                    <fullName>North East/Ireland</fullName>
+                    <default>false</default>
+                    <label>North East/Ireland</label>
+                </value>
+                <value>
+                    <fullName>North Vancouver</fullName>
+                    <default>false</default>
+                    <label>North Vancouver</label>
+                </value>
+                <value>
+                    <fullName>North West</fullName>
+                    <default>false</default>
+                    <label>North West</label>
+                </value>
+                <value>
+                    <fullName>NSW - 1</fullName>
+                    <default>false</default>
+                    <label>NSW - 1</label>
+                </value>
+                <value>
+                    <fullName>NSW - 2</fullName>
+                    <default>false</default>
+                    <label>NSW - 2</label>
+                </value>
+                <value>
+                    <fullName>NSW - 3</fullName>
+                    <default>false</default>
+                    <label>NSW - 3</label>
+                </value>
+                <value>
+                    <fullName>NSW - 4</fullName>
+                    <default>false</default>
+                    <label>NSW - 4</label>
+                </value>
+                <value>
+                    <fullName>NSW - 5</fullName>
+                    <default>false</default>
+                    <label>NSW - 5</label>
+                </value>
+                <value>
+                    <fullName>NSW - 6</fullName>
+                    <default>false</default>
+                    <label>NSW - 6</label>
+                </value>
+                <value>
+                    <fullName>NSW - 7</fullName>
+                    <default>false</default>
+                    <label>NSW - 7</label>
+                </value>
+                <value>
+                    <fullName>NSW - Central</fullName>
+                    <default>false</default>
+                    <label>NSW - Central</label>
+                </value>
+                <value>
+                    <fullName>NSW - North</fullName>
+                    <default>false</default>
+                    <label>NSW - North</label>
+                </value>
+                <value>
+                    <fullName>NSW - South &amp; East</fullName>
+                    <default>false</default>
+                    <label>NSW - South &amp; East</label>
+                </value>
+                <value>
+                    <fullName>NSW - West</fullName>
+                    <default>false</default>
+                    <label>NSW - West</label>
+                </value>
+                <value>
+                    <fullName>NT - All</fullName>
+                    <default>false</default>
+                    <label>NT - All</label>
+                </value>
+                <value>
+                    <fullName>Ottawa</fullName>
+                    <default>false</default>
+                    <label>Ottawa</label>
+                </value>
+                <value>
+                    <fullName>Peel</fullName>
+                    <default>false</default>
+                    <label>Peel</label>
+                </value>
+                <value>
+                    <fullName>QLD - 1</fullName>
+                    <default>false</default>
+                    <label>QLD - 1</label>
+                </value>
+                <value>
+                    <fullName>QLD - 2</fullName>
+                    <default>false</default>
+                    <label>QLD - 2</label>
+                </value>
+                <value>
+                    <fullName>QLD - 3</fullName>
+                    <default>false</default>
+                    <label>QLD - 3</label>
+                </value>
+                <value>
+                    <fullName>QLD - 4</fullName>
+                    <default>false</default>
+                    <label>QLD - 4</label>
+                </value>
+                <value>
+                    <fullName>QLD - 5</fullName>
+                    <default>false</default>
+                    <label>QLD - 5</label>
+                </value>
+                <value>
+                    <fullName>QLD - 6</fullName>
+                    <default>false</default>
+                    <label>QLD - 6</label>
+                </value>
+                <value>
+                    <fullName>QLD - 7</fullName>
+                    <default>false</default>
+                    <label>QLD - 7</label>
+                </value>
+                <value>
+                    <fullName>QLD - All</fullName>
+                    <default>false</default>
+                    <label>QLD - All</label>
+                </value>
+                <value>
+                    <fullName>Quebec &amp; Maritimes</fullName>
+                    <default>false</default>
+                    <label>Quebec &amp; Maritimes</label>
+                </value>
+                <value>
+                    <fullName>SA - 1</fullName>
+                    <default>false</default>
+                    <label>SA - 1</label>
+                </value>
+                <value>
+                    <fullName>SA - 2</fullName>
+                    <default>false</default>
+                    <label>SA - 2</label>
+                </value>
+                <value>
+                    <fullName>SA - All</fullName>
+                    <default>false</default>
+                    <label>SA - All</label>
+                </value>
+                <value>
+                    <fullName>Scotland</fullName>
+                    <default>false</default>
+                    <label>Scotland</label>
+                </value>
+                <value>
+                    <fullName>SK/MB</fullName>
+                    <default>false</default>
+                    <label>SK/MB</label>
+                </value>
+                <value>
+                    <fullName>South Coast</fullName>
+                    <default>false</default>
+                    <label>South Coast</label>
+                </value>
+                <value>
+                    <fullName>South East</fullName>
+                    <default>false</default>
+                    <label>South East</label>
+                </value>
+                <value>
+                    <fullName>Southeast Ontario</fullName>
+                    <default>false</default>
+                    <label>Southeast Ontario</label>
+                </value>
+                <value>
+                    <fullName>South Vancouver</fullName>
+                    <default>false</default>
+                    <label>South Vancouver</label>
+                </value>
+                <value>
+                    <fullName>South West</fullName>
+                    <default>false</default>
+                    <label>South West</label>
+                </value>
+                <value>
+                    <fullName>South West/Wales</fullName>
+                    <default>false</default>
+                    <label>South West/Wales</label>
+                </value>
+                <value>
+                    <fullName>Southwest GTA</fullName>
+                    <default>false</default>
+                    <label>Southwest GTA</label>
+                </value>
+                <value>
+                    <fullName>Southwest Ontario</fullName>
+                    <default>false</default>
+                    <label>Southwest Ontario</label>
+                </value>
+                <value>
+                    <fullName>TAS - All</fullName>
+                    <default>false</default>
+                    <label>TAS - All</label>
+                </value>
+                <value>
+                    <fullName>Thames Valley</fullName>
+                    <default>false</default>
+                    <label>Thames Valley</label>
+                </value>
+                <value>
+                    <fullName>VIC - 1</fullName>
+                    <default>false</default>
+                    <label>VIC - 1</label>
+                </value>
+                <value>
+                    <fullName>VIC - 2</fullName>
+                    <default>false</default>
+                    <label>VIC - 2</label>
+                </value>
+                <value>
+                    <fullName>VIC - 3</fullName>
+                    <default>false</default>
+                    <label>VIC - 3</label>
+                </value>
+                <value>
+                    <fullName>VIC - 4</fullName>
+                    <default>false</default>
+                    <label>VIC - 4</label>
+                </value>
+                <value>
+                    <fullName>VIC - 5</fullName>
+                    <default>false</default>
+                    <label>VIC - 5</label>
+                </value>
+                <value>
+                    <fullName>VIC - 6</fullName>
+                    <default>false</default>
+                    <label>VIC - 6</label>
+                </value>
+                <value>
+                    <fullName>VIC - 7</fullName>
+                    <default>false</default>
+                    <label>VIC - 7</label>
+                </value>
+                <value>
+                    <fullName>VIC - Central</fullName>
+                    <default>false</default>
+                    <label>VIC - Central</label>
+                </value>
+                <value>
+                    <fullName>VIC - North</fullName>
+                    <default>false</default>
+                    <label>VIC - North</label>
+                </value>
+                <value>
+                    <fullName>VIC - South &amp; East</fullName>
+                    <default>false</default>
+                    <label>VIC - South &amp; East</label>
+                </value>
+                <value>
+                    <fullName>VIC - West</fullName>
+                    <default>false</default>
+                    <label>VIC - West</label>
+                </value>
+                <value>
+                    <fullName>WA - 1</fullName>
+                    <default>false</default>
+                    <label>WA - 1</label>
+                </value>
+                <value>
+                    <fullName>WA - 2</fullName>
+                    <default>false</default>
+                    <label>WA - 2</label>
+                </value>
+                <value>
+                    <fullName>WA - All</fullName>
+                    <default>false</default>
+                    <label>WA - All</label>
+                </value>
+                <value>
+                    <fullName>West Country</fullName>
+                    <default>false</default>
+                    <label>West Country</label>
+                </value>
+                <value>
+                    <fullName>West London</fullName>
+                    <default>false</default>
+                    <label>West London</label>
+                </value>
+                <value>
+                    <fullName>West Midlands</fullName>
+                    <default>false</default>
+                    <label>West Midlands</label>
+                </value>
+                <value>
+                    <fullName>West Toronto</fullName>
+                    <default>false</default>
+                    <label>West Toronto</label>
+                </value>
+                <value>
+                    <fullName>Yorkshire</fullName>
+                    <default>false</default>
+                    <label>Yorkshire</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>ACT - 1</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>ACT - 2</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>ACT - All</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>NSW - 1</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>NSW - 2</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>NSW - 3</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>NSW - 4</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>NSW - 5</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>NSW - 6</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>NSW - 7</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>NSW - Central</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>NSW - North</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>NSW - South &amp; East</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>NSW - West</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>NT - All</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>QLD - 1</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>QLD - 2</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>QLD - 3</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>QLD - 4</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>QLD - 5</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>QLD - 6</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>QLD - 7</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>QLD - All</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>SA - 1</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>SA - 2</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>SA - All</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>TAS - All</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>VIC - 1</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>VIC - 2</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>VIC - 3</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>VIC - 4</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>VIC - 5</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>VIC - 6</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>VIC - 7</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>VIC - Central</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>VIC - North</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>VIC - South &amp; East</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>VIC - West</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>WA - 1</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>WA - 2</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Australia</controllingFieldValue>
+                <valueName>WA - All</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Canada</controllingFieldValue>
+                <valueName>Alberta</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Canada</controllingFieldValue>
+                <valueName>British Columbia</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Canada</controllingFieldValue>
+                <valueName>Calgary</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Canada</controllingFieldValue>
+                <valueName>East Ontario</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Canada</controllingFieldValue>
+                <valueName>East Toronto</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Canada</controllingFieldValue>
+                <valueName>Edmonton</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Canada</controllingFieldValue>
+                <valueName>GTA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Canada</controllingFieldValue>
+                <valueName>GTA North</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Canada</controllingFieldValue>
+                <valueName>GTA West</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Canada</controllingFieldValue>
+                <valueName>Hamilton-Niagara</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Canada</controllingFieldValue>
+                <valueName>Montreal</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Canada</controllingFieldValue>
+                <valueName>North Vancouver</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Canada</controllingFieldValue>
+                <valueName>Ottawa</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Canada</controllingFieldValue>
+                <valueName>Peel</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Canada</controllingFieldValue>
+                <valueName>Quebec &amp; Maritimes</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Canada</controllingFieldValue>
+                <valueName>SK/MB</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Canada</controllingFieldValue>
+                <valueName>Southeast Ontario</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Canada</controllingFieldValue>
+                <valueName>South Vancouver</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Canada</controllingFieldValue>
+                <valueName>Southwest GTA</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Canada</controllingFieldValue>
+                <valueName>Southwest Ontario</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Canada</controllingFieldValue>
+                <valueName>West Toronto</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>United Kingdom</controllingFieldValue>
+                <valueName>Central Midlands</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>United Kingdom</controllingFieldValue>
+                <valueName>East Anglia</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>United Kingdom</controllingFieldValue>
+                <valueName>East London</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>United Kingdom</controllingFieldValue>
+                <valueName>East Midlands</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>United Kingdom</controllingFieldValue>
+                <valueName>North East/Ireland</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>United Kingdom</controllingFieldValue>
+                <valueName>North West</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>United Kingdom</controllingFieldValue>
+                <valueName>Scotland</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>United Kingdom</controllingFieldValue>
+                <valueName>South Coast</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>United Kingdom</controllingFieldValue>
+                <valueName>South East</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>United Kingdom</controllingFieldValue>
+                <valueName>South West/Wales</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>United Kingdom</controllingFieldValue>
+                <valueName>Thames Valley</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>United Kingdom</controllingFieldValue>
+                <valueName>West Country</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>United Kingdom</controllingFieldValue>
+                <valueName>West London</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>United Kingdom</controllingFieldValue>
+                <valueName>West Midlands</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>United Kingdom</controllingFieldValue>
+                <valueName>Yorkshire</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Region__c</columns>
+        <columns>Country__c</columns>
+        <columns>RegEx_String__c</columns>
+        <columns>Notes__c</columns>
+        <columns>Is_Active__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <listViews>
+        <fullName>Australia_Rules</fullName>
+        <columns>NAME</columns>
+        <columns>Is_Active__c</columns>
+        <columns>Region__c</columns>
+        <columns>Country__c</columns>
+        <columns>Territory__c</columns>
+        <columns>RegEx_String__c</columns>
+        <columns>Notes__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Country__c</field>
+            <operation>equals</operation>
+            <value>Australia</value>
+        </filters>
+        <label>Australia Rules</label>
+    </listViews>
+    <listViews>
+        <fullName>Canada_Rules</fullName>
+        <columns>NAME</columns>
+        <columns>Is_Active__c</columns>
+        <columns>Region__c</columns>
+        <columns>Country__c</columns>
+        <columns>Territory__c</columns>
+        <columns>RegEx_String__c</columns>
+        <columns>Notes__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Country__c</field>
+            <operation>equals</operation>
+            <value>Canada</value>
+        </filters>
+        <label>Canada Rules</label>
+    </listViews>
+    <listViews>
+        <fullName>UK_Rules</fullName>
+        <columns>Is_Active__c</columns>
+        <columns>NAME</columns>
+        <columns>Region__c</columns>
+        <columns>Country__c</columns>
+        <columns>Territory__c</columns>
+        <columns>RegEx_String__c</columns>
+        <columns>Notes__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Country__c</field>
+            <operation>equals</operation>
+            <value>United Kingdom</value>
+        </filters>
+        <label>UK Rules</label>
+    </listViews>
+</CustomObject>

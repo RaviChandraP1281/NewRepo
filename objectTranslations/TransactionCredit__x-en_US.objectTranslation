@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>TransactionCredit</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>TransactionCredits</value>
+    </caseValues>
+    <fields>
+        <label><!-- Compensation Date --></label>
+        <name>CompensationDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Credit Value --></label>
+        <name>CreditValue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer ID --></label>
+        <name>CustomerID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Name --></label>
+        <name>CustomerName__c</name>
+    </fields>
+    <fields>
+        <label><!-- EventType ID --></label>
+        <name>EventTypeID__c</name>
+    </fields>
+    <fields>
+        <label><!-- From --></label>
+        <name>From__c</name>
+    </fields>
+    <fields>
+        <label><!-- No. of Units --></label>
+        <name>NoOfUnits__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity ID --></label>
+        <name>OpportunityID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order ID --></label>
+        <name>OrderID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Payee ID --></label>
+        <name>PAYEEID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product Name --></label>
+        <name>ProductName__c</name>
+    </fields>
+    <fields>
+        <label><!-- To --></label>
+        <name>To__c</name>
+    </fields>
+    <fields>
+        <label><!-- Transaction Value --></label>
+        <name>TransactionValue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Type For Credit --></label>
+        <name>UnitTypeForCredit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Type For Value --></label>
+        <name>UnitTypeForValue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Type --></label>
+        <name>UnitType__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Value --></label>
+        <name>UnitValue__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

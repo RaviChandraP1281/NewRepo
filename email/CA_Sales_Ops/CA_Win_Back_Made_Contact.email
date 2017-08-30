@@ -1,0 +1,17 @@
+Hi {!Contact.FirstName}, 
+
+Thank you for taking the time to speak with me earlier today. 
+
+Further to our conversation regarding [INSERT SUMMARY OF DISCUSSION], I believe that the following information would be of use to you and may assist you with <insert feedback issues and items to assist with fixing issues].
+
+Please do not hesitate to reach out to me if you have any questions at all. I’m here to help with whatever you need, so we can make QuickBooks work for you. I can be reached directly at {!User.Phone}.
+
+Sincerely,
+{!User.FirstName} {!User.LastName}
+
+To unsubscribe from our marketing communications you can email your request to privacyofficer@intuit.com with the subject line “Opt Out”. Please include your email address/ other contact information where you no longer wish to receive marketing communications from Intuit. Requests may take up to 10 days to process, during which time you may continue to receive marketing communications from Intuit. Remember that even if you choose not to receive marketing communications from us, we will continue to send you mandatory service or transactional communications. 
+
+Intuit respects your privacy. To learn more read our Privacy Statement (http://www.intuit.ca/about-intuit-canada/info/privacy-policy.jsp). If you receive a suspicious email, please report it by forwarding the email to spoof@intuit.com. 
+
+© 2017 Intuit Inc. All rights reserved. 
+5100 Spectrum Way, Mississauga, Ontario, Canada L4W 5S2

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Participant Survey Feedback</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Participant Surveys Feedback</value>
+    </caseValues>
+    <fields>
+        <label><!-- Other notes: --></label>
+        <name>Anything_to_Share_with_us__c</name>
+    </fields>
+    <fields>
+        <label><!-- Friends or Family Reference Future Study --></label>
+        <name>Friends_or_Family_Reference_Future_Study__c</name>
+    </fields>
+    <fields>
+        <label><!-- NPS Score --></label>
+        <name>NPS_Recommended__c</name>
+    </fields>
+    <fields>
+        <label><!-- Study Participant --></label>
+        <name>Study_Participant__c</name>
+        <relationshipLabel><!-- Participant Surveys Feedback --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- What worked, what didn’t work --></label>
+        <name>What_did_we_do_really_well__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes to get a 9 or 10 NPS --></label>
+        <name>What_do_in_future_to_get_a_9_or_10__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

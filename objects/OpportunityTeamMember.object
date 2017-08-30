@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Product_Family_of_Interest__c</fullName>
+        <externalId>false</externalId>
+        <label>Product Family of Interest</label>
+        <required>false</required>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Assisted Payroll</fullName>
+                    <default>false</default>
+                    <label>Assisted Payroll</label>
+                </value>
+                <value>
+                    <fullName>Checks/Supplies</fullName>
+                    <default>false</default>
+                    <label>Checks/Supplies</label>
+                </value>
+                <value>
+                    <fullName>DIY Payroll</fullName>
+                    <default>false</default>
+                    <label>DIY Payroll</label>
+                </value>
+                <value>
+                    <fullName>Hosting</fullName>
+                    <default>false</default>
+                    <label>Hosting</label>
+                </value>
+                <value>
+                    <fullName>Intuit Care Plans</fullName>
+                    <default>false</default>
+                    <label>Intuit Care Plans</label>
+                </value>
+                <value>
+                    <fullName>Intuit Care Plans for QB Prior to 2011</fullName>
+                    <default>false</default>
+                    <label>Intuit Care Plans for QB Prior to 2011</label>
+                </value>
+                <value>
+                    <fullName>Intuit Full Service Payroll (IFSP)</fullName>
+                    <default>false</default>
+                    <label>Intuit Full Service Payroll (IFSP)</label>
+                </value>
+                <value>
+                    <fullName>Intuit Online Payroll (IOP)</fullName>
+                    <default>false</default>
+                    <label>Intuit Online Payroll (IOP)</label>
+                </value>
+                <value>
+                    <fullName>Intuit Partner Platform</fullName>
+                    <default>false</default>
+                    <label>Intuit Partner Platform</label>
+                </value>
+                <value>
+                    <fullName>Merchant Account Services</fullName>
+                    <default>false</default>
+                    <label>Merchant Account Services</label>
+                </value>
+                <value>
+                    <fullName>Pro Advisor</fullName>
+                    <default>false</default>
+                    <label>Pro Advisor</label>
+                </value>
+                <value>
+                    <fullName>ProTax - Lacerte</fullName>
+                    <default>false</default>
+                    <label>ProTax - Lacerte</label>
+                </value>
+                <value>
+                    <fullName>Pro Tax Other</fullName>
+                    <default>false</default>
+                    <label>Pro Tax Other</label>
+                </value>
+                <value>
+                    <fullName>ProTax - ProSeries</fullName>
+                    <default>false</default>
+                    <label>ProTax - ProSeries</label>
+                </value>
+                <value>
+                    <fullName>QB Accountants Edition</fullName>
+                    <default>false</default>
+                    <label>QB Accountants Edition</label>
+                </value>
+                <value>
+                    <fullName>QB Connected Services</fullName>
+                    <default>false</default>
+                    <label>QB Connected Services</label>
+                </value>
+                <value>
+                    <fullName>QB Enterprise Solutions (QBES)</fullName>
+                    <default>false</default>
+                    <label>QB Enterprise Solutions (QBES)</label>
+                </value>
+                <value>
+                    <fullName>QB Mac</fullName>
+                    <default>false</default>
+                    <label>QB Mac</label>
+                </value>
+                <value>
+                    <fullName>QB Point-of-Sale (POS)</fullName>
+                    <default>false</default>
+                    <label>QB Point-of-Sale (POS)</label>
+                </value>
+                <value>
+                    <fullName>QB Pro/Premier</fullName>
+                    <default>false</default>
+                    <label>QB Pro/Premier</label>
+                </value>
+                <value>
+                    <fullName>QuickBase</fullName>
+                    <default>false</default>
+                    <label>QuickBase</label>
+                </value>
+                <value>
+                    <fullName>QuickBooks Online (QBO)</fullName>
+                    <default>false</default>
+                    <label>QuickBooks Online (QBO)</label>
+                </value>
+                <value>
+                    <fullName>SalesForce</fullName>
+                    <default>false</default>
+                    <label>SalesForce</label>
+                </value>
+                <value>
+                    <fullName>Worker&apos;s Comp</fullName>
+                    <default>false</default>
+                    <label>Worker&apos;s Comp</label>
+                </value>
+                <value>
+                    <fullName>UK Desktop Products</fullName>
+                    <default>false</default>
+                    <label>UK Desktop Products</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Transfer_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Transfer Date</label>
+        <required>false</required>
+        <type>DateTime</type>
+    </fields>
+</CustomObject>

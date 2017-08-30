@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <webLinks>
+        <fullName>Block_Time</fullName>
+        <availability>online</availability>
+        <displayType>massActionButton</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <height>600</height>
+        <linkType>url</linkType>
+        <masterLabel>View &amp; Block Time</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <requireRowSelection>true</requireRowSelection>
+        <url>/apex/skuid__ui?page=NewStudyLevelCalender&amp;study=&quot;{!Study__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>Delete</fullName>
+        <availability>online</availability>
+        <description>Custom delete to to redirect to Study page after deleted.</description>
+        <displayType>button</displayType>
+        <linkType>javascript</linkType>
+        <masterLabel>Delete</masterLabel>
+        <openType>onClickJavaScript</openType>
+        <protected>false</protected>
+        <url>{!REQUIRESCRIPT(&quot;/soap/ajax/29.0/connection.js&quot;)} 
+{!REQUIRESCRIPT(&quot;/soap/ajax/29.0/apex.js&quot;)} 
+
+var s = sforce.apex.execute(&quot;DeleteandRedirectToStudy&quot;,&quot;getToStudyPageFromStudyLab&quot;,{sLabId:&quot;{!Study_Lab__c.Id}&quot;}); 
+
+window.location = &quot;/{!Study_Lab__c.StudyId__c}&quot;;</url>
+    </webLinks>
+</CustomObject>

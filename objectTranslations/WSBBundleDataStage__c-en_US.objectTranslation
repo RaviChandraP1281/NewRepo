@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>WSBOffer</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>WSBOffers</value>
+    </caseValues>
+    <fields>
+        <label><!-- Acc Company Id --></label>
+        <name>Acc_Company_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Auth Id --></label>
+        <name>Auth_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Client Company Id --></label>
+        <name>Client_Company_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Error Code --></label>
+        <name>Error_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Error Description --></label>
+        <name>Error_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Error Response --></label>
+        <name>Error_Response__c</name>
+    </fields>
+    <fields>
+        <label><!-- EventType --></label>
+        <name>EventType__c</name>
+        <picklistValues>
+            <masterLabel>SWITCHOFFER</masterLabel>
+            <translation><!-- SWITCHOFFER --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- New Billing Code --></label>
+        <name>New_Billing_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Old Billing Code --></label>
+        <name>Old_Billing_Code__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Error</masterLabel>
+            <translation><!-- Error --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

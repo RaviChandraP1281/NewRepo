@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <style type="text/css">
+        body
+        {
+            margin: 0px;
+            padding: 0px;
+            font-size: 12px;
+            line-height: 15px;
+            color: #505050;
+        }
+        body, div, p, td, dl, ol, ul, select, input, option, textarea
+        {
+            font-family: Verdana, Arial, Sans-Serif;
+            font-size: 12px;
+            line-height: 15px;
+            color: #505050;
+        }
+        li
+        {
+            padding-bottom: 10px;
+        }
+        a
+        {
+            color: #365ebf;
+            text-decoration: none;
+        }
+        a:link
+        {
+            color: #365ebf;
+            text-decoration: none;
+        }
+        a:visited
+        {
+            color: #365ebf;
+            text-decoration: none;
+        }
+        a:hover
+        {
+            color: #365ebf;
+            text-decoration: underline;
+        }
+        a:active
+        {
+            color: #365ebf;
+            text-decoration: none;
+        }
+        #templateWrapper
+        {
+            width: 650px;
+            padding-left: 20px;
+            padding-top: 20px;
+        }
+        .logo
+        {
+            background: url(http://support.quickbooks.intuit.com/support/images/Templates/FieldServiceLogo.jpg);
+            height: 56px;
+            width: 650px;
+            overflow: hidden;
+        }
+        .footnotes
+        {
+            font-size: 10px;
+            font-style: italic;
+        }
+        .blueBar
+        {
+            background-color: #4f81bd;
+            width: 650px;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <table cellpadding="0" cellspacing="0" width="650px">
+        <tr>
+            <td>
+                <img src="http://support.quickbooks.intuit.com/support/images/Templates/EnterpriseLogo.jpg" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <p>
+                    Dear {!Contact.FirstName}:
+                </p>
+                <p>
+                    Thank you for your interest in Intuit Field Service Management ES!
+                </p>
+                <p>
+                    Field Service Management ES will truly enable better communication and eliminate
+                    paperwork and bottlenecks - making everyone more efficient. We've found that our
+                    customers who use Field Service Management ES:
+                </p>
+                <ul>
+                    <li><b>Schedule more jobs:</b> With real-time wireless updates from the field and automated
+                        online dispatch boards, you can quickly schedule and optimize work orders so that
+                        you can send your technicians to more jobs. Plus, with GPS tracking ability, you
+                        can easily see who is at what location and respond quickly to customer emergencies.
+                    </li>
+                    <li><b>Get paid immediately:</b> When a job's finished, the field tech creates an invoice
+                        on the spot and can accept payments by credit card. Data syncs wirelessly to QuickBooks,
+                        so payments are automatically recorded and reconciled. </li>
+                    <li><b>Enjoy easier, more accurate payroll:</b> Hours in the field are verified by GPS,
+                        linked back to the office and recorded in QuickBooks. Simply review and approve
+                        the timesheets for payroll<sup>1</sup>. </li>
+                    <li><b>Eliminate double-entry:</b> Increase productivity because there is no need to
+                        retype customer information, work orders, notes, invoices, and timecard or payroll
+                        information. </li>
+                </ul>
+                <p>
+                    I will follow up with you as we discussed, if you have any questions in the interim,
+                    please contact me for anything you need.
+                </p>
+                <p>
+                    <div>
+                        For a video demo, please visit
+                    </div>
+                    <div>
+                        <a href="http://www.enterprisesuite.com/fsmesdemo " target="_blank">http://www.enterprisesuite.com/fsmesdemo
+                        </a>
+                    </div>
+                </p>
+                <p>
+                    <div>
+                        To sign up for a live demo, visit
+                    </div>
+                    <div>
+                        <a href="http://enterprisesuite.intuit.com/resources/demos/fsmes.jsp" target="_blank">
+                    http://enterprisesuite.intuit.com/resources/events/</a></div>
+                <p>
+                    Sincerely,
+                </p>
+		<br />
+            </td>
+        </tr>
+        <tr>
+            <td bgcolor="#4f81bd" width="650px" height="20px;">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <font size="2"><i>Intuit respects the personal nature of email and this email is in
+                    response to your request for additional information.</i></font>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Case_Investigation__c.Subject__c</field>
+    </columns>
+    <columns>
+        <field>Case_Investigation__c.of_Cases__c</field>
+    </columns>
+    <columns>
+        <field>Case_Investigation__c.Days_Investigation_Open__c</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>Case_Investigation__c.Jira_Priority__c</field>
+    </columns>
+    <columns>
+        <field>Case_Investigation__c.Jira_Ticket_s__c</field>
+    </columns>
+    <columns>
+        <field>Case_Investigation__c.Jira_Expected_Fix_Version__c</field>
+    </columns>
+    <currency>USD</currency>
+    <description>All Open QBO Bank Feed Investigations</description>
+    <filter>
+        <criteriaItems>
+            <column>Case_Investigation__c.Status__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case_Investigation__c.Impacted_Products__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>includes</operator>
+            <value>QuickBooks Online Bank Feeds</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Case_Investigation__c.Impacted_Regions__c</field>
+        <sortOrder>Desc</sortOrder>
+    </groupingsDown>
+    <name>All Open Bank Feed Investigations</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Case_Investigation__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Case_Investigation__c.Days_Investigation_Open__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Case_Investigation__c.Customer_Resolution_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CREATED</field>
+    </columns>
+    <columns>
+        <field>OWNER</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>CASE_NUMBER</field>
+    </columns>
+    <columns>
+        <field>OPEN</field>
+    </columns>
+    <columns>
+        <field>CLOSED</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>((((((((((1 OR 2) OR 3) OR 4) OR 5) OR 6) OR 7) OR 8) OR 9) AND 10))</booleanFilter>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Gwendolyn Hortelano,Carlina Marnela Madriaga,Junel Lloyd Calamohoy,Joy Cordova,Binky Magbutay,Orlando Barraza Jr,Diana Jane Zamora,Aaron Joseph Ganir,Mel Jonathan Narca,Christine Jarabes,Florabella Avenido,Arrianne Jade Carpio,Cruz James Wesley,Mary Elizabeth Gatchalian,Glyn Manginsay,Suzzette Marie Basiga,Luke Caesar Lerin,Renelyn Arciaga,Abegail Cervales,Christian Cornejo,Catherine Cuizon,Indig Geraldine,Rys Anthony Rodriguez,Hony Fe Tero,Joy Sarraga,Lynde May Arinque,Paul Anthony Ca-ay,Aristotle Dagdag,Sergio Morata,Jordan Lemente,Lyndon Ceniza,Ruben Cabardo,Judemer Anora,Karen Jane Balasabas,Bernie Cananea,Canto Cristine Jane,Hanzeel Catilogo,Gladys Cepe,Merlin May Duazo,Elaine Eguia,VERMA JOIE ESPARAGOZA,Janice Gazo,Ann Marie Mapute,Francis Marijuan,Quennie Montano,Charity Romarate,Rochelle Irish Sta Maria,Harlene Tunacao</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Melody Despi,Angelito Atabelo,Abbie Dimasuay,Bencel James Figueroa,Nerio Jr Ochea,Loshelle Alfanta,Maria Fedilez Odtohan,Maryann Rose Sarmiento,Phoebe Apao,Mathilda Unabia,Alea Karminna Mercado,Princess June Serenio,Shiela Abby Samson,Charmaine Sagaral,Claire Florence Alferez,Rico Jay Falcunitin,Don Mcleigh Cortez,Christine Joyce Abrea,Joselito Jr Baguio,Christian Jason Dico,Jeny Mae Divina,Josa Rose Dolorico,Menchu Reuyan,Estresa Gelig,Ivy Charmae Inogada,Yoradyl Martinet,Lyza Pangilinan,Sheila Mae Patalinghug,Adam Rey Mar Rosales,Ross Francis Villena,Shiella Grace Avenido,Hazen Bas,Precious Jessie Bautista,Giefril Berjame,Phoebe Cabizares,Eran James Paul,Ines Jeste Pagdato,Ringo Cabasisi,Renjolyn Cuico,Jane De La Serna,Leleth Elemino,Michael Jaymar Fabruada,Alcaeus Xeno Famador,Mary Grace Franza,Garlyn Gay Gacang,Shan Joshua Gaco,Nina Pearl Gonzaga,Nicole Herrera,Vivien Marie Jo,Kristine Mae La Rosa</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Sophia Ann Lyne,Marnina Mantos,Rasalila Mueblas,Jill Kathlyn Paa,Jeno Papa,Diane Payosalan,Aldrin Sarco,Jian Carlo Suliano,Jess Rail Taray,James Tibon,Sarah Mae Tugao,Michelle Tuwahan,Jan Ray Bonita,Tabil Dennison,Baguio Bernadeth,Juban Chaddy Lane,Alexander Aporbo,Harvey Dela Cerna,Rymm James Sebuco,Cheyclet Marie Rotaquio,Ailyn Acebedo,Flora Mae Barcial,Ronah Chrisma Duran,Junos Llanto,Raymond Tabad,Samson Bansig,Gido Fidel,Marie Charryzze Cortes,Mary Jo Adel Dominguez,Brian Dave Villar,Raven Clark Abejo,Jelly Amadeo,Mhark Asis,Venus Compra,Benjie Duenas,Jonyfred Duroha,Jowena Ejercito,Jain Kris Willy,Bechtel Lanutan,Doren Oplado,Riza Fe Payot,Rizon Jon Keneth Jay,Gevenn Jay Rosalan,El Cid Rusiana,Solayao Wellfred,Charina Tan,Mike Anthony Almedora,Irene Barcenas,Mary Hyacinth Cartilla,Jefferson Diaz</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Lorife Eguel,Margie Evano,Charies Montellano,Honey Dawn Salvanera,Anelyn Saraum,Kieburt Siy,Dimple Suyang,Moonyeen Tualla,Cindy Abitona,Meryjohn Alverio,Gerald Buselak,Inovencio Jr Carbonilla,Armilee Cortado,Sinfronio Jr Dadan,Jay Ann Enriquez,Vincy Escuadro,Maria Riza Estrada,Nelson Jr Jumalon,Marko Zandino Montejo,Karen Patthew Nacua,Mark Donatello Paran,Nicanor Purificacion,Jeftie Rabia,Rhea Mae Roda,Romieu Jade Abellana,Rhoda Liza Abesamis,Sundee Alvez,Mark Albert Bacanaya,Rosamie Bangaslao,Ryan Baricuatro,Kristine Kaye Bayawa,Jenelyn Dalman,Efraim Gallogo,Jesrell Mauro,Abigail Marie Maypa,Bryan Rata,Mona Crisa Rosal,Mary Grace Saladas,Ro-Ann Tabaranza,Neslyn Taguran,Jacquilyn Virtudazo,Rose Marjorie Abing,Jeffrey Adaza,Cherry Mae Arroyo,Rigelmark Ayop,Betty Jae Bentulan,Stefanie Caballes,Kathleen Gadgode,Ronald Ryan Lagman</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Christine May Putian,Dennis Floyd Quilog,John Mark Anthony Quitangon,Lloyd Ramos,Maria Therese Roble,Perfecto Villarta,Janfrel Aguilar,Mary Ann Arabis,Joseph Cabahug,John Samari Onel Carabuena,Ashley Dacoseo,Franz Igbalic,Shemei Labrador,Joshua Laran,Angel Maravillon,Christabelle Negapatan,Kenneth John Romeral,Samantha Jan Ronelie Salazar,Russell Samson,Ma.Robelyn Villegas,Abiquibel Jimmy,Jolina Apas,Gloria Martina Arnado,Barry Bandal,Baton Francis Kay,Jamaica Bonsua,April Rose Debulosan,Krisjodelle Dellosa,Dumaguit Sherwin,Jhunette Fernandez,Laborte Harvey Brian,Raymund Lauron,Pepito Galie,Clifford Tacaldo,Jeanjerlyn Tan,Tezon Martini Louis,Sarah Jane Almendras,Rachel Baclay,Fannie Joan Castro,Juliet Colina,Haide Colon,Rona Angeli Cordero,Cyrus Denlaoso,Honey Lynn Guiltiano,Veronica Gutierrez,French Ronald Halapan,Normita Hipolito,Jamaica Judilla,Lady Lee Ojagan,Jeffrey Peros</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Janice Punsalang,Jennifer Joan Tio,Maria Lorena Verano,Maricris Abella,Hazel Abogaa,John Paul Alforque,Brava Ruth Marie,Frexi Marie Delantar,Samantha Grace Dagala,Arlcyena Gonzales,Kevin Jakosalem,Bleasy Pearl Manginsay,Vonn Karlo Monterola,Eric Benjie Montes,Dyanharra Raluto,Shiela Mae Sacay,Paul Jonathan Sarabosing,Cesar Yaba,Reahr Laine Yase,Eugene Rey III Abellanosa,Rosario Basmayor,Christian Paul Bojos,John Dennis Bongo,Agnes Budlayan,Listel Grace Bulacan,Charles Raymund Canedo,Andy Bon Carlit,Graham Dahan,Genalin Garcia,Anna May Geromo,Gorgona Garry,Noe Loremia,Anjeila Mae Miaga,Jose Ryan Milano,Kenneth Roger Monilar,Sterne Maurice Reyes,Eugene Velita,Mary Grace Villamor,Matt Levi Araojo,Rogelio Daniel Cabatuan,Imee Cabrera,Kevin Camanan,Joshua Capitoc,Roland Castor,Aljo Cuevas,Benedict Delos Santos,Mary Monique Diola,Jerald Esperida,Riel Roldan Goles,Mahilom Vinjel Liz</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Warren Manago,Dezza Marie Mendez,Brigette Shayne Ramonal,Angel Zyrish Bermil,Ronald Bueno,Christian Catingub,Mark Dagoc,Jesie May Love Dahunan,Cyndee Luz Englis,Mariz Flores,Gus Artivan Lastimosa,Mary Grace Lauglaug,Mary Charisse Yna Manatad,Joanne Oliveros,Mayel Pantaleon,Juhanna Ragasajo,Karen Taboada,Niceth Teves,Krezel Andamon,Alec Glenn Apollo,Queeny Bazan,Kristine Celeste Cabico,Michelle Casas,Ruby Ana Clemente,Roel Ferrer,Sunshine Jera,Noemie Labajo,Queenaze Love Linaza,Jumelyn Radaza,Mary Luz AJ Sevilla,Jona Tedor,Francis Jacond Villegas,Alistair Yu,Corelle Grace Aberca,James David Aranas,Anthony Arvin Avenido,AIZZEL BERNASOL,Dovie Mae Fincale,Gan Mario,Lorraine Gesulga,Marie Therese Gudito,John Rey Morales,Noridae Moreno,Aljeane Obena,Cherryl Salamanes,Silagan Leah Jane,Cherry Villahermosa,Ma Blanca Aurora Yepes,Cyril Abalde</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Joana Angela Ada,Homer Alota,Dyesebel Andrada,Mae Khrisel Avelino,Gino Cabillo,Godfrey Jr Camayra,Ma Loren Catalan,Jhon Michael Garcia,Allexe Nina Genovisa,Abdul Rahim Palao,James Glendon Pialago,Neschie Punay,Eushiabeth Quiapo,John Cris Virtudazo,Wasquin Ernies Sarri,Francis Albert Abellanosa,Albert Vincent Unson,Kristine Marilyn Alompon,Beatriz Pauline Nardo,Maria Yvonne Gonzales,Jayshon Santos,Jennifer Lee,Rita Bien,Levy Corpuz,Arcelie Dumapi,Precious Grace Abrea,Kenneth Yonzon,Paolo Echano,Jamie Anne Avellano,Lalaine Gayatao,Francis Danjho Cayabyab,Julian Nicole Sta Ana,Brendo Dacuno,Vincent Jason Tamayo,Romar Natural,Jose Carlo Cesista,Rachel Marie Reyes,Ronnel Baruelo,Von Jogie Alcantara,Mark Anthony Bernas,Ronald Alvarado,Harris Glen Zorilla,Shella May Reymundo,Racine Jean Beldad,Rey Dela Cruz,Aiza Decena,Arnel Deguito,Ric Immanuel Reyes,Paul Richard Arnado,Kristine Samosa</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Jenny Ada,Wilfred Joseph Peralta,Katrina Cruz,Jeramie Constantino,Eden Eve Elorde,Rehka Alyssa Flores,Rodenver Po,Sandylou Teriote,Cynthia Dela Cruz,Maricar Tolentino,Mildred Joy Barbosa,Pamela Jemina Hipolito,Kathleen Leigh Caponpon-del Pilar,Erie Rey Villariaza,Edlyn Perez,Jason Rey Oreta,Philippe Christian Manlupig,Diane Rose Lutian,Marizette Atienza,Roselito Prila,Joybelle Marie Vicente,Alfredo Marquez,Jenica Monique Sese,Jericho Villagracia,Jefferson Ratilla,Cecil Pagatpat,Carren Zamora,Bonicar Balili,Abigail Gatuz,Jordan Madic,John Ryan Fernandez,Danica Flores,Janine Daluraya,Shiela Marie Carreon,Ryan Paolo Lising,Ann Margaret Mina,John Erik Fidelson,Nemia Fe Contado,Kevin Joshua Marinas,Maricriz Tuazon,Benedict Mari Estrella ,Mark Giovanni Gregorio,John Dominic Salando,Dolores Grace Macasojot,Nikka Opeda,Marycar Delos Santos,Cherry Mae Magpantay,Aerith Erickson Ruiz,Rowena Salas,Harry r Teriana</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>STATUS</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Open</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>Cebu DIY Open Cases</name>
+    <params>
+        <name>units</name>
+        <value>h</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATEONLY</dateColumn>
+        <endDate>2017-06-30</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2017-06-01</startDate>
+    </timeFrameFilter>
+</Report>

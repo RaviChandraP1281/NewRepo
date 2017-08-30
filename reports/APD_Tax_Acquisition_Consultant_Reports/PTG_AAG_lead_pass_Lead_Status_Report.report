@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>LEAD_ID</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>COMPANY</field>
+    </columns>
+    <columns>
+        <field>LEAD_SOURCE</field>
+    </columns>
+    <currency>USD</currency>
+    <description>PTG/AAG lead pass - Lead Status Report</description>
+    <filter>
+        <criteriaItems>
+            <column>LEAD_SOURCE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Accountant</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Lead_Originator__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Justin Koebnick,Yuri Michaud,Randall Cassen,Ben Manning,James Rothe,Scott Williams,Teresa Amos,Jeffrey Johnson,Joe Posey,Gail Tucker,Rhizel Gooding,David Shin,Randall Hrna,Thomas O&apos;Neil,Chad Simpson,John Brakey,Shaughn Landauer,Eric Randall,Sherri Voirin,Manuil Chavez,Michael Mendoza,Mary Sands,David Burden,Robert Moreno,Alan Rockowitz,Alfred Soria Galvarro,Javier Garcia,Michael Luna,David Scott,Sharbel Abi-habib,Kelsey Alford,Daniel Brommer,Brian Curran,Justin Evans,Marc Freidberg,Gerald Henry,Corey Spear,Cynthia Thomas</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Lead_Originator__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Yuri Michaud,Justin Koebnick</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>STATUS</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Lead.Lead_Originator__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>FY16 PTG/AAG Lead Pass</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LeadList</reportType>
+    <scope>org</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2015-10-28</startDate>
+    </timeFrameFilter>
+</Report>

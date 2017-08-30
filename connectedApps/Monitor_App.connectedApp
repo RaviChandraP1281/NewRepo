@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>rama_kesani@intuit.com</contactEmail>
+    <label>Monitor App</label>
+    <oauthConfig>
+        <callbackUrl>https://localhost.com</callbackUrl>
+        <consumerKey>3MVG9A2kN3Bn17huzSQSDmiKQmH0vduIm9X_hPOdWG3qNo2qidbclNwaQ2nyzd45IgPMGgp3BGYUMQjwwJyYX</consumerKey>
+        <scopes>Full</scopes>
+    </oauthConfig>
+</ConnectedApp>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>Case_Investigation__c.Impacted_Products__c</field>
+    </columns>
+    <columns>
+        <field>Case_Investigation__c.Impacted_Regions__c</field>
+    </columns>
+    <columns>
+        <field>Case_Investigation__c.Subject__c</field>
+    </columns>
+    <currency>USD</currency>
+    <description>with Impacted Product and Impacted Region</description>
+    <filter>
+        <criteriaItems>
+            <column>Case_Investigation__c.Status__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Closed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case_Investigation__c.Impacted_Products__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>includes</operator>
+            <value>QuickBooks Online,QuickBooks Online Bank Feeds,QuickBooks Online Accountant</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Case_Investigation__c.Workaround_Used__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value></value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>All Open Investigations</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Case_Investigation__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Case_Investigation__c.End_Date_Time__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

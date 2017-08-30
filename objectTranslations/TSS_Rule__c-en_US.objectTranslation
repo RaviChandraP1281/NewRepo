@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>TSS Rule</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>TSS Rules</value>
+    </caseValues>
+    <fields>
+        <label><!-- Country --></label>
+        <name>Country__c</name>
+        <picklistValues>
+            <masterLabel>Australia</masterLabel>
+            <translation><!-- Australia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Canada</masterLabel>
+            <translation><!-- Canada --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>France</masterLabel>
+            <translation><!-- France --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>India</masterLabel>
+            <translation><!-- India --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>USA</masterLabel>
+            <translation><!-- USA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>United Kingdom</masterLabel>
+            <translation><!-- United Kingdom --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Indicates whether or not this TSS Rule is active. --></help>
+        <label><!-- Active --></label>
+        <name>Is_Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Notes --></label>
+        <name>Notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- RegEx String --></label>
+        <name>RegEx_String__c</name>
+    </fields>
+    <fields>
+        <label><!-- Region --></label>
+        <name>Region__c</name>
+        <picklistValues>
+            <masterLabel>APAC</masterLabel>
+            <translation><!-- APAC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Americas</masterLabel>
+            <translation><!-- Americas --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Europe</masterLabel>
+            <translation><!-- Europe --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- The order in which this TSS Rule should be processed, relative to the other TSS Rules that are defined for the same Country. --></help>
+        <label><!-- Sequence --></label>
+        <name>Sequence__c</name>
+    </fields>
+    <fields>
+        <help><!-- The name of the Territory that this TSS Rule is a match for. --></help>
+        <label><!-- Territory --></label>
+        <name>Territory__c</name>
+        <picklistValues>
+            <masterLabel>ACT - 1</masterLabel>
+            <translation><!-- ACT - 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ACT - 2</masterLabel>
+            <translation><!-- ACT - 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>ACT - All</masterLabel>
+            <translation><!-- ACT - All --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Alberta</masterLabel>
+            <translation><!-- Alberta --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>British Columbia</masterLabel>
+            <translation><!-- British Columbia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Calgary</masterLabel>
+            <translation><!-- Calgary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Central Midlands</masterLabel>
+            <translation><!-- Central Midlands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>East Anglia</masterLabel>
+            <translation><!-- East Anglia --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>East London</masterLabel>
+            <translation><!-- East London --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>East Midlands</masterLabel>
+            <translation><!-- East Midlands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>East Ontario</masterLabel>
+            <translation><!-- East Ontario --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>East Toronto</masterLabel>
+            <translation><!-- East Toronto --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Edmonton</masterLabel>
+            <translation><!-- Edmonton --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Edmonton/Calgary</masterLabel>
+            <translation><!-- Edmonton/Calgary --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GTA</masterLabel>
+            <translation><!-- GTA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GTA North</masterLabel>
+            <translation><!-- GTA North --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>GTA West</masterLabel>
+            <translation><!-- GTA West --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hamilton-Niagara</masterLabel>
+            <translation><!-- Hamilton-Niagara --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Montreal</masterLabel>
+            <translation><!-- Montreal --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NSW - 1</masterLabel>
+            <translation><!-- NSW - 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NSW - 2</masterLabel>
+            <translation><!-- NSW - 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NSW - 3</masterLabel>
+            <translation><!-- NSW - 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NSW - 4</masterLabel>
+            <translation><!-- NSW - 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NSW - 5</masterLabel>
+            <translation><!-- NSW - 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NSW - 6</masterLabel>
+            <translation><!-- NSW - 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NSW - 7</masterLabel>
+            <translation><!-- NSW - 7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NSW - Central</masterLabel>
+            <translation><!-- NSW - Central --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NSW - North</masterLabel>
+            <translation><!-- NSW - North --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NSW - South &amp; East</masterLabel>
+            <translation><!-- NSW - South &amp; East --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NSW - West</masterLabel>
+            <translation><!-- NSW - West --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NT - All</masterLabel>
+            <translation><!-- NT - All --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North East</masterLabel>
+            <translation><!-- North East --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North East/Ireland</masterLabel>
+            <translation><!-- North East/Ireland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North Vancouver</masterLabel>
+            <translation><!-- North Vancouver --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>North West</masterLabel>
+            <translation><!-- North West --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ottawa</masterLabel>
+            <translation><!-- Ottawa --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Peel</masterLabel>
+            <translation><!-- Peel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QLD - 1</masterLabel>
+            <translation><!-- QLD - 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QLD - 2</masterLabel>
+            <translation><!-- QLD - 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QLD - 3</masterLabel>
+            <translation><!-- QLD - 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QLD - 4</masterLabel>
+            <translation><!-- QLD - 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QLD - 5</masterLabel>
+            <translation><!-- QLD - 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QLD - 6</masterLabel>
+            <translation><!-- QLD - 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QLD - 7</masterLabel>
+            <translation><!-- QLD - 7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QLD - All</masterLabel>
+            <translation><!-- QLD - All --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quebec &amp; Maritimes</masterLabel>
+            <translation><!-- Quebec &amp; Maritimes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SA - 1</masterLabel>
+            <translation><!-- SA - 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SA - 2</masterLabel>
+            <translation><!-- SA - 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SA - All</masterLabel>
+            <translation><!-- SA - All --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SK/MB</masterLabel>
+            <translation><!-- SK/MB --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scotland</masterLabel>
+            <translation><!-- Scotland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Coast</masterLabel>
+            <translation><!-- South Coast --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South East</masterLabel>
+            <translation><!-- South East --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South Vancouver</masterLabel>
+            <translation><!-- South Vancouver --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South West</masterLabel>
+            <translation><!-- South West --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>South West/Wales</masterLabel>
+            <translation><!-- South West/Wales --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Southeast Ontario</masterLabel>
+            <translation><!-- Southeast Ontario --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Southwest GTA</masterLabel>
+            <translation><!-- Southwest GTA --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Southwest Ontario</masterLabel>
+            <translation><!-- Southwest Ontario --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>TAS - All</masterLabel>
+            <translation><!-- TAS - All --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Thames Valley</masterLabel>
+            <translation><!-- Thames Valley --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VIC - 1</masterLabel>
+            <translation><!-- VIC - 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VIC - 2</masterLabel>
+            <translation><!-- VIC - 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VIC - 3</masterLabel>
+            <translation><!-- VIC - 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VIC - 4</masterLabel>
+            <translation><!-- VIC - 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VIC - 5</masterLabel>
+            <translation><!-- VIC - 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VIC - 6</masterLabel>
+            <translation><!-- VIC - 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VIC - 7</masterLabel>
+            <translation><!-- VIC - 7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VIC - Central</masterLabel>
+            <translation><!-- VIC - Central --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VIC - North</masterLabel>
+            <translation><!-- VIC - North --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VIC - South &amp; East</masterLabel>
+            <translation><!-- VIC - South &amp; East --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VIC - West</masterLabel>
+            <translation><!-- VIC - West --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WA - 1</masterLabel>
+            <translation><!-- WA - 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WA - 2</masterLabel>
+            <translation><!-- WA - 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>WA - All</masterLabel>
+            <translation><!-- WA - All --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>West Country</masterLabel>
+            <translation><!-- West Country --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>West London</masterLabel>
+            <translation><!-- West London --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>West Midlands</masterLabel>
+            <translation><!-- West Midlands --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>West Toronto</masterLabel>
+            <translation><!-- West Toronto --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yorkshire</masterLabel>
+            <translation><!-- Yorkshire --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

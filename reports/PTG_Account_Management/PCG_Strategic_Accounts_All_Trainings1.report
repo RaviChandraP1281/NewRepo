@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account$Owner</field>
+    </columns>
+    <columns>
+        <field>Account$Name</field>
+    </columns>
+    <columns>
+        <field>Account.Career__r$Contact__c</field>
+    </columns>
+    <columns>
+        <field>Account.Career__r$Name__c</field>
+    </columns>
+    <columns>
+        <field>Account$Company_ID__c</field>
+    </columns>
+    <columns>
+        <field>Account.Career__r$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>Account.Career__r$Status__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Account$Company_ID__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>notEqual</operator>
+            <value></value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account$Owner</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Michael Maahs,Kelly Rhea,Ben Duff,Ben Mitchell,Rick Lewis,Veronica Jackson,Assim Kazi,Craig O&apos;Dell,Daniel Brown,Jesse Logan,Donald André,Keith Van Order,Kevin Hatch,Lacey Bonnes,Melissa Merchant,Mike Silva,Norman Miosi,Ronald Williams,Sara Hoover,Alexa Vujovich,Jeff Becker,John Russo,Nick Sabatino,Travis Wood</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>PCG Strategic Accounts - All Trainings</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Accounts_with_or_without_Training_Membership__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Account$Owner</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>Account$LastActivityDate</dateColumn>
+        <endDate>2017-04-30</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2014-01-01</startDate>
+    </timeFrameFilter>
+</Report>

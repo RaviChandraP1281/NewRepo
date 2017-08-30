@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>OWNER_FULL_NAME</field>
+    </columns>
+    <columns>
+        <field>PARENT.NAME</field>
+    </columns>
+    <columns>
+        <field>PHONE1</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <columns>
+        <field>Contact.Customer_Company_Id__c</field>
+    </columns>
+    <currency>USD</currency>
+    <description>Search by email domain Exp. @brilliantsolutionsgroup.com</description>
+    <filter>
+        <criteriaItems>
+            <column>EMAIL</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>@brilliantsg.com,brilliantsolutionsgroup.com,qbbsg.com</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER_FULL_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notContain</operator>
+            <value>Jeffrey Johnson</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>ACCOUNT.NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Contact.CAN__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Jeff&apos;s Account Search Report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContactList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>ACCOUNT.CREATED_DATE</dateColumn>
+        <endDate>2015-03-13</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2014-01-23</startDate>
+    </timeFrameFilter>
+</Report>

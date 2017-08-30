@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <validationRules>
+        <fullName>BP1_less_than_BP2_Max</fullName>
+        <active>true</active>
+        <errorConditionFormula>Threshold_Breakpoint1MQL__c &gt; Threshold_Breakpoint2__c
+|| Threshold_Breakpoint1MQL__c &gt; Threshold_Maximum__c</errorConditionFormula>
+        <errorMessage>Breakpoint 1 (MQL) threshold must be less than Breakpoint 2 threshold and Maximum threshold.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>BP2_less_than_max</fullName>
+        <active>true</active>
+        <errorConditionFormula>Threshold_Breakpoint2__c &gt; Threshold_Maximum__c</errorConditionFormula>
+        <errorMessage>Breakpoint 2 threshold must be less than Maximum threshold.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Min_less_than_all</fullName>
+        <active>true</active>
+        <errorConditionFormula>Threshold_Minimum__c &gt; Threshold_Breakpoint1MQL__c
+ || Threshold_Minimum__c &gt; Threshold_Breakpoint2__c
+ || Threshold_Minimum__c &gt; Threshold_Maximum__c</errorConditionFormula>
+        <errorMessage>Minimum threshold must be less than all other thresholds.</errorMessage>
+    </validationRules>
+</CustomObject>

@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Desktop Assisted Payroll</fullName>
+        <default>false</default>
+        <label>Desktop Assisted Payroll</label>
+    </customValue>
+    <customValue>
+        <fullName>Desktop DIY Payroll</fullName>
+        <default>false</default>
+        <label>Desktop DIY Payroll</label>
+    </customValue>
+    <customValue>
+        <fullName>Intuit Full Service Payroll</fullName>
+        <default>false</default>
+        <label>Intuit Full Service Payroll</label>
+    </customValue>
+    <customValue>
+        <fullName>Intuit Online Payroll</fullName>
+        <default>false</default>
+        <label>Intuit Online Payroll</label>
+    </customValue>
+    <customValue>
+        <fullName>IOP for Accountants</fullName>
+        <default>false</default>
+        <label>IOP for Accountants</label>
+    </customValue>
+    <customValue>
+        <fullName>IOP Household</fullName>
+        <default>false</default>
+        <label>IOP Household</label>
+    </customValue>
+    <customValue>
+        <fullName>Payments</fullName>
+        <default>false</default>
+        <label>Payments</label>
+    </customValue>
+    <customValue>
+        <fullName>Pro-Advisor Program</fullName>
+        <default>false</default>
+        <label>Pro-Advisor Program</label>
+    </customValue>
+    <customValue>
+        <fullName>QuickBooks Desktop Accountant</fullName>
+        <default>false</default>
+        <label>QuickBooks Desktop Accountant</label>
+    </customValue>
+    <customValue>
+        <fullName>QuickBooks Desktop Enterprise</fullName>
+        <default>false</default>
+        <label>QuickBooks Desktop Enterprise</label>
+    </customValue>
+    <customValue>
+        <fullName>QuickBooks Desktop Mac</fullName>
+        <default>false</default>
+        <label>QuickBooks Desktop Mac</label>
+    </customValue>
+    <customValue>
+        <fullName>QuickBooks Desktop Pro Premier</fullName>
+        <default>false</default>
+        <label>QuickBooks Desktop Pro Premier</label>
+    </customValue>
+    <customValue>
+        <fullName>QuickBooks Online</fullName>
+        <default>false</default>
+        <label>QuickBooks Online</label>
+    </customValue>
+    <customValue>
+        <fullName>QuickBooks Online Accountant</fullName>
+        <default>false</default>
+        <label>QuickBooks Online Accountant</label>
+    </customValue>
+    <customValue>
+        <fullName>QuickBooks Online Bank Feeds</fullName>
+        <default>false</default>
+        <label>QuickBooks Online Bank Feeds</label>
+    </customValue>
+    <customValue>
+        <fullName>QuickBooks Online Full Service Payroll</fullName>
+        <default>false</default>
+        <label>QuickBooks Online Full Service Payroll</label>
+    </customValue>
+    <customValue>
+        <fullName>QuickBooks Online Payroll</fullName>
+        <default>false</default>
+        <label>QuickBooks Online Payroll</label>
+    </customValue>
+    <customValue>
+        <fullName>QuickBooks Point of Sale</fullName>
+        <default>false</default>
+        <label>QuickBooks Point of Sale</label>
+    </customValue>
+    <customValue>
+        <fullName>QuickBooks Self-Employed</fullName>
+        <default>false</default>
+        <label>QuickBooks Self-Employed</label>
+    </customValue>
+    <customValue>
+        <fullName>QuickBooks ZeroPaper</fullName>
+        <default>false</default>
+        <label>QuickBooks ZeroPaper</label>
+    </customValue>
+    <customValue>
+        <fullName>QuickBooks Online International</fullName>
+        <default>false</default>
+        <isActive>false</isActive>
+        <label>QuickBooks Online International</label>
+    </customValue>
+    <masterLabel>Global Product Family</masterLabel>
+    <sorted>true</sorted>
+</GlobalValueSet>

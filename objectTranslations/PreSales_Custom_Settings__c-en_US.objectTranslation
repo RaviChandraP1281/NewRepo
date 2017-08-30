@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>PreSales Custom Settings</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>PreSales Custom Settings</value>
+    </caseValues>
+    <fields>
+        <help><!-- This flag should be set to true if Account Stage need to be executed. --></help>
+        <label><!-- ExecuteAccountStage --></label>
+        <name>ExecuteAccountStage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Oppty Stage Batch Size --></label>
+        <name>Oppty_Stage_Batch_Size__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

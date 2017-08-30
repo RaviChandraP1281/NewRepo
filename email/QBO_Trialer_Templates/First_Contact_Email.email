@@ -1,0 +1,17 @@
+QuickBooks Online Edition Company ID {!Contact.Company_ID__c} 
+
+Hello, 
+
+I'm sorry to trouble you, but I’m your QuickBooks Online Consultant and am here to help you start your on-boarding process. I don’t want to waste your time so I would like to schedule about 15 minutes with you, just to make sure that you are not on the wrong product and ensure you have all of the help resources you may need to get started. 
+
+To schedule a time with me, let me know what phone number I can reach you at along with the best day and time for you. 
+
+
+Thank you,
+
+{!User.Name}
+Small Business Specialist - Intuit Inc.
+
+{!User.Email}
+{!User.Phone}
+{!User.Address}

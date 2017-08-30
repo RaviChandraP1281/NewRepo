@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>ExecuteAccountStage__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>This flag should be set to true if Account Stage need to be executed.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>This flag should be set to true if Account Stage need to be executed.</inlineHelpText>
+        <label>ExecuteAccountStage</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Oppty_Stage_Batch_Size__c</fullName>
+        <externalId>false</externalId>
+        <label>Oppty Stage Batch Size</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+</CustomObject>

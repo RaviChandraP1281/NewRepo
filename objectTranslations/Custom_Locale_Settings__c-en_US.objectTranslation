@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Custom Locale Settings</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Custom Locale Settings</value>
+    </caseValues>
+    <fields>
+        <help><!-- ex: MM/dd/yyyy --></help>
+        <label><!-- Date Format --></label>
+        <name>Date_Format__c</name>
+    </fields>
+    <fields>
+        <help><!-- ex: English(US) is en_US. --></help>
+        <label><!-- LocaleSidKey --></label>
+        <name>LocaleSidKey__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

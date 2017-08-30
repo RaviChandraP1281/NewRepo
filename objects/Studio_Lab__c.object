@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Equipment__c</fullName>
+        <externalId>false</externalId>
+        <label>Equipment</label>
+        <length>80</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Lab_Address__c</fullName>
+        <description>This is address of lab</description>
+        <externalId>false</externalId>
+        <label>Lab Address</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Labs_Values__c</fullName>
+        <description>Every new Record Created Will have a name corresponding to it in this Picklist</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Every new Record Created Will have a name corresponding to it in this Picklist</inlineHelpText>
+        <label>Labs</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>Co-Creation 1</fullName>
+                    <default>false</default>
+                    <label>Co-Creation 1</label>
+                </value>
+                <value>
+                    <fullName>Co-Creation 2</fullName>
+                    <default>false</default>
+                    <label>Co-Creation 2</label>
+                </value>
+                <value>
+                    <fullName>Co-Creation 3</fullName>
+                    <default>false</default>
+                    <label>Co-Creation 3</label>
+                </value>
+                <value>
+                    <fullName>Den</fullName>
+                    <default>false</default>
+                    <label>Den</label>
+                </value>
+                <value>
+                    <fullName>Dining Room</fullName>
+                    <default>false</default>
+                    <label>Dining Room</label>
+                </value>
+                <value>
+                    <fullName>Lab 1</fullName>
+                    <default>false</default>
+                    <label>Lab 1</label>
+                </value>
+                <value>
+                    <fullName>Lab 2</fullName>
+                    <default>false</default>
+                    <label>Lab 2</label>
+                </value>
+                <value>
+                    <fullName>Lab 3</fullName>
+                    <default>false</default>
+                    <label>Lab 3</label>
+                </value>
+                <value>
+                    <fullName>Lab 4</fullName>
+                    <default>false</default>
+                    <label>Lab 4</label>
+                </value>
+                <value>
+                    <fullName>Lab 5</fullName>
+                    <default>false</default>
+                    <label>Lab 5</label>
+                </value>
+                <value>
+                    <fullName>Lab 6</fullName>
+                    <default>false</default>
+                    <label>Lab 6</label>
+                </value>
+                <value>
+                    <fullName>Living Room</fullName>
+                    <default>false</default>
+                    <label>Living Room</label>
+                </value>
+                <value>
+                    <fullName>Maker Space</fullName>
+                    <default>false</default>
+                    <label>Maker Space</label>
+                </value>
+                <value>
+                    <fullName>MTV Lab1</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>MTV Lab1</label>
+                </value>
+                <value>
+                    <fullName>MTV Lab2</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>MTV Lab2</label>
+                </value>
+                <value>
+                    <fullName>MTV Lab3</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>MTV Lab3</label>
+                </value>
+                <value>
+                    <fullName>MTV Lab4</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>MTV Lab4</label>
+                </value>
+                <value>
+                    <fullName>MTV Lab5</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>MTV Lab5</label>
+                </value>
+                <value>
+                    <fullName>Office</fullName>
+                    <default>false</default>
+                    <label>Office</label>
+                </value>
+                <value>
+                    <fullName>OffSite</fullName>
+                    <default>false</default>
+                    <label>OffSite</label>
+                </value>
+                <value>
+                    <fullName>Remote</fullName>
+                    <default>false</default>
+                    <label>Remote</label>
+                </value>
+                <value>
+                    <fullName>SDG Lab1</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>SDG Lab1</label>
+                </value>
+                <value>
+                    <fullName>SDG Lab2</fullName>
+                    <default>false</default>
+                    <label>SDG Lab2</label>
+                </value>
+                <value>
+                    <fullName>SDG Lab3</fullName>
+                    <default>false</default>
+                    <label>SDG Lab3</label>
+                </value>
+                <value>
+                    <fullName>SDG Lab4</fullName>
+                    <default>false</default>
+                    <label>SDG Lab4</label>
+                </value>
+                <value>
+                    <fullName>SDG Lab5</fullName>
+                    <default>false</default>
+                    <label>SDG Lab5</label>
+                </value>
+                <value>
+                    <fullName>SDG Lab6</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>SDG Lab6</label>
+                </value>
+                <value>
+                    <fullName>SDG Lab7</fullName>
+                    <default>false</default>
+                    <isActive>false</isActive>
+                    <label>SDG Lab7</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Location_Address__c</fullName>
+        <externalId>false</externalId>
+        <label>Location Address</label>
+        <length>255</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Location__c</fullName>
+        <externalId>false</externalId>
+        <label>Location</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>San Diego</fullName>
+                    <default>false</default>
+                    <label>San Diego</label>
+                </value>
+                <value>
+                    <fullName>Mountain View</fullName>
+                    <default>false</default>
+                    <label>Mountain View</label>
+                </value>
+                <value>
+                    <fullName>Non Lab Study (Remote)</fullName>
+                    <default>false</default>
+                    <label>Non Lab Study (Remote)</label>
+                </value>
+                <value>
+                    <fullName>Non Lab Study (Offsite)</fullName>
+                    <default>false</default>
+                    <label>Non Lab Study (Offsite)</label>
+                </value>
+                <value>
+                    <fullName>Plano</fullName>
+                    <default>false</default>
+                    <label>Plano</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Type_of_Study__c</fullName>
+        <externalId>false</externalId>
+        <label>Type of Study</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>MultiselectPicklist</type>
+        <valueSet>
+            <restricted>true</restricted>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>Card Sorting</fullName>
+                    <default>false</default>
+                    <label>Card Sorting</label>
+                </value>
+                <value>
+                    <fullName>Co-Design Session</fullName>
+                    <default>false</default>
+                    <label>Co-Design Session</label>
+                </value>
+                <value>
+                    <fullName>Concept Testing</fullName>
+                    <default>false</default>
+                    <label>Concept Testing</label>
+                </value>
+                <value>
+                    <fullName>Diary Study</fullName>
+                    <default>false</default>
+                    <label>Diary Study</label>
+                </value>
+                <value>
+                    <fullName>Eye Tracking</fullName>
+                    <default>false</default>
+                    <label>Eye Tracking</label>
+                </value>
+                <value>
+                    <fullName>Follow Me Home</fullName>
+                    <default>false</default>
+                    <label>Follow Me Home</label>
+                </value>
+                <value>
+                    <fullName>Mobile Testing</fullName>
+                    <default>false</default>
+                    <label>Mobile Testing</label>
+                </value>
+                <value>
+                    <fullName>Rapid Prototyping</fullName>
+                    <default>false</default>
+                    <label>Rapid Prototyping</label>
+                </value>
+                <value>
+                    <fullName>UsabilityTesting</fullName>
+                    <default>false</default>
+                    <label>UsabilityTesting</label>
+                </value>
+                <value>
+                    <fullName>User Interviews</fullName>
+                    <default>false</default>
+                    <label>User Interviews</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>OBJECT_ID</columns>
+        <columns>NAME</columns>
+        <columns>Location__c</columns>
+        <columns>Labs_Values__c</columns>
+        <columns>Type_of_Study__c</columns>
+        <columns>Location_Address__c</columns>
+        <columns>Lab_Address__c</columns>
+        <columns>UPDATEDBY_USER</columns>
+        <columns>LAST_UPDATE</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+        <language>en_US</language>
+    </listViews>
+</CustomObject>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>eCase Auto-Reply Responses - Canada French (fr_CA)</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Email_Letterhead</letterhead>
+    <name>eCase Auto-Reply Responses - Canada French (fr_CA)</name>
+    <style>freeForm</style>
+    <subject>eCase Auto-Reply Response</subject>
+    <textOnly>Merci d’avoir posé votre question.  Un membre de notre équipe de soutien y répondra en moins d’un jour ouvrable.
+
+Voici les détails portant sur votre dossier :
+
+Numéro de dossier: {!Case.CaseNumber}
+
+Question: {!Case.Question}
+
+
+Pour en savoir plus sur d’autres options de soutien, veuillez visiter notre site Web à l&apos;adresse suivante :
+
+https://help.quickbooks.intuit.com/fr_CA/contact</textOnly>
+    <type>html</type>
+</EmailTemplate>

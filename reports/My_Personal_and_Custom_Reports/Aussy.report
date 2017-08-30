@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>User.Case$OwnerId$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>User.Case$OwnerId.Case_NPS__r$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>User$Name</field>
+    </columns>
+    <columns>
+        <field>User.Case$OwnerId$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>User.Case$OwnerId.Case_NPS__r$Name</field>
+    </columns>
+    <columns>
+        <field>User.Case$OwnerId.Case_NPS__r$Question_Response1__c</field>
+    </columns>
+    <columns>
+        <field>User.Case$OwnerId.Case_NPS__r$Question_Response2__c</field>
+    </columns>
+    <columns>
+        <field>User.Case$OwnerId.Case_NPS__r$Question_Response3__c</field>
+    </columns>
+    <columns>
+        <field>User.Case$OwnerId.Case_NPS__r$Question_Response4__c</field>
+    </columns>
+    <columns>
+        <field>User.Case$OwnerId.Case_NPS__r$Question_Response6__c</field>
+    </columns>
+    <columns>
+        <field>User.Case$OwnerId.Case_NPS__r$Question_Response9__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>(1 or 2) AND 3</booleanFilter>
+        <criteriaItems>
+            <column>User$Division</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>SBCG Online Support Staff-STR-OLA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User$Division</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>SBCG Online Care-STR-OLA</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User$Name</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Angela Heller,Dennis Blake jr,Sharon Poindexter,Andrew Lamb,Ashley Castrogiovanni,Benjamin Muldrew,Chad Crisp,Donald Jones,Jeffery Bohnenblust,Julia Miller,Michael Rump,Nickolas Jones,Ryan Jackson,Teresa Wilkerson,Tony West,William Strobel,Zachary Turner</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <name>Aussy</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Users_Cases__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>User.Case$OwnerId.Case_NPS__r$CreatedDate</dateColumn>
+        <interval>INTERVAL_TODAY</interval>
+    </timeFrameFilter>
+</Report>

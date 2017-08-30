@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCategoryGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <label>ProConnect Tax</label>
+                <name>ProConnect_Tax</name>
+            </dataCategory>
+            <dataCategory>
+                <label>ProConnect Systems</label>
+                <name>ProConnect_Systems</name>
+            </dataCategory>
+            <dataCategory>
+                <label>ProConnect Customer Service</label>
+                <name>ProConnect_Customer_Service</name>
+            </dataCategory>
+            <dataCategory>
+                <label>ProConnect General</label>
+                <name>ProConnect_General</name>
+            </dataCategory>
+            <label>ProConnect</label>
+            <name>ProConnect</name>
+        </dataCategory>
+        <dataCategory>
+            <label>QBO</label>
+            <name>QBO</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Payroll-General</label>
+            <name>Payroll_General</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Payroll-Tax</label>
+            <name>Payroll_Tax</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Payroll-Risk</label>
+            <name>Payroll_Risk</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Payroll-Compliance</label>
+            <name>Payroll_Compliance</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Payments</label>
+            <name>Payments</name>
+        </dataCategory>
+        <dataCategory>
+            <label>QBO Mobile</label>
+            <name>QBO_Mobile</name>
+        </dataCategory>
+        <dataCategory>
+            <label>QBSE</label>
+            <name>QBSE</name>
+        </dataCategory>
+        <dataCategory>
+            <label>QBOA</label>
+            <name>QBOA</name>
+        </dataCategory>
+        <label>All</label>
+        <name>All</name>
+    </dataCategory>
+    <label>Authoring Group</label>
+    <objectUsage>
+        <object>KnowledgeArticleVersion</object>
+    </objectUsage>
+</DataCategoryGroup>

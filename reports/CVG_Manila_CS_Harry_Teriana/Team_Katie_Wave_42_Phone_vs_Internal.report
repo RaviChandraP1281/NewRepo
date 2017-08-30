@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Niel Tristan Monal Lumbo,Jomar Escalante,Lea Sara Razon,Ellen Grace Mandin,Jessa Mae Gorospe,Juniebar Gamboa,Brent John Ceralde,Calvin Quicho,Luigi Carlisle Fulitado,Zhanta Mae Abello,Mark Gene Sampol,Renz Gomez,Apole Limjoco,Joan Roldan,Jexie Libaton,Mario Allan Navato,Yganne Dela Cruz,Nicole-Anne Puddunan,Niel Tristan Lumbo,Bazare Saliling,Alexander Paul Adoremos,Christian Glenn Cruz</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>ORIGIN</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CREATED</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Wave 71 cases count</name>
+    <params>
+        <name>units</name>
+        <value>d</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATEONLY</dateColumn>
+        <interval>INTERVAL_TODAY</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Email template to show new QBO customers how to link their accountant</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>IBC QBO Accountant Set Up</name>
+    <style>none</style>
+    <subject>Connect your accountant to QuickBooks Online</subject>
+    <textOnly>Intuit QuickBooks Online
+
+Connect your accountant
+to your QuickBooks Online file.
+
+Real-time support
+
+Your accountant can see your data in real-time to answer questions and solve problems with a quick call.
+
+Save Time
+No more copies of your books transferred back and forth, work from a single up-to-date database.
+
+Save Money
+Don’t pay your accountant to drive to your business, they can access your data real-time… anytime.
+
+Follow these 3 simple steps to enable your accountant to collaborate with you in QuickBooks Online
+
+-Under Your Company settings select Manage Users.
+
+-Click Invite Accountant
+
+-Fill out your accountant’s information and they will be sent an email.
+
+That’s it – you’re done!
+
+Once accepted by your accountant, they will now have the ability to collaborate with your QuickBooks Online file.
+
+Login to QuickBooks Online now  to add your accountant
+
+Need help?
+Call customer support at
+1-855-253-1536
+(press option 1, then option 3)
+and speak with a support representative.
+
+Intuit, Inc., Customer Communications 2800 E. Commerce Center Place, Tucson, AZ 85706.
+
+IMPORTANT NOTICE: Intuit respects the personal nature of email and this email is being sent at your verbal request. A previously stated opt out does not apply to this email. If you would like to update your contact preferences, you may do so at https://privacy.intuit.com/cpi/do/preferences?p_isForeign=0&amp;z=&amp;dialog=0&amp;p_sourceid=5&amp;p_closeoncancel=0&amp;hidenav=0&amp;p_prioritycode.</textOnly>
+    <type>custom</type>
+</EmailTemplate>

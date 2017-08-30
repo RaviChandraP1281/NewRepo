@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>number</bucketType>
+        <developerName>BucketField_21443408</developerName>
+        <masterLabel>Sales</masterLabel>
+        <nullTreatment>z</nullTreatment>
+        <sourceColumnName>AMOUNT</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <to>0</to>
+            </sourceValues>
+            <value>Reprovisions</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>0</from>
+            </sourceValues>
+            <value>Sales</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_96005534</developerName>
+        <masterLabel>Segment</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>CREATED</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Sheryl Romas</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Santos Girard</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Graig Medina</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Honeyluck Pajo</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Jenifer Sta Ana</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Jullie Ann Lagos</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Mary Joyce Camille Reyes</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Alfredo Jr Teng</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Carlo Bacabac</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Charlene Fallurin</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Humbert Doloroso</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Jay-R Didulo</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Jeanne Celine Logan</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Joram Constantino</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Rowelyn Montes</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Joana Marie Gamutan</sourceValue>
+            </sourceValues>
+            <value>Sam</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Edgar Billones</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Christian Jasper Policarpio</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Miguel Louis Zapanta</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Sho Andres</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Jamayca Estrella</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Iris Ecal</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Maria Fatima Manlicdem</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Paul Ryan Castro</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Aileen Rachel Galeno</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Elaine Billones</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Iris Patricia Cruz</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Jan Paulo Torres</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Christine Rhea Lacaste</sourceValue>
+            </sourceValues>
+            <value>Pola</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>VerticalColumnGrouped</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>BucketField_96005534</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_TOP</location>
+        <secondaryGroupingColumn>FULL_NAME</secondaryGroupingColumn>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>true</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>BucketField_21443408</field>
+    </columns>
+    <columns>
+        <field>CLOSE_DATE</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Order_Number_Siebel_Order_Id__c</field>
+    </columns>
+    <columns>
+        <field>OPPORTUNITY_NAME</field>
+    </columns>
+    <columns>
+        <field>SYNCED_QUOTE_NAME</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>AMOUNT</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Kierl Santos,Jesmar Joseph Mangahas,Brando Solomon Garcia,Emerald Docejo,Alyssa May Dulay,Bryan Martin Vargas,Edmark Louie Largadas,Rachel Pace,Jonah espiritu,lovelyn baquero</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>BucketField_21443408</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Sales</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_96005534</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FULL_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Team Lily Daily Sales 2.0</name>
+    <params>
+        <name>open</name>
+        <value>closed</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunity</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CLOSE_DATE</dateColumn>
+        <interval>INTERVAL_THISWEEK</interval>
+    </timeFrameFilter>
+</Report>

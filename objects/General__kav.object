@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <validationRules>
+        <fullName>Channel_Customer_Partner_Rule</fullName>
+        <active>true</active>
+        <errorConditionFormula>(IsVisibleInCsp || IsVisibleInPrm)</errorConditionFormula>
+        <errorMessage>Customer or Partner Channel Can not be selected</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>InternalArticleFlagValidation</fullName>
+        <active>false</active>
+        <description>Prevent Internal Only content having customer facing content</description>
+        <errorConditionFormula>(NOT(IsVisibleInPkb) &amp;&amp; IsVisibleInApp  &amp;&amp;  NOT(If(Len(trim(Body__c))&gt;0,false,true)))</errorConditionFormula>
+        <errorMessage>This article has been flagged as &quot;Internal Article&quot;, but has content in External only Description. Please modify accordingly.</errorMessage>
+    </validationRules>
+</CustomObject>

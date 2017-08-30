@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>How does “going mobile” benefit you and your clients?</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Awareness Test - Mobile</name>
+    <style>none</style>
+    <subject>How does “going mobile” benefit you and your clients?</subject>
+    <textOnly>*|MC:SUBJECT|*
+
+Use this area to offer a short preview of your email&apos;s content.
+
+View this email in your browser
+
+Save 9 weeks! Sounds too good to be true, right? – but that’s what small business owners are saying is possible simply by working on-the-go. Being able to create quotes on-site, allocate transactions at morning tea or simply see how the business is going anytime or anywhere are examples of how they save time during each and every day.
+
+&lt;&lt; Download the full report
+
+Maybe these times savings are why one of your small business clients has just subscribed to QuickBooks Online and has invited you to help them with their books. So, if you’d like to learn more about QuickBooks Online and how small businesses are saving time using cloud accounting on mobile devices, we’d love you to attend one of our regular Introduction to QuickBooks Online webinars.
+
+In this free 30 minute webinar, we’ll get you up to speed quickly on:
+
+The benefits of cloud accounting
+How to get around QuickBooks Online
+The key features like bank feeds, payroll and more
+Along with how your clients can save time on-the-go
+
+Why attend?
+By investing a little time now, you’ll be able to talk to your small business clients about working efficiently on-site or anywhere their job takes them.
+
+Find a date that suits you
+
+If you would prefer to get an overview from a team member now, please call us on 1800 618 521 and we’ll gladly help you out.
+
+Thanks!
+
+QuickBooks Online ProAdvisor Team
+
+You&apos;re receiving this email because you have provided Intuit your details or have been referred by a colleague.
+
+unsubscribe from this list
+
+Intuit Australia
+Level 13, 2 Park Street
+SYDNEY  NSW  2000</textOnly>
+    <type>custom</type>
+</EmailTemplate>

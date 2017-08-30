@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>USERS.NAME</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>Account.Company_ID__c</field>
+    </columns>
+    <currency>GBP</currency>
+    <filter>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <column>ACCOUNT_ID</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>001i000000qFwFR,001i000000qN7OK,001i000000wsIah,001i0000015OJOW,001i000001b5XST,001i000001c2tln,001i000001cwq5X,001i000001ds41H,001i000001ds4eE,001i000001e4cge,001i000001e4cNI,001i000001e4eI0,001i000001e4ry4,001i000001e4tkd,001i000001e4ufe,001i000001e4v7Y,001i000001e5riB,001i000001e6qgF,001i000001f9YyC,001i000001fBEY6,001i000001fD1Gw,001i000001It89b,001i000001MGXVr,001i000001n1jxn,001i000001obt7r,001i000001oYexo,001i000001oYwv1,001i000001oZKnn,001i000001pFzs5,001i000001pI9hM,001i000001qvwZA,001i000001qxghv,001i000001qz52r,001i000001reh49,001i000001reMdc,001i000001sLrLD,001i000001sMMj7,001i000001sPJRg,001i000001T8a0A,001i000001t9mQv,001i000001t9n5E,001i000001T9N6u,001i000001tAiay,001i000001taQN6,001i000001tcsVJ,001i000001tCwxA,001i000001Ts4ot,001i000001TtvNw,001i000001TtvUJ,001i000001tXhbN,001i000001tXVMh,001i000001tXzVz,001i000001UU5Fz,001i000001UUJZw,001i000001UULhY,001i000001UULrx,001i000001UVbqz,001i000001UVbVZ</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ACCOUNT_ID</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>001i000001uvmtt,001i000001uvnUG,001i000001uySDT,001i000001uySZP,001i000001VjldZ,001i000001ZLisy,001i000001ZNM5s</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>2020 Company IDs</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>AccountList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

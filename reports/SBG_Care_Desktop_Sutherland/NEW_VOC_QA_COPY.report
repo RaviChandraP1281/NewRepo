@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FK_CASE_CREATED_DATEONLY</field>
+    </columns>
+    <columns>
+        <field>CUST_CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>FK_CREATED</field>
+    </columns>
+    <columns>
+        <field>FK_CASE_OWNER_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_CASE_SUBJECT</field>
+    </columns>
+    <columns>
+        <field>FK_$Case.Product__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Contact__c</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response1__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response2__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response3__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response4__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response5__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response10__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response8__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response9__c</field>
+    </columns>
+    <columns>
+        <field>VOC_Survey_Response__c.Question_Response6__c</field>
+    </columns>
+    <columns>
+        <field>CUST_ID</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>(((((((((((((((((((1) OR 2) OR 3) OR 4) OR 5) OR 6) OR 7) OR 8) OR 9) OR 10) OR 11) OR 12) OR 13) OR 14) OR 15) or 16) or 17) or 18) or 19) or 20</booleanFilter>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Angelo Perez,Dixie Alimoren,Caselyn Villar,Christian Joseph Galvez,Elvis Villanueva,Hadassah Joy Aniz,Jonel Adriatico,Liezl Rangis,Marielle Janine Navarro,MarinaBoots Montes,Rafael Tolentino,Rodrigo Ortega,Lory Lyn Stagen,Zarah Grace Parallag,Eduard Baliwas,Maria Tumibay,Analiza Anib,Ida Ethel Hernandez,Rodelio Avaricio,Danielle Julius Uvero,Diane Thess Medenilla,Franz Roi Acidillo,Hans Louie Abero,Joann Ganzon,John Michael Joson,John Paulo Suarez,Jurieden Esteban,Larry Dela Cruz,Maria Cristina Camu,Marlon Santos,Maurene Pramoso,Michael Angelo Santiago,Rhina Jane Ocampo,Romeo Nunag,Romina Joy Cadiz,Ronnie Salvaña,Sarah Jane Acosta,Tomo Castilla,Tristan Ross Benavidez</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Aldwin Ramos,Annabelle Locsin,Cybelle Purog,Elenore Ng,Elmer Chua,Elvis Cortez,Hernan Sena,Jane Bagos,Jennelyn Dengle,Joseph Leonard Erandio,Justine Errol Cacay,Mariel Antonio,Sergio Miguel Acuna,Ma Carolina Bacaycay,AceJoseph Caviteno,Aldwin Senires,Christian Dato-on,Gregg anthony Calaguing,James Hendrick Morante,Jayson Ponce,Jesus Gonzales,John Louie Grajo,Kate Drew Barnes,Kate Lauren Punla,Manami Ticsay,Nemo Benigay,Noel Dela Torre,Patrick Jules Doromal,Raymond Rimarim,Reena Mae Marquez,Richard Bryan Runtal,Roberto Teodoro,Rolando Madlmeduh,Ronald Renegill Ramos,Ronalyn Carino,Rosalyn Salang,Rowel Labrador,Rowena Palero,Sherwin Dela Cruz,Tyrone De Guzman,Patrick Rey Santos,Josephine Mendoza,Brian Hiponia,Nilo Gadoc,Ferdinand Villasin,Justo Destura III,Jefferson Cesista,Bonjules David,Farrah Bridget Cain,Catherine Lee Joson,Emmanuel Hapa,Carlos Ragrario,Destinee Joy Tabo-oy,Grace Ann Litan,Agatha Martina Macaso,Arden Vibal,Cheeza May Remedios Rosales,Charie Fe Pauta,Benhur BengustaJr</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>David Espino,Jeffrey Jemina,John Rencie Alvarez,Marivic Muring,Mark Danver Rubala,Irene Samar,Joel Pajarillo,Joeren Reyes,Johanna Falqueza,John Patrick Ramos,Lalaine Salih,Lyka Claudine Anda,Manuel Alberto Co,Marjorie Hayley Corro,Nelmar Loteria,Norlan Estrella,Reizie Monzeratt Casibang,Viel De Luna,April Calanglang,Jayson Ladera,Cesar Capablanca,Cris Nichole Bermudez,Daniel De Leon Jr,Danjur Herrera,Elisha Aftab,Ellen Esteban,Felix John Arcala,Glenn Mark Mendoza,Inigo Arrieta,Richard Bautista</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Donny Ang,Vierge Marie,Alberto Fernandez Jr,Dandy Del Carmen,Rafael Jose Isabelo,Roinel Exconde,Radley Vargas,Alexander Acman,Anthody Sager,Arlene Baran,Arnulfo Ayao Jr,Bernard Cruz,Daniel Patco,Dionisio Ang Jr,Elijah Shalom Villaruel,Felygen Ferrel,Janelin Sese,Jaypee Reyes,Jericho Abasolo,Julie Palisoc,Kathrina Ramos,Reymalynne Ann Ventura,Ryan Arbis,Vernadette Vicencio,Andrea Volante,DennisJohn Isidro,MarkJoseph Villarias,MarkKevin Olleta,Mylene Quioco,ChristianeNio Hupano,Jenny Benlot,MayAngela Asuncion,Elvis Villanueva,Evelyn Andres,Edilberto Nolasco,Gerald Villar,PearlJoy Maigting,Michael Matias,Roland Barcenas</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Jayson Bencito,Germen Paguya,Gracevel Arena,John Nicolas Bagayaua,Jonathan Cruz,Marnelli Grace Makilan,Paul Warren Cuaresma,Denver Anthony Manipon,Airon Gacutan,Bernard Bautista,Dan Mark Piedad,Flora Ruby Escalona,Franciso Agramon,Gilbert Corpuz,Ginnethon Canuto,Hannah Joy Lee,Jeorge Legaspi,Jeriel Salem Lagang,Jose Emmanuel Cruz,Juan Paulo Tabontabon,Mark Angelo Zulueta,Ronaldo Suma,Sir Radian Esposo,Vallen Casanova,Ena Aguirre,Ronnie Salvana,Vida Cargullo</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Kevin Detillo,AriesGil Belver,Britz Moreno,Francis Llosa,Glenn Alvarado,Gregg anthony Calaguing,Guian Karlo Villegas,Jan Wilhelm Bulatao,JosephChristian Banate,Kenneth Amor,Mark Dave Asadon,Mary Grace Poja,MaryAnn Balangue,Michael Chua,Raymond Luna,Rex Alvarade,Sharlene Anne Tajuna,Jeremy Lundang,John Carlo Binungcal,Marlyn Marimuthu,Norman Kester Lagua,Jovert Abubacar</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Michael De Leon,April Joy Amad,Charles Corpin,Donnell Richard Devilleres,Hermenoel Soriano,James Jr Cabaluna,Mark Anthony Acosta,Marvin Albert Ruiz,Sheryl Bandioan,Tozca Camille Mampo,Mark Cuaresma</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Peter Aparicio,Roxanne Calbes,Daniel Corpuz,Ruth Deguzman,Emmanuel Lorilla,Roberto Leal Jr,Elmer Lugay,Marilou De Guzman,Raymond Senados,Nicko Salazar,Joseph Patrick Santos,Lehte Ann Mae Intia,Joanna Maria Isabel Mendoza,Luyd Bande,Richard Kenneth Cansenaje,William Pacray</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Ulysses Sy,Jeseren Nabol,Joanne Laude,Carlo Lonzame,Catherine Feliciano,John Paul Carino,Lindsey Gutierrez,Mark Anthony Dula,Michelle Monteroso,Pavi May Doromal,Sheryl Roldan,Teodoro Jr Original,Zhabvier Nolledo</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Rogel Concepion,Oliver Tolentino,Zignen Baltar,Jhay Rom Sierra,Vic Emmanuel Bompat,Rona Tibay,Haron Pangandaman,Carlo Baliza,Norvy Narra II,Jerome Conmigo,Exequiel Donsol,JessicaJune Tanchingco,KristianMartin Beral</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Verilo Jr Mortola,Ramilson Barrios,Marc Christian Maniacop,Rommel Paitan,Jessgie Aceret,Michelle Alejos,Gillan Alog,Gian Paulo Aranda,Vincent Balayan,Ronald James Bitong,Elaine Rica Bunayog,Carlo Capinig,Jacklyn Dela Rosa,Mary Ann De Leon,Gerald Fajardo,Nicolle Bianca Fuertes,Michelle Futol,Rodel Lajato,Cyrus Landoy,Marlon Angelo Makilan,Glenn Joseph Malenab,Digna Medrano,Johanne Mendoza,Elpidio Jr Padiernos,Erwin Andrei Sajota,Roel Torres,Joel Tumaliwan,Maria Genara Mendoza</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Jonah Pia Simbahan,Gil Florence Alojado,Mark Andrew Alzona,Nancy Aquino,Camielle Kaira Arevalo,Meriam Domanico,Maricris Lim,Teejay Orbello,Kenneth Piamonte,Neil John Quisido,Abe Jeilz Rala,Jaycil Rodriguez,Marvin Surop,Kacy Anne Torres,Filipina Valdez,Roxanne Vergara,Abigail Villaflores,Georgina Zagala,Mark Christian Piansay,AdrianJorge Teneza,Aldisher Diwallay,ArlJoseph Natividad,Avegail  Arriola,BonJovy Nunieza,BonPaul Mendoza,Charlson Bucago,CherryAnn Fortes,Cristine Contrata,CrystalGayle Sagnoy,Dave Manalaysay,ErneaChristine Villaflor,EugeneFelix Camacho,Fressie Sablada,Gary Lumbao,Generoso Iglopas,GraceAnn Gante,Imelda Villanueva,Jaron Dagdagan,JelleVallenAnne Rivera,JenikkaDianne Gador,Jamie Dick Dadivas</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Paul Michael De Mesa,Carlo Alexis Austria,Ramil Bernales Jr,Teodora Bordarays,Julius Ceasar Campos,Darryl Jasper De Castro,Rolly Cruz,Angelo Del Rosario,Arthur Diamante,Venerando Francisco Jr,Abegail Gargantiel,Jennifer Justo,Angelo Kevin Lanzar,Pamela Padua,Mark Anthony Patulot,Sheili Ann Pena,Marc Joseph Pulido,Ropertte Anne Ricon,Sherina Sarah San Miguel,Jonah Regin Valle,Wilson Rodas,Timothy James Cruz,Neil Recuerdo,Czarina Joan Mateo,Florenz Joy Alberto,Lian Ragma,John Rafael Alvarez,John Marnie Tolosa,Kenneth Alvin Payas,May Catherine Bolo,Mark Anthony Yambao,Miwa Cabrera,Patrick John Cabigas,Radie Murad,Sheryl Joy Bituon,Tiara Joyce Villanueva,Ronalyn Rimarim,Chastine Edmar San Pedro,Meldrin Ercilla,James Timothy Torazo,Lucas Ravago,Beverly Apduhan,Dana Ahera Juanzo,Edward Campos,Miko Bernadette Caparas,Jesmark Ocampo,Jhaykee Lizardo,Jhulbert Broso,JohnMel Ytable,Jonathan Torres,Joshua Salditos,LouiseArgail Peralta,MarieJenalyn Macalalad,MaryMiracle Co,Ma Catherine Alcasid</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Marvin Mabazza,Wilmer Bryan Aguilar,Rosalyn Amodia,Marvy Cabrega,Jaspearl De Galicia,Sheryl De La Cruz,Edison Dolendo,Danikka Dungaran,Alfredo Engson lll,John Ryan Gabito,Milius Jansen,Renz Malana,Maria,Genara Mendoza,Rhyan Richard Pasok,Rachel Noemi San Miguel,Mark Anjelo Sasi,George Sinsuan,John Aris Soguilon,Dannielle Fernan Tusoy,Gidget Janbee Yambing,Melissa Rivera,MelissaJoyce Giron,Mewa Abiru,Nikko Francisco,OsheeSan Morada,Rex Lachica,Ronald Cedan,Rowel DelaTorre,Ali Mostajab Al Davati,Allan John De Leon,Ana Carla Orazon,April Ariel Angelo Satorre,Christian Garcia,Daniel RJ Sapitula,Dave Brian Corpin,Donald Lanting,Ferdinand Abejo,Frodel Jamito,Jhoanna Villacorta,Juan Jacinto Natividad,Kevin Legaspi,Khenn Providencia,Lea Lareza,Nino Carlo Ensenado,Oliver Carino,Ricardo Benitez,Robert Dy,Rowena Carizal,Roxan Omongos,Sharifa Ainie Salim,Wilbert Pili,Windy Baroja,Zusie Florida</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Marites Santos,Claro Bagos,Carolyn Dela Cuadra,Marnelli Llenares,Catherine Aquino,Billwright Gilmore Robregado,Claudio Morales,Gerald Pedro,Rodolfo Inocentes,Ramera Upod,Marvin Kiunisala,Johanna Marie Castro,Dixie May Ann Alimoren,Kiel Dela Cruz,Ma Monaliza Daylo Domingo,Arvin Navarrete,Gene Rose Gaviola,Reynaldo Gastador,Gelly Fernandez,Jenilyn Bolon,Rhandy Evangelista,Daniel Al Christian Lim,Recio Josel,Sheena Hazel Galvez,Katherine Orpilla,Elaine Rica Bunayog,Benjamin Albert Garcia,Gilbert Ian Calderon,Mark Manaois</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Adonis Cecilio,Aga Mecarte,Andrei Margallo,Ann Kathleen Rivera,Arthur Rosana,Aubree Rose Mia,Clark Angelo Cunanan,Gideon Obligar,Hero Anthony Cloma,Jay Reynald Estilo,Jayvie De Leon,Jebel Polo,Jona Timbreza,Joseph Abrique,Kristina Aricayos,Lawrence Ray Carreon,Liezl Joyce Lacambra,Mark Gil Cato,Nikko De Leon,Nollie Dela Cruz,Normanfran Tungcul,Rayan Registos,Richard  Lim,Ronnie Cunanan,Timothy Paul Mabasa,Allen Joy Agnasin,Arlette Echaluce,Benjamin Isidore Gojoco,Charlene Mortega,Eurika Caubat,Francine Louise Kraft,Frank Charlie Guerrero,Jan Jeffrey Andres,Jelo Rivera,Julian John Paul Laganzo,Laarni Murillo,Lolette Julianne Aviles,Melinda Magdaraog,Michelle Flores,Morielle Tobias,Phillip John Reyes,Rachel Jean Crunchy Yambao,Ruel Mariano,Ryan Abril,Saturnino Bida</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Benigno Rama,Kristine Tabaco,Michael Frank Marticio,Sherwin Morillo,Rosario Gonzales,John Gamusaran,Jeffrey Cruz,Jayson Noriesta,Leilani Bilog,Ann Jerica Samonte,Maria Dolores Laga,Romel Galvan,Meljohn Forbes,Arnold Capistrano,Jaime Bravo III,Ruth Mary Jamin,Joseph Medina,Ezekiel Danns Oriel,Maria Anna Patricia Vivar,Mark Lemi Oriel,Mark Louie Laurio,Roger Estopito,Ryja Pulido,Seth Sabiduria,Sheryl Mallavo,Resty Marcelo,Kate Montojo,Mark Anthony Verzosa,Roy Budlong,Sanobeth Lawang,Marites Lancian</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Pacray William,Aquino Katherine Mae,Regino Romenjoe,Bautista Lilibeth,Del Prado Peachie,Velasco Marife,Madrigal John Michael,Hernandez Rafaela Camille,Isidro Wilfredo,Manuel Melody,Genedel Robledo,Magadia Irene,Caperlac Rafael,Rodriguez Jarena Joy,Benito Adrian,Alfaro Michael Edward,Paimalan Abegail,Natalie Mata Lesaca,Razon Arsenia,Orpiano Raymund</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Autajay Unica Anna,Banawa Roxanne Mutya,Bordeos Eulo Jake,Cabug Jeralyn,Coyne Melvin,Elias Clinton,Lalaguna Joel,Manalo Mark Joseph,Meneses Lloyd,Padlan Jewel Jade,Sebastian Mary Dhristi,Tunguia Mark Wilford,Nario Rendell Bert,Villanueva Jessica,Cortez Ronalice,Racpan Erwin,Mary Joy Torayno,Glemert Jamille Aballe,Paolo Angelo Batolina,Jay Ann Dangel,Mary Grace Austria,Aaron Andrade,Anna Rose Orense,Jovert Abubacar,Sunshine Anna Garcines,Vergel Escopin,Eduardo Jr Maneja,Jamie,Dick Dadivas,Georgie Grace Gadiana,Carmina Saclolo,Annabel Daep</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>FK_CREATED</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Amando Angeles Jr,Annie Jimeno,Avryl Riex Arizabal,Bevvy Jill Xenia Regudo,Cathyrine Cruz,Chris Marrie Fernandez,David Michael Mercado,Edward Franz Atienza,Harvy Ramos,Jerome De Leon,Jim Tarriela,Joan Malabanan,Jomar Alonzo,Jon Jon Marlon Garcia,Jonas Matthew Espinoza,Ken Patrick Coruña,Kim Kennard Forones,Kris Cesar Canque,Nikko Peter Detera,Paul Pacho,Raymond Canillo,Reignar Josef Villanueva,Ron Allen Baquiran,Tiffany Villaceran,Trisha May De Guzman,Allan Oropesa,Anna Kristina Lorie Bayola,Ariel Lamparero,Brian Kristoffer Santos,Clarafe Sandoval,Denesse Isabedra,Edgie Yerro,Emmanuel Palis Jr.,Emmyluo Gobenciong,Erika Rose Alano,Geraldine Yanga,Ian Greg Macajelos,Jellie Ann Castañeda,Jenalyn Laurete,Joyce Gumawa,Julius Macatol Jr,Pauline May Montilla,Robin Gamboa,Rommel John Santiago,Ronilo Jan Dogoldogol,Rose Bongon,Ruches Hana Velasco,Sharmaine Lingbao,Stephen Dave Osio,Harry James Sebido,Maria Cecile Braganza,Ahmed Limatoc,Christian Joseph Agoilo,Crispin Siobal II,Ellana Arcilla</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Tabular</format>
+    <name>NEW VOC - QA COPY</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$VOC_Survey_Response__c@VOC_Survey_Response__c.CaseId__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>CUST_CREATED_DATE</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <endDate>2017-07-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2017-07-01</startDate>
+    </timeFrameFilter>
+</Report>

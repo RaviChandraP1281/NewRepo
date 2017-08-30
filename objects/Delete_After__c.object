@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <fullName>Days__c</fullName>
+        <description>This field is used to store the day count after which the file would be deleted in rackspace.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the  day count after which the file would be deleted in rackspace.</inlineHelpText>
+        <label>Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Days_in_Words__c</fullName>
+        <description>This field is used to specify the number of days after which the file gets deleted in rackspace.
+Value for this field is used in Terms and Conditions.</description>
+        <externalId>false</externalId>
+        <label>Days in Words</label>
+        <length>30</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Investigation_Attachment_Days__c</fullName>
+        <externalId>false</externalId>
+        <label>Investigation Attachment Days</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+</CustomObject>

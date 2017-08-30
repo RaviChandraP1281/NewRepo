@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Data Services - STQ UK Xero Welcome</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>QB_Desktop_DS_Logo_Steps_1_of_3</letterhead>
+    <name>Data Services - STQ UK Xero Welcome</name>
+    <style>freeForm</style>
+    <subject>Welcome to Data Services</subject>
+    <type>html</type>
+</EmailTemplate>

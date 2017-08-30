@@ -1,0 +1,21 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; color:#000000; bEditID:r3st1; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">Thank you for submitting your question.&nbsp; One of our support experts will reply within
+1 business day.&nbsp; <o:p></o:p></p>
+
+<p class="MsoNormal">Your case details are as follows:<o:p></o:p></p>
+
+<p class="MsoNormal">Case Number:&nbsp; {!Case.CaseNumber}<o:p></o:p></p>
+
+<p class="MsoNormal">Question: {!Case.Question}<o:p></o:p></p>
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+<p class="MsoNormal">For additional support options, please visit our website at:<o:p></o:p></p>
+
+<p class="MsoNormal"><a href="https://help.quickbooks.intuit.com/en/contact">https://help.quickbooks.intuit.com/en/contact</a>&nbsp; &nbsp; &nbsp;</p>]]></td>
+</tr>
+</table>

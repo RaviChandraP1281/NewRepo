@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <enableEnhancedLookup>false</enableEnhancedLookup>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Description</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>FieldComparison__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Is Field Comparison</label>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>FieldScore__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Use Field as Score</label>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Field_Name__c</fullName>
+        <externalId>false</externalId>
+        <label>Field Name</label>
+        <length>255</length>
+        <required>true</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Field_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Field Type</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>String</fullName>
+                    <default>false</default>
+                    <label>String</label>
+                </value>
+                <value>
+                    <fullName>Date</fullName>
+                    <default>false</default>
+                    <label>Date</label>
+                </value>
+                <value>
+                    <fullName>Date/Time</fullName>
+                    <default>false</default>
+                    <label>Date/Time</label>
+                </value>
+                <value>
+                    <fullName>Number</fullName>
+                    <default>false</default>
+                    <label>Number</label>
+                </value>
+                <value>
+                    <fullName>Boolean</fullName>
+                    <default>false</default>
+                    <label>Boolean</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Field_Value__c</fullName>
+        <externalId>false</externalId>
+        <label>Value</label>
+        <length>255</length>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Operator__c</fullName>
+        <externalId>false</externalId>
+        <label>Operator</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <controllingField>Field_Type__c</controllingField>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Equals</fullName>
+                    <default>false</default>
+                    <label>Equals</label>
+                </value>
+                <value>
+                    <fullName>Not equals</fullName>
+                    <default>false</default>
+                    <label>Not equals</label>
+                </value>
+                <value>
+                    <fullName>Contains</fullName>
+                    <default>false</default>
+                    <label>Contains</label>
+                </value>
+                <value>
+                    <fullName>Does not contain</fullName>
+                    <default>false</default>
+                    <label>Does not contain</label>
+                </value>
+                <value>
+                    <fullName>Starts with</fullName>
+                    <default>false</default>
+                    <label>Starts with</label>
+                </value>
+                <value>
+                    <fullName>Ends with</fullName>
+                    <default>false</default>
+                    <label>Ends with</label>
+                </value>
+                <value>
+                    <fullName>Regular Expression</fullName>
+                    <default>false</default>
+                    <label>Regular Expression</label>
+                </value>
+                <value>
+                    <fullName>Greater than</fullName>
+                    <default>false</default>
+                    <label>Greater than</label>
+                </value>
+                <value>
+                    <fullName>Greater than or equal</fullName>
+                    <default>false</default>
+                    <label>Greater than or equal</label>
+                </value>
+                <value>
+                    <fullName>Less than</fullName>
+                    <default>false</default>
+                    <label>Less than</label>
+                </value>
+                <value>
+                    <fullName>Less than or equal</fullName>
+                    <default>false</default>
+                    <label>Less than or equal</label>
+                </value>
+            </valueSetDefinition>
+            <valueSettings>
+                <controllingFieldValue>String</controllingFieldValue>
+                <controllingFieldValue>Date</controllingFieldValue>
+                <controllingFieldValue>Date/Time</controllingFieldValue>
+                <controllingFieldValue>Number</controllingFieldValue>
+                <controllingFieldValue>Boolean</controllingFieldValue>
+                <valueName>Equals</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>String</controllingFieldValue>
+                <controllingFieldValue>Date</controllingFieldValue>
+                <controllingFieldValue>Date/Time</controllingFieldValue>
+                <controllingFieldValue>Number</controllingFieldValue>
+                <valueName>Not equals</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>String</controllingFieldValue>
+                <valueName>Contains</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>String</controllingFieldValue>
+                <valueName>Does not contain</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>String</controllingFieldValue>
+                <valueName>Starts with</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>String</controllingFieldValue>
+                <valueName>Ends with</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>String</controllingFieldValue>
+                <valueName>Regular Expression</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Date</controllingFieldValue>
+                <controllingFieldValue>Date/Time</controllingFieldValue>
+                <controllingFieldValue>Number</controllingFieldValue>
+                <valueName>Greater than</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Date</controllingFieldValue>
+                <controllingFieldValue>Date/Time</controllingFieldValue>
+                <controllingFieldValue>Number</controllingFieldValue>
+                <valueName>Greater than or equal</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Date</controllingFieldValue>
+                <controllingFieldValue>Date/Time</controllingFieldValue>
+                <controllingFieldValue>Number</controllingFieldValue>
+                <valueName>Less than</valueName>
+            </valueSettings>
+            <valueSettings>
+                <controllingFieldValue>Date</controllingFieldValue>
+                <controllingFieldValue>Date/Time</controllingFieldValue>
+                <controllingFieldValue>Number</controllingFieldValue>
+                <valueName>Less than or equal</valueName>
+            </valueSettings>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Score__c</fullName>
+        <externalId>false</externalId>
+        <label>Score</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Scoring_Rules__c</fullName>
+        <externalId>false</externalId>
+        <label>Scoring Rules</label>
+        <referenceTo>Scoring_Rules__c</referenceTo>
+        <relationshipLabel>Scoring Rule Fields</relationshipLabel>
+        <relationshipName>Scoring_Rule_Fields</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>true</reparentableMasterDetail>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Description__c</columns>
+        <columns>Field_Name__c</columns>
+        <columns>Field_Type__c</columns>
+        <columns>FieldComparison__c</columns>
+        <columns>Operator__c</columns>
+        <columns>Score__c</columns>
+        <columns>Scoring_Rules__c</columns>
+        <columns>FieldScore__c</columns>
+        <columns>Field_Value__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+</CustomObject>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Lead.SLA_Created_Date_Time__c</field>
+    </columns>
+    <currency>USD</currency>
+    <description>Based on Product Fam of Interest. QBO, QB Premier Pro, QB Mac, Merchant Account Services, Intuit Full Service Payroll, Assisted Payroll</description>
+    <filter>
+        <criteriaItems>
+            <column>LEAD_SOURCE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Chat</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER_ROLE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>QBO CHAT,Campaign Agent,Campaign Lead Dev,Campaign Mgr,QBO Chat OB,QBO Trail OB</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Legacy_Campaign_Name__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notContain</operator>
+            <value>LH</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Product_Family_of_Interest__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Assisted Payroll,DIY Payroll,Intuit Full Service Payroll (IFSP),Intuit Online Payroll (IOP),Merchant Account Services,QB Accountants Edition,QB Mac,QB Pro/Premier,QuickBooks Online (QBO)</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER_ROLE_DISPLAY</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Canada Inbound Consultant,Canada Outbound Consultant,UK Telesales Consultant,PSG Chat Mgr</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER_ROLE_DISPLAY</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Campaign Agent,Campaign Lead Dev,Campaign Mgr,QBO Chat OB,QBO Trail OB</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Legacy_Campaign_Name__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notContain</operator>
+            <value>LH</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Lead.Timezone__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>(GMT-04:00) Eastern Daylight Time (America/Indianapolis),(GMT-04:00) Eastern Daylight Time (America/New_York),(GMT-04:00) Atlantic Standard Time (America/Puerto_Rico),(GMT-04:00) Chile Time (America/Santiago),(GMT-04:30) Venezuela Time (America/Caracas),(GMT-05:00) Colombia Time (America/Bogota),(GMT-05:00) Central Daylight Time (America/Chicago),(GMT-05:00) Peru Time (America/Lima),(GMT-05:00) Central Daylight Time (America/Mexico_City),(GMT-05:00) Eastern Standard Time (America/Panama)</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <name>CHAT LEADS 30 MIN INTERVAL</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>OpportunityLead</reportType>
+    <scope>org</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>Lead.SLA_Created_Date_Time__c</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <endDate>2015-01-31</endDate>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2014-11-01</startDate>
+    </timeFrameFilter>
+</Report>

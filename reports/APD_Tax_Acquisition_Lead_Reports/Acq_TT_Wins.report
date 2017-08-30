@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_46529866</developerName>
+        <masterLabel>Campaign TY</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <otherBucketLabel>Other</otherBucketLabel>
+        <sourceColumnName>Opportunity.Legacy_Campaign_Name__c</sourceColumnName>
+        <useOther>true</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>TY16 ACQ Web</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY16 Acquisition Trade Shows</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY16 Acquisition Webinar</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY16 Acquisitions Consultant</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY16 Acquisitions Campaigns</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY16 Acquisitions Expires</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY16 Acquisitions Inbound</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY16 Acquisitions List</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY16 Acquisitions Marketing</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY16 Acquisitions Trade Shows</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY16 Acquisitions Webinar</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY16 Acquisitions Webinars</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY16 Acquistions Inbound</sourceValue>
+            </sourceValues>
+            <value>TY16 Campaigns</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>TY17 ACQ Web</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY17 Acquisitions Consultant</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY17 Acquisitions Expires</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY17 Acquisitions Inbound</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY17 Acquisitions Lists</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY17 Acquisitions Trade Shows</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY17 Acquisitions Webinars</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>TY17 Events</sourceValue>
+            </sourceValues>
+            <value>TY17 Campaigns</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>HorizontalBarStacked</chartType>
+        <enableHoverLabels>true</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>FULL_NAME</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_BOTTOM</location>
+        <secondaryGroupingColumn>BucketField_46529866</secondaryGroupingColumn>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Large</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>STAGE_NAME</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Product_Family_of_Interest__c</field>
+    </columns>
+    <columns>
+        <field>OPPORTUNITY_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_ACTIVITY</field>
+    </columns>
+    <columns>
+        <field>CREATED_DATE</field>
+    </columns>
+    <columns>
+        <field>CON.PHONE</field>
+    </columns>
+    <columns>
+        <field>STAGE_DURATION</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT_NAME</field>
+    </columns>
+    <columns>
+        <field>PHONE1</field>
+    </columns>
+    <columns>
+        <field>CON.EMAIL</field>
+    </columns>
+    <columns>
+        <field>CLOSE_DATE</field>
+    </columns>
+    <columns>
+        <field>AMOUNT</field>
+    </columns>
+    <currency>USD</currency>
+    <description>All wins from the TT acquisitions work.</description>
+    <filter>
+        <criteriaItems>
+            <column>FULL_NAME</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Nathanial Hummel,Aaron Stroud,Zachary Goetz,Otto Prado</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CLOSE_DATE</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>greaterOrEqual</operator>
+            <value>6/19/2017</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>STAGE_NAME</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Closed Won,Future Hold</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FULL_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_46529866</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Acq TT - Wins</name>
+    <params>
+        <name>open</name>
+        <value>all</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunity</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>STAGE_NAME</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>LAST_STAGE_CHANGE_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

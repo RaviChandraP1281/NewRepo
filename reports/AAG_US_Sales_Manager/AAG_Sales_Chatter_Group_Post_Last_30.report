@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CollaborationGroup.FeedItems$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>CollaborationGroup.FeedItems$Id</field>
+    </columns>
+    <columns>
+        <field>CollaborationGroup.FeedItems$Type</field>
+    </columns>
+    <columns>
+        <field>CollaborationGroup.FeedItems$Title</field>
+    </columns>
+    <columns>
+        <field>CollaborationGroup$Owner</field>
+    </columns>
+    <columns>
+        <field>CollaborationGroup$CollaborationType</field>
+    </columns>
+    <currency>USD</currency>
+    <description>Report showing the AAG Sales Group Posts by User for the Last 30 Days.</description>
+    <filter>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <column>CollaborationGroup$CreatedBy</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Carlos Soria Galvarro,Javier Garcia,Benjamin Manning,Michael Mendoza,Robert Moreno,Joe Posey,Michelle Prieto,Mary Anne Sands,David Scott,Sang Yong Shin</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CollaborationGroup$CreatedBy</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Alan Rockowitz,Gail Tucker,David Burden,Susan Capo,Manuil Chavez,Randall Hrna,Shaughn Landauer,Michael Luna,Thomas O&apos;Neil,Scott Williams</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>CollaborationGroup$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CollaborationGroup.FeedItems$CreatedBy</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>AAG Sales Chatter Group Post - Last 30</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Chatter_Groups_with_Group_Feed__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CollaborationGroup.FeedItems$CreatedDate</dateColumn>
+        <interval>INTERVAL_LAST30</interval>
+    </timeFrameFilter>
+</Report>

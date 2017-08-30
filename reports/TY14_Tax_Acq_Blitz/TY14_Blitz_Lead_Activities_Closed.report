@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>SUBJECT</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>Lead.Legacy_Treatment_Name__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Lacerte Webinar,Professional Web,ProSeries Webinar,RT Web Lead,Sign up for a webinar,Try it Free,TY14 FS Leads,TY14 Lacerte Eval,TY14 ProSeries Evals,TY14 Trade Show (IRS Chicago),TY14 Trade Show (IRS DC),TY14 Trade Show (IRS NOLA),TY14 Trade Show (IRS Orlando),TY14 Trade Show (IRS San Diego),TY14 Trade Show (LTPA Vegas),TY14 Trade Show (NAEA Vegas),TY14 Trade Show (NATP Atlantic City),TY14 Trade Show (NATP Orlando),TY14 Trade Show (NATP Orlando)),Vegas LTPA (TY14),Vegas NAEA (TY14),Web Lacerte Evals,TY14 Trade Show (NATP Vegas),TY14 Trade Show (LTPA Houston),TY14 Trade Show (LTPA Dallas)</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>LAST_UPDATE</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>LEAD_OWNER</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>TY14 Blitz - Lead Activities Closed</name>
+    <params>
+        <name>closed</name>
+        <value>closed</value>
+    </params>
+    <params>
+        <name>type</name>
+        <value>te</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LeadActivity</reportType>
+    <roleHierarchyFilter>Sales_Executive</roleHierarchyFilter>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>LAST_UPDATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2014-12-03</startDate>
+    </timeFrameFilter>
+</Report>

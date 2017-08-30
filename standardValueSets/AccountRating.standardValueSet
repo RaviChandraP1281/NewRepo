@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>true</sorted>
+    <standardValue>
+        <fullName>Low Volume</fullName>
+        <default>false</default>
+        <label>Low Volume</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Nurture</fullName>
+        <default>false</default>
+        <label>Nurture</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Nurture + Gen2 Not Migrated</fullName>
+        <default>false</default>
+        <label>Nurture + Gen2 Not Migrated</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Nurture + Top 100 Account</fullName>
+        <default>false</default>
+        <label>Nurture + Top 100 Account</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Nurture - No Interest</fullName>
+        <default>false</default>
+        <label>Nurture - No Interest</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Nurture - No Opportunity</fullName>
+        <default>false</default>
+        <label>Nurture - No Opportunity</label>
+    </standardValue>
+    <standardValue>
+        <fullName>STAR</fullName>
+        <default>false</default>
+        <label>STAR</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Star + Top 100 Account</fullName>
+        <default>false</default>
+        <label>Star + Top 100 Account</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Top 100 Accounting Firm</fullName>
+        <default>false</default>
+        <label>Top 100 Accounting Firm</label>
+    </standardValue>
+</StandardValueSet>

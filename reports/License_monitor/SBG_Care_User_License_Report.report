@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_61394485</developerName>
+        <masterLabel>Role Buckets</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>ROLE</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>PTG AandE Customer Service</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>PTG Care Leader</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>PTG Customer Service Agent</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>PTG FL Support Agent</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>PTG Partner Care Leader</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>PTG Systems Support AandE</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>PTG Tax Support AandE</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>PTG Tax Tier 2 and 3</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Partner Care Mgr</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Partner Service and Support</sourceValue>
+            </sourceValues>
+            <value>PTG Care</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>CarePayrollAgent</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>LeadDesktop</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>MgrDesktop</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>PartnerMgrDesktop</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>SerandSuppDesktop</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Tier1Online</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Tier2Online</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Tier2ServiceDesktop</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Tier2SupportDesktop</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Tier3Desktop</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>MgrOnline</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>AAG AEL</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>AAG Care Mgr</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>AAG Service</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>AAG Support and Service</sourceValue>
+            </sourceValues>
+            <value>SB Care</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Credit and Collections</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>CRTS Agent</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>CRTS Manager</sourceValue>
+            </sourceValues>
+            <value>Finance</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>B2B Payroll Support</sourceValue>
+            </sourceValues>
+            <value>File Exchange Only</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Admin</sourceValue>
+            </sourceValues>
+            <value>EBS</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>FULL_NAME</field>
+    </columns>
+    <columns>
+        <field>PROFILE</field>
+    </columns>
+    <columns>
+        <field>LAST_LOGIN</field>
+    </columns>
+    <currency>USD</currency>
+    <description>B2BCare User License Report - by Role Bucket. (QUICK VIEW)</description>
+    <filter>
+        <criteriaItems>
+            <column>PROFILE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notContain</operator>
+            <value>Chatter,Read,Sales,India,SBFS,NonVPN</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>BucketField_61394485</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notContain</operator>
+            <value>SBFS</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_61394485</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>B2B Care Actuals - by Role Bucket</name>
+    <params>
+        <name>active</name>
+        <value>active</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>User</reportType>
+    <showDetails>false</showDetails>
+    <sortColumn>LAST_LOGIN</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>LAST_LOGIN</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

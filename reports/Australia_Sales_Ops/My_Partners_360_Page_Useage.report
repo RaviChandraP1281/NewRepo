@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>SkuidPageHistory__c.LastVisitedDate__c</field>
+    </columns>
+    <currency>GBP</currency>
+    <filter>
+        <criteriaItems>
+            <column>SkuidPageHistory__c.UserId__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Dale Pearson,Adrian Campbell,Trent McLaren,Chris Metcalf,Matthew Pisarski,Glenn McNeill.Michelle O&apos;Shanassy,Albert Chu,Andrew Kyriacou,Shaun Haque,Thomas Bilton,Keith Ng,Steven Chan,Christina Chung,Gajanan Rajah,Bianca Mitchell,Candice Lim,Rhiannon Gargaro,Martin O&apos;Sullivan,Vishal Singh</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>SkuidPageHistory__c.PageName__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>SkuidPageHistory__c.UserId__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>My Partners &amp; 360 Page Useage</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$SkuidPageHistory__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <sortColumn>SkuidPageHistory__c.LastVisitedDate__c</sortColumn>
+    <sortOrder>Asc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>SkuidPageHistory__c.LastVisitedDate__c</dateColumn>
+        <interval>INTERVAL_THISWEEK</interval>
+    </timeFrameFilter>
+</Report>

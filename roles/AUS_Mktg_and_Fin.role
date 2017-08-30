@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>Edit</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>AUS Mktg and Fin</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>AUS Mktg and Fin</name>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>Global_Executive</parentRole>
+</Role>

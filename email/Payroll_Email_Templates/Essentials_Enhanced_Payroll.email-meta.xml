@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Empty_Letterhead</letterhead>
+    <name>QB Essentials + Enhanced Payroll</name>
+    <style>freeForm</style>
+    <subject>QuickBooks Essentials with Enhanced Payroll Information Follow-Up</subject>
+    <textOnly>Dear --,
+
+
+Thank you for taking the time to discuss your payroll needs with me. I’m happy that I could introduce you to QuickBooks Essentials with Enhanced Payroll and provide you with valuable information.
+
+
+Feel free to call me at 800-920-4227 ext. XXXX if you have any questions.
+
+
+QuickBooks Essentials with Enhanced Payroll is an excellent choice for managing all your accounting and payroll needs in one place. With QuickBooks Essentials with Enhanced Payroll, you can set up in minutes, run payroll in 3 simple steps, and easily file your payroll taxes – all from QuickBooks. Confidently run payroll right inside of QuickBooks.
+
+
+QuickBooks Essentials with Enhanced Payroll:
+
+Track income and expenses
+Create estimates and invoices
+Sync bank accounts1 and apps
+Manage and pay bills
+Instant sales and profit reports
+Run payroll in minutes: Just enter hours and we handle all the calculations.
+Expert support: Call or chat for free support from payroll experts.
+Taxes done right: Payroll taxes calculated and forms pre-filled so you can file and pay with a few clicks (federal and state).2
+Built inside QuickBooks: Payroll data flows directly to your books, can easily be shared with you accountant and works with your favorite apps.
+
+
+QuickBooks Essentials with Enhanced Payroll Introductory Pricing:
+
+Free 30 day trial: Try QuickBooks Essentials with Enhanced Payroll for free for 30 days. Then save 20% and pay only $52.76 per month plus $1.50 per employee per month for 12 months; $65.95 per month plus $1.50 per employee per month after 12 months.
+Buy Now to Save 50%: Buy QuickBooks Essentials with Enhanced Payroll and save 50% and pay $32.97 per month plus $1.50 per employee per month for 12 months with no trial; $65.95 per month plus $1.50 per employee per month after 12 months.</textOnly>
+    <type>html</type>
+</EmailTemplate>

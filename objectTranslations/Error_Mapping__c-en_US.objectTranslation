@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Error Mapping</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Error Mappings</value>
+    </caseValues>
+    <fields>
+        <label><!-- Code --></label>
+        <name>Code__c</name>
+    </fields>
+    <fields>
+        <help><!-- Message Type for aMind error mapping --></help>
+        <label><!-- Message Type --></label>
+        <name>Message_Type__c</name>
+        <picklistValues>
+            <masterLabel>Error</masterLabel>
+            <translation><!-- Error --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Informational</masterLabel>
+            <translation><!-- Informational --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Warning</masterLabel>
+            <translation><!-- Warning --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Pattern Type --></label>
+        <name>Pattern_Type__c</name>
+        <picklistValues>
+            <masterLabel>Contains</masterLabel>
+            <translation><!-- Contains --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Matches</masterLabel>
+            <translation><!-- Matches --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Pattern --></label>
+        <name>Pattern__c</name>
+    </fields>
+    <fields>
+        <label><!-- Response --></label>
+        <name>Response__c</name>
+    </fields>
+    <fields>
+        <label><!-- System --></label>
+        <name>System__c</name>
+        <picklistValues>
+            <masterLabel>API Gateway</masterLabel>
+            <translation><!-- API Gateway --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Company Search (OII)</masterLabel>
+            <translation><!-- Company Search (OII) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Generic</masterLabel>
+            <translation><!-- Generic --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>License Management</masterLabel>
+            <translation><!-- License Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Search Identity</masterLabel>
+            <translation><!-- Search Identity --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Siebel/MDM</masterLabel>
+            <translation><!-- Siebel/MDM --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>aMind</masterLabel>
+            <translation><!-- aMind --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

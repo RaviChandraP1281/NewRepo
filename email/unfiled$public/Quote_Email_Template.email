@@ -1,0 +1,5 @@
+<messaging:emailTemplate subject="Intuit Quote: {!relatedTo.Siebel_Quote_Number__c}" recipientType="Contact" relatedToType="Quote">
+    <messaging:htmlEmailBody >
+        <c:ViewTemplate Quote="{!relatedTo.Id}"></c:ViewTemplate>
+    </messaging:htmlEmailBody>
+</messaging:emailTemplate>

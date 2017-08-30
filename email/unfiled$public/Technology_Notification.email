@@ -1,0 +1,18 @@
+<Html>
+<body >
+<font face="Helvetica" >
+Deren, <br/><br/>
+{!Study__c.First_Name__c}  {!Study__c.Last_Name__c} has submitted a study with technology needs.  <br/><br/>
+
+<ul>
+<li>Name of study:  {!Study__c.Name}
+<li>Date of study:  {!Study__c.Start_Date_of_Study__c}
+<li>Recruiter: {!Study__c.Recruiter_First_Name__c} {!Study__c.Recruiter_Last_Name__c}
+<li>Technology Requested: {!Study__c.Technology__c}
+
+</ul>
+
+To open the study click here <a href=  {!Study__c.Link}>click here</a>.<br/><br/>
+
+Please ensure the lab(s) are set up and technology is working on day of study. <br/><br/>
+Thanks.

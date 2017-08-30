@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>IOP - Initial email 48 hour hold</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Desktop_Data_Services</letterhead>
+    <name>IOP - Initial email 48 hour hold</name>
+    <style>freeForm</style>
+    <subject>Master Administrator Claim</subject>
+    <textOnly>{!Case.Contact},
+Regarding {!Case.Account}:
+
+We were contacted today with a request to transfer the Master Administrator role of your Intuit Online Payroll account to another user. Since you are currently listed as the Master Administrator, the fastest way to complete this request is included in the steps below:
+ 
+1.       Sign in to iop.intuit.com
+2.       Invite a new user and have them accept the invite.
+3.       Click the Setup tab
+4.       Click Contact Information
+5.       Select the new user from the Primary Contact drop down menu
+6.       Click Ok
+ 
+If you are unable or unwilling to transfer Master Administrator rights, the change may still occur if we are able to proof business ownership from the requesting party.
+ 
+Sincerely,
+The Intuit Online Payroll Support Team</textOnly>
+    <type>html</type>
+</EmailTemplate>

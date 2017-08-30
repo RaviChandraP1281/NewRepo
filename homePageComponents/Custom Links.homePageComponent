@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HomePageComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <links>NEW_Transfer_List</links>
+    <links>Address_Standardization</links>
+    <links>Payments_Script</links>
+    <links>Workers_Comp_Script</links>
+    <links>OKM</links>
+    <links>PSP</links>
+    <links>QBN</links>
+    <links>CSR</links>
+    <links>Company_Back_End_Dump_Tool</links>
+    <links>Sales_Assisted_Application_SAA_Tool</links>
+    <links>SBG_Learning_Portal</links>
+    <links>OnlineSalesCatalog</links>
+    <pageComponentType>links</pageComponentType>
+</HomePageComponent>

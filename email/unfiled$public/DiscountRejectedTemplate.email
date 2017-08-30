@@ -1,0 +1,10 @@
+Hi {!ApprovalRequest.Process_Approver},
+The following quote discount has been rejected. 
+
+Quote Number: {!Quote.Siebel_Quote_Number__c} 
+
+Quote Total: {!Quote.Siebel_Total_Amount__c} 
+
+Total Manual Discount : {!Quote.Siebel_Total_Discount_Amount__c}
+
+Approver's Comments: {!ApprovalRequest.Comments}

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>number</bucketType>
+        <developerName>BucketField_98439344</developerName>
+        <masterLabel>Month Planning To Start</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Lead.NumOfWorkstations__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <to>19,999</to>
+            </sourceValues>
+            <value>January</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>19,999</from>
+                <to>29,999</to>
+            </sourceValues>
+            <value>February</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>29,999</from>
+                <to>39,999</to>
+            </sourceValues>
+            <value>March</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>39,999</from>
+            </sourceValues>
+            <value>April - Later</value>
+        </values>
+    </buckets>
+    <buckets>
+        <bucketType>number</bucketType>
+        <developerName>BucketField_3079752</developerName>
+        <masterLabel>No of 1040s</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Lead.NumOf1040s__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <to>25</to>
+            </sourceValues>
+            <value>Under 25</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>25</from>
+            </sourceValues>
+            <value>Over 25</value>
+        </values>
+    </buckets>
+    <columns>
+        <field>LEAD_ID</field>
+    </columns>
+    <columns>
+        <field>OWNER</field>
+    </columns>
+    <columns>
+        <field>Lead.Legacy_CAN__c</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <columns>
+        <field>PHONE</field>
+    </columns>
+    <columns>
+        <field>LAST_ACTIVITY</field>
+    </columns>
+    <currency>USD</currency>
+    <description>The number of returns bucketed v. Stage of the Leads</description>
+    <filter>
+        <criteriaItems>
+            <column>Lead.Legacy_Treatment_Name__c</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>TY16 PTO 25 Net New Users</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_3079752</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>STATUS</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>MGR Campaigning - Number v Stage</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>LeadList</reportType>
+    <scope>org</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

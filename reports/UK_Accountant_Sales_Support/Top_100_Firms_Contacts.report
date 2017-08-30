@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>ACCOUNT.NAME</field>
+    </columns>
+    <columns>
+        <field>FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>LAST_NAME</field>
+    </columns>
+    <columns>
+        <field>PHONE1</field>
+    </columns>
+    <columns>
+        <field>PHONE3</field>
+    </columns>
+    <columns>
+        <field>EMAIL</field>
+    </columns>
+    <currency>GBP</currency>
+    <filter>
+        <booleanFilter>(1 OR 2 OR 3 OR 4) AND 5 AND 6 AND 7</booleanFilter>
+        <criteriaItems>
+            <column>EMAIL</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>@pwc.co.uk,@deloitte.co.uk,@kpmg.co.uk,@uk.ey.com,@uk.gt.com,@bdo.co.uk,@bakertilly.co.uk,@smith.williamson.co.uk,@mazars.co.uk,@uk.pkf.com,@crowecw.co.uk,@uhy-uk.com,@kingstonsmith.co.uk,@mhllp.co.uk,@zolfocooper.eu,@menzies.co.uk,@buzzacott.co.uk,@francisclark.co.uk,@taxassist.co.uk,@hwfisher.co.uk,@armstrongwatson.co.uk,@pricebailey.co.uk,@hazlewoods.co.uk,@duntop.co.uk,@streetsweb.co.uk,@aab.co.uk,@bishopfleming.co.uk,@oldmillgroup.co.uk,@lovewell-blake.co.uk,@larking-gowen.co.uk,@mercerhole.co.uk,@jamescowperkreston.co.uk,@hhllp.co.uk,@forrester-boyd.co.uk,@bhp.co.uk,@mooreandsmalley.co.uk,@silverlevene.co.uk,@hlca.co.uk,@cbw.co.uk,@sgllp.co.uk,@beeverstruthers.co.uk ,@srlv.co.uk,@lubbockfine.co.uk,@scruttonbland.co.uk,@frenchduncan.co.uk,@spofforths.co.uk,@cowgills.co.uk,@bkl.co.uk,@thomaswestcott.co.uk,@critchleys.co.uk,@mitchellcharlesworth.co.uk,clearskyaccounting.co.uk,@sshllp.com,@taylorcocks.co.uk,@chiene.co.uk</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>EMAIL</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>@hjssolutions.co.uk,@bird-luckin.co.uk,@broomfield.co.uk,@harris-lipman.co.uk,@bennettbrooks.co.uk,@mooret.co.uk,@hurst.co.uk,@wingrave.co.uk,@thempagroup.co.uk,@howardworth.co.uk,@wsm.co.uk,@grunberg.co.uk,@jsllp.co.uk,@ellacotts.co.uk,@raffingers-stuart.co.uk,@crunch.co.uk,@lamontpridmore.co.uk,@wtca.co.uk,@begbiesaccountants.co.uk,@smpaccountingandtax.com,@pwc.com,@deloitte.com,@kpmg.com,@ey.com,@us.gt.com,@bdo.com,@bakertilly.com,@moorestephens.com,@pkf.com,@saffery.com,@hwca.com,@begbies-traynor.com,@wilkinskennedy.com,@zolfocooper.com,@cvdfk.com,@frpadvisory.com,@frankhirth.com,@krestonreeves.com,@sjdaccountancy.com,@haysmacintyre.com,@aseglobal.com,@shipleys.com,@barnesroffe.com,@scott-moncrieff.com,@rothmansllp.com,@kinetic-partners.com,@dains.com,@montpeliergroup.com,@geraldedelman.com,@brebners.com,@bvllp.com,@jeffreyshenry.com,@rdpnewmans.com,@lbgroupltd.com,@hartleyfowler.com</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ACCOUNT.NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>PwC,Deloitte,KPMG,EY,Grant Thornton UK ,BDO,Baker Tilly,Smith &amp; Williamson,Mazars,Moore Stephens UK,PKF UK,Saffery Champness,Haines Watts,Crowe Clark Whitehill,Begbies Traynor,UHY Hacker Young,Kingston Smith,MHA MacIntyre Hudson,Wilkins Kennedy,Zolfo Cooper,Chantrey Vellacott DFK,Menzies,Buzzacott,Francis Clark ,TaxAssist Accountants,FRP Advisory,HW Fisher &amp; Company ,Frank Hirth [13],Reeves &amp; Co[8],Armstrong Watson,Price Bailey,SJD Accountancy,Haysmacintyre,Hazlewoods,Duncan &amp; Toplis,Streets,Anderson Anderson &amp; Brown,Bishop Fleming,Old Mill,Lovewell Blake,Larking Gowen,Mercer &amp; Hole,ASE,James Cowper,Hillier Hopkins,Forrester Boyd,Shipleys,Barber Harrison &amp; Platt,Moore and Smalley,Barnes Roffe,Silver Levene,Scott-Moncrieff,Henderson Loggie,Rothmans,Kinetic Partners,Carter Backer Winter,Simmons Gainsford,Beever &amp; Struthers,SRLV,Dains,Lubbock Fine,Montpelier Professional,Scrutton Bland,French Duncan,Spofforths</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>ACCOUNT.NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>contains</operator>
+            <value>Cowgill Holloway,Berg Kaprow Lewis,Gerald Edelman,Brebners,Thomas Westcott,Critchleys,Mitchell Charlesworth,ClearSky Accounting,Shelley Stock Hutter,The Taylor Cocks Partnership,Bennett Verby,Chiene + Tait,HJS Solutions,Jeffreys Henry,Bird Luckin,RDP Newmans,Broomfield &amp; Alexander,Harris Lipman,Bennett Brooks &amp; Co,Moore Thompson,Hurst,LB Group,Ecovis Wingrave Yeats,The MPA Group,Howard Worth,WSM Partners,Grunberg &amp; Co,Jackson Stephen,Ellacotts,Raffingers Stuart,Hartley Fowler,Crunch Accounting,Lamont Pridmore,Wellden Turnbull,Begbies Chartered Accountants,SMP Accounting &amp; Tax</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Country__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>United Kingdom</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Customer_Type__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Partner</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Account.Status__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Active</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Account_Stage__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>OWNER_FULL_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Top 100 Firms- Contacts</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ContactList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+        <startDate>2015-02-10</startDate>
+    </timeFrameFilter>
+</Report>

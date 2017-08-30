@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buckets>
+        <bucketType>text</bucketType>
+        <developerName>BucketField_42012985</developerName>
+        <masterLabel>Campaign</masterLabel>
+        <nullTreatment>n</nullTreatment>
+        <sourceColumnName>Opportunity.Legacy_Campaign_Name__c</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <sourceValue>Auth Fail</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Auth Fails</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Authfail</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QBES Auth Fail</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QBES Authfail</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>FSP Auth Fail</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>FSP Authfail</sourceValue>
+            </sourceValues>
+            <value>Auth Fail</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>FMS-CCD</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>FMS CCD</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>FMSCCD</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>CCD</sourceValue>
+            </sourceValues>
+            <value>FMS CCD</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Inactive FSP</sourceValue>
+            </sourceValues>
+            <value>Inactive FSP</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Chat</sourceValue>
+            </sourceValues>
+            <value>Chat</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>CPC</sourceValue>
+            </sourceValues>
+            <value>CPC</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Direct</sourceValue>
+            </sourceValues>
+            <value>Direct</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>IPD</sourceValue>
+            </sourceValues>
+            <value>IPD</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>LH-QBOC</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>LH QBOC</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>LHQBOC</sourceValue>
+            </sourceValues>
+            <value>LH-QBOC</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Organic</sourceValue>
+            </sourceValues>
+            <value>Organic</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>PPC</sourceValue>
+            </sourceValues>
+            <value>PPC</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>FSP Win back</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>FSP Winback</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QBES Winback</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QBES win back</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Win Back</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Winback</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Winback End Dated</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>Win back end dated</sourceValue>
+            </sourceValues>
+            <value>Winback</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>referral</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>referal</sourceValue>
+            </sourceValues>
+            <value>Referral</value>
+        </values>
+        <values>
+            <sourceValues>
+                <sourceValue>Save</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>saves</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QBES Save</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>QBES Saves</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>FSP Save</sourceValue>
+            </sourceValues>
+            <sourceValues>
+                <sourceValue>FSP Saves</sourceValue>
+            </sourceValues>
+            <value>Saves</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <aggregate>Sum</aggregate>
+            <axisBinding>y</axisBinding>
+            <column>AMOUNT</column>
+        </chartSummaries>
+        <chartType>HorizontalBar</chartType>
+        <enableHoverLabels>false</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>BucketField_42012985</groupingColumn>
+        <location>CHART_BOTTOM</location>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Tiny</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>AMOUNT</field>
+    </columns>
+    <columns>
+        <field>ACCOUNT_NAME</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Siebel_Order_id__c</field>
+    </columns>
+    <columns>
+        <field>Opportunity.Order_Status__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>((1 AND 2) OR (1 AND 3)) AND 4</booleanFilter>
+        <criteriaItems>
+            <column>OWNER_DIVISION</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Saves and Winback,OB Migrations,OB Lead Harvest,QBO Trialer,QBO Chat OB</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Product_Family_of_Interest__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Assisted Payroll,Checks/Supplies,Intuit Full Service Payroll (IFSP),Intuit Online Payroll (IOP),Merchant Account Services,QB Point-of-Sale (POS),QuickBooks Online (QBO),QuickBooks Online Acct (QBOA),Revel,Worker&apos;s Comp</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>Opportunity.Order_Status__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Order Placed</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>LEAD_SOURCE</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>notEqual</operator>
+            <value>Trial Sign-up</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Matrix</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_42012985</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>This Month&apos;s Sales by Campaign</name>
+    <params>
+        <name>open</name>
+        <value>closedwon</value>
+    </params>
+    <params>
+        <name>probability</name>
+        <value>&gt;0</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Opportunity</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CLOSE_DATE</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

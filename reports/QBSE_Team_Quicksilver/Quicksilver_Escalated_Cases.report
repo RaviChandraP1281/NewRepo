@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CREATED</field>
+    </columns>
+    <columns>
+        <field>CASE_NUMBER</field>
+    </columns>
+    <columns>
+        <field>ORIGIN</field>
+    </columns>
+    <columns>
+        <field>Case.SB_Area__c</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>(1 OR 2) AND 3</booleanFilter>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Christine Babes Mendoza,Jessica Basanez,Joel Endrina,Dave Rizon,Arjean Amamangpang,Tessa Marie Perez,Aldrin Cuestas,Karen Jane Diagbel,Dawn Felices,Fred Japuz Jr,Jesebel Mari,Maria Fatima Niez,Charity Faith Rubia,Julus Victor Hababag,Mirriam Masinas,Wilgen Martinez,Fred Jr Japuz</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>OWNER</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Kyle Ashley Gabisay,Junard Gayrama,Ressel Lopecillo,Wendil Polestico,Ralph Ryan Sanchez,Mary Eliza Torralba,Scylinn Tampugao,Mario Visitacion,Julus Vilktor Hababag</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>STATUS</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Priority-Reopened,Researching,Updated,Escalated</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <name>Quicksilver - Escalated Cases</name>
+    <params>
+        <name>units</name>
+        <value>d</value>
+    </params>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CaseList</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CREATED_DATEONLY</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

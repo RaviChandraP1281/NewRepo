@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CREATED</field>
+    </columns>
+    <columns>
+        <field>CREATEDDATE</field>
+    </columns>
+    <columns>
+        <field>LASTRUNDATE</field>
+    </columns>
+    <columns>
+        <field>SHORT_NAME</field>
+    </columns>
+    <columns>
+        <field>FOLDER</field>
+    </columns>
+    <columns>
+        <field>LASTMODIFIED</field>
+    </columns>
+    <currency>GBP</currency>
+    <filter>
+        <booleanFilter>1 AND (2 OR 3)</booleanFilter>
+        <criteriaItems>
+            <column>CREATED</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>Alexander Davis,Andy Gleeson,Robert Hoyle,Andrew Petersen,Aqueel Rahman,Daniel Sullivan,Andy Petersen,Tony Chick,Rob Hoyle,Alex Davis,Itayi Bimha,Cloe Steward,Laura Kenny,Steve Reynard,Dylan Chambers,Louise McCormack,Adris Gulab,Farjana Tharin,Philippa Hume,Clinton Brown,Joe Wilson,Louise Hill,Molly Hickford,Tom Wilde,Samuel Baloun,David Oppermann,Georgia Manning,Fartum Iman,Nathan Camplin,Stefan Damnjanovic,Jamie Finn,Amar Pitrola,Henry Conteh,Nathan White,Jonny Edwards</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>CREATEDDATE</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>LAST_WEEK</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>LASTRUNDATE</column>
+            <isUnlocked>true</isUnlocked>
+            <operator>equals</operator>
+            <value>LAST_WEEK</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <name>Reports Created by Sales Agents</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>ReportList</reportType>
+    <showDetails>true</showDetails>
+    <sortColumn>LASTRUNDATE</sortColumn>
+    <sortOrder>Desc</sortOrder>
+    <timeFrameFilter>
+        <dateColumn>CREATEDDATE</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

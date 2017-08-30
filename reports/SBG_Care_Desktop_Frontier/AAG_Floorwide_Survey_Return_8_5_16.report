@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>User.Case$CreatedById$CaseOwnerFullName__c</field>
+    </columns>
+    <columns>
+        <field>User.Case$CreatedById$CaseNumber</field>
+    </columns>
+    <columns>
+        <field>User.Case$CreatedById$CreatedDate</field>
+    </columns>
+    <columns>
+        <field>User.Case$CreatedById$Description</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <booleanFilter>(1 or 2 or 3) AND 4</booleanFilter>
+        <criteriaItems>
+            <column>User.Case$CreatedById$Owner</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>,Scott Bernard,Hayley Bruy,Jeanette Creighton,Zacchaeus Williams,Brian West,Tylor Domina,Rachel Ehrbar,Haily Melendez,David Thomas,Brianna Johnson,Jovon Johnson,Krystal Krauss,Jason Legg,Karla Miles,Jarrica Oquin,Sayyid Otero,Nicholas Rodriguez,Frank Royko-Adkins,Grace Wilson,Shaquonda Armstrong,Samantha Baumgardner,charles M Diaz,Emily Dyer,Elizabeth Guzman,Shannon Hempel,Becky Herzog,Lindsey Laughton,Elizabeth Martin,Chelsey Meade,Melissa Muro,Brandyn Offley,Amy Sherman,Matthew Shea,Michael Taylor,Jazmyn Vazquez,Danielle Weldon,Ashley Doherty,Anisha Tims,Christopher Ebbs</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$CreatedById$Owner</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Christopher Estepa,Tyran Basil,Jose Carrau,Tiarra Cambio,Desiree Conover,Daniel Dickens,Kyle Hanson,Tyler Kramer,Tracy Lesch,Alina Lounsbury,David Manning,Dustin Mueller,Eric Patterson,Ryan Robinson,Shannon Roche,Brooke Albin,Joshua Belloir,Wayne DeMonte,Aaron Duttweiler,Mackenzie Fleetwood,Keoni Grabowski,Gabriel Legarreta,Chyanna Longmire,Kaylie Owens,Christina Raghonath,Amber Snodgrass,Kristen Bradeen,Tyler DuRapau,Larry Faith,Kevin Gomez,Leslie Hannans,Michael Minshall,Mykala Montanez,Edgar Soto,Devin Whitaker,Amber Wren</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$CreatedById$Owner</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>,Michelle Welsh,Brandon Cintron,Latrice Franklin,Gloria Bechard,Michael Diaz,Elainemarie Rivera,Carley Fockler,Dillan Campos,Edison Salinas,Ashley Rubacha,Rebecca Wilson,Fernando Colon-Pena,Hunter Hilton,William Clay,James Contreras,Audriana Cortes,Crystal Cruz,Shelby Davis,Taya Dipersia,Joirnique George,Carlos Harris,Ivy Larabel,Naomi Lubrin,Jarrett McGraw,Kenneth Farrington,Nichole Oquin,Nichelle Pagan,Tracy Parent,Joseph Reno,Mary Girardi,Joshua Vizcaino,Ronald Wentworth,Justin Doane</value>
+        </criteriaItems>
+        <criteriaItems>
+            <column>User.Case$CreatedById$Status</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Open,Escalated,Researching</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>User$Manager</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>User.Case$CreatedById$Status</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>AAG Floorwide Survey Return 8/5/16</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Users_and_Cases_1__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>User.Case$CreatedById$CreatedDate</dateColumn>
+        <interval>INTERVAL_THISMONTH</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,2947 @@
+<apex:component controller="AssetHierarchicalRelatedListCtr">
+<apex:attribute name="accountid" required="true" type="String" description="Account Id"/>
+<apex:attribute name="accountName" required="false" type="String" description="Account Name for Console Tab"/>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>Asset View</title>
+    
+    <apex:stylesheet value="{!URLFOR($Resource.treeviewGrid2983, 'css/easyui.css')}"/>    
+    <apex:includeScript value="{!URLFOR($Resource.treeviewGrid2983, 'jquery.min.js')}" />
+    <apex:includeScript value="{!URLFOR($Resource.treeviewGrid2983, 'jquery.easyui.min.js')}" /> 
+    <apex:includeScript value="/support/console/28.0/integration.js"/>
+    
+    
+    <script src="/soap/ajax/29.0/connection.js"></script>
+    <script type="text/javascript">
+        // var assetjQuery$ = jQuery.noConflict();
+        var assetRowId = null;
+        var tabName = 'TabName';
+        var url = null;
+        
+        var openAssetSubtab = function openAssetSubtab(result) {
+            //Now that we have the primary tab ID, we can open a new subtab in it
+            var primaryTabId = result.id;
+            sforce.console.openSubtab(primaryTabId, url, true, tabName, null);
+        };
+
+        var openAssetDetailPage = function( assetId, ProdName, integrationId) {
+            url = '/apex/AssetDetailOverride?id=' + assetId + '&integid=' + integrationId + '&sfdc.override=1';
+            tabName = ProdName;
+            assetRowId = assetId;
+            if (sforce.console.isInConsole()) {
+                sforce.console.getEnclosingPrimaryTabId(openAssetSubtab);
+            } else {
+                window.open(url, '_top');
+            }
+        };
+        
+        /**
+        * assetjQuery$( document ).ready( function() {
+        *     gotoPageOne();
+        *     // resizeView();
+        *     // load data on startup
+        *     // filterAssetData();
+        * });
+        **/
+    </script>
+    
+    <style type="text/css" >
+    
+        /*html *
+        {
+           font-family: Arial, Helvettica, San-Serif !important;
+           font-size: 12px !important;
+        }*/
+        ::-webkit-input-placeholder {
+                   font-style: italic;  
+                }
+                
+                :-moz-placeholder { /* Firefox 18- */
+                   font-style: italic;  
+                }
+                
+                ::-moz-placeholder {  /* Firefox 19+ */
+                  font-style: italic;  
+                }
+                
+                :-ms-input-placeholder {  
+                   font-style: italic;  
+                }
+        #filterAssetId::-webkit-input-placeholder { /* WebKit browsers */
+            font-style: italic;
+        }
+        #filterAssetId:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+            font-style: italic;
+        }
+        #filterAssetId::-moz-placeholder { /* Mozilla Firefox 19+ */
+            font-style: italic;
+        }
+        #filterAssetId:-ms-input-placeholder { /* Internet Explorer 10+ */
+            font-style: italic;
+        }
+        .popup-class {        
+            display: none; 
+            position: absolute; 
+            background-color: white; 
+            border: 2px solid grey; 
+            border-radius: 10px;
+            border-top: 5px;
+            padding-bottom: 10px;
+        }
+        .popup-top-border {
+            border-top: 3px solid;
+            border-left: 0px;
+            border-right: 0px;
+            border-bottom: 0px;
+            border-color: #236FBD;
+            border-radius: 10px;
+            width: 98%;
+            margin-left: 4px;
+        }
+        .arrow-left {
+            width: 0; 
+            height: 0;
+            display: none; 
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent; 
+            border-right:20px solid grey; 
+            position: absolute;
+        }
+        .arrow-left-inner {
+            width: 0; 
+            height: 0; 
+            display: none; 
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;             
+            border-right:20px solid white; 
+            position: absolute;
+        }
+        .img-wrap {
+            position: relative;
+            display: inline-block;
+         
+            font-size: 0;
+        }
+        .img-wrap .close {
+            position: absolute;
+            top: -28px;
+            right: -90px;
+            z-index: 100;
+            background-color: #FFF;
+            padding: 5px 2px 2px;
+            color: #720B00;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            font-size: 22px;
+            line-height: 10px;
+            border-radius: 50%;
+        }
+        .img-wrap .close2 {
+            position: absolute;
+            top: -2px;
+            right: -0px;
+            z-index: 100;
+            background-color: #FFF;
+            padding: 5px 2px 2px;
+            color: #720B00;
+            font-weight: bold;
+            cursor: pointer;
+            text-align: center;
+            font-size: 22px;
+            line-height: 10px;
+            border-radius: 50%;
+        }
+        .arrow-up {
+            width: 0; 
+            height: 0;
+            display: none; 
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent; 
+            border-bottom:20px solid grey; 
+            position: absolute;
+        }
+        .arrow-up-inner {
+            width: 0; 
+            height: 0; 
+            display: none; 
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;             
+            border-bottom:20px solid white; 
+            position: absolute;
+        }
+        
+        .arrow-down {
+            width: 0; 
+            height: 0;
+            display: none; 
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent; 
+            border-top:20px solid grey; 
+            position: absolute;
+        }
+        .arrow-down-inner {
+            width: 0; 
+            height: 0; 
+            display: none; 
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;             
+            border-top:20px solid white; 
+            position: absolute;
+        }
+        /*.datagrid-sort-icon
+        {
+            width: 11px;
+            height: 11px;
+            background: transparent url(/img/alohaSkin/sortArrows_sprite.png) !important;
+        }
+        .datagrid-sort-desc { background-position: 0px -12px; !important}
+        .datagrid-sort-asc { background-position: 0px 0px; !important}*/
+        .datagrid-cell {
+            white-space: normal;
+            padding: 5px;
+        }
+        a {
+            text-decoration: none !important;
+        }
+        a:hover {
+            text-decoration: underline !important;
+        }
+        div.popupLabel {
+            padding-left: 20px;
+            display: inline-block;
+            width: 40%;
+        }
+        div.popupLabelBold {
+            padding-left: 20px;
+            display: inline-block;
+            font-weight: bold;
+            vertical-align: top;
+            width: 40%;
+        }
+        div.popupValueHalfRight {
+            padding-left: 5px;
+            display: inline-block;
+            text-align: right;
+            width: 40%;
+        }
+        
+        div.popupValueHalf {
+            padding-left: 5px;
+            display: inline-block;
+            width: 40%;
+        }
+        
+        div.popupValueFullRight {
+            padding-left: 5px;
+            display: inline-block;
+            text-align: right;
+            width: 80%;
+        }
+        
+        div.popupValueFull {
+            padding-left: 20px;
+            display: inline-block;
+            width: 80%;
+        }
+        
+        .popupHeader {
+            padding-left: 20px;
+            padding-bottom: 5px;
+            font-weight: bold;
+            display: block;
+        }
+        .popupHeader2 {
+            padding-left: 10px;
+            padding-top: 10px;
+            font-weight: bold;
+            font-size: larger;
+            display: block;
+        }
+        .align-right { text-align: right !important; }
+        .highlight { font-weight: bold; }
+        .panel-tool, .panel-title, .pagination-info, .tree-icon { display: none; }
+        div.panel-header{ display: none; }
+        .datagrid-header-row input {display: none;}
+        
+        .parentRow { background-color: white; } //RGB(197,225,234); }
+        .childRow:hover, .parentRow:hover, .normalRow:hover { background-color: RGB(232, 246, 254); }
+        .childRow { background-color: RGB(239, 240, 245); }
+        .normalRow { background-color: white; }
+        .tree-collapsed {background: url({!URLFOR($Resource.AssetSearchImages)}) no-repeat -79px 0px; }
+        .tree-expanded {background: url({!URLFOR($Resource.AssetSearchImages)}) no-repeat -101px 0px; }
+        .panel-header, .panel-body { border-color: rgb(224, 227, 229) !important; }
+        .cpc-folder {
+            background: url({!URLFOR($Resource.AssetSearchImages)}) no-repeat 0px -35px; 
+            display: inline-block;
+            height: 16px;
+            width: 20px;
+            margin-left: 5px;
+            margin-top: -2px;
+            margin-bottom: -2px;
+        }
+        .loading-window {
+            background-color: rgba(0, 0, 0, 0.1);
+            position: absolute;
+            text-align: center;
+            vertical-align: middle;
+            display: none;
+            border: 0px solid grey; 
+            border-radius: 10px;
+            padding-bottom: 10px;
+            z-index: 999;
+        }
+        .loading-icon {
+            height: 100%;
+            width: 100%;
+            background:url('{!URLFOR($Resource.treeviewGrid2983, 'css/images/loading.gif')}') no-repeat center center;
+        }
+        .input-wrapper {
+            padding: 3px 10px 3px 10px;
+            text-align: left; 
+            display: inline-block; 
+            background-color: RGB(206, 238, 247); 
+            width: 99%; border: solid; 
+            border-width: 1px; 
+            border-color: #E0E0E0
+        }
+        .datagrid-row-selected{ background-color: RGB(221, 240, 220); }
+        .datagrid-row-over{
+            background: #E3F3FF;
+        }
+        .tree-indent, .tree-title {display: none;}
+        tr.datagrid-row td {vertical-align: middle;}
+        div.datagrid-pager td {vertical-align: middle;}
+        
+        .asset-link { color: blue; }
+        .cancel-popup, .no-migrate-popup{ 
+            width: 400px;
+            height: 250px;
+            background-color: white;
+            border: solid black;
+            border-width: 1px;
+            border-radius: 10px;
+            z-index: 999;
+            position: absolute;
+            margin: auto;
+            display: none;
+        }
+        .cancel-green-wrapper {
+            display: block;
+            width: 80%;
+            height: 80%; 
+            position: relative;
+            text-align: center;
+            margin-left:auto;
+            margin-right:auto;
+        }
+            
+        .no-migrate-red-wrapper {
+            display: block;
+            width: 80%;
+            height: 40%; 
+            position: relative;
+            text-align: center;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        .cancel-green-text {
+            color: green;
+            font-weight: bold;
+            font-size: 18px !important;
+            display: block;
+            clear: right;
+            width: 100%;
+            text-align: center;
+            vertical-align: text-top;
+            position: absolute;
+            top: 0px;
+            padding-top: 55px;
+        }
+        .cancel-end-wrapper, .no-migrate-end-wrapper {
+            width: 80%;
+            height: 40%;
+            position: relative;
+            margin-left:auto;
+            margin-right:auto;
+        }
+        .cancel-end-text {
+            display: block;
+            text-align: center;
+            vertical-align: middle;
+            font-weight: bold;
+        }
+        .cancel-button-wrapper, .no-migrate-button-wrapper {
+            width: 100%;            
+            height: 20%;
+            position: relative;
+            vertical-align: middle;
+            text-align: center;
+        }
+        .cancel-button-close, .no-migrate-button-close { 
+            width: 120px;
+        }
+
+        .no-migrate-red-text {
+            color: red;
+            font-weight: bold;
+            font-size: 18px !important;
+            display: block;
+            clear: right;
+            width: 100%;
+            text-align: center;
+            vertical-align: text-bottom;
+            position: absolute;
+            bottom: 0px;
+        }
+        .mask{
+          z-index: 500;
+          position: fixed;
+          display: none; 
+         background: transparent;
+         height: 100%;
+         width: 100%;
+         top: 0px;
+         left: 0px;
+        }
+       .no-migrate-end-text {
+           display: block;
+           text-align: center;
+           vertical-align: middle;
+           font-style: italic;
+       }
+    </style>
+</head>
+
+<body>
+
+<apex:pageMessages id="errorsMsg" />
+<apex:form >
+    <div style="text-align: center">
+        <input type="button" class="btnDisabled" id="suspend_button" onclick="MACDButtonPush(this.value);" value="Suspend" disabled="true" />&nbsp;&nbsp;&nbsp;
+        <input type="button" class="btnDisabled" id="migrate_button" onclick="MACDButtonPush(this.value);" value="Migrate" disabled="true" />&nbsp;&nbsp;&nbsp;
+        <input type="button" class="btnDisabled" id="modify_button" onclick="MACDButtonPush(this.value);" value="Modify" disabled="true" />&nbsp;&nbsp;&nbsp;
+        <input type="button" class="btnDisabled" id="cancel_button" onclick="CancelAutorenewButtonPush(this.value);" value="Cancel Autorenew" disabled="true"/>&nbsp;&nbsp;&nbsp;
+        <input type="button" class="btnDisabled" id="version_protection_button" onclick="VersionProtectionButtonPush(this.value);" value="Version Protection" disabled="true"/>&nbsp;&nbsp;&nbsp;
+        |&nbsp;&nbsp;&nbsp; <input type="button" class="btn" id="lookUpLicenseButton" onclick="loadLookupLicense(this.value);" value="LookUp License"/>
+    </div>
+    <br />
+    
+    <div class="mask" id="windowMask"></div>
+       
+    <div id="license_find" class="popup-class" style="z-index:1000;width:450px;display:none;">
+            <div class="popup-top-border"></div>
+            <div style="display: inline-block; height:100%;width: 100%;float:left">
+             
+            </div>
+    </div>
+    <div style="margin: 10px; width: 100%; text-align: right; clear: right; display: inline-block;">
+        <div style="display: inline-block; padding: 3px 30px 3px 0px; vertical-align: top;"><b>Display assets with the following statuses</b></div>
+        <div style="display: inline-block; padding: 3px 20px 3px 0px;"><input type="checkbox" value="Active" onchange="filterAssetData();" id="active_status" checked="true" /><apex:outputLabel value="Active" /></div>
+        <div style="display: inline-block; padding: 3px 20px 3px 0px;"><input type="checkbox" value="Suspended" onchange="filterAssetData();" id="Suspended_status" checked="true" /><apex:outputLabel value="Suspended" /></div>
+        <div style="display: inline-block; padding: 3px 20px 3px 0px;"><input type="checkbox" value="Inactive" onchange="filterAssetData();" id="Inactive_status" /><apex:outputLabel value="Inactive" /></div>
+        <div style="display: inline-block; padding: 3px 20px 3px 0px;"><input type="checkbox" value="Cancelled" onchange="filterAssetData();" id="Cancelled_status" /><apex:outputLabel value="Cancelled" /></div>
+    </div>
+    <div class="input-wrapper" id="input-wrapper">
+        <apex:outputLabel value="Search:" style="font-weight: bold;"/>&nbsp;&nbsp;<input autocomplete="off" id="filterAssetId" maxlength="150" name="filterAssetId" size="150" title="Filter asset" type="text" onkeyup="filterKeyUp();" placeholder=" Enter product name, product number, license, status ..."/>
+    </div>
+    <div style="float: left; clear both;width: 100%">    
+        <table id="assetTreeGrid" class="easyui-treegrid" title="Asset Hierarchy" width="100%" style="height:300px" sortname="Siebel_Registration_Date" sortorder="desc"
+                        data-options="
+                                rownumbers: false,
+                                animate: true,
+                                collapsible: false,
+                                fitColumns: true,
+                                idField: 'id',
+                                treeField: 'isCPC',
+                                loadFilter: pagerFilter,
+                                pagination: {!isPaginated},
+                                pageSize: 5,
+                                pageList: [5,10,20,50,100],
+                                singleSelect: true,
+                                rowStyler: styleBackground,
+                                onSelect: updateButtons,
+                                onExpand: resizeView,
+                                onCollapse: resizeView
+                        ">
+                <thead>
+                        <tr>
+                                <!--  Need to map the field name with header here -->
+                                <th data-options="width:8,resizable:false,checkbox:true" sortable="false">
+                                </th>
+                                <th data-options="field:'isCPC',width:8, resizable:false" sortable="false" >
+                                </th>    
+                                <th data-options="field:'Siebel_Status_Code',width:18,formatter:formatStatus,resizable:true" sortable="true" >
+                                    <a href="" onclick="sortData('Siebel_Status_Code__c');return false;" ><b>Status</b></a>
+                                </th>
+                                <th data-options="field:'Siebel_Product_Name',formatter:formatAssetLink,width:70,resizable:true" sortable="true" >
+                                    <a href="" onclick="sortData('Siebel_Product_Name__c');return false;" ><b>Product Name</b></a>
+                                </th>
+                                <th data-options="field:'Siebel_Configuration',width:50,resizable:true" sortable="false" >
+                                    <!--<a href="" onclick="sortData('Siebel_Configuration__c');return false;" >--> <b>Configuration</b><!--</a>-->
+                                </th>
+                                
+                                <th data-options="field:'Siebel_License_Number',formatter:formatLicenseLink,width:32,resizable:true" sortable="true" >
+                                    <a href="" onclick="sortData('Siebel_License_Number__c');return false;" ><b>License</b></a>
+                                </th>
+                                 <th data-options="field:'Siebel_Product_Part_Number',width:25,resizable:true," sortable="true" >
+                                    <a href="" onclick="sortData('Siebel_Entitlement_Offering_Code__c');return false;" ><b>Product Code</b></a>
+                                </th>
+                                <!--  <th data-options="field:'Siebel_Last_Updated_Date',width:25,resizable:true" sortable="true" >
+                                    <a href="" onclick="sortData('Siebel_Last_Updated_Date__c');return false;" ><b>Last Updated</b></a>
+                                </th>-->
+                                 <th data-options="field:'Siebel_Registration_Date',width:25,resizable:true" sortable="true" >
+                                    <a href="" onclick="sortData('Siebel_Registration_Date__c');return false;" ><b>Registration Date</b></a>
+                                </th>
+                                <th data-options="field:'Siebel_Service_Start_Date',width:25,resizable:true" sortable="true" >
+                                    <a href="" onclick="sortData('Siebel_Service_Start_Date__c');return false;" ><b>Start</b></a>
+                                </th>
+                                <th data-options="field:'Siebel_Suspend_Date',width:25,resizable:true,formatter:formatSuspendDate" sortable="true" >
+                                    <a href="" onclick="sortData('Siebel_Suspended_Date__c');return false;" ><b>Suspend</b></a>
+                                </th>
+                                <th data-options="field:'Siebel_Next_Bill_Date',width:25,resizable:true" sortable="true" >
+                                    <a href="" onclick="sortData('Siebel_Next_Bill_Date__c');return false;" ><b>Next Bill</b></a>
+                                </th>
+                                <th data-options="field:'Siebel_Payment_Method',formatter:formatPaymentLink,width:25,resizable:true" sortable="true" >
+                                    <a href="" onclick="sortData('Siebel_Payment_Method_Formula__c');return false;" ><b>Payment Method</b></a>
+                                </th>
+                                <th data-options="field:'Post_Contract_Support',width:25,resizable:true" sortable="true" >
+                                    <b>Post Contract Support</b>
+                                </th>                                
+                        </tr>
+                </thead>
+        </table>
+    </div>
+        <script type="text/javascript">
+            assetjQuery$ = jQuery.noConflict();
+            // added these variables as changes for Cloudspokes:3040
+            var lastSortOrder = 'DESC';
+            var lastSortField = 'Siebel_Registration_Date__c';
+        
+           // Variable holding current account record id.
+           var accountId = '{!JSENCODE(selectedAccountId)}';
+           var assetWinTimeoutIn = new Object();
+           var assetWinTimeoutOut = new Object();
+           var paymentWinTimeoutIn = new Object();
+           var paymentWinTimeoutOut = new Object();
+           var licenseWinTimeoutIn = new Object();
+           var licenseWinTimeoutOut = new Object();
+           var suspendWinTimeoutIn = new Object();
+           var suspendWinTimeoutOut = new Object();
+           var filterTimeout;
+           var keyupDelay = 500;
+           var hoverDelay = 1000;
+           var headerOffset = -111;
+           var loadingOffset = -10;
+           if (sforce.console.isInConsole()) {
+               headerOffset = 0;
+               loadingOffset = 0;
+               sforce.console.setTabTitle('{!JSEncode(accountName)}')
+           }
+           
+        var aMindSubtabId = null;
+        var aMindPrimaryTabId = null;
+        var aMindSubtabUrl = null;
+        
+        var aMindShowPrimaryTabIdCallback = function( result ) {
+            aMindPrimaryTabId = result.id;
+            sforce.console.getFocusedSubtabId(aMindShowSubtabIdCallback);
+        }
+        
+        var aMindShowSubtabIdCallback = function( result ) {
+            aMindSubtabId = result.id;
+            sforce.console.openSubtab(aMindPrimaryTabId, aMindSubtabUrl, true, aMindSubtabId, null, aMindShowtabSuccessCallback );
+        }
+        
+        var aMindShowtabSuccessCallback = function( result ) {
+            aMindSubtabId     = null;
+            aMindPrimaryTabId = null;
+            aMindSubtabUrl    = null;
+        }
+
+    
+            // Code for onkeyup delay
+            
+            function filterKeyUp() {
+                clearTimeout(filterTimeout);
+                filterTimeout = setTimeout(function() {filterAssetData();}, keyupDelay);
+            }
+            
+            
+            // Code added for Cloudspokes:3040 Method for performing sort data    
+            function sortData(currentSortField) {
+                var sortOrder;
+                if(currentSortField != lastSortField) {
+                    sortOrder = 'ASC';
+                } else {
+                    if(lastSortOrder == 'ASC') {
+                        sortOrder = 'DESC';                    
+                    } else {
+                        sortOrder = 'ASC';
+                    }
+                }
+                loadSortedAssetData(sortOrder, currentSortField);
+            }
+            
+            // Code added for Cloudspokes:3040
+            // Method for making js remote call for sorting data based on sort parameter and sort order 
+            function loadSortedAssetData(sortOrder, sortField) {
+                var filterText = assetjQuery$("input[id*='filterAssetId']").val();
+                assetjQuery$('#assetTreeGrid').datagrid('loading');
+                // making js remoting call.
+                Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.AssetHierarchicalRelatedListCtr.sortAssetHierarchyData}', accountId, sortOrder, sortField, retrieveStatuses(), function(result, event) {
+                        if (event.status) {
+                            assetjQuery$('#assetTreeGrid').treegrid({  
+                                data: result
+                            });
+
+                            gotoPageOne();
+                            if (sortOrder == 'DESC') assetjQuery$('.datagrid-sort-icon').attr('title','Sort Descending');
+                            else if (sortOrder == 'ASC') assetjQuery$('.datagrid-sort-icon').attr('title','Sort Ascending');  
+                            updateSortInfo(sortOrder, sortField);
+                            setLinksAndHighlights(filterText);
+                            assetjQuery$('#assetTreeGrid').datagrid('loaded');
+                        } else if (event.type === 'exception') {    
+                             alert(event.message);
+                        } else {
+                           alert(event.message);
+                        }
+                    }, {escape:true});
+            }
+            
+            
+            
+            // Code added for Cloudspokes:3040  Updating the last sort details.
+            function updateSortInfo(sortOrder, sortField) {
+                lastSortOrder = sortOrder;
+                lastSortField = sortField;
+            }
+            
+            /*  
+                Code added for Cloudspokes:3040
+                Method to perform filter for asset using the entered filter text.
+                This method is called on keyup even to get the last search character enter by user.
+            */
+            function filterAssetData() {
+                var filterText = assetjQuery$("input[id*='filterAssetId']").val();
+                assetjQuery$('#assetTreeGrid').datagrid('loading');
+                // making js remoting call
+                Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.AssetHierarchicalRelatedListCtr.filterAssetHierarchyData}', accountId, lastSortOrder, lastSortField, filterText, retrieveStatuses(), function(result, event) {
+                    if (event.status) {
+                        assetjQuery$('#assetTreeGrid').treegrid({  
+                            data: result
+                        });
+                        gotoPageOne();
+                        setLinksAndHighlights(filterText); 
+                        if (lastSortOrder == 'DESC') assetjQuery$('.datagrid-sort-icon').attr('title','Sort Descending');
+                        else if (lastSortOrder == 'ASC') assetjQuery$('.datagrid-sort-icon').attr('title','Sort Ascending');
+                        assetjQuery$('#assetTreeGrid').datagrid('loaded');
+                    } else if (event.type === 'exception') {    
+                         alert(event.message);
+                    } else {
+                       alert(event.message);
+                    }
+                }, {escape:true});
+            }
+            
+                    
+            /*
+                Method load the tree data using the JS remoting method call. 
+            */
+            function loadAssetTreeGridData() {
+                var filterText = assetjQuery$("input[id*='filterAssetId']").val();
+                // making js remoting call
+                 Visualforce.remoting.Manager.invokeAction(
+                '{!$RemoteAction.AssetHierarchicalRelatedListCtr.sortAssetHierarchyData}', accountId, lastSortOrder, lastSortField, retrieveStatuses(), function(result, event) {
+                    if (event.status) {
+                        assetjQuery$('#assetTreeGrid').treegrid({  
+                            data: result
+                        });
+                        setLinksAndHighlights(filterText);
+                    } else if (event.type === 'exception') {    
+                         alert(event.message);
+                    } else {
+                       alert(event.message);
+                    }
+                }, {escape:true});
+            }
+            
+            // Making initial data load call for tree view creating.
+            loadAssetTreeGridData();
+            
+                    
+            // Method for formate checkbox for the boolean value returned as remote action call.
+            function formatCheckBox(value){
+                if (value){
+                    var s = '<input type="checkbox" checked="true" disabled="true" />';
+                    return s;
+                } else {
+                    return '<input type="checkbox" disabled="true" />';
+                }
+            }
+            
+            function formatAssetLink(value, row) {
+                if (value) {
+                    if (row.isParent == true && (row.isChildOdd == false && row.isChildEven == false)) { 
+                        //return '<u><a href="#' + row.id + '" data-assetId="' + row.id + '" target="_top" class="asset_link" >' + value + '</a></u><div class="cpc-folder"></div>';
+                        return '<u><a href="#" data-assetId="' + row.id + '" onClick="openAssetDetailPage(\'' + row.id + '\',\'' + row.Siebel_Product_Name + '\',\'' + row.Siebel_Integration_Id + '\');" class="asset_link" >' + value + '</a></u><div class="cpc-folder"></div>';
+                    } else if (row.isChildOdd == true || row.isChildEven == true) {
+                        //return '<div style="text-align: right !important;"><u><a href="/' + row.id + '" data-assetId="' + row.id + '" target="_top" class="asset_link" >' + value + '</a></u></div>';
+                         return '<div style="text-align: right !important;"><u><a href="#" data-assetId="' + row.id + '" onClick="openAssetDetailPage(\'' + row.id + '\',\'' + row.Siebel_Product_Name + '\',\'' + row.Siebel_Integration_Id + '\');" class="asset_link" >' + value + '</a></u></div>';
+                    } else { 
+                        //return '<u><a href="/' + row.id + '" data-assetId="' + row.id + '" target="_parent" class="asset_link" >' + value + '</a></u>';
+                        return '<u><a href="#" data-assetId="' + row.id + '" onClick="openAssetDetailPage(\'' + row.id + '\',\'' + row.Siebel_Product_Name + '\',\'' + row.Siebel_Integration_Id + '\');" class="asset_link" >' + value + '</a></u>';
+                    }
+                }
+            }
+    
+            function formatPaymentLink(value, row) {
+                if (value) {
+                        return '<u><a href="#" data-assetId="' + row.id + '" onclick="return false;" class="payment_link" >' + value + '</a></u>';
+                    }
+                }
+                
+             function formatLicenseLink(value, row) {
+              if (value) {
+                        return '<u data-assetId="' + row.id + '" class="license_link" >' + value + '</u>';
+                    }
+                }
+    
+            function formatStatus(value, row) {
+                if (value) {
+                    if (value=="Active") return '<div style="color: green">' + value + '</div>';
+                    else return '<div style="color: red">' + value + '</div>';
+                }
+            }
+            
+            function formatSuspendDate(value, row) {
+                if (value) {
+                      if (value != '--') 
+                    <!-- return '<div style="color: red">' + value + '</div>'; -->
+                    return '<div style="color: red"><u><a href="#" data-assetId="' + row.id + '" onclick="return false;" class="suspend_link" >' + value + '</a></u></div>';
+                    else return '--';
+                }
+            }
+            
+            function styleBackground(row, index) {
+                if (row.isChildOdd) return { class:"childRow" };
+                else if (row.isParent) return { class:"parentRow" };
+                else return { class:"normalRow" };
+            }
+    
+            function pagerFilter(data){
+            if (assetjQuery$.isArray(data)){    // is array  
+                data = {  
+                    total: data.length,  
+                    rows: data  
+                }  
+            }
+            var dg = assetjQuery$(this);  
+            var state = dg.data('treegrid');
+            var opts = dg.treegrid('options');  
+            var pager = dg.treegrid('getPager');  
+            pager.pagination({  
+                onSelectPage:function(pageNum, pageSize){  
+                    opts.pageNumber = pageNum;  
+                    opts.pageSize = pageSize;  
+                    pager.pagination('refresh',{  
+                        pageNumber:pageNum,  
+                        pageSize:pageSize  
+                    });  
+                    dg.treegrid('loadData',data); 
+                    var filterText = assetjQuery$("input[id*='filterAssetId']").val();
+                    setLinksAndHighlights(filterText); 
+                },
+                onBeforeRefresh: filterAssetData  
+            });  
+            if (!data.topRows){  
+                data.topRows = [];
+                data.childRows = [];
+                for(var i=0; i<data.rows.length; i++){
+                        var row = data.rows[i];
+                        row._parentId ? data.childRows.push(row) : data.topRows.push(row);
+                }
+                                data.total = (data.topRows.length);
+            }  
+            var start = (opts.pageNumber-1)*parseInt(opts.pageSize);  
+            var end = start + parseInt(opts.pageSize);  
+                        data.rows = assetjQuery$.extend(true,[],data.topRows.slice(start, end).concat(data.childRows));
+                        return data;
+                }
+    
+            var typewatch = function(){
+                var timer = 0;
+                return function(callback, ms){
+                    clearTimeout (timer);
+                    timer = setTimeout(callback, ms);
+                }  
+            }();
+            var parseDateString = function(s) {
+                var d = new Date(s);
+                return (d.getDate() + 1) + '-' + parseMonthName(d.getMonth() + 1) + '-' +  d.getFullYear();
+            }
+            var parseMonthName = function(s) {
+                switch(s) {
+                    case 1 : return 'Jan'; break;
+                    case 2 : return 'Feb'; break;
+                    case 3 : return 'Mar'; break;
+                    case 4 : return 'Apr'; break;
+                    case 5 : return 'May'; break;
+                    case 6 : return 'Jun'; break;
+                    case 7 : return 'Jul'; break;
+                    case 8 : return 'Aug'; break;
+                    case 9 : return 'Sep'; break;
+                    case 10 : return 'Oct'; break;
+                    case 11 : return 'Nov'; break;
+                    case 12 : return 'Dec'; break;
+                }
+            }
+            
+            var parseConfig = function(s) {
+                var splits = s.split(';');
+                var html_string = '<ul>';
+                
+                for (var i = 0; i<splits.length-1; i++)
+                {
+                    html_string += '<li>' + splits[i] + '</li>';
+                }
+                html_string += '</ul>';
+                console.log(html_string);
+                return html_string;
+            }
+            function retrieveStatuses() {
+                var theseStatuses = new Array();
+                var i = 0;
+                assetjQuery$("input[id*='status']").each(function(index) {
+                    if(assetjQuery$(this).prop('checked')){
+                            theseStatuses[i] = assetjQuery$(this).val();
+                            i++;
+                        }
+                    });
+                return theseStatuses;
+                
+                }
+        
+            function loadSelectedAsset(assetId, e) {
+                openAssetWindow(e, assetId);
+                // making js remoting call.
+                Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.AssetHierarchicalRelatedListCtr.findSelectedAsset}', assetId, function(result, event) {
+                        if (event.status) {
+                            clearAssetWindow();
+                            document.getElementById('selectedAssetName').innerHTML = 'Asset ' + result.Name;
+                            if (result.Id) { 
+                                document.getElementById('selectedAssetLink').innerHTML = '>>  <a href="/apex/AssetDetailOverride?id='+ result.Id +'&integid='+ result.Siebel_Integration_ID__c +'&sfdc.override=1" target="_top" class="asset-link">View Asset Details</a>';
+                                document.getElementById('selectedAssetButtons').innerHTML = 
+                                '<input type="button" class="btnDisabled" id="suspend_button_hover"  onclick="MACDButtonPushHover(this.value, \'' + result.Id + '\', \'' + result.Siebel_Status_Code__c + '\', \'' + result.Product2.Siebel_Part_Number__c + '\');" value="Suspend" disabled="true" />&nbsp;&nbsp;&nbsp;' +
+                                '<input type="button" class="btnDisabled" id="migrate_button_hover" onclick="MACDButtonPushHover(this.value, \'' + result.Id + '\', \'' + result.Siebel_Status_Code__c + '\', \'' + result.Product2.Siebel_Part_Number__c + '\');" value="Migrate" disabled="true" />&nbsp;&nbsp;&nbsp;' +
+                                '<input type="button" class="btnDisabled" id="modify_button_hover" onclick="MACDButtonPushHover(this.value, \'' + result.Id + '\', \'' + result.Siebel_Status_Code__c + '\', \'' + result.Product2.Siebel_Part_Number__c + '\');" value="Modify" disabled="true" />&nbsp;&nbsp;&nbsp;' +
+                                '<input type="button" class="btnDisabled" id="cancel_button_hover" onclick="CancelAutorenewButtonPushHover(this.value, \'' + result.Siebel_Row_ID__c + '\', \'' + result.Siebel_Status_Code__c + '\');" value="Cancel Autorenew" disabled="true"/>&nbsp;&nbsp;&nbsp;' +
+                                '<input type="button" class="btnDisabled" id="version_protection_button_hover" onclick="VersionProtectionButtonPushHover(this.value, \'' + result.Siebel_Row_ID__c + '\', \'' + result.Siebel_Status_Code__c + '\');" value="Version Protection" disabled="true"/>'
+                                
+                            }
+                            if (result.Product2.Name) document.getElementById('selectedAssetProduct').innerHTML = result.Product2.Name;
+                            if (result.Siebel_Configuration__c) document.getElementById('selectedAssetConfiguration').innerHTML = parseConfig(result.Siebel_Configuration__c);
+                            if (result.Siebel_Service_Start_Date_Formula__c) document.getElementById('selectedAssetServiceStartDate').innerHTML = result.Siebel_Service_Start_Date_Formula__c;
+                            //VV: 06/02/2015 - BTBS-3104 - added below line to display Service End Date.
+                            if (result.Siebel_Service_End_Date_Formula__c) document.getElementById('selectedAssetServiceEndDate').innerHTML = result.Siebel_Service_End_Date_Formula__c;                            
+                            if (result.Siebel_Suspended_Date_Formula__c) document.getElementById('selectedAssetSuspendedDate').innerHTML = result.Siebel_Suspended_Date_Formula__c;
+                            if (result.Siebel_Status_Reason__c) document.getElementById('selectedAssetSuspendReason').innerHTML = result.Siebel_Status_Reason__c;
+                            if (result.Siebel_Purchase_Date_Formula__c) document.getElementById('selectedAssetPurchaseDate').innerHTML = result.Siebel_Purchase_Date_Formula__c;
+                            if (result.Siebel_Activation_Date_Formula__c) document.getElementById('selectedAssetActivationDate').innerHTML = result.Siebel_Activation_Date_Formula__c;
+                            
+                            if (result.Siebel_Promotion_Name__c) document.getElementById('selectedAssetPromotion').innerHTML = result.Siebel_Promotion_Name__c;
+                            else document.getElementById('selectedAssetPromotion').innerHTML = 'None';
+                            document.getElementById('selectedAssetPromotionRestrictions').innerHTML = 'No';
+                            if (result.Siebel_Billing_Profile_Name__c) document.getElementById('selectedAssetBillingProfile').innerHTML = result.Siebel_Billing_Profile_Name__c;
+                            if (result.Siebel_Billing_Day_Of_Month__c) document.getElementById('selectedAssetBDOM').innerHTML = result.Siebel_Billing_Day_Of_Month__c;
+                            if (result.Siebel_Owner_Account_CACI__c) {
+                                Visualforce.remoting.Manager.invokeAction(
+                                    '{!$RemoteAction.AssetHierarchicalRelatedListCtr.findLicenseOwner}', result.Siebel_Owner_Account_CACI__c , function(result2, event2) {
+                                        if (event2.status) {
+                                            if (result2 != null) { 
+                                                document.getElementById('selectedAssetLicenseOwner').innerHTML = result2.FirstName + ' ' + result2.LastName;
+                                                if (result2.Auth_Id__c) { 
+                                                    document.getElementById('selectedAssetAuthId').innerHTML = result2.Auth_Id__c;
+                                                } else {
+                                                    document.getElementById('selectedAssetAuthId').innerHTML = 'Not Available';
+                                                }
+                                            }
+                                            updateButtonsHover(result.Siebel_Status_Code__c, result.Product2.Siebel_Price_Type__c, result.Siebel_Parent_ID__c, result.Siebel_Service_End_Date__c);
+                                            closeLoadingWindow();
+                                        } else if (event2.type === 'exception') {    
+                                            alert(event2.message);
+                                        } else {
+                                           alert(event2.message);
+                                        }
+                                    }, {escape:true});
+                                }
+                            else {
+                                updateButtonsHover(result.Siebel_Status_Code__c, result.Product2.Siebel_Price_Type__c, result.Siebel_Parent_ID__c, result.Siebel_Service_End_Date__c);
+                                closeLoadingWindow();
+                            }
+                            openAssetWindow(e, assetId);
+                            
+                               
+                        } else if (event.type === 'exception') {    
+                             alert(event.message);
+                        } else {
+                           alert(event.message);
+                        }
+                    }, {escape:true});
+            }
+            <!--Added By Mukul Goel, License Management Sprint 28, License Window >>Code Start<< -->             
+            function loadSelectedLicense(assetId, e) {
+            closelicenseWindow();
+            openlicenseWindow(e, assetId);
+                assetjQuery$("#windowMask").fadeIn('slow');
+             clearLicenseWindow();
+            // making js remoting call.
+            Visualforce.remoting.Manager.invokeAction(
+                '{!$RemoteAction.AssetHierarchicalRelatedListCtr.findSelectedLicense}', assetId, '',accountId, function(result, event) {
+                    if (event.status) {
+                        clearLicenseWindow();
+                        assetjQuery$('.img-wrap .close').click(function() {
+                            closelicenseWindow();
+                        });
+                        if (result.licenseNumber) {
+                            document.getElementById('licenseNumber').innerHTML = result.licenseNumber.replace(/(\d{3})/g, '$1 ').replace(/(^\s+|\s+$)/, ' ');
+                        }
+                        if (sforce.console.isInConsole()) {
+                            
+                            if(result.isActiviable)
+                            {
+                                document.getElementById('manageLicense').innerHTML = '<u><a href="#" onClick="testOpenSubtab4(\'' + result.licenseNumber + '\',\'' + result.EntitlementNumber + '\',\''+result.currentAccountCan+'\')" style="font-size:11px">Manage License</a></u>';
+                            }
+                            else
+                            {
+                                document.getElementById('manageLicense').innerHTML = '<u><a href="#" onClick="testOpenSubtab4(\'' + result.licenseNumber + '\',\'\',\''+result.currentAccountCan+'\')" style="font-size:11px">Manage License</a></u>';
+                            }
+                        } else {
+        
+                            if (result.isActiviable && result.EntitlementNumber != null && result.EntitlementNumber.length != 0) {
+                                document.getElementById('manageLicense').innerHTML = '<u><a href="/apex/GenericLicenseSearchPage?licenseNumber='+result.licenseNumber+'&eoc='+ result.EntitlementNumber+'&contextCan='+result.currentAccountCan+'" target="_blank" onclick="closelicenseWindow();" class="asset-link" style="font-size:11px">Manage License</a></u>';
+                            } else {
+                                document.getElementById('manageLicense').innerHTML = '<u><a href="/apex/GenericLicenseSearchPage?licenseNumber=' + result.licenseNumber + '&contextCan='+result.currentAccountCan+'" target="_blank" onclick="closelicenseWindow();" class="asset-link" style="font-size:11px">Manage License</a></u>';
+        
+                            }       
+                        }       
+                        if (result.EntitlementName) document.getElementById('EOCName').innerHTML = result.EntitlementName;
+                        if (result.EntitlementNumber) document.getElementById('EOCCode').innerHTML = result.EntitlementNumber;
+                        if (result.purchaseUnit) document.getElementById('purchaseUnits').innerHTML = result.purchaseUnit;
+                    //    if (result.graceUnit) document.getElementById('graceUnits').innerHTML = result.graceUnit;
+                        if (result.remainingUnit) document.getElementById('remainUnits').innerHTML = result.remainingUnit;
+                        if (result.activatedUnit) document.getElementById('activateUnits').innerHTML = result.activatedUnit;
+                        if (result.activated) {
+                            document.getElementById('activated').innerHTML = 'Activated'
+                            assetjQuery$('#activated').css('font-style', 'italic');
+                            assetjQuery$('#activated').css('color', '#166F09');
+                        } else {
+                            document.getElementById('activated').innerHTML = 'Not Activated';
+                            assetjQuery$('#activated').css('font-style', 'italic');
+                            assetjQuery$('#activated').css('color', '#FF0000');
+                        }
+                        
+                        if(!result.isActiviable)
+                        {
+                                 assetjQuery$('#EntitlementMessageLic').css('display', 'block');
+                        }
+                        else
+                        {
+                                 assetjQuery$('#EntitlementMessageLic').css('display', 'none');
+                        }
+                        
+                         if (result.remainingUnit < 1) {
+                               
+                                 assetjQuery$('#remainUnits').css('color', '#FF0000');
+                            }
+                            else
+                            {
+                                
+                                 assetjQuery$('#remainUnits').css('color', '#166F09');
+                            }
+                            
+                        if (result.isActiviable && result.accessSetting.Activated) {                             
+                           
+                            if (result.remainingUnit < 1) {
+                                assetjQuery$('#remainingUnitWarningMessage').css('display', 'block');
+                               
+                            }
+                            else
+                            {
+                                 assetjQuery$('#remainingUnitWarningMessage').css('display', 'none');
+                                
+                            }
+                           
+                            if(result.SubscriptionType == "Non Subscription")
+                            {
+                                assetjQuery$('#irvView').css('display', 'block');                                                       
+                                assetjQuery$('#ActivateLicense').css('display', 'block');
+                                document.getElementById('ActivateButtonDiv').innerHTML =
+                                    '<input type="button" class="btn cancel-button-close" id="ActivateLicense"   onclick="ActivateLicenseBtn(this.value, \'' + assetId + '\',\''+result.remainingUnit+'\',\''+result.graceUnit+'\',\''+accountId+'\');" value="Activate Now"  />'
+                            }
+                            else if(result.SubscriptionType == "Subscription")
+                            {
+                                 if (sforce.console.isInConsole()) 
+                                 {
+                                    document.getElementById('ActivateButtonDiv').innerHTML =
+                                      '<input type="button" class="btn cancel-button-close" id="ActivateLicense"  onclick="testOpenSubtab3(\'' + result.licenseNumber + '\',\'' + result.custId + '\',\'' + result.EntitlementNumber + '\',this.value,\''+result.SubscriptionType+'\',\''+result.partNumber+'\');" value="Activate"  />';
+                                } 
+                                else 
+                                {
+                                    document.getElementById('ActivateButtonDiv').innerHTML =
+                                        '<input type="button" class="btn cancel-button-close" id="ActivateLicense"  onclick="redirectActivate(\''+result.licenseNumber+'\',\'' + result.currentAccountCan + '\',\''+result.EntitlementNumber+'\',this.value,\''+result.SubscriptionType+'\',\''+result.partNumber+'\');" value="Activate"  />'
+                                }
+                            }                           
+                        }
+                        closeLoadingWindow();
+                    } else if (event.type === 'exception') {
+                        assetjQuery$('#license_win').css("display", "none");
+                        
+                        assetjQuery$('.img-wrap .close2').click(function() {
+                            closelicenseWindow();
+                        });
+                        assetjQuery$("#license_fail").css({
+                            "left": function() {
+                                return assetjQuery$(e).offset().left - (assetjQuery$("#license_fail").width() * .666);
+                            },
+                            "top": function() {
+                                return assetjQuery$(e).offset().top + assetjQuery$(e).height() + 17 + headerOffset;
+                            },
+                            "display": "block"
+                        });
+                                       document.getElementById('errorMsg1').innerHTML = event.message;
+                        closeLoadingWindow();
+                    } else {
+                        alert(event.message);
+                    }
+                }, {
+                    escape: true
+                });
+            }
+            function loadlicense(licenseId, e, activationCode) {
+
+                assetjQuery$('#licenseFailure').css("display", "none");
+                assetjQuery$('#confirmLic').css("display", "none");
+        
+                 if (activationCode == null || activationCode == "undefined" || activationCode == '') {
+            
+                     assetjQuery$('#irvView1').css('display', 'none');
+                     assetjQuery$('#irvVal1').val('');
+                     assetjQuery$('#loadLicense').css("display", "block");               
+                     assetjQuery$('#licenseinfo').css("display", "none");
+                     assetjQuery$('#irvVal1').prop('disabled', false);
+                     assetjQuery$('#ActivateLicense1').css('display', 'none');
+                 }
+                 assetjQuery$("#rightLicense1").css("display", "none");
+                 assetjQuery$("#rightLicenserightresp2").css("display", "none");
+                 assetjQuery$("#rightLicenserightresp3").css("display", "none");
+                 assetjQuery$('#rightLicenseWrongresp2').css('display', 'none');
+                 assetjQuery$('#rightLicenseWrongresp3').css('display', 'none');    
+                 assetjQuery$("#windowMask").fadeIn('slow');
+             
+                 Visualforce.remoting.Manager.invokeAction(
+                     '{!$RemoteAction.AssetHierarchicalRelatedListCtr.findLicenseByNumber}', licenseId, accountId, function(result, event) {
+                         if (event.status) {
+                             clearlookupLicenseWindow();
+                             assetjQuery$('#loadLicense').css("display", "none");
+                             assetjQuery$('#licenseinfo').css("display", "block");
+                             assetjQuery$('#closingSign').click(function() {
+                                 closelookuplicenseWindow();
+                             });
+                             if (result.licenseNumber) {
+                                 document.getElementById('licenseNumber1').innerHTML = result.licenseNumber.replace(/(\d{3})/g, '$1 ').replace(/(^\s+|\s+$)/, ' ');
+                             }
+                             if (sforce.console.isInConsole()) {
+                                 document.getElementById('manageLicense1').innerHTML = '<u><a href="#" onClick="testOpenSubtab(\'' + result.licenseNumber + '\',\'\',\'' + result.currentAccountCan + '\')" style="font-size:11px">Manage License</a></u>';
+                             } else {
+                                 document.getElementById('manageLicense1').innerHTML = '<u><a href="/apex/GenericLicenseSearchPage?licenseNumber=' + result.licenseNumber + '&contextCan=' + result.currentAccountCan + '" target="_blank" onclick="closelookuplicenseWindow();" class="asset-link" style="font-size:11px">Manage License</a></u>';
+                             }
+                             if (result.accountId != null && result.accountId != '') {
+                                if(result.custId != result.currentAccountCan)
+                                {
+                                     if (sforce.console.isInConsole()) {
+                
+                                         document.getElementById('viewAccount').innerHTML = '<u><a href="#" onClick="testOpenSubtab1(\'' + result.accountId + '\')" style="font-size:12px">(View Account)</a></u>';
+                                     } else {
+                                         document.getElementById('viewAccount').innerHTML = '<u><a href="/' + result.accountId + '" target="_blank" class="asset-link" style="font-size:12px">(View Account)</a></u>';
+                
+                                     }
+                                 }
+                             }
+                             if (result.remainingUnit < 1) {
+                                 assetjQuery$('#remainUnits1').css('color', '#FF0000');
+                                  assetjQuery$('#remainingUnitWarningMessage1').css('display', 'none');
+                             } else {
+                                 assetjQuery$('#remainingUnitWarningMessage1').css('display', 'none');
+                                 assetjQuery$('#remainUnits1').css('color', '#166F09');
+                             }
+            
+                             if (result.accessSetting.Activated) {
+                                 if (result.scenario == 'RegisterActivate' && result.accessSetting.Register) {
+                                     if (result.EocgrtOne == false) {
+                                         if (sforce.console.isInConsole()) {
+            
+                                             document.getElementById('RegisterTransferActivateButton').innerHTML =
+                                                 '<input type="button" class="btn cancel-button-close" id="RegisterActivateLicense" style="width:150px"  onclick="testOpenSubtab2(\'' + result.licenseNumber + '\',\'' + result.currentAccountCan + '\',\'' + result.EntitlementNumber + '\',this.value,\''+result.SubscriptionType+'\');" value="Register and Activate"  />';
+                                         } else {
+                                             document.getElementById('RegisterTransferActivateButton').innerHTML =
+                                                 '<input type="button" class="btn cancel-button-close" id="RegisterActivateLicense" style="width:150px"  onclick="redirect(\'' + result.licenseNumber + '\',\'' + result.currentAccountCan + '\',\'' + result.EntitlementNumber + '\',this.value,\''+result.SubscriptionType+'\');" value="Register and Activate"  />';
+                                         }
+                                     }
+                                 } else if (result.scenario == 'Activate') {
+                                     
+                                     if (result.EocgrtOne == false) {                                
+                                         if (result.remainingUnit < 1 && (activationCode == null || activationCode == "undefined" || activationCode == '')) {
+                                            assetjQuery$('#remainingUnitWarningMessage1').css('display', 'block');
+                                         } else {
+                                             assetjQuery$('#remainingUnitWarningMessage1').css('display', 'none');
+                                         }
+                                         if (result.SubscriptionType == 'Subscription') {
+                                             if (sforce.console.isInConsole()) {
+                                                 document.getElementById('RegisterTransferActivateButton').innerHTML =
+                                                     '<input type="button" class="btn cancel-button-close" id="ActivateLicense1"  onclick="testOpenSubtab3(\'' + result.licenseNumber + '\',\'' + result.custId + '\',\'' + result.EntitlementNumber + '\',this.value,\''+result.SubscriptionType+'\',\'\');" value="Activate"  />';
+                
+                                             } else {
+                                                 document.getElementById('RegisterTransferActivateButton').innerHTML =
+                                                     '<input type="button" class="btn cancel-button-close" id="ActivateLicense1"  onclick="redirectActivate(\'' + result.licenseNumber + '\',\'' + result.custId + '\',\'' + result.EntitlementNumber + '\',this.value,\''+result.SubscriptionType+'\',\'\');" value="Activate"  />';
+                                             }
+                                         }
+                                         else {
+                                             assetjQuery$('#irvView1').css('display', 'block');                                        
+                                             assetjQuery$('#ActivateLicense1').css('display', 'block');
+                                             document.getElementById('RegisterTransferActivateButton').innerHTML =
+                                                 '<input type="button" class="btn cancel-button-close" id="ActivateLicense1"  onclick="ActivateLicenseBtn1(this.value, \'' + result.licenseNumber + '\',\'' + result.EntitlementNumber + '\',\'' + result.remainingUnit + '\',\'' + result.graceUnit + '\',\'' + accountId + '\');" value="Activate Now" />';
+                
+                                             if (activationCode != '' && activationCode != null && activationCode != "undefined") {
+                                                 assetjQuery$("input[id*='ActivateLicense1']").prop('disabled', true).removeClass('btn').addClass('btnDisabled');
+                                                 assetjQuery$("#loadingLicense1").css("display", "none");
+                                                 assetjQuery$("#rightLicense1").css("display", "block");
+                                                 assetjQuery$("#rightLicenserightresp2").css("display", "block");
+                                                 assetjQuery$("#rightLicenserightresp3").css("display", "block");
+                                                 assetjQuery$('#irvVal1').prop('disabled', true);
+                                                 document.getElementById('ActivationCode1').innerHTML = activationCode;
+                
+                                             }
+                                         }
+                                     }
+                                 }
+                             }
+                             if (result.EocgrtOne) {
+                                 assetjQuery$('#EntitlementMessage1').css('display', 'block');
+                             } else {
+                                 assetjQuery$('#EntitlementMessage1').css('display', 'none');
+                             }
+                             if (result.EntitlementName) document.getElementById('EOCName1').innerHTML = result.EntitlementName;
+                             if (result.EntitlementNumber) document.getElementById('EOCCode1').innerHTML = result.EntitlementNumber;
+                             if (result.purchaseUnit) document.getElementById('purchaseUnits1').innerHTML = result.purchaseUnit;
+                      //       if (result.graceUnit) document.getElementById('graceUnits1').innerHTML = result.graceUnit;
+                             if (result.remainingUnit) document.getElementById('remainUnits1').innerHTML = result.remainingUnit;
+                             if (result.activatedUnit) document.getElementById('activateUnits1').innerHTML = result.activatedUnit;
+                             if (result.activated) {
+                                 document.getElementById('activated1').innerHTML = 'Activated';
+                                 assetjQuery$('#activated1').css('color', '#166F09');
+                                 assetjQuery$('#activated1').css('font-style', 'italic');                            
+                             } else {
+                                 document.getElementById('activated1').innerHTML = 'Not Activated';
+                                 assetjQuery$('#activated1').css('color', '#FF0000')
+                                 assetjQuery$('#activated1').css('font-style', 'italic');                            
+                             }
+                             if (result.custName != '') {
+                                 document.getElementById('registeredTo').innerHTML = result.custName;
+                             } else {
+                                 document.getElementById('registeredTo').innerHTML = "Not Registered";
+                             }
+                         } else if (event.type === 'exception') {
+            
+                             assetjQuery$('#loadLicense').css("display", "none");
+            
+                             if (event.message == 'License Not Found.') {
+                                 assetjQuery$('#confirmLic').css("display", "block");
+                             }
+                             document.getElementById('errorMsg').innerHTML = event.message;
+                             assetjQuery$('#closingSign').click(function() {
+                                 closelookuplicenseWindow();
+                             });
+                             assetjQuery$('#licenseFailure').css("display", "block");
+            
+                         } else {
+                             alert(event.message);
+                         }
+                     }, {
+                         escape: true
+                     });
+             }
+           
+            function redirect(licenseNumber,Can,entitlementNum,value,subscriptiontype)
+            {      
+                    if(subscriptiontype == 'Subscription')
+                    {
+                        subscriptiontype = true;
+                    }
+                    else if(subscriptiontype == 'Non Subscription')
+                    {
+                        subscriptiontype = false;
+                    }       
+                    if(value == 'Register and Activate')
+                    {
+                        url = '/apex/RegisterAndActivate?licenseNumber=' + licenseNumber + '&contextCan=' + Can + '&eoc='+entitlementNum+'&isSubscription='+subscriptiontype;
+                    }           
+                    window.open(url,"_blank");   
+            }
+            function redirectActivate(licenseNumber,Can,entitlementNum,value,subscriptiontype,itemNum)
+            {               
+                    if(subscriptiontype == 'Subscription')
+                    {
+                        subscriptiontype = true;
+                    }
+                    else if(subscriptiontype == 'Non Subscription')
+                    {
+                        subscriptiontype = false;
+                    }
+                    if(value == 'Activate')
+                    {
+                        url = '/apex/RegisterAndActivate?licenseNumber=' + licenseNumber + '&registeredCan=' + Can + '&eoc='+entitlementNum+'&isSubscription='+subscriptiontype+'&partNum='+itemNum;
+                    }           
+                    window.open(url,"_blank");   
+            }
+            
+            function loadLookupLicense(e)
+             {
+                closelookuplicenseWindow();
+                openLookUpWindow(e, '');  
+                assetjQuery$("#windowMask").fadeIn('slow');
+                  
+                assetjQuery$('#closingSign').click(function() {
+                      closelookuplicenseWindow();
+                 }); 
+                 assetjQuery$('#licenseNum').focus();
+                closeLoadingWindow();          
+            }
+            <!-- >>Code Stop<< -->
+            function testOpenSubtab2(licenseNumber,can,entitlementNumber) 
+            {                                 
+                sforce.console.getEnclosingPrimaryTabId(function(result){               
+                callbackOpentab2(result,licenseNumber,can,entitlementNumber);
+                });
+            }        
+            function callbackOpentab2(result,licenseNumber,can,entitlementNumber) {            
+            if(can == "undefined" || can == null || can == '')
+            {               
+                can="";   
+            }
+            if(entitlementNumber == "undefined" || entitlementNumber == null || entitlementNumber == '')
+            {               
+                entitlementNumber="";   
+            }
+            var primaryTabId = result.id;
+            sforce.console.openSubtab(primaryTabId , '/apex/RegisterAndActivate?licenseNumber=' + licenseNumber + '&contextCan='+can+'&eoc='+entitlementNumber, true, 
+                       'Activate License', null, null, 'ActivateLicense');
+            };
+            function testOpenSubtab3(licenseNumber,can,entitlementNumber,val,Subscriptiontype,itemNum,result) 
+            {                                 
+                sforce.console.getEnclosingPrimaryTabId(function(result){               
+                callbackOpentab3(result,licenseNumber,can,entitlementNumber,val,Subscriptiontype,itemNum);
+                });
+            }        
+            function callbackOpentab3(result,licenseNumber,can,entitlementNumber,val,Subscriptiontype,itemNum) {            
+            if(can == "undefined" || can == null || can == '')
+            {               
+                can="";   
+            }
+            if(entitlementNumber == "undefined" || entitlementNumber == null || entitlementNumber == '')
+            {               
+                entitlementNumber="";   
+            }
+            if(Subscriptiontype == 'Subscription')
+            {
+                Subscriptiontype = true;
+            }
+            else if(Subscriptiontype == 'Non Subscription')
+            {
+                Subscriptiontype = false;
+            }
+            var primaryTabId = result.id;
+            sforce.console.openSubtab(primaryTabId , '/apex/RegisterAndActivate?licenseNumber=' + licenseNumber + '&registeredCan='+can+'&eoc='+entitlementNumber+'&isSubscription='+Subscriptiontype+'&partNum='+itemNum, true, 
+                       'Activate License', null, null, 'ActivateLicense');
+            };
+            
+            function testOpenSubtab4(licenseNumber,EntitlementNumber,can) 
+            {    
+                closelicenseWindow();
+                sforce.console.getEnclosingPrimaryTabId(function(result){               
+                callbackOpentab(result,licenseNumber,EntitlementNumber,can);
+                });
+            }        
+            function callbackOpentab(result,licenseNumber,EntitlementNumber,can) 
+            {            
+                if(EntitlementNumber == "undefined" || EntitlementNumber == null || EntitlementNumber == '' )
+                {                               
+                    EntitlementNumber="";                  
+                }
+                if(can == "undefined" || can == null || can == '' )
+                {                               
+                    can="";                  
+                }
+                var primaryTabId = result.id;           
+                sforce.console.openSubtab(primaryTabId , '/apex/GenericLicenseSearchPage?licenseNumber=' + licenseNumber + '&eoc='+EntitlementNumber + '&contextCan='+can, true, 
+                           'Manage License', null, null, 'licenseManage');
+            };
+            
+            function testOpenSubtab(licenseNumber,EntitlementNumber,can) 
+            {   
+                closelookuplicenseWindow();
+                if(EntitlementNumber == "undefined" || EntitlementNumber == null || EntitlementNumber == '' )
+                {                               
+                    EntitlementNumber="";                  
+                }
+                if(can == "undefined" || can == null || can == '' )
+                {                               
+                    can="";                  
+                }       
+                var primarytabname = 'License '+ licenseNumber;             
+                sforce.console.openPrimaryTab(null,  '/apex/GenericLicenseSearchPage?licenseNumber=' + licenseNumber + '&eoc='+EntitlementNumber + '&contextCan='+can, true, 
+                primarytabname, openSuccess, primarytabname);        
+                testfocusPrimaryTabByName(primarytabname);
+               
+            }            
+            function testOpenSubtab1(accountId) 
+            {                                 
+                sforce.console.openPrimaryTab(null, '/'+accountId, true, 
+                '', openSuccess, '');
+            }
+             function testfocusPrimaryTabByName(primaryTabId) {   
+                sforce.console.focusPrimaryTabByName(primaryTabId, focusSuccess);
+              }
+                
+              var focusSuccess = function focusSuccess(result) {
+                 //Report whether going to the primary tab was successful
+                    if (result.success == true) {
+                       
+                    } else {
+                       
+                    }
+                };       
+            var openSuccess = function openSuccess(result) {
+                //Report whether opening the new tab was successful
+                if (result.success == true) {
+                   
+                } else {     
+                                       
+                }
+            } ; 
+            
+            function loadSelectedSuspend(assetId, e) {
+                openSuspendWindow(e, assetId);
+                // making js remoting call.
+                Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.AssetHierarchicalRelatedListCtr.findSelectedAsset}', assetId, function(result, event) {
+                        if (event.status) {
+                            clearSuspendWindow();
+                            if (result.Siebel_Status_Reason__c) document.getElementById('selectedSuspendReason').innerHTML = result.Siebel_Status_Reason__c;   
+                            if ((assetjQuery$(e).offset().top + assetjQuery$(e).height() + 17 + assetjQuery$("#suspend_win").height()) > assetjQuery$(window).height() - 40) { openSuspendWindow(e, assetId); }
+                            closeLoadingWindow();
+                        } else if (event.type === 'exception') {    
+                             alert(event.message);
+                        } else {
+                           alert(event.message);
+                        }
+                    }, {escape:true});
+            }
+            
+            function loadSelectedPayment(assetId, e) {
+                openPaymentWindow(e, assetId);
+                // making js remoting call.
+                Visualforce.remoting.Manager.invokeAction(
+                    '{!$RemoteAction.AssetHierarchicalRelatedListCtr.findSelectedAsset}', assetId, function(result, event) {
+                        if (event.status) {
+                            clearPaymentWindow();
+                             // BTBE-612
+                            if (result.Siebel_Billing_Profile_Name__c) document.getElementById('selectedPaymentBillingProfile').innerHTML = '<a href="#Foo" onclick="profileLinkClick(\'' + result.Siebel_Billing_Profile_Name__c + '\',\'' + result.Siebel_Billing_Account_CAN__c + '\'); return false;"><span style="text-decoration:underline;">' + result.Siebel_Billing_Profile_Name__c + '</span></a>';
+                            if (result.Siebel_Billing_Day_Of_Month__c) document.getElementById('selectedPaymentBDOM').innerHTML = result.Siebel_Billing_Day_Of_Month__c;
+                            if (result.Siebel_Credit_Card_Name__c) document.getElementById('selectedPaymentName').innerHTML = result.Siebel_Credit_Card_Name__c;
+                            if (result.Siebel_Credit_Card_Num_Masked__c) document.getElementById('selectedPaymentCCN').innerHTML = result.Siebel_Credit_Card_Num_Masked__c;
+                            if (result.Siebel_Credit_Card_Type__c) document.getElementById('selectedPaymentCardType').innerHTML = result.Siebel_Credit_Card_Type__c;
+                            if (result.Siebel_Credit_Card_Expiration_Year__c) document.getElementById('selectedPaymentExpirationYear').innerHTML = result.Siebel_Credit_Card_Expiration_Year__c;
+                            if (result.Siebel_EFT_Bank_Account_Name__c) document.getElementById('selectedBankName').innerHTML = result.Siebel_EFT_Bank_Account_Name__c;
+                            if (result.Siebel_EFT_Bank_Account_Num_Masked__c) document.getElementById('selectedBankAccountNumber').innerHTML = result.Siebel_EFT_Bank_Account_Num_Masked__c;
+                            if (result.Siebel_EFT_Bank_Account_Type__c) document.getElementById('selectedBankAccountType').innerHTML = result.Siebel_EFT_Bank_Account_Type__c;
+                            if (result.Siebel_Payment_Method__c == 'EFT') {
+                                assetjQuery$('#selectedPaymentEFTInfo').css('display', 'block');
+                                assetjQuery$('#selectedPaymentCreditCardInfo').css('display', 'none');
+                            }
+                            else if (result.Siebel_Payment_Method__c == 'Credit Card') {
+                                assetjQuery$('#selectedPaymentEFTInfo').css('display', 'none');
+                                assetjQuery$('#selectedPaymentCreditCardInfo').css('display', 'block');
+                            }
+                            else {
+                                assetjQuery$('#selectedPaymentEFTInfo').css('display', 'none');
+                                assetjQuery$('#selectedPaymentCreditCardInfo').css('display', 'none');
+                            }
+                            if ((assetjQuery$(e).offset().top + assetjQuery$(e).height() + 17 + assetjQuery$("#payment_win").height()) > assetjQuery$(window).height() - 40) { openPaymentWindow(e, assetId); }
+                            closeLoadingWindow();
+                        } else if (event.type === 'exception') {    
+                             alert(event.message);
+                        } else {
+                           alert(event.message);
+                        }
+                    }, {escape:true});
+            }
+            
+            
+    
+            function openAssetWindow(e, assetId) {
+                assetjQuery$("#asset_win").css({
+                    "left": function() {
+                        return assetjQuery$(e).offset().left + assetjQuery$(e).width() + 20;
+                    },
+                    "top": function() {           
+                        return assetjQuery$(e).offset().top - 189 + headerOffset;
+                    },
+                    "display": "block"
+                });
+                assetjQuery$("#asset_win").mouseenter(function() {
+                    clearTimeout(assetWinTimeoutOut[assetId]);
+                }).mouseleave(function() {
+                    clearTimeout(assetWinTimeoutOut[assetId]);
+                    assetWinTimeoutOut[assetId] = setTimeout(function() {closeAssetWindow();}, hoverDelay);
+                });
+                assetjQuery$("#asset_arrow_left").css({
+                    "left": function() {
+                        return assetjQuery$(e).offset().left + assetjQuery$(e).width();
+                    },
+                    "top": function() {
+                                return assetjQuery$(e).offset().top - 8 + headerOffset;
+                            },
+                    "display": "block"
+                });
+                assetjQuery$("#asset_arrow_left_inner").css({
+                    "left": function() {
+                        return assetjQuery$(e).offset().left + assetjQuery$(e).width() + 2;
+                    },
+                    "top": function() {
+                                return assetjQuery$(e).offset().top - 8 + headerOffset;
+                            },
+                    "display": "block"
+                });
+                openLoadingWindow(assetjQuery$("#asset_win").offset().left, assetjQuery$("#asset_win").offset().top, (assetjQuery$("#asset_win").width() + 2), assetjQuery$("#asset_win").height(), true);
+            }
+            
+            function closeAssetWindow() {
+                assetjQuery$('#asset_win').css("display","none");
+                assetjQuery$("#asset_arrow_left").css("display","none");
+                assetjQuery$("#asset_arrow_left_inner").css("display","none");
+            }
+            
+            function openLoadingWindow(x, y, w, h, rounded) {
+                assetjQuery$("#loading-window").css({
+                    "left": x + loadingOffset,
+                    "top": y + headerOffset,
+                    "width": w,
+                    "height": h,
+                    "display": "block",
+                    "z-index":999,
+                    "border-radius": function() {
+                        if (rounded==true) { return "10px"; }
+                        else return "0px";
+                    }
+                });
+            }
+            function closeLoadingWindow() {
+                assetjQuery$("#loading-window").css("display", "none");
+            }
+            
+            function openSuspendWindow(e, assetId) {
+                assetjQuery$("#suspend_win").css({
+                        "left": function() {
+                            return assetjQuery$(e).offset().left - (assetjQuery$("#suspend_win").width() * .666);
+                        },
+                        "top": function() {
+                            return assetjQuery$(e).offset().top + assetjQuery$(e).height() + 17 + headerOffset;
+                        },
+                        "display": "block"
+                    });
+                assetjQuery$("#suspend_arrow_up").css({
+                    "left": function() {
+                        return assetjQuery$(e).offset().left + (assetjQuery$(e).width() / 2);
+                    },
+                    "top": function() {
+                                return assetjQuery$(e).offset().top + assetjQuery$(e).height() - 2 + headerOffset;
+                            },
+                    "display": "block"
+                });
+                assetjQuery$("#suspend_arrow_up_inner").css({
+                    "left": function() {
+                        return assetjQuery$(e).offset().left + (assetjQuery$(e).width() / 2);
+                    },
+                    "top": function() {
+                                return assetjQuery$(e).offset().top + assetjQuery$(e).height() + headerOffset;
+                            },
+                    "display": "block"
+                });
+                assetjQuery$("#suspend_win").mouseenter(function() {
+                        clearTimeout(suspendWinTimeoutOut[assetId]);
+                    }).mouseleave(function() {
+                        clearTimeout(suspendWinTimeoutOut[assetId]);
+                        suspendWinTimeoutOut[assetId] = setTimeout(function() {closeSuspendWindow();}, hoverDelay);
+                    });
+                openLoadingWindow(assetjQuery$("#suspend_win").offset().left, assetjQuery$("#suspend_win").offset().top, (assetjQuery$("#suspend_win").width() + 2), assetjQuery$("#suspend_win").height(), true);
+            }
+            
+            function openPaymentWindow(e, assetId) {
+                assetjQuery$("#payment_win").css({
+                        "left": function() {
+                            return assetjQuery$(e).offset().left - (assetjQuery$("#payment_win").width() * .666);
+                        },
+                        "top": function() {
+                            return assetjQuery$(e).offset().top + assetjQuery$(e).height() + 17 + headerOffset;
+                        },
+                        "display": "block"
+                    });
+                assetjQuery$("#payment_arrow_up").css({
+                    "left": function() {
+                        return assetjQuery$(e).offset().left + (assetjQuery$(e).width() / 2);
+                    },
+                    "top": function() {
+                                return assetjQuery$(e).offset().top + assetjQuery$(e).height() - 2 + headerOffset;
+                            },
+                    "display": "block"
+                });
+                assetjQuery$("#payment_arrow_up_inner").css({
+                    "left": function() {
+                        return assetjQuery$(e).offset().left + (assetjQuery$(e).width() / 2);
+                    },
+                    "top": function() {
+                                return assetjQuery$(e).offset().top + assetjQuery$(e).height() + headerOffset;
+                            },
+                    "display": "block"
+                });
+                assetjQuery$("#payment_win").mouseenter(function() {
+						//BTBE-783: to avoid hide popup if billing profile link clicked
+                        if(!assetjQuery$('.LoadingSpinner').is(':visible')){	
+	                        clearTimeout(paymentWinTimeoutOut[assetId]);		
+	                    }
+                    }).mouseleave(function() {
+						//BTBE-783: to avoid hide popup if billing profile link clicked
+                        if(!assetjQuery$('.LoadingSpinner').is(':visible')){
+							clearTimeout(paymentWinTimeoutOut[assetId]);
+							paymentWinTimeoutOut[assetId] = setTimeout(function() {closePaymentWindow();}, hoverDelay);
+						}
+                    });
+                openLoadingWindow(assetjQuery$("#payment_win").offset().left, assetjQuery$("#payment_win").offset().top, (assetjQuery$("#payment_win").width() + 2), assetjQuery$("#payment_win").height(), true);
+            }
+            <!--Added By Mukul Goel, License Management Sprint 28, License Window >>Code Start<< -->            
+            function openLookUpWindow(e,assetId)
+            {
+                
+                 assetjQuery$("#lookuplicense").css({
+                     "left": function() {
+                         return assetjQuery$("#lookUpLicenseButton").offset().left - (assetjQuery$("#lookuplicense").width() * .666);
+                     },
+                     "top": function() {
+                         return assetjQuery$("#lookUpLicenseButton").offset().top + assetjQuery$(e).height() + 40 + headerOffset;
+                     },
+                     "display": "block"
+                 });
+                 assetjQuery$("#license_arrow_up").css({
+                     "left": function() {
+                         return assetjQuery$("#lookUpLicenseButton").offset().left + (assetjQuery$("#lookUpLicenseButton").width() / 2);
+                     },
+                     "top": function() {
+                         return assetjQuery$("#lookUpLicenseButton").offset().top + assetjQuery$("#lookUpLicenseButton").height() +7 + headerOffset;
+                     },
+                     "display": "block"
+                 });
+                 assetjQuery$("#license_arrow_up_inner").css({
+                     "left": function() {
+                         return assetjQuery$("#lookUpLicenseButton").offset().left + (assetjQuery$("#lookUpLicenseButton").width() / 2);
+                     },
+                     "top": function() {
+                         return assetjQuery$("#lookUpLicenseButton").offset().top + assetjQuery$("#lookUpLicenseButton").height() +9 + headerOffset;
+                     },
+                     "display": "block"
+                 });
+                 assetjQuery$("#lookuplicense").click(function() {
+                     clearTimeout(licenseWinTimeoutOut[assetId]);
+                 });
+                openLoadingWindow(assetjQuery$("#lookuplicense").offset().left, assetjQuery$("#lookuplicense").offset().top, (assetjQuery$("#lookuplicense").width() + 2), assetjQuery$("#lookuplicense").height(), true);
+            }
+            function openlicenseWindow(e, assetId) 
+            {
+                 assetjQuery$("#license_win").css({
+                     "left": function() {
+                         return assetjQuery$(e).offset().left - (assetjQuery$("#license_win").width() * .666);
+                     },
+                     "top": function() {
+                         return assetjQuery$(e).offset().top + assetjQuery$(e).height() + 17 + headerOffset;
+                     },
+                     "display": "block"
+                 });
+                 assetjQuery$("#license_arrow_up").css({
+                     "left": function() {
+                         return assetjQuery$(e).offset().left + (assetjQuery$(e).width() / 2);
+                     },
+                     "top": function() {
+                         return assetjQuery$(e).offset().top + assetjQuery$(e).height() - 2 + headerOffset;
+                     },
+                     "display": "block"
+                 });
+                 assetjQuery$("#license_arrow_up_inner").css({
+                     "left": function() {
+                         return assetjQuery$(e).offset().left + (assetjQuery$(e).width() / 2);
+                     },
+                     "top": function() {
+                         return assetjQuery$(e).offset().top + assetjQuery$(e).height() + headerOffset;
+                     },
+                     "display": "block"
+                 });
+                 assetjQuery$("#license_win").click(function() {
+                     clearTimeout(licenseWinTimeoutOut[assetId]);
+                 });
+                openLoadingWindow(assetjQuery$("#license_win").offset().left, assetjQuery$("#license_win").offset().top, (assetjQuery$("#license_win").width() + 2), assetjQuery$("#license_win").height(), true);
+            }
+            function ActivateLicenseBtn(value, assetId,remainUnit,graceUnit,accId) 
+            {
+                assetjQuery$("input[id*='ActivateLicense']").prop('disabled', true).removeClass('btn').addClass('btnDisabled');
+                assetjQuery$("#rightLicense").css("display", "none");
+                assetjQuery$('#rightLicenseWrongresp').css('display', 'none');
+                assetjQuery$('#rightLicenseWrongresp1').css('display', 'none');
+                assetjQuery$("#loadingLicense").css("display", "block");
+                 assetjQuery$("#windowMask").fadeIn('slow');
+                var irv = assetjQuery$("#irvVal").val();
+                Visualforce.remoting.Manager.invokeAction(
+                     '{!$RemoteAction.AssetHierarchicalRelatedListCtr.activateSelectedLicense}', assetId, irv,remainUnit,graceUnit,accId, function(result, event) {
+                         if (event.status) {
+                             clearLicenseWindow();
+                             assetjQuery$('.img-wrap .close').click(function() {
+                                 closelicenseWindow();
+                             });
+                             if (result.licenseNumber) {
+                                 document.getElementById('licenseNumber').innerHTML = result.licenseNumber.replace(/(\d{3})/g, '$1 ').replace(/(^\s+|\s+$)/, ' ');
+                             }
+                             if (sforce.console.isInConsole()) {
+                                 document.getElementById('manageLicense').innerHTML = '<u><a href="#" onClick="testOpenSubtab4(\'' + result.licenseNumber + '\',\'' + result.EntitlementNumber + '\',\''+result.currentAccountCan+'\')" style="font-size:11px">Manage License</a></u>';
+                             } else {
+                                 document.getElementById('manageLicense').innerHTML = '<u><a href="/apex/GenericLicenseSearchPage?licenseNumber=' + result.licenseNumber + '&eoc=' + result.EntitlementNumber + '&contextCan='+result.currentAccountCan+'" target="_blank" onclick="closelicenseWindow();" class="asset-link" style="font-size:11px">Manage License</a></u>';
+                             }
+                             if (result.EntitlementName) document.getElementById('EOCName').innerHTML = result.EntitlementName;
+                             if (result.EntitlementNumber) document.getElementById('EOCCode').innerHTML = result.EntitlementNumber;
+                             if (result.purchaseUnit) document.getElementById('purchaseUnits').innerHTML = result.purchaseUnit;
+                            // if (result.graceUnit) document.getElementById('graceUnits').innerHTML = result.graceUnit;
+                             if (result.remainingUnit) document.getElementById('remainUnits').innerHTML = result.remainingUnit;
+                             if (result.activatedUnit) document.getElementById('activateUnits').innerHTML = result.activatedUnit;
+                             if (result.remainingUnit < 1) {
+                                if(result.activationcode == "")
+                                {
+                                    assetjQuery$('#remainingUnitWarningMessage').css('display', 'block');
+                                }
+                                 assetjQuery$('#remainUnits').css('color', '#FF0000');
+                            }
+                            else
+                            {
+                                 assetjQuery$('#remainingUnitWarningMessage').css('display', 'none');
+                                 assetjQuery$('#remainUnits').css('color', '#166F09');
+                            }
+                             if (result.activated) {
+                                 document.getElementById('activated').innerHTML = 'Activated';
+                                 assetjQuery$('#activated').css('color', '#166F09');
+                                  assetjQuery$('#activated').css('font-style', 'italic');
+                             } else {
+                                 document.getElementById('activated').innerHTML = 'Not Activated';
+                                 assetjQuery$('#activated').css('color', '#FF0000');
+                                 assetjQuery$('#activated').css('font-style', 'italic');
+                             }
+                             if (result.SubscriptionType == 'Non Subscription') {
+                                 assetjQuery$('#ActivateLicense').css('display', 'block');
+                             }
+            
+                             if (result.activationcode && result.activation != "") {
+                                 document.getElementById('ActivationCode').innerHTML = result.activationcode;
+                             }
+                             closeLoadingWindow();
+                             assetjQuery$("#loadingLicense").css("display", "none");
+                             assetjQuery$("#rightLicense").css("display", "block");
+                             assetjQuery$("#rightLicenserightresp").css("display", "block");
+                             assetjQuery$("#rightLicenserightresp1").css("display", "block");
+            
+                         } else if (event.type == 'exception') {
+                             assetjQuery$("input[id*='ActivateLicense']").prop('enabled', true).removeClass('btnDisabled').addClass('btn').prop('disabled', false);
+                             assetjQuery$("#loadingLicense").css("display", "none");
+                             assetjQuery$("#rightLicense").css("display", "block");
+                             assetjQuery$('#rightLicenseWrongresp').css('display', 'block');
+                             assetjQuery$('#rightLicenseWrongresp1').css('display', 'block');
+                             document.getElementById('ActivationCode').innerHTML = event.message;
+            
+                         } else {
+                             alert(event.message);
+                         }
+                     }, {
+                         escape: true
+                     })
+                }  
+                function ActivateLicenseBtn1(value, licenseNum,Eoc,remainUnit,graceUnit,accId) 
+                {
+                assetjQuery$("input[id*='ActivateLicense1']").prop('disabled', true).removeClass('btn').addClass('btnDisabled');
+                assetjQuery$("#rightLicense1").css("display", "none");
+                assetjQuery$('#rightLicenseWrongresp2').css('display', 'none');
+                assetjQuery$('#rightLicenseWrongresp3').css('display', 'none');
+                assetjQuery$("#loadingLicense1").css("display", "block");
+                var irv = assetjQuery$("#irvVal1").val();
+                Visualforce.remoting.Manager.invokeAction(
+                     '{!$RemoteAction.AssetHierarchicalRelatedListCtr.activateSelectedLicense1}', licenseNum,Eoc, irv,remainUnit,graceUnit,accId, function(result, event) {                     
+                         if (event.status) 
+                         {                           
+                             loadlicense(licenseNum,'',result);                                             
+                             closeLoadingWindow();            
+                         } 
+                         else if (event.type == 'exception') 
+                         {
+                             assetjQuery$("input[id*='ActivateLicense1']").prop('enabled', true).removeClass('btnDisabled').addClass('btn').prop('disabled', false);
+                             assetjQuery$("#loadingLicense1").css("display", "none");
+                             assetjQuery$("#rightLicense1").css("display", "block");
+                             assetjQuery$('#rightLicenseWrongresp2').css('display', 'block');
+                             assetjQuery$('#rightLicenseWrongresp3').css('display', 'block');
+                             document.getElementById('ActivationCode1').innerHTML = event.message;            
+                         } 
+                         else 
+                         {
+                             alert(event.message);
+                         }
+                     }, {
+                         escape: true
+                     })
+                }           
+             function closelicenseWindow() 
+             {           
+                 assetjQuery$('#license_win').css("display", "none");
+                 assetjQuery$('#license_fail').css("display", "none");
+                 assetjQuery$('#loadingLicense').css("display", "none");
+                 assetjQuery$('#irvView').css('display', "none");
+                 assetjQuery$('#remainingUnitWarningMessage').css('display', "none");
+                 assetjQuery$('#irvVal').val("");
+                 assetjQuery$('#rightLicense').css("display", "none");
+                 assetjQuery$('#rightLicenserightresp').css("display", "none");
+                 assetjQuery$('#rightLicenserightresp1').css("display", "none");
+                 assetjQuery$('#rightLicenseWrongresp').css("display", "none");
+                 assetjQuery$('#rightLicenseWrongresp1').css("display", "none");            
+                 assetjQuery$('#ActivateLicense').css('display', 'none');
+                 assetjQuery$("#license_arrow_down").css("display", "none");
+                 assetjQuery$("#license_arrow_down_inner").css("display", "none");
+                 assetjQuery$("#license_arrow_up").css("display", "none");
+                 assetjQuery$("#license_arrow_up_inner").css("display", "none");
+                 assetjQuery$('#windowMask').fadeOut('slow');
+                  assetjQuery$('#EntitlementMessageLic').css('display', 'none');
+            }            
+           <!-->>Code Stop<< -->
+           
+            function closelookuplicenseWindow() 
+             {           
+                 assetjQuery$('#lookuplicense').css("display", "none"); 
+                 assetjQuery$('#licenseinfo').css("display", "none");
+                 assetjQuery$('#licenseFailure').css("display", "none");
+                 assetjQuery$('#confirmLic').css("display", "none");
+                 assetjQuery$('#licenseNum').val("");
+                 assetjQuery$('#irvView1').css('display', "none");
+                    
+                 assetjQuery$('#irvVal1').val('');
+                 assetjQuery$("#license_arrow_down").css("display", "none");
+                 assetjQuery$("#license_arrow_down_inner").css("display", "none");
+                 assetjQuery$("#license_arrow_up").css("display", "none");
+                 assetjQuery$("#license_arrow_up_inner").css("display", "none");
+                 assetjQuery$('#windowMask').fadeOut('slow');
+            } 
+           
+            function closeSuspendWindow() {
+                assetjQuery$('#suspend_win').css("display","none");
+                assetjQuery$("#suspend_arrow_down").css("display","none");
+                assetjQuery$("#suspend_arrow_down_inner").css("display","none");
+                assetjQuery$("#suspend_arrow_up").css("display","none");
+                assetjQuery$("#suspend_arrow_up_inner").css("display","none");
+            }
+            
+            function closePaymentWindow() {
+                assetjQuery$('#payment_win').css("display","none");
+                assetjQuery$("#payment_arrow_down").css("display","none");
+                assetjQuery$("#payment_arrow_down_inner").css("display","none");
+                assetjQuery$("#payment_arrow_up").css("display","none");
+                assetjQuery$("#payment_arrow_up_inner").css("display","none");
+            }
+            
+            function setLinksAndHighlights(filterText) {
+                console.debug( "setLinksAndHighlights..." );
+                assetjQuery$(".asset_link").each(function() {
+                    var assetId = this.getAttribute('data-assetId');
+                    assetjQuery$(this).mouseenter(function() {                       
+                        clearTimeout(assetWinTimeoutIn[assetId]);
+                        clearTimeout(assetWinTimeoutOut[assetId]);
+                        var thisObject = this;
+                        assetWinTimeoutIn[assetId] = setTimeout(function() { loadSelectedAsset(assetId, thisObject); }, hoverDelay);
+                    });
+                    assetjQuery$(this).mouseleave(function() {
+                        clearTimeout(assetWinTimeoutOut[assetId]);
+                        clearTimeout(assetWinTimeoutIn[assetId]);
+                        assetWinTimeoutOut[assetId] = setTimeout(function() {closeAssetWindow();}, hoverDelay);
+                    });
+                });
+                assetjQuery$(".payment_link").each(function() {
+                    var assetId = this.getAttribute('data-assetId');
+                    assetjQuery$(this).mouseenter(function() {
+						//BTBE-783: to avoid hide popup if billing profile link clicked
+                        if(!assetjQuery$('.LoadingSpinner').is(':visible')){ 
+							clearTimeout(paymentWinTimeoutIn[assetId]);
+							clearTimeout(paymentWinTimeoutOut[assetId]);
+							var thisObject = this;
+							paymentWinTimeoutIn[assetId] = setTimeout(function() { loadSelectedPayment(assetId, thisObject);}, hoverDelay);
+						}	
+                    });
+                    assetjQuery$(this).mouseleave(function() {
+						//BTBE-783: to avoid hide popup if billing profile link clicked
+                        if(!assetjQuery$('.LoadingSpinner').is(':visible')){ 
+							clearTimeout(paymentWinTimeoutIn[assetId]);
+							clearTimeout(paymentWinTimeoutOut[assetId]);
+							paymentWinTimeoutOut[assetId] = setTimeout(function() {closePaymentWindow();}, hoverDelay);
+						}	
+                    });
+                });
+                
+                assetjQuery$(".suspend_link").each(function() {
+                    var assetId = this.getAttribute('data-assetId');
+                    assetjQuery$(this).mouseenter(function() {
+                        clearTimeout(suspendWinTimeoutIn[assetId]);
+                        clearTimeout(suspendWinTimeoutOut[assetId]);
+                        var thisObject = this;
+                        suspendWinTimeoutIn[assetId] = setTimeout(function() { loadSelectedSuspend(assetId, thisObject);}, hoverDelay);
+                    });
+                    assetjQuery$(this).mouseleave(function() {
+                        clearTimeout(suspendWinTimeoutIn[assetId]);
+                        clearTimeout(suspendWinTimeoutOut[assetId]);
+                        suspendWinTimeoutOut[assetId] = setTimeout(function() {closeSuspendWindow();}, hoverDelay);
+                    });
+                });
+                
+                assetjQuery$(".license_link").each(function() 
+                {
+                    var assetId = this.getAttribute('data-assetId');
+                    assetjQuery$(this).click(function() {
+                        clearTimeout(licenseWinTimeoutIn[assetId]);
+                        clearTimeout(licenseWinTimeoutOut[assetId]);
+                        var thisObject = this;
+                        licenseWinTimeoutIn[assetId] = setTimeout(function() {
+                            loadSelectedLicense(assetId, thisObject);
+                        },0);
+                    });
+                }); 
+                console.debug( "asset component: replacing checkboxes with radio buttons..." );
+                assetjQuery$('.datagrid-row td input:checkbox').each(function() {
+                    console.debug( "asset component: replacing td input radio in asset component..." );
+                    assetjQuery$(this).replaceWith('<input type="radio" name="' + assetjQuery$(this).attr('name') + '" value="' + assetjQuery$(this).attr('value') + '" />');
+                });
+                assetjQuery$('.datagrid-row td').highlight(filterText);
+                assetjQuery$('.datagrid-cell:empty').text('--');
+                resizeView();
+            }
+            
+            function resizeView() {                
+                if (!assetjQuery$('.datagrid-row:visible').length){
+                    var vc = assetjQuery$('#assetTreeGrid').datagrid('getPanel').children('div.datagrid-view');
+                    vc.children('div.datagrid-empty').remove();
+                    var d = assetjQuery$('<div class="datagrid-empty"></div>').html('No products and services').appendTo(vc);
+                    d.css({
+                        position:'absolute',
+                        left:0,
+                        top:35,
+                        width:'100%',
+                        textAlign:'left',
+                        'padding-left': '10px',
+                        'padding-top': '15px'
+                    });
+                    assetjQuery$('#assetTreeGrid').treegrid('resize', { height: 110 });
+                }
+                else{
+                    var vc = assetjQuery$('#assetTreeGrid').datagrid('getPanel').children('div.datagrid-view');
+                    vc.children('div.datagrid-empty').remove();
+                    var rowHeights = assetjQuery$('.datagrid-header-row').height() + 50; 
+                    assetjQuery$('.datagrid-row:visible').each(function() {
+                        rowHeights += assetjQuery$(this).height(); 
+                    });
+                    assetjQuery$('#assetTreeGrid').treegrid('resize', { height: rowHeights });
+                }
+            }
+            function addRowSelectHander() {
+                 assetjQuery$('.datagrid-row').each(function() {
+                    console.debug( "asset component: adding row select handler." );
+                    assetjQuery$(this).click(function() {
+                        assetjQuery$(this).find('td input:radio').each(function() {
+                            assetjQuery$(this).attr('checked', 'checked');
+                        });
+                    });
+                });
+            }
+            
+            function clearAssetWindow() {
+                assetjQuery$('#selectedAssetName').html('&nbsp;');
+                assetjQuery$('#selectedAssetProduct').html('&nbsp;');
+                assetjQuery$('#selectedAssetConfiguration').html('&nbsp;');
+                assetjQuery$('#selectedAssetServiceStartDate').html('&nbsp;');
+                assetjQuery$('#selectedAssetServiceEndDate').html('&nbsp;');                
+                assetjQuery$('#selectedAssetSuspendedDate').html('&nbsp;');
+                assetjQuery$('#selectedAssetSuspendReason').html('&nbsp;');
+                assetjQuery$('#selectedAssetPurchaseDate').html('&nbsp;');
+                assetjQuery$('#selectedAssetActivationDate').html('&nbsp;');
+                assetjQuery$('#selectedAssetPromotion').html('&nbsp;');
+                assetjQuery$('#selectedAssetBillingProfile').html('&nbsp;');
+                assetjQuery$('#selectedAssetBDOM').html('&nbsp;');
+                assetjQuery$('#selectedAssetLicenseOwner').html('&nbsp;');
+                assetjQuery$('#selectedAssetAuthId').html('&nbsp;');
+                
+              /**
+                * document.getElementById('selectedAssetName').innerHTML = '&nbsp;';
+                * document.getElementById('selectedAssetProduct').innerHTML = '&nbsp;';
+                * document.getElementById('selectedAssetConfiguration').innerHTML = '&nbsp;';
+                * document.getElementById('selectedAssetServiceStartDate').innerHTML = '&nbsp;';
+                * document.getElementById('selectedAssetSuspendedDate').innerHTML = '&nbsp;';
+                * document.getElementById('selectedAssetPurchaseDate').innerHTML = '&nbsp;';
+                * document.getElementById('selectedAssetActivationDate').innerHTML = '&nbsp;';
+                * document.getElementById('selectedAssetPromotion').innerHTML = '&nbsp;';
+                * document.getElementById('selectedAssetBillingProfile').innerHTML = '&nbsp;';
+                * document.getElementById('selectedAssetBDOM').innerHTML = '&nbsp;';
+                * document.getElementById('selectedAssetLicenseOwner').innerHTML = '&nbsp;';
+                * document.getElementById('selectedAssetAuthId').innerHTML = '&nbsp;';
+               **/
+            }
+            
+             function clearSuspendWindow() {
+                document.getElementById('selectedSuspendReason').innerHTML = '&nbsp;';
+            }
+            
+            function clearPaymentWindow() {
+                document.getElementById('selectedPaymentBillingProfile').innerHTML = '&nbsp;';
+                document.getElementById('selectedPaymentBDOM').innerHTML = '&nbsp;';
+                document.getElementById('selectedPaymentName').innerHTML = '&nbsp;';
+                document.getElementById('selectedPaymentCCN').innerHTML = '&nbsp;';
+                document.getElementById('selectedPaymentCardType').innerHTML = '&nbsp;';
+                document.getElementById('selectedPaymentExpirationYear').innerHTML = '&nbsp;';
+                document.getElementById('selectedBankName').innerHTML = '&nbsp;';
+                document.getElementById('selectedBankAccountNumber').innerHTML = '&nbsp;';
+                document.getElementById('selectedBankAccountType').innerHTML = '&nbsp;';
+            }
+            function clearLicenseWindow() 
+            {
+                document.getElementById('licenseNumber').innerHTML = '&nbsp;';
+                document.getElementById('EOCName').innerHTML = '&nbsp;';
+                 document.getElementById('EOCCode').innerHTML = '&nbsp;';
+                document.getElementById('purchaseUnits').innerHTML = '&nbsp;';
+             //   document.getElementById('graceUnits').innerHTML = '&nbsp;';
+                document.getElementById('remainUnits').innerHTML = '&nbsp;';
+                document.getElementById('activateUnits').innerHTML = '&nbsp;';
+                document.getElementById('activated').innerHTML = '&nbsp;';
+                
+              
+            }
+            function clearlookupLicenseWindow() 
+            {
+                document.getElementById('licenseNumber1').innerHTML = '&nbsp;';
+                document.getElementById('EOCName1').innerHTML = '&nbsp;';
+                 document.getElementById('EOCCode1').innerHTML = '&nbsp;';
+                document.getElementById('purchaseUnits1').innerHTML = '&nbsp;';
+         //       document.getElementById('graceUnits1').innerHTML = '&nbsp;';
+                document.getElementById('remainUnits1').innerHTML = '&nbsp;';
+                document.getElementById('activateUnits1').innerHTML = '&nbsp;';
+                document.getElementById('activated1').innerHTML = '&nbsp;';
+                document.getElementById('registeredTo').innerHTML = '&nbsp;';
+                document.getElementById('viewAccount').innerHTML = '&nbsp;';
+                document.getElementById('RegisterTransferActivateButton').innerHTML = '&nbsp;';   
+                     
+                
+            }
+            function clearCancelAutorenewalWindow() {
+                document.getElementById('cancel-green-text').innerHTML = '&nbsp;';
+                //document.getElementById('cancel-end-text').innerHTML = '&nbsp;';
+            }
+            
+            function updateButtons(row) { 
+                if (row) {
+                    var suspendPermissionProfile = {!suspendPermission};
+                    var migratePermissionProfile = {!migratePermission};
+                    var modifyPermissionProfile = {!modifyPermission};
+                    var cancelPermissionProfile = {!cancelPermission};
+                    var verPrtPermissionProfile = {!versionPrtPermission};
+                    var suspendPermissionAsset = false;
+                    var migratePermissionAsset = false;
+                    var modifyPermissionAsset = false;
+                    var cancelPermissionAsset = false;
+                    var versionPrtPermissionAsset = false;
+                    var suspendValue = 'Suspend';
+                    if (row.Siebel_Status_Code == 'Active') {
+                        suspendValue = 'Suspend';
+                        suspendPermissionAsset = true;
+                        migratePermissionAsset = true;
+                        modifyPermissionAsset = true;
+                        if (row.Siebel_Price_Type != null) {
+                            if (row.Siebel_Price_Type.toString().toLowerCase() == 'recurring') cancelPermissionAsset = true;
+                            else cancelPermissionAsset = false;
+                        }
+                        else cancelPermissionAsset = false;
+                        versionPrtPermissionAsset = true;
+                    }
+                    if (row.Siebel_Status_Code == 'Suspended') {
+                        suspendValue = 'Resume';
+                        suspendPermissionProfile = {!resumePermission};
+                        suspendPermissionAsset = true;
+                        migratePermissionAsset = true;
+                        modifyPermissionAsset = false;
+                        cancelPermissionAsset = false;
+                        versionPrtPermissionAsset = false;
+                    }
+                    if (row.Siebel_Status_Code == 'Inactive') {
+                        suspendValue = 'Resume';
+                        suspendPermissionAsset = false;
+                        migratePermissionAsset = false;
+                        modifyPermissionAsset = false;
+                        cancelPermissionAsset = false;
+                        versionPrtPermissionAsset = false;
+                    }
+                    if (row.Siebel_Status_Code == 'Cancelled') {
+                        suspendValue = 'Resume';
+                        suspendPermissionAsset = false;
+                        migratePermissionAsset = false;
+                        modifyPermissionAsset = false;
+                        cancelPermissionAsset = false;
+                        versionPrtPermissionAsset = false;
+                    }
+                    if (typeof(row.Siebel_Parent_Id) != 'undefined') {
+                        migratePermissionAsset = false;
+                        versionPrtPermissionAsset = false;
+                    }
+                    if (typeof(row.Siebel_Service_End_Date) != 'undefined') {
+                        cancelPermissionAsset = false;
+                    }
+                    if (suspendPermissionProfile && suspendPermissionAsset) assetjQuery$("#suspend_button").prop('disabled',false).prop('value',suspendValue).removeClass('btnDisabled').addClass('btn');
+                    else assetjQuery$("#suspend_button").prop('disabled',true).prop('value',suspendValue).removeClass('btn').addClass('btnDisabled');
+                    
+                    if (migratePermissionProfile && migratePermissionAsset) assetjQuery$("#migrate_button").prop('disabled',false).removeClass('btnDisabled').addClass('btn');
+                    else assetjQuery$("#migrate_button").prop('disabled',true).removeClass('btn').addClass('btnDisabled');
+                    
+                    if (modifyPermissionProfile && modifyPermissionAsset) assetjQuery$("#modify_button").prop('disabled',false).removeClass('btnDisabled').addClass('btn');
+                    else assetjQuery$("#modify_button").prop('disabled',true).removeClass('btn').addClass('btnDisabled');
+                    
+                    if (cancelPermissionProfile && cancelPermissionAsset) assetjQuery$("#cancel_button").prop('disabled',false).removeClass('btnDisabled').addClass('btn');
+                    else assetjQuery$("#cancel_button").prop('disabled',true).removeClass('btn').addClass('btnDisabled');
+                    
+                    if (verPrtPermissionProfile && versionPrtPermissionAsset) assetjQuery$("#version_protection_button").prop('disabled',false).removeClass('btnDisabled').addClass('btn');
+                    else assetjQuery$("#version_protection_button").prop('disabled',true).removeClass('btn').addClass('btnDisabled');
+                    
+                    // below is a hack to make radiobuttons instead of checkboxes work on the layout
+                    assetjQuery$('#assetTreeGrid1 tr.datagrid-row').each(function() {
+                        console.debug( "asset comp finding input radio button.  Found row." );
+                        assetjQuery$(this).find('input:radio').prop('checked', false);
+                    });
+                    console.debug( "asset comp replacing radio button." );
+                    var thisradiobutton = assetjQuery$("tr[id*='" + row.id + "']").find('input:radio');
+                    thisradiobutton.prop( "checked", "checked" );
+                    // assetjQuery$(thisradiobutton).replaceWith('<input type="radio" name="' + assetjQuery$(this).attr('name') + '" value="' + assetjQuery$(this).attr('value') + '" checked="checked" />');
+                }
+            }
+            
+            function updateButtonsHover(status, pricetype, parentId, serviceenddate) { 
+                console.debug( "AssetRelatedList updateButtonsHover: status=" + status + ", priceType=" + pricetype + ", parentId=" + parentId + ", serviceEndDate=" + serviceenddate );
+                if (status) {
+                    var suspendPermissionProfile = {!suspendPermission};
+                    var migratePermissionProfile = {!migratePermission};
+                    var modifyPermissionProfile = {!modifyPermission};
+                    var cancelPermissionProfile = {!cancelPermission};
+                    var verPrtPermissionProfile = {!versionPrtPermission};
+                    var suspendPermissionAsset = false;
+                    var migratePermissionAsset = false;
+                    var modifyPermissionAsset = false;
+                    var cancelPermissionAsset = false;
+                    var versionPrtPermissionAsset = false;
+                    var suspendValue = 'Suspend';
+                    
+                    if (status == 'Active') {
+                        suspendValue = 'Suspend';
+                        suspendPermissionAsset = true;
+                        migratePermissionAsset = true;
+                        modifyPermissionAsset = true;
+                        if (pricetype != null) {
+                            if (pricetype.toLowerCase() == 'recurring') {
+                                cancelPermissionAsset = true;
+                            }
+                            else cancelPermissionAsset = false;
+                        }
+                        else cancelPermissionAsset = false; 
+                        versionPrtPermissionAsset = true;  
+                    }
+                    if (status == 'Suspended') {
+                        suspendValue = 'Resume';
+                        suspendPermissionProfile = {!resumePermission};
+                        suspendPermissionAsset = true;
+                        migratePermissionAsset = true;
+                        modifyPermissionAsset = false;
+                        cancelPermissionAsset = false;
+                        versionPrtPermissionAsset = false;
+                    }
+                    if (status == 'Inactive') {
+                        suspendValue = 'Resume';
+                        suspendPermissionAsset = false;
+                        migratePermissionAsset = false;
+                        modifyPermissionAsset = false;
+                        cancelPermissionAsset = false;
+                        versionPrtPermissionAsset = false;
+                    }
+                    if (status == 'Cancelled') {
+                        suspendValue = 'Resume';
+                        suspendPermissionAsset = false;
+                        migratePermissionAsset = false;
+                        modifyPermissionAsset = false;
+                        cancelPermissionAsset = false;
+                        versionPrtPermissionAsset = false;
+                    }
+                    if (typeof(parentId) != 'undefined') {
+                        migratePermissionAsset = false;
+                        versionPrtPermissionAsset = false;
+                    }
+                    if (typeof(serviceenddate) != 'undefined') {
+                        cancelPermissionAsset = false;
+                    }
+                    if (suspendPermissionProfile && suspendPermissionAsset) assetjQuery$("#suspend_button_hover").prop('disabled',false).prop('value',suspendValue).removeClass('btnDisabled').addClass('btn');
+                    else assetjQuery$("#suspend_button_hover").prop('disabled',true).prop('value',suspendValue).removeClass('btn').addClass('btnDisabled');
+                    
+                    if (migratePermissionProfile && migratePermissionAsset) assetjQuery$("#migrate_button_hover").prop('disabled',false).removeClass('btnDisabled').addClass('btn');
+                    else assetjQuery$("#migrate_button_hover").prop('disabled',true).removeClass('btn').addClass('btnDisabled');
+                    
+                    if (modifyPermissionProfile && modifyPermissionAsset) assetjQuery$("#modify_button_hover").prop('disabled',false).removeClass('btnDisabled').addClass('btn');
+                    else assetjQuery$("#modify_button_hover").prop('disabled',true).removeClass('btn').addClass('btnDisabled');
+                    
+                    if (cancelPermissionProfile && cancelPermissionAsset) assetjQuery$("#cancel_button_hover").prop('disabled',false).removeClass('btnDisabled').addClass('btn');
+                    else assetjQuery$("#cancel_button_hover").prop('disabled',true).removeClass('btn').addClass('btnDisabled');
+                    
+                    if (verPrtPermissionProfile && versionPrtPermissionAsset) assetjQuery$("#version_protection_button_hover").prop('disabled',false).removeClass('btnDisabled').addClass('btn');
+                    else assetjQuery$("#version_protection_button_hover").prop('disabled',true).removeClass('btn').addClass('btnDisabled');
+                    
+                }
+                addRowSelectHander();
+            }
+            
+            function MACDButtonPush(value) {
+                var row = assetjQuery$("#assetTreeGrid").datagrid('getSelected');
+                disableButtons();
+                assetjQuery$('#assetTreeGrid').datagrid('loading');
+                if (value.toLowerCase() == 'migrate') { 
+                    var url = '{!JSENCODE(url)}/intuitCPQ/asset/check-migration/' + row.Siebel_Part_Number;
+                    assetjQuery$.ajaxSetup({ async: false });
+                    console.log(url);
+                    assetjQuery$.getJSON(url+"?callback=?", function(data) {
+                        if (data) {
+                            if (data.migrationStatus == false) {
+                                assetjQuery$('#no-migrate-popup').css('display','block');
+                                assetjQuery$('#no-migrate-popup').center();
+                            }
+                            else if (data.migrationStatus == true) {
+                                MACDRedirect(row.id, value);
+                            }
+                        }
+                        else {
+                           alert('An error has occured with the processing of your Migrate request');  
+                        }
+                    }).fail(function( jqXHR, textStatus, errorThrown) {
+                        alert('An error has occured with the processing of your Migrate request');
+                        console.log('Migrate Error: ' + textStatus + ' : ' + errorThrown);
+                    }).always(function() {
+                        enableButtons();
+                        assetjQuery$('#assetTreeGrid').datagrid('loaded');    
+                    });
+                    assetjQuery$.ajaxSetup({ async: true });
+                }                              
+                else {
+                    MACDRedirect(row.id, value);
+                }
+            }
+            
+            function MACDButtonPushHover(value, id, status, product_number) {
+                disableButtons();
+                assetjQuery$('#assetTreeGrid').datagrid('loading');
+                openLoadingWindow(assetjQuery$("#asset_win").offset().left, assetjQuery$("#asset_win").offset().top, (assetjQuery$("#asset_win").width() + 2), assetjQuery$("#asset_win").height(), true);
+                if (value.toLowerCase() == 'migrate') { 
+                    var url = '{!JSENCODE(url)}/intuitCPQ/asset/check-migration/' + product_number;
+                    assetjQuery$.ajaxSetup({ async: false });
+                    console.log(url);
+                    assetjQuery$.getJSON(url+"?callback=?", function(data) {
+                        if (data) {
+                            if (data.migrationStatus == false) {
+                                assetjQuery$('#no-migrate-popup').css('display','block');
+                                assetjQuery$('#no-migrate-popup').center();
+                            }
+                            else {
+                                MACDRedirect(id, value);
+                            }    
+                        }
+                        else {
+                           alert('An error has occured with the processing of your Migrate request');                       
+                        }
+                    }).fail(function( jqXHR, textStatus, errorThrown) {
+                        alert('An error has occured with the processing of your Migrate request');
+                        console.log('Migrate Error: ' + textStatus + ' : ' + errorThrown);
+                    }).always(function() {
+                        enableButtons();
+                        closeLoadingWindow();
+                        assetjQuery$('#assetTreeGrid').datagrid('loaded');    
+                    });
+                    assetjQuery$.ajaxSetup({ async: true });
+                }
+                else {
+                    MACDRedirect(id, value);
+                }
+            }
+            
+            function MACDRedirect(id, value) {
+                Visualforce.remoting.Manager.invokeAction(
+                        '{!$RemoteAction.AssetHierarchicalRelatedListCtr.MACDProcess}', id, value, function(result, event) {
+                            if (event.status) {
+                                var url = '/apex/MACD?id=' + id;
+                                url += '&opptyId=' + result.opptyId;
+                                url += '&assetId=' + result.assetId;
+                                url += '&opptyName=' + result.opptyName;
+                                url += '&opptyCloseDate=' + result.opptyCloseDate;
+                                url += '&opptySalesStage=' + result.opptySalesStage;
+                                url += '&productId=' + result.productId;
+                                url += '&accountIntegrationId=' + result.accountIntegrationId;
+                                url += '&sfdcReturnAccountId=' + result.sfdcReturnAccountId;
+                                url += '&url=' + encodeURIComponent(result.url);
+                                
+                                console.log(url);
+                                enableButtons();
+                                closeLoadingWindow();
+                                assetjQuery$('#assetTreeGrid').datagrid('loaded');
+                                if ( sforce.console.isInConsole() ) {
+                                    aMindSubtabUrl = url;
+                                    sforce.console.getFocusedPrimaryTabId(aMindShowPrimaryTabIdCallback);
+                                } else {
+                                    window.open(url, '_top');
+                                }
+                            } else if (event.type === 'exception') {    
+                                alert(event.message);
+                            } else {
+                                alert(event.message);
+                            }
+                        }, {escape:true});
+            }
+            
+            function CancelAutorenewButtonPush(value){
+                var row = assetjQuery$("#assetTreeGrid").datagrid('getSelected');
+                disableButtons();
+                assetjQuery$('#assetTreeGrid').datagrid('loading');
+                var url = '{!JSENCODE(url)}/intuitCPQ/asset/cancel-autorenew/' + row.externalId;
+                assetjQuery$.ajaxSetup({ async: false });
+                assetjQuery$.getJSON(url+"?callback=?", function(data) {
+                    if (data) {
+                        if (data.errorMessage == null || data.errorMessage == '') {
+                            assetjQuery$('#cancel-green-text').css('color','green');
+                            document.getElementById('cancel-green-text').innerHTML = 'Your Cancel Autorenewal Request has been submitted.';
+                            //document.getElementById('cancel-end-text').innerHTML = 'The projected end date is: ' + data.endDate;
+                        }
+                        else {
+                            assetjQuery$('#cancel-green-text').css('color','red');
+                            document.getElementById('cancel-green-text').innerHTML = 'There was an error processing your request: ' + data.errorMessage;
+                        }
+                        assetjQuery$('#cancel-popup').css('display','block');
+                        assetjQuery$('#cancel-popup').center();
+                    }
+                    else {
+                       alert('An error has occured with the processing of your Cancel Autorenew request');                       
+                    }
+                    console.log(data.errorMessage);
+                    console.log(data.stackTrace);
+                    console.log('data: ' + JSON.stringify(data, null, 4));
+                }).fail(function( jqXHR, textStatus, errorThrown) {
+                        alert('An error has occured with the processing of your Cancel Autorenew request');
+                        console.log('Cancel Autorenew Error: ' + textStatus + ' : ' + errorThrown);
+                }).always(function() {
+                    enableButtons();
+                    closeLoadingWindow();
+                    assetjQuery$('#assetTreeGrid').datagrid('loaded');    
+                });
+        
+                assetjQuery$.ajaxSetup({ async: true });
+    
+            }
+            
+            // BTBS-4119: DD:  Added for handling version protection button click from asset section/L1 page.
+            // This method starts version protection flow from L1 page.
+            function VersionProtectionButtonPush(value){
+                var row = assetjQuery$("#assetTreeGrid").datagrid('getSelected');
+                disableButtons();
+                assetjQuery$('#assetTreeGrid').datagrid('loading');
+                var url = '{!JSENCODE(url)}/intuitCPQ/asset/version-protection/' + row.externalId;
+                assetjQuery$.ajaxSetup({ async: false });
+                assetjQuery$.getJSON(url+"?callback=?", function(data) {
+                    if (data) {
+                        if (data.errorMessage == null || data.errorMessage == '') {
+                            assetjQuery$('#cancel-green-text').css('color','green');
+                            document.getElementById('cancel-green-text').innerHTML = data.message;
+                        }
+                        else {
+                            assetjQuery$('#cancel-green-text').css('color','red');
+                            document.getElementById('cancel-green-text').innerHTML = data.errorMessage;
+                        }
+                        assetjQuery$('#cancel-popup').css('display','block');
+                        assetjQuery$('#cancel-popup').center();
+                    }
+                    else {
+                       alert('An error has occured with the processing of your Version Protection request');                       
+                    }
+                    console.log(data.errorMessage);
+                    console.log('data: ' + JSON.stringify(data, null, 4));
+                }).fail(function( jqXHR, textStatus, errorThrown) {
+                        alert('An error has occured with the processing of your Version Protection request');
+                        console.log('Version Protection Error: ' + textStatus + ' : ' + errorThrown);
+                }).always(function() {
+                    enableButtons();
+                    closeLoadingWindow();
+                    assetjQuery$('#assetTreeGrid').datagrid('loaded');    
+                });
+        
+                assetjQuery$.ajaxSetup({ async: true });
+    
+            }
+            
+            function closeLicenseBtn(value,assetId)
+            {            
+              clearTimeout(licenseWinTimeoutOut[assetId]);
+              licenseWinTimeoutOut[assetId] = setTimeout(function() {closelicenseWindow();}, 0);                   
+            }
+                      
+            function CancelAutorenewButtonPushHover(value, id, status)
+            {
+                var row = assetjQuery$("#assetTreeGrid").datagrid('getSelected');
+                disableButtons();
+                assetjQuery$('#assetTreeGrid').datagrid('loading');
+                openLoadingWindow(assetjQuery$("#asset_win").offset().left, assetjQuery$("#asset_win").offset().top, (assetjQuery$("#asset_win").width() + 2), assetjQuery$("#asset_win").height(), true);
+                var url = '{!JSENCODE(url)}/intuitCPQ/asset/cancel-autorenew/' + id;
+                assetjQuery$.ajaxSetup({ async: false });
+                console.log(url);
+                assetjQuery$.getJSON(url+"?callback=?", function(data) {
+                    if (data) {
+                        if (data.errorMessage == null || data.errorMessage == '') {
+                            assetjQuery$('#cancel-green-text').css('color','green');
+                            document.getElementById('cancel-green-text').innerHTML = 'Your Cancel Autorenewal Request has been submitted.';
+                            //document.getElementById('cancel-end-text').innerHTML = 'The projected end date is: ' + data.endDate;
+                        }
+                        else {
+                            assetjQuery$('#cancel-green-text').css('color','red');
+                            document.getElementById('cancel-green-text').innerHTML = 'There was an error processing your request: ' + data.errorMessage;
+                        }
+                        assetjQuery$('#cancel-popup').css('display','block');
+                        assetjQuery$('#cancel-popup').center();
+                    }
+                    else {
+                       alert('An error has occured with the processing of your Cancel Autorenew request');                       
+                    }
+                    console.log(data.errorMessage);
+                    console.log(data.stackTrace);
+                    console.log('data: ' + JSON.stringify(data, null, 4));
+                }).fail(function( jqXHR, textStatus, errorThrown) {
+                        alert('An error has occured with the processing of your Cancel Autorenew request');
+                        console.log('Cancel Autorenew Error: ' + textStatus + ' : ' + errorThrown);
+                }).always(function() {
+                    enableButtons();
+                    closeLoadingWindow();
+                    assetjQuery$('#assetTreeGrid').datagrid('loaded');    
+                });
+        
+                assetjQuery$.ajaxSetup({ async: true });
+                closeLoadingWindow();
+                assetjQuery$('#assetTreeGrid').datagrid('loaded');
+                enableButtons();
+    
+            }
+            
+             //BTBS-4119: DD: Added for handling version protection button click from hover.
+            // This method starts version protection flow from hover.
+            function VersionProtectionButtonPushHover(value, id, status)
+            {
+                var row = assetjQuery$("#assetTreeGrid").datagrid('getSelected');
+                disableButtons();
+                assetjQuery$('#assetTreeGrid').datagrid('loading');
+                openLoadingWindow(assetjQuery$("#asset_win").offset().left, assetjQuery$("#asset_win").offset().top, (assetjQuery$("#asset_win").width() + 2), assetjQuery$("#asset_win").height(), true);
+                var url = '{!JSENCODE(url)}/intuitCPQ/asset/version-protection/' + id;
+                assetjQuery$.ajaxSetup({ async: false });
+                console.log(url);
+                assetjQuery$.getJSON(url+"?callback=?", function(data) {
+                   if (data) {
+                        if (data.errorMessage == null || data.errorMessage == '') {
+                            assetjQuery$('#cancel-green-text').css('color','green');
+                            document.getElementById('cancel-green-text').innerHTML = data.message;
+                        }
+                        else {
+                            assetjQuery$('#cancel-green-text').css('color','red');
+                            document.getElementById('cancel-green-text').innerHTML = data.errorMessage;
+                        }
+                        assetjQuery$('#cancel-popup').css('display','block');
+                        assetjQuery$('#cancel-popup').center();
+                    }
+                    else {
+                       alert('An error has occured with the processing of your Version Protection request');                       
+                    }
+                    console.log(data.errorMessage);
+                    console.log('data: ' + JSON.stringify(data, null, 4));
+                }).fail(function( jqXHR, textStatus, errorThrown) {
+                        alert('An error has occured with the processing of your Version Protection request');
+                        console.log('Version Protection Error: ' + textStatus + ' : ' + errorThrown);
+                }).always(function() {
+                    enableButtons();
+                    closeLoadingWindow();
+                    assetjQuery$('#assetTreeGrid').datagrid('loaded');    
+                });
+        
+                assetjQuery$.ajaxSetup({ async: true });
+               
+    
+            }
+            
+            function disableButtons() {
+                assetjQuery$("input[id*='version_protection_button']").prop('disabled',true).removeClass('btn').addClass('btnDisabled');
+                assetjQuery$("input[id*='cancel_button']").prop('disabled',true).removeClass('btn').addClass('btnDisabled');
+                assetjQuery$("input[id*='modify_button']").prop('disabled',true).removeClass('btn').addClass('btnDisabled');
+                assetjQuery$("input[id*='migrate_button']").prop('disabled',true).removeClass('btn').addClass('btnDisabled');
+                assetjQuery$("input[id*='suspend_button']").prop('disabled',true).removeClass('btn').addClass('btnDisabled');
+            }
+            
+            function enableButtons() {
+                var row = assetjQuery$("#assetTreeGrid").datagrid('getSelected');
+                updateButtons(row);
+            }
+            
+            function gotoPageOne() {
+                var pager = assetjQuery$('#assetTreeGrid').treegrid('getPager');  
+                pager.pagination('select', 1); 
+            }
+            
+           function validateLicense(licensevalue,instance,event){
+      
+                licensevalue=licensevalue.replace(/[^0-9]/g,'');               
+              
+                jQuery(instance).val(licensevalue);
+                console.log('-licensevaluelicensevalue--'+licensevalue);      
+                  
+                 if(licensevalue.length == 15){
+                    assetjQuery$('#findLicenseByNumber').prop('disabled',false);
+                    assetjQuery$('#findLicenseByNumber').removeClass('btnDisabled').addClass('btn');
+                    if(event.keyCode == 13)
+                    {
+                        loadlicense(document.getElementById('licenseNum').value,'');
+                    }
+                 } 
+                 else if(licensevalue.length != 0)
+                 {
+                     assetjQuery$('#findLicenseByNumber').prop('disabled',true);
+                     assetjQuery$('#findLicenseByNumber').removeClass('btn').addClass('btnDisabled');
+                 }                  
+                 if(licensevalue.length == 16){
+                    //alert('License Number can be only 15 digit number.');
+                }            
+                if(licensevalue.length > 16){
+                    //alert('License Number can be only 15 digit number.');
+                    assetjQuery$(instance).val('');
+                }                          
+            } 
+
+	// BTBE-612: fetching billinginforpoid value and redirecting on billing profile detail page.
+     
+   function profileLinkClick(billingProfileName,billingAccCan) {
+        console.debug("In profileLinkClick(): billing profile billingProfileName=" + billingProfileName+"::billingAccCan:"+billingAccCan);
+        // setBillingProfileId(bpRowId);
+        displayBillingProfilePoid( billingProfileName,billingAccCan );
+    }
+	var url;
+    function displayBillingProfilePoid( billingProfileName,billingAccCan ) {
+    	console.debug( "[loadBillingProfilePoid] calling findSelectedBillingProfilePoidByName ( " + billingProfileName + " )" );
+        assetjQuery$('.LoadingSpinner').css("display", "inline");
+        Visualforce.remoting.Manager.invokeAction(
+            '{!$RemoteAction.AssetHierarchicalRelatedListCtr.findSelectedBillingProfilePoidByName}', billingProfileName, function(result, event) {
+                console.debug( "[loadBillingProfilePoid] called findSelectedBillingProfilePoidByName : event.status:"+event.status)
+                if (event.status) {
+                	 console.log(result);
+                    if ( result === "0" ) {
+                      	console.debug( "result is zero" );
+                      	assetjQuery$('.LoadingSpinner').css("display", "none");
+                      	closePaymentWindow();
+                      	alert("Record not found.");
+                    } else {
+                        console.debug( "result is " + result + ".  Redirecting..." );
+                       	url = "/apex/BillingProfileDetail?billProfId=" + result + "&can=" + billingAccCan;
+                       	if (sforce.console.isInConsole()) {
+				            sforce.console.getEnclosingPrimaryTabId(openBillingProfileDetailInConsole);
+				        } else {
+				            	window.location.href = url;
+				        }
+                       
+                    }
+                   
+                } else if (event.type === 'exception') { 
+                	assetjQuery$('.LoadingSpinner').css("display", "none");
+					closePaymentWindow();					
+                    alert(event.message);
+                } else {
+                	assetjQuery$('.LoadingSpinner').css("display", "none");
+					closePaymentWindow();
+                    alert(event.message);
+                }
+            }, {escape:true}
+        );
+    }
+    
+    var openBillingProfileDetailInConsole = function(result) {
+        //Now that we have the primary tab ID, we can use it
+        var primaryTabId = result.id;
+        sforce.console.openSubtab(primaryTabId, url, true, "Billing Profile");
+		assetjQuery$('.LoadingSpinner').css("display", "none");
+    };
+    
+    // End 
+        </script>
+ 
+</apex:form>
+    <div id="asset_win"  class="popup-class" style="z-index:998;width:500px;" >
+        <div class="popup-top-border"></div>
+            <div style="display: inline-block; width: 50%; height: 100%; float: left;">
+                <div class="popupHeader2" id="selectedAssetName"></div><br /><br />
+                <div class="popupHeader" id="selectedAssetProduct"></div>
+                <div class="popupValueFull" id="selectedAssetConfiguration"></div><br /><br />
+                <div class="popupLabelBold">Auth Id:&nbsp;&nbsp;&nbsp;</div><div class="popupValueHalf" id="selectedAssetAuthId"></div><br /><br />
+                <div class="popupHeader">Dates</div>
+                <div class="popupLabel">Purchased:</div><div class="popupValueHalfRight" id="selectedAssetPurchaseDate"></div><br />
+                <div class="popupLabel">Service Start:</div><div class="popupValueHalfRight" id="selectedAssetServiceStartDate"></div><br />
+                <div class="popupLabel">Service End:</div><div class="popupValueHalfRight" id="selectedAssetServiceEndDate"></div><br />
+                <div class="popupLabel">Activation:</div><div class="popupValueHalfRight" id="selectedAssetActivationDate"></div><br />
+                <div class="popupLabel">Suspended/Cancelled:</div><div class="popupValueHalfRight" id="selectedAssetSuspendedDate"></div>
+                <div class="popupLabel">Suspend Reason:&nbsp;</div><div class="popupValueHalf" id="selectedAssetSuspendReason"></div>
+            </div>
+            <div style="display: inline-block; width: 50%; height: 100%; float: left; ">
+                <br /><br /><br /><br />
+                <div class="popupHeader">Promotion Applied</div>
+                <div class="popupValueFull" id="selectedAssetPromotion"></div><br /><br />
+                <div class="popupHeader">Promotion Restrictions Apply</div>
+                <div class="popupValueFull" id="selectedAssetPromotionRestrictions"></div><br /><br />
+                <div class="popupHeader">Billing Profile</div>
+                <div class="popupValueFull" id="selectedAssetBillingProfile"></div><br /><br />
+                <div class="popupLabelBold">BDOM:&nbsp;&nbsp;&nbsp;</div><div class="popupValueHalf" id="selectedAssetBDOM"></div><br /><br />
+                <div class="popupHeader">License Owner</div>
+                <div class="popupValueFull" id="selectedAssetLicenseOwner"></div>
+            </div>
+            <div style="display: inline-block; width: 100%; height: 100%; float: left;">
+                <br /><br />
+                <div style="text-align: center" id="selectedAssetButtons"></div>
+                <br />
+                <div class="popupValueFull" id="selectedAssetLink"></div>
+            </div>
+    </div>
+    <div id="payment_win" class="popup-class" style="z-index:998;">
+            <div class="popup-top-border"></div>
+			 <!-- BTBE-612 -->
+            <div class="LoadingSpinner" style="height:100%; width:100%; background-color: #D6D6D2; z-index:1500; opacity:0.8; position:absolute; display:none; text-align: center;">
+        		<img src="{!$Resource.SFDC_Loading}" style="margin-top:15%;"/>
+            	<p>Loading...</p>
+        	</div>
+        	 <!-- BTBE-612 End-->
+            <div style="display: inline-block; width: 100%;">
+                <div class="popupHeader2">Payment Method Details</div><br /><br />
+                <div class="popupLabelBold" >Billing Profile: </div><div class="popupValueHalf" id="selectedPaymentBillingProfile"></div>
+                <div class="popupLabelBold">Billing Day of Month: </div><div class="popupValueHalf" id="selectedPaymentBDOM"></div><br /><br />
+                <div id="selectedPaymentCreditCardInfo" style="display: none;">
+                    <div class="popupLabelBold">Name on Credit Card: </div><div class="popupValueHalf" id="selectedPaymentName"></div><br /><br />
+                    <div class="popupLabelBold">Credit Card Number: </div><div class="popupValueHalf" id="selectedPaymentCCN"></div>
+                    <div class="popupLabelBold">Card Type: </div><div class="popupValueHalf" id="selectedPaymentCardType"></div>
+                    <div class="popupLabelBold">Expiration Year: </div><div class="popupValueHalf" id="selectedPaymentExpirationYear"></div>
+                </div>
+                <div id="selectedPaymentEFTInfo" style="display: none;">
+                    <div class="popupLabelBold">Bank Account Name: </div><div class="popupValueHalf" id="selectedBankName"></div><br /><br />
+                    <div class="popupLabelBold">Bank Account Number: </div><div class="popupValueHalf" id="selectedBankAccountNumber"></div>
+                    <div class="popupLabelBold">Bank Account Type: </div><div class="popupValueHalf" id="selectedBankAccountType"></div>
+                </div>
+                    
+            </div>
+    </div>
+    
+     <div id="suspend_win" class="popup-class" style="z-index:998; width:300px">
+            <div class="popup-top-border"></div>
+            <div style="display: inline-block; width: 100%;">
+             <!--   <div class="popupHeader2">Suspend Details</div><br /><br /> -->
+                <div class="popupLabelBold" >Suspend Reason: </div><div class="popupValueHalf" id="selectedSuspendReason"></div>                 
+            </div>
+    </div>
+    <div id="lookuplicense" class="popup-class" style="z-index:997;width:475px">
+            <div class="popup-top-border"></div>
+              <div class="img-wrap" id="closingSign">
+                          <span class="close2" style="right:-475px"> <apex:image value="{!URLFOR($Resource.LicenseManagement, '/images/close.png')}" alt="x" /></span>                              
+                    </div> 
+            <div style="display: inline-block; width: 100%;">                               
+                   <br/>
+                   <div id="lookuplicensedetails" style="margin-left:10px;display:inline-block;"> 
+                        <input type="text" id= "licenseNum" placeholder="License Number(15 digits only)..." name="licenseNumber" onKeyUp="validateLicense(this.value,this,event)" style="width:250px"/ >
+                        <input type ="button" id= "findLicenseByNumber" value="Find..." class="btnDisabled" disabled="true" onclick="loadlicense(document.getElementById('licenseNum').value,'');"/>
+                   </div> 
+                    <div  id="loadLicense" style="display:none" align="center">
+                        <img  src="{!$Resource.loading}"  height="25" width="25" /><br/>
+                        Searching ....
+                     </div>    
+                   <div  id="licenseFailure" style="display:none" align="center">
+                    <table>
+                    <tr>                     
+                        <td style="font-weight:bold;font-size:18px">
+                      <div  style="float:left;">  <img  src="{!$Resource.Wrong}"  height="25" width="25" /></div>
+                         <div  id="errorMsg" style="width:250px">  </div>
+                        </td>                        
+                    </tr>
+                    
+                </table>
+                </div> 
+                <div  id="confirmLic" style="display:none" align="center">
+                    Confirm the License is Correct.
+                </div> 
+               <div id = "licenseinfo" style="display:none">
+                 <div class="popupHeader2" style="font-size:18px">
+                     License
+                     <div class="popupLabelBold"  style="vertical-align:center;line-height: 18px;font-size:18px;width: 60%" id="licenseNumber1"></div>
+                  </div>
+                  <div  class="popupHeader2" style="font-size:16px">
+                   Registered To
+                    <div  style="padding-left:10px;display:inline-block;font-weight:bold;vertical-align:center;font-size:16px;max-width:70%;line-height: 18px;" id="registeredTo"></div>
+                    <div   style="display:inline-block;vertical-align:center;font-size:9px;min-width:10%;max-width:20%;line-height: 18px;" id="viewAccount"></div>
+                 </div>
+                  <div>
+                     <div class="popupHeader2" style="font-size:16px;width:80%;line-height: 20px;" id ="EOCName1"></div>
+                  </div>
+                  <div class="popupHeader2"  style="padding-left:20px">
+                     Product Code    
+                     <div class="popupLabelBold" style="vertical-align:center;font-size:14px;width:60%;line-height: 18px;" id ="EOCCode1"></div>
+                  </div>
+                  <div style="padding:5px">
+                     <div class="popupLabelBold" style="font-size:14px;width:80%;line-height: 20px;" id ="EOCName1"></div>
+                  </div>
+                  <div  id = "EntitlementMessage1" style="padding: 6px;padding-left:18px;display:none"> <span style="display:table-cell;padding-right:6px;vertical-align:middle"> <img  src="{!$Resource.activation_note}"  height="25" width="25" /> </span><span style="font-weight:bold;display:table-cell;vertical-align:middle">Note: This is a parent license. Click Manage License to view all its entitlements.</span> </div>
+                  <div style="padding:4px">
+                     <table>
+                        <tr>
+                           <td>
+                              <div class="popupLabelBold" style="font-size:12px;padding-left:19px">Details</div>
+                           </td>
+                           <td>
+                              <div style="padding-left:6px;font-size:11px;font-style:italic" id="manageLicense1"></div>
+                           </td>
+                        </tr>
+                     </table>
+                  </div> 
+                 
+                  <div style="padding:4px">
+                    <div  class="popupLabelBold" style="float:left;line-height:14px;font-size:12px;">Activated: </div>
+                    <div style="color:#166F09;font-size:12px" id="activated1"></div>
+                 </div>   
+                 <div style="padding:4px">
+                   <div class="popupLabelBold" style="line-height:14px;;font-size:12px">Purchased Units: </div>
+                   <div style=";font-size:12px" class="popupValueHalf" id ="purchaseUnits1"></div>
+                 </div>
+            <!--     <div style="padding:4px">
+                   <div class="popupLabelBold" style="line-height:14px;;font-size:12px">Grace Units:</div>
+                   <div style=";font-size:12px" class="popupValueHalf" id="graceUnits1"></div>
+                 </div> --> 
+                 <div style="padding:4px">
+                   <div class="popupLabelBold" style="line-height:14px;;font-size:12px">Number of Times Activated:</div>
+                   <div style=";font-size:12px" class="popupValueHalf" id="activateUnits1"></div>
+                 </div>
+                 <div style="padding:4px">
+                   <div  class="popupLabelBold" style="line-height:14px;;font-size:12px;">Activations Remaining: </div>
+                   <div style="color:#166F09;font-weight:bold;font-size:12px" class="popupValueHalf" id ="remainUnits1"></div>
+                 </div>                
+                 <div  id = "remainingUnitWarningMessage1" style="padding:4px;display:none"><span style="display:table-cell;vertical-align:middle">  <img  src="{!$Resource.activation_note}"  height="25" width="25"/></span><span style="font-weight:bold;display:table-cell;vertical-align:middle">Note: Customer has exceeded the allotted activations. Finance will be notified of the additional activation.</span> </div>                 
+                 <br/>                 
+                 <div  style="display:inline-block;width:100%">
+                    <table style="width:100%">
+                       <tr>
+                            <td>
+                                <table style="width:100%">
+                                    <tr>
+                                      <td style="max-width:100px">
+                                         <div id="irvView1" style="margin-left:15px;margin-right:5px;display: none;"> <input type="text" placeholder="Enter IRV (Optional)" id="irvVal1" name="IRV" style="width:175px;" /></div>
+                                      </td>
+                                      <td id="RegisterTransferActivateButton" >
+                                            
+                                      </td>
+                                      </tr>
+                            </table>
+                            </td>
+                       </tr>                       
+                       <tr>
+                          <td>
+                             <div  id="loadingLicense1" style="display:none">
+                                <img  src="{!$Resource.loading}"  height="25" width="25" />
+                             </div>
+                             <div id="rightLicense1" style="display:none">
+                                <table>
+                                   <tr>
+                                      <td>
+                                         <div style="max-width:25px;display:none" id="rightLicenserightresp2">
+                                            <img  src="{!$Resource.right}"  height="25" width="25" />
+                                         </div>
+                                         <div style="display:none" id="rightLicenseWrongresp2">
+                                            <img  src="{!$Resource.Wrong}"  height="25" width="25" />
+                                         </div>
+                                      </td>
+                                      <td style="max-width:125px;font-weight:bold">
+                                         <div style="display:none" id="rightLicenserightresp3">
+                                            Activation Code:   
+                                         </div>
+                                         <div style="display:none" id="rightLicenseWrongresp3">
+                                            Activation failed. 
+                                         </div>
+                                      </td>
+                                      <td style="min-width:275px;">
+                                         <div style="font-weight:bold" id="ActivationCode1">
+                                         </div>
+                                      </td>
+                                   </tr>
+                                </table>
+                             </div>
+                          </td>
+                       </tr>
+                    </table>
+                </div>
+                 
+                 </div>                    
+            </div>
+    </div>    
+    <div id="license_fail" class="popup-class" style="z-index:998;width:475px" >
+         <div class="popup-top-border"></div>
+            
+                      <div class="img-wrap">
+                            <span class="close2">&times;</span>                              
+                        </div>     
+            <div style="display: inline-block; height:100%;width: 100%;float:left">
+                <div>
+                <table>
+                    <tr>
+                        <td>
+                            <img  src="{!$Resource.Wrong}"  height="25" width="25" />
+                        </td>
+                        <td style="font-weight:bold;font-size:18px">
+                            <div  id="errorMsg1" style="width:400px">  </div>
+                        </td>
+                    </tr>                    
+                </table>  
+                 </div>             
+            </div>        
+             
+    </div>
+ 
+<!--Added By Mukul Goel, License Management Sprint 28, License Window >>Code Start<< --> 
+
+   <div id="license_win" class="popup-class" style="z-index:998;width:475px" >
+   <div class="popup-top-border"></div>
+   <div style="display: inline-block; height:100%;width: 100%;float:left">
+      <div class="popupHeader2" style="font-size:18px">
+         License
+         <div class="popupLabelBold"  style="vertical-align:center;line-height: 18px;font-size:18px;width: 60%" id="licenseNumber"></div>
+         <div class="img-wrap">
+            <span class="close">
+             <apex:image value="{!URLFOR($Resource.LicenseManagement, '/images/close.png')}" alt="x" /></span>                              
+         </div>
+      </div>
+      <div>
+         <div class="popupHeader2" style="font-size:16px;width:80%;line-height: 20px;" id ="EOCName"></div>
+      </div>
+      <div class="popupHeader2" style="padding-left:20px">
+         Product Code    
+         <div class="popupLabelBold" style="vertical-align:center;font-size:16px;width:60%;line-height: 18px;" id ="EOCCode"></div>
+      </div>
+         <div  id = "EntitlementMessageLic" style="padding: 6px;padding-left:18px;display:none"> <span style="display:table-cell;padding-right:6px;vertical-align:middle"> <img  src="{!$Resource.activation_note}"  height="25" width="25" /> </span><span style="font-weight:bold;display:table-cell;vertical-align:middle">Note: This is a parent license. Click Manage License to view all its entitlements.</span> </div>     
+      <div style="padding:4px">
+         <table>
+            <tr>
+               <td>
+                  <div class="popupLabelBold" style="font-size:12px;padding-left:27px">Details</div>
+               </td>
+               <td>
+                  <div style="padding-left:6px;font-size:11px;font-style:italic" id="manageLicense"></div>
+               </td>
+            </tr>
+         </table>
+      </div>
+     
+      <div style="margin-left:10px">
+         <div style="padding:4px">
+            <div  class="popupLabelBold" style="line-height:14px;;font-size:12px;">Activated: </div>
+            <div style="font-weight:bold;color:#166F09;;font-size:12px" class="popupValueHalf" id="activated"></div>
+         </div>
+         <div style="padding:4px">
+            <div class="popupLabelBold" style="line-height:14px;;font-size:12px">Purchased Units: </div>
+            <div style=";font-size:12px" class="popupValueHalf" id ="purchaseUnits"></div>
+         </div>
+       <!--   <div style="padding:4px">
+            <div class="popupLabelBold" style="line-height:14px;;font-size:12px">Grace Units:</div>
+            <div style=";font-size:12px" class="popupValueHalf" id="graceUnits"></div>
+         </div>--> 
+         <div style="padding:4px">
+            <div class="popupLabelBold" style="line-height:14px;;font-size:12px">Number of Times Activated:</div>
+            <div style=";font-size:12px" class="popupValueHalf" id="activateUnits"></div>
+         </div>
+         <div style="padding:4px">
+            <div  class="popupLabelBold" style="line-height:14px;;font-size:12px;">Activations Remaining: </div>
+            <div style="color:#166F09;font-weight:bold;;font-size:12px" class="popupValueHalf" id ="remainUnits"></div>
+         </div>
+         <div  id = "remainingUnitWarningMessage" style="padding:4px;display:none"> <span style="display:table-cell;vertical-align:middle"> <img  src="{!$Resource.activation_note}"  height="25" width="25" style="padding-right:6px"/> </span><span style="font-weight:bold;display:table-cell;vertical-align:middle">Note: Customer has exceeded the allotted activations. Finance will be notified of the additional activation.</span> </div>
+         <div  style="display:inline-block;width:100%">
+            <table style="width:100%">
+               <tr>
+                  <td>
+                    <table style="width:100%">
+                        <tr>
+                            <td style="max-width:65px">
+                                <div id="irvView" style="display:none"> <input type="text" placeholder="Enter IRV (Optional)" id="irvVal" name="IRV" style="width:150px;" /></div>
+                             </td>
+                             <td id="ActivateButtonDiv">
+                             </td>
+                        </tr>
+                    </table>
+                  </td>
+               </tr>
+               <tr>
+                  <td>                  
+                     <div  id="loadingLicense" style="display:none">
+                        <img  src="{!$Resource.loading}"  height="25" width="25" />
+                     </div>
+                     <div id="rightLicense" style="display:none">
+                        <table style="width:100%">
+                           <tr>
+                              <td>
+                                 <div style="max-width:25px;display:none" id="rightLicenserightresp">
+                                    <img  src="{!$Resource.right}"  height="25" width="25" />
+                                 </div>
+                                 <div style="display:none" id="rightLicenseWrongresp">
+                                    <img  src="{!$Resource.Wrong}"  height="25" width="25" />
+                                 </div>
+                              </td>
+                              <td style="max-width:125px;font-weight:bold">
+                                 <div style="display:none" id="rightLicenserightresp1">
+                                    Activation Code:   
+                                 </div>
+                                 <div style="display:none" id="rightLicenseWrongresp1">
+                                    Activation failed. 
+                                 </div>
+                              </td>
+                              <td style="min-width:275px;">
+                                 <div style="font-weight:bold" id="ActivationCode">
+                                 </div>
+                              </td>
+                           </tr>
+                        </table>
+                     </div>
+                  </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <br/>
+      <!--      <div class="popupLabelBold">Activity History: </div>-->
+   </div>
+</div>
+<!-- >>Code Stop<< -->   
+    
+    <div class="arrow-up" id="payment_arrow_up"></div>
+    <div class="arrow-up" id="suspend_arrow_up"></div>       
+    <div class="arrow-up-inner" id="payment_arrow_up_inner"></div>
+    <div class="arrow-up-inner" id="suspend_arrow_up_inner"></div>
+    <div class="arrow-left" id="asset_arrow_left"></div>       
+    <div class="arrow-left-inner" id="asset_arrow_left_inner"></div>
+    <div class="arrow-down" id="payment_arrow_down"></div>
+    <div class="arrow-down" id="suspend_arrow_down"></div>
+    <div class="arrow-up" id="license_arrow_up"></div>       
+    <div class="arrow-up-inner" id="license_arrow_up_inner"></div>    
+    <div class="arrow-down" id="license_arrow_down"></div>
+    <div class="arrow-down-inner" id="license_arrow_down_inner"></div>
+    <div class="arrow-down-inner" id="payment_arrow_down_inner"></div>
+    <div class="arrow-down-inner" id="suspend_arrow_down_inner"></div>
+    <div class="loading-window" id="loading-window" ><div class="loading-icon"></div></div>
+    <div class="cancel-popup" id="cancel-popup">
+        <div class="cancel-green-wrapper">
+            <div class="cancel-green-text" id="cancel-green-text"></div>
+        </div>
+        <!--<div class="cancel-end-wrapper">
+            <div class="cancel-end-text" id="cancel-end-text"></div>
+        </div> -->
+        <div class="cancel-button-wrapper">
+            <input type="button" class="btn cancel-button-close" onclick="assetjQuery$('#cancel-popup').css('display','none');" value="Ok"/>
+        </div>
+        
+    </div>
+    <div class="no-migrate-popup" id="no-migrate-popup">
+        <div class="no-migrate-red-wrapper">
+            <div class="no-migrate-red-text" id="no-migrate-red-text">No Migration Path is Available for this Product.</div>
+        </div>
+        <div class="no-migrate-end-wrapper">
+            <div class="no-migrate-end-text" id="no-migrate-end-text">If you wish to discontinue this product and add another:
+            <br />Suspend this product then create a new order for the new product.</div>
+        </div>
+        <div class="no-migrate-button-wrapper">
+            <input type="button" class="btn no-migrate-button-close" onclick="assetjQuery$('#no-migrate-popup').css('display','none');" value="Ok"/>
+        </div>
+    </div>
+    <script>
+        assetjQuery$ = jQuery.noConflict();
+        // Start - Changes for SA-559 
+        assetjQuery$(window).on('load',function(){              
+          filterKeyUp();
+        });
+        // End - Changes for SA-559  
+        assetjQuery$.fn.highlight = function(pat) {
+            function innerHighlight(node, pat) {
+                var skip = 0;
+                if (node.nodeType == 3) {
+                    var pos = node.data.toUpperCase().indexOf(pat);
+                    if (pos >= 0) {
+                        var spannode = document.createElement('span');
+                        spannode.className = 'highlight';
+                        var middlebit = node.splitText(pos);
+                        var endbit = middlebit.splitText(pat.length);
+                        var middleclone = middlebit.cloneNode(true);
+                        spannode.appendChild(middleclone);
+                        middlebit.parentNode.replaceChild(spannode, middlebit);
+                        skip = 1;
+                    }
+                } else if (node.nodeType == 1 && node.childNodes && !/(script|style)/i.test(node.tagName)) {
+                    for (var i = 0; i < node.childNodes.length; ++i) {
+                        i += innerHighlight(node.childNodes[i], pat);
+                    }
+                }
+                return skip;
+            }
+            return this.length && pat && pat.length ? this.each(function() {
+                innerHighlight(this, pat.toUpperCase());
+            }) : this;
+        };
+        
+        assetjQuery$.fn.removeHighlight = function() {
+            return this.find("span.highlight").each(function() {
+                this.parentNode.firstChild.nodeName;
+                with(this.parentNode) {
+                    replaceChild(this.firstChild, this);
+                    normalize();
+                }
+            }).end();
+        };
+        
+        assetjQuery$.fn.center = function() {
+            this.css("position", "absolute");
+            this.css("top", Math.max(0, ((assetjQuery$(window).height() - assetjQuery$(this).outerHeight()) / 2) +
+                assetjQuery$(window).scrollTop()) + "px");
+            this.css("left", Math.max(0, ((assetjQuery$(window).width() - assetjQuery$(this).outerWidth()) / 2) +
+                assetjQuery$(window).scrollLeft()) + "px");
+            return this;
+        }
+
+    </script>
+</body>
+</html>
+</apex:component>

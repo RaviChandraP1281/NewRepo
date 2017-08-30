@@ -1,0 +1,962 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title></title>
+</head>
+<body bgcolor="#f2f2f4" style="width: 100% !important;-webkit-text-size-adjust: none;-ms-text-size-adjust: none;margin: 0;padding: 0">
+<p>
+</p>
+<style type="text/css">/* Base */
+
+        body {
+            width: 100% !important;
+            -webkit-text-size-adjust: none;
+            -ms-text-size-adjust: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        p {
+            margin: 0;
+            padding: 0;
+        }
+
+        table,
+        table td {
+            border-collapse: collapse;
+            mso-table-lspace: 0;
+            mso-table-rspace: 0;
+        }
+
+        img {
+            display: block;
+            border: none;
+            outline: none;
+        }
+
+        sup {
+            line-height: 0;
+            font-size: 14px;
+            vertical-align: 7px;
+            text-decoration: none;
+        }
+
+        a {
+            color: #365ebf;
+        }
+
+        /* Templating */
+
+        table.row-wrapper {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+        }
+
+        table.row {
+            min-width: 680px;
+            width: 680px;
+        }
+
+        td.row {
+            padding-right: 30px;
+            padding-left: 30px;
+        }
+
+        table.content-block {
+        }
+
+        .hide-desktop {
+            display: none !important;
+        }
+
+        /* Row Padding (top and bottom padding to be used on rows) */
+
+        .row-padding-top-sml {
+            padding-top: 15px;
+        }
+
+        .row-padding-top-med {
+            padding-top: 30px;
+        }
+
+        .row-padding-top-lrg {
+            padding-top: 45px;
+        }
+
+        .row-padding-bottom-sml {
+            padding-bottom: 15px;
+        }
+
+        .row-padding-bottom-med {
+            padding-bottom: 30px;
+        }
+
+        .row-padding-bottom-lrg {
+            padding-bottom: 45px;
+        }
+
+        /*
+            Content Padding (used in various locations to introduce padding among content)
+            These padding styles only apply to bottom padding on content elements.
+        */
+
+        .content-padding-sml {
+            padding-bottom: 6px;
+        }
+
+        .content-padding-med {
+            padding-bottom: 12px;
+        }
+
+        .content-padding-lrg {
+            padding-bottom: 24px;
+        }
+
+        /* Colours (Intuit Specific) */
+
+        .light {
+            color: #ffffff;
+        }
+
+        .light a {
+            color: #ffffff;
+        }
+
+        .dark {
+            color: #333333;
+        }
+
+        .brand {
+            color: #365ebf;
+        }
+        /* Default */
+        .brand-red {
+            color: #e9494f;
+        }
+        /* Red */
+        .brand-forest {
+            color: #279216;
+        }
+        /* Forest */
+        .brand-green {
+            color: #74bd26;
+        }
+        .brand-light-green {
+            color: #c2e692;
+        }
+        /* Green */
+        .brand-blue {
+            color: #2985c0;
+        }
+        /* Blue */
+        .brand-cyan {
+            color: #66c1e1;
+        }
+        /* Cyan */
+        .brand-navy {
+            color: #16243f; 
+        }
+        .brand-navy2 {
+            color: #394b65; 
+        }
+        /* Navy */
+        .brand-orange {
+            color: #f3833f;
+        }
+        /* Orange */
+        .brand-purple {
+            color: #5e7ecc;
+        }
+        /* Yello*/
+        .brand-yellow {
+            color: #f2b21f;
+        }
+
+        /* Text Sizing */
+
+        td {
+            font-size: 14px;
+            line-height: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #535353;
+        }
+
+        .text-sans-serif {
+            font-family: Candara, Calibri, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+        }
+
+        .text-serif {
+            font-family: Georgia, Times, "Times New Roman", serif;
+        }
+
+        .text-nowrap {
+            white-space: nowrap;
+        }
+
+        .text-mice {
+            font-size: 10px;
+            line-height: 16px;
+        }
+
+        .text-small {
+            font-size: 12px;
+            line-height: 18px;
+        }
+
+        .text-normal {
+            font-size: 16px;
+            line-height: 22px;
+        }
+
+        .text-medium {
+            font-size: 18px;
+            line-height: 24px;
+        }
+
+        .text-large {
+            font-size: 24px;
+            line-height: 30px;
+        }
+
+        .text-hero {
+            font-size: 28px;
+            line-height: 36px;
+        }
+
+        @media only screen and (max-width: 679px) {
+            a[href^="tel"],
+            a[href^="sms"] {
+                text-decoration: none;
+                color: #ffffff !important;
+                pointer-events: none;
+                cursor: default;
+            }
+
+            .mobile_link a[href^="tel"],
+            .mobile_link a[href^="sms"] {
+                text-decoration: none;
+                color: #ffffff !important;
+                pointer-events: auto;
+                cursor: default;
+            }
+
+            .hide-mobile {
+                display: none !important;
+            }
+
+            table.row, table.content-block {
+                width: 100% !important;
+                min-width: 100% !important;
+                text-align: center !important;
+            }
+
+            table[class="section-inner"] {
+                width: 100% !important;
+                min-width: 100% !important;
+                text-align: center !important;
+                padding: 10px !important;
+            }
+
+            td.content-block {
+                text-align: center !important;
+            }
+
+                td.content-block img {
+                    display: inline-block !important;
+                }
+            /* TODO: Determine if we need this class anymore. */
+            /*td.center { text-align: center !important; }*/
+
+            img.mobile-image {
+                width: 100% !important;
+                height: auto;
+            }
+
+            img.mobile-image-medium {
+                width: 75% !important;
+                height: auto;
+            }
+
+            img.mobile-image-small {
+                width: 50% !important;
+                height: auto;
+            }
+          
+            /* TODO: Refactor this class to be something meaningful. */
+            td.m-spacing {
+                padding-bottom: 24px;
+            }
+        }
+                .appleLinksGrey a {
+		color: #888 !important;
+		text-decoration: none !important;
+	}
+
+        /* WARN: Some inliners inline media queries! If we see the mobile version on a desktop while litmus testing then that's probably the cause. */
+        @media only screen and (max-width: 321px) {
+            table.row {
+                width: 320px !important;
+                min-width: 320px !important;
+                text-align: center !important;
+            }
+        }
+</style>
+<!--[if gte mso 9]>
+    <xml>
+        <o:OfficeDocumentSettings>
+        <o:AllowPNG/>
+        <o:PixelsPerInch>96</o:PixelsPerInch>
+        </o:OfficeDocumentSettings>
+    </xml>
+    <![endif]-->
+<style type="text/css">/* Hotmail/Outlook.com Tweaks */
+        .ExternalClass, .ExternalClass p, .ExternalClass span, .ExternalClass font, .ExternalClass td, .ExternalClass div {
+            mso-line-height-rule: exactly;
+            line-height: 100%;
+        }
+
+            .ExternalClass img[class^=Emoji] {
+                width: 10px !important;
+                height: 10px !important;
+                display: inline !important;
+            }
+</style>
+<!-- START FRAME -->
+<table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="wrapper" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0" width="100%">
+   <tbody>
+      <tr>
+         <td style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0">
+         <table align="center" bgcolor="#f2f2f4" border="0" cellpadding="0" cellspacing="0" class="row-wrapper" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;margin: 0;padding: 0;width: 100%">
+            <tbody>
+               <tr>
+                  <td align="center" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0">
+                  <table border="0" cellpadding="0" cellspacing="0" class="row" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;min-width: 680px;width: 680px">
+                     <tbody>
+                        <tr>
+                           <td style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;" valign="top">
+                           <p style="font-family:Arial, 'Helvetica', sans-serif;color:#626262;margin:0;padding:0;font-size:11px;line-height:14px;text-align:left;"><br />
+                           Enable payments, how to videos, welcome guide, webinars and more...<br />
+                           <a href="http://e.intuit.com.au/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGhtBBH208zc8Tv1SbLw9MMDW9EjpffcNvzcJvmv1uPtzbCrfmXvXfVXtpKX%3DWAACT&amp;_ei_=Eq2tf9zs59idfPO1Sc_9BbliH92KQcW9QtPEyvM4wi-MVn70Nsnc8b7txhstwRjw3oJhy0brzU82yKk_3QxkLWcjDiDBDu1BMTxyfTcRsVM3sIGc5fSakMHY." style="color:#626262;text-decoration:underline;" target="_blank">View online</a><br />
+                           &nbsp;
+                           </p>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+         <!-- ROW BEGIN -->
+
+         <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="row-wrapper" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;margin: 0;padding: 0;width: 100%">
+            <tbody>
+               <tr>
+                  <td align="center" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0">
+                  <table border="0" cellpadding="0" cellspacing="0" class="row" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;min-width: 680px;width: 680px">
+                     <tbody>
+                        <tr>
+                           <td class="row row-padding-bottom-lrg row-padding-top-lrg" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;padding-right: 30px;padding-left: 30px;padding-bottom: 20px;padding-top: 45px" valign="top"><!-- CONTENT BLOCK BEGIN -->
+                           <table align="left" border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 620px">
+                              <tbody>
+                                 <tr>
+                                    <td align="left" class="content-block" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0" valign="top"><a href="http://e.intuit.com.au/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGhtBBH208zc8Tv1SbLw9MMDW9EjpffcNvzcJvmv1uPtzbCrfmXvXfVXtpKX%3DWABRT&amp;_ei_=Eq2tf9zs59idfPO1Sc_9BbliH92KQcW9QtPEyvM4wi-MVn70Nsnc8b7txhstwRjw3oJhy0brzU82yKk_3QxkLWcjDiDBDu1BMTxyfTcRsVM3sIGc5fSakMHY." style="color: #365ebf" target="_blank"><img alt="qb Intuit QuickBooks® Online." height="54" src="http://static.cdn.responsys.net/i2/responsysimages/intuaust/contentlibrary/z_smb_ftu_program_revised_20160317/ftu_email_series_day_14/Day_14_Revised_20160317/images/logo.png" style="display: inline;border: none;outline: none" width="180" /></a> <img alt="" height="43" src="http://static.cdn.responsys.net/i2/responsysimages/intuaust/contentlibrary/z_smb_ftu_program_revised_20160317/ftu_email_series_day_14/Day_14_Revised_20160317/images/separator.png" style="display:inline;" width="20" /> <a href="http://e.intuit.com.au/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGhtBBH208zc8Tv1SbLw9MMDW9EjpffcNvzcJvmv1uPtzbCrfmXvXfVXtpKX%3DWABTT&amp;_ei_=Eq2tf9zs59idfPO1Sc_9BbliH92KQcW9QtPEyvM4wi-MVn70Nsnc8b7txhstwRjw3oJhy0brzU82yKk_3QxkLWcjDiDBDu1BMTxyfTcRsVM3sIGc5fSakMHY." style="color: #365ebf" target="_blank"><img alt="P PayPal" height="41" src="http://static.cdn.responsys.net/i2/responsysimages/intuaust/contentlibrary/z_smb_ftu_program_revised_20160317/ftu_email_series_day_14/Day_14_Revised_20160317/images/logo-paypal.png" style="display: inline;border: none;outline: none" width="158" /></a></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                           <!-- CONTENT BLOCK END --></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+         <!-- ROW END --><!-- CONTENT BLOCK BEGIN -->
+
+         <table border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 100%">
+            <tbody>
+               <tr>
+                  <td align="center" class="content-block" style="font-size: 14px;line-height: 18px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0" valign="top"><a href="http://e.intuit.com.au/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGhtBBH208zc8Tv1SbLw9MMDW9EjpffcNvzcJvmv1uPtzbCrfmXvXfVXtpKX%3DWABWT&amp;_ei_=Eq2tf9zs59idfPO1Sc_9BbliH92KQcW9QtPEyvM4wi-MVn70Nsnc8b7txhstwRjw3oJhy0brzU82yKk_3QxkLWcjDiDBDu1BMTxyfTcRsVM3sIGc5fSakMHY." style="color: #365ebf" target="_blank"><img alt="Save time with more ways to accept payments with PayPal and Credit Cards using QuickBooks Online. Imports customer data. Accept Payments. Increases Accuracy. Saves you time" class="mobile-image" height="334" src="http://static.cdn.responsys.net/i2/responsysimages/intuaust/contentlibrary/z_smb_ftu_program_revised_20160317/ftu_email_series_day_14/Day_14_Revised_20160317/images/hero.jpg" style="display: block;border: none;outline: none" width="680" /></a><br />
+                  &nbsp;</td>
+               </tr>
+            </tbody>
+         </table>
+         <!-- CONTENT BLOCK END --><!-- ROW BEGIN -->
+
+         <table align="center" bgcolor="#74bd26" border="0" cellpadding="0" cellspacing="0" class="row-wrapper" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;margin: 0;padding: 0;width: 100%">
+            <tbody>
+               <tr>
+                  <td align="center" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0">
+                  <table border="0" cellpadding="0" cellspacing="0" class="row" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;min-width: 680px;width: 680px">
+                     <tbody>
+                        <tr>
+                           <td class="row row-padding-bottom-lrg row-padding-top-lrg" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;padding-right: 30px;padding-left: 30px;padding-bottom: 45px;padding-top: 45px" valign="top"><!-- CONTENT BLOCK BEGIN -->
+                           <table align="center" border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 100%">
+                              <tbody>
+                                 <tr>
+                                    <td align="center" class="content-block text-large light text-sans-serif content-padding-med" style="font-size: 28px;line-height: 30px;font-family: Candara, Calibri, Segoe, &quot;Segoe UI&quot;, Optima, Arial, sans-serif;color: #ffffff;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;padding-bottom: 5px" valign="top"><strong>Say goodbye to chasing late payments</strong></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                           <!-- CONTENT BLOCK END --><!-- CONTENT BLOCK BEGIN -->
+
+                           <table align="center" border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 100%">
+                              <tbody>
+                                 <tr>
+                                    <td align="center" class="content-block light" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #ffffff;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0" valign="top">Intuit QuickBooks Online is enabling small businesses to accept online invoice payments from their clients in an easy and convenient way by partnering with PayPal.<br />
+                                    &nbsp;</td>
+                                 </tr>
+                                 <tr>
+                                    <td align="center" class="content-block" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0" valign="top"><!-- BUTTON BEGIN --><!--[if mso]><table cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="#0097D0"><![endif]--><strong><a href="http://e.intuit.com.au/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGhtBBH208zc8Tv1SbLw9MMDW9EjpffcNvzcJvmv1uPtzbCrfmXvXfVXtpKX%3DWABAT&amp;_ei_=Eq2tf9zs59idfPO1Sc_9BbliH92KQcW9QtPEyvM4wi-MVn70Nsnc8b7txhstwRjw3oJhy0brzU82yKk_3QxkLWcjDiDBDu1BMTxyfTcRsVM3sIGc5fSakMHY." style="color: #ffffff;font-size: 16px;font-family: Helvetica, Arial, sans-serif;text-decoration: none;border-radius: 5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;background-color: #0097D0;border-top: 12px solid #0097D0;border-bottom: 12px solid #0097D0;border-right: 30px solid #0097D0;border-left: 30px solid #0097D0;padding-top: 0px;padding-bottom: 0px;padding-left: 0px;padding-right: 0px;display: inline-block" target="_blank">GET STARTED NOW </a></strong> <!--[if mso]></td></tr></table><![endif]--> <!-- BUTTON END --></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                           <!-- CONTENT BLOCK END --></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+         <!-- ROW END --><!-- ROW BEGIN -->
+
+         <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="row-wrapper" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;margin: 0;padding: 0;width: 100%">
+            <tbody>
+               <tr>
+                  <td align="center" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0">
+                  <table border="0" cellpadding="0" cellspacing="0" class="row" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;min-width: 680px;width: 680px">
+                     <tbody>
+                        <tr>
+                           <td class="row row-padding-bottom-med row-padding-top-lrg" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;padding-right: 30px;padding-left: 30px;padding-bottom: 30px;padding-top: 45px" valign="top"><!-- CONTENT BLOCK BEGIN -->
+                           <table align="center" border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 100%">
+                              <tbody>
+                                 <tr>
+                                    <td align="center" class="content-block text-large text-sans-serif" style="font-size: 20px;line-height: 26px;font-family: Candara, Calibri, Segoe, &quot;Segoe UI&quot;, Optima, Arial, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0" valign="top"><strong>Let&#39;s get started with an overview of Accept payments <span style="white-space:nowrap;">with PayPal:</span></strong></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                           <!-- CONTENT BLOCK END --></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+         <!-- ROW END --><!-- ROW BEGIN -->
+
+         <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="row-wrapper" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;margin: 0;padding: 0;width: 100%">
+            <tbody>
+               <tr>
+                  <td align="center" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0">
+                  <table border="0" cellpadding="0" cellspacing="0" class="row" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;min-width: 680px;width: 680px">
+                     <tbody>
+                        <tr>
+                           <td class="row row-padding-bottom-med" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;padding-right: 30px;padding-left: 30px;padding-bottom: 30px" valign="top"><a href="http://e.intuit.com.au/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGhtBBH208zc8Tv1SbLw9MMDW9EjpffcNvzcJvmv1uPtzbCrfmXvXfVXtpKX%3DWABCT&amp;_ei_=Eq2tf9zs59idfPO1Sc_9BbliH92KQcW9QtPEyvM4wi-MVn70Nsnc8b7txhstwRjw3oJhy0brzU82yKk_3QxkLWcjDiDBDu1BMTxyfTcRsVM3sIGc5fSakMHY." target="_blank"><img alt="An easy and convenient way to get paid" border="0" class="mobile-image" height="372" src="http://static.cdn.responsys.net/i2/responsysimages/intuaust/contentlibrary/z_smb_ftu_program_revised_20160317/ftu_email_series_day_14/Day_14_Revised_20160317/images/create-invoice.jpg" style="display: block;border: none;outline: none" width="620" /></a></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+         <!-- ROW END --><!-- ROW BEGIN -->
+
+         <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="row-wrapper" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;margin: 0;padding: 0;width: 100%">
+            <tbody>
+               <tr>
+                  <td align="center" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0">
+                  <table border="0" cellpadding="0" cellspacing="0" class="row" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;min-width: 680px;width: 680px">
+                     <tbody>
+                        <tr>
+                           <td class="row row-padding-bottom-lrg" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;padding-right: 30px;padding-left: 30px;padding-bottom: 45px" valign="top"><!-- CONTENT BLOCK BEGIN -->
+                           <table border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 100%">
+                              <tbody>
+                                 <tr>
+                                    <td align="center" class="content-block" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0" valign="top"><!-- CONTENT BLOCK BEGIN -->
+                                    <table border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 100%">
+                                       <tbody>
+                                          <tr>
+                                             <td align="left" class="content-block text-medium text-sans-serif content-padding-sml" style="font-size: 18px;line-height: 24px;font-family: Candara, Calibri, Segoe, &quot;Segoe UI&quot;, Optima, Arial, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;padding-bottom: 6px" valign="top"><strong>1. An easy and convenient way to get paid</strong></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <!-- CONTENT BLOCK END --><!-- CONTENT BLOCK BEGIN -->
+
+                                    <table border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 100%">
+                                       <tbody>
+                                          <tr>
+                                             <td align="left" class="content-block content-padding-med" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;padding-bottom: 12px" valign="top">Send invoices from QuickBooks Online with a &quot;Pay Now&quot; link, so customers can make instant online payments via PayPal, credit cards or debit cards.</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <!-- CONTENT BLOCK END --><!-- CONTENT BLOCK BEGIN -->
+
+                                    <table border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 100%">
+                                       <tbody>
+                                          <tr>
+                                             <td align="left" class="content-block" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0" valign="top"><!-- BUTTON BEGIN --><!--[if mso]><table cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="#ffffff"><![endif]--><strong><a href="http://e.intuit.com.au/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGhtBBH208zc8Tv1SbLw9MMDW9EjpffcNvzcJvmv1uPtzbCrfmXvXfVXtpKX%3DWACRT&amp;_ei_=Eq2tf9zs59idfPO1Sc_9BbliH92KQcW9QtPEyvM4wi-MVn70Nsnc8b7txhstwRjw3oJhy0brzU82yKk_3QxkLWcjDiDBDu1BMTxyfTcRsVM3sIGc5fSakMHY." style="color: #535353;font-size: 12px;font-family: Helvetica, Arial, sans-serif;text-decoration: none;border-radius: 5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;background-color: #ffffff;border-top: 1px solid #74bd26;border-bottom: 1px solid #74bd26;border-right: 1px solid #74bd26;border-left: 1px solid #74bd26;padding-top: 8px;padding-bottom: 8px;padding-left: 15px;padding-right: 15px;display: inline-block" target="_blank">SEE HOW TO USE IT </a></strong> <!--[if mso]></td></tr></table><![endif]--> <!-- BUTTON END --></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <!-- CONTENT BLOCK END --></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                           <!-- CONTENT BLOCK END --></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+         <!-- ROW END --><!-- ROW BEGIN -->
+
+         <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="row-wrapper" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;margin: 0;padding: 0;width: 100%">
+            <tbody>
+               <tr>
+                  <td align="center" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0">
+                  <table border="0" cellpadding="0" cellspacing="0" class="row" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;min-width: 680px;width: 680px">
+                     <tbody>
+                        <tr>
+                           <td class="row row-padding-bottom-lrg" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;padding-right: 30px;padding-left: 30px;padding-bottom: 45px" valign="top"><!-- CONTENT BLOCK BEGIN -->
+                           <table align="right" border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 295px">
+                              <tbody>
+                                 <tr>
+                                    <td align="left" class="content-block m-spacing" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0" valign="top"><a href="http://e.intuit.com.au/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGhtBBH208zc8Tv1SbLw9MMDW9EjpffcNvzcJvmv1uPtzbCrfmXvXfVXtpKX%3DWACTT&amp;_ei_=Eq2tf9zs59idfPO1Sc_9BbliH92KQcW9QtPEyvM4wi-MVn70Nsnc8b7txhstwRjw3oJhy0brzU82yKk_3QxkLWcjDiDBDu1BMTxyfTcRsVM3sIGc5fSakMHY." style="color: #365ebf" target="_blank"><img alt="Securely import your PayPal sales transactions, fees and taxes. Pay now" class="mobile-image" height="215" src="http://static.cdn.responsys.net/i2/responsysimages/intuaust/contentlibrary/z_smb_ftu_program_revised_20160317/ftu_email_series_day_14/Day_14_Revised_20160317/images/view-invoice-pay-now.jpg" style="display: block;border: none;outline: none" width="295" /></a></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                           <!-- CONTENT BLOCK END --><!-- CONTENT BLOCK BEGIN -->
+
+                           <table align="left" border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 295px">
+                              <tbody>
+                                 <tr>
+                                    <td align="center" class="content-block" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0" valign="top"><!-- CONTENT BLOCK BEGIN -->
+                                    <table border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 295px">
+                                       <tbody>
+                                          <tr>
+                                             <td align="left" class="content-block text-medium text-sans-serif h-spacing" style="font-size: 18px;line-height: 24px;font-family: Candara, Calibri, Segoe, &quot;Segoe UI&quot;, Optima, Arial, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0" valign="top"><strong>2. Securely import your PayPal sales transactions, fees and taxes</strong></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <!-- CONTENT BLOCK END --><!-- CONTENT BLOCK BEGIN -->
+
+                                    <table border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 295px">
+                                       <tbody>
+                                          <tr>
+                                             <td align="left" class="content-block content-padding-med" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;padding-bottom: 12px" valign="top">Once you allow QuickBooks Online to access your PayPal account, your data will import every day. You also have an option to import up to 18 months of past transactions.</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <!-- CONTENT BLOCK END --><!-- CONTENT BLOCK BEGIN -->
+
+                                    <table border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 295px">
+                                       <tbody>
+                                          <tr>
+                                             <td align="left" class="content-block" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0" valign="top"><!-- BUTTON BEGIN --><!--[if mso]><table cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="#ffffff"><![endif]--><strong><a href="http://e.intuit.com.au/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGhtBBH208zc8Tv1SbLw9MMDW9EjpffcNvzcJvmv1uPtzbCrfmXvXfVXtpKX%3DWACWT&amp;_ei_=Eq2tf9zs59idfPO1Sc_9BbliH92KQcW9QtPEyvM4wi-MVn70Nsnc8b7txhstwRjw3oJhy0brzU82yKk_3QxkLWcjDiDBDu1BMTxyfTcRsVM3sIGc5fSakMHY." style="color: #535353;font-size: 12px;font-family: Helvetica, Arial, sans-serif;text-decoration: none;border-radius: 5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;background-color: #ffffff;border-top: 1px solid #74bd26;border-bottom: 1px solid #74bd26;border-right: 1px solid #74bd26;border-left: 1px solid #74bd26;padding-top: 8px;padding-bottom: 8px;padding-left: 15px;padding-right: 15px;display: inline-block" target="_blank">LEARN MORE </a></strong> <!--[if mso]></td></tr></table><![endif]--> <!-- BUTTON END --></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <!-- CONTENT BLOCK END --></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                           <!-- CONTENT BLOCK END --></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+         <!-- ROW END --><!-- ROW BEGIN -->
+
+         <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="row-wrapper" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;margin: 0;padding: 0;width: 100%">
+            <tbody>
+               <tr>
+                  <td align="center" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0">
+                  <table border="0" cellpadding="0" cellspacing="0" class="row" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;min-width: 680px;width: 680px">
+                     <tbody>
+                        <tr>
+                           <td class="row row-padding-bottom-lrg" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;padding-right: 30px;padding-left: 30px;padding-bottom: 45px" valign="top"><!-- CONTENT BLOCK BEGIN -->
+                           <table align="right" border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 295px">
+                              <tbody>
+                                 <tr>
+                                    <td align="left" class="content-block m-spacing" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0" valign="top"><a href="http://e.intuit.com.au/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGhtBBH208zc8Tv1SbLw9MMDW9EjpffcNvzcJvmv1uPtzbCrfmXvXfVXtpKX%3DWACAT&amp;_ei_=Eq2tf9zs59idfPO1Sc_9BbliH92KQcW9QtPEyvM4wi-MVn70Nsnc8b7txhstwRjw3oJhy0brzU82yKk_3QxkLWcjDiDBDu1BMTxyfTcRsVM3sIGc5fSakMHY." style="color: #365ebf" target="_blank"><img alt="Sales receipts created. invoiving via Paypal Payment" class="mobile-image" height="215" src="http://static.cdn.responsys.net/i2/responsysimages/intuaust/contentlibrary/z_smb_ftu_program_revised_20160317/ftu_email_series_day_14/Day_14_Revised_20160317/images/sales-transactions.jpg" style="display: block;border: none;outline: none" width="295" /></a></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                           <!-- CONTENT BLOCK END --><!-- CONTENT BLOCK BEGIN -->
+
+                           <table align="left" border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 295px">
+                              <tbody>
+                                 <tr>
+                                    <td align="center" class="content-block" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0" valign="top"><!-- CONTENT BLOCK BEGIN -->
+                                    <table border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 295px">
+                                       <tbody>
+                                          <tr>
+                                             <td align="left" class="content-block text-medium text-sans-serif" style="font-size: 18px;line-height: 24px;font-family: Candara, Calibri, Segoe, &quot;Segoe UI&quot;, Optima, Arial, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0" valign="top"><strong>3. Sales receipts created</strong></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <!-- CONTENT BLOCK END --><!-- CONTENT BLOCK BEGIN -->
+
+                                    <table border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 295px">
+                                       <tbody>
+                                          <tr>
+                                             <td align="left" class="content-block content-padding-med" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;padding-bottom: 12px" valign="top">We&#39;ll create sales receipts in QuickBooks Online for you, while syncing other key details including amount of sale, fees and taxes from your PayPal account.</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <!-- CONTENT BLOCK END --><!-- CONTENT BLOCK BEGIN -->
+
+                                    <table border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 295px">
+                                       <tbody>
+                                          <tr>
+                                             <td align="left" class="content-block" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0" valign="top"><!-- BUTTON BEGIN --><!--[if mso]><table cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="#ffffff"><![endif]--><strong><a href="http://e.intuit.com.au/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGhtBBH208zc8Tv1SbLw9MMDW9EjpffcNvzcJvmv1uPtzbCrfmXvXfVXtpKX%3DWACCT&amp;_ei_=Eq2tf9zs59idfPO1Sc_9BbliH92KQcW9QtPEyvM4wi-MVn70Nsnc8b7txhstwRjw3oJhy0brzU82yKk_3QxkLWcjDiDBDu1BMTxyfTcRsVM3sIGc5fSakMHY." style="color: #535353;font-size: 12px;font-family: Helvetica, Arial, sans-serif;text-decoration: none;border-radius: 5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;background-color: #ffffff;border-top: 1px solid #74bd26;border-bottom: 1px solid #74bd26;border-right: 1px solid #74bd26;border-left: 1px solid #74bd26;padding-top: 8px;padding-bottom: 8px;padding-left: 15px;padding-right: 15px;display: inline-block" target="_blank">FIND OUT MORE </a></strong> <!--[if mso]></td></tr></table><![endif]--> <!-- BUTTON END --></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <!-- CONTENT BLOCK END --></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                           <!-- CONTENT BLOCK END --></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+         <!-- ROW END --><!-- ROW BEGIN -->
+
+         <table align="center" bgcolor="#74bd26" border="0" cellpadding="0" cellspacing="0" class="row-wrapper" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;margin: 0;padding: 0;width: 100%">
+            <tbody>
+               <tr>
+                  <td align="center" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0">
+                  <table border="0" cellpadding="0" cellspacing="0" class="row" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;min-width: 680px;width: 680px">
+                     <tbody>
+                        <tr>
+                           <td class="row row-padding-bottom-lrg row-padding-top-lrg" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;padding-right: 30px;padding-left: 30px;padding-bottom: 45px;padding-top: 45px" valign="top"><!-- CONTENT BLOCK BEGIN -->
+                           <table align="left" border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 295px">
+                              <tbody>
+                                 <tr>
+                                    <td align="left" class="content-block" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0" valign="top"><!-- CONTENT BLOCK BEGIN -->
+                                    <table align="left" border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 40px">
+                                       <tbody>
+                                          <tr>
+                                             <td align="left" class="content-block" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0" valign="top"><img alt="Accept payements with PayPal tip" height="34" src="http://static.cdn.responsys.net/i2/responsysimages/intuaust/contentlibrary/z_smb_ftu_program_revised_20160317/ftu_email_series_day_14/Day_14_Revised_20160317/images/icon-asterisk-green.jpg" style="display: block;border: none;outline: none" width="34" /></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <!-- CONTENT BLOCK END --><!-- CONTENT BLOCK BEGIN -->
+
+                                    <table align="left" border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: auto">
+                                       <tbody>
+                                          <tr>
+                                             <td align="left" class="content-block text-hero text-sans-serif light" style="font-size: 28px;line-height: 36px;font-family: Candara, Calibri, Segoe, &quot;Segoe UI&quot;, Optima, Arial, sans-serif;color: #ffffff;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;" valign="top">Accept payments<br />
+                                             with PayPal tip</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <!-- CONTENT BLOCK END --></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                           <!-- CONTENT BLOCK END --><!-- CONTENT BLOCK BEGIN -->
+
+                           <table align="right" border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 295px">
+                              <tbody>
+                                 <tr>
+                                    <td align="left" class="content-block light" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #ffffff;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;padding-top:9px;" valign="top">Your expenses are downloaded from your PayPal Account into default categories within your QuickBooks Online account.</td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                           <!-- CONTENT BLOCK END --></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+         <!-- ROW END --><!-- ROW BEGIN -->
+
+         <table align="center" bgcolor="#0097d0" border="0" cellpadding="0" cellspacing="0" class="row-wrapper" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;margin: 0;padding: 0;width: 100%">
+            <tbody>
+               <tr>
+                  <td align="center" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0">
+                  <table border="0" cellpadding="0" cellspacing="0" class="row" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;min-width: 680px;width: 680px">
+                     <tbody>
+                        <tr>
+                           <td class="row row-padding-bottom-lrg row-padding-top-lrg" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;padding-right: 30px;padding-left: 30px;padding-bottom: 45px;padding-top: 45px" valign="top"><!-- CONTENT BLOCK BEGIN -->
+                           <table align="left" border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 295px">
+                              <tbody>
+                                 <tr>
+                                    <td align="left" class="content-block m-spacing" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0" valign="top"><!-- CONTENT BLOCK BEGIN -->
+                                    <table border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 100%">
+                                       <tbody>
+                                          <tr>
+                                             <td align="center" class="content-block content-padding-lrg" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;padding-bottom: 24px" valign="top"><a href="http://e.intuit.com.au/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGhtBBH208zc8Tv1SbLw9MMDW9EjpffcNvzcJvmv1uPtzbCrfmXvXfVXtpKX%3DWADRT&amp;_ei_=Eq2tf9zs59idfPO1Sc_9BbliH92KQcW9QtPEyvM4wi-MVn70Nsnc8b7txhstwRjw3oJhy0brzU82yKk_3QxkLWcjDiDBDu1BMTxyfTcRsVM3sIGc5fSakMHY." style="color: #365ebf" target="_blank"><img alt="Take a quick tour." class="mobile-image" height="169" src="http://static.cdn.responsys.net/i2/responsysimages/intuaust/contentlibrary/z_smb_ftu_program_revised_20160317/ftu_email_series_day_14/Day_14_Revised_20160317/images/quick-tour.jpg" style="display: block;border: none;outline: none" width="295" /></a></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <!-- CONTENT BLOCK END --><!-- CONTENT BLOCK BEGIN -->
+
+                                    <table border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 100%">
+                                       <tbody>
+                                          <tr>
+                                             <td align="left" class="content-block text-medium light text-sans-serif content-padding-med" style="font-size: 18px;line-height: 24px;font-family: Candara, Calibri, Segoe, &quot;Segoe UI&quot;, Optima, Arial, sans-serif;color: #ffffff;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;padding-bottom: 12px" valign="top"><strong>Take a quick tour.</strong></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <!-- CONTENT BLOCK END --><!-- CONTENT BLOCK BEGIN -->
+
+                                    <table border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 100%">
+                                       <tbody>
+                                          <tr>
+                                             <td align="left" class="content-block light content-padding-lrg" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #ffffff;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;padding-bottom: 24px" valign="top">Learn how to set-up Payments in your QuickBooks Online account and raise invoices with &quot;Pay now&quot; button.</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <!-- CONTENT BLOCK END --><!-- CONTENT BLOCK BEGIN -->
+
+                                    <table border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 100%">
+                                       <tbody>
+                                          <tr>
+                                             <td align="left" class="content-block" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0" valign="top"><!-- BUTTON BEGIN --><!--[if mso]><table cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="#ffffff"><![endif]--><strong><a href="http://e.intuit.com.au/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGhtBBH208zc8Tv1SbLw9MMDW9EjpffcNvzcJvmv1uPtzbCrfmXvXfVXtpKX%3DWADTT&amp;_ei_=Eq2tf9zs59idfPO1Sc_9BbliH92KQcW9QtPEyvM4wi-MVn70Nsnc8b7txhstwRjw3oJhy0brzU82yKk_3QxkLWcjDiDBDu1BMTxyfTcRsVM3sIGc5fSakMHY." style="color: #535353;font-size: 12px;font-family: Helvetica, Arial, sans-serif;text-decoration: none;border-radius: 5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;background-color: #ffffff;border-top: 1px solid #74bd26;border-bottom: 1px solid #74bd26;border-right: 1px solid #74bd26;border-left: 1px solid #74bd26;padding-top: 8px;padding-bottom: 8px;padding-left: 15px;padding-right: 15px;display: inline-block" target="_blank">SEE IT IN ACTION </a></strong> <!--[if mso]></td></tr></table><![endif]--> <!-- BUTTON END --></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <!-- CONTENT BLOCK END --></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                           <!-- CONTENT BLOCK END --><!-- CONTENT BLOCK BEGIN -->
+
+                           <table align="right" border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 295px">
+                              <tbody>
+                                 <tr>
+                                    <td align="left" class="content-block" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0" valign="top"><!-- CONTENT BLOCK BEGIN -->
+                                    <table border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 100%">
+                                       <tbody>
+                                          <tr>
+                                             <td align="center" class="content-block content-padding-lrg" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;padding-bottom: 24px" valign="top"><a href="http://e.intuit.com.au/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGhtBBH208zc8Tv1SbLw9MMDW9EjpffcNvzcJvmv1uPtzbCrfmXvXfVXtpKX%3DWADWT&amp;_ei_=Eq2tf9zs59idfPO1Sc_9BbliH92KQcW9QtPEyvM4wi-MVn70Nsnc8b7txhstwRjw3oJhy0brzU82yKk_3QxkLWcjDiDBDu1BMTxyfTcRsVM3sIGc5fSakMHY." style="color: #365ebf" target="_blank"><img alt="Or get started now." class="mobile-image" height="169" src="http://static.cdn.responsys.net/i2/responsysimages/intuaust/contentlibrary/z_smb_ftu_program_revised_20160317/ftu_email_series_day_14/Day_14_Revised_20160317/images/get-started-now.jpg" style="display: block;border: none;outline: none" width="295" /></a></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <!-- CONTENT BLOCK END --><!-- CONTENT BLOCK BEGIN -->
+
+                                    <table border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 100%">
+                                       <tbody>
+                                          <tr>
+                                             <td align="left" class="content-block text-normal light content-padding-med" style="font-size: 16px;line-height: 22px;font-family: Arial, Helvetica, sans-serif;color: #ffffff;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;padding-bottom: 12px" valign="top"><strong>Or get started now.</strong></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <!-- CONTENT BLOCK END --><!-- CONTENT BLOCK BEGIN -->
+
+                                    <table border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 100%">
+                                       <tbody>
+                                          <tr>
+                                             <td align="left" class="content-block light content-padding-lrg" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #ffffff;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;padding-bottom: 24px" valign="top">Download Accept Payments with PayPal Welcome Guide to get up to speed on how to start accepting payments with PayPal using QuickBooks Online</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <!-- CONTENT BLOCK END --><!-- CONTENT BLOCK BEGIN -->
+
+                                    <table border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 100%">
+                                       <tbody>
+                                          <tr>
+                                             <td align="left" class="content-block" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0" valign="top"><!-- BUTTON BEGIN --><!--[if mso]><table cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="#ffffff"><![endif]--><strong><a href="http://e.intuit.com.au/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGhtBBH208zc8Tv1SbLw9MMDW9EjpffcNvzcJvmv1uPtzbCrfmXvXfVXtpKX%3DWADAT&amp;_ei_=Eq2tf9zs59idfPO1Sc_9BbliH92KQcW9QtPEyvM4wi-MVn70Nsnc8b7txhstwRjw3oJhy0brzU82yKk_3QxkLWcjDiDBDu1BMTxyfTcRsVM3sIGc5fSakMHY." style="color: #535353;font-size: 12px;font-family: Helvetica, Arial, sans-serif;text-decoration: none;border-radius: 5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;background-color: #ffffff;border-top: 1px solid #74bd26;border-bottom: 1px solid #74bd26;border-right: 1px solid #74bd26;border-left: 1px solid #74bd26;padding-top: 8px;padding-bottom: 8px;padding-left: 15px;padding-right: 15px;display: inline-block" target="_blank">DOWNLOAD NOW </a></strong> <!--[if mso]></td></tr></table><![endif]--> <!-- BUTTON END --></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <!-- CONTENT BLOCK END --></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                           <!-- CONTENT BLOCK END --></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+         <!-- ROW END --><!-- ROW BEGIN -->
+
+         <table align="center" bgcolor="#ffffff" border="0" cellpadding="0" cellspacing="0" class="row-wrapper" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;margin: 0;padding: 0;width: 100%">
+            <tbody>
+               <tr>
+                  <td align="center" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0">
+                  <table border="0" cellpadding="0" cellspacing="0" class="row" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;min-width: 680px;width: 680px">
+                     <tbody>
+                        <tr>
+                           <td class="row row-padding-bottom-lrg row-padding-top-lrg" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;padding-right: 30px;padding-left: 30px;padding-bottom: 45px;padding-top: 45px" valign="top">
+                           <table border="0" cellpadding="0" cellspacing="0" class="section-inner" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0" width="620">
+                              <tbody>
+                                 <tr>
+                                    <td class="row-padding-bottom-med" style="font-size: 14px;line-height: 0;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;padding-bottom: 30px;border-top: 3px solid #74bd26"></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                           <!-- CONTENT BLOCK BEGIN -->
+
+                           <table align="left" border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 50px">
+                              <tbody>
+                                 <tr>
+                                    <td align="left" class="content-block" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0" valign="top"><img alt="Want to learn more?" border="0" height="34" src="http://static.cdn.responsys.net/i2/responsysimages/intuaust/contentlibrary/z_smb_ftu_program_revised_20160317/ftu_email_series_day_14/Day_14_Revised_20160317/images/icon-question-mark-white.jpg" style="display: block;border: none;outline: none" width="34" /></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                           <!-- CONTENT BLOCK END --><!-- CONTENT BLOCK BEGIN -->
+
+                           <table align="left" border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 480px">
+                              <tbody>
+                                 <tr>
+                                    <td align="left" class="content-block text-hero content-padding-med" style="font-size: 28px;line-height: 36px;font-family: Arial, Helvetica, sans-serif;color: #74bd26;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;padding-bottom: 12px" valign="top">Want to learn more?</td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                           <!-- CONTENT BLOCK END --><br />
+                           <!-- Break for Firefox layout issues. --><!-- CONTENT BLOCK BEGIN -->
+                           <table align="right" border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 570px">
+                              <tbody>
+                                 <tr>
+                                    <td align="left" class="content-block" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0" valign="top"><!-- CONTENT BLOCK BEGIN -->
+                                    <table border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 100%">
+                                       <tbody>
+                                          <tr>
+                                             <td align="left" class="content-block text-normal" style="font-size: 16px;line-height: 22px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0" valign="top"><strong>Check out our FREE training.</strong></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <!-- CONTENT BLOCK END --><!-- CONTENT BLOCK BEGIN -->
+
+                                    <table border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 100%">
+                                       <tbody>
+                                          <tr>
+                                             <td align="left" class="content-block content-padding-med" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;padding-bottom: 12px" valign="top">We&#39;re here to help you advance your knowledge to start accepting payments using QuickBooks Online with our 60 mins pre-recorded webinar.</td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <!-- CONTENT BLOCK END --><!-- CONTENT BLOCK BEGIN -->
+
+                                    <table border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 100%">
+                                       <tbody>
+                                          <tr>
+                                             <td align="left" class="content-block" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0" valign="top"><strong><a href="http://e.intuit.com.au/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGhtBBH208zc8Tv1SbLw9MMDW9EjpffcNvzcJvmv1uPtzbCrfmXvXfVXtpKX%3DWADCT&amp;_ei_=Eq2tf9zs59idfPO1Sc_9BbliH92KQcW9QtPEyvM4wi-MVn70Nsnc8b7txhstwRjw3oJhy0brzU82yKk_3QxkLWcjDiDBDu1BMTxyfTcRsVM3sIGc5fSakMHY." style="color: #535353;font-size: 12px;font-family: Helvetica, Arial, sans-serif;text-decoration: none;border-radius: 5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;background-color: #ffffff;border-top: 1px solid #74bd26;border-bottom: 1px solid #74bd26;border-right: 1px solid #74bd26;border-left: 1px solid #74bd26;padding-top: 8px;padding-bottom: 8px;padding-left: 15px;padding-right: 15px;display: inline-block" target="_blank">WATCH HERE</a></strong></td>
+                                          </tr>
+                                       </tbody>
+                                    </table>
+                                    <!-- CONTENT BLOCK END --></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                           <!-- CONTENT BLOCK END --></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+         <!-- ROW END --><!-- ROW BEGIN -->
+
+         <table align="center" bgcolor="#74bd26" border="0" cellpadding="0" cellspacing="0" class="row-wrapper" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;margin: 0;padding: 0;width: 100%">
+            <tbody>
+               <tr>
+                  <td align="center" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0">
+                  <table border="0" cellpadding="0" cellspacing="0" class="row" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;min-width: 680px;width: 680px">
+                     <tbody>
+                        <tr>
+                           <td class="row row-padding-bottom-lrg row-padding-top-lrg" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;padding-right: 30px;padding-left: 30px;padding-bottom: 45px;padding-top: 45px" valign="top"><!-- CONTENT BLOCK BEGIN -->
+                           <table align="center" border="0" cellpadding="0" cellspacing="0" class="content-block" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;width: 100%">
+                              <tbody>
+                                 <tr>
+                                    <td align="center" class="content-block" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0" valign="top"><!-- BUTTON BEGIN --><!--[if mso]><table cellpadding="0" cellspacing="0" border="0"><tr><td bgcolor="#0097D0"><![endif]--><strong><a href="http://e.intuit.com.au/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGhtBBH208zc8Tv1SbLw9MMDW9EjpffcNvzcJvmv1uPtzbCrfmXvXfVXtpKX%3DWBRRT&amp;_ei_=Eq2tf9zs59idfPO1Sc_9BbliH92KQcW9QtPEyvM4wi-MVn70Nsnc8b7txhstwRjw3oJhy0brzU82yKk_3QxkLWcjDiDBDu1BMTxyfTcRsVM3sIGc5fSakMHY." style="color: #ffffff;font-size: 16px;font-family: Helvetica, Arial, sans-serif;text-decoration: none;border-radius: 5px;-webkit-border-radius: 5px;-moz-border-radius: 5px;background-color: #0097D0;border-top: 12px solid #0097D0;border-bottom: 12px solid #0097D0;border-right: 30px solid #0097D0;border-left: 30px solid #0097D0;padding-top: 0px;padding-bottom: 0px;padding-left: 0px;padding-right: 0px;display: inline-block" target="_blank">GET STARTED NOW </a></strong> <!--[if mso]></td></tr></table><![endif]--> <!-- BUTTON END --></td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                           <!-- CONTENT BLOCK END --></td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </td>
+               </tr>
+            </tbody>
+         </table>
+         <!-- ROW END --><!-- ROW BEGIN -->
+
+         <table align="center" bgcolor="#F1F1F1" border="0" cellpadding="0" cellspacing="0" class="row-wrapper" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;margin: 0;padding: 0;width: 100%">
+            <tbody>
+               <tr>
+                  <td align="center" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0">
+                  <table border="0" cellpadding="0" cellspacing="0" class="row" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;min-width: 680px;width: 680px">
+                     <tbody>
+                        <tr>
+                           <td align="left" class="mobile-padded" style="border-collapse:collapse;font-family:Arial, 'Helvetica', sans-serif;font-size:11px;font-weight:normal;margin:0;padding:0;line-height:14px;color:#888888;text-align:left;" valign="top"><br />
+                           <br />
+                           The PayPal service is provided by PayPal Australia Pty Limited (ABN 93 111 195 389) which holds Australian Financial Services Licence number 304962. Any information provided is general only and does not take into account your objectives, financial situation or needs. Please read and consider the Combined Financial Services Guide and Product Disclosure Statement at paypal.com.au before acquiring or using the service.</td>
+                        </tr>
+                     </tbody>
+                     <tbody>
+                        <tr>
+                           <td class="row row-padding-top-med" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;padding-right: 30px;padding-left: 30px;padding-top: 30px" valign="top">
+                           <table border="0" cellpadding="0" cellspacing="0" style="border:0;outline:0;" width="100%">
+                              <tbody>
+                                 <tr>
+                                    <td align="center" style="border-collapse:collapse;" valign="top">
+                                    <p style="font-family:Arial, 'Helvetica', sans-serif;font-size:12px;font-weight:normal;margin:0;padding:0;line-height:19px;color:#888888;text-align:center;"><br />
+                                    &nbsp;
+                                    </p>
+                                    </td>
+                                 </tr>
+                                 <tr>
+                                    <td align="center" style="border-collapse:collapse;" valign="top"><a href="http://e.intuit.com.au/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGhtBBH208zc8Tv1SbLw9MMDW9EjpffcNvzcJvmv1uPtzbCrfmXvXfVXtpKX%3DWBRTT&amp;_ei_=Eq2tf9zs59idfPO1Sc_9BbliH92KQcW9QtPEyvM4wi-MVn70Nsnc8b7txhstwRjw3oJhy0brzU82yKk_3QxkLWcjDiDBDu1BMTxyfTcRsVM3sIGc5fSakMHY." style="display:inline-block;" target="_blank"><img alt="Facebook" border="0" height="27" src="http://static.cdn.responsys.net/i2/responsysimages/intuaust/contentlibrary/z_smb_ftu_program_revised_20160317/ftu_email_series_day_14/Day_14_Revised_20160317/images/social-fb.png" style="border:0;outline:0;vertical-align:middle;" width="28" /></a> &nbsp;<a href="http://e.intuit.com.au/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGhtBBH208zc8Tv1SbLw9MMDW9EjpffcNvzcJvmv1uPtzbCrfmXvXfVXtpKX%3DWBRWT&amp;_ei_=Eq2tf9zs59idfPO1Sc_9BbliH92KQcW9QtPEyvM4wi-MVn70Nsnc8b7txhstwRjw3oJhy0brzU82yKk_3QxkLWcjDiDBDu1BMTxyfTcRsVM3sIGc5fSakMHY." style="display:inline-block;" target="_blank"><img alt="Twitter" border="0" height="27" src="http://static.cdn.responsys.net/i2/responsysimages/intuaust/contentlibrary/z_smb_ftu_program_revised_20160317/ftu_email_series_day_14/Day_14_Revised_20160317/images/social-tw.png" style="border:0;outline:0;vertical-align:middle;" width="28" /></a> &nbsp;<a href="http://e.intuit.com.au/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGhtBBH208zc8Tv1SbLw9MMDW9EjpffcNvzcJvmv1uPtzbCrfmXvXfVXtpKX%3DWBRAT&amp;_ei_=Eq2tf9zs59idfPO1Sc_9BbliH92KQcW9QtPEyvM4wi-MVn70Nsnc8b7txhstwRjw3oJhy0brzU82yKk_3QxkLWcjDiDBDu1BMTxyfTcRsVM3sIGc5fSakMHY." style="display:inline-block;" target="_blank"><img alt="LinkedIn" border="0" height="27" src="http://static.cdn.responsys.net/i2/responsysimages/intuaust/contentlibrary/z_smb_ftu_program_revised_20160317/ftu_email_series_day_14/Day_14_Revised_20160317/images/social-in.png" style="border:0;outline:0;vertical-align:middle;" width="28" /></a><br />
+                                    <br />
+                                    <img alt="Intuit®" border="0" height="32" src="http://static.cdn.responsys.net/i2/responsysimages/intuaust/contentlibrary/z_smb_ftu_program_revised_20160317/ftu_email_series_day_14/Day_14_Revised_20160317/images/logo-footer.png" style="outline:0;border:0;margin-bottom:3px;" width="89" />
+                                    <p style="font-family:Arial, 'Helvetica', sans-serif;font-size:12px;font-weight:normal;margin:0;padding:0;line-height:19px;color:#888888;text-align:center;"><a href="http://e.intuit.com.au/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGhtBBH208zc8Tv1SbLw9MMDW9EjpffcNvzcJvmv1uPtzbCrfmXvXfVXtpKX%3DWBRCT&amp;_ei_=Eq2tf9zs59idfPO1Sc_9BbliH92KQcW9QtPEyvM4wi-MVn70Nsnc8b7txhstwRjw3oJhy0brzU82yKk_3QxkLWcjDiDBDu1BMTxyfTcRsVM3sIGc5fSakMHY." style="color:#888888;text-decoration:none;" target="_blank">intuit.com.au</a><br />
+                                    <br />
+                                    <span style="font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; line-height: 19px; text-align: center; background-color: rgb(241, 241, 241);"><span style="color:#000000;">This email was sent to:<br />
+                                    User ID:&nbsp;{!Contact.Email}</span></span><br />
+                                    <br />
+                                    <span style="color:#A9A9A9;"><span style="text-align: center; font-family: Arial, sans-serif; font-size: 9px; line-height: 12px; background-color: rgb(241, 241, 241);">IMPORTANT: Intuit respects the personal nature of e-mail communication. Every effort is made to offer only information that may be of value to you or your business. If you do not wish to receive marketing e-mail from Intuit in the future, please</span></span><span style="text-align: center; color: rgb(185, 185, 185); font-family: Arial, sans-serif; font-size: 9px; line-height: 12px; background-color: rgb(241, 241, 241);">&nbsp;</span><a href="http://e.intuit.com.au/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGhtBBH208zc8Tv1SbLw9MMDW9EjpffcNvzcJvmv1uPtzbCrfmXvXfVXtpKX%3DWBSRT&amp;_ei_=Eq2tf9zs59idfPO1Sc_9BbliH92KQcW9QtPEyvM4wi-MVn70Nsnc8b7txhstwRjw3oJhy0brzU82yKk_3QxkLWcjDiDBDu1BMTxyfTcRsVM3sIGc5fSakMHY." style="color: rgb(134, 158, 217); line-height: 19px; text-align: center; margin-top: 0px; padding: 0px; outline: none; list-style: none; font-family: Arial, sans-serif; font-size: 9px; font-weight: bold; background-color: rgb(241, 241, 241);" target="_blank">click here.</a><span style="text-align: center; color: rgb(185, 185, 185); font-family: Arial, sans-serif; font-size: 9px; line-height: 12px; background-color: rgb(241, 241, 241);">&nbsp;</span><br style="color: rgb(136, 136, 136); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; line-height: 19px; text-align: center; background-color: rgb(241, 241, 241);" />
+                                    <br style="color: rgb(136, 136, 136); font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 12px; line-height: 19px; text-align: center; background-color: rgb(241, 241, 241);" />
+                                    <span style="color:#A9A9A9;"><span style="text-align: center; font-family: Arial, sans-serif; font-size: 9px; line-height: 12px; background-color: rgb(241, 241, 241);">View our&nbsp;</span></span><a alias="Privacy15418" href="http://e.intuit.com.au/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGhtBBH208zc8Tv1SbLw9MMDW9EjpffcNvzcJvmv1uPtzbCrfmXvXfVXtpKX%3DWBSTT&amp;_ei_=Eq2tf9zs59idfPO1Sc_9BbliH92KQcW9QtPEyvM4wi-MVn70Nsnc8b7txhstwRjw3oJhy0brzU82yKk_3QxkLWcjDiDBDu1BMTxyfTcRsVM3sIGc5fSakMHY." style="color: rgb(134, 158, 217); line-height: 19px; text-align: center; margin-top: 0px; padding: 0px; outline: none; list-style: none; font-family: Arial, sans-serif; font-size: 9px; font-weight: bold; background-color: rgb(241, 241, 241);" target="_blank">privacy policy</a><span style="text-align: center; color: rgb(185, 185, 185); font-family: Arial, sans-serif; font-size: 9px; line-height: 12px; background-color: rgb(241, 241, 241);">&nbsp;</span><span style="color:#A9A9A9;"><span style="text-align: center; font-family: Arial, sans-serif; font-size: 9px; line-height: 12px; background-color: rgb(241, 241, 241);">and additional information. Please view QuickBooks</span></span><span style="text-align: center; color: rgb(185, 185, 185); font-family: Arial, sans-serif; font-size: 9px; line-height: 12px; background-color: rgb(241, 241, 241);">&nbsp;</span><a alias="EULA15418" href="http://e.intuit.com.au/pub/cc?_ri_=X0Gzc2X%3DYQpglLjHJlTQGhtBBH208zc8Tv1SbLw9MMDW9EjpffcNvzcJvmv1uPtzbCrfmXvXfVXtpKX%3DWBSWT&amp;_ei_=Eq2tf9zs59idfPO1Sc_9BbliH92KQcW9QtPEyvM4wi-MVn70Nsnc8b7txhstwRjw3oJhy0brzU82yKk_3QxkLWcjDiDBDu1BMTxyfTcRsVM3sIGc5fSakMHY." style="color: rgb(134, 158, 217); line-height: 19px; text-align: center; margin-top: 0px; padding: 0px; outline: none; list-style: none; font-family: Arial, sans-serif; font-size: 9px; font-weight: bold; background-color: rgb(241, 241, 241);" target="_blank">End User License Agreement</a><span style="text-align: center; color: rgb(185, 185, 185); font-family: Arial, sans-serif; font-size: 9px; line-height: 12px; background-color: rgb(241, 241, 241);">&nbsp;</span><span style="color:#A9A9A9;"><span style="text-align: center; font-family: Arial, sans-serif; font-size: 9px; line-height: 12px; background-color: rgb(241, 241, 241);">for details of terms, conditions, features, support, pricing and service options which are subject to change without notice. To contact us by post: Intuit Australia Pty Limited, Registered in Australia&nbsp;</span><span class="applelinksWhite" style="line-height: 19px; text-align: center; margin-top: 0px; padding: 0px; outline: none; list-style: none; font-family: Arial, sans-serif; font-size: 9px; background-color: rgb(241, 241, 241);">ABN28 163 072 704, Level 34, 1 O&rsquo;Connell Street, Sydney, NSW 2000.</span><span style="text-align: center; font-family: Arial, sans-serif; font-size: 9px; line-height: 12px; background-color: rgb(241, 241, 241);">&nbsp;</span><br style="line-height: 19px; text-align: center; margin-top: 0px; padding: 0px; outline: none; list-style: none; color: rgb(185, 185, 185); font-family: Arial, sans-serif; font-size: 9px; background-color: rgb(248, 248, 248);" />
+                                    <br style="line-height: 19px; text-align: center; margin-top: 0px; padding: 0px; outline: none; list-style: none; color: rgb(185, 185, 185); font-family: Arial, sans-serif; font-size: 9px; background-color: rgb(248, 248, 248);" />
+                                    <span style="text-align: center; font-family: Arial, sans-serif; font-size: 9px; line-height: 12px; background-color: rgb(241, 241, 241);">&copy; 2016 Intuit Australia, Level 34, 1 O&rsquo;Connell Street, Sydney, NSW 2000.</span></span>
+                                    </p>
+                                    </td>
+                                 </tr>
+                              </tbody>
+                           </table>
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+                  </td>
+               </tr>
+               <tr>
+                  <td align="center" style="font-size: 14px;line-height: 20px;font-family: Arial, Helvetica, sans-serif;color: #535353;border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0"></td>
+               </tr>
+            </tbody>
+         </table>
+         <!-- ROW END --><!-- ROW BEGIN -->
+
+         <table align="center" bgcolor="#f5f5f5" border="0" cellpadding="0" cellspacing="0" class="row-wrapper" style="border-collapse: collapse;mso-table-lspace: 0;mso-table-rspace: 0;margin: 0;padding: 0;width: 100%">
+            <tbody>
+            </tbody>
+         </table>
+         <!-- ROW END --></td>
+      </tr>
+   </tbody>
+</table>
+<!-- END FRAME --></body>
+</html>

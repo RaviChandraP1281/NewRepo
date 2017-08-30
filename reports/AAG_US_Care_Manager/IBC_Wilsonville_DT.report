@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CUST_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_NAME</field>
+    </columns>
+    <columns>
+        <field>FK_CASE_OWNER_NAME</field>
+    </columns>
+    <currency>USD</currency>
+    <filter>
+        <criteriaItems>
+            <column>FK_CASE_OWNER_NAME</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>equals</operator>
+            <value>Jessica Blair,Abigail Downs,Yvette Villegas,Robyn Young,Velentin Molnar,Bryan Santino,Andrea Forshaw,DeLon Lewis,Daniel Lutz,Amanda Wilder,Gail Stoutt,William Kennedy,David Ramer,Heath Sanders,Christopher Watson,Heidi Wolfe,Simon Clowes,Benjamin Urrey,Gregory Smith,Ron Beck,Christine Brubaker,Ben Buchanan,Angelina Velesco,Kymberli Schmidt,Cindy Miller,Erin Garcia,Joaquin Serna,Annetta Beasley,Cindi Asselmeier,John Bartley,Myron Bovee,Winston Boyle,Melissa Buehler,Robert Cox,John Forster,Paul Goodsell,Rebecca Kingsbury,Raymond Ortiz Jr,Alan Sheeler,Zoey Trovato,Johanas Kile,Erica Vanderpool,Kelsey Landreth</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>VOC_Survey_Response__c.Question_Response5__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>IBC Wilsonville DT</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$VOC_Survey_Response__c@VOC_Survey_Response__c.CaseId__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CUST_CREATED_DATE</dateColumn>
+        <interval>INTERVAL_TODAY</interval>
+    </timeFrameFilter>
+</Report>

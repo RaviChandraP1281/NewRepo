@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>IDS Aggregation Data Service</fullName>
+        <default>false</default>
+        <label>IDS Aggregation Data Service</label>
+    </standardValue>
+    <standardValue>
+        <fullName>PFM</fullName>
+        <default>false</default>
+        <label>PFM</label>
+    </standardValue>
+    <standardValue>
+        <fullName>FinanceWorks SSO (MINT)</fullName>
+        <default>false</default>
+        <label>FinanceWorks SSO (MINT)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Intuit Data Services</fullName>
+        <default>false</default>
+        <label>Intuit Data Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Aggregation Data Services</fullName>
+        <default>false</default>
+        <label>Aggregation Data Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Categorization Data Services</fullName>
+        <default>false</default>
+        <label>Categorization Data Services</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Standalone Turbo Tax (Direct)</fullName>
+        <default>false</default>
+        <label>Standalone Turbo Tax (Direct)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>IPP - IDS Aggregation Service</fullName>
+        <default>false</default>
+        <label>IPP - IDS Aggregation Service</label>
+    </standardValue>
+    <standardValue>
+        <fullName>ttc</fullName>
+        <default>false</default>
+        <label>ttc</label>
+    </standardValue>
+    <standardValue>
+        <fullName>QuickBooks Online</fullName>
+        <default>false</default>
+        <label>QuickBooks Online</label>
+    </standardValue>
+    <standardValue>
+        <fullName>QuickBooks Payroll Online</fullName>
+        <default>false</default>
+        <label>QuickBooks Payroll Online</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Third Party</fullName>
+        <default>false</default>
+        <label>Third Party</label>
+    </standardValue>
+</StandardValueSet>
