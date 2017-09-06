@@ -1,0 +1,42 @@
+<aura:component controller="ARVaultService" implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="YearOptions" type="Object[]"/>
+    <aura:attribute name="MonthOptions" type="Object[]"/>
+    <aura:attribute name="backupObjects" type="Object[]"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.handleInit}"/>
+    
+    <div class="slds-form slds-form_stacked">
+		<div class="slds-form-element"/>
+			<div class="slds-form-element__control">
+				<lightning:select name="YObjects" aura:id="YearObjects" label="Year" >
+					<option value="2017">2017</option>
+                    <aura:iteration items="{!v.YearOptions}" var="option">
+                    	<option value="{!option}">{!option}</option>
+                    </aura:iteration>
+				</lightning:select>
+			</div> 
+            <div class="slds-form-element"/>
+                <div class="slds-form-element__control">
+            		<lightning:select name="MObjects" aura:id="MonthObjects" label="Month" >
+                        <option value="January">January</option>
+                        <aura:iteration items="{!v.MonthOptions}" var="option">
+                            <option value="{!option}">{!option}</option>
+                        </aura:iteration>
+            		</lightning:select>
+                </div>
+                <div class="slds-form-element"/>
+                <div class="slds-form-element__control">
+            		<lightning:input type="date" aura:id="fromDate" label="From Date" name="fromDate" />
+                </div>
+                <div class="slds-form-element"/>
+                <div class="slds-form-element__control">
+            		<lightning:input type="date" aura:id="toDate" label="To Date" name="toDate" />
+                </div>
+                <div class="slds-form-element"/>
+                <div class="slds-form-element__control">
+                    <div class="slds-p-top_x-small">
+                    <lightning:button variant="brand" name="go" label="Go" onclick="{!c.goBackupFilter}" />
+                </div>
+                </div>
+        </div>        
+</aura:component>

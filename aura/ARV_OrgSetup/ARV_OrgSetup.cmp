@@ -1,0 +1,50 @@
+<aura:component controller="ARVaultService" implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:handler name="neworg" event="c:ARV_NewOrg_Event" action="{!c.newOrgButtonclicked}" />
+    <aura:handler name="sforgauthsucess" event="c:ARV_OrgSetup_SfAuth_Event" action="{!c.sforgauthsucess}" />
+  	<aura:handler name="getOrgDetails" event="c:ARV_OrgSetup_GetOrgDetails_Event" action="{!c.getOrgDetails}" />
+    <aura:handler event="aura:waiting" action="{!c.showSpinner}" />
+    <aura:handler event="aura:doneWaiting" action="{!c.hideSpinner}" />
+    <aura:attribute name="Spinner" type="boolean" default="false" />
+    <aura:attribute name="objectData" type="Object[]" />
+    <aura:attribute name="uncheckedObjectData" type="Object[]" />
+    <aura:attribute name="Org" type="Object" />
+    <aura:attribute name="orgData" type="Object[]" />
+    <aura:attribute name="idSforg" type="String" default="00D6F000001OOISUA4" />
+    <aura:attribute name="idUser" type="String" default="f939bec89dc549d9bb2a5ef164ac0eb5" />
+    <aura:attribute name="currentTime" type="String" default="11:20" />
+    <aura:attribute name="flScdFeq" type="String" default="daily" />
+    <aura:attribute name="dtScd" type="Integer[]" />
+    <aura:attribute name="dayScd" type="String" default="Mon" />
+    
+    <c:ARV_OrgSetup_Header orgData="{!v.orgData}" />
+    <div aura:id="takebackup" class="slds-hide">
+        <c:ARV_OrgSetup_SfAuth Org="{!v.Org}"/>
+        <div aura:id="objectsList" class="">
+            <aura:if isTrue="{!v.Spinner}">
+                <div aura:id="spinnerId" class="slds-spinner_container">
+                    <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                        <span class="slds-assistive-text">Loading</span>
+                        <div class="slds-spinner__dot-a"></div>
+                        <div class="slds-spinner__dot-b"></div>
+                    </div>
+                </div>
+            </aura:if>
+            <c:ARV_OrgSetup_ShowObjects objectData="{!v.objectData}" 
+                                        idSforg="{!v.idSforg}" 
+                                        uncheckedObjectData="{!v.uncheckedObjectData}" />
+			 <div aura:id="schedule" class="">
+                <c:ARV_OrgSetup_ScheduleBackup flScdFeq="{!v.flScdFeq}" 
+                                               currentTime="{!v.currentTime}"
+                                               dayScd="{!v.dayScd}"
+                                               pills="{!v.dtScd}"
+                                               />
+            </div>
+        </div>
+        <lightning:button variant="brand" label="Save" iconName="utility:save" 
+                          iconPosition="left" onclick="{!c.handleClick }" />
+    </div>
+    <div aura:id="orglist" class="">
+        <c:ARV_OrgSetup_OrgsList orgData="{!v.orgData}" />
+    </div>
+</aura:component>

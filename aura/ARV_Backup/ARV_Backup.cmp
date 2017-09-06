@@ -1,0 +1,66 @@
+<aura:component controller="ARVaultService" implements="flexipage:availableForAllPageTypes" access="global">
+	<aura:attribute name="sfOrgId" type="String" />
+    <aura:attribute name="orgsList" type="Object[]" />
+    <aura:attribute name="backupObjects" type="String" />
+    <aura:attribute name="inprogressObjects" type="String" />
+    <aura:handler name="displaygraph" event="c:showGraph" action="{!c.showThisGraph}"/>
+    <aura:handler name="orgIdChanged" event="c:ARV_Backup_OrgChange_Event" action="{!c.orgIdChanged}"/>
+	<aura:handler name="displayfilter" event="c:showFilter" action="{!c.showThisFilter}"/>
+    <aura:handler name="activityObjects" event="c:ARV_Backup_ActivityObjects_Activity" action="{!c.activityObjects}"/>
+    <ltng:require scripts="{!join(',',$Resource.jql, $Resource.d3)}" afterScriptsLoaded="{!c.historyGraphLoad}"/>
+	<div aura:id="activitiesList" class="activitiesList">
+        <c:ARV_Backup_Header orgData="{!v.orgsList}"/>
+        <div class="slds-grid">
+            <div aura:id="column" class="">
+                <div aura:id="sd">
+                    <div class="slds-grid">
+                      <div class="slds-size_1-of-2 slds-medium-size_5-of-6 slds-large-size_10-of-12">
+                        <div aura:id="historyChartDiv">
+                        </div>
+                        <div aura:id="inprogressChartDiv">
+                        </div>
+                      </div>
+                      <div class="slds-size_1-of-2 slds-medium-size_1-of-6 slds-large-size_2-of-12 ">
+                         <div class="slds-table slds-p-top_medium" aura:id="historytoggle">
+                            <div class="slds-border_bottom">
+                              Type
+                            </div>
+                            <div class="">
+                                <table cellspacing="10">
+                                    <tr><td class="sucessColor slds-m-horizontal_medium slds-m-vertical_medium"><div aura:id="sucessColor">
+                                  </div></td><td>Sucess Records</td></tr>
+                                    <tr><td class="failedColor slds-m-horizontal_medium slds-m-vertical_medium"><div aura:id="failedColor"></div></td><td>Failed Records</td></tr>
+                                </table>
+                            </div> 
+                             <div class="slds-p-top_xx-large">
+                                  <lightning:input type="toggle" class="" aura:id="historyToggle" onchange="{!c.toggleChartData}" label=" " name="togglevalue" checked="false" />
+                             </div>
+                            <div class="slds-border_bottom">
+                              Check Status
+                            </div>
+                            <div class="">
+                              Toggle the switch to check the process of components that are being backed up
+                            </div> 
+                         </div>
+                       </div>
+                    </div>
+                </div> 
+                <div aura:id="historyDiv" id="historyDiv">
+                    <c:ARV_Backup_HistoryTable aura:id="historyTable" sfOrgId="{!v.sfOrgId}" backupObjects="{!v.backupObjects}" />
+                </div>
+                <div aura:id="inprogressDiv" id="historyDiv" class="slds-hide">
+                    <c:ARV_Backup_InprogressTable aura:id="inprogressTable" inprogressObjects="{!v.inprogressObjects}"/>
+                </div>
+			</div>
+            <div aura:id="filterSidebar" class="backgroundColor slds-hide slds-size_1-of-2 slds-medium-size_1-of-6 slds-large-size_3-of-12">
+                <div class="backgroundColor">
+                     <c:ARVFilterSidebar_Backup />
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div aura:id="activityObjects" class="slds-hide activityObjects">
+        <c:ARV_Backup_ActivityObjects_Header />
+        <c:ARV_Backup_ActivityObjects />
+    </div>
+</aura:component>

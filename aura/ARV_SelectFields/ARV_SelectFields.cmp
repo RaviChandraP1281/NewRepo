@@ -1,0 +1,41 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+<aura:attribute name="gridData" type="Object"/>   
+	<div class="componentHeight">
+     <table class="slds-table slds-table_cell-buffer">
+        <thead>
+        	<tr class="slds-text-title_caps header">
+                <td class="slds-truncate">
+            		<lightning:input type="checkbox"  checked="true" aura:id="Mcheckbox" label="Field Label Name" name="Mcheckbox" onchange="{!c.checkAllCheckboxes}"/>
+                </td>
+                <td class="slds-truncate">
+            		Field API Name
+                </td>
+                <td class="slds-truncate">
+            		Mask
+                </td>
+                <td class="slds-truncate">
+            		Encrypt
+                </td>
+            </tr>
+        </thead>
+        <tbody class="slds-scrollable_y">
+              <aura:iteration items="{!v.gridData.fields}" var="object" indexVar="index"> 
+         <tr>
+                <td>
+            		<lightning:input type="checkbox" label="{!object.label}" name="checks" aura:id="fMcheckbox" checked="{!object.excluded}"/>
+                </td>
+                <td>
+            		{!object.label}
+                </td>
+                <td>
+                  <lightning:input type="toggle" label=" " name="checks" aura:id="ld" checked="{!object.mask}"/>
+                </td>
+              <td>
+                  <lightning:input type="toggle" label=" " name="checks" aura:id="ld" checked="{!object.encrypt}"/>
+                </td>
+            </tr>
+           </aura:iteration>
+		</tbody>
+    </table>
+</div>
+</aura:component>

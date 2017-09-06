@@ -1,0 +1,7 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="data1" type="Integer[]" default="[1000, 200, 500, 700, 2345]"/>  
+    <aura:attribute name="data2" type="Integer[]" default="[2000, 100, 100, 1400, 1060]"/>  
+     <aura:attribute name="isStacked" type="Boolean" default="true"/>  
+
+	<canvas aura:id="chart" height="100"/>
+</aura:component>

@@ -1,0 +1,113 @@
+<aura:component >
+	<div class="slds-panel slds-grid slds-grid_vertical slds-nowrap slds-panel_filters">
+    <div class="slds-form slds-form_stacked slds-grow slds-scrollable_y slds-grid slds-grid_vertical">
+      <div class="slds-filter">
+        <div class="slds-filters__header slds-grid slds-has-divider_bottom-space">
+          <h2 class="slds-align-middle slds-text-heading_small">Filter</h2>
+          <button class="slds-button slds-button_icon slds-col_bump-left slds-button_icon slds-button_icon-small" title="Close Filter Panel">
+          	<lightning:icon iconName="utility:forward" size="xx-small" alternativeText=" "/>
+              <span class="slds-assistive-text">Close Filter Panel</span>
+          </button>
+          </div>
+        <div class="slds-filters__body">
+          <ol class="slds-list_vertical slds-list_vertical-space">
+            <li class="slds-item slds-hint-parent">
+              <div class="slds-filters__item slds-grid slds-grid_vertical-align-center">
+                <button href="javascript:void(0);" class="slds-button_reset slds-grow slds-has-blur-focus">
+                  <span class="slds-assistive-text">Edit filter:</span>
+                  <p class="slds-text-body_small">Show Me</p>
+                  <p>All Activities</p>
+                </button>
+              </div>
+            </li>
+          </ol>
+            <h3 class="slds-text-body_small slds-m-vertical_x-small">Matching all these filters</h3>
+          <ol class="slds-list_vertical slds-list_vertical-space">
+            <li class="slds-item slds-hint-parent">
+              <div class="slds-filters__item slds-grid slds-grid_vertical-align-center">
+                <button href="javascript:void(0);" class="slds-button_reset slds-grow slds-has-blur-focus">
+                  <span class="slds-assistive-text">Edit filter:</span>
+                    <p class="slds-text-body_small">Success/Failed Activities</p>
+                  <p><lightning:select name="freq" aura:id="freq" label="" >
+                      <option value="showAll">Show All</option>
+                        <option value="success">Only Success</option>
+                    	<option value="failures">Only Failures</option>
+                    </lightning:select></p>
+                </button>
+                
+		
+          <button class="slds-button slds-button_icon slds-col_bump-left slds-button_icon slds-button_icon-small" title="Close Filter Panel">
+             <lightning:icon iconName="utility:close" size="xx-small" alternativeText=" "/>
+          </button>
+       
+          </div>
+            </li>
+            <li class="slds-item slds-hint-parent">
+              <div class="slds-filters__item slds-grid slds-grid_vertical-align-center" aura:id="datepick">
+                <button onclick="{!c.fo}" href="javascript:void(0);" class="slds-button_reset slds-grow slds-has-blur-focus">
+                  <span class="slds-assistive-text">Edit filter:</span>
+                    <p class="slds-text-body_small">Date/Range</p>
+                    <p>(Jan 1,2017 - June 1,2017)</p>
+                </button>
+                <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-small" title="Remove greater than &quot;500&quot;">
+                  <lightning:icon iconName="utility:close" size="xx-small" alternativeText=" "/>
+                    <span class="slds-assistive-text">Remove filter: </span>
+                </button>
+              </div>
+            </li>
+              <li class="slds-item slds-hint-parent">
+              <div class="slds-filters__item slds-grid slds-grid_vertical-align-center">
+                <button href="javascript:void(0);" class="slds-button_reset slds-grow slds-has-blur-focus">
+                  <span class="slds-assistive-text">Edit filter:</span>
+                    <p class="slds-text-body_small">Records</p>
+                  <lightning:input type="number" name="number" label=" " value="1000"/>
+                </button>
+                <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-small" title="Remove greater than &quot;500&quot;">
+                  <lightning:icon iconName="utility:close" size="xx-small" alternativeText=" "/>
+                    <span class="slds-assistive-text">Remove filter: </span>
+                </button>
+              </div>
+            </li>
+              <li class="slds-item slds-hint-parent">
+              <div class="slds-filters__item slds-grid slds-grid_vertical-align-center">
+                <button href="javascript:void(0);" class="slds-button_reset slds-grow slds-has-blur-focus">
+                  <span class="slds-assistive-text">Edit filter:</span>
+                    <p class="slds-text-body_small">Size</p>
+                  <lightning:input type="number" name="number" label=" " value="1000"/>
+                   
+                </button>
+                <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-small" title="Remove greater than &quot;500&quot;">
+                  <lightning:icon iconName="utility:close" size="xx-small" alternativeText=" "/>
+                    <span class="slds-assistive-text">Remove filter: </span>
+                </button>
+              </div>
+            </li>
+              <li class="slds-item slds-hint-parent">
+              <div class="slds-filters__item slds-grid slds-grid_vertical-align-center">
+                <button href="javascript:void(0);" class="slds-button_reset slds-grow slds-has-blur-focus">
+                  <span class="slds-assistive-text">Edit filter:</span>
+                    <p class="slds-text-body_small">API Calls</p>
+                  <lightning:input type="number" name="number" label=" " value="1000"/></button>
+                <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-small" title="Remove greater than &quot;500&quot;">
+                  <lightning:icon iconName="utility:close" size="xx-small" alternativeText=" "/>
+                    <span class="slds-assistive-text">Remove filter: </span>
+                </button>
+              </div>
+            </li>
+          </ol>
+        </div>
+        <div class="slds-filters__footer slds-grid slds-shrink-none">
+            <div class="slds-p-horizontal_small">
+          		<button class="slds-button_reset slds-text-link" href="javascript:void(0);">Add Filter</button>
+            </div>
+            <div class="slds-p-horizontal_small">
+          		<button class="slds-button_reset slds-text-link" href="javascript:void(0);">Remove All</button>
+            </div>
+            <div class="slds-p-horizontal_small">
+          <button class="slds-button_reset slds-text-link" href="javascript:void(0);">Add Filter Logic</button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>   
+</aura:component>

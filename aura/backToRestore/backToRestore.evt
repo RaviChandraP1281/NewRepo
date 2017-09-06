@@ -1,0 +1,1 @@
+<aura:event type="COMPONENT" description="Move back to the restore page on click of a back button" />

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-    <version>40.0</version>
+    <version>39.0</version>
     <types>
         <members>A0</members>
+        <members>ARVaultService</members>
         <name>ApexClass</name>
     </types>
     <types>
@@ -106,6 +107,118 @@
         <members>Lead.QBES Round Robin Assignment</members>
         <members>Lead.Standard Assignment</members>
         <name>AssignmentRule</name>
+    </types>
+    <types>
+        <members>ARVBackupActivityID</members>
+        <members>ARVBackupRecordsTable</members>
+        <members>ARVBody_RestoreDashboard</members>
+        <members>ARVChart_RestoreDashboard</members>
+        <members>ARVFilterSidebar_Backup</members>
+        <members>ARVHeader_Backup</members>
+        <members>ARVHeader_Restore</members>
+        <members>ARVHeader_RestoreDashboard</members>
+        <members>ARVHeader_Restore_Records</members>
+        <members>ARVHeader_SFOrgSetup</members>
+        <members>ARVOrgBackupHeader</members>
+        <members>ARVPrevSumm_Restore</members>
+        <members>ARVRecordsTable_Restore</members>
+        <members>ARVRestoreActivityID</members>
+        <members>ARVRestoreAligned</members>
+        <members>ARVRestoreSidebar1</members>
+        <members>ARVRestoreSidebar2</members>
+        <members>ARVRestore_BackupsTable</members>
+        <members>ARVRestore_Configuration</members>
+        <members>ARVSelectBackup_Restore</members>
+        <members>ARVSelectRecords_Restore</members>
+        <members>ARVTable_Restore</members>
+        <members>ARV_Backup</members>
+        <members>ARV_Backup_ActivityObject</members>
+        <members>ARV_Backup_ActivityObjects</members>
+        <members>ARV_Backup_ActivityObjectsList</members>
+        <members>ARV_Backup_ActivityObjects_Activity</members>
+        <members>ARV_Backup_ActivityObjects_Header</members>
+        <members>ARV_Backup_Header</members>
+        <members>ARV_Backup_HistoryTable</members>
+        <members>ARV_Backup_InprogressTable</members>
+        <members>ARV_Backup_OrgChange_Event</members>
+        <members>ARV_Backup_svgInprogressBar</members>
+        <members>ARV_CompareHeader</members>
+        <members>ARV_CompareNameDatePanel</members>
+        <members>ARV_CompareSnapshotOne</members>
+        <members>ARV_CompareSnapshotTable</members>
+        <members>ARV_ConfigARVLogin</members>
+        <members>ARV_ConfigAccount</members>
+        <members>ARV_ConfigAdvSecurity</members>
+        <members>ARV_ConfigCustomAlert</members>
+        <members>ARV_ConfigPreferences</members>
+        <members>ARV_ConfigUnsupportedObj</members>
+        <members>ARV_Configuration</members>
+        <members>ARV_ConfirmRestoreEvent</members>
+        <members>ARV_ConfirmRestore_Event</members>
+        <members>ARV_Dashboard_Chart</members>
+        <members>ARV_Dashboard_InprogressChart</members>
+        <members>ARV_FilterPicklist</members>
+        <members>ARV_Header</members>
+        <members>ARV_NewOrg</members>
+        <members>ARV_NewOrg_Event</members>
+        <members>ARV_OAuthBoxes</members>
+        <members>ARV_OrgBackupHeader</members>
+        <members>ARV_OrgBackupSchedule</members>
+        <members>ARV_OrgBackupShowFields</members>
+        <members>ARV_OrgBackupShowObjects</members>
+        <members>ARV_OrgList</members>
+        <members>ARV_OrgSetup</members>
+        <members>ARV_OrgSetup_GetOrgDetails_Event</members>
+        <members>ARV_OrgSetup_Header</members>
+        <members>ARV_OrgSetup_OrgsList</members>
+        <members>ARV_OrgSetup_ScheduleBackup</members>
+        <members>ARV_OrgSetup_SfAuth</members>
+        <members>ARV_OrgSetup_SfAuth_Event</members>
+        <members>ARV_OrgSetup_ShowObjects</members>
+        <members>ARV_ScheduleBackup</members>
+        <members>ARV_SelectFields</members>
+        <members>ARV_SelectObjects</members>
+        <members>ARV_SfOrgAuth</members>
+        <members>ARV_sforgauthsucess</members>
+        <members>ARVselectOptions_Restore</members>
+        <members>ARVselectWeek</members>
+        <members>ChildComponent</members>
+        <members>DashboardBackupBarGraph</members>
+        <members>DashboardBarGraph</members>
+        <members>DashboardGraph</members>
+        <members>Date_Pill</members>
+        <members>LeelaApp</members>
+        <members>LeepaApp</members>
+        <members>ParentComponent</members>
+        <members>ScheduleBackup_monthly</members>
+        <members>SendEmail</members>
+        <members>SubParent</members>
+        <members>Subchild</members>
+        <members>TestAlloptions1</members>
+        <members>TestAlloptions2</members>
+        <members>TimelineLighting</members>
+        <members>WeCanDelete</members>
+        <members>backToRestore</members>
+        <members>backToRestoreActivity</members>
+        <members>btnClickEvent_Junk</members>
+        <members>changeCompareHeader</members>
+        <members>fieldsList</members>
+        <members>loginHeader</members>
+        <members>loginSidebar</members>
+        <members>objectsList</members>
+        <members>showFilter</members>
+        <members>showGraph</members>
+        <members>showRecords</members>
+        <members>showRestoreNow</members>
+        <members>showSnapshotDetails</members>
+        <members>showSnapshotOne</members>
+        <members>showSnapshotOptions</members>
+        <members>showSnapshotTwo</members>
+        <members>svg</members>
+        <members>test</members>
+        <members>testExportApp</members>
+        <members>testExportCmp</members>
+        <name>AuraDefinitionBundle</name>
     </types>
     <types>
         <members>Solution.test</members>
@@ -4569,8 +4682,13 @@
         <name>FieldSet</name>
     </types>
     <types>
+        <members>Backup</members>
+        <members>Compare</members>
+        <members>Configuration</members>
         <members>LightningSalesConsole_UtilityBar</members>
         <members>LightningService_UtilityBar</members>
+        <members>Restore</members>
+        <members>Setup</members>
         <name>FlexiPage</name>
     </types>
     <types>

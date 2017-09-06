@@ -1,0 +1,11 @@
+.THIS .componentHeight{
+    height: 15rem;
+    max-height:15rem;
+    overflow-y: auto;
+}
+.THIS input{
+    width:1rem;
+}
+.THIS hideDiv{
+    display: none;
+}

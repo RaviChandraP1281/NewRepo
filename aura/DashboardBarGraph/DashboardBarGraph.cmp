@@ -1,0 +1,35 @@
+<aura:component controller="ARVaultService" implements="flexipage:availableForAllPageTypes" access="global">
+	<aura:attribute name="gridData" type="Object"/>    
+    <aura:attribute name="graphData" type="Integer[]" default="[1000, 200, 500, 700, 2345]"/> 
+    <aura:attribute name="graphData2" type="Integer[]" default="[2000, 100, 100, 1400, 1060]"/> 
+    <aura:attribute name="isStacked" type="Boolean" default="true"/> 
+	<aura:handler name="init" value="{!this}" action="{!c.doInit}"/>  
+	<aura:handler name="displaygraph" event="c:showGraph" action="{!c.showThisGraph}"/>
+	<aura:handler name="displayfilter" event="c:showFilter" action="{!c.showThisFilter}"/>
+	<!--ltng:require scripts="{!join(',',
+    				$Resource.ChartJS23, 
+    				$Resource.backupService)}"
+					afterScriptsLoaded="{!c.scriptsLoaded}" /-->
+	<c:ARVHeader_Backup />
+	<div class="slds-grid">
+		<div aura:id="column" class="">
+			<div aura:id="sd">
+                <div class="slds-grid">
+		          <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_5-of-6 slds-large-size_10-of-12">
+                         <c:DashboardBackupBarGraph data1="{!v.graphData}" data2="{!v.graphData2}" isStacked="{!v.isStacked}"/>
+                  </div>
+                  <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_1-of-6 slds-large-size_2-of-12">
+                      Backup processes<br/>
+                      <lightning:input type="toggle" onchange="{!c.toggleChartData}" label="Toggle value" name="togglevalue" checked="false" />
+                  </div>
+                </div>
+			</div> 
+				<c:TestAlloptions1 aura:id="table"/>
+			</div>
+		<div aura:id="filterSidebar" class="backgroundColor slds-p-horizontal_small slds-hide slds-size_1-of-2 slds-medium-size_1-of-6 slds-large-size_3-of-12">
+			<div class="backgroundColor">
+           		 <c:ARVFilterSidebar_Backup />
+            </div> 
+		</div>
+		</div>
+</aura:component>

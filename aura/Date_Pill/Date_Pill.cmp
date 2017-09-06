@@ -1,0 +1,8 @@
+<aura:component >
+    <aura:attribute name="pills" type="Integer[]"/> 
+     <div aura:id="datepickPill">
+     <aura:iteration items="{!v.pills}" var="item" indexVar="index">
+   		 <lightning:pill aura:id="datepills" label="{!item}" name="{!index}" onremove="{! c.handleRemove }"/>
+     </aura:iteration>
+    </div>
+</aura:component>

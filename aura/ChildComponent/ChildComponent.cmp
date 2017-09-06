@@ -1,0 +1,5 @@
+<aura:component >
+    Child Component//
+    <aura:registerEvent name="btnClickEvent_Junk" type="c:btnClickEvent_Junk"/>
+    <lightning:button variant="brand" label="Submit" onclick="{!c.btnClick}"/>
+</aura:component>

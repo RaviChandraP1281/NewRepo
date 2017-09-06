@@ -1,0 +1,51 @@
+<aura:component >
+    <div class="slds-p-horizontal_xx-small slds-p-vertical_xx-small slds-p-left_xx-small slds-p-right_xx-small ">
+        <div class="slds-border_left slds-border_right slds-border_top slds-border_bottom leftbordersolid">
+            <div class="editButton slds-float_right slds-p-right_small">
+                <lightning:buttonIcon iconName="utility:edit" variant="bare" alternativeText="Edit" iconClass="dark" />
+            </div>
+            <span class="slds-text-heading_medium">
+
+        <div class=" slds-p-left_large slds-p-vertical_x-small ">
+        <lightning:icon iconName="utility:lock" size="small" alternativeText="Indicates approval"/>
+    		Advanced Security  
+        </div>
+
+    </span>
+
+            <fieldset>
+                <table class="slds-table slds-table_cell-buffer">
+                    <tbody>
+                        <tr>
+                            <td data-label="IPRange">
+                                <div class="slds-truncate" title="IPRange">IP Range</div>
+                            </td>
+                            <td data-label="IPRangeInput1">
+                                <lightning:input label=" " name="IPRangeInput1" placeholder="73.93.110.24" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="">
+                                <div class="slds-truncate" title=" "></div>
+                            </td>
+                            <td data-label="IPRangeInput2">
+                                <lightning:input label=" " name="IPRangeInput2" placeholder="73.93.110.24" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td data-label="sessionDuration">
+                                <div class="slds-truncate" title=" ">Session Duration</div>
+                            </td>
+                            <td data-label="sessionDurationInput">
+                                <lightning:input label=" " type="number" name="sessionDurationInput" placeholder="30 mins" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td/>
+                        </tr>
+                    </tbody>
+                </table>
+            </fieldset>
+        </div>
+    </div>
+</aura:component>

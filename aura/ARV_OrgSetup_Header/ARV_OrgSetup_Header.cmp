@@ -1,0 +1,56 @@
+<aura:component controller="ARVaultService" implements="flexipage:availableForAllPageTypes">
+<aura:registerEvent name="neworg" type="c:ARV_NewOrg_Event"/>
+<aura:attribute name="orgData" type="Object[]"/>  
+ <div class="slds-page-header slds-page-header_object-home">
+  <div class="slds-grid">
+    <div class="slds-col slds-has-flexi-truncate">
+      <div class="slds-media slds-no-space slds-grow">
+        <div class="slds-media__figure">
+          <span class="slds-icon_container slds-icon-standard-lead">
+            <lightning:icon iconName="standard:product_item" size="medium" alternativeText=" "/>
+          </span>
+        </div>
+        <div class="slds-media__body">
+          <p class="slds-text-title_caps slds-line-height_reset">SETUP</p>
+          <h1 class="slds-page-header__title slds-p-right_x-small">
+              <div class="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open">
+            <button class="slds-button slds-button_reset slds-type-focus slds-truncate" aria-haspopup="true" title="" onblur="{!c.hidePopover}"  onclick="{!c.showMenu}">
+              <span class="slds-grid slds-has-flexi-truncate slds-grid_vertical-align-center">
+                  
+                <span class="slds-truncate" title="Click to obtain list of Orgs">Salesforce Orgs</span>
+                <lightning:icon iconName="utility:down" size="xx-small" alternativeText=" " />
+              </span>
+            </button>
+         <div class="slds-hide" aura:id="SelectOrgDropdown">
+              <div class="slds-dropdown slds-dropdown_left" >
+    			<ul class="slds-dropdown__list" role="menu">
+                  <aura:iteration items="{!v.orgData}" var="org" indexVar="index"> 
+                   <li class="slds-dropdown__item" role="presentation">
+                    <a href="javascript:void(0);" role="menuitem" tabindex="0">
+                        <span class="slds-truncate" title="{!org.idSforg}">{!org.nmLable}</span>
+                    </a>
+                    </li>
+                    </aura:iteration>
+    			</ul>
+  			</div>
+       </div>
+     </div>
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div class="slds-col slds-no-flex slds-grid slds-align-top slds-p-bottom_xx-small">
+      <div class="slds-button-group" role="group">
+        <button aura:id="neworg" onclick="{!c.fireToNewOrg}" class="slds-button slds-button_neutral">
+        	Register New Org  
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="slds-grid">
+    <div class="slds-col slds-align-bottom">
+      <p class="slds-text-body_small">{!v.orgData.length} Orgs • Sorted by ID • Filtered by 4 filters • Last refreshed just now</p>
+    </div>
+  </div>
+</div>
+</aura:component>

@@ -1,0 +1,20 @@
+<aura:component controller="ARVaultService" implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:registerEvent name="confirmRestore" type="c:ARV_ConfirmRestore_Event" />
+    <aura:attribute name="sfOrgId" type="String" />
+    <aura:attribute name="backupIDs" type="Object[]"/>
+    <aura:attribute name="recordIDs" type="Object[]"/>
+    <aura:attribute name="userConfirmedActivities" type="Object[]" />
+    <div class="slds-grid">
+        <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_3-of-6 slds-large-size_3-of-12">
+        </div>
+        <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_3-of-6 slds-large-size_3-of-12">
+            <c:ARVPrevSumm_Restore />
+        </div>
+        <div class="slds-p-horizontal_small slds-p-top_medium slds-size_1-of-2 slds-medium-size_3-of-6 slds-large-size_6-of-12">
+            <c:ARVselectOptions_Restore />
+            <div class="slds-p-top_medium">
+                <lightning:button variant="brand" label="Confirm" onclick="{!c.confirmRestore}" />
+            </div>
+        </div>
+    </div>
+</aura:component>

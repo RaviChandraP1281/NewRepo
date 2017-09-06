@@ -1,0 +1,7 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+	<aura:handler name="displaygraph" event="c:showGraph" action="{!c.showThisGraph}"/>
+    <c:ARVHeader_Backup />
+	<div aura:id="sd">
+        <c:DashboardBackupBarGraph />
+    </div>
+</aura:component>

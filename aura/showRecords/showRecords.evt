@@ -1,0 +1,1 @@
+<aura:event type="COMPONENT" description="On click of a backup id, the records of the backup is to be showed" />

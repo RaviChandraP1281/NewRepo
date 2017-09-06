@@ -1,0 +1,43 @@
+<aura:component controller="ARVaultService">
+    <aura:attribute name="objectjson" type="Object[]"/>
+	<aura:attribute name="objectOptions" type="Object[]"/>
+    <aura:attribute name="fieldOptions" type="Object[]"/>
+    <aura:attribute name="recordObjects" type="Object[]"/>
+    <aura:attribute name="selectedObjectInFilter" type="String"/>
+    <aura:handler name="init" value="{!this}" action="{!c.handleInit}"/>
+    
+    <div class="slds-form-element" />
+    <div class="slds-form-element__control">
+    <lightning:select name="sObjects" label="Objects" aura:id="objects" onchange="{!c.handleObjectChange}">
+            <aura:iteration items="{!v.objectOptions}" var="option">
+                <option value="{!option.name}">{!option.name}</option>
+            </aura:iteration>
+    </lightning:select>
+    </div>
+    <div class="slds-form-element" />
+    <div class="slds-form-element__control">
+    <lightning:select aura:id="fields" name="fields" label="Fields" >
+            <option>--None--</option>
+            <aura:iteration items="{!v.fieldOptions}" var="option">
+                <option value="{!option.name}">{!option.name}</option>
+            </aura:iteration>
+    </lightning:select>
+    </div>
+    <div class="slds-form-element" />
+    <div class="slds-form-element__control">
+        <lightning:select name="filter" aura:id="filter" label="Filter By">
+            <option value="obj1">Filter by Field</option>
+        </lightning:select>
+    </div>
+    <div class="slds-form-element" />
+    <div class="slds-form-element__control">
+        <lightning:input type="search" label=" " name="search" placeholder="Search" />
+    </div>
+    <div class="slds-form-element" />
+    <div class="slds-form-element__control">
+        <div class="slds-p-top_medium">
+            <lightning:button variant="brand" name="go" label="Go" onclick="{!c.goRecordFilter}" />
+        </div>
+    </div>
+    
+</aura:component>

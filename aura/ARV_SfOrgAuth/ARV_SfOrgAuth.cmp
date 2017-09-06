@@ -1,0 +1,95 @@
+<aura:component controller="ARVaultService" implements="flexipage:availableForAllPageTypes" access="global" >
+    <aura:attribute name="urlFill" type="String" default="https://login.salesforce.com"/>  
+    <aura:attribute name="disable" type="Boolean" default="true"/>
+    <aura:attribute name="isDisabled" type="Boolean" default="true"/>
+    <aura:attribute name="orgtitle" type="String" default="" />
+    <aura:attribute name="username" type="String" default="" />
+    <aura:attribute name="password" type="String" default="" />
+    <aura:attribute name="securityToken" type="String" default="" />
+    <aura:attribute name="orgData" type="Object" default="" />
+    <aura:registerEvent name="sforgauthsucess" type="c:ARV_sforgauthsucess"/>
+    <article class="slds-card">
+        <div class="slds-card__header slds-grid">
+            <div class="radioButton">
+                <dl>
+                	<dt>
+                		<lightning:input type="radio" label="OAuth" name="connectionType" value="OAuth" onfocus="{!c.oAuthChange}" />
+                    </dt>
+                    <dt>
+ 						<lightning:input type="radio" label="Standard" name="connectionType" value="Standard" checked="true" onfocus="{!c.stdChange}" />
+                    </dt>
+                    <dt>
+ 						<lightning:select name="loginUrlType" aura:id="loginUrlType" label="" onchange="{!c.displayUrlFill}">
+                            <option value="production">Production</option>
+        					<option value="qa">QA</option>
+                            <option value="sandbox">Sandbox</option>
+        					<option value="customUrl">Custom URL</option>
+    					</lightning:select>
+                            
+                    </dt>
+                     <dt>
+ 						<lightning:input label=" "  disabled="{!v.isDisabled}" name="loginUrl" aura:id="loginUrl" value="{!v.urlFill}"/>
+                    </dt>
+                </dl>
+            </div>
+        </div>
+        <div class="slds-card__body slds-grid" aura:id="standarddepends">
+            <dl>
+            <dt>
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="input-unique-id">Org Title</label>
+                    <div class="slds-form-element__control">
+                        <ui:inputtext aura:id="org-title"  class="slds-input"  value="{!v.orgtitle}" updateOn="keyup"/>
+                    </div>
+                </div>
+            </dt>
+        	<dt>
+                <div class="slds-form-element">
+                    <label class="slds-form-element__label" for="input-unique-id">Username</label>
+                    <div class="slds-form-element__control">
+                        <ui:inputtext aura:id="username"  class="slds-input"  value="{!v.username}" updateOn="keyup"/>
+                    </div>
+                </div>
+		 	</dt>
+        	<dt> 
+                <div class="slds-form-element">
+                <label class="slds-form-element__label" for="input-unique-id">Password</label>
+                <div class="slds-form-element__control">
+                    <ui:inputSecret aura:id="password" class="slds-input" value="{!v.password}" updateOn="keyup"/>
+                </div></div>
+            </dt>
+        	<dt>                        
+            <div class="slds-form-element padtoright">
+                <label class="slds-form-element__label" for="input-unique-id">Security Token</label>
+                <div class="slds-form-element__control">
+                    <ui:inputSecret aura:id="securityToken" class="slds-input" value="{!v.securityToken}" updateOn="keyup"/>
+      			</div>
+            </div>
+         </dt>
+         <dt>
+             <lightning:button variant="brand" label="Test Connection" onclick="{! c.handleClick }" />
+         </dt>
+                
+         <dt>
+             <lightning:button variant="brand" label="Save" onclick="{! c.handleClick }" />
+         </dt>
+       </dl>
+        
+        </div>
+        <div class="slds-card__body slds-grid slds-hide" aura:id="oauthdepends">
+            <dl>
+                <dt>
+            <div class="slds-form-element padtoright">
+  				<label class="slds-form-element__label" for="OAuthOrgTitle">Org Title</label>
+  				<div class="slds-form-element__control">
+            		<input type="text" id="OAuthOrgTitle" class="slds-input" />
+  				</div>
+			</div>	
+                </dt>
+                <dt>
+                	 <lightning:button aura:id="authenticateBtn" variant="brand" label="Authenticate" onclick="{! c.handleClick }" />
+                </dt>
+            </dl>
+        </div>
+    </article>
+</aura:component>

@@ -1,0 +1,124 @@
+<aura:component controller="ARVaultService" implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="sfOrgId" type="String" />
+    <aura:attribute name="compareClass" type="String" default="slds-hide" />
+    <aura:attribute name="nextClass" type="String" default="slds-hide" />
+    <aura:attribute name="firstSelectedSnapID" type="String" />
+    <aura:attribute name="secondSelectedSnapID" type="String" />
+    <aura:attribute name="objList" type="Object[]" />
+    <aura:attribute name="fieldList" type="Object[]" />
+    <aura:attribute name="objSelected" type="String" default="" />
+    <aura:attribute name="fieldSelected" type="String" default="" />
+    <aura:attribute name="snapshotHeader" type="String" default="Select the org to compare" />
+    <aura:attribute name="Spinner" type="boolean" default="false" />
+    <aura:handler name="showSnapshot" event="c:showSnapshotOne" action="{!c.showListOfBackups}" />
+    <aura:handler name="showNextSnapshot" event="c:showSnapshotTwo" action="{!c.displayNextSnapshot}" />
+    <aura:handler name="showSnapshotOptions" event="c:showSnapshotOptions" action="{!c.displaySnapshotOptions}" />
+    <aura:registerEvent name="showSnapshot" type="c:showSnapshotOne" />
+    <aura:handler event="aura:waiting" action="{!c.showSpinner}" />
+    <aura:handler event="aura:doneWaiting" action="{!c.hideSpinner}" />
+
+    <c:ARV_CompareHeader sfOrgId="{!v.sfOrgId}" snapshotHeader="{!v.snapshotHeader}" />
+
+    <aura:if isTrue="{!v.Spinner}">
+        <div aura:id="spinnerId" class="slds-spinner_container">
+            <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                <span class="slds-assistive-text">Loading</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </aura:if>
+
+    <div class="slds-p-top_small slds-grid slds-hide" aura:id="snapshotOptions">
+        <div class="slds-size_1-of-2 slds-medium-size_1-of-6 slds-large-size_3-of-12">
+            <lightning:input type="radio" label="Full Snapshot" name="options" value="blue" onchange="{!c.showFullSnapshot}" />
+        </div>
+        <div class="slds-size_1-of-2 slds-medium-size_1-of-6 slds-large-size_3-of-12">
+            <lightning:input type="radio" label="Object" name="options" value="blue" onchange="{!c.showObjectSnapshot}" />
+        </div>
+        <div class="slds-size_1-of-2 slds-medium-size_1-of-6 slds-large-size_3-of-12">
+            <lightning:input type="radio" label="Field" name="options" value="blue" onchange="{!c.showFieldSnapshot}" />
+        </div>
+        <div class="slds-size_1-of-2 slds-medium-size_1-of-6 slds-large-size_3-of-12">
+            <lightning:input type="radio" label="Specific Record" name="options" value="blue" onchange="{!c.showRecordSnapshot}" />
+        </div>
+        <div class="slds-size_1-of-2 slds-medium-size_1-of-6 slds-large-size_3-of-12">
+            <lightning:button variant="neutral" label="Change View" onclick="{!c.changeView}" />
+        </div>
+    </div>
+
+    <div class="slds-hide" aura:id="backupListOne">
+        <c:ARV_CompareNameDatePanel />
+        <c:ARVBackupActivityID sfOrgId="{!v.sfOrgId}" compareClass="slds-hide" nextClass=" " firstSelectedSnapID="{!v.firstSelectedSnapID}" />
+    </div>
+    <div class="slds-hide" aura:id="backupListTwo">
+        <c:ARV_CompareNameDatePanel />
+        <c:ARVBackupActivityID sfOrgId="{!v.sfOrgId}" compareClass=" " nextClass="slds-hide" secondSelectedSnapID="{!v.secondSelectedSnapID}" />
+    </div>
+
+    <div class="slds-p-top_small slds-p-left_small slds-hide" aura:id="objectOptions">
+        <lightning:select name="objSelect" label="Select an Object" required="true" onchange="{!c.displayObjectOptions}">
+            <aura:iteration items="{!v.objList}" var="obj">
+                <option value="{!obj.label}" text="{!obj.label}"></option>
+            </aura:iteration>
+        </lightning:select>
+    </div>
+
+    <div class="slds-grid slds-p-left_small">
+        <div class="slds-p-top_small  slds-size_1-of-2 slds-medium-size_6-of-6 slds-large-size_12-of-12 slds-hide" aura:id="objFieldOptions">
+            <lightning:select aura:id="objSelectForFields" name="objSelectForFields" label="Select an Object" required="true" onchange="{!c.fetchFieldData}">
+                <aura:iteration items="{!v.objList}" var="obj">
+                    <option value="{!obj.label}" text="{!obj.label}"></option>
+                </aura:iteration>
+            </lightning:select>
+        </div>
+        <div class="slds-p-top_small slds-size_1-of-2 slds-medium-size_6-of-6 slds-large-size_12-of-12 slds-hide" aura:id="fieldOptions">
+            <lightning:select aura:id="fieldSelect" name="fieldSelect" label="Select a Field" required="true" onchange="{!c.setFieldSelected}">
+                <aura:iteration items="{!v.fieldList}" var="field">
+                    <option value="{!field.label}" text="{!field.label}"></option>
+                </aura:iteration>
+            </lightning:select>
+        </div>
+    </div>
+
+    <div class="slds-p-top_small slds-p-left_small slds-hide" aura:id="specificRecord">
+        <lightning:input label="Enter a query to obtain a specific record from the selected snapshots" name="querybox" aura:id="querybox" />
+        <div class="slds-p-top_small">
+            <lightning:button variant="brand" label="Submit Query" onclick="{! c.submitQuery }" />
+        </div>
+    </div>
+
+    <div class="slds-p-top_small slds-grid slds-hide" aura:id="bothsnapshots">
+        <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_6-of-6 slds-large-size_12-of-12" aura:id="snapshotOne">
+        </div>
+        <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_6-of-6 slds-large-size_12-of-12" aura:id="snapshotTwo">
+        </div>
+    </div>
+    <div aria-hidden="true" role="dialog" class="slds-modal slds-modal--prompt slds-fade-in-hide" aura:id="modaldialog">
+        <div class="slds-modal__container">
+            <div class="slds-modal__header slds-theme--info">
+                <!-->
+                <button class="slds-button slds-button-icon-inverse slds-notify__close slds-m-left_xx-small" onclick="{!c.hidePopup}">
+                    <lightning:icon iconName="action:close" size="x-small" />
+                    <span class="slds-assistive-text">Close</span>
+                    </button-->
+                    <h2 class="slds-text-heading--medium">Select Tags</h2>
+                
+            </div>
+            <div class="slds-modal__content slds-p-around--medium">
+                <div class="slds-m-bottom_xx-large">
+                    <lightning:input type="search" label="Search" name="search" />
+                </div>
+                <div class="slds-float_right">
+                    <button type="button" class="slds-button slds-button_neutral" onclick="{!c.hidePopup}">Cancel</button>
+                    <button type="button" class="slds-button slds-button_brand" onclick="{!c.hidePopup}">Save</button>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="slds-backdrop slds-backdrop--hide" aura:id="backdrop">
+    </div>
+</aura:component>

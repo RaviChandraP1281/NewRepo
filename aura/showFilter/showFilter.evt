@@ -1,0 +1,1 @@
+<aura:event type="COMPONENT" description="Show filter in Dashboard Backup page" />

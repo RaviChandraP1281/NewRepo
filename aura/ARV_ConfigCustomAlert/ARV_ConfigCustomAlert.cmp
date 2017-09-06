@@ -1,0 +1,156 @@
+<aura:component >
+    <div aura:id="customAlert">
+    <div class="slds-p-horizontal_xx-small slds-p-vertical_xx-small slds-p-left_xx-small slds-p-right_xx-small fillheight">
+    <div class="slds-border_left slds-border_right slds-border_top slds-border_bottom">
+    <span class="slds-text-heading_medium">
+        <div class="editButton">
+        <button class="slds-button">Edit</button>
+        </div>
+        <div class="createButton">
+            <lightning:button variant="base" label="Create new custom alert" onclick="{!c.createAlert}"></lightning:button>
+        </div>
+         <div class=" slds-p-left_large slds-p-vertical_x-small ">
+           <lightning:icon iconName="utility:notification" size="small" alternativeText="Indicates approval"/>
+    	   Custom Alerts  
+        </div>
+    </span>
+    <div class="slds-grid ">
+    <div class="slds-col slds-p-horizontal_medium">
+    <div class="formelements">
+	<fieldset>
+		<table class="slds-table slds-table_bordered slds-table_cell-buffer slds-table_striped">
+            <thead>
+            	<tr class="slds-text-title_caps">
+      			<th scope="col">
+        			<div class="slds-truncate" title="AlertLabel"> Alert Label</div>
+      			</th>
+                <th scope="col">
+        			<div class="slds-truncate" title="TrigBy">Triggered By</div>
+      			</th>
+                <th scope="col">
+        			<div class="slds-truncate" title="AlertTime">Time of Alert</div>
+      			</th>
+                <th scope="col">
+        			<div class="slds-truncate" title="AlertType">Type of Alert</div>
+      			</th>
+                <th scope="col">
+        			<div class="slds-truncate" title="Select">Select</div>
+      			</th>
+                    <th scope="col">
+        			<div class="slds-truncate" title="Select">Delete</div>
+      			</th>
+                </tr>
+            </thead>
+  		<tbody>
+      	<tr>
+      		<td data-label=" ">
+        		<div class="slds-truncate" title="AlertLabel1">Backup Alert by user1</div>
+      		</td>
+      		<td data-label=" ">
+        		<div class="slds-truncate" title="TrigBy1">User1</div>
+      		</td>
+            <td data-label=" ">
+                <div class="slds-truncate" title="AlertTime1">07/18/2017 11.04am </div>
+      		</td>
+            <td data-label=" ">
+        		<div class="slds-truncate" title="AlertType1">Alert on Backup</div>
+      		</td>
+            <td data-label=" ">
+                <div class="slds-truncate" title="Select1"><a href="javascript:void(0);">View previous 10 alerts</a></div>
+      		</td>
+            <td data-label=" ">
+            <lightning:icon iconName="utility:delete" size="xx-small"></lightning:icon>
+            </td>
+      	</tr>
+      	<tr>
+      		<td data-label=" ">
+        		<div class="slds-truncate" title="AlertLabel1">Backup Alert by user1</div>
+      		</td>
+      		<td data-label=" ">
+        		<div class="slds-truncate" title="TrigBy1">User1</div>
+      		</td>
+            <td data-label=" ">
+                <div class="slds-truncate" title="AlertTime1">07/18/2017 11.04am </div>
+      		</td>
+            <td data-label=" ">
+        		<div class="slds-truncate" title="AlertType1">Alert on Backup</div>
+      		</td>
+            <td data-label=" ">
+                <div class="slds-truncate" title="Select1"><a href="javascript:void(0);">View previous 10 alerts</a></div>
+      		</td>
+            <td data-label=" ">
+            <lightning:icon iconName="utility:delete" size="xx-small"></lightning:icon>
+            </td>
+      	</tr>
+            <tr>
+      		<td data-label=" ">
+        		<div class="slds-truncate" title="AlertLabel1">Backup Alert by user1</div>
+      		</td>
+      		<td data-label=" ">
+        		<div class="slds-truncate" title="TrigBy1">User1</div>
+      		</td>
+            <td data-label=" ">
+                <div class="slds-truncate" title="AlertTime1">07/18/2017 11.04am </div>
+      		</td>
+            <td data-label=" ">
+        		<div class="slds-truncate" title="AlertType1">Alert on Backup</div>
+      		</td>
+            <td data-label=" ">
+                <div class="slds-truncate" title="Select1"><a href="javascript:void(0);">View previous 10 alerts</a></div>
+      		</td>
+                <td data-label=" ">
+            <lightning:icon iconName="utility:delete" size="xx-small"></lightning:icon>
+            </td>
+      	</tr>
+            <tr>
+      		<td data-label=" ">
+        		<div class="slds-truncate" title="AlertLabel1">Backup Alert by user1</div>
+      		</td>
+      		<td data-label=" ">
+        		<div class="slds-truncate" title="TrigBy1">User1</div>
+      		</td>
+            <td data-label=" ">
+                <div class="slds-truncate" title="AlertTime1">07/18/2017 11.04am </div>
+      		</td>
+            <td data-label=" ">
+        		<div class="slds-truncate" title="AlertType1">Alert on Backup</div>
+      		</td>
+            <td data-label=" ">
+                <div class="slds-truncate" title="Select1"><a href="javascript:void(0);">View previous 10 alerts</a></div>
+      		</td>
+                <td data-label=" ">
+            <lightning:icon iconName="utility:delete" size="xx-small"></lightning:icon>
+            </td>
+      	</tr>
+            <tr>
+      		<td data-label=" ">
+        		<div class="slds-truncate" title="AlertLabel1">Backup Alert by user1</div>
+      		</td>
+      		<td data-label=" ">
+        		<div class="slds-truncate" title="TrigBy1">User1</div>
+      		</td>
+            <td data-label=" ">
+                <div class="slds-truncate" title="AlertTime1">07/18/2017 11.04am </div>
+      		</td>
+            <td data-label=" ">
+        		<div class="slds-truncate" title="AlertType1">Alert on Backup</div>
+      		</td>
+            <td data-label=" ">
+                <div class="slds-truncate" title="Select1"><a href="javascript:void(0);">View previous 10 alerts</a></div>
+      		</td>
+                <td data-label=" ">
+            <lightning:icon iconName="utility:delete" size="xx-small"></lightning:icon>
+            </td>
+      	</tr>
+    	</tbody>   
+    	</table>
+	</fieldset>	
+        
+	</div>
+    </div>
+    </div>
+
+    </div>
+    </div>
+    </div>
+</aura:component>

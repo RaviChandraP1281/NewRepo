@@ -1,0 +1,108 @@
+<aura:component controller="ARVaultService" implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="orgData" type="Object[]" />
+    <aura:attribute name="orgValue" type="String" default="Orgs" />
+    <aura:attribute name="sfOrgId" type="String" />
+  	<aura:attribute name="isOpen" type="boolean" default="false"/>
+  	<aura:attribute name="email" type="string"/>
+  	<aura:attribute name="isAttachment" type="boolean" default="false"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:registerEvent name="displaygraph" type="c:showGraph" />
+    <aura:registerEvent name="displayfilter" type="c:showFilter" />
+    <aura:registerEvent name="displayrestore" type="c:showRestoreNow" />
+    <div aura:id="modelWindowDiv">
+    <aura:if isTrue="{!v.isOpen}">
+        <!--###### MODAL BOX Start From Here ######--> 
+        <div role="dialog" tabindex="-1" aria-labelledby="header99" class="slds-modal slds-fade-in-open ">
+            <div class="slds-modal__container">
+                <div class="slds-modal__header">
+                    <button class="slds-button slds-modal__close slds-button--icon-inverse" title="Close" onclick="{!c.closeModel}">
+                        X
+                     <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 id="header99" class="slds-text-heading--medium">Share via Email</h2>
+                </div>
+                <div class="slds-modal__content slds-p-around--medium">
+                    <label class="slds-form-element__label" for="CC">To:</label>
+                    <div class="slds-form-element__control">
+                        <ui:inputEmail class="slds-input" aura:id="email"  value="{!v.email}" required="true" placeholder="abc@email.com"/>
+                    </div>
+                </div>  
+                
+                <div class="slds-modal__content slds-p-around--medium" aura:id="attachmentFile">
+                    <p><b>Attachment is added</b></p>
+                </div>
+                <div class="slds-modal__footer">
+                    <button class="slds-button slds-button--neutral" onclick="{!c.closeModel}" >Cancel</button>
+                    <button class="slds-button slds-button--brand" onclick="{!c.sendEmail}">Send</button>
+                </div>
+            </div>
+        </div>
+        <div class="slds-backdrop slds-backdrop--open"></div>
+    </aura:if>
+    </div>    
+    <div class="slds-page-header slds-page-header_object-home">
+        <div class="slds-grid">
+            <div class="slds-col slds-has-flexi-truncate">
+                <div class="slds-media slds-no-space slds-grow">
+                    <div class="slds-media__figure">
+                        <span class="slds-icon_container slds-icon-standard-lead">
+            				<lightning:icon iconName="standard:lead" size="medium" alternativeText=" "/>
+          				</span>
+                    </div>
+                    <div class="slds-media__body">
+                        <p class="slds-text-title_caps slds-line-height_reset">Dashboard</p>
+                        <h1 class="slds-page-header__title slds-p-right_x-small">
+                        <button class="slds-button slds-button_reset slds-type-focus slds-truncate" aria-haspopup="true" title="" onclick="{!c.showMenu}">
+                          <span class="slds-grid slds-has-flexi-truncate slds-grid_vertical-align-center">
+                              Restore
+                          </span>
+                        </button>
+                      </h1>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-col slds-no-flex slds-grid slds-align-top slds-p-bottom_xx-small">
+                <div class="slds-media slds-no-space slds-grow">
+                    <div class="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open">
+                        <div class="slds-button-group" role="group">
+                             <lightning:select name="orgList" aura:id="orgIDs" onchange="{!c.setSfOrgId}" >
+                              <aura:iteration items="{!v.orgData}" var="org" indexVar="index"> 
+                                    <option class="slds-dropdown slds-dropdown_center" value="{!org.idSforg}">   
+                                          <span class="slds-truncate">{!org.nmLable}</span>
+                                    </option>
+                               </aura:iteration>
+                              </lightning:select>
+          					<lightning:button variant="neutral" label="Restore Now" onclick="{! c.fireShowRestore }" aura:id="restorebtn"/>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slds-grid">
+            <div class="slds-col slds-no-flex slds-grid slds-align-bottom slds-float-left ">
+                <div class="slds-p-right_small">
+                    <lightning:input type="date" label="From" name="date" />
+                </div>
+                <lightning:input type="date" label="To" name="date" />
+            </div>
+            <div class="slds-col slds-align-bottom"></div>
+            <div class="slds-col slds-no-flex slds-grid slds-align-bottom slds-m-left_xx-small">
+                <lightning:buttonicon iconName="utility:chart" size="medium" alternativeText=" " aura:id="graphBtn" onclick="{!c.fireShowGraph}" />
+                <lightning:buttonicon iconName="utility:refresh" size="medium" alternativeText=" " />
+                <lightning:buttonicon iconName="utility:filterList" size="medium" alternativeText=" " aura:id="filterBtn" onclick="{!c.fireShowFilter}" />
+                <lightning:buttonicon iconName="utility:settings" size="medium" alternativeText=" " />
+                
+                <button class="slds-button slds-button_icon slds-button_icon-more" aria-haspopup="true" title="Share via Email" onclick="{!c.openModel}">
+                	<lightning:icon iconName="utility:email" size="xx-small" alternativeText=" " />
+                    <lightning:icon iconName="utility:down" size="xx-small" alternativeText=" " />
+                </button>
+                <button class="slds-button slds-button_icon slds-button_icon-more" aria-haspopup="true" title="Export" onclick="{!c.exportToExcel}" >
+                    <lightning:icon iconName="utility:share" size="xx-small" alternativeText=" " />
+                    <lightning:icon iconName="utility:down" size="xx-small" alternativeText=" " />
+                    <span class="slds-assistive-text">List View Controls</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</aura:component>

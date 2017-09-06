@@ -1,0 +1,24 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+	<fieldset>
+                        <div class="slds-form-element">
+  						<label class="slds-form-element__label" for="input-unique-id">Select Desination Org</label>
+ 						 <div class="slds-form-element__control">
+                	<select class="slds-select" id="destinationOrg" >
+                    	<option>Dev1</option>
+                    	<option>Dev2</option>
+                    	<option>Dev3</option>
+                    </select>
+                            </div>
+                        </div>
+                        <div class="slds-form-element">
+  						<label class="slds-form-element__label" for="input-unique-id">Parent-Child Relationships</label>
+ 						 <div class="slds-form-element__control">
+                	<select class="slds-select" id="parentchildrel" >
+                    	<option>Maintain complete Parent-Child relationships</option>
+                    	<option>Do not maintain complete Parent-Child relationships</option>
+                    	
+                    </select>
+                            </div>
+                        </div>
+                	</fieldset>
+</aura:component>

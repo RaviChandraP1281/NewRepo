@@ -1,0 +1,5 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+	Hi
+   <aura:handler name="btnClickEvent_Junk" event="c:btnClickEvent_Junk" action="{!c.dddd}"/>
+    <c:ChildComponent />
+</aura:component>

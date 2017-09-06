@@ -1,0 +1,5 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+    <c:ARV_OAuthBoxes />
+    <c:ARV_SelectObjects />
+    <c:ARV_ScheduleBackup />
+</aura:component>

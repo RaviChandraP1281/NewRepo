@@ -1,0 +1,276 @@
+<aura:component controller="ARVaultService" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionWithoutHeader" access="global" >
+	<aura:attribute name="sfOrgId" type="String" />
+    <aura:attribute name="backupActivityID" type="String"/>   
+    <aura:attribute name="backupObject" type="Object"/> 
+     <aura:attribute name="resultCriteria" type="Object[]" />
+    <aura:handler name="init" value="{!this}" action="{!c.doLoadActivityObject}"/>
+	
+    <table class="slds-table_bordered slds-table_resizable-cols slds-table_fixed-layout slds-table_cell-buffer" role="grid">
+        <thead>
+        	<tr class="slds-line-height_reset">
+              <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="0">
+                  <span class="slds-assistive-text">Sort </span>
+                  <span class="slds-truncate" title="Name">Activity ID</span>
+                  <div class="slds-icon_container">
+                  </div>
+                  <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+                </a>
+                <div class="slds-resizable">
+                  <label for="cell-resize-handle-85" class="slds-assistive-text">Name column width</label>
+                  <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-85" tabindex="0"/>
+                  <span class="slds-resizable__handle">
+                    <span class="slds-resizable__divider"></span>
+                  </span>
+                </div>
+              </th>
+              <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="0">
+                  <span class="slds-assistive-text">Sort </span>
+                  <span class="slds-truncate" title="Name">User</span>
+                  <div class="slds-icon_container">
+                    
+                  </div>
+                  <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+                </a>
+                <div class="slds-resizable">
+                  <label for="cell-resize-handle-86" class="slds-assistive-text">Account Name column width</label>
+                  <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-86" tabindex="0"/>
+                  <span class="slds-resizable__handle">
+                    <span class="slds-resizable__divider"></span>
+                  </span>
+                </div>
+              </th>
+              <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="0">
+                  <span class="slds-assistive-text">Sort </span>
+                    <span class="slds-truncate" title="Recent Backup Date">Date/Time</span>
+                  <div class="slds-icon_container">
+                   
+                  </div>
+                  <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+                </a>
+                <div class="slds-resizable">
+                    <label for="cell-resize-handle-87" class="slds-assistive-text">Recent Backup Date/Time</label>
+                  <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-87" tabindex="0"/>
+                  <span class="slds-resizable__handle">
+                    <span class="slds-resizable__divider"></span>
+                  </span>
+                </div>
+              </th>
+              <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="0">
+                  <span class="slds-assistive-text">Sort </span>
+                  <span class="slds-truncate" title="Authentication">Duration</span>
+                  <div class="slds-icon_container">
+                   
+                  </div>
+                  <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+                </a>
+                <div class="slds-resizable">
+                  <label for="cell-resize-handle-89" class="slds-assistive-text">Authentication column width</label>
+                  <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-89" tabindex="0"/>
+                  <span class="slds-resizable__handle">
+                    <span class="slds-resizable__divider"></span>
+                  </span>
+                </div>
+              </th> 
+              <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="0">
+                  <span class="slds-assistive-text">Sort </span>
+                  <span class="slds-truncate" title="Authentication">Records</span>
+                  <div class="slds-icon_container">
+                   
+                  </div>
+                  <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+                </a>
+                <div class="slds-resizable">
+                  <label for="cell-resize-handle-89" class="slds-assistive-text">Authentication column width</label>
+                  <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-89" tabindex="0"/>
+                  <span class="slds-resizable__handle">
+                    <span class="slds-resizable__divider"></span>
+                  </span>
+                </div>
+              </th>
+              <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="0">
+                  <span class="slds-assistive-text">Sort </span>
+                  <span class="slds-truncate" title="Authentication">Size</span>
+                  <div class="slds-icon_container">
+                   
+                  </div>
+                  <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+                </a>
+                <div class="slds-resizable">
+                  <label for="cell-resize-handle-89" class="slds-assistive-text">Authentication column width</label>
+                  <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-89" tabindex="0"/>
+                  <span class="slds-resizable__handle">
+                    <span class="slds-resizable__divider"></span>
+                  </span>
+                </div>
+              </th>
+              <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="0">
+                  <span class="slds-assistive-text">Sort </span>
+                  <span class="slds-truncate" title="Authentication">API Calls</span>
+                  <div class="slds-icon_container">
+                   
+                  </div>
+                  <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+                </a>
+                <div class="slds-resizable">
+                  <label for="cell-resize-handle-89" class="slds-assistive-text">Authentication column width</label>
+                  <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-89" tabindex="0"/>
+                  <span class="slds-resizable__handle">
+                    <span class="slds-resizable__divider"></span>
+                  </span>
+                </div>
+              </th>
+              <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="0">
+                  <span class="slds-assistive-text">Sort </span>
+                  <span class="slds-truncate" title="Authentication">Status</span>
+                  <div class="slds-icon_container">
+                   
+                  </div>
+                  <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+                </a>
+                <div class="slds-resizable">
+                  <label for="cell-resize-handle-89" class="slds-assistive-text">Authentication column width</label>
+                  <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-89" tabindex="0"/>
+                  <span class="slds-resizable__handle">
+                    <span class="slds-resizable__divider"></span>
+                  </span>
+                </div>
+              </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="slds-hint-parent">
+              <th scope="row" class="">
+                <div class="slds-truncate" title="">{!v.backupObject.backupId}</div>
+              </th>
+              <td role="gridcell" class="">
+                <div class="slds-truncate" title="">{!v.backupObject.idUser}</div>
+              </td>
+              <td role="gridcell" class="">
+                     <lightning:formattedDateTime value="{!v.backupObject.tmStamp}" year="numeric" month="numeric" day="numeric"  hour="2-digit" minute="2-digit" timeZoneName="short" /> 
+              </td>
+               <td role="gridcell" class="">
+                <div class="slds-truncate" title="">{!v.backupObject.strTotDuration}</div>
+              </td>
+              <td role="gridcell" class="">
+                <div class="slds-truncate" title="">{!v.backupObject.nbrTotRecords}</div>
+              </td>
+              <td role="gridcell" class="">
+                <!--<div class="slds-truncate" title="">{!v.backupObject.Size}</div>-->
+              </td>
+               <td role="gridcell" class="">
+                <div class="slds-truncate" title="">{!v.backupObject.nbrTotApi}</div>
+              </td>
+              <td role="gridcell" class="">
+                <div class="slds-truncate" title=""> 
+                     <lightning:icon iconName="utility:success" size="small" class="icm"/>
+                  </div>
+              </td>
+            </tr>  
+			<br/><br/><br/><br/><br/><br/>
+                    
+        </tbody>
+    </table>  
+    <table class="slds-table_bordered slds-table_resizable-cols slds-table_fixed-layout slds-table_cell-buffer" role="grid">
+	<thead>
+		<tr class="slds-line-height_reset">
+			<th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+				<a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="0">
+					<span class="slds-assistive-text">Sort </span>
+					<span class="slds-truncate" title="Salesforce Object">Salesforce Object</span>
+					<div class="slds-icon_container">
+					</div>
+					<span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+				</a>
+				<div class="slds-resizable">
+					<label for="cell-resize-handle-85" class="slds-assistive-text">Salesforce Object column width</label>
+					<input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-85" tabindex="0"/>
+					<span class="slds-resizable__handle">
+						<span class="slds-resizable__divider"></span>
+					</span>
+				</div>
+			</th>
+			<th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+				<a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="0">
+					<span class="slds-assistive-text">Sort </span>
+					<span class="slds-truncate" title="Time">Time</span>
+					<div class="slds-icon_container">
+					</div>
+					<span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+				</a>
+				<div class="slds-resizable">
+					<label for="cell-resize-handle-85" class="slds-assistive-text">Time column width</label>
+					<input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-85" tabindex="0"/>
+					<span class="slds-resizable__handle">
+						<span class="slds-resizable__divider"></span>
+					</span>
+				</div>
+			</th>
+			<th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+				<a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="0">
+					<span class="slds-assistive-text">Sort </span>
+					<span class="slds-truncate" title="Records">Records</span>
+					<div class="slds-icon_container">
+					</div>
+					<span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+				</a>
+				<div class="slds-resizable">
+					<label for="cell-resize-handle-85" class="slds-assistive-text">Records column width</label>
+					<input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-85" tabindex="0"/>
+					<span class="slds-resizable__handle">
+						<span class="slds-resizable__divider"></span>
+					</span>
+				</div>
+			</th>
+			<th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+				<a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="0">
+					<span class="slds-assistive-text">Sort </span>
+					<span class="slds-truncate" title="Size">Size(MBs)</span>
+					<div class="slds-icon_container">
+					</div>
+					<span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+				</a>
+				<div class="slds-resizable">
+					<label for="cell-resize-handle-85" class="slds-assistive-text">Size column width</label>
+					<input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-85" tabindex="0"/>
+					<span class="slds-resizable__handle">
+						<span class="slds-resizable__divider"></span>
+					</span>
+				</div>
+			</th>
+			<th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+				<a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="0">
+					<span class="slds-assistive-text">Sort </span>
+					<span class="slds-truncate" title="API Calls">API Calls</span>
+					<div class="slds-icon_container">
+					</div>
+					<span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+				</a>
+				<div class="slds-resizable">
+					<label for="cell-resize-handle-85" class="slds-assistive-text">API Calls column width</label>
+					<input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-85" tabindex="0"/>
+					<span class="slds-resizable__handle">
+						<span class="slds-resizable__divider"></span>
+					</span>
+				</div>
+			</th>
+		</tr>
+	</thead>
+        	<tbody>
+             <aura:iteration items="{!v.resultCriteria}" var="sObject" indexVar="index"> 
+                 <tr>
+                     <td>Test--{!sObject}</td>
+                 </tr>
+            </aura:iteration>
+			</tbody>
+    </table>
+    
+    
+</aura:component>

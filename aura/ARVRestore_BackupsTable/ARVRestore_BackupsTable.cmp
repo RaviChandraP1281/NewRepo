@@ -1,0 +1,132 @@
+<aura:component controller="ARVaultService">
+    <aura:attribute name="backupactivity" type="Object[]" />
+     <aura:attribute name="isShowBackupActive" type="Boolean" default="true"/>
+    <aura:attribute name="records" type="Object[]" />
+    <aura:attribute name="backupID" type="String" />
+    <aura:attribute name="sfOrgId" type="String" />
+    <aura:attribute name="userConfirmedActivities" type="Object[]" />
+    <aura:attribute name="selectedObjectInFilter" type="String" default="Lead"/> 
+    <aura:handler name="confirmRestore" event="c:ARV_ConfirmRestore_Event" action="{!c.confirmRestore}" />
+    <aura:handler name="backToRestoreActivity" event="c:backToRestoreActivity" action="{!c.backToRestoreActivity}" />
+    <div aura:id="showbackups">
+        <c:ARVHeader_Restore />
+    	<div class="slds-grid" aura:id="">
+        <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_1-of-6 slds-large-size_3-of-12">
+            <div class="" aura:id="showDateFilter" style="height:15rem">
+                <c:ARVRestoreSidebar2 />
+            </div>
+        </div>
+        <div class="slds-size_1-of-2 slds-medium-size_5-of-6 slds-large-size_9-of-12">
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                <thead>
+                    <tr class="slds-text-title_caps slds-text-body_small">
+                        <th scope="col">
+                            <div class="slds-truncate" title="Backup Activity ID">
+                            <lightning:input type="checkbox" label="" name="backupOtherBoxes" aura:id="backupMainBox" class="slds-float_left" onchange="{!c.checkAllCheckboxes}"/>Backup Activity ID</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Backup Time">Backup Time</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Type">Type</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Triggered By">Triggered By</div>
+                        </th>
+                    </tr>
+                </thead>
+		        <tbody class="slds-text-body_small">
+					<aura:iteration items="{!v.backupactivity}" var="obj" indexVar="index">                                            
+                        <tr>
+                        <th scope="row" data-label="Record id">
+                            <div class="slds-truncate" title="rid">
+                                <lightning:input type="checkbox" label="" name="{!obj.backupId}" value="{!index}" class="slds-float_left" aura:id="backupOtherBoxes"/>
+                                <a href="javascript:void(0);"  aura:id="hrefRecordsBack" title="{!index}" name="{!obj.backupId}" onclick="{!c.fireShowRecords}">{!obj.backupId}</a>
+                            </div>
+                        </th>
+                        <td data-label="Backup Time">
+                            <div class="slds-truncate" title="time">
+                             <lightning:formattedDateTime value="{!obj.tmStamp}" year="numeric" month="numeric" day="numeric"  hour="2-digit" minute="2-digit" timeZoneName="short" />    
+                            </div>
+                        </td>
+                        <td data-label="Type">
+                            <div class="slds-truncate" title="Type">{!obj.flBakupTyp}</div>
+                        </td>
+                        <td data-label="Triggered By">
+                            <div class="slds-truncate" title="Triggered By">{!obj.idCfgBakup}</div>
+                        </td>
+                    </tr>
+                    </aura:iteration>                                            
+                </tbody>
+            </table>
+        </div>
+  	  </div>
+   </div>
+    <div class="slds-hide" aura:id="showrecords">
+        <c:ARVHeader_Restore_Records />
+        <div class="slds-grid">
+            <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_1-of-6 slds-large-size_3-of-12">
+                <div class="" aura:id="showDateFilter">
+                    <c:ARV_FilterPicklist selectedObjectInFilter="{!v.selectedObjectInFilter}"/>
+                </div>
+            </div>
+            <div class="slds-size_1-of-2 slds-medium-size_5-of-6 slds-large-size_9-of-12">
+   			<table class="slds-table slds-table_bordered slds-table_cell-buffer">
+            <thead>
+                <tr class="slds-text-title_caps slds-text-body_small">
+                    <th scope="col">
+                        <div class="slds-truncate" title="Record ID">
+                        <lightning:input type="checkbox" label="" name="backedupRecords" class="slds-float_left" aura:id="recordsMainBox" onchange="{!c.checkAllCheckboxes}" />Record ID</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Backup Time">Backup Time</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Billing City">Billing City</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Triggered By">Triggered By</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Phone">Phone</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Select">Select</div>
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="slds-text-body_small">
+				<aura:iteration items="{!v.records}" var="obj"> 
+                	<tr>
+                    <th scope="row" data-label="Record id">
+                        <div class="slds-truncate" title="rid">
+                            <lightning:input type="checkbox" label="" name="{!obj.recordId}" class="slds-float_left" aura:id="backedupRecords" />
+                            <a href="javascript:void(0);">{!obj.recordId}</a></div>
+                    </th>
+                  <td data-label="Backup Time">
+                        <div class="slds-truncate" title="time">{!obj.backupTime}</div>
+                    </td>
+                    <td data-label="Type">
+                        <div class="slds-truncate" title="Type">{!obj.recordField}</div>
+                    </td>
+                    <td data-label="Triggered By">
+                        <div class="slds-truncate" title="Triggered By">{!obj.backupUser}</div>
+                    </td>
+                    <td data-label="Phone">
+                        <div class="slds-truncate" title="Phone">{!obj.phone}</div>
+                    </td>
+                    <td data-label="showMore">
+                        <div class="slds-truncate" title="showMore"><a>Show more fields</a></div>
+                    </td>
+                </tr>
+                </aura:iteration>                                                        
+            </tbody>
+        </table>
+    </div>
+ </div>
+<lightning:button variant="neutral" label="Back to Restore Activities" onclick="{!c.backToRestoreActivity }" class="slds-float_right" />
+</div>
+    <div style="height:8rem">
+       <c:ARVRestore_Configuration />
+    </div>
+</aura:component>

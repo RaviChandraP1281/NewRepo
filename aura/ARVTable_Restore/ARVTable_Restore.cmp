@@ -1,0 +1,170 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+   
+	<table class="slds-table slds-table_bordered slds-table_cell-buffer">
+  <thead>
+    <tr class="slds-text-title_caps slds-text-body_small">
+      <th scope="col">
+        <div class="slds-truncate slds-text-body_small" title="Record id"><lightning:input type="checkbox" label="Record id" name="blue" />
+</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Backup Time">Backup Time</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Billing City">Billing City</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Triggered By">Triggered By</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Phone">Phone</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Select">Select</div>
+      </th>
+    </tr>
+  </thead>
+        
+  <tbody class="slds-text-body_small">
+      <tr>
+      <th scope="row" data-label="Record id">
+        <div class="slds-truncate" title="1001">
+            <lightning:input type="checkbox" label="" name="1001" class="slds-float_left"/>
+            <a>1001</a>
+          </div>
+      </th>
+      <td data-label="Backup Time">
+        <div class="slds-truncate" title="Cloudhub">21:00:00</div>
+      </td>
+      <td data-label="Billing City">
+        <div class="slds-truncate" title="Billing City">Chicago</div>
+      </td>
+      <td data-label="Triggered By">
+        <div class="slds-truncate" title="Triggered By">User1</div>
+      </td>
+      <td data-label="Phone">
+        <div class="slds-truncate" title="phone1">99999999999</div>
+      </td>
+      <td data-label="Select">
+        <div class="slds-truncate" title=""><a href="javascript:void(0);">Show more Fields</a></div>
+      </td>
+    </tr>
+      <tr>
+      <th scope="row" data-label="Record id">
+        <div class="slds-truncate" title="1001">
+            <lightning:input type="checkbox" label="" name="1001" class="slds-float_left"/>
+            <a>1001</a>
+          </div>
+      </th>
+      <td data-label="Backup Time">
+        <div class="slds-truncate" title="Cloudhub">21:00:00</div>
+      </td>
+      <td data-label="Billing City">
+        <div class="slds-truncate" title="Billing City">Chicago</div>
+      </td>
+      <td data-label="Triggered By">
+        <div class="slds-truncate" title="Triggered By">User1</div>
+      </td>
+      <td data-label="Phone">
+        <div class="slds-truncate" title="phone1">99999999999</div>
+      </td>
+      <td data-label="Select">
+        <div class="slds-truncate" title=""><a href="javascript:void(0);">Show more Fields</a></div>
+      </td>
+    </tr>
+      <tr>
+      <th scope="row" data-label="Record id">
+        <div class="slds-truncate" title="1001">
+            <lightning:input type="checkbox" label="" name="1001" class="slds-float_left"/>
+            <a aura:id="1001" onclick="showActivity">1001</a>
+          </div>
+      </th>
+      <td data-label="Backup Time">
+        <div class="slds-truncate" title="Cloudhub">21:00:00</div>
+      </td>
+      <td data-label="Billing City">
+        <div class="slds-truncate" title="Billing City">Chicago</div>
+      </td>
+      <td data-label="Triggered By">
+        <div class="slds-truncate" title="Triggered By">User1</div>
+      </td>
+      <td data-label="Phone">
+        <div class="slds-truncate" title="phone1">99999999999</div>
+      </td>
+      <td data-label="Select">
+        <div class="slds-truncate" title=""><a href="javascript:void(0);">Show more Fields</a></div>
+      </td>
+    </tr>
+      <tr>
+      <th scope="row" data-label="Record id">
+        <div class="slds-truncate" title="1001">
+            <lightning:input type="checkbox" label="" name="1001" class="slds-float_left"/>
+            <a>1001</a>
+          </div>
+      </th>
+      <td data-label="Backup Time">
+        <div class="slds-truncate" title="Cloudhub">21:00:00</div>
+      </td>
+      <td data-label="Billing City">
+        <div class="slds-truncate" title="Billing City">Chicago</div>
+      </td>
+      <td data-label="Triggered By">
+        <div class="slds-truncate" title="Triggered By">User1</div>
+      </td>
+      <td data-label="Phone">
+        <div class="slds-truncate" title="phone1">99999999999</div>
+      </td>
+      <td data-label="Select">
+        <div class="slds-truncate" title=""><a href="javascript:void(0);">Show more Fields</a></div>
+      </td>
+    </tr>
+      <tr>
+      <th scope="row" data-label="Record id">
+        <div class="slds-truncate" title="1001">
+            <lightning:input type="checkbox" label="" name="1001" class="slds-float_left"/>
+            <a>1001</a>
+          </div>
+      </th>
+      <td data-label="Backup Time">
+        <div class="slds-truncate" title="Cloudhub">21:00:00</div>
+      </td>
+      <td data-label="Billing City">
+        <div class="slds-truncate" title="Billing City">Chicago</div>
+      </td>
+      <td data-label="Triggered By">
+        <div class="slds-truncate" title="Triggered By">User1</div>
+      </td>
+      <td data-label="Phone">
+        <div class="slds-truncate" title="phone1">99999999999</div>
+      </td>
+      <td data-label="Select">
+        <div class="slds-truncate" title=""><a href="javascript:void(0);">Show more Fields</a></div>
+      </td>
+    </tr>
+      <tr>
+      <th scope="row" data-label="Record id">
+        <div class="slds-truncate" title="1001">
+            <lightning:input type="checkbox" label="" name="1001" class="slds-float_left"/>
+            <a>1001</a>
+          </div>
+      </th>
+      <td data-label="Backup Time">
+        <div class="slds-truncate" title="Cloudhub">21:00:00</div>
+      </td>
+      <td data-label="Billing City">
+        <div class="slds-truncate" title="Billing City">Chicago</div>
+      </td>
+      <td data-label="Triggered By">
+        <div class="slds-truncate" title="Triggered By">User1</div>
+      </td>
+      <td data-label="Phone">
+        <div class="slds-truncate" title="phone1">99999999999</div>
+      </td>
+      <td data-label="Select">
+        <div class="slds-truncate" title=""><a href="javascript:void(0);">Show more Fields</a></div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+    
+</aura:component>

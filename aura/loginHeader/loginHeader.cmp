@@ -1,0 +1,7 @@
+<aura:component >
+    <div class="slds-m-left_xx-large slds-float_left">
+    <div class="slds-media__figure">                                				
+         <img alt="logo" src="/resource/1497643968000/logo?isdtp=p1.jpg" title="Logo" />
+    </div>       
+    </div>
+</aura:component>

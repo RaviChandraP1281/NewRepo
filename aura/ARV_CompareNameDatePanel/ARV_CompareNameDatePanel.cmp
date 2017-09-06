@@ -1,0 +1,20 @@
+<aura:component >
+    <div class="slds-panel slds-grid slds-grid_vertical slds-nowrap">
+        <div class="slds-panel__section slds-border_bottom">
+            <div class="slds-grid">
+                <div class="slds-p-left_x-small slds-size_1-of-2 slds-medium-size_1-of-6 slds-large-size_3-of-12">
+                    <lightning:input label="Name" name="name" />
+                </div>
+                <div class="slds-p-left_x-small slds-size_1-of-2 slds-medium-size_1-of-6 slds-large-size_3-of-12">
+                    <lightning:input label="User" name="user" />
+                </div>
+                <div class="slds-p-left_x-small slds-size_1-of-2 slds-medium-size_1-of-6 slds-large-size_3-of-12">
+                    <lightning:input type="date" label="From" name="fromdate" />
+                </div>
+                <div class="slds-p-left_x-small slds-size_1-of-2 slds-medium-size_1-of-6 slds-large-size_3-of-12">
+                    <lightning:input type="date" label="To" name="todate" />
+                </div>
+            </div>
+        </div>
+    </div>
+</aura:component>

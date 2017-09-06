@@ -1,0 +1,22 @@
+<aura:component controller="ARVaultService" implements="flexipage:availableForAllPageTypes" access="global">
+	<div class="slds-grid">
+    	<div class="slds-size_1-of-2 slds-medium-size_2-of-6 slds-large-size_4-of-12">
+            <c:ARV_ConfigAccount />
+        </div>
+        <div class="slds-size_1-of-2 slds-medium-size_2-of-6 slds-large-size_4-of-12">
+            <c:ARV_ConfigARVLogin />
+        </div>
+        <div class="slds-size_1-of-2 slds-medium-size_2-of-6 slds-large-size_4-of-12">
+            <c:ARV_ConfigAdvSecurity />
+        </div>
+    </div>
+    <div class="slds-grid">
+    	<div class="slds-size_1-of-2 slds-medium-size_3-of-6 slds-large-size_6-of-12">
+            <c:ARV_ConfigPreferences />
+        </div>
+        <div class="slds-size_1-of-2 slds-medium-size_3-of-6 slds-large-size_6-of-12">
+            <c:ARV_ConfigUnsupportedObj />
+        </div>
+    </div>
+    <c:ARV_ConfigCustomAlert />
+</aura:component>

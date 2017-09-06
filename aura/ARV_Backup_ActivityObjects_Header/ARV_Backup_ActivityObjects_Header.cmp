@@ -1,0 +1,27 @@
+<aura:component >
+<div class="slds-page-header slds-page-header_object-home">
+   	<div class="slds-grid">
+    <div class="slds-col slds-has-flexi-truncate">
+      <div class="slds-media slds-no-space slds-grow">
+        <div class="slds-media__figure">
+          <span class="slds-icon_container slds-icon-standard-lead">
+            <lightning:icon iconName="standard:lead" size="medium" alternativeText=" "/>
+          </span>
+        </div>
+        <div class="slds-media__body">
+          <p class="slds-text-title_caps slds-line-height_reset">Dashboard</p>
+          <h1 class="slds-page-header__title slds-p-right_x-small">
+            <button class="slds-button slds-button_reset slds-type-focus slds-truncate" aria-haspopup="true" title="">
+              <span class="slds-grid slds-has-flexi-truncate slds-grid_vertical-align-center">
+                  Backup</span>
+            </button>
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div class="slds-col slds-no-flex slds-grid slds-align-top slds-p-bottom_xx-small">
+          <lightning:button variant="neutral" label="Back To Dashboard" aura:id="returndashboard" onclick="{!c.backToDashboard}"/>
+      </div>
+   </div>
+ </div>
+</aura:component>

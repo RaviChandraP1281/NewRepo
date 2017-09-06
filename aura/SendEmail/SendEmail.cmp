@@ -1,0 +1,54 @@
+<aura:component controller="ARVaultService">
+  <!--use boolean attribute for Store true/false value,
+    make default to "false" so modal box are not display on the load of component. 
+    --> 
+  <aura:attribute name="isOpen" type="boolean" default="false"/>
+  <aura:attribute name="email" type="string"/>
+  <aura:attribute name="isAttachment" type="boolean" default="false"/>
+  <aura:attribute name="sfOrgId" type="String" />
+  <aura:attribute name="dataObjects" type="Object[]" />
+  <aura:handler name="init" value="{!this}" action="{!c.openModel}" />
+    
+  <!--Use "slds-m-around- -xx-large" class to add standard Large padding to the component--> 
+  <div class="slds-m-around--xx-large">
+    <button class="slds-button slds-button--brand" onclick="{!c.openModel}">Share via Email</button>  
+    
+  <!--Use aura:if tag to display Model Box, on the bese of conditions. [isOpen boolean attribute] -->   
+    <aura:if isTrue="{!v.isOpen}">
+      
+   <!--###### MODAL BOX Start From Here ######--> 
+      <div role="dialog" tabindex="-1" aria-labelledby="header99" class="slds-modal slds-fade-in-open ">
+        <div class="slds-modal__container">
+          <!-- ###### MODAL BOX HEADER Part Start From Here ######-->
+          <div class="slds-modal__header">
+            <button class="slds-button slds-modal__close slds-button--icon-inverse" title="Close" onclick="{!c.closeModel}">
+            X
+            <span class="slds-assistive-text">Close</span>
+            </button>
+            <h2 id="header99" class="slds-text-heading--medium">Share via Email</h2>
+          </div>
+          <!--###### MODAL BOX BODY Part Start From Here ######-->  
+          <div class="slds-modal__content slds-p-around--medium">
+               <label class="slds-form-element__label" for="CC">To:</label>
+               <div class="slds-form-element__control">
+                  <ui:inputEmail class="slds-input" aura:id="email"  value="{!v.email}" required="true" placeholder="abc@email.com"/>
+               </div>
+            </div>  
+          
+          <div class="slds-modal__content slds-p-around--medium" aura:id="attachmentFile">
+            <p><b>Attachment is added</b></p>
+          </div>
+          
+          <!--###### MODAL BOX FOOTER Part Start From Here ######-->
+          <div class="slds-modal__footer">
+            <button class="slds-button slds-button--neutral" onclick="{!c.closeModel}" >Cancel</button>
+            <button class="slds-button slds-button--brand" onclick="{!c.sendEmail}">Send</button>
+          </div>
+        </div>
+      </div>
+      <div class="slds-backdrop slds-backdrop--open"></div>
+      <!--###### MODAL BOX Part END Here ######-->
+    
+ </aura:if>
+  </div>
+</aura:component>

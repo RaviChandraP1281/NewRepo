@@ -1,0 +1,16 @@
+<aura:component controller="ARVaultService" implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:handler name="displayrestore" event="c:showRestoreNow" action="{!c.showTheBackups}" />
+    <aura:handler name="ARV_ConfirmRestore_Event" event="c:ARV_ConfirmRestore_Event" action="{!c.confirmRestore}" />
+    <aura:handler name="restoreHome" event="c:backToRestore" action="{!c.backToRestore}" />
+    <aura:attribute name="sfOrgId" type="String" />
+    <aura:attribute name="backupactivity" type="Object[]" />
+    <aura:attribute name="userConfirmedActivities" type="Object[]" />
+    <div aura:id="restoreHeader">
+    	<c:ARVHeader_RestoreDashboard sfOrgId="{!v.sfOrgId}"/>
+    </div>
+    <div class="slds-hide" aura:id="restoreBody">
+        <div aura:id="backups">
+            <c:ARVRestore_BackupsTable sfOrgId="{!v.sfOrgId}" userConfirmedActivities="{!v.userConfirmedActivities}" backupactivity="{!v.backupactivity}"/>
+        </div>
+    </div>
+</aura:component>

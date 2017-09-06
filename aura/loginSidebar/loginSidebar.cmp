@@ -1,0 +1,14 @@
+<aura:component >
+<div class="slds-float_right">
+        <div class="slds-m-right_none">
+            <div class="slds-m-top_none">
+        		<div class="slds-media">
+    				<div class="slds-media__figure"  style="background-size:cover;">
+                        <div class="loading" style="height: 662px;width: 900px;">
+    					 </div>
+    				</div>
+        		</div>
+    		</div>
+        </div>
+    </div>	
+</aura:component>

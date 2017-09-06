@@ -1,0 +1,15 @@
+.THIS dt{
+    float:left;
+    padding-left:1rem;
+}
+.THIS .slds-select_container{
+    width:20rem;
+    padding-left:1rem;
+}
+.THIS.slds-spinner_container {  
+  z-index: 10000;
+  position: fixed;   
+}
+.THIS input{
+    width:20rem;
+}
