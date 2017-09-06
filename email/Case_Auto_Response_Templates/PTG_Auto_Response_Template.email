@@ -1,3 +1,0 @@
-Dear {!Contact.FirstName} ,
-
-      Case has been successfully created .Here is your case number : {!Case.CaseNumber}

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<EmailFolder xmlns="http://soap.sforce.com/2006/04/metadata">
-    <accessType>Shared</accessType>
-    <name>AAG IAM - James Rothe</name>
-    <publicFolderAccess>ReadOnly</publicFolderAccess>
-    <sharedTo>
-        <group>AAG_IAM_Rothe_James</group>
-    </sharedTo>
-</EmailFolder>

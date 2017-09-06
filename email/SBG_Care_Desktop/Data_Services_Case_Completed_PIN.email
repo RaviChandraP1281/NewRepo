@@ -1,6 +1,0 @@
-<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
-<tr valign="top" height="400" >
-<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
-<![CDATA[<div><p style="font-family: 'FS Albert Light', fs_albertlight, sans-serif; font-size: medium;">Hello {!Contact.Name},<br><br></p><p style="font-family: 'FS Albert Light', fs_albertlight, sans-serif; font-size: medium;">Provided for you is your PIN &amp; Company File Password. <br></p><p style="font-family: 'FS Albert Light', fs_albertlight, sans-serif; font-size: medium;"><br></p><ul><li><b>PIN</b>: [PIN]</li><li><b>Company File Password</b>: [Company Password]</li></ul><br><p style="font-family: 'FS Albert Light', fs_albertlight, sans-serif; font-size: medium;">Thank you,<br>Intuit Data Services Team<br></p><p style="font-family: 'FS Albert Light', fs_albertlight, sans-serif; font-size: medium;"><br></p><b>This is an automated email. Please do not reply directly as you will not receive a response</b>.</div>]]></td>
-</tr>
-</table>

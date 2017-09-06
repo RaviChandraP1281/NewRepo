@@ -1,5 +1,0 @@
-File Upload for Company : {!Rackspace_Document__c.Company__c}
-
-Customer's Email              : {!Rackspace_Document__c.Customer_Email__c}
-
-File Name                           : {!Rackspace_Document__c.File_Name__c}

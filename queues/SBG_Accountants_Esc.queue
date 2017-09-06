@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
-    <doesSendEmailToMembers>true</doesSendEmailToMembers>
-    <email>accountant_esc@intuit.com</email>
-    <name>SBG Accountants Esc</name>
-    <queueSobject>
-        <sobjectType>Case</sobjectType>
-    </queueSobject>
-</Queue>

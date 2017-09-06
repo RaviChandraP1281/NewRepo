@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<RemoteSiteSetting xmlns="http://soap.sforce.com/2006/04/metadata">
-    <description>This is being used in Get Eligible Offers ,Opt-In ,Re-Subscribe</description>
-    <disableProtocolSecurity>false</disableProtocolSecurity>
-    <isActive>true</isActive>
-    <url>https://v4.api.intuit.com</url>
-</RemoteSiteSetting>

@@ -1,6 +1,0 @@
-<messaging:emailTemplate subject="Intuit Quote" recipientType="Contact" relatedToType="Quote">
-<messaging:plainTextEmailBody >
-Congratulations!
-This is your new Visualforce Email Template.
-</messaging:plainTextEmailBody>
-</messaging:emailTemplate>
