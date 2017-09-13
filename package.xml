@@ -137,10 +137,12 @@
         <members>ARV_Backup_ActivityObjectsList</members>
         <members>ARV_Backup_ActivityObjects_Activity</members>
         <members>ARV_Backup_ActivityObjects_Header</members>
+        <members>ARV_Backup_ForceBkp_Event</members>
         <members>ARV_Backup_Header</members>
         <members>ARV_Backup_HistoryTable</members>
         <members>ARV_Backup_InprogressTable</members>
         <members>ARV_Backup_OrgChange_Event</members>
+        <members>ARV_Backup_RtnToDshbrd_Event</members>
         <members>ARV_Backup_svgInprogressBar</members>
         <members>ARV_CompareHeader</members>
         <members>ARV_CompareNameDatePanel</members>
@@ -158,6 +160,8 @@
         <members>ARV_Dashboard_Chart</members>
         <members>ARV_Dashboard_InprogressChart</members>
         <members>ARV_FilterPicklist</members>
+        <members>ARV_FilterPicklist_Event</members>
+        <members>ARV_GoBackupActivitiesByFilter</members>
         <members>ARV_Header</members>
         <members>ARV_NewOrg</members>
         <members>ARV_NewOrg_Event</members>
@@ -179,6 +183,7 @@
         <members>ARV_SelectFields</members>
         <members>ARV_SelectObjects</members>
         <members>ARV_SfOrgAuth</members>
+        <members>ARV_fireSforgAuth</members>
         <members>ARV_sforgauthsucess</members>
         <members>ARVselectOptions_Restore</members>
         <members>ARVselectWeek</members>
@@ -187,6 +192,7 @@
         <members>DashboardBarGraph</members>
         <members>DashboardGraph</members>
         <members>Date_Pill</members>
+        <members>Example_INter</members>
         <members>LeelaApp</members>
         <members>LeepaApp</members>
         <members>ParentComponent</members>
@@ -196,6 +202,8 @@
         <members>Subchild</members>
         <members>TestAlloptions1</members>
         <members>TestAlloptions2</members>
+        <members>Time</members>
+        <members>TimeApp</members>
         <members>TimelineLighting</members>
         <members>WeCanDelete</members>
         <members>backToRestore</members>
@@ -206,6 +214,7 @@
         <members>loginHeader</members>
         <members>loginSidebar</members>
         <members>objectsList</members>
+        <members>sfd</members>
         <members>showFilter</members>
         <members>showGraph</members>
         <members>showRecords</members>
@@ -218,6 +227,7 @@
         <members>test</members>
         <members>testExportApp</members>
         <members>testExportCmp</members>
+        <members>testing</members>
         <name>AuraDefinitionBundle</name>
     </types>
     <types>
@@ -253,6 +263,10 @@
         <members>Web_Lead_Integration</members>
         <members>amindcanvas</members>
         <name>ConnectedApp</name>
+    </types>
+    <types>
+        <members>ARVault</members>
+        <name>CustomApplication</name>
     </types>
     <types>
         <members>AgentTools</members>
@@ -3203,6 +3217,15 @@
         <name>CustomSite</name>
     </types>
     <types>
+        <members>Backup</members>
+        <members>Compare</members>
+        <members>Configuration</members>
+        <members>Restore</members>
+        <members>Setup</members>
+        <members>Testing</members>
+        <name>CustomTab</name>
+    </types>
+    <types>
         <members>AAE_Investigations_Dashboards</members>
         <members>AAE_Investigations_Dashboards/FDS_Dashboard</members>
         <members>AAE_Investigations_Dashboards/Investigation_Coaching</members>
@@ -4682,6 +4705,7 @@
         <name>FieldSet</name>
     </types>
     <types>
+        <members>ARVault_UtilityBar</members>
         <members>Backup</members>
         <members>Compare</members>
         <members>Configuration</members>
@@ -4689,6 +4713,7 @@
         <members>LightningService_UtilityBar</members>
         <members>Restore</members>
         <members>Setup</members>
+        <members>Testing</members>
         <name>FlexiPage</name>
     </types>
     <types>
@@ -5542,6 +5567,7 @@
         <members>Profile</members>
         <members>RackspaceCloud</members>
         <members>SFDC_REST_Service_intuitb2bmysalesforcec</members>
+        <members>ServicesURL</members>
         <members>Storageurl</members>
         <members>SyncWithRN</members>
         <members>Upgrade_Company</members>
@@ -28699,6 +28725,7 @@
         <members>commonFileExchange</members>
         <members>cssFileExchange</members>
         <members>customIcons</members>
+        <members>d3</members>
         <members>ecbmodemin</members>
         <members>fileExchangeImage</members>
         <members>fileExchangeImage2</members>
@@ -28709,6 +28736,7 @@
         <members>jQueryCharts</members>
         <members>jQueryForPopup</members>
         <members>jQueryUi</members>
+        <members>jql</members>
         <members>jquery</members>
         <members>jquery191</members>
         <members>jquery_clickoutside</members>

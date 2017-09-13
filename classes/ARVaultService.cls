@@ -3,6 +3,16 @@ public class ARVaultService {
    public static String baseURL = 'http://54.202.231.145:8080/ARVault';
   
     @AuraEnabled
+    public static Map<String, Object>  getOrgBackupConfig(String sfOrgId){
+          String userInfo = '{"sfOrgId":"'+sfOrgId
+         +'"}';
+	  String serviceURL = baseURL + '/getSforgBakupCfg';
+        //Map<String, Object> generateResponse
+      Map<String, Object> responseList =  generateResponse(serviceURL, userInfo);
+      System.debug(''+responseList);
+        return responseList;
+    }
+    @AuraEnabled
     public static String saveBackupConfig(String idSforg, String flScdFrq, String dtScd, String tmScd, String dayScd, String objCriteria, String idUser){
        System.debug(objCriteria);
         String jsonInput = '{"idSforg": "'+idSforg
@@ -49,7 +59,7 @@ public class ARVaultService {
         }
         return responseObjects;
     }    
-     @AuraEnabled
+    @AuraEnabled
     public static List<Object> getOrgsList(String userid){
         String jsonInput = '{"idUser": "f939bec89dc549d9bb2a5ef164ac0eb5"}';
         String serviceURL = baseURL + '/getAllSforgEnviInfoOfUser';
@@ -104,15 +114,30 @@ public class ARVaultService {
         return responseObjects;
     }
     @AuraEnabled
-   public static String basicAuthCallout(String orgName, String userName, String pwd){
-       System.debug(''+orgName+', '+userName+', '+pwd);
-     String userInfo = '{"nmLable":"'+orgName+'", "sfNmUser":"'+userName+'","sfTxPwd":"'+pwd+'"}';
+    public static String basicAuthCallout(String orgName, String userName, String pwd, String sfSecToken, String idUser){
+ 
+       System.debug(''+orgName+', '+userName+', '+pwd+', '+sfSecToken+','+idUser);
+     String userInfo = '{"nmLable":"'+orgName
+         +'", "sfNmUser":"'+userName
+         +'","sfTxPwd":"'+pwd
+          +'","sfSecToken":"'+sfSecToken
+         +'", "idUser":"'+idUser
+         +'"}';
 	 String serviceURL = baseURL + '/addSforgEnvi';
     
      Map<String, Object> responseList = generateResponse(serviceURL, userInfo);
      String responseStr = (String) responseList.get('idSforg');  
        System.debug(''+responseStr);
      return responseStr;  
+   }
+    // Called on SetUp Page to test SF connection.
+    @AuraEnabled
+    public static String testSfConnection(String userName, String password, String secToken){
+     String userInfo = '{"sfNmUser":"'+userName+'","sfTxPwd":"'+password+'", "sfSecToken": "'+secToken+'"}';
+	 String serviceURL = baseURL + '/testSfConnection';
+     String responseList = generateResponseStr(serviceURL, userInfo);
+     System.debug(''+responseList);
+     return responseList;  
    }
 
     @AuraEnabled
@@ -123,7 +148,6 @@ public class ARVaultService {
         List<Object> objList = (List<Object>) responseList.get('objects');
         return objList;    
     }
-    
     @AuraEnabled
     public static List<Object> getSfFields(String sfOrgID, String sfObjName){
          String jsonInput = '{"sfOrgId": "'+sfOrgID+'", "sfObjName": "'+sfObjName+'"}';
@@ -131,9 +155,7 @@ public class ARVaultService {
          Map<String, Object> responseList = generateResponse(serviceURL, jsonInput);
          List<Object> objList = (List<Object>) responseList.get('fields');
      	 return objList;
-    }
-    
-        
+    }  
     public static Map<String, Object> generateResponse(String serviceURL, String jsonInput){
     	       
         HttpRequest req = new HttpRequest();
@@ -171,23 +193,17 @@ public class ARVaultService {
         }
         return responseObjects;
     }
-      
-      @AuraEnabled
-      public static void startBackup (String sfOrgID) {
-      	String jsonInput = '{"sfOrgId": "'+sfOrgID+'"}';
+    @AuraEnabled
+    public static void startBackup (String sfOrgID, String idUser, String backupType, String bkpLabel) {
+        String jsonInput = '{"sfOrgId": "'+sfOrgID+'","idUser": "'+idUser+'","backupType": "'+backupType+'","bkpLabel": "'+bkpLabel+'"}';
         String serviceURL = baseURL + '/startBackup';
+         System.debug('ok:'+jsonInput); 
         Map<String, Object> responseList = generateResponse(serviceURL, jsonInput);
-        System.debug('responseList:'+responseList);
+        
       }
     
-      @AuraEnabled
-      public static String getBackupHistory (Integer top) {
-         String res = '{"activityhistory":[{"id":"1001","date":"23-June-2017","records":"200","objectscount":"2","triggeredby":"leelapavan.a@autorabit.com"},{"id":"1025","date":"26-June-2017","records":"200","objectscount":"2","triggeredby":"leelapavan.a@autorabit.com"},{"id":"1002","date":"23-June-2017","records":"200","objectscount":"2","triggeredby":"leelapavan.a@autorabit.com"},{"id":"1003","date":"23-June-2017","records":"200","objectscount":"2","triggeredby":"leelapavan.a@autorabit.com"},{"id":"1004","date":"23-June-2017","records":"200","objectscount":"2","triggeredby":"leelapavan.a@autorabit.com"},{"id":"1005","date":"23-June-2017","records":"200","objectscount":"2","triggeredby":"leelapavan.a@autorabit.com"},{"id":"1006","date":"23-June-2017","records":"200","objectscount":"2","triggeredby":"leelapavan.a@autorabit.com"},{"id":"1007","date":"23-June-2017","records":"200","objectscount":"2","triggeredby":"leelapavan.a@autorabit.com"},{"id":"1008","date":"23-June-2017","records":"200","objectscount":"2","triggeredby":"leelapavan.a@autorabit.com"},{"id":"1009","date":"23-June-2017","records":"200","objectscount":"2","triggeredby":"leelapavan.a@autorabit.com"}]}';
-            return res;
-      }
-    
-      @AuraEnabled
-      public static List<Object> getListOfBackups (String sfOrgID) {
+	 @AuraEnabled
+     public static List<Object> getListOfBackups (String sfOrgID) {
           String jsonInput = '{"sfOrgId": "'+sfOrgID+'"}';
           String serviceURL = baseURL + '/getAllSforgBakupStatus';
           List<Object> responseList = generateListResponse(serviceURL, jsonInput);
@@ -195,16 +211,97 @@ public class ARVaultService {
           return responseList;
       }
     
+    public static Map<String, Object> convertToObjectList(Map<String, Object> response){
+        
+        Map<String, Object> resultCritList =  (Map<String, Object>) response.get('resultCriteria');          
+        List<Object> resultList = new List<Object>(); 
+        for (String strKey : resultCritList.keyset() )  {
+            Map<String, Object> mObj = (Map<String, Object>) resultCritList.get(strKey);
+            resultList.add(mObj);
+        }
+        response.put('resultCriteria', resultList);
+        return response;
+    }
+    
       @AuraEnabled
-      public static Map<String, Object> getBackupObject (String sfOrgID, String backupID) {
-          String jsonInput = '{"sfOrgId": "'+sfOrgID+'", "backupId" : "'+backupID+'"}';
+      public static Map<String, Object> getBackupObject (String sfOrgID, Integer backupID) {
+          String jsonInput = '{"sfOrgId": "'+sfOrgID+'", "backupId" : '+backupID+'}';
           String serviceURL = baseURL + '/getSforgBakupStatus';
+              
           Map<String, Object> responseList = generateResponse(serviceURL, jsonInput);
-          
-          System.debug(responseList);
+          responseList = convertToObjectList(responseList);
           return responseList;
       }
     
+    @AuraEnabled
+    public static List<Object> getBackupsForRestore (String sfOrgID, String sYear, String sMonth, String sFromDate, String sToDate) {
+           /*String sfOrgID = '00D6F000001OOISUA4';   Integer sYear = 2017;    Integer sMonth = 9;   Date sFromDate = Date.today() - 2; Date sToDate =  Date.today();*/
+          boolean isMonthYear = (sYear != null && sMonth != null) ?  true : false ;
+                    
+          List<Object> backupList = getListOfBackups(sfOrgID);
+          List<Object> returnObjList = new List<Object>();
+          for(Object bObject: backupList){
+              Map<String, Object> mapObj = (Map<String, Object>) bObject;
+              String procStatus =  (String) mapObj.get('objProcStatus');
+               //System.debug('getBackupsForRestore:procStatus:'+procStatus);
+              if('COMPLETED'.equals((procStatus))){   
+                  mapObj = convertToObjectList(mapObj);
+                  DateTime backupDate = DateTime.newInstance( (Long) mapObj.get('tmStamp'));
+                  if(isMonthYear){
+                        if((backupDate.year() == Integer.valueOf(sYear)) && (backupDate.month() == Integer.valueOf(sMonth))){
+                              returnObjList.add(mapObj);
+                        }    
+                 }else{
+                        Date bDate =  backupDate.date();
+                        if(bDate > Date.valueOf(sFromDate) && bDate < Date.valueOf(sToDate))  {
+                              returnObjList.add(mapObj);
+                        } 
+                 }
+              }
+          }
+          System.debug('getBackupsForRestore:returnObjList:'+returnObjList);
+          return returnObjList;
+      }
+
+      @AuraEnabled
+    public static List<Object> getRecordsFromBackup (Integer backupID, String objName, String fieldName) {
+        
+        String resp = getRecordsJSONInput(); 
+        Map<String, Object> objMap = (Map<String, Object>) JSON.deserializeUntyped(resp);
+        System.debug('getRecordsFromBackup:objMap'+objMap);
+        List<Object> objList = new List<Object>(); 
+        for(String strKey: objMap.keySet()){
+            Map<String, Object> mapObj = (Map<String, Object>) objMap.get(strKey);
+            objList.add(mapObj);
+        }
+        System.debug('getRecordsFromBackup:objList'+objList);
+        return objList;
+        /*String jsonInput = '{"backupId": '+backupID+', "objName" : "'+objName+'"}';
+        System.debug(jsonInput);
+        String serviceURL = baseURL + '/getRecordsFromBackup';
+        List<Object> fieldList = new List<Object>(); 
+        Map<String, Object> responseList = generateResponse(serviceURL, jsonInput);
+        for(String strKey: responseList.keySet()){
+            Map<String, Object> mapObj = (Map<String, Object>) responseList.get(strKey);
+            fieldList.add(mapObj);
+        }
+        System.debug('responseList:'+responseList);
+        return responseList;*/
+    }
+    
+    @AuraEnabled
+    public static String updateSfOrg(String idSforg, String nmLable, String sfNmUser,String sfTxPwd, String sfSecToken, String idUser){
+                 String userInfo = '{"idSforg":"'+idSforg
+            +'","nmLable":"'+nmLable
+            +'", "sfNmUser": "'+sfNmUser
+            +'","sfTxPwd":"'+sfTxPwd
+            +'","sfSecToken":"' +sfSecToken
+            +'", "idUser": "'+idUser+'"}';
+            String serviceURL = baseURL + '/updateSforgEnvi';
+                 String responseList = generateResponseStr(serviceURL, userInfo);
+                 System.debug(''+responseList);
+                 return responseList;  
+     }
     
     
       @AuraEnabled
@@ -229,24 +326,24 @@ public class ARVaultService {
       }
     
       @AuraEnabled
-      public static List<Object> getFObjectsPerBackup (String sfOrgID, String backupID) {
+      public static List<Object> getFObjectsPerBackup (String backupID, String objName) {
           // after webservice integration we will use the reponse string
-          String resp = '';
-          if(backupID == '1001'){
-              resp = '{ "objects": [{"name": "Lead", "fields": [{"fieldName":"Name1"},{"fieldName":"Id1"},{"fieldName":"Type1"},{"fieldName":"LastModifiedDate1"},{"fieldName":"LastModifiedById1"}]}, { '+
-                  '"name": "Account", "fields": [{"fieldName":"Name2"},{"fieldName":"Id2"},{"fieldName":"Type2"},{"fieldName":"LastModifiedDate2"},{"fieldName":"LastModifiedById2"}]}, { '+
-                  '"name": "Contact", "fields": [{"fieldName":"Name3"},{"fieldName":"Id3"},{"fieldName":"Type3"},{"fieldName":"LastModifiedDate3"},{"fieldName":"LastModifiedById3"}]}, { '+
-                  '"name": "Opportunity","fields": [{"fieldName":"Name4"},{"fieldName":"Id4"},{"fieldName":"Type4"},{"fieldName":"LastModifiedDate4"},{"fieldName":"LastModifiedById4"}]}]	 }';    
-          }else{
-              resp = '{ "objects": [{"name": "Lead", "fields": [{"fieldName":"Name1"},{"fieldName":"Id1"},{"fieldName":"Type1"},{"fieldName":"LastModifiedDate1"},{"fieldName":"LastModifiedById1"}]}, {'+
-                  '"name": "Opportunity", "fields": [{"fieldName":"Name1"},{"fieldName":"Id2"},{"fieldName":"Type2"},{"fieldName":"LastModifiedDate2"},{"fieldName":"LastModifiedById2"}] }]	 }';
-          }
-          
+          String resp = getRecordsJSONInput();
           Map<String, Object> objMap = (Map<String, Object>) JSON.deserializeUntyped(resp);
-          System.debug(objMap);
-          List<Object> objList = (List<Object>) objMap.get('objects');
-          System.debug(objList);
-          return objList;
+          System.debug('getFObjectsPerBackup:objMap'+objMap);
+          List<Object> fieldList= new List<Object>(); 
+          Integer count = 0;
+          for(String strKey: objMap.keySet()){
+              if(count == 0){
+                  Map<String, Object> mapObj = (Map<String, Object>) objMap.get(strKey);
+                  for(String fieldKey: mapObj.keySet()){
+                      fieldList.add(fieldKey);
+                  }
+                  count++;
+              }
+          }
+          System.debug('getFObjectsPerBackup:fieldList'+fieldList);
+          return fieldList;
       }
     
     @AuraEnabled
@@ -318,9 +415,9 @@ public class ARVaultService {
         Integer activityID = (Integer) rMap.get('backupId');
         String rUser = (String) rMap.get('idUser');
         Long rDateTime = (Long) rMap.get('tmStamp');
-        String duration  = (String) rMap.get('strTotDuration');
+        Integer duration  = (Integer) rMap.get('strTotDuration');
         Integer records  = (Integer) rMap.get('nbrTotRecords');
-        String size  = (String) rMap.get('Size');        
+        Integer size  = (Integer) rMap.get('Size');        
         Integer apiCalls = (Integer) rMap.get('nbrTotApi');
         String status  = (String) rMap.get('objProcStatus');
         string recordString = activityID+','+rUser+','+rDateTime+','+ duration +','+records
@@ -449,6 +546,150 @@ public class ARVaultService {
   			isUploaded = false; //(boolean) JSON.deserializeUntyped(res.getBody());
         }
         return isUploaded;
+    }
+    
+    public static String getRecordsJSONInput(){
+        String inputStr = '{ "1": {'+
+            '"ShippingLatitude": "",'+
+            '"LastModifiedDate": "2017-04-07T06:17:00.000Z",'+
+            '"BillingCity": "",'+
+			'"JigsawCompanyId": "",'+
+			'"SLA__c": "Silver",'+
+			'"NaicsCode": "",'+
+			'"Name": "312 Constitution Place Austin, TX 78767 USA",'+
+			'"Industry": "Electronics",'+
+			'"CreatedById": "0056F000006jFL3QAM",'+
+			'"OperatingHoursId": "",'+
+			'"TickerSymbol": "EDGE",'+
+			'"BillingGeocodeAccuracy": "",'+
+			'"AccountSource": "",'+
+			'"BillingPostalCode": "",'+
+			'"DandbCompanyId": "",'+
+			'"PhotoUrl": "/services/images/photo/0016F00001xGo2wQAC",'+
+			'"MasterRecordId": "",'+
+			'"IsDeleted": "false",'+
+			'"LastViewedDate": "",'+
+			'"ShippingGeocodeAccuracy": "",'+
+			'"DunsNumber": "",'+
+			'"Sic": "6576",'+
+			'"ShippingStreet": "312 Constitution Place\\nAustin, TX 78767\\nUSA",'+
+			'"CleanStatus": "Pending",'+
+			'"ShippingPostalCode": "",'+
+			'"YearStarted": "",'+
+			'"CreatedDate": "2017-03-13T23:53:33.000Z",'+
+			'"CustomerPriority__c": "Medium",'+
+			'"ShippingState": "",'+
+			'"DemoField__c": "",'+
+			'"Id": "0016F00001xGo2wQAC",'+
+			'"SicDesc": "",'+
+			'"BillingState": "TX",'+
+			'"AnnualRevenue": "1.39E8",'+
+			'"Jigsaw": "",'+
+			'"Active__c": "Yes",'+
+			'"Site": "",'+
+			'"Ownership": "Public",'+
+			'"Description": "Edge, founded in 1998, is a start-up based in Austin, TX. The company designs and manufactures a device to convert music from one digital format to another. Edge sells its product through retailers and its own website.",'+
+			'"Rating": "Hot",'+
+			'"Website": "http://edgecomm.com",'+
+			'"LastReferencedDate": "",'+
+			'"BillingLatitude": "",'+
+			'"NumberOfEmployees": "1000",'+
+			//'"BillingAddress": "XmlObjectWrapper{name={urn:sobject.partner.soap.sforce.com}BillingAddress, xmlizable=[Address [Location  latitude='null'\\n longitude='null'\\n]\\n city='null'\\n country='null'\\n countryCode='null'\\n geocodeAccuracy='null'\\n postalCode='null'\\n state='TX'\\n stateCode='null'\\n street='Austin'\\n]\\n}",'+
+			'"OwnerId": "0056F000006jFL3QAM",'+
+			'"SLASerialNumber__c": "2657",'+
+			'"BillingLongitude": "",'+
+			'"Tradestyle": "",'+
+			'"Phone": "(512) 757-6000",'+
+			'"NumberofLocations__c": "2.0",'+
+			'"UpsellOpportunity__c": "Maybe",'+
+			'"ShippingCountry": "",'+
+			'"ShippingCity": "",'+
+			'"ParentId": "",'+
+			'"NaicsDesc": "",'+
+			'"AutorabitExtId__c": "0016F00001tIb5HQAS",'+
+			'"AccountNumber": "CD451796",'+
+			'"SystemModstamp": "2017-04-07T06:17:00.000Z",'+
+			'"Type": "Customer - Direct",'+
+			'"BillingCountry": "",'+
+			'"SLAExpirationDate__c": "2017-02-13",'+
+			'"BillingStreet": "Austin",'+
+			//'"ShippingAddress": "XmlObjectWrapper{name={urn:sobject.partner.soap.sforce.com}ShippingAddress, xmlizable=[Address [Location  latitude='null'\\n longitude='null'\\n]\\n city='null'\\n country='null'\\n countryCode='null'\\n geocodeAccuracy='null'\\n postalCode='null'\\n state='null'\\n stateCode='null'\\n street='312 Constitution Place\\nAustin, TX 78767\\nUSA'\\n]\\n}",'+
+			'"LastActivityDate": "",'+
+			'"Fax": "(512) 757-9000",'+
+			'"LastModifiedById": "0056F000006jFL3QAM",'+
+			'"ShippingLongitude": ""'+
+		'}, "2": {'+
+			'"ShippingLatitude": "",'+
+			'"LastModifiedDate": "2017-04-07T06:17:00.000Z",'+
+			'"BillingCity": "",'+
+			'"JigsawCompanyId": "",'+
+			'"SLA__c": "Silver",'+
+			'"NaicsCode": "",'+
+			'"Name": "2 Place Jussieu",'+
+			'"Industry": "Construction",'+
+			'"CreatedById": "0056F000006jFL3QAM",'+
+			'"OperatingHoursId": "",'+
+			'"TickerSymbol": "PYR",'+
+			'"BillingGeocodeAccuracy": "",'+
+			'"AccountSource": "",'+
+			'"BillingPostalCode": "75251",'+
+			'"DandbCompanyId": "",'+
+			'"PhotoUrl": "/services/images/photo/0016F00001xGo2xQAC",'+
+			'"MasterRecordId": "",'+
+			'"IsDeleted": "false",'+
+			'"LastViewedDate": "",'+
+			'"ShippingGeocodeAccuracy": "",'+
+			'"DunsNumber": "",'+
+			'"Sic": "4253",'+
+			'"ShippingStreet": "2 Place Jussieu",'+
+			'"CleanStatus": "Pending",'+
+			'"ShippingPostalCode": "75251",'+
+			'"YearStarted": "",'+
+			'"CreatedDate": "2017-03-13T23:53:33.000Z",'+
+			'"CustomerPriority__c": "",'+
+			'"ShippingState": "",'+
+			'"DemoField__c": "",'+
+			'"Id": "0016F00001xGo2xQAC",'+
+			'"SicDesc": "",'+
+			'"BillingState": "",'+
+			'"AnnualRevenue": "9.5E8",'+
+			'"Jigsaw": "",'+
+			'"Active__c": "Yes",'+
+			'"Site": "",'+
+			'"Ownership": "Public",'+
+			'"Description": "",'+
+			'"Rating": "",'+
+			'"Website": "www.pyramid.com",'+
+			'"LastReferencedDate": "",'+
+			'"BillingLatitude": "",'+
+			'"NumberOfEmployees": "2680",'+
+			//'"BillingAddress": "XmlObjectWrapper{name={urn:sobject.partner.soap.sforce.com}BillingAddress, xmlizable=[Address [Location  latitude='null'\\n longitude='null'\\n]\\n city='null'\\n country='France'\\n countryCode='null'\\n geocodeAccuracy='null'\\n postalCode='75251'\\n state='null'\\n stateCode='null'\\n street='Paris'\\n]\\n}",'+
+			'"OwnerId": "0056F000006jFL3QAM",'+
+			'"SLASerialNumber__c": "9840",'+
+			'"BillingLongitude": "",'+
+			'"Tradestyle": "",'+
+			'"Phone": "(014) 427-4427",'+
+			'"NumberofLocations__c": "17.0",'+
+			'"UpsellOpportunity__c": "Maybe",'+
+			'"ShippingCountry": "France",'+
+			'"ShippingCity": "Paris",'+
+			'"ParentId": "",'+
+			'"NaicsDesc": "",'+
+			'"AutorabitExtId__c": "0016F00001tIb5JQAS",'+
+			'"AccountNumber": "CC213425",'+
+			'"SystemModstamp": "2017-04-07T06:17:00.000Z",'+
+			'"Type": "Customer - Channel",'+
+			'"BillingCountry": "France",'+
+			'"SLAExpirationDate__c": "2017-08-16",'+
+			'"BillingStreet": "Paris",'+
+			//'"ShippingAddress": "XmlObjectWrapper{name={urn:sobject.partner.soap.sforce.com}ShippingAddress, xmlizable=[Address [Location  latitude='null'\\n longitude='null'\\n]\\n city='Paris'\\n country='France'\\n countryCode='null'\\n geocodeAccuracy='null'\\n postalCode='75251'\\n state='null'\\n stateCode='null'\\n street='2 Place Jussieu'\\n]\\n}",'+
+			'"LastActivityDate": "",'+
+			'"Fax": "(014) 427-4428",'+
+			'"LastModifiedById": "0056F000006jFL3QAM",'+
+			'"ShippingLongitude": ""'+
+            '}  }';
+        
+        return inputStr;
     }
     
 }

@@ -1,0 +1,46 @@
+<aura:component controller="TimeController" implements="flexipage:availableForAllPageTypes" access="global">
+
+	<aura:attribute name="minutesObj" type="Object[]"/>    
+    <aura:attribute name="hoursObj" type="Object[]"/>   
+    <aura:attribute name="datesObj" type="Object[]"/>   
+    <aura:handler name="init" value="{!this}" action="{!c.loadMinutes}"/>  
+    <table>
+    	<tr>
+            <td>
+            	<lightning:select name="freq" aura:id="dates" label="Choose date(s)" onchange="">
+                    <aura:iteration items="{!v.datesObj}" var="item">
+                        <option value="{!item}">{!item}
+                            <sup>
+                                          
+                            </sup>                
+                        </option>
+                    </aura:iteration>  
+                </lightning:select>
+            </td>
+            <td>
+                <lightning:select name="time" aura:id="time" label="Time" onchange="">
+                    <aura:iteration items="{!v.hoursObj}" var="item1">
+                        <option value="{!item1}">{!item1}</option>
+                    </aura:iteration>  
+                </lightning:select>
+            </td>
+            <td>
+                <lightning:select name="time" aura:id="minutes" label="Minutes" onchange="">
+                    <aura:iteration items="{!v.minutesObj}" var="mObj">
+                        <option value="{!mObj}">{!mObj}</option>
+                    </aura:iteration>  
+                </lightning:select>
+            </td>
+            
+            <td>
+                <lightning:select name="ampm" aura:id="ampm" label="AM/PM" onchange="">
+                        <aura:iteration items="AM,PM" var="item2">
+                            <option value="{!item2}">{!item2}</option>
+                        </aura:iteration>  
+                    </lightning:select>          
+            </td>
+            <td><lightning:button variant="brand" label="Save" iconName="utility:save" iconPosition="left" onclick="{!c.saveInfo}" /></td>
+        </tr>   
+    </table>
+    
+</aura:component>
