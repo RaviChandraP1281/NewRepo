@@ -3,6 +3,8 @@
     <version>40.0</version>
     <types>
         <members>APICallOuts</members>
+        <members>ARVaultController</members>
+        <members>AccountsController</members>
         <name>ApexClass</name>
     </types>
     <types>
