@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
-    <available>true</available>
-    <encodingKey>ISO-8859-1</encodingKey>
-    <name>End-Trial Check Up (Thomas &amp; Rach)</name>
-    <style>none</style>
-    <subject>How did you go with the trial? QuickBooks trial end</subject>
-    <type>text</type>
-</EmailTemplate>

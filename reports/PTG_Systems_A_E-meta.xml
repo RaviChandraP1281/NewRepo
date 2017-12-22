@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ReportFolder xmlns="http://soap.sforce.com/2006/04/metadata">
-    <folderShares>
-        <accessLevel>View</accessLevel>
-        <sharedTo>PTG_Systems_Support_AandE</sharedTo>
-        <sharedToType>Role</sharedToType>
-    </folderShares>
-    <name>PTG Systems A&amp;E</name>
-</ReportFolder>

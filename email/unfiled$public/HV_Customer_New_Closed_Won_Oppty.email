@@ -1,8 +1,0 @@
-Your QBPC Customer recently had an Opportunity Closed Won.  Please follow up as needed and be sure to document your interaction in Salesforce.
-
-{!Opportunity.Account}
-{!Opportunity.Product_Family_of_Interest__c}
-CAN: {!Account.CAN__c}
-COID: {!Account.Company_ID__c}
-{!Opportunity.Name}
-{!Opportunity.Asset__c}

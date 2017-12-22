@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Role xmlns="http://soap.sforce.com/2006/04/metadata">
-    <caseAccessLevel>Edit</caseAccessLevel>
-    <contactAccessLevel>Edit</contactAccessLevel>
-    <mayForecastManagerShare>false</mayForecastManagerShare>
-    <name>PTG Systems Support AandE</name>
-    <opportunityAccessLevel>Edit</opportunityAccessLevel>
-    <parentRole>PTG_Systems_Tier_2_and_3</parentRole>
-</Role>

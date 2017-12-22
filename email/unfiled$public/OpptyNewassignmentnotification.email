@@ -1,7 +1,0 @@
-*** NEW OPPORTUNITY ASSIGNMENT NOTIFICATION ***  
-
-The following opportunity has been assigned to you.  
-Account:  {!Opportunity.Account} 
-Opportunity Name:  {!Opportunity.Name}  
-
-Click on the link to access the opportunity directly:  {!Opportunity.Link}

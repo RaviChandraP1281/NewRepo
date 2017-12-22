@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<Role xmlns="http://soap.sforce.com/2006/04/metadata">
-    <caseAccessLevel>Edit</caseAccessLevel>
-    <contactAccessLevel>Edit</contactAccessLevel>
-    <mayForecastManagerShare>false</mayForecastManagerShare>
-    <name>Tier 2 Onboard Payments Consultant</name>
-    <opportunityAccessLevel>Edit</opportunityAccessLevel>
-    <parentRole>Onboard_Payments_Mgr</parentRole>
-</Role>
