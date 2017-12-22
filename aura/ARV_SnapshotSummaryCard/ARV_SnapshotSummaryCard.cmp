@@ -1,0 +1,169 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+    
+    <aura:attribute name="firstSnapshot" type="Object" />
+    <aura:attribute name="secondSnapshot" type="Object" />
+    <aura:attribute name="buttonName" type="String" />
+    
+    <aura:registerEvent name="compareSnapshot" type="c:compareSnapshot"/>
+
+    <article class="slds-card">
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__figure">
+                    <span class="slds-icon_container slds-icon-standard-contact" title="description of icon when needed">
+                    </span>
+                </div>
+                <div class="slds-media__body">
+                    <h3>
+                        <span class="slds-text-heading_small">Snapshot</span>
+                    </h3>
+                </div>
+            </header>
+        </div>
+        <!--div class="slds-card__body">
+            <ul class="slds-card__body_inner slds-grid slds-wrap slds-grid_pull-padded">
+                <li class="slds-p-horizontal_small slds-size_1-of-1 slds-size_1-of-3">
+                    <article class="slds-tile slds-media slds-card__tile slds-hint-parent">
+                        <div class="slds-media__figure"></div>
+                        <div class="slds-media__body">
+                            <div class="slds-grid slds-grid_align-spread slds-truncate">
+                                <dl class="slds-list_horizontal slds-wrap">
+                                	<dt class="slds-item_label slds-text-color_weak slds-truncate" title=""></dt>
+                                    <dd class="slds-item_detail slds-truncate" title=""></dd>
+                                </dl>     
+                                <div class="slds-shrink-none">
+    								<lightning:buttonIcon iconName="utility:edit" variant="bare" onclick="" title="{!v.firstSnapshot.backupId}" alternativeText="Close window." />                                                                	
+                            	</div>
+                            </div>
+                            <div class="slds-tile__detail">
+                                <dl class="slds-list_horizontal slds-wrap">
+                                    <dt class="slds-item_label slds-text-color_weak slds-truncate" title="">Label:</dt>
+                                    <dd class="slds-item_detail slds-truncate" title="">{!v.firstSnapshot.bkpLabel}</dd>
+                                    <dt class="slds-item_label slds-text-color_weak slds-truncate" title="">Duration:</dt>
+                                    <dd class="slds-item_detail slds-truncate" title="">{!v.firstSnapshot.strTotDuration}</dd>
+                                    <dt class="slds-item_label slds-text-color_weak slds-truncate" title="">Records:</dt>
+                                    <dd class="slds-item_detail slds-truncate" title="">{!v.firstSnapshot.nbrTotRecords}</dd>
+                                    <dt class="slds-item_label slds-text-color_weak slds-truncate" title="">Success Count:</dt>
+                                    <dd class="slds-item_detail slds-truncate" title="">{!v.firstSnapshot.successCount}</dd>
+                                    <dt class="slds-item_label slds-text-color_weak slds-truncate" title="">API Calls:</dt>
+									<dd class="slds-item_detail slds-truncate" title="">{!v.firstSnapshot.nbrTotApi}</dd>                                      
+                                </dl>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                <li class="slds-p-horizontal_small slds-size_1-of-1 slds-size_1-of-3">
+                    <article class="slds-tile slds-media slds-card__tile slds-hint-parent">
+                        <div class="slds-media__figure">                  
+                        </div>
+                        <div class="slds-media__body">
+                            <div class="slds-grid slds-grid_align-spread slds-truncate">
+                                <dl class="slds-list_horizontal slds-wrap">
+                                	<dt class="slds-item_label slds-text-color_weak slds-truncate" title=""></dt>
+                                    <dd class="slds-item_detail slds-truncate" title=""></dd>
+                                </dl>     
+                                <div class="slds-shrink-none">
+    								<lightning:buttonIcon iconName="utility:edit" variant="bare" onclick="" title="{!v.secondSnapshot.backupId}" alternativeText="Close window." />                                                                	
+                            	</div>
+                            </div>
+                                                            
+                            <div class="slds-tile__detail">                                
+                                <dl class="slds-list_horizontal slds-wrap">
+                                    <dt class="slds-item_label slds-text-color_weak slds-truncate" title="">Label:</dt>
+                                    <dd class="slds-item_detail slds-truncate" title="">{!v.secondSnapshot.bkpLabel}</dd>                                    
+                                    <dt class="slds-item_label slds-text-color_weak slds-truncate" title="">Duration:</dt>
+                                    <dd class="slds-item_detail slds-truncate" title="">{!v.secondSnapshot.strTotDuration}</dd>
+                                    <dt class="slds-item_label slds-text-color_weak slds-truncate" title="">Records:</dt>
+                                    <dd class="slds-item_detail slds-truncate" title="">{!v.secondSnapshot.nbrTotRecords}</dd>
+                                    <dt class="slds-item_label slds-text-color_weak slds-truncate" title="">Success Count:</dt>
+                                    <dd class="slds-item_detail slds-truncate" title="">{!v.secondSnapshot.successCount}</dd>
+                                    <dt class="slds-item_label slds-text-color_weak slds-truncate" title="">API Calls:</dt>
+									<dd class="slds-item_detail slds-truncate" title="">{!v.secondSnapshot.nbrTotApi}</dd>                                      
+                                </dl>
+                            </div>
+                        </div>
+                    </article>
+                </li>
+                
+                
+            </ul>
+        </div-->
+        
+        <div>        
+            <div style="float:left !important;" class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_3-of-6 slds-large-size_6-of-12" >
+                <table class="slds-table slds-table_bordered slds-table_resizable-cols slds-table_cell-buffer " role="grid">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">Backup ID</th>
+                            <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">Label</th>
+                            <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">Duration</th>
+                            <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">Records</th>
+                            <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">Success Count</th>
+                            <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">API Calls</th>
+                        </tr>       
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <aura:if isTrue="{!v.firstSnapshot.backupId != ''}">
+                                <td>{!v.firstSnapshot.backupId}</td>
+                                <td>{!v.firstSnapshot.bkpLabel}</td>
+                                <td>{!v.firstSnapshot.strTotDuration}</td>
+                                <td>{!v.firstSnapshot.nbrTotRecords}</td>
+                                <td>{!v.firstSnapshot.successCount}</td>
+                                <td>{!v.firstSnapshot.nbrTotApi}</td>
+                                <!--aura:set attribute="else">
+                                	<td colspan="5">
+                                    Select a Snapshot
+                                    </td>
+                                </aura:set-->
+                                <aura:set attribute="else">
+                                    You can’t edit this.
+                                    <td colspan="5">Select a Snapshot</td>
+                                </aura:set>
+                            </aura:if>                            
+                        </tr>
+                    </tbody>
+                </table>	
+            </div>
+            
+            <div style="float:right !important;" class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_3-of-6 slds-large-size_6-of-12" >
+                <table class="slds-table slds-table_bordered slds-table_resizable-cols slds-table_cell-buffer " role="grid">
+                    <thead>
+                        <tr class="slds-line-height_reset">
+                            <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">Backup ID</th>
+                            <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">Label</th>
+                            <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">Duration</th>
+                            <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">Records</th>
+                            <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">Success Count</th>
+                            <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">API Calls</th>
+                        </tr>       
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <aura:if isTrue="{!v.secondSnapshot.backupId != ''}">
+                                <td>{!v.secondSnapshot.backupId}</td>
+                                <td>{!v.secondSnapshot.bkpLabel}</td>
+                                <td>{!v.secondSnapshot.strTotDuration}</td>
+                                <td>{!v.secondSnapshot.nbrTotRecords}</td>
+                                <td>{!v.secondSnapshot.successCount}</td>
+                                <td>{!v.secondSnapshot.nbrTotApi}</td>
+                                <!--aura:set attribute="else">
+                                	<td colspan="5">Select a Snapshot</td>
+                                </aura:set-->
+                                <aura:set attribute="else">
+                                    You can’t edit this.
+                                    <td colspan="5">Select a Snapshot</td>
+                                </aura:set>
+                            </aura:if>
+                            
+                        </tr>
+                    </tbody>
+                </table>
+                
+            </div>
+            <div class="slds-p-horizontal_small slds-size_1-of-1 slds-size_1-of-1">
+                <lightning:button variant="brand" label="{!v.buttonName}" onclick="{!c.compareSnapshots }" />
+            </div>
+        </div>
+	</article>
+</aura:component>

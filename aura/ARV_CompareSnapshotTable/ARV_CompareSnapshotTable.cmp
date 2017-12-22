@@ -1,0 +1,63 @@
+<aura:component controller="ARVaultService" implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="snapshotDetail" type="Object"/> 
+    <aura:attribute name="csnapshotDetail" type="Object"/>  
+    <aura:attribute name="sfOrgId" type="String" />
+    <aura:attribute name="snapshotID" type="String" />
+    <aura:attribute name="sequence" type="Integer" />
+    <aura:attribute name="isDuration" type="boolean" />
+    <aura:attribute name="isSCount" type="boolean" />
+    <aura:attribute name="isAPICalls" type="boolean" />
+    <aura:attribute name="isSize" type="boolean" /> 
+    <aura:attribute name="page" type="Integer" default="1"/>
+    <aura:attribute name="PAGE_MAX_SIZE" type="Integer" default="20"/> 
+    <aura:attribute name="resultCriteria" type="Object[]" />
+    <aura:attribute name="searchResultCriteria" type="Object[]" />
+    <aura:attribute name="topResultCriteria" type="Object[]" />    
+	<aura:handler name="change" value="{!v.snapshotDetail.resultCriteria}" action="{!c.doLoad}"/>
+    <aura:registerEvent name="showObjectsSnapshot" type="c:ARV_Compare_ObjSnapshot"/>
+    <ltng:require scripts="{!join(',',$Resource.jql,$Resource.ARVaultUtil)}" 
+                  afterScriptsLoaded="{!c.loadTable}"/>
+
+    <div class="" style="height:3rem;">
+          <div class="slds-p-left_xx-small slds-p-right_xx-small slds-grid slds-grid_vertical-align-start slds-grid_align-start">
+  				<!--div class="slds-size_1-of-2 slds-medium-size_4-of-6 slds-large-size_8-of-12">
+                    <div style="width:30rem;"-->
+                        <lightning:input type="text" placeholder="Quick Find" aura:id="quickfind" onchange="{!c.searchInTable}"/>
+                    <!--/div>
+                </div-->
+        </div>
+    </div>
+    <div class="slds-p-top_small">        
+        <table class="slds-table slds-table_bordered slds-table_resizable-cols slds-table_cell-buffer " role="grid">
+            <thead>
+                <tr class="slds-line-height_reset">
+                    <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                        <div class="slds-p-top_small slds-grid" >
+                            Snapshot {!v.sequence} : {!v.snapshotID}
+                        </div>                
+                    </th>           
+                </tr>       
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Object Name</th>
+                    <th>Duration</th>
+                    <th>Success Count</th>
+                    <th>API Calls</th>
+                    <th>Size</th>
+                </tr>
+                <aura:iteration items="{!v.searchResultCriteria}" var="object" indexVar="index"> 
+                    <tr>
+                        <td class="slds-truncate">
+                            <a href="javascript:void(0);" onclick="{!c.navigateToActivityObject}" id="{!object.objname}">{!object.objname}</a>
+                        </td> 
+                        <td class="slds-truncate">{!object.duration}</td>
+                        <td class="slds-truncate">{!object.successcount}</td>
+                        <td class="slds-truncate">{!object.apicalls}</td>
+                        <td class="slds-truncate">{!object.size}</td>                
+                    </tr>
+                </aura:iteration>
+            </tbody>
+        </table>
+    </div>
+</aura:component>

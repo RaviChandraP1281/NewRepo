@@ -1,0 +1,7 @@
+<aura:component >
+    Child Component//
+    <aura:registerEvent name="btnClickEvent_Junk" type="c:btnClickEvent_Junk"/>
+    <aura:attribute name="name" type="String" default="Leela Pavan"/>
+    <input type="text" aura:id="ind" value="Charan"/>
+    <lightning:button variant="brand" label="{!v.name}" onclick="{!c.btnClick}"/>
+</aura:component>

@@ -1,0 +1,25 @@
+.THIS .componentHeight{
+    height: 15rem;
+    max-height:15rem;
+    overflow-y: auto;
+}
+.THIS .slds-input{
+	
+}
+
+.THIS .slds-checkbox--on{
+    display:none;
+}
+.THIS .slds-checkbox--off{
+    display:none;
+}
+.THIS .maskedText>label{
+     display:none;
+}
+/*toggleCss.css*/
+.THIS .masked {
+    display: none;
+}
+.THIS .searchwidth{
+    width:50%;
+}

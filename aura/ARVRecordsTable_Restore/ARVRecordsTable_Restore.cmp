@@ -1,0 +1,61 @@
+<aura:component controller="ARVaultService">
+    <aura:attribute name="backupID" type="String" />
+    <aura:attribute name="records" type="Object[]" />
+    <aura:attribute name="sfOrgId" type="String" />
+    <aura:attribute name="objectSelected" type="Object[]" />
+    {!v.backupID} -- {!v.sfOrgId}
+   <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+            <thead>
+                <tr class="slds-text-title_caps slds-text-body_small">
+                    <th scope="col">
+                        <div class="slds-truncate" title="Record ID">
+                            <lightning:input type="checkbox" label="" name="1001" class="slds-float_left" aura:id="recordsMainBox" onchange="{!c.checkAllCheckboxes}" />Record ID</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Backup Time">Backup Time</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Billing City">Billing City</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Triggered By">Triggered By</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Phone">Phone</div>
+                    </th>
+                    <th scope="col">
+                        <div class="slds-truncate" title="Select">Select</div>
+                    </th>
+                </tr>
+            </thead>
+
+            <tbody class="slds-text-body_small">
+				<aura:iteration items="{!v.records}" var="obj"> 
+                	<tr>
+                        
+                    <th scope="row" data-label="Record id">
+                        <div class="slds-truncate" title="rid">
+                            <lightning:input type="checkbox" label="" name="{!obj.recordId}" class="slds-float_left" aura:id="backedupRecords" />
+                            <a href="javascript:void(0);">{!obj.recordId}</a></div>
+                    </th>
+                  <td data-label="Backup Time">
+                        <div class="slds-truncate" title="time">{!obj.backupTime}</div>
+                    </td>
+                    <td data-label="Type">
+                        <div class="slds-truncate" title="Type">{!obj.recordField}</div>
+                    </td>
+                    <td data-label="Triggered By">
+                        <div class="slds-truncate" title="Triggered By">{!obj.backupUser}</div>
+                    </td>
+                    <td data-label="Phone">
+                        <div class="slds-truncate" title="Phone">{!obj.phone}</div>
+                    </td>
+                    <td data-label="showMore">
+                        <div class="slds-truncate" title="showMore"><a>Show more fields</a></div>
+                    </td>
+                </tr>
+                </aura:iteration>                                                        
+            </tbody>
+        </table>
+
+</aura:component>

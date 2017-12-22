@@ -1,0 +1,63 @@
+<aura:component controller="ARVaultService" implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:registerEvent name="showSnapshot" type="c:showSnapshotOne"/>
+    <aura:attribute name="sfOrgId" type="String" />
+    <aura:attribute name="orgData" type="Object[]" />
+     <aura:attribute name="disableorgDropdown" type="Boolean" default="false" />
+    <aura:attribute name="orgValue" type="String" default="Orgs" />
+    <aura:attribute name="snapshotHeader" type="String" />
+    <div aura:id="changeHeader">
+         <div class="slds-page-header slds-page-header_object-home">
+            <div class="slds-grid">
+                <div class="slds-col slds-has-flexi-truncate">
+                    <div class="slds-media slds-no-space slds-grow">
+                        <div class="slds-media__figure">
+                            <span class="slds-icon_container slds-icon-standard-lead">
+            					<lightning:icon iconName="standard:lead" size="medium" alternativeText=" "/>
+          					</span>
+                        </div>
+                        <div class="slds-media__body">
+                            <p class="slds-text-title_caps slds-line-height_reset">Compare</p>
+                            <h1 class="slds-page-header__title slds-p-right_x-small">
+            						<button class="slds-button slds-button_reset slds-type-focus slds-truncate" aria-haspopup="true" title="">
+              							<span class="slds-grid slds-has-flexi-truncate slds-grid_vertical-align-center">Backups</span>
+            						</button>
+          					</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="slds-col slds-no-flex slds-grid slds-align-top slds-p-bottom_xx-small">
+                    <div class="slds-media slds-no-space slds-grow">
+                        <div class="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open">
+                            <div class="slds-button-group" role="group">
+                                <button class="slds-button slds-button_neutral" aura:id="orgbtn">{!v.orgValue} </button>
+                                <div class="slds-button_last" aura:id="orgDropdown">
+                                    <button class="slds-button slds-button_icon slds-button_icon-border-filled" aria-haspopup="true" disabled="{!v.disableorgDropdown}" title=" " onclick="{!c.showMenu}">
+                                        <div class="slds-grid slds-has-flexi-truncate slds-grid_vertical-align-center">
+                                            <lightning:icon iconName="utility:down" size="xx-small" alternativeText=" " />
+                                        </div>
+                                    </button>
+
+                                </div>
+                            </div>
+                            <div class="slds-hide" aura:id="SelectOrgDropdown">
+                                <div class="slds-dropdown slds-dropdown_center">
+                                    <ul class="slds-dropdown__list" role="menu">
+                                        <aura:iteration items="{!v.orgData}" var="org" indexVar="index">
+                                            <li class="slds-dropdown__item" role="presentation">
+                                                <a value="{!org.idSforg}" role="menuitem" tabindex="0" onclick="{!c.selectOrgValue}">
+                                                    <span class="slds-truncate" title="{!org.idSforg}" id="{!org.nmLable}">{!org.nmLable}</span>
+                                                </a>
+                                            </li>
+                                        </aura:iteration>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h1 class="slds-text-title_caps slds-align_absolute-center">{!v.snapshotHeader}</h1>
+        </div>
+    </div>
+</aura:component>

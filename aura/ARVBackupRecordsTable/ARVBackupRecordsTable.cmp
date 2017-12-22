@@ -1,0 +1,160 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+	<table class="slds-table slds-table_cell-buffer">
+  <thead>
+    <tr class="slds-text-title_caps">
+      <th scope="col">
+        <div class="slds-truncate" title="Backup Activity id">Backup Activity id</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="User">User</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Date">Date</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Time">Time</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Duration">Duration</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Records">Records</div>
+      </th>
+        <th scope="col">
+        <div class="slds-truncate" title="Size">Size (MBs)</div>
+      </th>
+        <th scope="col">
+        <div class="slds-truncate" title="API Calls">API Calls</div>
+      </th>
+        <th scope="col">
+        <div class="slds-truncate" title="Status">Status</div>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+	 <tr class=" ">
+      <th scope="col">
+        <div class="slds-truncate" title="Backup Activity id">1001</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="User">User1</div>
+      </th>
+      <th scope="col">
+          <div class="slds-truncate" title="Date">08/09/2017</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Time">11.34 am</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Duration">23 mins</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Records">1000</div>
+      </th>
+        <th scope="col">
+        <div class="slds-truncate" title="Size">234</div>
+      </th>
+        <th scope="col">
+        <div class="slds-truncate" title="API Calls">45</div>
+      </th>
+         <th scope="col">
+        <div class="slds-truncate" title="Status">API Calls</div>
+      </th>
+    </tr>  
+        </tbody>
+    </table>
+<div class="slds-p-top_medium">
+    <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+  <thead>
+    <tr class="slds-text-title_caps">
+      <th scope="col">
+        <div class="slds-truncate" title="Salesforce Object">Salesforce Object</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Time">Time</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Records">Records</div>
+      </th>
+        <th scope="col">
+        <div class="slds-truncate" title="Size">Size (MBs)</div>
+      </th>
+        <th scope="col">
+        <div class="slds-truncate" title="API Calls">API Calls</div>
+      </th>
+        
+    </tr>
+  </thead>
+  <tbody>
+	 <tr class=" ">
+      <th scope="col">
+        <div class="slds-truncate" title="Salesforce Object"> Account</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Time">11.34 am</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Records">1000</div>
+      </th>
+        <th scope="col">
+        <div class="slds-truncate" title="Size">234</div>
+      </th>
+        <th scope="col">
+        <div class="slds-truncate" title="API Calls">45</div>
+      </th>
+    </tr>  
+    <tr class=" ">
+      <th scope="col">
+        <div class="slds-truncate" title="Salesforce Object"> Account</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Time">11.34 am</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Records">1000</div>
+      </th>
+        <th scope="col">
+        <div class="slds-truncate" title="Size">234</div>
+      </th>
+        <th scope="col">
+        <div class="slds-truncate" title="API Calls">45</div>
+      </th>
+    </tr>  
+    <tr class=" ">
+      <th scope="col">
+        <div class="slds-truncate" title="Salesforce Object"> Account</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Time">11.34 am</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Records">1000</div>
+      </th>
+        <th scope="col">
+        <div class="slds-truncate" title="Size">234</div>
+      </th>
+        <th scope="col">
+        <div class="slds-truncate" title="API Calls">45</div>
+      </th>
+    </tr>  
+    <tr class=" ">
+      <th scope="col">
+        <div class="slds-truncate" title="Salesforce Object"> Account</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Time">11.34 am</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Records">1000</div>
+      </th>
+        <th scope="col">
+        <div class="slds-truncate" title="Size">234</div>
+      </th>
+        <th scope="col">
+        <div class="slds-truncate" title="API Calls">45</div>
+      </th>
+    </tr>  
+        </tbody>
+    </table>
+</div>
+</aura:component>

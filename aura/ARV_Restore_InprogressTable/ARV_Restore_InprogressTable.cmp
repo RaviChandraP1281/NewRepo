@@ -1,0 +1,159 @@
+<aura:component controller="ARVaultService" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="mouseStart" type="string" />
+    <aura:attribute name="oldWidth" type="string" />
+    <aura:attribute name="sfOrgId" type="String" />
+    <aura:attribute name="orgData" type="Object[]" />
+    
+    <aura:attribute name="inProgressObjects" type="Object[]" />
+
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <table class="slds-table slds-table_bordered slds-table_resizable-cols slds-table_fixed-layout slds-table_cell-buffer" role="grid">
+    <thead>
+   	 <tr class="slds-line-height_reset">
+      <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+        <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="0">
+          <span class="slds-assistive-text">Sort </span>
+          <span class="slds-truncate" title="Name">Activity ID</span>
+          <div class="slds-icon_container">
+          </div>
+          <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+        </a>
+        <div class="slds-resizable">
+          <label for="cell-resize-handle-85" class="slds-assistive-text">Name column width</label>
+          <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-85" tabindex="0"/>
+          <span class="slds-resizable__handle" onmousedown="{!c.calculateWidth}" ondrag="{!c.setNewWidth}">
+                            <span class="slds-resizable__divider"></span>
+                        </span>
+        </div>
+      </th>
+      <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+        <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="0">
+          <span class="slds-assistive-text">Sort </span>
+          <span class="slds-truncate" title="Name">Date</span>
+          
+          <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+        </a>
+        <div class="slds-resizable">
+          <label for="cell-resize-handle-86" class="slds-assistive-text">Date column width</label>
+          <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-86" tabindex="0"/>
+           <span class="slds-resizable__handle" onmousedown="{!c.calculateWidth}" ondrag="{!c.setNewWidth}">
+                            <span class="slds-resizable__divider"></span>
+                        </span>
+        </div>
+      </th>
+      <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+        <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="0">
+          <span class="slds-assistive-text">Sort </span>
+            <span class="slds-truncate" title="Recent Backup Date">Time</span>
+          <div class="slds-icon_container">
+           
+          </div>
+          <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+        </a>
+        <div class="slds-resizable">
+            <label for="cell-resize-handle-87" class="slds-assistive-text">Time</label>
+          <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-87" tabindex="0"/>
+           <span class="slds-resizable__handle" onmousedown="{!c.calculateWidth}" ondrag="{!c.setNewWidth}">
+                            <span class="slds-resizable__divider"></span>
+                        </span>
+        </div>
+      </th>
+      <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+        <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="0">
+          <span class="slds-assistive-text">Sort </span>
+          <span class="slds-truncate" title="Authentication">Duration</span>
+          <div class="slds-icon_container">
+           
+          </div>
+          <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+        </a>
+        <div class="slds-resizable">
+          <label for="cell-resize-handle-89" class="slds-assistive-text">Authentication column width</label>
+          <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-89" tabindex="0"/>
+          <span class="slds-resizable__handle" onmousedown="{!c.calculateWidth}" ondrag="{!c.setNewWidth}">
+                            <span class="slds-resizable__divider"></span>
+                        </span>
+        </div>
+      </th>       
+      <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+        <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="0">
+          <span class="slds-assistive-text">Sort </span>
+          <span class="slds-truncate" title="Authentication">Records</span>
+          <div class="slds-icon_container">
+           
+          </div>
+          <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+        </a>
+        <div class="slds-resizable">
+          <label for="cell-resize-handle-89" class="slds-assistive-text">Authentication column width</label>
+          <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-89" tabindex="0"/>
+          <span class="slds-resizable__handle" onmousedown="{!c.calculateWidth}" ondrag="{!c.setNewWidth}">
+                            <span class="slds-resizable__divider"></span>
+                        </span>
+        </div>
+      </th>
+      <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+        <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="0">
+          <span class="slds-assistive-text">Sort </span>
+          <span class="slds-truncate" title="Authentication">Success</span>
+          <div class="slds-icon_container">
+           
+          </div>
+          <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+        </a>
+        <div class="slds-resizable">
+          <label for="cell-resize-handle-89" class="slds-assistive-text">Authentication column width</label>
+          <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-89" tabindex="0"/>
+         <span class="slds-resizable__handle" onmousedown="{!c.calculateWidth}" ondrag="{!c.setNewWidth}">
+                            <span class="slds-resizable__divider"></span>
+                        </span>
+        </div>
+      </th>
+      <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+        <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="0">
+          <span class="slds-assistive-text">Sort </span>
+          <span class="slds-truncate" title="Authentication">API Calls</span>
+          <div class="slds-icon_container">
+           
+          </div>
+          <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+        </a>
+        <div class="slds-resizable">
+          <label for="cell-resize-handle-89" class="slds-assistive-text">Authentication column width</label>
+          <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-89" tabindex="0"/>
+         <span class="slds-resizable__handle" onmousedown="{!c.calculateWidth}" ondrag="{!c.setNewWidth}">
+             <span class="slds-resizable__divider"></span>
+         </span>
+        </div>
+      </th>   
+    </tr>
+    </thead>
+    <tbody>
+           	<aura:iteration items="{!v.inProgressObjects}" var="rObject">
+        	<tr class="slds-hint-parent">
+                <th scope="row" class="">
+            		<a href="javascript:void(0);" onclick="{!c.navigateToActivityObject}" id="{!rObject.idRestore}">{!rObject.idRestore}</a>
+                </th>
+                <td role="gridcell" class="slds-truncate" >
+                    <lightning:formattedDateTime value="{!rObject.tmStamp}" year="numeric" month="numeric" day="numeric"/>
+                </td>
+                <td role="gridcell" class="slds-truncate" >
+                    <lightning:formattedDateTime value="{!rObject.tmStamp}" hour="2-digit" minute="2-digit" timeZoneName="short" />
+                </td>
+                <td role="gridcell" class="slds-truncate" >
+                    {!rObject.strTotDuration}
+                </td>
+                <td role="gridcell" class="slds-truncate" >
+                    {!rObject.nbrTotRecords}
+                </td>
+                <td role="gridcell" class="slds-truncate" >
+                    {!rObject.successRecords}
+                </td>
+                <td role="gridcell" class="slds-truncate" >
+                    {!rObject.nbrTotApi}
+                </td>
+            </tr>
+        	</aura:iteration>
+    </tbody>
+    </table>
+</aura:component>

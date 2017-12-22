@@ -1,0 +1,79 @@
+<aura:component controller="ARVaultService" implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="sfOrgId" type="String" />
+    <aura:attribute name="compareClass" type="String"/>
+    <aura:attribute name="nextClass" type="String" default="slds-hide"/>    
+    <aura:attribute name="firstSelectedSnapID" type="String" default=""/>
+    <aura:attribute name="secondSelectedSnapID" type="String" default=""/>
+    <aura:attribute name="radioLabelSelected" type="String" />
+    <aura:attribute name="backupObjects" type="Object[]" />
+    <aura:attribute name="selSnapshot" type="Object" />    
+    <aura:attribute name="fromDate" type="Date" />
+    <aura:attribute name="toDate" type="Date" />
+    <aura:attribute name="firstSnapshot" type="Object" />
+    <aura:attribute name="secondSnapshot" type="Object" />
+    <aura:attribute name="radiobtnDisabled" type="Boolean" default="false"/>
+    <aura:attribute name="countofSnapshots" type="Integer" default="1"/>  
+    <aura:registerEvent name="showNextSnapshot" type="c:showSnapshotTwo"/>
+    <aura:registerEvent name="showSnapshotOptions" type="c:showSnapshotOptions"/>
+    <aura:handler name="change" value="{!v.sfOrgId}" action="{!c.orgchange}"/>
+    <aura:handler name="change" value="{!v.firstSnapshot}" action="{!c.firstSnapshotRemoved}"/>
+      <aura:handler name="change" value="{!v.secondSnapshot}" action="{!c.secondSnapshotRemoved}"/>
+    <!--c:ARV_SnapshotSummaryCard firstSnapshot="{!v.firstSnapshot}" 
+                               secondSnapshot="{!v.secondSnapshot}" 
+                               buttonName="Compare"/-->   
+       
+        <table class="slds-table slds-table_bordered slds-table_cell-buffer slds-table_resizable-cols slds-table_fixed-layout">
+            <thead class="">
+                <tr class="slds-text-title_caps">
+                    <th scope="col"><div class="slds-truncate" title="Activity ID">Activity ID</div></th>
+                    <th scope="col"><div class="slds-truncate" title="label">Label</div></th>
+                    <th scope="col"><div class="slds-truncate" title="Date">Date</div></th>
+                    <th scope="col"><div class="slds-truncate" title="Time">Time</div></th>
+                    <th scope="col"><div class="slds-truncate" title="Duration">Duration</div></th>
+                    <th scope="col"><div class="slds-truncate" title="Records">Records</div></th>
+                    <th scope="col"><div class="slds-truncate" title="Success">Sucess</div></th>
+                    <th scope="col"><div class="slds-truncate" title="API Calls">API Calls</div></th>
+                    <th scope="col"><div class="slds-truncate" title="Type">Type</div></th>
+                    <th scope="col"><div class="slds-truncate" title="Status">Status</div></th>
+                </tr>
+            </thead>
+            <tbody class="slds-scrollable_y">
+                <aura:iteration items="{!v.backupObjects}" var="object" indexVar="index"> 
+                    <tr class=" ">
+                        <th scope="col">
+                            <div class="slds-truncate" title="Activity ID">
+                                <lightning:input type="radio" aura:id="radBackupID" label="{!object.backupId}" name="{!object.backupId}" value="{!object}" onchange="{!c.selSnapshots}" disabled="{!v.radiobtnDisabled}"/>
+                            </div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Label">{!object.bkpLabel}</div>
+                        </th>
+                        <th scope="col">
+                            <lightning:formattedDateTime value="{!object.tmStamp}" year="numeric" month="numeric" day="numeric"/>
+                        </th>
+                        <th scope="col">
+                            <lightning:formattedDateTime value="{!object.tmStamp}" hour="2-digit" minute="2-digit" timeZoneName="short" />
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Duration">{!object.strTotDuration}</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Records">{!object.nbrTotRecords}</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Success">{!object.successCount}</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="API Calls">{!object.nbrTotApi}</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Type">{!object.flBakupTyp}</div>
+                        </th>
+                        <th scope="col">
+                            <div class="slds-truncate" title="Status">{!object.objProcStatus}</div>
+                        </th>
+                    </tr>
+                </aura:iteration>
+            </tbody>
+        </table>
+</aura:component>

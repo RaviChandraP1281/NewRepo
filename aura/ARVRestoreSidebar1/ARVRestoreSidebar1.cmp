@@ -1,0 +1,40 @@
+<aura:component controller="ARVaultService">
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    <aura:attribute name="objects" type="Object[]" />
+	<aura:attribute name="fields" type="Object[]" />    
+    <div class="slds-form-element" />
+    <div class="slds-form-element__control">
+
+        <lightning:select name="objects" aura:id="objects" label="" onchange="{!c.displayFreqOptions}">
+            <aura:iteration items="{!v.objects}" var="obj" indexVar="inde">
+                <option value="{!inde}">{!obj.name}</option>
+            </aura:iteration>
+
+        </lightning:select>
+    </div>
+
+    <div class="slds-form-element" />
+    <div class="slds-form-element__control">
+        <lightning:select name="name" aura:id="name" label="">
+          <aura:iteration items="{!v.fields}" var="field">
+            		<option value="{!field}">{!field}</option>
+                </aura:iteration>  
+        </lightning:select>
+    </div>
+    <div class="slds-form-element" />
+    <div class="slds-form-element__control">
+        <lightning:select name="filter" aura:id="filter" label="">
+            <option value="obj1">Filter by Field</option>
+        </lightning:select>
+    </div>
+    <div class="slds-form-element" />
+    <div class="slds-form-element__control">
+        <lightning:input type="search" label=" " name="search" placeholder="Search" />
+    </div>
+    <div class="slds-form-element" />
+    <div class="slds-form-element__control">
+        <div class="slds-p-top_medium">
+            <lightning:button variant="brand" name="go" label="Go" onclick="{!c.handleClick}"/>
+        </div>
+    </div>
+</aura:component>

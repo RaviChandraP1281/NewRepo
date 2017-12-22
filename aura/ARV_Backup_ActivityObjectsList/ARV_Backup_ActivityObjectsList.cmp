@@ -1,0 +1,5 @@
+<aura:component >
+	   <c:ARV_Backup_ActivityObjects_Header />
+        <c:ARV_Backup_ActivityObjects />
+    	<c:ARV_Backup_HistoryTable />
+</aura:component>

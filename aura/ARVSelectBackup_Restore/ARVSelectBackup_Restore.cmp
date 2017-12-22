@@ -1,0 +1,101 @@
+<aura:component controller="ARVaultService" implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="restoreInfo" type="Object" />    
+    <aura:attribute name="sfOrgId" type="String" />
+    <aura:attribute name="dateFilter" type="Object"/>
+    <aura:attribute name="orgData" type="Object[]" />
+    <aura:attribute name="rc" type="Object[]" />
+    <aura:attribute name="toprc" type="Object[]" />
+    <aura:attribute name="backupactivity" type="Object[]" />
+    <aura:attribute name="topBackupactivity" type="Object[]" />
+    <aura:attribute name="Spinner" type="boolean" default="false" />
+    <aura:attribute name="userConfirmedActivities" type="Object[]" />
+    <aura:attribute name="restoreObjects" type="Object[]" />
+    <aura:attribute name="restoreObject" type="Object"/> 
+    <aura:attribute name="completedObjects" type="Object[]" />
+    <aura:attribute name="inprogressObjects" type="Object[]" />
+    <aura:attribute name="liveStatus" type="String[]"/>
+    <aura:attribute name="page" type="Integer" default="1"/>
+    <aura:attribute name="PAGE_MAX_SIZE" type="Integer" default="10"/> 
+    <aura:attribute name="resultCriteria" type="Object[]" />
+    <aura:attribute name="searchResultCriteria" type="Object[]" />
+    <aura:attribute name="topResultCriteria" type="Object[]" />
+    <aura:attribute name="selectedOrgName" type="String"/>
+    <aura:attribute type="String[]" name="chartData"/>
+    <aura:attribute type="String[]" name="chartDates"/>                 
+    <aura:attribute type="String" name="chartType" default="line"/> 
+    <aura:attribute name="isProgress" type="boolean" default="false"/>
+    <aura:handler name="displayrestore" 
+                  event="c:showRestoreNow" 
+                  action="{!c.showTheBackups}" />
+    <aura:handler name="ARV_ConfirmRestore_Event" 
+                  event="c:ARV_ConfirmRestore_Event" 
+                  action="{!c.confirmRestore}" />
+    <aura:handler name="restoreHome" 
+                  event="c:backToRestore" 
+                  action="{!c.backToRestore}" />
+    <aura:handler name="orgIdChangedchild" 
+                  event="c:ARV_OrgChanged_Event" 
+                  action="{!c.orgIdChanged}"/>
+    <ltng:require scripts="{!join(',',$Resource.jql, $Resource.d3, $Resource.ARVaultUtil)}" 
+                  styles="{!$Resource.ARVaultDefaultCss}" 
+                  afterScriptsLoaded="{!c.historyGraphLoad}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="updatechart" event="c:ARV_Backup_UpdateChart_Event" 
+                  action="{!c.updatechart}"/>
+    <aura:handler name="restoreObject" event="c:ARV_RestoreObject_Detail" 
+                  action="{!c.showRestoreTable}"/>
+    <aura:handler name="returnToDashboard" 
+                  event="c:ARV_Backup_RtnToDshbrd_Event" 
+                  action="{!c.returnToDashboard}"/>
+    <aura:handler name="displaygraph" 
+                  event="c:showGraph" 
+                  action="{!c.showThisGraph}"/>
+    <aura:handler name="liveBackupEvent" 
+                  event="c:LiveBackupEvent" 
+                  action="{!c.toggleChartData}"/>
+    <div aura:id="restoreHeader">    		
+    	<c:ARVHeader_RestoreDashboard selectedOrgName="{!v.selectedOrgName}"
+                                      sfOrgId="{!v.sfOrgId}" orgData="{!v.orgData}"  
+                                      restoreObjects="{!v.restoreObjects}" isProgress="{!v.isProgress}" liveStatus="{!v.liveStatus}"/>            
+        	<div class="slds-align--absolute-center" style="height: 100%;position: relative;z-index:2">              
+            <aura:if isTrue="{!v.Spinner}">  
+                <span class="spinner-text">Fetching backup activities information</span>
+                <lightning:spinner aura:id="spinnerId"  variant="brand" size="large" alternativeText="Fetching backup activities information" />                
+         	</aura:if> 
+        	</div>
+        <div class="slds-grid">
+            <div aura:id="column">
+              <div aura:id="historyChartDiv">
+                             <c:DynamicChart aura:id="compId" chartType="column" 
+                                                chartTitle='Restore Dashboard' 
+                                                chartSubTitle=''
+                                                xAxisCategories="Date"
+                                                yAxisParameter='Records'
+                                                dates="{!v.chartDates}"
+                                                data="{!v.chartData}"/>
+                        </div>
+                <div class="slds-p-bottom_large">
+                    <c:ARV_Restore_Table sfOrgId="{!v.sfOrgId}" orgData="{!v.orgData}" 
+                                         resultCriteria="{!v.resultCriteria}"
+                                         topResultCriteria="{!v.topResultCriteria}" />
+                </div>
+             </div>
+        </div>
+    </div>
+    <div class="slds-hide" aura:id="restoreBody">
+        <!--div aura:id="backups"-->
+            <c:ARVRestore_BackupsTable selectedOrgName="{!v.selectedOrgName}"
+                                       sfOrgId="{!v.sfOrgId}" orgData="{!v.orgData}" 
+                                       dateFilter="{!v.dateFilter}" 
+                                       userConfirmedActivities="{!v.userConfirmedActivities}" 
+                                       resultCriteria="{!v.backupactivity}"
+                                       topResultCriteria="{!v.topBackupactivity}"/>
+        <!--/div-->
+    </div>
+    <div aura:id="restoreObject" class="slds-hide restoreObject">
+        <c:ARV_RestoreObject_Header restoreObject="{!v.restoreObject}"/>
+        <c:ARV_Restore_Object topResultCriteria="{!v.toprc}" 
+                                     resultCriteria="{!v.rc}"
+                                     page="1"/>
+    </div>
+</aura:component>

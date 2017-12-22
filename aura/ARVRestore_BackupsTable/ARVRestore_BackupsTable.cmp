@@ -1,0 +1,198 @@
+<aura:component controller="ARVaultService">
+    <aura:attribute name="backupactivity" type="Object[]" />
+    <aura:attribute name="objectOptions" type="Object[]" />
+    <aura:attribute name="recordColumns" type="Object[]" />
+    <aura:attribute name="isShowBackupActive" type="Boolean" default="true"/>
+    <aura:attribute name="isShowRecords" type="Boolean" default="true"/>
+    <aura:attribute name="isShowMessage" type="Boolean" default="true"/>
+    <aura:attribute name="records" type="Object[]" />
+    <aura:attribute name="backupID" type="String" />
+    <aura:attribute name="sfOrgId" type="String" />
+    <aura:attribute name="displayMessage" type="String"/> 
+    <aura:attribute name="orgData" type="Object[]" />
+    <aura:attribute name="dateFilter" type="Object" />
+    <aura:attribute name="userConfirmedActivities" type="Object[]" />
+    <aura:attribute name="sObjectInFilter" type="String" /> 
+    <aura:attribute name="Spinner" type="boolean" default="false" />
+    <aura:handler name="confirmRestore" event="c:ARV_ConfirmRestore_Event" action="{!c.confirmRestore}" />
+    <aura:handler name="backToRestoreActivity" event="c:backToRestoreActivity" action="{!c.backToRestoreActivity}" />
+    <aura:registerEvent name="filterPicklist" type="c:ARV_FilterPicklist_Event" />
+    <aura:handler name="goBackupActivitiesByFilter" event="c:ARV_GoBackupActivitiesByFilter" action="{!c.goBackupActivitiesByFilter}" />
+    <aura:attribute name="page" type="Integer" default="1"/>
+    <aura:attribute name="PAGE_MAX_SIZE" type="Integer" default="10"/> 
+    <aura:attribute name="resultCriteria" type="Object[]" />
+    <aura:attribute name="searchResultCriteria" type="Object[]" />
+    <aura:attribute name="topResultCriteria" type="Object[]" />
+    <aura:attribute name="selBackupObject" type="Object" />
+    <aura:attribute name="selectedOrgName" type="String"/>
+    <ltng:require scripts="{!join(',',$Resource.jql,$Resource.ARVaultUtil)}" />
+    <div class="slds-align--absolute-center" style="height: 100%;z-index:1">              
+        <aura:if isTrue="{!v.Spinner}">  
+            <span class="spinner-text">Fetching record level info of selected backup</span>
+            <lightning:spinner aura:id="spinnerId"  variant="brand" size="large" alternativeText="Fetching record level info of selected backup" />                
+        </aura:if> 
+    </div>
+    <div aura:id="showbackups">
+        <c:ARVHeader_Restore selectedOrgName="{!v.selectedOrgName}"/>
+        <div class="slds-grid">        
+            <div class="slds-p-horizontal_small slds-p-top_medium slds-size_1-of-1 slds-medium-size_6-of-6 slds-large-size_12-of-12">
+                <div class="slds-form-element__control">
+                    <table >
+                        <tr>
+                            <td>
+                                <lightning:select name="selectItem" label="Desination Org" value="{!v.sfOrgId}" disabled="true">
+                                    <aura:iteration items="{!v.orgData}" var="obj" indexVar="indexVar">
+                                        <option value="{!obj.idSforg}">{!obj.nmLable}</option>
+                                    </aura:iteration>    
+                                </lightning:select>                              
+                            </td>
+                            <td>
+                                <lightning:select name="YObjects" aura:id="YearObjects" label="Year" value="{!v.dateFilter.year}">
+                                    
+                                    <option value="2018">2018</option>
+                                    <option value="2019">2019</option>
+                                    <option value="2017">2017</option>
+                                    <!--<aura:iteration items="{!v.YearOptions}" var="option">
+                         <option value="{!option}">{!option}</option>
+                        </aura:iteration>-->
+                                </lightning:select>                                
+                            </td>
+                            <td>
+                                <lightning:select name="MObjects" aura:id="MonthObjects" label="Month" value="{!v.dateFilter.month}">
+                                    <option value="1">January</option>
+                                    <option value="2">February</option>
+                                    <option value="3">March</option>
+                                    <option value="4">April</option>
+                                    <option value="5">May</option>
+                                    <option value="6">June</option>
+                                    <option value="7">July</option>
+                                    <option value="8">August</option>
+                                    <option value="9">September</option>
+                                    <option value="10">October</option>
+                                    <option value="11">November</option>
+                                    <option value="12">December</option>
+                                    <!--<aura:iteration items="{!v.MonthOptions}" var="option">
+                            <option value="{!option}">{!option}</option>
+                        </aura:iteration>-->
+                                </lightning:select>
+                                
+                            </td>
+                            <td>
+                                <lightning:input type="date" aura:id="fromDate" label="From Date" name="fromDate" value="{!v.dateFilter.fromdate}" />
+                            </td>
+                            <td>
+                                <lightning:input type="date" aura:id="toDate" label="To Date" name="toDate" value="{!v.dateFilter.todate}" />
+                            </td>
+                            <td style="width:5rem;"></td>
+                            
+                            <td>
+                                <lightning:button class="customButton"  name="go" label="Go" onclick="{!c.goBackupFilter}" />
+                                <lightning:button class="customButton"  label="Confirm" onclick="{!c.confirmRestore}" />
+                            </td>
+                            
+                        </tr>
+                    </table>						                        
+                </div> 
+            </div>
+            
+        </div>     
+        <div class="slds-grid">            
+            <div class="slds-size_1-of-1 slds-medium-size_6-of-6 slds-large-size_12-of-12 table">
+                <div class="slds-border_top" >
+                    <table>
+                        <tr>
+                            <td class="slds-text-align_left" style="width:20rem;">
+                                <lightning:input type="text" placeholder="Quick Find" aura:id="quickfind" onchange="{!c.searchInTable}"/> </td>
+                            <td style="width:30rem;"></td>
+                            <td class="slds-text-link slds-text-align_right" style="width:5rem;">
+                                <lightning:buttonicon variant="bare" iconName="utility:back" alternativeText="Prev" onclick="{! c.leftMove }" />                           
+                            </td>
+                            <td class="slds-text-link slds-text-align_right" style="width:5rem;">
+                                <lightning:buttonicon variant="bare" iconName="utility:forward" alternativeText="Next" onclick="{! c.rightMove }" />
+                            </td>
+                            <td style="width:1rem;"></td>
+                        </tr>
+                    </table> 
+                     <div class="slds-scrollable_y" style="height:50rem;">
+                         <table class="slds-p-top_small slds-p-bottom_small slds-table_bordered slds-table slds-table_resizable-cols slds-table--header-fixed slds-table_fixed-layout slds-table_cell-buffer" role="grid">
+                             <thead>
+                                 <tr class="slds-text-title_caps slds-text-body_small">
+                                     <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                                         <!--lightning:input type="checkbox" label="" name="backupOtherBoxes" aura:id="backupMainBox" class="slds-float_left" onchange="{!c.checkAllCheckboxes}"/-->
+                                         <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" name="asc" id="backupId" onclick="{!c.sortTable}" tabindex="0">
+                                             <span class="slds-truncate" title="Salesforce Object" name="asc" id="backupId" onclick="{!c.sortTable}">
+                                                 Backup Activity ID
+                                             </span>
+                                         </a>
+                                     </th>
+                                     <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                                         <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" name="asc" id="tmStamp" onclick="{!c.sortTable}" tabindex="0">
+                                             <span class="slds-truncate" title="Salesforce Object" name="asc" id="tmStamp" onclick="{!c.sortTable}">
+                                                 Label
+                                             </span>
+                                         </a>
+                                     </th>
+                                     <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                                         <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" name="asc" id="flBakupTyp" onclick="{!c.sortTable}" tabindex="0">
+                                             <span class="slds-truncate" title="Salesforce Object" name="asc" id="flBakupTyp" onclick="{!c.sortTable}">
+                                                 Type
+                                             </span>
+                                         </a>
+                                     </th>
+                                     <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                                         <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" name="asc" id="idCfgBakup" onclick="{!c.sortTable}" tabindex="0">
+                                             <span class="slds-truncate" title="Salesforce Object" name="asc" id="idCfgBakup" onclick="{!c.sortTable}">
+                                                 Date / Time
+                                             </span>
+                                         </a>
+                                     </th>
+                                     <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                                         <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" name="asc" id="idCfgBakup" onclick="{!c.sortTable}" tabindex="0">
+                                             <span class="slds-truncate" title="Salesforce Object" name="asc" id="idCfgBakup" onclick="{!c.sortTable}">
+                                                 Records
+                                             </span>
+                                         </a>
+                                     </th>
+                                     
+                                 </tr>
+                             </thead>
+                         </table>
+                         <table aura:id="ht" class="slds-table slds-table_bordered slds-table_fixed-layout slds-table_cell-buffer" role="grid">
+                            <tbody>
+                                <aura:iteration items="{!v.topResultCriteria}" var="obj" indexVar="index">                                            
+                                    <tr>
+                                        <th scope="row" data-label="Record id">
+                                            <div class="slds-truncate" title="rid">
+                                                <lightning:input type="radio" label="" name="backupBoxes" value="{!obj}" class="slds-float_left" aura:id="backupBoxes" onchange="{!c.onBackup}" />                        
+                                                <a href="javascript:void(0);"  aura:id="hrefRecordsBack" title="{!index}" name="{!obj.backupId}" onclick="{!c.fireShowRecords}">{!obj.backupId}</a>
+                                            </div>
+                                        </th>
+                                        <td data-label="">
+                                            <div class="slds-truncate" title="time">
+                                                {!obj.bkpLabel}
+                                            </div>
+                                        </td>
+                                        <td data-label="Backup Time">
+                                            {!obj.flBakupTyp}
+                                        </td>
+                                        <td>
+                                            <lightning:formattedDateTime value="{!obj.tmStamp}" year="numeric" month="numeric" day="numeric"/>
+                                            <lightning:formattedDateTime value="{!obj.tmStamp}" hour="2-digit" minute="2-digit" timeZoneName="short" />
+                                        </td>
+                                        <td data-label="Triggered By">
+                                            <div class="slds-truncate" title="Triggered By"> {!obj.nbrTotRecords}</div>
+                                        </td>
+                                    </tr>
+                                </aura:iteration>                                            
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slds-hide" aura:id="showrecords">        
+        <c:ARVRestore_RecordsTable sfOrgId="{!v.sfOrgId}" orgData="{!v.orgData}" />
+    </div>
+    
+</aura:component>

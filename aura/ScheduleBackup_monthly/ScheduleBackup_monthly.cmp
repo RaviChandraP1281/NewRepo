@@ -1,0 +1,20 @@
+<aura:component >
+    <div class="c-container">
+        <lightning:layout horizontalAlign="spread">
+            <lightning:layoutItem flexibility="auto" padding="around-small">
+               <select class="slds-select" id="freq">
+                    	<option>Daily</option>
+                        <option>Weekly</option>
+                        <option>Monthly</option>
+                    </select>
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small">
+                <ui:inputDate aura:id="date" label=" " class="field" displayDatePicker="true" />  
+            </lightning:layoutItem>
+            <lightning:layoutItem flexibility="auto" padding="around-small">
+                3
+            </lightning:layoutItem>
+            
+        </lightning:layout>
+    </div>
+</aura:component>

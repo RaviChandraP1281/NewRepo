@@ -1,0 +1,16 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="orgData" type="Object[]" />
+    <aura:attribute name="sfOrgId" type="String" />
+    
+	<fieldset>
+        <div class="slds-form-element">
+            <div class="slds-form-element__control">
+                <lightning:select name="selectItem" label="Desination Org" value="{!v.sfOrgId}" disabled="true">
+                    <aura:iteration items="{!v.orgData}" var="obj" indexVar="indexVar">
+                        <option value="{!obj.idSforg}">{!obj.nmLable}</option>
+                    </aura:iteration>    
+                </lightning:select>   
+            </div>
+        </div>                        
+     </fieldset>
+</aura:component>

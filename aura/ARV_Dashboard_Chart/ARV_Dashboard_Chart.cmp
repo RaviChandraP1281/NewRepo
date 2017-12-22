@@ -1,0 +1,5 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+   <ltng:require scripts="{!join(',',$Resource.jql, $Resource.d3)}" afterScriptsLoaded="{!c.myAction}"/>
+     <div aura:id="csv">
+    </div>
+</aura:component>

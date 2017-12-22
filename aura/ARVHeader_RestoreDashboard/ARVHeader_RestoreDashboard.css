@@ -1,0 +1,25 @@
+.THIS lightning:input{
+    width: 10rem;
+    padding-left: 1rem;
+}
+
+.THIS {
+position: relative;
+z-index: 1;
+}
+.THIS .slds-icon-standard-lead{
+    background-color:#769ed9;
+}
+.THIS .slds-card__header{
+    background:#ffffff;
+}
+.THIS .slds-icon-text-default{
+    fill :#ffffff;
+}
+.THIS button .slds-icon-text-default{
+     fill:#000000;
+}
+
+.THIS .slds-truncate{
+    overflow:unset;
+}

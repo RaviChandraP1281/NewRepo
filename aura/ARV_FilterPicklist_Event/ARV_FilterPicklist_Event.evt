@@ -1,0 +1,6 @@
+<aura:event type="APPLICATION" description="Event template" >
+    <aura:attribute name="backupID" type="String"/>
+    <aura:attribute name="objectOptions" type="Object[]"/>
+    <aura:attribute name="sObjectInFilter" type="String"/>
+    <aura:attribute name="sRecCountInFilter" type="String"/> 
+</aura:event>

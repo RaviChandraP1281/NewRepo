@@ -1,0 +1,23 @@
+<aura:component >
+    <div class="slds-p-horizontal_xx-small slds-p-vertical_xx-small slds-p-left_xx-small slds-p-right_xx-small ">
+        <div class="slds-border_left slds-border_right slds-border_top slds-border_bottom fillheight leftbordersolid">
+            <span class="slds-text-heading_medium">
+            <div class=" slds-p-left_large slds-p-vertical_x-small ">
+             <lightning:icon iconName="utility:warning" size="small" alternativeText="Indicates approval"/>
+            Unsupported Objects List  
+			</div>
+         </span> The following is the list of objects that are unsupported by Salesforce.
+            <div class="slds-border_left slds-border_right slds-border_top slds-border_bottom slds-p-horizontal_medium slds-scrollable_y unsupportlist">
+                <ul class="ulunsupportlist">
+                    <li class="liunsupportlist">BackgroundOperationResults</li>
+                    <li class="liunsupportlist">CollaborationGroupRecords</li>
+                    <li class="liunsupportlist">ContentFolderItems</li>
+                    <li class="liunsupportlist">ContentFolderMembers</li>
+                    <li class="liunsupportlist">ContentHubItems</li>
+
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</aura:component>

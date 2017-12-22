@@ -1,0 +1,123 @@
+<aura:component controller="ARVaultService" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionWithoutHeader" access="global" >
+  <aura:attribute name="orgData" type="Object[]"/>   
+  <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>  
+	<table class="slds-table slds-table_bordered slds-table_resizable-cols slds-table_fixed-layout slds-table_cell-buffer" role="grid">
+  <thead>
+    <tr class="slds-line-height_reset">
+      <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+        <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="0">
+          <span class="slds-assistive-text">Sort </span>
+          <span class="slds-truncate" title="Name">ID</span>
+          <div class="slds-icon_container">
+            
+          </div>
+          <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+        </a>
+        <div class="slds-resizable">
+          <label for="cell-resize-handle-85" class="slds-assistive-text">Name column width</label>
+          <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-85" tabindex="0"/>
+          <span class="slds-resizable__handle">
+            <span class="slds-resizable__divider"></span>
+          </span>
+        </div>
+      </th>
+      <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+        <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="0">
+          <span class="slds-assistive-text">Sort </span>
+          <span class="slds-truncate" title="Name">Name</span>
+          <div class="slds-icon_container">
+            
+          </div>
+          <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+        </a>
+        <div class="slds-resizable">
+          <label for="cell-resize-handle-86" class="slds-assistive-text">Account Name column width</label>
+          <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-86" tabindex="0"/>
+          <span class="slds-resizable__handle">
+            <span class="slds-resizable__divider"></span>
+          </span>
+        </div>
+      </th>
+      <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+        <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="0">
+          <span class="slds-assistive-text">Sort </span>
+          <span class="slds-truncate" title="Recent Backup Date">Recent Backup Date</span>
+          <div class="slds-icon_container">
+           
+          </div>
+          <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+        </a>
+        <div class="slds-resizable">
+          <label for="cell-resize-handle-87" class="slds-assistive-text">Recent Backup Date</label>
+          <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-87" tabindex="0"/>
+          <span class="slds-resizable__handle">
+            <span class="slds-resizable__divider"></span>
+          </span>
+        </div>
+      </th>
+      <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+        <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="0">
+          <span class="slds-assistive-text">Sort </span>
+          <span class="slds-truncate" title="Mapped To">Mapped To</span>
+          <div class="slds-icon_container">
+           
+          </div>
+          <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+        </a>
+        <div class="slds-resizable">
+          <label for="cell-resize-handle-88" class="slds-assistive-text">Stage column width</label>
+          <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-88" tabindex="0"/>
+          <span class="slds-resizable__handle">
+            <span class="slds-resizable__divider"></span>
+          </span>
+        </div>
+      </th>
+      <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+        <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" tabindex="0">
+          <span class="slds-assistive-text">Sort </span>
+          <span class="slds-truncate" title="Authentication">Authentication</span>
+          <div class="slds-icon_container">
+           
+          </div>
+          <span class="slds-assistive-text" aria-live="assertive" aria-atomic="true"></span>
+        </a>
+        <div class="slds-resizable">
+          <label for="cell-resize-handle-89" class="slds-assistive-text">Authentication column width</label>
+          <input type="range" min="20" max="1000" class="slds-resizable__input slds-assistive-text" id="cell-resize-handle-89" tabindex="0"/>
+          <span class="slds-resizable__handle">
+            <span class="slds-resizable__divider"></span>
+          </span>
+        </div>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+  	  <aura:iteration items="{!v.orgData}" var="org" indexVar="index"> 
+   	<tr class="slds-hint-parent">
+      <th scope="row" class="">
+        <div class="slds-truncate" title="Acme - 1,200 Widgets"><a href="javascript:void(0);">{!org.id}</a></div>
+      </th>
+      <td role="gridcell" class="">
+        <div class="slds-truncate" title="Acme">{!org.name}</div>
+      </td>
+      <td role="gridcell" class="">
+        <div class="slds-truncate" title="4/10/15">{!org.recentbackup}</div>
+      </td>
+      <td role="gridcell" class="">
+        <div class="slds-truncate" title="Value Proposition">{!org.mapped}</div>
+      </td>
+      <td role="gridcell" class="">
+       	 <span class="slds-icon_container" title=" ">
+              <aura:if isTrue="{!org.isauthsucess}">
+                   <lightning:icon iconName="utility:success" size="small" alternativeText="Authentication Sucess"/>
+                <aura:set attribute="else">
+                    <lightning:icon iconName="utility:clear" size="small" alternativeText="Authentication Sucess"/>
+                </aura:set>
+              </aura:if> 
+    	</span>
+      </td>
+    </tr>
+      </aura:iteration>
+  </tbody>
+</table>
+</aura:component>

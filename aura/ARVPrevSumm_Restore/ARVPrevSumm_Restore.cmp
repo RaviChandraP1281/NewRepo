@@ -1,0 +1,23 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global">
+	<div class="slds-text-heading--medium 
+                slds-p-top--xx-small">Previous Restore Summary</div>
+           <table role="grid" class="slds-table slds-table_resizable-cols slds-no-row-hover 
+                                      slds-scrollable_none slds-table_cell-buffer">
+                <tr>
+                	<td scope="col" class="slds-text-align_left  slds-text-title_caps">Status</td>
+                	<td scope="col" class="slds-text-align_left ">Success</td>
+                </tr>  
+                <tr>
+                	<td scope="col" class="slds-text-align_left  slds-text-title_caps">Time Completed</td>
+                	<td scope="col" class="slds-text-align_left ">11.00 am</td>
+                </tr> 
+               <tr>
+                	<td scope="col" class="slds-text-align_left  slds-text-title_caps">Errors</td>
+                	<td scope="col" class="slds-text-align_left ">0</td>
+                </tr>
+               <tr>
+                	<td scope="col" class="slds-text-align_left  slds-text-title_caps">Warnings</td>
+                	<td scope="col" class="slds-text-align_left ">0</td>
+                </tr> 
+                </table> 
+</aura:component>

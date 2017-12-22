@@ -1,0 +1,82 @@
+<aura:component controller="ARVaultService" implements="flexipage:availableForAllPageTypes" access="global">
+	<aura:attribute name="sfOrgId" type="String" />
+    <aura:attribute name="lastrun" type="DateTime" />
+    <aura:attribute name="backupInfo" type="Object" />
+    <aura:attribute name="orgsList" type="Object[]" />
+    <aura:attribute name="rc" type="Object[]" />
+    <aura:attribute name="toprc" type="Object[]" />
+    <aura:attribute name="backupObjects" type="Object[]" />
+    <aura:attribute name="inprogressObjects" type="Object[]" />
+    <aura:attribute name="completedObjects" type="Object[]" />
+    <aura:attribute name="page" type="Integer" default="1"/>
+    <aura:attribute name="totalpages" type="Integer" default="1"/>
+    <aura:attribute name="PAGE_MAX_SIZE" type="Integer" default="20"/> 
+    <aura:attribute name="resultCriteria" type="Object[]" />
+    <aura:attribute name="searchResultCriteria" type="Object[]" />
+    <aura:attribute name="topResultCriteria" type="Object[]" />
+	<aura:attribute name="backupObject" type="Object"/> 
+    <aura:attribute name="Spinner" type="boolean"/> 
+    <aura:attribute name="liveStatus" type="String[]"/>
+    <aura:attribute name="isProgress" type="boolean" default="false"/>
+    <aura:attribute name="isInprogressBackup" type="boolean" default="false"/>
+     <aura:attribute name="selectedOrgName" type="String"/>
+    <aura:attribute type="String[]" name="chartData"/>
+    <aura:attribute type="String[]" name="chartDates"/>                 
+    <aura:attribute type="String" name="chartType" default="line"/> 
+    <aura:handler name="displaygraph" 
+                  event="c:showGraph" 
+                  action="{!c.showThisGraph}"/>
+      <aura:handler name="liveBackupEvent" 
+                  event="c:LiveBackupEvent" 
+                  action="{!c.toggleChartData}"/>
+      <aura:handler name="orgIdChanged" event="c:ARV_OrgChanged_Event" 
+                  action="{!c.orgIdChanged}"/>
+    <aura:handler name="returnToDashboard" 
+                  event="c:ARV_Backup_RtnToDshbrd_Event" 
+                  action="{!c.returnToDashboard}"/>
+	<aura:handler name="displayfilter" event="c:showFilter" 
+                  action="{!c.showThisFilter}"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:handler name="refresh" event="c:ARV_Refresh" 
+                  action="{!c.refresh}"/>
+    <aura:handler name="activityObjects" event="c:ARV_Backup_ActivityObjects_Activity" 
+                  action="{!c.activityObjects}"/>
+    <aura:handler name="updatechart" event="c:ARV_Backup_UpdateChart_Event" 
+                  action="{!c.updatechart}"/>
+    <ltng:require scripts="{!join(',',$Resource.jql,$Resource.ARVaultUtil)}" 
+                  styles="{!$Resource.ARVaultDefaultCss}" 
+                  afterScriptsLoaded="{!c.historyGraphLoad}"/>
+        <aura:if isTrue="{!v.Spinner}">  
+          <div class="slds-align--absolute-center" style="height: max-content;z-index:9999">              
+            <span class="spinner-text">Fetching backup activities information</span>
+            <lightning:spinner aura:id="spinnerId"  variant="brand" size="large" alternativeText="Fetching backup activities information" />                
+          </div>
+        </aura:if> 
+        <div aura:id="activitiesList" class="activitiesList">
+            <c:ARV_Backup_Header orgData="{!v.orgsList}" 
+                                 selectedOrgName="{!v.selectedOrgName}"
+                                 backupObjects="{!v.completedObjects}" 
+                                 inprogressObjects="{!v.inprogressObjects}" 
+                                 isProgress="{!v.isProgress}" 
+                                 liveStatus="{!v.liveStatus}"/>
+            <div aura:id="sd" class="slds-p-right_medium">
+                <c:DynamicChart aura:id="compId" 
+                                chartType="{!v.chartType}" 
+                                chartTitle='Backup Dashboard' 
+                                chartSubTitle=''
+                                xAxisCategories="Date"
+                                yAxisParameter='Records'
+                                dates="{!v.chartDates}"
+                                data="{!v.chartData}"/>
+              </div>
+              <c:ARV_Backup_HistoryTable aura:id="historyTable" 
+                                       isInProgress="{!v.isInprogressBackup}"
+                                       sfOrgId="{!v.sfOrgId}" 
+                                       page="{!v.page}"
+                                       totalpages="{!v.totalpages}"
+                                       PAGE_MAX_SIZE="{!v.PAGE_MAX_SIZE}"
+                                       resultCriteria="{!v.resultCriteria}" 
+                                       topResultCriteria="{!v.topResultCriteria}"/>
+              
+          </div>
+</aura:component>

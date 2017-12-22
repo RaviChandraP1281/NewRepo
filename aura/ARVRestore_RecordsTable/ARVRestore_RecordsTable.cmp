@@ -1,0 +1,234 @@
+<aura:component controller="ARVaultService" >
+    <aura:attribute name="sfOrgId" type="String" />
+    <aura:attribute name="orgData" type="Object[]" />
+    <aura:attribute name="backupID" type="String"/>
+    <aura:attribute name="sObjectInFilter" type="String"/>
+    <aura:attribute name="sRecCountInFilter" type="String"/> 
+    <aura:attribute name="displayMessage" type="String"/> 
+    <aura:attribute name="Spinner" type="boolean"/> 
+    <aura:attribute name="objectOptions" type="Object[]"/>
+    <aura:attribute name="recordColumns" type="Object[]" />
+    <aura:attribute name="allFields" type="Object[]" />
+    <aura:attribute name="records" type="Object[]" />
+    <aura:attribute name="isShowRecords" type="Boolean" default="true"/>
+    <aura:attribute name="isShowMessage" type="Boolean" default="false"/>
+    <aura:attribute name="isOpen" type="boolean" default="false"/>
+    <aura:attribute name="page" type="Integer" default="1"/>
+    <aura:attribute name="PAGE_MAX_SIZE" type="Integer" default="10"/> 
+    <aura:attribute name="resultCriteria" type="Object[]" />
+    <aura:attribute name="searchResultCriteria" type="Object[]" />
+    <aura:attribute name="topResultCriteria" type="Object[]" />
+    <ltng:require scripts="{!join(',',$Resource.jql,$Resource.ARVaultUtil)}" />
+
+	<aura:handler event="c:ARV_FilterPicklist_Event" action="{!c.handleInit}" />
+    <aura:registerEvent name="confirmRestore" type="c:ARV_ConfirmRestore_Event" />
+
+    <div class="slds-align--absolute-center" style="height: 100%;z-index:1">              
+        <aura:if isTrue="{!v.Spinner}">  
+            <span class="spinner-text">Fetching record level info of selected backup</span>
+            <lightning:spinner aura:id="spinnerId"  variant="brand" size="large" alternativeText="Fetching record level info of selected backup" />                
+        </aura:if> 
+    </div>    
+    <c:ARVHeader_Restore_Records />
+    <div class="slds-grid">        
+    	<div class="slds-p-horizontal_small slds-p-top_medium slds-large-size_1-of-1">
+            <div class="slds-form-element__control">
+                <table>
+                    <tr>
+                        <td>
+                            <lightning:select name="sObjects" label="Objects" aura:id="objects" value="{!v.sObjectInFilter}" onchange="{!c.handleObjectChange}" >
+                                <aura:iteration items="{!v.objectOptions}" var="option">
+                                    <option value="{!option.objname}">{!option.objname}</option>
+                                </aura:iteration>
+                            </lightning:select> 
+                        </td>
+                        <td style="width:5rem;"></td>
+                        <td>  
+                            <lightning:button variant="brand" name="go" label="Go" onclick="{!c.goRecordFilter}" />
+         				</td>
+                        <td>	
+                            <a onclick="{!c.changeView}">Change View</a>
+                        </td>
+                        <td>        
+                            <lightning:select name="selectItem" label="Desination Org" value="{!v.sfOrgId}" disabled="true">
+                                <aura:iteration items="{!v.orgData}" var="obj" indexVar="indexVar">
+                                    <option value="{!obj.idSforg}">{!obj.nmLable}</option>
+                                </aura:iteration>    
+                            </lightning:select>   
+                        </td>
+                        <td style="width:5rem;"></td>
+                        <td> 
+                            <lightning:button variant="brand" label="Confirm" onclick="{!c.confirmRestore}" />
+                        </td>
+                    </tr>
+                </table>
+        		
+            
+            
+                   
+                </div>            
+        </div>        
+    </div>
+   	<aura:if isTrue="{!v.isShowMessage}">
+            <div class="slds-p-horizontal_small slds-p-top_medium slds-size_1-of-2 slds-medium-size_3-of-6 slds-large-size_12-of-12">
+                <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                    <thead>
+                        <tr class="slds-text-title_caps slds-text-body_small">
+                            <th scope="col">{!v.displayMessage}              	
+                            </th>
+                        </tr>
+                    </thead>
+                </table>
+            </div>
+    	</aura:if>      
+        <aura:if isTrue="{!v.isShowRecords}">
+    <!--lightning:button variant="brand" label="Previous" iconName="utility:back" iconPosition="left" onclick="{! c.leftMove }" />
+    <lightning:button variant="brand" label="Next" iconName="utility:forward" iconPosition="right" onclick="{! c.rightMove }" />
+    <lightning:input type="text" placeholder="Quick Find" aura:id="quickfind" onchange="{!c.searchInTable}"/-->
+    
+            <table>
+                <tr>
+                    <td class="slds-text-align_left" style="width:20rem;">
+                        <lightning:input type="text" placeholder="Quick Find" aura:id="quickfind" onchange="{!c.searchInTable}"/> </td>
+                    <td style="width:20rem;">
+                    </td>
+                    <td class="slds-text-link slds-text-align_right" style="width:5rem;">
+                        <lightning:buttonicon variant="bare" iconName="utility:back" alternativeText="Prev" onclick="{! c.leftMove }" />                           
+                    </td>
+                    <td class="slds-text-link slds-text-align_right" style="width:5rem;">
+                        <lightning:buttonicon variant="bare" iconName="utility:forward" alternativeText="Next" onclick="{! c.rightMove }" />
+                    </td>
+                    <td style="width:1rem;"></td>
+                </tr>
+            </table>          
+            
+        <div class="slds-p-horizontal_small slds-p-top_medium slds-size_1-of-2 slds-medium-size_3-of-6 slds-large-size_12-of-12">
+           <div class="slds-border_top" style="height:20rem;">
+             <div style="">
+                <table class="slds-p-top_small slds-p-bottom_small slds-table_bordered slds-table slds-table_resizable-cols slds-table--header-fixed slds-table_fixed-layout slds-table_cell-buffer" role="grid">
+                     <thead>
+                        <tr class="slds-text-title_caps slds-text-body_small">
+                           <th scope="col">
+                                <div class="slds-truncate" title="">
+                                    <lightning:input type="checkbox" class="slds-float_left" aura:id="recordsMainBox" onchange="{!c.checkAllCheckboxes}" />
+                                </div>
+                            </th>                            
+                            <!--aura:iteration items="{!v.recordColumns}" var="field" indexVar="c"--> 
+                                <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                                    <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" name="asc" id="0" onclick="{!c.sortTable}" tabindex="0">
+                                        <span class="slds-truncate" title="Salesforce Object" name="asc" id="0" onclick="{!c.sortTable}">{!v.recordColumns[0]}</span>
+                                    </a>
+                                </th>
+                            <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                                    <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" name="asc" id="1" onclick="{!c.sortTable}" tabindex="0">
+                                        <span class="slds-truncate" title="Salesforce Object" name="asc" id="1" onclick="{!c.sortTable}">{!v.recordColumns[1]}</span>
+                                    </a>
+                                </th>
+                            <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                                    <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" name="asc" id="2" onclick="{!c.sortTable}" tabindex="0">
+                                        <span class="slds-truncate" title="Salesforce Object" name="asc" id="2" onclick="{!c.sortTable}">{!v.recordColumns[2]}</span>
+                                    </a>
+                                </th>
+                            <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                                    <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" name="asc" id="3" onclick="{!c.sortTable}" tabindex="0">
+                                        <span class="slds-truncate" title="Salesforce Object" name="asc" id="3" onclick="{!c.sortTable}">{!v.recordColumns[3]}</span>
+                                    </a>
+                                </th>
+                            <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                                    <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" name="asc" id="4" onclick="{!c.sortTable}" tabindex="0">
+                                        <span class="slds-truncate" title="Salesforce Object" name="asc" id="4" onclick="{!c.sortTable}">{!v.recordColumns[4]}</span>
+                                    </a>
+                                </th>
+                            <!--/aura:iteration-->                                                        
+                        </tr>
+                    </thead>
+                </table>
+                </div>
+                <div class="slds-scrollable_y" style="height:95%">
+                   <table aura:id="ht" class="slds-table slds-table_bordered slds-table_fixed-layout slds-table_cell-buffer" role="grid">
+                     <tbody class="slds-text-body_small">
+                        <aura:iteration items="{!v.topResultCriteria}" var="obj" indexvar="index"> 
+                           <tr>
+                             <th scope="row" data-label="">
+                                 <div class="slds-truncate" title="">
+                                     <lightning:input type="checkbox" onchange="{!c.checkChkBox}" name="{!obj.Id}" class="slds-float_left" aura:id="backedupRecords" />                                   
+                                 </div>
+                               </th>
+                               <td data-label="{!obj.Column0}">
+                                   <div class="slds-truncate" title="">{!obj.Column0}</div>
+                               </td>
+                               <td data-label="{!obj.Column1}">
+                                   <div class="slds-truncate" title="">{!obj.Column1}</div>
+                               </td>
+                               <td data-label="{!obj.Column2}">
+                                   <div class="slds-truncate" title="">{!obj.Column2}</div>
+                               </td>
+                               <td data-label="{!obj.Column3}">
+                                   <div class="slds-truncate" title="">{!obj.Column3}</div>
+                               </td>
+                               <td data-label="{!obj.Column4}">
+                                   <div class="slds-truncate" title="">{!obj.Column4}</div>
+                               </td>                            
+                            </tr>
+                         </aura:iteration>                                                        
+                       </tbody>
+                    </table>
+                       </div>
+                       </div>
+            </div>
+    </aura:if>
+    <div>
+  	  <aura:if isTrue="{!v.isOpen}">
+        <div role="dialog" tabindex="-1" aria-labelledby="header99" class="slds-modal slds-fade-in-open ">
+            <div class="slds-modal__container">
+                <div class="slds-modal__header">
+                    <button class="slds-button slds-modal__close slds-button--icon-inverse" title="Close" onclick="{!c.closeModel}">
+                        <lightning:icon iconName="utility:close" size="small" variant="brand"/>
+                    </button>
+                    <h2 id="header99" class="slds-text-heading--medium">Select Tags</h2>
+                </div>
+                <div class="slds-modal__content slds-p-around--medium">
+                    <div class="slds-form-element__control">
+                        <table>
+                            <tr>
+                                <td>
+                                	<lightning:select name="sObjects" label="Fields" aura:id="fields">
+                                        <aura:iteration items="{!v.allFields}" var="option">
+                                            <option value="{!option}">{!option}</option>
+                                        </aura:iteration>
+                                    </lightning:select>                        
+                                </td>
+                                <td>
+                                	<a onclick="{!c.AddNewRow}">
+                                      <lightning:icon iconName="utility:add" class="slds-icon slds-icon_small" size="small" alternativeText="add"/>
+                                      <span class="slds-assistive-text">Add Icon</span>
+                                    </a>
+                                </td>
+                            </tr></table>
+                        
+                    </div>
+                </div>  
+ 				<div class="slds-modal__content slds-p-around--medium">
+                    <div class="slds-form-element__control">
+                        <table>
+                            <aura:iteration items="{!v.recordColumns}" var="field" >                             
+                                <tr>
+                                    <td>{!field}</td>
+                                    <td>
+                                        <lightning:button aura:id="deleteRow" name="{!field}" variant="error" iconName="utility:delete"  iconPosition="right" onclick="{!c.removeRow}" />                                        
+                                    </td>                                
+                            	</tr>
+                            </aura:iteration>
+                        </table>
+                    </div>
+                </div>
+                <div class="slds-modal__footer">
+                    <button class="slds-button slds-button--neutral" onclick="{!c.closeModel}" >Cancel</button>
+                    <button class="slds-button slds-button--brand" onclick="{!c.saveModel}">Save</button>
+                </div>
+            </div>
+        </div>
+        <div class="slds-backdrop slds-backdrop--open"></div>
+    </aura:if>
+    </div>
+</aura:component>

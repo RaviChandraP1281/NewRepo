@@ -1,0 +1,6 @@
+<aura:component >
+     <ltng:require scripts="{!join(',',$Resource.jql, $Resource.d3)}" afterScriptsLoaded="{!c.doInit}"/>
+	 <aura:attribute name="records" type="Integer" default="1"/>  
+     <aura:attribute name="successcount" type="Integer" default="1"/>  
+     <div aura:id="comp"></div>
+</aura:component>

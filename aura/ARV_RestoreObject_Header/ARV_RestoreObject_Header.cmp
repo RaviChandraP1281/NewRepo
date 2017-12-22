@@ -1,0 +1,43 @@
+<aura:component >
+<aura:attribute name="restoreObject" type="Object"/> 
+<aura:registerEvent name="returnToDashboard" type="c:ARV_Backup_RtnToDshbrd_Event"/>
+   <div class="slds-page-header slds-page-header_object-home">
+           <div class="slds-grid">
+              <div class="slds-col slds-has-flexi-truncate">
+                 <div class="slds-size_1-of-1 slds-medium-size_2-of-6 slds-large-size_6-of-12">
+                     <div class="demo-only" style="min-height:4rem;">
+                          <div id="listbox-unique-id" role="listbox">
+                                <div onclick="">
+                                      <div class="slds-media slds-no-space slds-grow">
+                                        <div class="slds-media__figure">
+                                          <span class="slds-icon_container slds-icon-standard-lead">
+                                             <lightning:icon iconName="utility:standard_objects" size="medium" alternativeText=" "/>
+                                          </span>
+                                        </div>      
+                                        <div class="slds-media__body">
+                                          <p class="slds-text-title_caps slds-line-height_reset">Salesforce Org</p>
+                                          <h1 class="slds-page-header__title slds-p-right_x-small">
+                                              <div class="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open">
+                                            <button class="slds-button slds-button_reset slds-type-focus slds-truncate" aria-haspopup="true" title="">
+                                              <span class="slds-grid slds-has-flexi-truncate slds-grid_vertical-align-center">
+                                                <span class="slds-truncate" title="Click to obtain list of Orgs">{!v.selectedOrgName}</span>
+                                                <lightning:icon iconName="utility:down" size="xx-small" alternativeText=" " />
+                                              </span>
+                                            </button>
+                                             </div>
+                                          </h1>
+                                        </div>
+                                    </div>  
+                                 </div>
+                            </div>
+                        </div>
+                 </div>
+              </div>
+         <div class="slds-col slds-no-flex slds-align-bottom slds-m-left_xx-small">
+             <div class="slds-m-bottom_small">
+                  <lightning:button label="Back To Dashboard" aura:id="returndashboard" onclick="{!c.backToDashboard}"/>
+            </div>
+         </div>
+     </div>
+</div>
+</aura:component>

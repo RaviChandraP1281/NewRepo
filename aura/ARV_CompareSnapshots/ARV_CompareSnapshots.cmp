@@ -1,0 +1,205 @@
+<aura:component controller="ARVaultService" implements="flexipage:availableForAllPageTypes" access="global">
+  	<aura:attribute name="sfOrgId" type="String" default="00D6F000001OOISUA4" />
+    <aura:attribute name="compareClass" type="String" default="slds-hide" />
+    <aura:attribute name="nextClass" type="String" default="slds-hide" />
+    <aura:attribute name="selSnapshot" type="Object" />
+	<aura:attribute name="backupObjects" type="Object[]" />
+    <aura:attribute name="fromDate" type="Date" />
+    <aura:attribute name="toDate" type="Date" />
+    <aura:attribute name="cardTitle" type="String" default="My Card Title"/>
+    <aura:attribute name="firstSnapshot" type="Object" />
+    <aura:attribute name="secondSnapshot" type="Object" />
+    <aura:attribute name="firstSelectedSnapID" type="String" default="" />
+    <aura:attribute name="secondSelectedSnapID" type="String" default="" />
+    <aura:attribute name="snapshotDetail1" type="Object" />
+    <aura:attribute name="snapshotDetail2" type="Object" />
+    <aura:attribute name="recordList1" type="Object" />
+    <aura:attribute name="recordList2" type="Object" />
+    <aura:attribute name="snapshotRecord1" type="Object[]" />
+    <aura:attribute name="snapshotRecord2" type="Object[]" />
+    <aura:attribute name="recordColumns" type="Object[]"/>  
+    <aura:attribute name="unrecordColumns" type="Object[]"/>      
+    <aura:attribute name="fieldList" type="Object[]" />
+    <aura:attribute name="isOpen" type="boolean" default="false"/>
+    <aura:attribute name="Spinner" type="boolean"/> 
+    <aura:attribute name="objectName" type="String" />    
+    <aura:attribute name="countofSnapshots" type="Integer" default="1"/> 
+    <aura:attribute name="radiobtnDisabled" type="Boolean" default="false"/>
+    <aura:attribute name="suggestion" type="String" default="Please Select Snapshot1"/>    
+    <aura:handler name="change" value="{!v.sfOrgId}" action="{!c.loadBackups}"/>
+    <aura:handler name="showSnapshot" event="c:showSnapshotOne" action="{!c.viewSnapshot}" />
+    <aura:handler name="showNextSnapshot" event="c:showSnapshotTwo" action="{!c.displayNextSnapshot}" />
+    <aura:handler name="showSnapshotOptions" event="c:showSnapshotOptions" action="{!c.bothSnapshot}" />
+   
+    <aura:handler name="cSnapshotEvent" event="c:ARV_Comapre_ChangeSnpas_Event" action="{!c.handlecSnapshotEvent}" />
+    <!--aura:handler name="compareSnapshot" event="c:compareSnapshot" action="{!c.displaySnapshotOptions}" /-->
+    <aura:handler name="showObjectsSnapshot" event="c:ARV_Compare_ObjSnapshot" 
+                  action="{!c.showObjectSnapshot}"/>
+
+    <aura:if isTrue="{!v.Spinner}">  
+        <div class="slds-align--absolute-center" style="height: max-content;z-index:9999">              
+            <span class="spinner-text">Loading Backups</span>
+            <lightning:spinner aura:id="spinnerId"  variant="brand" size="large" alternativeText="Loading Backups" />                
+        </div>
+    </aura:if> 
+    <c:ARV_Compare_Header sfOrgId="{!v.sfOrgId}" countofSnapshots="{!v.countofSnapshots}"
+                          radiobtnDisabled="{!v.radiobtnDisabled}"
+                          firstSnapshot="{!v.firstSnapshot}" 
+                          secondSnapshot="{!v.secondSnapshot}" />
+    <div class="slds-text-heading_small">
+        <h2>
+            <aura:if isTrue="{!equals(v.countofSnapshots,1)}">                
+                <table class="slds-table_cell-buffer">
+                    <tr>                        
+                        <td>Please select Snapshot 1</td>
+                    </tr>
+                </table>
+                <aura:set attribute="else">
+                    <aura:if isTrue="{!equals(v.countofSnapshots,2)}">
+                        <table class="slds-table_cell-buffer">
+                            <tr>
+                                <td>Please select Snapshot 2</td>
+                            </tr>
+                        </table>
+                        <aura:set attribute="else">
+                            <table class="slds-table slds-table_bordered slds-table_resizable-cols slds-table_cell-buffer " role="grid">                                
+                                <tr>
+                                    <td>Compare Snapshot 1 and Snapshot 2</td>
+                                    <td>
+                                        <lightning:button variant="neutral" label="Compare" onclick="{!c.displaySnapshotOptions}" aura:id="comparebtn" disabled="false"/>
+                                    </td>
+                                    <td style="width:100 px"></td>
+                                </tr>
+                            </table>                                                        
+                        </aura:set>
+                    </aura:if> 
+                </aura:set>
+            </aura:if> 
+        </h2>
+    </div>   
+    <div class="slds-path">
+        <div class="slds-grid slds-path__track">
+            <div class="slds-grid slds-path__scroller-container">
+                <div class="slds-path__scroller" role="application">
+                    <div class="slds-path__scroller_inner">
+                        <ul class="slds-path__nav" role="listbox" aria-orientation="horizontal">
+                            <li class="slds-path__item slds-is-current slds-is-active" role="presentation"  aura:id="lisnapshot">
+                                <a aria-selected="true" class="slds-path__link" onclick="{!c.viewSnapshot}" href="javascript:viewSnapshot();" id="path-3" role="option" tabindex="0">
+                                    <span class="slds-path__stage">
+                                        <span class="slds-assistive-text">Current Stage:</span>
+                                    </span>
+                                    <span class="slds-path__title" style="transform: none !important;">Snapshot</span>
+                                </a>                                
+                            </li>
+                            <li class="slds-path__item slds-is-incomplete" role="presentation"  aura:id="liobject">
+                                <a aria-selected="false" class="slds-path__link" onclick="{!c.viewObject}" href="javascript:void(0);" id="path-4" role="option" tabindex="-1">
+                                    <span class="slds-path__stage">                                        
+                                    </span>
+                                    <span class="slds-path__title" style="transform: none !important;">Object</span>
+                                </a>
+                            </li>
+                            <li class="slds-path__item slds-is-incomplete" role="presentation"  aura:id="lirecord">
+                                <a aria-selected="false" class="slds-path__link" onclick="{!c.viewRecord}"  href="javascript:void(0);" id="path-5" role="option" tabindex="-1">
+                                    <span class="slds-path__stage">                                        
+                                    </span>
+                                    <span class="slds-path__title" style="transform: none !important;">Record</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="slds-path__scroll-controls">
+                            <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1" title="Scroll left">                                
+                                <span class="slds-assistive-text">Scroll left</span>
+                            </button>
+                            <button class="slds-button slds-button_icon slds-button_icon-border-filled" tabindex="-1" title="Scroll right">                                
+                                <span class="slds-assistive-text">Scroll right</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="slds-scrollable_y" style="height: 35rem;" aura:id="snapshot" >          
+       <!--c:ARV_CompareNameDatePanel fromDate="{!v.fromDate}" toDate="{!v.toDate}" /-->
+        <c:ARV_Compare_BackupTable sfOrgId="{!v.sfOrgId}" fromDate="{!v.fromDate}" toDate="{!v.toDate}" 
+                                   selSnapshot="{!v.selSnapshot}" compareClass="slds-hide" nextClass=" " radiobtnDisabled="{!v.radiobtnDisabled}"
+                                   firstSelectedSnapID="{!v.firstSelectedSnapID}"  secondSelectedSnapID="{!v.secondSelectedSnapID}" 
+                                   firstSnapshot="{!v.firstSnapshot}" secondSnapshot="{!v.secondSnapshot}"
+                                   countofSnapshots="{!v.countofSnapshots}" backupObjects="{!v.backupObjects}" />
+        
+    </div>
+    <div class="slds-scrollable_y slds-hide" style="height: 35rem;"  aura:id="object" >
+        <div class="slds-text-heading_small">
+            <table class="slds-table_cell-buffer">
+                <tr>
+                    <td>Please Select Object</td>
+                </tr>
+            </table>            
+        </div>
+        <!--c:ARV_SnapshotSummaryCard firstSnapshot="{!v.firstSnapshot}" secondSnapshot="{!v.secondSnapshot}" buttonName="" /-->   
+        <div class="slds-p-top_small slds-grid slds-hide" aura:id="bothsnapshots">
+            <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_3-of-6 slds-large-size_6-of-12" aura:id="snapshotOne">
+            </div>
+            <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_3-of-6 slds-large-size_6-of-12" aura:id="snapshotTwo">
+            </div>
+        </div>
+    </div>
+    <div class="slds-scrollable_y slds-hide" style="height: 35rem;"  aura:id="record" >
+        <div class="slds-text-heading_small">  
+            <table class="slds-table slds-table_resizable-cols slds-table_cell-buffer" >
+                <tr>
+                    <td>Object: {!v.objectName}</td>                
+                    <td><lightning:button variant="neutral" label="Change View" onclick="{!c.changeView }" /></td>
+                    <td style="width:100 px"/>
+                </tr>
+            </table>
+        </div>
+        <!--c:ARV_SnapshotSummaryCard firstSnapshot="{!v.firstSnapshot}" secondSnapshot="{!v.secondSnapshot}" buttonName="" /-->    
+        <div class="slds-p-top_small slds-grid slds-hide" aura:id="rbothsnapshots">
+            <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_3-of-6 slds-large-size_6-of-12" aura:id="rsnapshotOne">
+            </div>
+            <div class="slds-p-horizontal_small slds-size_1-of-2 slds-medium-size_3-of-6 slds-large-size_6-of-12" aura:id="rsnapshotTwo">
+            </div>
+        </div>
+    </div>
+    <div>
+        <aura:if isTrue="{!v.isOpen}">
+            <div role="dialog" tabindex="-1" aria-labelledby="header99" class="slds-modal slds-fade-in-open ">
+                <div class="slds-modal__container">
+                    <div class="slds-modal__header">
+                        <button class="slds-button slds-modal__close slds-button--icon-inverse" title="Close" onclick="{!c.closeModel}">
+                            <lightning:icon iconName="utility:close" size="small" variant="brand"/>
+                        </button>
+                        <h3 id="header99" class="slds-text-heading--medium">Change View</h3>
+                    </div>
+                    <div class="slds-modal__content slds-p-around--medium">
+                        <div class="slds-form-element__control">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <aura:iteration items="{!v.recordColumns}" var="field" indexVar="i">                             
+                                            <lightning:input type="checkbox" label="{!field}" aura:id="chkBox" name="{!field}" 
+                                                             checked="true"
+                                                             value="{!field}" onchange="{!c.checkUncheckBox}" />  
+                                        </aura:iteration>
+                                        <aura:iteration items="{!v.unrecordColumns}" var="field" indexVar="i">                             
+                                            <lightning:input type="checkbox" label="{!field}" aura:id="chkBox" name="{!field}" 
+                                                             checked="false"
+                                                             value="{!field}" onchange="{!c.checkUncheckBox}" />  
+                                        </aura:iteration>                                    
+                                    </td>                                
+                                </tr>                                    
+                            </table>
+                        </div>
+                    </div>
+                    <div class="slds-modal__footer">
+                        <button class="slds-button slds-button--neutral" onclick="{!c.closeModel}" >Cancel</button>
+                        <button class="slds-button slds-button--brand" onclick="{!c.saveModel}">Save</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-backdrop slds-backdrop--open"></div>
+        </aura:if>
+    </div> 
+  
+</aura:component>

@@ -1,0 +1,69 @@
+<aura:component controller="ARVaultService" implements="flexipage:availableForAllPageTypes" access="global">
+    
+    <aura:attribute name="sfOrgId" type="String" />
+	<aura:attribute name="restoreObjects" type="Object[]" />    
+    <aura:handler name="init" value="{!this}" action="{!c.doRestoreInit}" />
+    
+	<table class="slds-table slds-table_bordered slds-table_cell-buffer">
+  <thead>
+    <tr class="slds-text-title_caps">
+      <th scope="col">
+        <div class="slds-truncate" title="RestoreActivityID">Restore Activity ID</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="User">User</div>
+      </th>
+      <th scope="col">
+          <div class="slds-truncate" title="DateTime">Date/Time</div>
+      </th>
+      <th scope="col">
+        <div class="slds-truncate" title="Duration">Duration</div>
+      </th> 
+      <th scope="col">
+        <div class="slds-truncate" title="Records">Records</div>
+      </th>
+        <th scope="col">
+        <div class="slds-truncate" title="Size">Size (MBs)</div>
+      </th>
+        <th scope="col">
+        <div class="slds-truncate" title="API Calls">API Calls</div>
+      </th>
+        <th scope="col">
+        <div class="slds-truncate" title="Status">Status</div>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+      <aura:iteration items="{!v.restoreObjects}" var="obj">  
+          <tr class=" ">
+          <td data-label="Restore Activity ID">
+              <div class="slds-truncate" title="RestoreActivityID">{!obj.restoreActivityId}</div>
+           </td>
+           <td data-label="User">
+              <div class="slds-truncate" title="User">{!obj.restoreUser}</div>
+           </td>    
+           <td data-label="Restore Date/Time">
+                  <div class="slds-truncate" title="Restore Date/Time">{!obj.restoreDateTime}</div>
+           </td>
+           <td data-label="Duration">
+                  <div class="slds-truncate" title="Duration">{!obj.Duration}</div>
+           </td>
+           <td data-label="Records">
+                  <div class="slds-truncate" title="Records">{!obj.Records}</div>
+           </td>
+           <td data-label="Size">
+                  <div class="slds-truncate" title="Size">{!obj.Size}</div>
+           </td>
+           <td data-label="API Calls">
+                  <div class="slds-truncate" title="API Calls">{!obj.APICalls}</div>
+           </td>
+           <td data-label="Status">
+                  <div class="slds-truncate" title="Status">{!obj.Status}</div>
+           </td>                
+        </tr> 
+      		
+      </aura:iteration>
+	  
+        </tbody>
+    </table>
+</aura:component>

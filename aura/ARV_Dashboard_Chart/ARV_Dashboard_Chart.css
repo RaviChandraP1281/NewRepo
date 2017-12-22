@@ -1,0 +1,27 @@
+.THIS {
+}
+.THIS .bar{
+    fill: steelblue;
+  }
+
+.THIS .bar:hover{
+    fill: brown;
+  }
+.THIS .bar2{
+    fill: steelblue;
+  }
+
+.THIS .bar2:hover{
+    fill: brown;
+  }
+
+.THIS .axis {
+	  font: 10px sans-serif;
+	}
+
+.THIS .axis path,
+.THIS .axis line {
+	  fill: none;
+	  stroke: #000;
+	  shape-rendering: crispEdges;
+	}

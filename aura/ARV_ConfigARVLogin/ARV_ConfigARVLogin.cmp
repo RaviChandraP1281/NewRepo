@@ -1,0 +1,43 @@
+<aura:component >
+    <div class="slds-p-horizontal_xx-small slds-p-vertical_xx-small slds-p-left_xx-small slds-p-right_xx-small ">
+        <div class="slds-border_left slds-border_right slds-border_top slds-border_bottom leftbordersolid">
+            <span class="slds-text-heading_medium">
+
+        <div class=" slds-p-left_large slds-p-vertical_x-small ">
+        <lightning:icon iconName="utility:people" size="small" alternativeText="Indicates approval"/>
+    	ARVault Login  
+        </div>
+    </span>
+
+            <table class="slds-table slds-table_cell-buffer">
+                <tbody>
+                    <tr>
+                        <td data-label="Username">
+                            <lightning:input label=" " name="usernameinput" placeholder="Username" />
+                        </td>
+                        <td data-label="UsernameInput">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td data-label="Password">
+                            <lightning:input type="password" label=" " name="passwordinput" placeholder="Password" />
+                        </td>
+                        <td data-label="PasswordInput">
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <lightning:button variant="brand" label="Login" onclick="{! c.handleClick }" /> </td>
+                        <td>
+                            <lightning:icon iconName="action:approval" size="x-small" alternativeText="Indicates approval" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+</aura:component>

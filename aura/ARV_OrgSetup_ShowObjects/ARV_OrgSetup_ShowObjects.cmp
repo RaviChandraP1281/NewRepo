@@ -1,0 +1,240 @@
+<aura:component controller="ARVaultService" implements="flexipage:availableForAllPageTypes,force:lightningQuickActionWithoutHeader" access="global" >
+<aura:attribute name="objectData" type="Object[]"/>   
+<aura:attribute name="objectDataCopy" type="Object[]"/>   
+<aura:attribute name="objectLabelNames" type="String[]"/>   
+<aura:attribute name="uncheckedObjectData" type="Object[]"/>  
+<aura:attribute name="excludedFields" type="Object"/>  
+<aura:attribute name="objectId" type="String"/>   
+<aura:attribute name="currentObj" type="String"/>
+<aura:attribute name="labelsrh" type="String"/>
+<aura:attribute name="fieldsrh" type="String"/>
+<aura:attribute name="maskedHead" type="String" default="ARVault"/>
+<aura:attribute name="fieldData" type="Object[]"/> 
+<aura:attribute name="fieldDataCopy" type="Object[]"/> 
+<aura:attribute name="idSforg" type="String"/>    
+ <aura:attribute name="Spinner" type="boolean" default="false" />
+  <aura:attribute name="loadFieldConfig" type="boolean" default="false" />
+<aura:attribute name="existedConfig" type="Object" />
+<aura:handler name="change" value="{!v.fieldData}" action="{!c.fieldDataCopy}"/>
+<aura:handler name="change" value="{!v.objectData}" action="{!c.objectDataCopy}"/>
+<aura:handler name="change" value="{!v.existedConfig}" action="{!c.objectDatachange}"/>
+         <aura:if isTrue="{!v.Spinner}">
+             <lightning:spinner aura:id="spinnerId"  variant="brand" size="large" alternativeText="Loading Objects">
+             </lightning:spinner>
+             <div class="slds-align--absolute-center" style="height: 100%;z-index:9999">
+                <span class="spinner-text" aura:id="loadingMsg">{!v.loadingMsg}</span>
+             </div>
+        </aura:if>
+<div class="slds-page-header" aura:id="objectlist">
+  <div class="slds-grid">
+    <div class="slds-col slds-has-flexi-truncate">
+      <div class="slds-media slds-no-space slds-grow">
+        <div class="slds-media__figure">
+          <span class="slds-icon_container" title=" ">
+            <lightning:icon iconName="action:new_note" size="small" alternativeText="Indicates approval"/>
+    	</span>
+        </div>
+        <div class="slds-media__body">
+          <h1 class="slds-page-header__title slds-m-right_small slds-align-middle slds-truncate" title="Object List"> Objects</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+<table class="slds-table slds-table_cell-buffer">
+ <thead class="slds-page-header">
+        	<tr class="slds-text-title_caps header">
+                <td style="width:3%;">
+            		<lightning:input type="checkbox" aura:id="Mcheckbox"  
+                                     checked="true" name="Mcheckbox" 
+                                     onchange="{!c.checkAlloMcheckbox}" />
+                </td>
+                <td style="width:40%;" class="slds-truncate">
+                    <lightning:input type="search"
+                                     aura:id="labelsrh"
+                                     value="{!v.labelsrh}"
+                                     name="search" 
+                                     class="searchwidth" 
+                                     onchange="{!c.onObjectSearch}"
+                                     placeholder="Search by Label"/>
+                </td>
+                <td style="width:27%" class="slds-truncate">
+            		Object API Name
+                </td>
+                <td style="width:10%" class="slds-truncate">
+            		Excluded Fields
+                </td>
+                 <td style="width:10%" class="slds-truncate">
+            		Masked
+                </td>
+                <td style="width:10%" class="slds-truncate">
+            		Encrypted 
+                </td>
+            </tr>
+        </thead>    
+</table>
+<div class="componentHeight">
+<table class="slds-table slds-table_cell-buffer">
+        <tbody class="slds-scrollable_y">
+        <aura:iteration items="{!v.objectDataCopy}" var="object" indexVar="index"> 
+          <!--aura:if isTrue="{!or(empty(v.labelsrh),(v.labelsrh==object.name))}"-->
+          <tr>
+             <td style="width:3%;">
+            	<lightning:input type="checkbox" checked="{!object.isExisted}" 
+                                 onchange="{!c.objectCheckboxChange}" 
+                                 name="{!index}" aura:id="oMcheckbox"/>
+             </td>
+             <td style="width:40%" class="slds-truncate">
+                  <a href="javascript:void(0);">
+                	 <span id="{!index}" title="{!object.name}" 
+                           name="{!object.name}" 
+                           onclick="{!c.excludeFields}">{!object.label}</span>
+                 </a>
+             </td>
+             <td style="width:27%" class="slds-truncate">
+            		<span>{!object.name}</span>
+                </td>
+             <td style="width:10%" class="slds-truncate">
+                        <span id="{!index}" aura:id="excludeCountTemp" class="slds-hide" title="{!object.name}" name="{!object.name}">
+                        	0
+                        </span> 
+                   		<span id="{!index}" aura:id="excludeCount" title="{!object.name}" name="{!object.name}" >
+                         {!object.excludedFields.length>0?object.excludedFields.length:0}
+                        </span> 
+                </td>
+             <td style="width:10%" class="slds-truncate">
+                        <span id="{!index}" aura:id="maskedCountTemp" class="slds-hide" title="{!object.name}" name="{!object.name}">
+                        	0
+                        </span> 
+                   		<span id="{!index}" aura:id="maskedCount" title="{!object.name}" name="{!object.name}" onclick="{!c.excludeFields}">
+                         {!object.maskedfields.length>0?object.maskedfields.length:0}
+                        </span> 
+                </td>
+             <td style="width:10%" class="slds-truncate">
+                        <span id="{!index}" aura:id="encryptedCountTemp" class="slds-hide" title="{!object.name}" name="{!object.name}">
+                        	0
+                        </span> 
+                   		<span id="{!index}" aura:id="encryptedCount" title="{!object.name}" name="{!object.name}" onclick="{!c.excludeFields}">
+                         {!object.encryptedfields.length>0?object.encryptedfields.length:0}
+                        </span> 
+                </td>
+            </tr>
+              <!--/aura:if-->
+           </aura:iteration>
+		</tbody>
+    </table>
+</div>
+</div>
+<div class="slds-page-header slds-hide" aura:id="feildslist">
+  <div class="slds-grid">
+    <div class="slds-col slds-has-flexi-truncate">
+      <div class="slds-media slds-no-space slds-grow">
+        <div class="slds-media__figure">
+          <span class="slds-icon_container" title=" ">
+            <lightning:icon iconName="action:new_note" size="small" alternativeText="Indicates approval"/>
+    	  </span>
+        </div>
+        <div class="slds-media__body">
+          <p class="slds-line-height_reset">{!v.currentObj}</p>
+          <h1 class="slds-page-header__title slds-m-right_small slds-align-middle slds-truncate" title="Object List">Select Fields</h1>
+        </div>
+      </div>
+    </div>
+    <div class="slds-col slds-no-flex slds-grid slds-align-top">
+      <div class="slds-button-group" role="group">
+        <button class="slds-button slds-button_neutral" aura:id="back" onclick="{!c.backToObjectsList}">Back</button>
+        <button class="slds-button slds-button_neutral" aura:id="save" onclick="{!c.saveAndBackToObjectsList}">Save</button>
+      </div>
+    </div>
+  </div>
+  <!--c:ARVOrgBackupShowFields gridData="{!v.fieldData}" excludedFields="{!v.excludedFields}"/-->
+<table class="slds-table slds-table_cell-buffer">
+ <thead class="slds-page-header">
+        	<tr class="slds-text-title_caps header">
+                <td class="slds-truncate" style="width:3%;">
+            		<lightning:input type="checkbox"  checked="true" aura:id="FCheckbox" name="FCheckbox" onchange="{!c.checkAllFieldCheckboxes}"/>
+                </td>
+                <td class="slds-truncate" style="width:20%;">
+                    Label Name
+            		<!--lightning:input type="search"
+                                     aura:id="fieldsrh"
+                                     value="{!v.fieldsrh}"
+                                     name="search" 
+                                     class="searchwidth" 
+                                     onchange="{!c.onfieldsrh}"
+                                     placeholder="Search by Label"/-->
+                </td>
+                <td class="slds-truncate" style="width:22%;">
+            		API Name
+                </td>
+                <td class="slds-truncate" style="width:4%;">
+                Masked
+                </td>
+                <td style="width:16%;">           
+                <lightning:input type="text"
+                                 aura:id="maskedHead"
+                                 value="{!v.maskedHead}"
+                                 name="search" 
+                                 label="__Suffix"
+                                 class="searchwidth" 
+                                />
+                         
+                </td>
+                <td class="slds-truncate" style="width:10%;">
+            		Encrypt
+                </td>
+            </tr>
+        </thead>
+</table>
+    <div class="componentHeight">
+     <table class="slds-table slds-table_cell-buffer">
+        <tbody class="slds-scrollable_y">
+              <aura:iteration items="{!v.fieldDataCopy}" var="object" indexVar="index"> 
+              <tr>
+                <td class="slds-truncate" style="width:3%;">
+            		<lightning:input type="checkbox" 
+                                     name="{!index}" 
+                                     value="{!object.name}" 
+                                     aura:id="fMcheckbox"
+                                     checked="true" 
+                                     onchange="{!c.fieldCheckboxChange}"/>
+                </td>
+                <td class="slds-truncate" style="width:20%;">
+            		{!object.label}
+                </td>
+                  <td class="slds-truncate" style="width:22%;">
+            		{!object.name}
+                </td>
+                    <td class="slds-truncate" style="width:4%;">
+                        <lightning:input type="toggle" 
+                                                 name="{!index}" 
+                                                 label=" " 
+                                                 value="{!object.name}" 
+                                                 aura:id="fieldmask" 
+                                                 onchange="{!c.fieldMaskChange}"
+                                                 checked="false"/>
+                        
+                </td>
+                <td style="width:16%;">  
+                            <lightning:input type="text"
+                                                 aura:id="maskedSet"
+                                                 name="{!index}" 
+                                                 value="" 
+                                                 onfocus="{!c.updateDefaultMask}"
+                                                 disabled="true"
+                                                 class="searchwidth maskedText" />
+                           
+                  </td>
+               <td class="slds-truncate" style="width:10%;">
+                  <lightning:input type="toggle" 
+                                   name="{!index}" label=" " 
+                                   value="{!object.name}" 
+                                   aura:id="fieldencrypted" 
+                                   checked="false"/>
+                </td>
+            </tr>
+           </aura:iteration>
+		</tbody>
+    </table>
+</div>
+</div>
+</aura:component>

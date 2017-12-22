@@ -1,0 +1,257 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:hasRecordId" access="global">
+<div class="rightpanel">
+
+ <header class="removefixed slds-global-header_container">
+ <a href="javascript:void(0);" class="slds-assistive-text slds-assistive-text_focus">Skip to Navigation</a>
+ <a href="javascript:void(0);" class="slds-assistive-text slds-assistive-text_focus">Skip to Main Content</a>
+  <div class="slds-global-header slds-grid slds-grid_align-spread">
+    <div class="slds-global-header__item">
+          	<lightning:button class="slds-m-vertical_x-medium slds-m-left_small" disabled="" aura:id="back" onclick="{!c.backfun}" variant="brand" label="Back" iconName="utility:back" iconPosition="left"/>
+     
+    </div>
+    <div class="slds-global-header__item slds-global-header__item_search">
+      <div aria-expanded="false" aria-haspopup="listbox" class="slds-form-element slds-lookup" role="combobox">
+        <label class="slds-assistive-text" for="global-search-01">Quick Activity Search</label>
+        <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left-right">
+            <input type="text" aria-activedescendant="" aria-autocomplete="list" aria-controls="global-search-list-01" autocomplete="off" class="slds-input slds-lookup__search-input" id="global-search-01" placeholder="Search Salesforce" role="textbox"/>
+        </div>
+        <div class="slds-lookup__menu" role="listbox" id="global-search-list-01">
+          <ul class="slds-lookup__list" role="group" aria-label="Recent Items">
+            <li role="presentation">
+              <span class="slds-lookup__item-action slds-media" id="option-01" role="option">
+              
+                <span class="slds-media__body">
+                  <span class="slds-lookup__result-text">Salesforce - 1,000 Licenses</span>
+                  <span class="slds-lookup__result-meta slds-text-body_small">Opportunity • Prospecting</span>
+                </span>
+              </span>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </div>
+    <ul class="slds-global-header__item slds-grid slds-grid_vertical-align-center">
+      <li class="slds-grid">
+        <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon-favorites slds-is-disabled" aria-pressed="false" title="Toggle Favorites" disabled="">
+
+          <span class="slds-assistive-text">Toggle Favorite</span>
+        </button>
+        <span class="slds-dropdown-trigger slds-dropdown-trigger_click">
+          <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon slds-m-left_none" title="View Favorites" disabled="">
+            <span class="slds-assistive-text">View Favorites</span>
+          </button>
+        </span>
+      </li>
+      <li class="slds-dropdown-trigger slds-dropdown-trigger_click slds-p-horizontal_xxx-small">
+        <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-small slds-button_icon-container slds-button_icon-x-small slds-global-header__button_icon-actions slds-m-horizontal_xx-small" title="Global Actions">
+         
+          <span class="slds-assistive-text">Global Actions</span>
+        </button>
+      </li>
+      <li class="slds-dropdown-trigger slds-dropdown-trigger_click">
+        <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon" title="Help and Training">
+         
+          <span class="slds-assistive-text">Help and Training</span>
+        </button>
+      </li>
+      <li class="slds-dropdown-trigger slds-dropdown-trigger_click">
+        <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon" title="Setup">
+
+          <span class="slds-assistive-text">Setup</span>
+        </button>
+      </li>
+      <li class="slds-dropdown-trigger slds-dropdown-trigger_click">
+        <button class="slds-button slds-button_icon slds-button_icon slds-button_icon-container slds-button_icon-small slds-global-header__button_icon" title="Notifications">
+          
+          <span class="slds-assistive-text">Notifications</span>
+        </button>
+      </li>
+      <li class="slds-dropdown-trigger slds-dropdown-trigger_click slds-m-left_x-small">
+        <button class="slds-button" title="person name" aria-haspopup="true">
+          <span class="slds-avatar slds-avatar_circle slds-avatar_medium">
+
+          </span>
+        </button>
+      </li>
+    </ul>
+  </div>
+</header>
+ <div class="slds-m-right_x-small slds-m-top_xx-large slds-m-left_x-small slds-m-bottom_x-small">
+                   <article class="slds-card header effect1">
+ 						<div class="slds-card__header">
+                            
+               					 <h2>
+                                     <div class="slds-m-bottom_x-small">
+          							<a href="javascript:void(0);" class="slds-card__header-link slds-truncate" title="[object Object]">
+            							<span class="slds-text-heading_small">Recent Activity</span>
+          							</a>
+                                     </div>
+        						</h2>
+                            
+                     <div class=" slds-grid">
+                           <div class="slds-col slds-border_right">
+                       			<div>API Calls Consumed : 2045</div>
+                                <div>Date : 23rd-June 2017</div>
+                           </div>
+                           <div class="slds-col slds-p-left_medium">  
+                                <div>Total Objects count : 10 </div>
+                                <div>Total Records count : 104,534 </div>
+                           </div>
+                       </div> 
+                	</div>
+                   </article>
+                </div>
+    <p></p>
+<ul class="slds-timeline">
+  <li>
+    <div class="slds-timeline__item">
+      <span class="slds-assistive-text">Email</span>
+      <div class="slds-media">
+        <div class="slds-media__body">
+          <div class="slds-media slds-timeline__media slds-timeline__media_email">
+            <div class="slds-media__figure slds-timeline__icon">
+              <div class="slds-icon_container slds-icon-standard-email removebgcolor" title="email">
+                 <lightning:icon iconName="standard:orders" size="small" alternativeText="Sucess"/>
+              </div>
+            </div>
+            <div class="slds-media__body hovershadow">
+              <div class="tileheader">
+                  <div class="slds-clearfix">
+                  <h3 class="slds-truncate slds-float_left" title="">
+                      <a href="javascript:void(0);">Account, Cases Q1 backup</a>
+                  </h3>
+                  <div class="slds-float_right">
+                    23rd-June 2017 8:20 AM
+                  </div>
+                </div>
+              </div>
+               <div class="marginfix">
+                  <div class="slds-grid">
+                      <div class="slds-col slds-border_right">Objects : 10 <br/>Records Backuped : 10,394</div>
+                      <div class="slds-col slds-border_right"><b>Description : </b>We have taken backup with new clients <br/>after DreamForce</div>
+                      <div class="slds-col">Column 3</div>
+                      <div class="slds-col">Column 3</div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </li>
+         <li>
+    <div class="slds-timeline__item">
+      <span class="slds-assistive-text">Email</span>
+      <div class="slds-media">
+        <div class="slds-media__body">
+          <div class="slds-media slds-timeline__media slds-timeline__media_email">
+            <div class="slds-media__figure slds-timeline__icon">
+              <div class="slds-icon_container slds-icon-standard-email removebgcolor" title="email">
+                 <lightning:icon iconName="standard:orders" size="small" alternativeText="Sucess"/>
+              </div>
+            </div>
+            <div class="slds-media__body hovershadow">
+              <div class="tileheader">
+                  <div class="slds-clearfix">
+                  <h3 class="slds-truncate slds-float_left" title="">
+                      <a href="javascript:void(0);">Account, Cases Q1 backup</a>
+                  </h3>
+                  <div class="slds-float_right">
+                    23rd-June 2017 8:20 AM
+                  </div>
+                </div>
+              </div>
+               <div class="marginfix">
+                  <div class="slds-grid">
+                      <div class="slds-col slds-border_right">Objects : 10 <br/>Records Backuped : 10,394</div>
+                      <div class="slds-col slds-border_right"><b>Description : </b>We have taken backup with new clients <br/>after DreamForce</div>
+                      <div class="slds-col">Column 3</div>
+                      <div class="slds-col">Column 3</div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </li>
+          <li>
+    <div class="slds-timeline__item">
+      <span class="slds-assistive-text">Email</span>
+      <div class="slds-media">
+        <div class="slds-media__body">
+          <div class="slds-media slds-timeline__media slds-timeline__media_email">
+            <div class="slds-media__figure slds-timeline__icon">
+              <div class="slds-icon_container slds-icon-standard-email removebgcolor" title="email">
+                 <lightning:icon iconName="standard:orders" size="small" alternativeText="Sucess"/>
+              </div>
+            </div>
+            <div class="slds-media__body hovershadow">
+              <div class="tileheader">
+                  <div class="slds-clearfix">
+                  <h3 class="slds-truncate slds-float_left" title="">
+                      <a href="javascript:void(0);">Account, Cases Q1 backup</a>
+                  </h3>
+                  <div class="slds-float_right">
+                    23rd-June 2017 8:20 AM
+                  </div>
+                </div>
+              </div>
+               <div class="marginfix">
+                  <div class="slds-grid">
+                      <div class="slds-col slds-border_right">Objects : 10 <br/>Records Backuped : 10,394</div>
+                      <div class="slds-col slds-border_right"><b>Description : </b>We have taken backup with new clients <br/>after DreamForce</div>
+                      <div class="slds-col">Column 3</div>
+                      <div class="slds-col">Column 3</div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </li>
+   <li>
+    <div class="slds-timeline__item">
+      <span class="slds-assistive-text">Email</span>
+      <div class="slds-media">
+        <div class="slds-media__body">
+          <div class="slds-media slds-timeline__media slds-timeline__media_email">
+            <div class="slds-media__figure slds-timeline__icon">
+              <div class="slds-icon_container slds-icon-standard-email removebgcolor" title="email">
+                 <lightning:icon iconName="standard:orders" size="small" alternativeText="Sucess"/>
+              </div>
+            </div>
+            <div class="slds-media__body hovershadow">
+              <div class="tileheader">
+                  <div class="slds-clearfix">
+                  <h3 class="slds-truncate slds-float_left" title="">
+                      <a href="javascript:void(0);">Account, Cases Q1 backup</a>
+                  </h3>
+                  <div class="slds-float_right">
+                    23rd-Junsdsdsde 2017 8:21 AM
+                  </div>
+                </div>
+              </div>
+               <div class="marginfix">
+                  <div class="slds-grid">
+                      <div class="slds-col slds-border_right">Objects : 10 <br/>Records Backuped : 10,394</div>
+                      <div class="slds-col slds-border_right"><b>Description : </b>We have taken backup with new clients <br/>after DreamForce</div>
+                      <div class="slds-col">Column 3</div>
+                      <div class="slds-col">Column 3</div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+       
+      </div>
+    </div>
+  </li>
+</ul>
+</div>  
+</aura:component>

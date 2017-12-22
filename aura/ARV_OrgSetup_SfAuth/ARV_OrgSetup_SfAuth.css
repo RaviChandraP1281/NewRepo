@@ -1,0 +1,33 @@
+.THIS dl{
+}
+.THIS dt{
+    float:left;
+    padding-left: 2rem;
+}
+.THIS input{
+    width:14rem;
+}
+.THIS{
+    background:rgb(250, 250, 249);
+}
+.THIS .slds-card{
+   box-shadow:'';
+}
+/*.THIS .customButton{
+   background-color:  #1a8cff; 
+   color: #fff; 
+   margin-left: 10px;
+   margin-right: 10px;
+}
+.THIS customButton:hover {
+    background-color:  #1a8cff; 
+    color: #fff; 
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.THIS customButton:focus {
+    background-color:  #1a8cff; 
+    color: #fff; 
+    margin-left: 10px;
+    margin-right: 10px;
+}*/

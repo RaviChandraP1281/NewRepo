@@ -1,0 +1,150 @@
+<aura:component controller="ARVaultService" implements="flexipage:availableForAllPageTypes" access="global" >
+    <aura:registerEvent name="displaygraph" type="c:showGraph"/>
+    <aura:registerEvent name="displayfilter" type="c:showFilter"/>
+    <aura:registerEvent name="liveBackupEvent" 
+                  type="c:LiveBackupEvent" />
+     <aura:registerEvent name="orgIdChanged" type="c:ARV_OrgChanged_Event"/>
+     <aura:registerEvent name="refresh" type="c:ARV_Refresh"/>
+    <aura:attribute name="orgData" type="Object[]" />
+    <aura:attribute name="idUser" type="String" default="f939bec89dc549d9bb2a5ef164ac0eb5"/>
+    <aura:attribute name="sfOrgId" type="String" />
+    <aura:attribute name="backupObjects" type="Object[]" />
+     <aura:attribute name="inprogressObjects" type="Object[]" />
+    <aura:attribute name="isForceBackup" type="boolean" default="false"/>
+     <aura:attribute name="isOpen" type="boolean" default="false"/>
+  	<aura:attribute name="email" type="string"/>
+  	<aura:attribute name="isAttachment" type="boolean" default="false"/>
+    <aura:attribute name="liveStatus" type="String[]"/>
+    <aura:attribute name="isProgress" type="boolean" default="false"/>
+    <aura:attribute name="selectedOrgName" type="String"/>
+    <aura:handler name="orgChangeEvent" event="c:ARV_OrgChanged_Event" 
+                  action="{!c.orgChangeEvent}"/>
+    <div class="slds-page-header slds-page-header_object-home">
+        <div class="slds-grid">
+            <div class="slds-col slds-has-flexi-truncate">
+                <div class="slds-size_1-of-1 slds-medium-size_2-of-6 slds-large-size_6-of-12">
+                    <c:ARV_OrgSearch orgData="{!v.orgData}" 
+                                     icon="utility:standard_objects"
+                                     selectedOrgName="{!v.selectedOrgName}"/>
+                </div>
+            </div>
+            <div class="slds-col slds-no-flex slds-grid slds-align-top slds-p-bottom_xx-small">
+                <div class="slds-border_right slds-p-right_x-small slds-m-right_x-large" style="">
+                    <aura:if isTrue="{!greaterthan(v.inprogressObjects.length,0)}">
+                        <article class="slds-tile">
+                            <h3>   <p><a onclick="{!c.fireLiveBackupEvent}">{!v.inprogressObjects.length} active backups</a></p></h3>
+                            <h3 class="slds-tile__title slds-truncate" title="">Active Backup Status</h3>
+                            <div class="slds-tile__detail">
+                                <p>{!v.inprogressObjects[0].successCount>0?v.inprogressObjects[0].successCount:0} records</p>
+                                <ul class="slds-list_horizontal slds-has-dividers_right">
+                                    <li class="slds-item">Backup Id : {!v.inprogressObjects[0].backupId}</li>
+                                    <li class="slds-item">In progress</li>
+                                </ul>
+                            </div>
+                        </article>
+                        <aura:set attribute="else">
+                            No Curently Backups Running 
+                        </aura:set>
+                    </aura:if>
+                </div>
+            </div>
+            <div class="slds-col slds-no-flex slds-grid slds-align-top slds-p-bottom_xx-small">
+                <div class="slds-border_right slds-p-right_x-small slds-m-right_x-large" style="">
+                    <aura:if isTrue="{!greaterthan(v.backupObjects.length,0)}">
+                        <article class="slds-tile">
+                            <h3 class="slds-tile__title slds-truncate" title="">Last Backup</h3>
+                            <div class="slds-tile__detail">
+                                <p>{!v.backupObjects[0].successCount} records</p>
+                                <ul class="slds-list_horizontal slds-has-dividers_right">
+                                    <li class="slds-item">Backup Id : {!v.backupObjects[0].backupId}</li>
+                                    <li class="slds-item">
+                                        <lightning:formattedDateTime value="{!v.backupObjects[0].tmStamp}" hour="2-digit" minute="2-digit" timeZoneName="short" year="numeric" month="numeric" day="numeric"/>   
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
+                        <aura:set attribute="else">
+                            No Backups
+                        </aura:set>
+                    </aura:if>
+                </div>
+            </div>
+            <div class="slds-col slds-no-flex slds-align-bottom slds-m-left_xx-small">
+                <div class="slds-m-bottom_small">
+                    <lightning:button class="customButton" label="Backup Now" onclick="{!c.showModal}" aura:id="restorebtn" disabled="false"/>
+                </div>
+                <div class="slds-col slds-no-flex slds-grid slds-align-bottom slds-m-left_xx-small">
+                    <lightning:buttonicon iconName="utility:feed" size="medium" alternativeText=" " aura:id="togglelist" onclick="{!c.fireLiveBackupEvent}"/>
+                    <lightning:buttonicon iconName="utility:chart" size="medium" alternativeText=" " aura:id="graphBtn" onclick="{!c.fireShowGraph}" />
+                    <lightning:buttonicon iconName="utility:refresh" size="medium" alternativeText=" " aura:id="refresh" onclick="{!c.refreshPage}" />                
+                    <lightning:buttonicon iconName="utility:email" size="medium" alternativeText=" " aura:id="email" onclick="{!c.openModel}"/>
+                    <lightning:buttonicon iconName="utility:share" size="medium" alternativeText=" " aura:id="export" onclick="{!c.exportToExcel}"/>                    
+                </div>
+            </div>
+        </div>
+    </div>
+    
+     <div aura:id="modelWindowDiv">
+       <aura:if isTrue="{!v.isOpen}">
+            <div role="dialog" tabindex="-1" aria-labelledby="header99" class="slds-modal slds-fade-in-open">
+                <div class="slds-modal__container">
+                    <div class="slds-modal__header">
+                        <button class="slds-button slds-modal__close slds-button--icon-inverse" title="Close" onclick="{!c.closeModel}">
+                            X
+                            <span class="slds-assistive-text">Close</span>
+                        </button>
+                        <h2 id="header99" class="slds-text-heading--medium">Share via Email</h2>
+                    </div>
+                    <div class="slds-modal__content slds-p-around--medium">
+                        <label class="slds-form-element__label" for="CC">To:</label>
+                        <div class="slds-form-element__control">
+                            <ui:inputEmail class="slds-input" aura:id="email"  value="{!v.email}" required="true" placeholder="abc@email.com"/>
+                        </div>
+                    </div>  
+                    
+                    <div class="slds-modal__content slds-p-around--medium" aura:id="attachmentFile">
+                        <p><b>Attachment is added</b></p>
+                    </div>
+                    <div class="slds-modal__footer">
+                        <button class="slds-button slds-button--neutral" onclick="{!c.closeModel}" >Cancel</button>
+                        <button class="slds-button slds-button--brand" onclick="{!c.sendEmail}">Send</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-backdrop slds-backdrop--open"></div>
+        </aura:if>
+       <aura:if isTrue="{!v.isForceBackup}">
+           <div role="dialog" tabindex="-1" aria-labelledby="header99" class="slds-modal slds-fade-in-open ">
+            <div class="slds-modal__container">
+                <div class="slds-modal__header">
+                    <button class="slds-button slds-modal__close slds-button--icon-inverse" title="Close" onclick="{!c.closeModel}">
+                        X
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 id="header99" class="slds-text-heading--medium">Start Backup</h2>
+                </div>
+                 <div class="slds-modal__content slds-p-around--medium">
+                    <label class="slds-form-element__label" for="CC">Backup Label</label>
+                    <div class="slds-form-element__control">
+                       <ui:inputText class="slds-input" aura:id="bkpLabel"  required="true" placeholder=""/>
+                    </div>
+                </div> 
+                <div class="slds-modal__content slds-p-around--medium">
+                    <label class="slds-form-element__label" for="CC">Type</label>
+                    <div class="slds-form-element__control">
+                      <ui:inputSelect >
+                        <ui:inputSelectOption text="Full Backup" label="Full Backup" value="true"/>
+                        <ui:inputSelectOption text="Incremental Backup" label="Incremental Backup"/>
+                    </ui:inputSelect>
+                    </div>
+                </div>  
+                   <div class="slds-modal__footer">
+                    <button class="slds-button slds-button--neutral" onclick="{!c.closeModal}" >Cancel</button>
+                    <button class="slds-button slds-button--brand" onclick="{!c.saveit}">Backup</button>
+                </div>
+            </div>
+        </div>
+        <div class="slds-backdrop slds-backdrop--open"></div>
+          </aura:if>
+    </div>
+</aura:component>

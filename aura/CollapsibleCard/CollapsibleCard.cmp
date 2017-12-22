@@ -1,0 +1,21 @@
+<aura:component >
+    <aura:attribute type="String" name="headerStr" />
+    <aura:attribute type="String" name="sfOrgId" />
+    <aura:attribute type="Integer" name="backupId" />
+    <aura:attribute type="Long" name="tmStamp" />
+    <aura:attribute name="body" type="Aura.Component[]"/>
+    <aura:attribute name="collpaseText" type="String" default="[ + ]"/>
+    <aura:registerEvent name="activityObjects" type="c:ARV_Backup_ActivityObjects_Activity"/>
+    
+    <div>
+        <div class="Message">
+            <div style="width:40%;float:left"> {!v.headerStr} : <a href="javascript:void(0);" onclick="{!c.navigateToActivityObject}" id="{!v.backupId}">{!v.backupId}</a> </div>
+            <div style="width:40%;float:left"> <lightning:formattedDateTime value="{!v.tmStamp}" year="numeric" month="numeric" day="numeric"/> </div>            
+            <div style="width:10%;float:left"> <lightning:icon iconName="utility:success" size="small" class="icm"/> </div>
+            <div style="width:10%;float:right" class="expandCollapse" onclick="{!c.ToggleCollapse}"> {!v.collpaseText} </div>
+        </div> 
+        <div class="container hide" aura:id="containerCollapsable">
+                    {!v.body}
+        </div>
+    </div>
+</aura:component>

@@ -1,0 +1,1 @@
+<aura:event type="COMPONENT" description="Shows the options to restore on clicking RESTORE NOW" />

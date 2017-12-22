@@ -1,0 +1,95 @@
+<aura:component >
+    <aura:attribute name="currentTime" type="String"/>    
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>  
+   	<div class="slds-page-header slds-page-header_object-home">
+    <div class="slds-grid">
+    <div class="slds-col slds-has-flexi-truncate">
+      <div class="slds-media slds-no-space slds-grow">
+        <div class="slds-media__figure">
+          <span class="slds-icon_container">
+            <lightning:icon iconName="action:new_event" size="small" alternativeText=" "/>
+          </span>
+        </div>
+        <div class="slds-media__body">
+          <p class="slds-line-height_reset">Salesforce</p>
+          <h1 class="slds-page-header__title slds-p-right_x-small">
+            <button class="slds-button slds-button_reset slds-type-focus slds-truncate" aria-haspopup="true" title="">
+              <span class="slds-grid slds-has-flexi-truncate slds-grid_vertical-align-center">
+                <span class="slds-truncate" title=" ">Schedule Backup</span>
+              </span>
+            </button>
+          </h1>
+            <dl>
+            	<dt>
+                	<lightning:select name="freq" aura:id="freq" label="" onchange="{!c.displayFreqOptions}">
+                        <option value="daily">Daily</option>
+                    	<option value="weekly">Weekly</option>
+                        <option value="monthly">Monthly</option>
+                    </lightning:select>
+                </dt>
+                <dt>
+                    <div class="" aura:id="selecttime" >
+                		<lightning:input type="time" label="Time" name="time" value="{!v.currentTime}"/>
+                    </div>
+                </dt>
+                <dt>
+                	<div class="slds-form-element__control slds-hide" aura:id="selectWeek" style="padding-top:1.5rem;">
+                       <div class="slds-radio_button-group">
+      						<span class="slds-button slds-radio_button">
+                                <input type="radio" name="radio" id="monday" value="on"/>
+       							 <label class="slds-radio_button__label" for="monday">
+          							<span class="slds-radio_faux">Mon</span>
+        						</label>
+     					 	</span>
+      						<span class="slds-button slds-radio_button">
+                                <input type="radio" name="radio" id="tuesday" value="on"/>
+        							<label class="slds-radio_button__label" for="tuesday">
+          								<span class="slds-radio_faux">Tue</span>
+        							</label>
+      						</span>
+      						<span class="slds-button slds-radio_button">
+                                <input type="radio" name="radio" id="wednesday" value="on"/>
+        							<label class="slds-radio_button__label" for="wednesday">
+          								<span class="slds-radio_faux">Wed</span>
+        							</label>
+      						</span>
+      						<span class="slds-button slds-radio_button">
+                                <input type="radio" name="radio" id="thursday" value="on"/>
+        							<label class="slds-radio_button__label" for="thursday">
+          								<span class="slds-radio_faux">Thu</span>
+        							</label>
+      						</span>
+      						<span class="slds-button slds-radio_button">
+                                <input type="radio" name="radio" id="friday" value="on"/>
+        							<label class="slds-radio_button__label" for="friday">
+          								<span class="slds-radio_faux">Fri</span>
+        							</label>
+      						</span>
+    					</div>
+                    </div>
+                </dt>
+                <dt>
+                  <div class="slds-hide" aura:id="selectdate">
+                       <div>
+                        <lightning:select name="freq" label="Fixed Date" onchange="{!c.addDatePill}">
+                             <aura:iteration items="1,2,3,4,5,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29" var="item">
+                                <option value="{!item}">{!item}</option>
+                             </aura:iteration>  
+                         </lightning:select>
+                       </div>
+                   </div>
+                </dt>
+                <dt>
+                    <div class="slds-hide" aura:id="datepick">
+                     <div aura:id="datepickPill">
+                      </div>
+                    </div>
+                </dt>
+            </dl>
+        </div>
+      </div>
+        <lightning:button variant="brand" label="Save" iconName="utility:save" iconPosition="left" onclick="{! c.handleClick }" />
+    </div>
+    </div>
+    </div>
+</aura:component>

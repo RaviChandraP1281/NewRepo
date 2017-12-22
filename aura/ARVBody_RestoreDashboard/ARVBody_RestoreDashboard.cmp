@@ -1,0 +1,11 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global" >
+	<aura:handler name="displayrestore" event="c:showRestoreNow" action="{!c.showThisRestore}"/>
+    <aura:handler name="displaygraph" event="c:showGraph" action="{!c.showGraph}"/>
+    
+    <div aura:id="bodyfill">
+        <c:ARVHeader_RestoreDashboard />
+        <div aura:id="bargraph">
+        </div>
+        <c:ARVRestoreActivityID />
+    </div>
+</aura:component>

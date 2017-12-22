@@ -1,0 +1,88 @@
+<aura:component controller="ARVaultService" implements="flexipage:availableForAllPageTypes" access="global" >
+	<aura:attribute name="orgData" type="Object[]" />
+    <aura:attribute name="sfOrgId" type="String" />
+     <aura:attribute name="firstSnapshot" type="String" /> 
+    <aura:attribute name="secondSnapshot" type="String" />
+    <aura:attribute name="isChageOrg" type="boolean" default="true"/>
+    <aura:attribute name="countofSnapshots" type="Integer" />    
+    <aura:attribute name="radiobtnDisabled" type="Boolean" />
+    <aura:registerEvent name="cSnapshotEvent" type="c:ARV_Comapre_ChangeSnpas_Event"/>
+    <aura:handler name="orgChangeEvent" event="c:ARV_OrgChanged_Event" 
+                  action="{!c.orgChangeEvent}"/>
+      <ltng:require scripts="{!join(',',$Resource.jql, $Resource.d3, $Resource.ARVaultUtil)}" 
+                  styles="{!$Resource.ARVaultDefaultCss}" 
+                  afterScriptsLoaded="{!c.doInit}"/>
+    <aura:attribute name="selectedOrgName" type="String"/>
+    <div class="slds-page-header slds-page-header_object-home">
+        <div class="slds-p-left_large slds-p-top_small slds-grid">
+            <div class="slds-col slds-has-flexi-truncate">
+                <div class="slds-size_1-of-1 slds-medium-size_2-of-6 slds-large-size_6-of-12">
+                    <c:ARV_OrgSearch sfOrgId="{!v.sfOrgId}"
+                                     orgData="{!v.orgData}" 
+                                     icon="utility:matrix"
+                                     selectedOrgName="{!v.selectedOrgName}"/>
+                </div>
+            </div>
+            <div class="slds-col slds-no-flex slds-grid slds-align-top slds-p-bottom_xx-small slds-border_right slds-p-right_small slds-m-right_small" style="">
+                <article class="slds-tile slds-media">
+                    <div class="slds-media__body">
+                        <h3 class="slds-tile__title slds-truncate" title="Backup Details">
+                            <a href="javascript:void(0);">Snapshot 1</a>                            
+                            <div style="display:inline-block;margin-right:10px" onclick="{!c.editFirstSnapshot}" >
+                                <lightning:icon iconName="utility:edit" size="small"/>
+                            </div>
+                        </h3>
+                        <div class="slds-tile__detail">
+                            <dl class="slds-list_horizontal slds-wrap">
+                                <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Backup ID">Backup ID:</dt>
+                                <dd class="slds-item_detail slds-truncate" title="{!v.firstSnapshot.backupId}">{!v.firstSnapshot.backupId}</dd>
+                                <dt class="slds-item_label slds-text-color_weak slds-truncate" title="User">Date:</dt>
+                                <dd class="slds-item_detail slds-truncate" title="{!v.firstSnapshot.idUser}">
+                                    <lightning:formattedDateTime value="{!v.firstSnapshot.tmStamp}" year="numeric" month="numeric" day="numeric"  hour="2-digit" minute="2-digit" timeZoneName="short" />
+                                </dd>
+                                <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Records">Records:</dt>
+                                <dd class="slds-item_detail slds-truncate" title="{!v.firstSnapshot.nbrTotRecords}">{!v.firstSnapshot.nbrTotRecords}</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </article>
+            </div> 
+            <div class="slds-col slds-no-flex slds-grid slds-align-top slds-p-bottom_xx-small slds-p-right_small slds-m-right_small" style="">
+                <article class="slds-tile slds-media">
+                    <div class="slds-media__body">
+                        <h3 class="slds-tile__title slds-truncate" title="Backup Details">
+                            <a href="javascript:void(0);">Snapshot 2</a>
+                            <div style="display:inline-block;margin-right:10px" onclick="{!c.editSecondSnapshot}" >
+                                <lightning:icon iconName="utility:edit" size="small"/>
+                            </div>
+                        </h3>
+                        <div class="slds-tile__detail">
+                            <dl class="slds-list_horizontal slds-wrap">
+                                <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Backup ID">Backup ID:</dt>
+                                <dd class="slds-item_detail slds-truncate" title="{!v.secondSnapshot.backupId}">{!v.secondSnapshot.backupId}</dd>
+                                <dt class="slds-item_label slds-text-color_weak slds-truncate" title="User">Date:</dt>
+                                <dd class="slds-item_detail slds-truncate" title="{!v.secondSnapshot.idUser}">
+                                    <lightning:formattedDateTime value="{!v.secondSnapshot.tmStamp}" year="numeric" month="numeric" day="numeric"  hour="2-digit" minute="2-digit" timeZoneName="short" />
+                                </dd>
+                                <dt class="slds-item_label slds-text-color_weak slds-truncate" title="Records">Records:</dt>
+                                <dd class="slds-item_detail slds-truncate" title="{!v.secondSnapshot.nbrTotRecords}">{!v.secondSnapshot.nbrTotRecords}</dd>
+                            </dl>
+                        </div>
+                    </div>
+                </article>
+            </div>       
+            <div class="slds-col slds-no-flex slds-align-bottom slds-m-left_xx-small">
+                
+                <!--lightning:button variant="neutral" label="Compare" onclick="{!c.compareSnapshots}" aura:id="comparebtn" disabled="false"/-->
+                
+                <!--div class="slds-col slds-no-flex slds-grid slds-align-bottom slds-m-left_xx-small">
+                 <lightning:buttonicon iconName="utility:feed" size="medium" alternativeText=" " aura:id="togglelist" onclick="{!c.fireLiveBackupEvent}"/>
+                <lightning:buttonicon iconName="utility:chart" size="medium" alternativeText=" " aura:id="graphBtn" onclick="{!c.fireShowGraph}" />
+                <lightning:buttonicon iconName="utility:refresh" size="medium" alternativeText=" " />                
+                <lightning:buttonicon iconName="utility:email" size="medium" alternativeText=" " aura:id="email" onclick="{!c.openModel}"/>
+                <lightning:buttonicon iconName="utility:share" size="medium" alternativeText=" " aura:id="export" onclick="{!c.exportToExcel}"/>                    
+                </div-->
+            </div>
+        </div>
+    </div>
+</aura:component>

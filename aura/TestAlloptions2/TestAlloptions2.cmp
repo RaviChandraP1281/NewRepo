@@ -1,0 +1,42 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<div class="slds-page-header" role="banner">
+  <div class="slds-grid">
+    <div class="slds-col slds-has-flexi-truncate">
+      <div class="slds-media slds-no-space slds-grow">
+        <div class="slds-media__figure">
+          <span class="slds-icon_container slds-icon-standard-lead">
+           
+          </span>
+        </div>
+        <div class="slds-media__body">
+          <p class="slds-text-title_caps slds-line-height_reset">Org Management</p>
+          <h1 class="slds-page-header__title slds-p-right_x-small">
+            <button class="slds-button slds-button_reset slds-type-focus slds-truncate" aria-haspopup="true" title="">
+              <span class="slds-grid slds-has-flexi-truncate slds-grid_vertical-align-center">
+                <span class="slds-truncate" title="this should match My Leads">All Orgs</span>
+                 <lightning:icon iconName="utility:down" size="xx-small" alternativeText="Authentication Sucess"/>
+              </span>
+            </button>
+          </h1>
+        </div>
+      </div>
+    </div>
+    <div class="slds-col slds-no-flex slds-grid slds-align-top slds-p-bottom_xx-small">
+      <div class="slds-button-group" role="group">
+        <button class="slds-button slds-button_neutral" onclick="{!c.doInit}">Register New Org</button>
+        <div class="slds-button_last">
+          <button class="slds-button slds-button_icon slds-button_icon-border-filled" aria-haspopup="true" title="More Actions">
+            <lightning:icon iconName="utility:new" size="xx-small" alternativeText="Authentication Sucess"/>
+            <span class="slds-assistive-text">More Actions</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="slds-grid">
+    <div class="slds-col slds-align-bottom">
+      <p class="slds-text-body_small">10 Orgs • Sorted by ID</p>
+    </div>
+ </div>
+</div>
+</aura:component>

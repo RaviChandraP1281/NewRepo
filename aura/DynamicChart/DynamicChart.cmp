@@ -1,0 +1,12 @@
+<aura:component >
+ <ltng:require scripts="{!$Resource.highcharts}" afterScriptsLoaded="{!c.afterScriptsLoaded}"/>
+    <div aura:id="chart" class="chart" style="width:inherit;"></div>
+    <aura:attribute name="chartType" type="string"/>
+    <aura:attribute name="chartTitle" type="string"/>
+    <aura:attribute name="chartSubTitle" type="string"/>
+    <aura:attribute name="xAxisCategories" type="string[]"/>
+    <aura:attribute name="yAxisParameter" type="string"/>
+    <aura:attribute name="data" type="String[]"/>
+    <aura:attribute name="dates" type="String[]"/>
+  <aura:handler name="change" value="{!v.data}" action="{!c.afterScriptsLoaded}"/>
+</aura:component>

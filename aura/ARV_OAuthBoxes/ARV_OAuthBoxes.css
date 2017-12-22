@@ -1,0 +1,12 @@
+.THIS dl{
+}
+.THIS dt{
+    float:left;
+    padding-left: 2rem;
+}
+.THIS input{
+    width:14rem;
+}
+.THIS button{
+    margin-top: 1.5rem;
+}

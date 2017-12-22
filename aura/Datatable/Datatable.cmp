@@ -1,0 +1,135 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global">
+    <aura:attribute name="sortedBy" type="Object"/>
+    <aura:attribute name="sortedDirection" type="List"/>
+    <aura:attribute name="mydata" type="Object"/>
+    <aura:attribute name="mycolumns" type="List"/>
+	<aura:attribute name="isChageOrg" type="boolean" default="true"/>   
+    <aura:attribute name="org" type="String" default="Prod Org"/>   
+    <aura:attribute name="statusOptions" type="List" default="[]"/>
+    <aura:handler name="init" value="{! this }" action="{! c.loadOptions }"/>
+    <aura:attribute name="options" type="List" default="[
+    {'label': 'Ross', 'value': 'option1'},
+    {'label': 'Rachel', 'value': 'option2'},
+    ]"/>
+    <aura:attribute name="value" type="List" default="option1"/>
+     <ui:inputText label="Enter some text" class="field" value="" updateOn="keyup"/>
+           <datalist>
+            <aura:iteration items="{!v.orgData}" var="org" indexVar="index"> 
+                <option class="slds-dropdown slds-dropdown_center" value="{!org.idSforg}">   
+                      <span class="slds-truncate">{!org.nmLable}</span>
+                </option>
+           </aura:iteration>
+		</datalist>
+     <lightning:tile label="Records" href="/path/to/somewhere">
+      	23 M
+    </lightning:tile>
+    
+    <div class="demo-only" style="height: 10rem;">
+          <div id="listbox-unique-id" role="listbox">
+            <aura:if isTrue="{!v.isChageOrg}">
+                <div onclick="{!c.changeOrg}">
+                 <lightning:icon iconName="utility:standard_objects" size="medium" alternativeText=" "/>{!v.org}
+                 </div>
+         		 <aura:set attribute="else">
+                  <div class="slds-form-element">
+                    <div class="slds-form-element__control">
+                      <div class="slds-combobox_container slds-has-inline-listbox slds-is-open">
+                        <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aura:id="dsf" aria-expanded="true" aria-haspopup="listbox" role="combobox">
+                          <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+                              <lightning:input type="text" label="Registered Orgs" placeholder="Search Org" name="search" aura:id="ds" onfocus="{!c.openlist}" onchange="{!c.openlist}"/>
+                         </div>
+                     <ul class="slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid" role="presentation">
+                   <aura:iteration items="{!v.statusOptions}" var="org" indexVar="index"> 
+                    <li role="presentation" class="slds-listbox__item">
+                      <a onclick="{!c.closelist}" title="{!org.label}" id="{!org.label}" name="{!org.label}" target="{!org.label}">
+                    <span  id="listbox-option-unique-id-01" class="slds-media slds-listbox__option slds-listbox__option_entity slds-listbox__option_has-meta slds-has-focus" role="option">
+                      <span class="slds-media__figure">
+                        <span class="slds-icon_container slds-icon-standard-account" title="Description of icon when needed">
+                         <span class="slds-assistive-text">Description of icon</span>
+                        </span>
+                      </span>
+                      <span class="slds-media__body">
+                        <span class="slds-listbox__option-text slds-listbox__option-text_entity">{!org.label}</span>
+                        <span class="slds-listbox__option-meta slds-listbox__option-meta_entity">{!org.value} • San Francisco</span>
+                      </span>
+                    </span></a>
+                  </li>
+                </aura:iteration>
+              </ul>
+    				 </div>
+              </div>
+                  </div>     
+              </div> 
+              </aura:set>
+              </aura:if>
+        </div></div>
+     <ul class="slds-has-dividers_bottom-space">
+        <li class="slds-item">
+            <lightning:tile label="Astro" href="/path/to/somewhere">
+                <aura:set attribute="media">
+                    <lightning:avatar src="/path/to/img" alternativeText="Astro"/>
+                </aura:set>
+                <ul class="slds-list_horizontal slds-has-dividers_right">
+                    <li class="slds-item">Trailblazer, Salesforce</li>
+                    <li class="slds-item">Trailhead Explorer</li>
+                </ul>
+            </lightning:tile>
+        </li>
+        <!-- More list items here -->
+    </ul>
+    
+    <lightning:datatable data="{! v.mydata }" 
+        columns="{! v.mycolumns }" 
+        keyField="id"
+        onrowselection="{! c.getSelectedName }"
+        onsort="{!c.updateColumnSorting}"/>
+  
+    <c:LookupComponent objectName="Account"
+		  fieldSet="['Name','Id']"
+		  whereCondition=" AND ParentId = null"
+		  limit="5"
+		  comparisonField="Name"
+		  primaryDisplayField="Name"
+		  alternateDisplayField="['Name','Id']"
+		  lightningIconName="standard:account"
+		  uniqueLookupIdentifier="testAccount"
+		  lookupId="{!v.Opportunity.AccountId}"
+		  fieldLabel="Customer"
+ />
+    <lightning:combobox aura:id="selectItem" name="status" label="Status"
+                      placeholder="Choose Status"
+                      value="new"
+                      onchange="{!c.handleOptionSelected}"
+                      options="{!v.statusOptions}"/>
+     <lightning:buttonGroup >
+        <lightning:button label="Refresh" onclick="{!c.handleClick}"/>
+        <lightning:button label="Edit" onclick="{!c.handleClick}"/>
+        <lightning:button label="Save" onclick="{!c.handleClick}"/>
+    </lightning:buttonGroup>
+    <lightning:checkboxGroup aura:id="mygroup"
+        name="checkboxGroup"
+        label="Checkbox Group"
+        options="{! v.options }"
+        value="{! v.value }"
+        onchange="{! c.handleChange }"
+        required="true" />
+<lightning:pill label="hello pill" />
+    <lightning:card >
+        <aura:set attribute="title">
+            Hello!
+        </aura:set>
+        <aura:set attribute="footer">
+            <lightning:badge label="footer"/>
+        </aura:set>
+        <aura:set attribute="actions">
+            <lightning:button label="New"/>
+        </aura:set>
+        <p class="slds-p-horizontal--small">
+            Card Body (custom component)
+        </p>
+    </lightning:card>
+
+    <lightning:tile label="Lightning component team" href="/path/to/somewhere">
+        <p class="slds-truncate" title="7 Members">7 Members</p>
+    </lightning:tile>
+</aura:component>

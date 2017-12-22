@@ -1,0 +1,32 @@
+<aura:component >
+	<div class="demo-only" style="padding: 3rem 1rem 0px;">
+        <div class="slds-progress">
+            <ol class="slds-progress__list">
+				<li class="slds-progress__item slds-is-active">
+                    <button class="slds-button slds-progress__marker" aria-describedby="step-1-tooltip" />
+                </li>
+                <li class="slds-progress__item">
+                    <button class="slds-button slds-progress__marker" aria-describedby="step-2-tooltip" />
+                </li>
+                <li class="slds-progress__item">
+                    <button class="slds-button slds-progress__marker" aria-describedby="step-3-tooltip"/>
+                </li>
+            </ol>
+            <div class="slds-progress-bar slds-progress-bar_x-small" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50" role="progressbar">
+            <span class="slds-progress-bar__value" style="width: 50%;">
+            	<span class="slds-assistive-text">Progress: 50%</span>
+            </span>
+            </div>
+        </div>
+        <div class="slds-popover slds-popover_tooltip slds-nubbin_bottom" role="tooltip" id="step-1-tooltip" style="position: absolute; top: 0px; left: calc(50% + 7px); transform: translateX(-50%);">
+            <div class="slds-popover__body">Full Snapshot</div>
+        </div>
+        <div class="slds-popover slds-popover_tooltip slds-nubbin_bottom" role="tooltip" id="step-2-tooltip" style="position: absolute; top: 0px; left: calc(50% + 7px); transform: translateX(-50%);">
+            <div class="slds-popover__body">Object Snapshot</div>
+        </div>
+        <div class="slds-popover slds-popover_tooltip slds-nubbin_bottom" role="tooltip" id="step-3-tooltip" style="position: absolute; top: 0px; left: calc(50% + 7px); transform: translateX(-50%);">
+            <div class="slds-popover__body">Specific Record</div>
+        </div>
+        
+    </div>
+</aura:component>

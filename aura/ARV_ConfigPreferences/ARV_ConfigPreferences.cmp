@@ -1,0 +1,85 @@
+<aura:component >
+    <div class="slds-p-horizontal_xx-small slds-p-vertical_xx-small slds-p-left_xx-small slds-p-right_xx-small fillheight">
+        <div class="slds-border_left slds-border_right slds-border_top slds-border_bottom leftbordersolid">
+            <span class="slds-text-heading_medium">
+        <div class="editButton slds-float_right slds-p-right_small">
+                <lightning:buttonIcon iconName="utility:edit" variant="bare" alternativeText="Edit" iconClass="dark" />
+            </div>
+        <div class=" slds-p-left_large slds-p-vertical_x-small ">
+        <lightning:icon iconName="utility:settings" size="small" alternativeText="Indicates approval"/>
+    	Preferences  
+
+        </div>
+
+    </span>
+            <div class="slds-grid">
+                <div class="slds-col slds-p-horizontal_medium">
+                    <div class="formelements">
+                        <fieldset>
+                            <table class="slds-table slds-table_cell-buffer">
+                                <tbody>
+                                    <tr>
+                                        <td data-label="RSAnalytics">
+                                            <div class="slds-truncate" title="redshiftAnalytics">Run analytics on Redshift</div>
+                                        </td>
+                                        <td data-label="RSAnalyticsInput">
+                                            <lightning:input type="toggle" label=" " name="RSAnalyticsInput" checked="true" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="HistSharObjects">
+                                            <div class="slds-truncate" title="HistSharObjects">History Objects/ Shared Objects</div>
+                                        </td>
+                                        <td data-label="HistSharObjectsInput">
+                                            <lightning:input type="toggle" label=" " name="HistSharObjectsInput" checked="true" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="FeedItems">
+                                            <div class="slds-truncate" title="FeedItems">Feed Items</div>
+                                        </td>
+                                        <td data-label="FeedItemsInput">
+                                            <lightning:input type="toggle" label=" " name="FeedItemsInput" checked="true" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="SharedTables">
+                                            <div class="slds-truncate" title="SharedTables">Shared Tables</div>
+                                        </td>
+                                        <td data-label="SharedTablesInput">
+                                            <lightning:input type="toggle" label=" " name="SharedTablesInput" checked="true" />
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td data-label="KnowArticles">
+                                            <div class="slds-truncate" title="KnowArticles">Knowledge Articles</div>
+                                        </td>
+                                        <td data-label="KnowArticlesInput">
+                                            <lightning:input type="toggle" label=" " name="KnowArticlesInput" checked="true" />
+                                        </td>
+                                    </tr>
+                                    <!--tr>
+      		<td data-label="DataMask">
+                <div class="slds-truncate" title="DataMask">Data Masking</div>
+      		</td>
+      		<td data-label="DataMaskInput">
+        		<lightning:input type="toggle" label=" " name="DataMaskInput" checked="true" />
+      		</td>
+      	</tr-->
+                                    <tr>
+                                        <td data-label="APILimit">
+                                            <div class="slds-truncate" title="APILimit">API Limits</div>
+                                        </td>
+                                        <td data-label="APILimitInput">
+                                            <lightning:input type="number" label=" " name="APILimitInput" placeholder="2000" />
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</aura:component>

@@ -1,0 +1,9 @@
+.THIS dt{
+    float:left;
+    padding-right: 2rem;
+    padding-top:1rem;
+    padding-bottom:1rem;
+}
+.THIS select{
+    width:7rem;
+}

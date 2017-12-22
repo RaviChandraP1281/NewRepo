@@ -1,0 +1,103 @@
+<aura:component controller="ARVaultService" implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="orgData" type="Object[]" />
+    <aura:attribute name="orgValue" type="String" default="Orgs" />
+    <aura:attribute name="sfOrgId" type="String" />
+  	<aura:attribute name="isOpen" type="boolean" default="false"/>
+  	<aura:attribute name="email" type="string"/>
+  	<aura:attribute name="isAttachment" type="boolean" default="false"/>
+    <aura:attribute name="restoreObjects" type="Object[]" />    
+    <aura:attribute name="liveStatus" type="String[]"/>
+    <aura:attribute name="isProgress" type="boolean" default="false"/>
+    <aura:registerEvent name="displaygraph" type="c:showGraph" />
+    <aura:registerEvent name="displayfilter" type="c:showFilter" />
+    <aura:registerEvent name="displayrestore" type="c:showRestoreNow" />
+    <aura:registerEvent name="orgIdChangedchild" type="c:ARV_OrgChanged_Event" />    
+     <aura:registerEvent name="liveBackupEvent" type="c:LiveBackupEvent" />    
+    <aura:attribute name="isChageOrg" type="boolean" default="true"/>
+    <aura:attribute name="selectedOrgName" type="String"/>
+
+    <aura:handler name="orgChangeEvent" event="c:ARV_OrgChanged_Event" 
+                  action="{!c.orgIdChanged}"/>
+         <div class="slds-page-header slds-page-header_object-home">
+           <div class="slds-grid">
+              <div class="slds-col slds-has-flexi-truncate">
+                 <div class="slds-size_1-of-1 slds-medium-size_2-of-6 slds-large-size_6-of-12">
+                 <c:ARV_OrgSearch orgData="{!v.orgData}" 
+                                      icon="utility:replace"
+                                      selectedOrgName="{!v.selectedOrgName}"/>
+                  </div>
+              </div>
+           <div class="slds-col slds-no-flex slds-grid slds-align-top slds-p-bottom_xx-small">
+                  	<div class="slds-border_right slds-p-right_x-small slds-m-right_x-large" style="">
+                        <article class="slds-tile">
+                        <h3 class="slds-tile__title slds-truncate" title="">Active Restore Status</h3>
+                        <div class="slds-tile__detail">
+                        <p>20,000 records</p>
+                        <ul class="slds-list_horizontal slds-has-dividers_right">
+                        <li class="slds-item">Backup Id : 1231</li>
+                        <li class="slds-item">In progress</li>
+                        </ul>
+                        </div>
+                        </article>
+                        </div>
+                  </div>
+            <div class="slds-col slds-no-flex slds-grid slds-align-top slds-p-bottom_xx-small">
+                  	<div class="slds-border_right slds-p-right_x-small slds-m-right_x-large" style="">
+                        <article class="slds-tile">
+                        <h3 class="slds-tile__title slds-truncate" title="">Last Restore</h3>
+                        <div class="slds-tile__detail">
+                        <p>23k Records</p>
+                        <ul class="slds-list_horizontal slds-has-dividers_right">
+                        <li class="slds-item">Backup Id : 2312</li>
+                        <li class="slds-item">23rd June 2017 23:12</li>
+                        </ul>
+                        </div>
+                        </article>
+                        </div>
+                  </div>
+         <div class="slds-col slds-no-flex slds-align-bottom slds-m-left_xx-small">
+             <div class="slds-m-bottom_small">
+                  <lightning:button class="customButton" label="Restore Now" onclick="{! c.fireShowRestore }" aura:id="restorebtn"/>              
+              </div>
+                 <div class="slds-col slds-no-flex slds-grid slds-align-bottom slds-m-left_xx-small">
+       			<lightning:buttonicon iconName="utility:feed" size="medium" alternativeText=" " aura:id="togglelist" onclick="{!c.fireLiveBackupEvent}"/>
+                <lightning:buttonicon iconName="utility:chart" size="medium" alternativeText=" " aura:id="graphBtn" onclick="{!c.fireShowGraph}" />
+                <lightning:buttonicon iconName="utility:refresh" size="medium" alternativeText=" " />                
+                <lightning:buttonicon iconName="utility:email" size="medium" alternativeText=" " title="Share via Email" onclick="{!c.openModel}"/>
+                <lightning:buttonicon iconName="utility:share" size="medium" alternativeText=" " title="Export" onclick="{!c.exportToExcel}"/>                    
+                </div>
+         </div>
+                     
+     </div>
+</div>
+    <div aura:id="modelWindowDiv">
+       <aura:if isTrue="{!v.isOpen}">
+        <div role="dialog" tabindex="-1" aria-labelledby="header99" class="slds-modal slds-fade-in-open ">
+            <div class="slds-modal__container">
+                <div class="slds-modal__header">
+                    <button class="slds-button slds-modal__close slds-button--icon-inverse" title="Close" onclick="{!c.closeModel}">
+                        X
+                     <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 id="header99" class="slds-text-heading--medium">Share via Email</h2>
+                </div>
+                <div class="slds-modal__content slds-p-around--medium">
+                    <label class="slds-form-element__label" for="CC">To:</label>
+                    <div class="slds-form-element__control">
+                        <ui:inputEmail class="slds-input" aura:id="email"  value="{!v.email}" required="true" placeholder="abc@email.com"/>
+                    </div>
+                </div>  
+                
+                <div class="slds-modal__content slds-p-around--medium" aura:id="attachmentFile">
+                    <p><b>Attachment is added</b></p>
+                </div>
+                <div class="slds-modal__footer">
+                    <button class="slds-button slds-button--neutral" onclick="{!c.closeModel}" >Cancel</button>
+                    <button class="slds-button slds-button--brand" onclick="{!c.sendEmail}">Send</button>
+                </div>
+            </div>
+        </div>
+        <div class="slds-backdrop slds-backdrop--open"></div>
+    </aura:if>
+    </div>  
+</aura:component>

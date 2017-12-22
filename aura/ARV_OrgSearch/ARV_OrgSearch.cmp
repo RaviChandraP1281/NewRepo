@@ -1,0 +1,83 @@
+<aura:component controller="ARVaultService" implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="isChageOrg" type="boolean" default="true"/>
+     <aura:attribute name="orgData" type="Object[]" />
+     <aura:attribute name="orgDataReplica" type="Object[]" />
+     <aura:attribute name="sfOrgId" type="String" />
+     <aura:attribute name="selectedOrgName" type="String"/>
+     <aura:attribute name="icon" type="String" />
+     <aura:registerEvent name="orgChangeEvent" type="c:ARV_OrgChanged_Event"/>
+     <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+     <aura:handler name="change" value="{!v.orgData}" action="{!c.orgDataChange}"/>
+        <div class="backdrop slds-hide" aura:id="hidden" onclick="{!c.closelistWithoutChange}">
+    </div>
+	    <div class="demo-only" style="min-height:4rem;">
+                          <div id="listbox-unique-id" role="listbox">
+                            <aura:if isTrue="{!v.isChageOrg}">
+                                <div onclick="{!c.changeOrg}">
+                                      <div class="slds-media slds-no-space slds-grow">
+                                        <div class="slds-media__figure">
+                                          <span class="slds-icon_container slds-icon-standard-lead">
+                                             <lightning:icon iconName="{!v.icon}" size="medium" alternativeText=" "/>
+                                          </span>
+                                        </div>      
+                                        <div class="slds-media__body">
+                                          <p class="slds-text-title_caps slds-line-height_reset">Salesforce Orgs</p>
+                                          <h1 class="slds-page-header__title slds-p-right_x-small">
+                                              <div class="slds-dropdown-trigger slds-dropdown-trigger_click slds-is-open">
+                                            <button class="slds-button slds-button_reset slds-type-focus slds-truncate" aria-haspopup="true">
+                                              <span class="slds-grid slds-has-flexi-truncate slds-grid_vertical-align-center">
+                                                <span class="slds-truncate" title="Click to obtain list of Orgs">{!v.selectedOrgName}</span>
+                                                <lightning:icon iconName="utility:down" size="xx-small" alternativeText=" " />
+                                              </span>
+                                            </button>
+                                             </div>
+                                          </h1>
+                                          <div class="slds-grid">
+                                            <div class="slds-col slds-align-bottom">
+                                              <p class="slds-text-body_small">{!v.orgData.length} Orgs • Sorted by ID • Filtered by 4 filters</p>
+                                            </div>
+                                          </div>
+                                        </div>
+                                    </div>  
+                                 </div>
+                         <aura:set attribute="else">
+                          <div class="slds-form-element nonbackdrop">
+                            <div class="slds-form-element__control">
+                              <div class="slds-combobox_container slds-has-inline-listbox slds-is-open">
+                                <div class="slds-combobox slds-dropdown-trigger slds-dropdown-trigger_click" aura:id="dsf" aria-expanded="true" aria-haspopup="listbox" role="combobox">
+                                  <div class="slds-combobox__form-element slds-input-has-icon slds-input-has-icon_right" role="none">
+                                      <lightning:input type="text" label="Registered Orgs" placeholder="Search Org" name="search" aura:id="ds" onfocus="{!c.openlist}" onchange="{!c.openlist}"/>
+                                 </div>
+                                 <ul class="trans slds-listbox slds-listbox_vertical slds-dropdown slds-dropdown_fluid" role="presentation">
+                                   <aura:iteration items="{!v.orgDataReplica}" var="org" indexVar="index"> 
+                                         <li class="searchli slds-text-link--reset slds-grid slds-grid--vertical-align-center slds-truncate default uiAutocompleteOption forceSearchInputDesktopOption" role="presentation">
+                                  <a role="option" onclick="{!c.closelist}" href="javascript:void(0);" class="slds-text-link--reset slds-grid slds-grid--vertical-align-center slds-truncate" title="{!org.nmLable}" id="{!org.idSforg}" name="{!org.idSforg}" target="{!org.idSforg}">
+                                <div class="slds-icon_container">
+                                    <div class="slds-icon slds-icon--small slds-m-vertical--xx-small slds-m-right--small slds-m-left--none " style="">
+                                        <span class="uiImage">
+                                         <lightning:icon iconName="standard:shipment" size="small" alternativeText=" "/>
+                                            </span>
+                                        </div> </div>
+                                    <div class="slds-truncate">
+                                        <span class="slds-text-body--regular slds-text-color--default slds-truncate slds-show" title="{!org.nmLable}">
+                                            <div dir="ltr" class="uiOutputRichText" data-aura-class="uiOutputRichText">{!org.nmLable}</div>
+                                        </span>
+                                        <div class="slds-clearfix slds-text-heading--label-normal slds-show slds-truncate">
+                                            <div class="slds-float--left uiOutputRichText" dir="ltr" data-aura-class="uiOutputRichText">Sandbox</div>
+                                            <div class="slds-float--left uiOutputRichText" dir="ltr" data-aura-class="uiOutputRichText">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                        </li>
+                                   </aura:iteration>
+                                </ul>
+                                </div>
+                             </div>
+                          </div>     
+                        </div> 
+                      </aura:set>
+                      </aura:if>
+                            </div>
+                        </div>
+</aura:component>

@@ -1,0 +1,231 @@
+<aura:component controller="ARVaultService" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionWithoutHeader" access="global" >
+    <aura:attribute name="sfOrgId" type="String" />
+    <aura:attribute name="orgData" type="Object[]"/>   
+    <aura:attribute name="mouseStart" type="string" />
+    <aura:attribute name="oldWidth" type="string" />
+    <aura:attribute name="previewLog" type="String[]" />
+    <aura:attribute name="isOpen" type="boolean" default="false"/>
+    <aura:attribute name="isInProgress" type="boolean" default="false"/>
+    <aura:attribute name="cssStyle" type="String" />
+    <aura:attribute name="page" type="Integer" default="1"/>
+    <aura:attribute name="totalpages" type="Integer" default="1"/>
+    <aura:attribute name="PAGE_MAX_SIZE" type="Integer" default="20"/> 
+    <aura:attribute name="resultCriteria" type="Object[]" />
+    <aura:attribute name="searchResultCriteria" type="Object[]" />
+    <aura:attribute name="topResultCriteria" type="Object[]" />
+    <aura:attribute name="isDownload" type="boolean" default="false"/>
+    <aura:registerEvent name="updatechart" type="c:ARV_Backup_UpdateChart_Event"/>
+    <aura:registerEvent name="activityObjects" type="c:ARV_Backup_ActivityObjects_Activity"/>
+    <ltng:require scripts="{!join(',',$Resource.jql,$Resource.ARVaultUtil)}" />
+     <div aura:id="modelWindowDiv">
+       <aura:if isTrue="{!v.isDownload}">
+           <div role="dialog" tabindex="-1" aria-labelledby="header99" class="slds-modal slds-fade-in-open ">
+            <div class="slds-modal__container">
+                <div class="slds-modal__header">
+                    <button onclick="{!c.closeModal}" class="slds-button slds-modal__close slds-button--icon-inverse" title="Close">
+                        X
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 id="header99" class="slds-text-heading--medium">Backup Archieve</h2>
+                </div>
+                 <div class="slds-modal__content slds-p-around--medium">
+                      <p>Please provide a email Id. We will send the downloadable link to your email Id once the Archieve preparation completed.</p>
+                    <label class="slds-form-element__label" for="CC">*Email</label>
+                    <div class="slds-form-element__control">
+                       <ui:inputText class="slds-input" aura:id="email"  required="true" value="leelapavan.a@autorabit.com" placeholder=""/>
+                    </div>
+                </div> 
+                <div class="slds-modal__footer">
+                    <button class="slds-button slds-button--neutral" onclick="{!c.closeModal}" >Cancel</button>
+                    <button class="slds-button slds-button--brand" onclick="{!c.saveit}">Send</button>
+                </div>
+            </div>
+        </div>
+        <div class="slds-backdrop slds-backdrop--open"></div>
+          </aura:if>
+    </div>
+      <div class="" style="height:15rem;">
+          <div class="slds-p-left_xx-small slds-p-right_xx-small slds-grid slds-grid_vertical-align-end slds-grid_align-end">
+  				<div class="slds-size_1-of-2 slds-medium-size_4-of-6 slds-large-size_8-of-12">
+                    <div style="width:30rem;">
+                        <lightning:input type="text" placeholder="Quick Find" aura:id="quickfind" onchange="{!c.searchInTable}"/>
+                    </div>
+                </div>
+                <div class="slds-size_1-of-2 slds-medium-size_2-of-6 slds-large-size_4-of-12">
+              		<lightning:buttonGroup >
+                        <lightning:button label="Recent" onclick="{! c.recentbackups }" />   
+                    	<lightning:button iconName="utility:back" onclick="{! c.leftMove }" />     
+                        <lightning:button label="{!v.page+'/'+v.totalpages+' Pages'}"/>     
+                        <lightning:button iconName="utility:forward" onclick="{! c.rightMove }" />
+                        <lightning:button label="Old" onclick="{! c.oldbackups }" />   
+                    </lightning:buttonGroup>
+                 </div>
+          </div>
+           
+        <div class="tableheader">
+            <table class="slds-p-top_small slds-p-bottom_small slds-table_bordered slds-table slds-table_resizable-cols slds-table--header-fixed slds-table_fixed-layout slds-table_cell-buffer" style="padding-right:2rem;" role="grid">
+            <thead>
+             <tr class="slds-line-height_reset">
+                <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                    <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" name="asc" id="backupId" onclick="{!c.sortTable}" tabindex="0">
+                        <span class="slds-truncate" title="Salesforce Object" name="asc" id="backupId" onclick="{!c.sortTable}">Activity ID</span>
+                    </a>
+                </th>
+                 <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                    <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" name="asc" id="bkpLabel" onclick="{!c.sortTable}" tabindex="0">
+                        <span class="slds-truncate" title="Salesforce Object" name="asc" id="bkpLabel" onclick="{!c.sortTable}">Label</span>
+                    </a>
+                </th>
+                 <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                    <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" name="asc" id="tmStamp" onclick="{!c.sortTable}" tabindex="0">
+                        <span class="slds-truncate" title="Salesforce Object" name="asc" id="tmStamp" onclick="{!c.sortTable}">Date</span>
+                    </a>
+                </th>
+                 <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                    <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" name="asc" id="tmStamp" onclick="{!c.sortTable}" tabindex="0">
+                        <span class="slds-truncate" title="Salesforce Object" name="asc" id="tmStamp" onclick="{!c.sortTable}">Time</span>
+                    </a>
+                </th>
+                 <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                    <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" name="asc" id="strTotDuration" onclick="{!c.sortTable}" tabindex="0">
+                        <span class="slds-truncate" title="Salesforce Object" name="asc" id="strTotDuration" onclick="{!c.sortTable}">Duration</span>
+                    </a>
+                </th>
+                 <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                    <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" name="asc" id="nbrTotRecords" onclick="{!c.sortTable}" tabindex="0">
+                        <span class="slds-truncate" title="Salesforce Object" name="asc" id="nbrTotRecords" onclick="{!c.sortTable}">Records</span>
+                    </a>
+                </th>
+                 <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                    <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" name="asc" id="successCount" onclick="{!c.sortTable}" tabindex="0">
+                        <span class="slds-truncate" title="Salesforce Object" name="asc" id="successCount" onclick="{!c.sortTable}">Success</span>
+                    </a>
+                </th>
+                 <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                    <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" name="asc" id="nbrTotApi" onclick="{!c.sortTable}" tabindex="0">
+                        <span class="slds-truncate" title="Salesforce Object" name="asc" id="nbrTotApi" onclick="{!c.sortTable}">API Calls</span>
+                    </a>
+                </th>
+                 <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                    <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" name="asc" id="flBakupTyp" onclick="{!c.sortTable}" tabindex="0">
+                        <span class="slds-truncate" title="Salesforce Object" name="asc" id="flBakupTyp" onclick="{!c.sortTable}">Type</span>
+                    </a>
+                </th>
+                 <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                    <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" name="asc" tabindex="0">
+                        <span class="slds-truncate" title="Salesforce Object" name="asc" >Status</span>
+                    </a>
+                </th>
+                 <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                    <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" name="asc" tabindex="0">
+                        <span class="slds-truncate" title="Salesforce Object" name="asc">View Log</span>
+                    </a>
+                </th>
+                  <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                    <a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" name="asc" tabindex="0">
+                        <span class="slds-truncate" title="Salesforce Object" name="asc">Download</span>
+                    </a>
+                </th>
+              </tr>
+            </thead>
+        </table>
+        </div>
+        <div class="slds-scrollable_y" style="height:95%">
+          <table aura:id="ht" class="slds-table slds-table_fixed-layout slds-table_cell-buffer slds-border_bottom" role="grid">
+           <tbody>
+              <aura:iteration items="{!v.topResultCriteria}" var="bObject" indexVar="index"> 
+                <tr class="slds-hint-parent">
+                  <th scope="row" class="slds-truncate">
+                    <a href="javascript:void(0);" onclick="{!c.navigateToActivityObject}" id="{!bObject.backupId}">{!bObject.backupId}</a>
+                  </th>
+                  <td role="gridcell" class="slds-truncate" >
+                  {!bObject.bkpLabel}
+                  </td>
+                  <td role="gridcell" class="slds-truncate" >
+                    <lightning:formattedDateTime value="{!bObject.tmStamp}" year="numeric" month="numeric" day="numeric"/>
+                  </td>
+                  <td role="gridcell" class="slds-truncate">
+                    <lightning:formattedDateTime value="{!bObject.tmStamp}" hour="2-digit" minute="2-digit" timeZoneName="short" />
+                 </td>
+                  <td role="gridcell" class="slds-truncate" >
+                        <aura:if isTrue="{!greaterthan(bObject.strTotDuration,3599)}">
+                             <lightning:formattedDateTime value="{!bObject.strTotDuration*1000}" hour="numeric"/> hours, 
+                             <lightning:formattedDateTime value="{!bObject.strTotDuration*1000}" minute="numeric"/> min
+                            <aura:set attribute="else">
+                              <aura:if isTrue="{!greaterthan(bObject.strTotDuration,59)}">
+                                  <lightning:formattedDateTime value="{!bObject.strTotDuration*1000}" minute="numeric"/> min,
+                                  <lightning:formattedDateTime value="{!bObject.strTotDuration*1000}" second="numeric"/> sec
+                                <aura:set attribute="else">
+                                  <lightning:formattedDateTime value="{!bObject.strTotDuration*1000}" second="numeric"/> sec
+                                </aura:set>
+                              </aura:if> 
+                            </aura:set>
+                          </aura:if> 
+                  </td>
+                  <td role="gridcell" class="slds-truncate" >
+                   {!bObject.strTotDuration}
+                  </td>
+                   <td role="gridcell" class="slds-truncate" >
+                      {!bObject.successCount}
+                  </td>
+                   <td role="gridcell" class="slds-truncate" >
+                    {!bObject.nbrTotApi}
+                  </td>
+                  <td role="gridcell" class="slds-truncate" >
+                    {!bObject.flBakupTyp}
+                  </td>
+                  <td role="gridcell" class="slds-truncate">
+                    <div class="slds-truncate" title="">
+                        <aura:if isTrue="{!v.isInProgress}">
+                         <img src="{!$Resource.InprogressIcon}"/>
+                            <aura:set attribute="else">
+                            	  <lightning:icon iconName="utility:success" size="small" class="icm"/>
+                            </aura:set>
+                         </aura:if>
+                         <!--lightning:spinner variant="brand" size="small"/-->
+                    </div>
+                  </td>
+                    <td role="gridcell">
+                        <lightning:buttonIcon aura:id="viewLog" title="{!bObject.backupId}" size="small" iconName="utility:work_order_type" onclick="{!c.viewLog}"/>
+					 </td>
+                     <td role="gridcell">
+                        <lightning:buttonIcon aura:id="download" title="{!bObject.backupId}" size="small" iconName="utility:download" onclick="{!c.showModal}"/>
+					 </td>
+                </tr>                    
+              </aura:iteration>
+          </tbody>
+        </table>
+       </div>
+        <div>
+          <aura:if isTrue="{!v.isOpen}">
+            <div role="dialog" tabindex="-1" aria-labelledby="header99" class="slds-modal slds-fade-in-open ">
+                <div class="slds-modal__container">
+                    <style>
+                        {!v.cssStyle}
+                    </style>
+                    <div class="slds-modal__header">
+                        <button class="slds-button slds-modal__close slds-button--icon-inverse" title="Close" onclick="{!c.closeModel}">
+                            <lightning:icon iconName="utility:close" size="small" variant="brand"/>
+                        </button>
+                        <h2 id="header99" class="slds-text-heading--medium">Preview Log</h2>
+                    </div>
+                    <div class="slds-modal__content slds-p-around--medium">
+                        <table>
+                            <aura:iteration items="{!v.previewLog}" var="log" indexVar="index"> 
+                                <tr>
+                                    <td>{!log}</td>
+                                </tr>
+                            </aura:iteration>
+                        </table>                                                                  
+                    </div>   				
+                    <div class="slds-modal__footer">
+                        <button class="slds-button slds-button--neutral" onclick="{!c.closeModel}" >Close</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slds-backdrop slds-backdrop--open"></div>
+        </aura:if>
+        </div>     
+       </div>
+
+</aura:component>

@@ -1,0 +1,4 @@
+<aura:event type="COMPONENT" description="Event template" >
+    <aura:attribute name="sfOrgID" type="String"/>
+    <aura:attribute name="isExistedBackupCfg" type="boolean"/>
+</aura:event>

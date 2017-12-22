@@ -1,0 +1,57 @@
+<aura:component controller="ARVaultService" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickActionWithoutHeader" access="global" >
+    <aura:attribute name="sfOrgId" type="String" />
+    <aura:attribute name="resultCriteria" type="Object[]" />
+    <aura:attribute name="topResultCriteria" type="Object[]" />
+    <aura:attribute name="backupObjects" type="Object[]" />
+    <aura:registerEvent name="updatechart" type="c:ARV_Backup_UpdateChart_Event"/>
+    <aura:registerEvent name="activityObjects" type="c:ARV_Backup_ActivityObjects_Activity"/>
+    
+    <table>
+        <tr>
+            <td class="slds-text-align_left" style="width:10rem;">
+                <lightning:input type="text" placeholder="Quick Find" aura:id="quickfind" onchange="{!c.searchInTable}"/> 
+            </td>
+            <td style="width:20rem;"></td>
+            <!--td class="slds-text-link slds-text-align_right" style="width:5rem;"><a href="javascript:void(0);" onclick="{!c.leftMove}">Prev</a></td-->
+            <!--td class="slds-text-align_right">
+                <lightning:buttonicon variant="brand" iconName="utility:back" onclick="{! c.leftMove }" />Prev
+            </td-->
+            <!--td class="slds-text-link slds-text-align_right" style="width:5rem;"><a href="javascript:void(0);" onclick="{!c.rightMove}" >Next</a></td-->
+            <!--td class="slds-text-align_right">
+                <lightning:buttonicon variant="brand" iconName="utility:forward" onclick="{! c.rightMove }" />Next
+            </td-->
+            <td style="width:1rem;"></td>
+        </tr>
+    </table>  
+    
+    <aura:iteration items="{!v.topResultCriteria}" var="bObject" indexVar="index"> 
+        
+    <article class="slds-card">
+        <div class="slds-card__header slds-grid">
+            <header class="slds-media slds-media_center slds-has-flexi-truncate">
+                <div class="slds-media__figure"><span class="slds-icon_container slds-icon-standard-contact" title="description"></span></div>
+                <div class="slds-media__body"></div>
+            </header>
+        </div>
+        <div class="slds-card__body">
+            <div class="slds-media__body">
+                <c:CollapsibleCard headerStr="Backup" sfOrgId="{!v.sfOrgId}" backupId="{!bObject.backupId}" tmStamp="{!bObject.tmStamp}">
+                    <aura:set attribute="body">
+                        <ui:message title="" severity="info" closable="true">
+                            Label: {!bObject.bkpLabel}<br/>
+                            Date:<lightning:formattedDateTime value="{!bObject.tmStamp}" year="numeric" month="numeric" day="numeric"/><br/>
+                            Time:<lightning:formattedDateTime value="{!bObject.tmStamp}" hour="2-digit" minute="2-digit" timeZoneName="short" /><br/>
+                            Duration:{!bObject.strTotDuration}<br/>
+                            Records:{!bObject.nbrTotRecords}<br/>
+                            Success:{!bObject.successCount}<br/>
+                            API Calls:{!bObject.nbrTotApi}<br/>
+                            Type:{!bObject.flBakupTyp}<br/>
+                            Status:<lightning:icon iconName="utility:success" size="small" class="icm"/>
+                        </ui:message>
+                    </aura:set>
+                </c:CollapsibleCard>                                 
+            </div>
+        </div>
+    </article>
+    </aura:iteration>
+</aura:component>

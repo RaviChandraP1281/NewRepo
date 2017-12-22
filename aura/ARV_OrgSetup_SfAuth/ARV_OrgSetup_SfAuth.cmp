@@ -1,0 +1,124 @@
+<aura:component controller="ARVaultService" implements="flexipage:availableForAllPageTypes" access="global" >
+    <aura:attribute name="urlFill" type="String" default="https://login.salesforce.com"/>  
+    <aura:attribute name="disable" type="Boolean" default="true"/>
+    <aura:attribute name="isDisabled" type="Boolean" default="false"/>
+      <aura:attribute name="isExistedOrg" type="Boolean" default="false"/>
+    <aura:attribute name="idUser" type="String" default="f939bec89dc549d9bb2a5ef164ac0eb5" />
+    <aura:attribute name="headerSaveBtn" type="String"/>     
+    <aura:attribute name="isgetFetchObjects" type="Boolean" default="false"/> 
+    <aura:attribute name="Org" type="Object" default="" />
+    <aura:attribute name="orgData" type="Object" />
+    <aura:attribute name="existedOrg" type="Object" default="" />
+    <aura:attribute name="sforgIdAfterSaveOrUpdate" type="String" />
+    <aura:attribute name="isOrgValid" type="Boolean" default="false" />
+    <aura:attribute name="oauthURL" type="String" />  
+    <aura:attribute name="isOAuth" type="Boolean"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/> 
+    <aura:registerEvent name="sforgauthsucess" type="c:ARV_OrgSetup_SfAuth_Event"/>
+    <aura:handler name="change" value="{!v.existedOrg}" action="{!c.Orgchange}"/>
+    <div class="background">
+    <ul class="slds-accordion">
+            <li class="slds-accordion__list-item">
+                <section class="slds-accordion__section slds-is-open" aura:id="authAccordin">
+                    <div onclick="{!c.authAccordinToggle}"  class="slds-accordion__summary">
+                        
+                            <button aria-controls="accordion-details-01" aria-expanded="true" class="slds-button slds-button_reset slds-accordion__summary-action">
+                                <lightning:icon iconName="utility:chevronright" size="small" alternativeText="Indicates approval"/>
+                                <span class="slds-truncate" title="Accordion summary">
+                                   <aura:if isTrue="{!empty(v.Org.nmLable)}">
+                                       Register New Org
+                                   	<aura:set attribute="else">
+                                       Sandbox
+                                        <h1 class="slds-text-heading_small slds-accordion__summary-heading">
+                                            {!v.Org.nmLable}
+                                        </h1>
+                                    </aura:set>
+                                   </aura:if>
+                                </span>
+                            </button>
+                        <button onclick="{!c.authAccordinToggle}" class="slds-button slds-button_icon slds-button_icon-border-filled slds-button_icon-x-small slds-shrink-none" aria-haspopup="true">
+                            <lightning:icon iconName="utility:down" size="small" alternativeText="Indicates approval"/>
+                            <span class="slds-assistive-text">More Options</span>
+                        </button>
+                    </div>
+                    <div class="slds-accordion__content" aura:id="authAcrnDiv" id="accordion-details-01">
+                             <article class="slds-card">
+        <div class="slds-card__header slds-grid">
+            <div class="radioButton">
+                <dl>
+                	<dt>
+                		<lightning:input type="radio" aura:id="oauthCon" label="OAuth" name="connectionType" value="OAuth" onfocus="{!c.oAuthChange}" />
+                    </dt>
+                    <dt>
+ 						<lightning:input type="radio" aura:id="standardCon" label="Standard" name="connectionType" checked="true" value="Standard" onfocus="{!c.stdChange}" />
+                    </dt>
+                </dl>
+            </div>
+        </div>
+        	 <div class="slds-card__body slds-grid slds-hide" aura:id="oauthdepends">
+                <dl>
+                    <dt>
+                        <lightning:input aura:id="OAuthOrgTitle" label="Org Title" value="{!v.Org.nmLable}" /><!--disabled="{!v.Org.nmLable != '' ? true : false}"/-->
+                    </dt>
+                    <dt>
+                        <lightning:input aura:id="OAuthUserName" label="Username" value="{!v.Org.sfNmUser}" /><!--disabled="{!v.Org.nmLable != '' ? true : false}"/-->
+                    </dt>
+                    <dt>
+                        <!--lightning:buttonGroup -->
+                            <lightning:button class="customButton" aura:id="authenticateBtn" label="Authenticate" onclick="{! c.clickAuthenticate }" />
+                        	
+                            <aura:if isTrue="{!v.isgetFetchObjects}">
+                                <lightning:button class="customButton" label="Fetch Objects" aura:id="fetchObjectsOauth" onclick="{! c.fetchobjects}" />
+                            </aura:if>
+                        <!--/lightning:buttonGroup-->
+                    </dt>
+                </dl>
+            </div>
+             <div class="slds-card__body slds-grid" aura:id="standarddepends">
+                <table class="slds-m-left_large">
+                    <tr>
+                        <td>
+                            <lightning:select name="loginUrlType" aura:id="loginUrlType" label="" onchange="{!c.displayUrlFill}">
+                                <option value="production">Production</option>
+                                <option value="qa">QA</option>
+                                <option value="sandbox">Sandbox</option>
+                                <option value="customUrl">Custom URL</option>
+                            </lightning:select>
+                        </td>
+                        <td>
+                            <lightning:input label=" "  disabled="{!v.isDisabled}" name="loginUrl" aura:id="loginUrl" value="{!v.urlFill}"/>                    
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <lightning:input aura:id="orgtitle" label="Org Title" value="{!v.Org.nmLable}" disabled="{!v.isExistedOrg}"/>
+                        </td>
+                        <td>
+                            <lightning:input aura:id="username" label="Username" value="{!v.Org.sfNmUser}" disabled="{!v.isExistedOrg}"/>
+                        </td>
+                        <td> 
+                            <lightning:input type="password" aura:id="password" label="Password" value="{!v.Org.sfTxPwd}" />
+                        </td>
+                        <td>                       
+                            <lightning:input type="password" label="Security Token" aura:id="securityToken" value="{!v.Org.sfSecToken}"/>
+                        </td>
+                        <td>
+                            <lightning:buttonGroup >
+                            	<lightning:button variant="brand" class="customButton" label="Test Connection" onclick="{!c.testSfConnections }" />
+                                <lightning:button variant="brand" class="customButton" label="{!v.headerSaveBtn}" onclick="{!c.saveOrgBtnClick}" />
+                                <aura:if isTrue="{!v.isgetFetchObjects}">
+                                    <lightning:button variant="brand" class="customButton" label="Fetch Objects" aura:id="fetchobjects" onclick="{! c.fetchobjects}" />
+                                </aura:if>
+                            </lightning:buttonGroup>
+                        </td>
+                        
+                    </tr>
+                </table>
+            </div>    
+    </article>
+    					 </div>
+                </section>
+            </li>
+        </ul>
+            </div> 
+</aura:component>

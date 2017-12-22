@@ -1,0 +1,55 @@
+.THIS .slds-truncate{
+    overflow:unset;
+}
+.THIS .slds-icon-standard-lead{
+    background-color:#769ed9;
+}
+.THIS .slds-card__header{
+    background:#ffffff;
+}
+.THIS .slds-icon-text-default{
+    fill :#ffffff;
+}
+.THIS button .slds-icon-text-default{
+     fill:#000000;
+}
+.THIS .searchli{
+    padding-left:1rem;
+}
+.THIS .searchli:hover{
+    background:#dddbda;
+}
+.THIS .nonbackdrop{
+    z-index: 9001;
+}
+.THIS.backdrop{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(43, 40, 38, 0.6);
+    z-index: 9000;
+}
+.THIS .trans{
+    left:0px;
+    -webkit-transform: translateY(0);
+-ms-transform: translateY(0);
+transform: translateY(0);
+clip: rect(0px, 2000px, 2000px, -10px);
+-webkit-transition: opacity .2s ease-in-out,-webkit-transform .2s ease-in-out,clip .2s ease-in-out;
+transition: opacity .2s ease-in-out,transform .2s ease-in-out,clip .2s ease-in-out;
+border: 1px solid rgb(221, 219, 218);
+border-radius: 4px;
+background-color: rgb(255, 255, 255);
+box-shadow: 0 2px 7px rgba(0, 0, 0, .07);
+z-index: 1;
+    height:20rem;
+overflow-y: hidden;
+    overflow-x: hidden;
+width: 100%;
+margin-top: 1px;
+}

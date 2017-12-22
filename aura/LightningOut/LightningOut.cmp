@@ -1,0 +1,27 @@
+<aura:component implements="force:appHostable">
+    <aura:attribute name="code" type="String" default=""/>
+    <aura:attribute name="contacts" type="Contact[]" />
+    <aura:if isTrue="{!v.code==''}">
+        <ui:button label="login into Other Org" press="{!c.redirect}"/>
+        <aura:set attribute="else">
+            <ui:button label="Get Contacts" press="{!c.getCons}"/>
+        </aura:set>
+    </aura:if> 
+     
+    <div id="tblDiv" style="display:none">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Phone</th>
+                <th>Email</th>
+            </tr>
+            <aura:iteration items="{!v.contacts}" var="con">
+               <tr>
+                   <td>{!con.Name}</td>
+                   <td>{!con.Phone}</td>
+                   <td>{!con.Email}</td>
+                </tr>
+            </aura:iteration>        
+        </table>
+    </div>
+</aura:component>

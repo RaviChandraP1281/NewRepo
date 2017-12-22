@@ -1,0 +1,125 @@
+<aura:component controller="ARVaultService" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="mouseStart" type="string" />
+    <aura:attribute name="oldWidth" type="string" />
+    <aura:attribute name="sfOrgId" type="String" />
+    <aura:attribute name="orgData" type="Object[]" />
+    <aura:attribute name="previewLog" type="String[]" />
+    <aura:attribute name="isOpen" type="boolean" default="false"/>    
+     <aura:attribute name="resultCriteria" type="Object[]" />
+    <aura:attribute name="topResultCriteria" type="Object[]" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <aura:registerEvent name="restoreObject" type="c:ARV_RestoreObject_Detail"/>
+   <div> 
+    <table class="slds-p-top_small slds-p-bottom_small slds-table_bordered slds-table slds-table_resizable-cols slds-table--header-fixed slds-table_fixed-layout slds-table_cell-buffer" role="grid">
+        <thead>
+         <tr class="slds-line-height_reset">
+			<th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+				<a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" name="asc" id="backupId" onclick="{!c.sortTable}" tabindex="0">
+					<span class="slds-truncate" title="Salesforce Object" name="asc" id="backupId" onclick="{!c.sortTable}">Activity ID</span>
+				</a>
+			</th>
+             <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+				<a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" name="asc" id="tmStamp" onclick="{!c.sortTable}" tabindex="0">
+					<span class="slds-truncate" title="Salesforce Object" name="asc" id="tmStamp" onclick="{!c.sortTable}">Date</span>
+				</a>
+			</th>
+             <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+				<a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" name="asc" id="tmStamp" onclick="{!c.sortTable}" tabindex="0">
+					<span class="slds-truncate" title="Salesforce Object" name="asc" id="tmStamp" onclick="{!c.sortTable}">Time</span>
+				</a>
+			</th>
+             <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+				<a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" name="asc" id="strTotDuration" onclick="{!c.sortTable}" tabindex="0">
+					<span class="slds-truncate" title="Salesforce Object" name="asc" id="strTotDuration" onclick="{!c.sortTable}">Duration</span>
+				</a>
+			</th>
+             <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+				<a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" name="asc" id="nbrTotRecords" onclick="{!c.sortTable}" tabindex="0">
+					<span class="slds-truncate" title="Salesforce Object" name="asc" id="nbrTotRecords" onclick="{!c.sortTable}">Records</span>
+				</a>
+			</th>
+             <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+				<a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" name="asc" id="successCount" onclick="{!c.sortTable}" tabindex="0">
+					<span class="slds-truncate" title="Salesforce Object" name="asc" id="successCount" onclick="{!c.sortTable}">Success</span>
+				</a>
+			</th>
+             <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+				<a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" name="asc" id="nbrTotApi" onclick="{!c.sortTable}" tabindex="0">
+					<span class="slds-truncate" title="Salesforce Object" name="asc" id="nbrTotApi" onclick="{!c.sortTable}">API Calls</span>
+				</a>
+			</th>
+             <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+				<a href="javascript:void(0);" class="slds-th__action slds-text-link_reset" name="asc" tabindex="0">
+					<span class="slds-truncate" title="Salesforce Object" name="asc">View Log</span>
+				</a>
+			</th>
+          </tr>
+        </thead>
+    </table>
+   </div>
+    <div class="slds-scrollable_y" style="height:95%">
+      <table aura:id="ht" class="slds-table slds-table_bordered slds-table_fixed-layout slds-table_cell-buffer" role="grid">
+       <tbody>
+        	<aura:iteration items="{!v.resultCriteria}" var="rObject">
+            	<tr class="slds-hint-parent">
+                    <th scope="row" class="">
+                        <a href="javascript:void(0);" onclick="{!c.navigateToActivityObject}" id="{!rObject.idRestore}">{!rObject.idRestore}</a>                        
+                    </th>
+                    <td role="gridcell" class="slds-truncate" >
+                         <lightning:formattedDateTime value="{!rObject.tmStamp}" year="numeric" month="numeric" day="numeric"/>
+                    </td>
+                    <td role="gridcell" class="slds-truncate" >
+                         <lightning:formattedDateTime value="{!rObject.tmStamp}" hour="2-digit" minute="2-digit" timeZoneName="short" />
+                    </td>
+                    <td role="gridcell" class="slds-truncate" >
+                         {!rObject.strTotDuration}
+                    </td>
+                    <td role="gridcell" class="slds-truncate" >
+                         {!rObject.nbrTotRecords}
+                    </td>
+                    <td role="gridcell" class="slds-truncate" >
+                        {!rObject.successCount}
+                    </td>
+                    <td role="gridcell" class="slds-truncate" >
+                        {!rObject.nbrTotApi}
+                    </td>
+                    <td role="gridcell">
+                      	<lightning:button aura:id="viewLog" value="{!rObject.idRestore}" variant="error" iconName="utility:work_order_type" onclick="{!c.viewLog}" />                   
+                    </td>
+                </tr>    
+        	</aura:iteration>
+    </tbody>
+    </table>
+    </div>
+        <div>
+  	  <aura:if isTrue="{!v.isOpen}">
+        <div role="dialog" tabindex="-1" aria-labelledby="header99" class="slds-modal slds-fade-in-open ">
+            <div class="slds-modal__container">
+                <style>
+                    {!v.cssStyle}
+                </style>
+                <div class="slds-modal__header">
+                    <button class="slds-button slds-modal__close slds-button--icon-inverse" title="Close" onclick="{!c.closeModel}">
+                        <lightning:icon iconName="utility:close" size="small" variant="brand"/>
+                    </button>
+                    <h2 id="header99" class="slds-text-heading--medium">Preview Log</h2>
+                </div>
+                <div class="slds-modal__content slds-p-around--medium">
+                    <table>
+                        <aura:iteration items="{!v.previewLog}" var="log" indexVar="index"> 
+                            <tr>
+                                <td>{!log}</td>
+                            </tr>
+                        </aura:iteration>
+                    </table>                                                                  
+                </div>   				
+                <div class="slds-modal__footer">
+                    <button class="slds-button slds-button--neutral" onclick="{!c.closeModel}" >Close</button>
+                </div>
+            </div>
+        </div>
+        <div class="slds-backdrop slds-backdrop--open"></div>
+    </aura:if>
+    </div>     
+
+</aura:component>

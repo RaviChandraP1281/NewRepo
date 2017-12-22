@@ -1,0 +1,4 @@
+({
+    setSfOrgId:function(component, helper) {
+    }
+})

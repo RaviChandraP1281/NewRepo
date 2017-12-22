@@ -1,0 +1,86 @@
+<aura:component controller="ARVaultService" implements="flexipage:availableForAllPageTypes" access="global">
+    <aura:attribute name="snapshotDetail" type="Object"/>    
+    <aura:attribute name="recordColumns" type="Object[]"/>  
+    <aura:attribute name="sfOrgId" type="String" />
+    <aura:attribute name="snapshotID" type="String" />    
+	<aura:attribute name="fieldSelected" type="String" default="" />
+	<aura:attribute name="allFields" type="Object[]"/>
+    <aura:attribute name="isOpen" type="boolean" default="false"/>       
+    <aura:attribute name="Colname0" type="String" />
+  	<aura:attribute name="Colname1" type="String" />
+  	<aura:attribute name="Colname2" type="String" />
+  	<aura:attribute name="Colname3" type="String" />
+  	<aura:attribute name="Colname4" type="String" />
+    
+    
+    <aura:attribute name="sequence" type="Integer" />
+    <aura:handler name="init" value="{!this}" action="{!c.doloadFieldSnapshot}" />
+   
+	<div class="slds-p-top_small">
+	<table class="slds-table slds-table_bordered slds-table_resizable-cols slds-table_cell-buffer " role="grid">
+    <thead>
+        <tr class="slds-line-height_reset">
+            <th class="slds-is-sortable slds-is-resizable slds-text-title_caps" scope="col">
+                <div class="slds-p-top_small slds-grid" >
+                Snapshot {!v.sequence} : {!v.snapshotID}
+                </div>                
+            </th>           
+        </tr>       
+  </thead>
+        <tbody>
+            <tr>
+            	
+            </tr>
+             <tr>
+                 <th class="slds-truncate">Id</th>
+                <aura:iteration items="{!v.recordColumns}" var="col" indexVar="index"> 
+                    <aura:if isTrue="{!col==v.fieldSelected}">
+                        <th class="slds-truncate col-back"> <div class="">{!col}  </div> </th>
+                      <aura:set attribute="else">
+                            <th class="slds-truncate">{!col}</th>
+                        </aura:set>   
+                    </aura:if>
+                                     
+            	</aura:iteration>
+            </tr>
+            <aura:iteration items="{!v.snapshotDetail}" var="object" indexVar="index"> 
+        		<tr>
+                    <td class="slds-truncate">{!object.Id}</td>
+                    <aura:if isTrue="{!object.isDiffColumn0}">
+                        <td class="slds-truncate back">{!object.Column0}</td>                        
+                        <aura:set attribute="else">
+                            <td class="slds-truncate">{!object.Column0}</td>
+                        </aura:set>
+                    </aura:if>
+                    <aura:if isTrue="{!object.isDiffColumn1}">
+                        <td class="slds-truncate back">{!object.Column1}</td>                        
+                        <aura:set attribute="else">
+                            <td class="slds-truncate">{!object.Column1}</td>
+                        </aura:set>
+                    </aura:if>
+                    <aura:if isTrue="{!object.isDiffColumn2}">
+                        <td class="slds-truncate back">{!object.Column2}</td>                        
+                        <aura:set attribute="else">
+                            <td class="slds-truncate">{!object.Column2}</td>
+                        </aura:set>
+                    </aura:if>							
+                    <aura:if isTrue="{!object.isDiffColumn3}">
+                        <td class="slds-truncate back">{!object.Column3}</td>                        
+                        <aura:set attribute="else">
+                            <td class="slds-truncate">{!object.Column3}</td>
+                        </aura:set>
+                    </aura:if>
+                    <aura:if isTrue="{!object.isDiffColumn4}">
+                        <td class="slds-truncate back">{!object.Column4}</td>                        
+                        <aura:set attribute="else">
+                            <td class="slds-truncate">{!object.Column4}</td>
+                        </aura:set>
+                    </aura:if>                    
+                </tr>
+            </aura:iteration>
+            
+        </tbody> 
+    </table>
+    </div>
+
+</aura:component>

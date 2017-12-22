@@ -1,0 +1,68 @@
+<aura:component controller="ARVaultService" >
+    <aura:attribute name="objectjson" type="Object[]"/>
+	<aura:attribute name="objectOptions" type="Object[]"/>
+    <aura:attribute name="fieldsObjects" type="Object[]"/>
+    <aura:attribute name="backupID" type="String"/>
+    <aura:attribute name="recordObjects" type="Object[]"/>
+    <aura:attribute name="recordColumns" type="Object[]" />
+    <aura:attribute name="sObjectInFilter" type="String"/>
+    <aura:attribute name="sRecCountInFilter" type="String"/> 
+    <aura:attribute name="displayMessage" type="String"/> 
+    <aura:attribute name="isShowRecords" type="Boolean" default="true"/>
+    <aura:attribute name="isShowMessage" type="Boolean" default="true"/>
+    <aura:attribute name="isOpen" type="boolean" default="false"/>
+    <!--aura:handler event="c:ARV_FilterPicklist_Event" action="{!c.handleInit}" /-->
+    <div class="slds-grid">
+    	<div class="slds-p-horizontal_small slds-p-top_medium slds-size_1-of-2 slds-medium-size_3-of-6 slds-large-size_2-of-4">
+            <div class="slds-form-element__control">
+        		<lightning:select name="sObjects" label="Objects" aura:id="objects" value="{!v.sObjectInFilter}" onchange="{!c.handleObjectChange}" >
+                        <aura:iteration items="{!v.objectOptions}" var="option">
+                            <option value="{!option.objname}">{!option.objname}</option>
+                        </aura:iteration>
+                </lightning:select> 
+            </div>
+        </div>
+        <div class="slds-p-horizontal_small slds-p-top_medium slds-size_1-of-2 slds-medium-size_3-of-6 slds-large-size_1-of-4">
+        	<div class="slds-p-top_medium">
+            	<lightning:button variant="brand" name="go" label="Go" onclick="{!c.goRecordFilter}" />
+            </div>
+        </div>
+        <div class="slds-p-horizontal_small slds-p-top_medium slds-size_1-of-2 slds-medium-size_3-of-6 slds-large-size_1-of-4">
+        	<div class="slds-p-top_medium">
+            	<a onclick="{!c.changeView}">Change View</a>
+            </div>
+        </div>   
+    </div>     
+	<div>
+  	  <aura:if isTrue="{!v.isOpen}">
+        <div role="dialog" tabindex="-1" aria-labelledby="header99" class="slds-modal slds-fade-in-open ">
+            <div class="slds-modal__container">
+                <div class="slds-modal__header">
+                    <button class="slds-button slds-modal__close slds-button--icon-inverse" title="Close" onclick="{!c.closeModel}">
+                        X
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 id="header99" class="slds-text-heading--medium">Select Tags</h2>
+                </div>
+                <div class="slds-modal__content slds-p-around--medium">
+                    <div class="slds-form-element__control">
+                        <lightning:input type="search" label="Search" onchange="{!v.findFields}" name="search" />
+                    </div>
+                </div>  
+ 				<div class="slds-modal__content slds-p-around--medium">
+                    <div class="slds-form-element__control">
+                        <aura:iteration items="{!v.recordColumns}" var="field">                             
+                            <div class="slds-truncate" title="{!field}">{!field}</div>                            
+                        </aura:iteration>                             
+                    </div>
+                </div>
+                <div class="slds-modal__footer">
+                    <button class="slds-button slds-button--neutral" onclick="{!c.closeModel}" >Cancel</button>
+                    <button class="slds-button slds-button--brand" onclick="{!c.closeModel}">Save</button>
+                </div>
+            </div>
+        </div>
+        <div class="slds-backdrop slds-backdrop--open"></div>
+    </aura:if>
+    </div>
+</aura:component>
