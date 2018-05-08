@@ -6,4 +6,10 @@
         <members>A0001</members>
         <name>ApexClass</name>
     </types>
+    <types>
+        <members>ARVa__c</members>
+        <members>MC4SF__MC_Subscriber__c</members>
+        <members>Pricebook2</members>
+        <name>CustomObject</name>
+    </types>
 </Package>
