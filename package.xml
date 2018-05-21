@@ -7,9 +7,22 @@
         <name>ApexClass</name>
     </types>
     <types>
-        <members>ARVa__c</members>
-        <members>MC4SF__MC_Subscriber__c</members>
-        <members>Pricebook2</members>
-        <name>CustomObject</name>
+        <members>*</members>
+        <name>AuraDefinitionBundle</name>
+    </types>
+    <types>
+        <members>L1</members>
+        <members>L2</members>
+        <name>CustomLabel</name>
+    </types>
+    <types>
+        <members>community1</members>
+        <members>community8</members>
+        <members>rktestblog1</members>
+        <name>CustomSite</name>
+    </types>
+    <types>
+        <members>*</members>
+        <name>StaticResource</name>
     </types>
 </Package>
